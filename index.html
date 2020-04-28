@@ -21,26 +21,27 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-         <div class="wrapper">
 
-           <div class="header">
-             <div class="logo">
-               <h1> Virtual Lab </h1>
-               <h3> Platform for academic research à la digital </h3>
-             </div>
-
-             <nav>
-               <ul>
-                 <li class="overview selected"> <a href="/">Overview</a></li>
-                 <li class="documentation"><a href="/documentation">Documentation</a></li>
-               </ul>
-             </nav>
+         <div class="header wrapper">
+           <div class="logo">
+             <h1> Virtual Lab </h1>
+             <h3> Platform for academic research à la digital </h3>
            </div>
 
-           
-           <div class="main">
+           <nav>
+             <ul>
+               <li class="overview selected"> <a href="/">Overview</a></li>
+               <li class="studies"> <a href="/studies">Studies</a></li>
+               <li class="documentation"><a href="/documentation">Documentation</a></li>
+             </ul>
+           </nav>
+         </div>
 
-             <div class="overview visible">
+         
+         <div class="main">
+
+           <div class="overview visible">
+             <div class="wrapper">
                <div class="intro">
                  <p>
                    Virtual Lab is a platform for longitudinal surveys and interventions that can be performed entirely within social media platforms such as Facebook Messenger. 
@@ -109,25 +110,83 @@
 
                    <img alt="" src="img/dash-whole.png"/>
                  </div>
-                 <div class="divider"></div>
+                 <div class="divider"></div>                 
 
+               </div>
+             </div>
 
-                 <div class="contact">
-                   <p>
-                     Use Virtual Lab in your next project:
-                   </p>
+             <div class="wrapper">
+               <div class="contact">
+                 <p>
+                   Use Virtual Lab in your next project:
+                 </p>
 
-                   <a href="mailto:info@vlab.digital">info@vlab.digital</a>
-                 </div>
-
-
-
+                 <a href="mailto:info@vlab.digital">info@vlab.digital</a>
                </div>
 
              </div>
 
+           </div>
 
-             <div class="documentation">
+
+           <div class="studies">
+
+             <div class="wrapper">
+               <div class="intro">
+                 <p>
+                   Virtual Lab was built to power studies by the World Bank's Development and Impact Evaluation (DIME) unit. Here's how it's been used, both by the Bank and by external research teams:
+                 </p>
+               </div>
+
+               <div class="content">
+               <div class="feature">
+                 <div class="text">
+                   <h2>Gender Attitudes in India</h2>
+                   <p>Do short videoclips delivered through social media change gender attitudes and promote information-seeking behaviors in Urban India? </p>
+
+                   <p>
+                     This study evaluates a series of online videos supported and produced by two edutainment champions in the field: Population Foundation of India (PFI) and the WEvolve initiative. Respondents are randomly assigned to either a control group or one of three treatment arms, where they are sent videos from PFI, WEvolve, or both.
+                   </p>
+
+                   <p>
+                     Respondents are sent videos, one-at-a-time, over the course of several days. All video plays are recorded on the Virtual Lab platform. Baseline questions on knowledge and attitudes are asked before the videos, one week after the videos are shown, and again after 3 months.
+                   </p>
+
+                   <p>
+                     Respondents are invited to share the videos with their friends as well as sent links to webpages of NGOs working on gender-related topics. Clicks to the websites are tracked and a measurement of time visited calculated. 
+                   </p>
+
+                 </div>
+
+                 <img alt="" src="img/india-viewing.jpg"/>
+               </div>
+
+               <div class="divider"></div>                 
+
+
+               <div class="feature">
+                 <div class="text">
+                   <h2>Covid-19 and Stereotypes in Italy</h2>
+                
+                   <p>In addition to its impacts on public health and the global economic system, the novel coronavirus has led to increasing concerns about racial attitudes and stereotypes and their impacts on political attitudes and sentiments towards global cooperation. These stereotypes may also translate into more general geo-political attitudes towards individual countries, such as China, who was at the center of the outbreak. </p>
+
+                   <p>Using the geographical targeting in Facebook's ad platform, respondents were collected across 542 municipalities and 90 provinces in Italy. Surveys began in February, 2020 and were continued through out the crisis, with a few questions being asked to each respondent at weekly or bi-weekly intervals. </p>
+
+                   <p> Asking questions via Messenger enabled the researchers to have continued, constant contact with demographically targeted respondents with low attrition rates and extremely low recruitment costs. </p>
+
+                 </div>
+
+                 <img alt="" src="img/italy-2.png"/>
+               </div>
+
+               </div>
+             </div>
+           </div>             
+
+
+
+           <div class="documentation">
+             <div class="wrapper">
                <div class="intro">
                  <p>
                    Interested in running Virtual Lab on your own infrastructure? All code is open source and runs on any server cluster running Kubernetes + Helm.
@@ -138,15 +197,14 @@
                    <a target="_blank" href="https://github.com/vlab-research">github.com/vlab-research</a>
                  </div>
                  
-               </div>                 
-
-
-               
+               </div>                              
              </div>
-
            </div>
 
          </div>
+</div>
+
+
 
          <div class="footer">
          </div>
