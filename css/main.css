@@ -171,6 +171,11 @@ div.feature {
   flex-direction: column;
 }
 
+
+div.feature p:not(:first-of-type) {
+  margin-top: 1em;
+}
+
 div.divider {
   height: 1px;
   width: 33vw;
@@ -221,7 +226,7 @@ div.contact a {
 div.footer {
   margin-top: 50px;
   height: 100px;
-  background-color: #26197d; 
+  background-color: #26197d;
 }
 
 div.github-link {
@@ -233,7 +238,7 @@ div.stories {
   height: 500px;
   background-color: #26197d;
   /* background-color:  */
-  
+
 }
 
 /* div.stories h2 { */
@@ -312,10 +317,6 @@ div.stories {
     align-itemss: center;
   }
 
-  div.feature p:not(:first-of-type) {
-    margin-top: 1em;
-  }
-
   div.feature .text {
     display: flex;
     flex-direction: column;
@@ -359,7 +360,7 @@ div.stories {
     margin-left: auto;
     margin-right: auto;
     padding: 0 3em;
-    max-width: 1400px;  
+    max-width: 1400px;
   }
 
   h1 {
