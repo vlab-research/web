@@ -132,7 +132,6 @@ nav li.selected {
 div.header {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 
 div.logo {
@@ -145,7 +144,6 @@ div.logo > h3 {
   font-weight: inherit;
   font-family: 'Source Serif Pro', serif;
 }
-
 
 
 
@@ -163,8 +161,7 @@ div.main > div.visible {
 
 h2 {
   font-size: 2rem;
-  line-height: 1rem;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -174,6 +171,11 @@ div.feature {
   flex-direction: column;
 }
 
+
+div.feature p:not(:first-of-type) {
+  margin-top: 1em;
+}
+
 div.divider {
   height: 1px;
   width: 33vw;
@@ -181,7 +183,7 @@ div.divider {
   border-bottom: 3px dotted #26197d;
 }
 
-div.content img {
+div.content img, div.studies img {
   width: calc(100% - 16px);
   margin: 1.5rem 0 0 0;
   border: 8px solid #666;
@@ -201,9 +203,9 @@ div.intro p {
 }
 
 div.wrapper {
-  /* padding: 0 1.5em; */
-  margin: 1em 1.5em;
-  position: relative;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  /* position: relative; */
 }
 
 div.contact {
@@ -224,17 +226,45 @@ div.contact a {
 div.footer {
   margin-top: 50px;
   height: 100px;
-  background-color: #26197d; 
+  background-color: #26197d;
 }
 
 div.github-link {
   margin: 4em 0 0 0;
 }
 
+
+div.stories {
+  height: 500px;
+  background-color: #26197d;
+  /* background-color:  */
+
+}
+
+/* div.stories h2 { */
+/*   color: white; */
+/*   font-family: 'Source Serif Pro', serif; */
+/*   font-weight: 300; */
+/*   padding: 10rem 0 0 0; */
+/*   font-size: 5rem; */
+/*   text-align: center; */
+/*   margin: 4rem auto; */
+/* } */
+
+/* div.stories p { */
+/*   color: white; */
+/*   font-size: 2rem; */
+/*   margin: 4rem 0 0 4rem; */
+/*   width: 600px; */
+
+/* } */
+
+
 @media only screen and (min-width: 760px) {
 
   div.wrapper {
-    margin: 1em 3em;
+    margin-left: 3em;
+    margin-right: 3em;
   }
 
   div.header {
@@ -250,7 +280,6 @@ div.github-link {
 
   h2 {
     font-size: 3rem;
-    margin-bottom: 2rem;
   }
 
 
@@ -294,7 +323,7 @@ div.github-link {
     justify-content: center;
   }
 
-  div.content img {
+  div.content img, div.studies img {
     margin: 0 0 0 0;
     width: 50%;
     max-width: 600px;
@@ -328,9 +357,10 @@ div.github-link {
   }
 
   div.wrapper {
-    margin: 1em auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 3em;
-    max-width: 1400px;  
+    max-width: 1400px;
   }
 
   h1 {

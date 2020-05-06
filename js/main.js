@@ -24,6 +24,9 @@
       'documentation': function () {
         setContent('documentation');
       },
+      'studies': function () {
+        setContent('studies');
+      },
       '*': function () {
         setContent('overview')
       }
