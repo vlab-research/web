@@ -92,7 +92,7 @@ html {
 /* small, .text_small {font-size: 0.833em;} */
 
 h1 {
-  color: #26197d;
+  color: #00236aff;
   font-family: 'Zilla Slab', serif;
   font-weight: 300;
   font-size: 3rem;
@@ -180,7 +180,7 @@ div.divider {
   height: 1px;
   width: 33vw;
   margin: 4rem auto;
-  border-bottom: 3px dotted #26197d;
+  border-bottom: 3px dotted #00236aff;
 }
 
 div.content img, div.studies img {
@@ -226,7 +226,7 @@ div.contact a {
 div.footer {
   margin-top: 50px;
   height: 100px;
-  background-color: #26197d;
+  background-color: #00236aff;
 }
 
 div.github-link {
@@ -236,7 +236,7 @@ div.github-link {
 
 div.stories {
   height: 500px;
-  background-color: #26197d;
+  background-color: #00236aff;
   /* background-color:  */
 
 }
