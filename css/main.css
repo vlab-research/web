@@ -218,8 +218,9 @@ div.contact {
 }
 
 div.contact a {
+  text-decoration: underline;
   display: inline-block;
-  margin: 1.5em 0 1.5em 0;
+  margin: .5em 0 1.5em 0;
   font-size: 1.44rem;
 }
 
@@ -353,7 +354,7 @@ div.stories {
   }
 
   div.contact a {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   div.wrapper {
