@@ -136,10 +136,11 @@ div.header {
 
 div.logo {
   text-align: right;
+  margin: 0 0 1em 0;
 }
 
 div.logo > h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0 0 0 0;
   font-weight: inherit;
   font-family: 'Source Serif Pro', serif;
@@ -300,7 +301,7 @@ div.feature img {
   }
 
   div.logo > h3 {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   nav {
@@ -377,7 +378,7 @@ div.feature img {
   }
 
   div.logo > h3 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   nav > ul {
