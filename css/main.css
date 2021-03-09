@@ -112,7 +112,7 @@ nav {
 
 nav > ul {
   list-style: none;
-  padding: 2em 0;
+  pannndding: 2em 0;
   margin: 0 0 0 0;
   display: flex;
   justify-content: space-around;
@@ -146,6 +146,10 @@ div.logo > h3 {
 }
 
 
+div.points {
+  background: #222;
+  color: #fff;
+}
 
 div.content {
   margin-top: 6em;
@@ -186,7 +190,7 @@ div.divider {
 div.content img, div.studies img {
   width: calc(100% - 16px);
   margin: 1.5rem 0 0 0;
-  border: 8px solid #666;
+  border: 8px solid #333;
 }
 
 div.main {
@@ -242,6 +246,9 @@ div.stories {
 
 }
 
+div.feature img {
+  flex-shrink: 0;
+}
 /* div.stories h2 { */
 /*   color: white; */
 /*   font-family: 'Source Serif Pro', serif; */
@@ -261,7 +268,7 @@ div.stories {
 /* } */
 
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 800px) {
 
   div.wrapper {
     margin-left: 3em;
@@ -322,12 +329,13 @@ div.stories {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 7.5%;
   }
 
   div.content img, div.studies img {
     margin: 0 0 0 0;
     width: 50%;
-    max-width: 600px;
+    max-width: 700px;
     height: auto;
   }
 
@@ -387,7 +395,7 @@ div.stories {
 
   div.content img {
     margin: 0 0 0 0;
-    width: 600px;
+    width: 700px;
     height: auto;
   }
 
