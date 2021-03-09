@@ -101,7 +101,7 @@ h1 {
 
 
 nav {
-  /* font-size: 2em; */
+  font-size: .85rem;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   align-items: center;
@@ -112,16 +112,16 @@ nav {
 
 nav > ul {
   list-style: none;
-  pannndding: 2em 0;
   margin: 0 0 0 0;
+  padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   width: 100%;
   font-weight: 700;
 }
 
 nav li:not(:first-of-type) {
-  margin: 0 0 0 1em;
+  margin: 0 0 0 5%;
 }
 
 nav li.selected {
@@ -140,7 +140,7 @@ div.logo {
 }
 
 div.logo > h3 {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0 0 0 0;
   font-weight: inherit;
   font-family: 'Source Serif Pro', serif;
@@ -188,7 +188,7 @@ div.divider {
   border-bottom: 3px dotted #00236aff;
 }
 
-div.content img, div.studies img {
+div.content img, #studies img {
   width: calc(100% - 16px);
   margin: 1.5rem 0 0 0;
   border: 8px solid #333;
@@ -243,7 +243,6 @@ div.github-link {
 div.stories {
   height: 500px;
   background-color: #00236aff;
-  /* background-color:  */
 
 }
 
@@ -268,6 +267,11 @@ div.feature img {
 
 /* } */
 
+@media only screen and (min-width: 550px) {
+  nav {
+    font-size: 1.2rem;
+  }
+}
 
 @media only screen and (min-width: 800px) {
 
@@ -310,7 +314,6 @@ div.feature img {
 
   nav > ul {
     justify-content: flex-start;
-    /* margin-left: 15%; */
   }
 
   div.feature {
@@ -333,7 +336,7 @@ div.feature img {
     margin-right: 7.5%;
   }
 
-  div.content img, div.studies img {
+  div.content img, #studies img {
     margin: 0 0 0 0;
     width: 50%;
     max-width: 700px;
