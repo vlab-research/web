@@ -231,8 +231,8 @@ div.contact a {
   font-size: 1.44rem;
 }
 
-div.footer {
-  margin-top: 50px;
+footer {
+  margin-top: 150px;
   height: 100px;
   background-color: #00236aff;
 }
