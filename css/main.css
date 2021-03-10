@@ -83,9 +83,11 @@ html {
 
 /* h2 {font-size: 2.074em;} */
 
-/* h3 {font-size: 1.728em;} */
-
-/* h4 {font-size: 1.44em;} */
+h3 {
+  font-size: 1.44rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/* h3 {font-size: 1.44em;} */
 
 /* h5 {font-size: 1.2em;} */
 
@@ -267,6 +269,15 @@ div.feature img {
 
 /* } */
 
+
+div.jobs p {
+  margin: 1em 0 0 0;
+}
+
+div.jobs h3 {
+  margin: 3em 0 0 0;
+}
+
 @media only screen and (min-width: 550px) {
   nav {
     font-size: 1.2rem;
@@ -291,17 +302,23 @@ div.feature img {
     margin: 20vh 0 30vh 0;
   }
 
+
+  h1 {
+    font-size: 4rem;
+  }
   h2 {
     font-size: 3rem;
   }
-
-
-  div.intro p {
+  h3 {
     font-size: 2rem;
   }
 
-  h1 {
-    font-size: 4em;
+  p {
+    font-size: 1.44rem;
+  }
+
+  div.intro p {
+    font-size: 2rem;
   }
 
   div.logo > h3 {
@@ -322,9 +339,9 @@ div.feature img {
     align-items: center;
   }
 
+
   div.feature p {
     width: 90%;
-    font-size: 1.44rem;
     display: flex;
     align-itemss: center;
   }
@@ -348,12 +365,21 @@ div.feature img {
 
 @media only screen and (min-width: 1200px) {
 
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  p {
+    font-size: 1.72rem;
+  }
+
   div.divider {
     margin: 6rem auto;
   }
 
   div.feature p {
-    font-size: 1.72rem;
+
     width: 30vw;
   }
 
@@ -376,9 +402,6 @@ div.feature img {
     max-width: 1400px;
   }
 
-  h1 {
-    font-size: 6em;
-  }
 
   div.logo > h3 {
     font-size: 1.2rem;

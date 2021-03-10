@@ -30,9 +30,9 @@
 
            <nav>
              <ul>
-               <li class="overview selected"> <a href="/">Overview</a></li>
-               <li class="studies"> <a href="/studies">Studies</a></li>
-               <li class="documentation"><a href="/documentation">Documentation</a></li>
+               <li class="overview selected"> <a href="/" data-navigo>Overview</a></li>
+               <li class="studies"> <a href="/studies" data-navigo>Studies</a></li>
+               <li class="software"><a href="/software" data-navigo>Software</a></li>
              </ul>
            </nav>
          </div>
@@ -224,11 +224,11 @@
 
 
 
-           <div id="documentation">
+           <div id="software">
              <div class="wrapper">
                <div class="intro">
                  <p>
-                   Interested in running Virtual Lab on your own infrastructure? All code is open source and runs on any server cluster running Kubernetes + Helm.
+                   Interested in running Virtual Lab on your own infrastructure? All code is open source and runs on any server cluster running Kubernetes + Helm. Also, <a href="#jobs">we're hiring </a>.
                  </p>
 
                  <div class="github-link">
@@ -237,24 +237,72 @@
                  </div>
 
                </div>
-             </div>
-           </div>
 
-           <div id="jobs">
-             <div class="wrapper">
-               <div class="intro">
+
+
+               <div id="jobs" class="content jobs">
+                 <h2>Jobs</h2>
                  <p>
-                   JObs/?????????????
+Our mission is to make it easier and cheaper for researchers, governments, and NGO's to perform statistically valid inference about the attitudes and behaviors of populations. We leverage digital tools to reach individuals, ask them questions, and involve them in experiments.
                  </p>
 
-                 <div class="github-link">
+                 <p>As an engineer with Virtual Lab, you will join a small team dedicated to making smart choices and building a robust, reliable, and scalable platform that leverages the latest technologies. The platform is open source, we use open source tools, and you will be encouraged to contribute to existing libraries and/or abstract logic into reusable tools where appropriate.</p>
 
-                   <a target="_blank" href="https://github.com/vlab-research">github.com/vlab-research</a>
+                 <p>Interested? <a href="mailto:info@vlab.digital">jobs@vlab.digital</a></p>
+
+                 <h3>Fullstack Engineer</h3>
+
+                 <p>You should:
+
+                 <p>1. Be comfortable with front-end development, both in full-featured frameworks like react and in building ultralight apps from pure javascript to run on low-powered devices with poor connections.</p>
+
+                 <p>2. Be able to work with a CDN and design systems to build and deploy assets for performant access on the worst networks in the world.</p>
+
+                 <p>3. Be ready to build and improve api services written in Node.js, Python, and Go.</p>
+
+                 <p>4. Be able to build and test services that integrate tightly with external APIs, such as those of the ad platforms.</p>
+
+                 <p>5. Love unit, integration, and end-to-end testing and be excited about continuously improving coverage and automation to make the system more maintainable.</p>
+
+
+                 <h3>Distributed Systems Engineer</h3>
+
+
+                 <p>You should:</p>
+                 <p>1. Be excited to work with a large set of services written in Go, Node.js, and Python.</p>
+
+                 <p>2. Love evented systems, queues, immutability, idempotence, visibility, and reproducibility.</p>
+
+                 <p>3. Be comfortable designing both transactional and analytics databases, as well as moving data in/out of them efficiently and reliably.</p>
+
+                 <p>4. Love container orchestration. We currently use Kubernetes.</p>
+
+                 <p>5. Love testing, including complex integration tests involving many containers and services.</p>
+
+                 <p>6. Be ready to grow into a technical leadership role with architectural and design responsibilities.</p>
+
+
+                 <h3> Devops / Systems Reliability Engineer</h3>
+
+                 <p>You should:</p>
+
+                 <p>1. Love container orchestration. We currently use Kubernetes.</p>
+
+                 <p>2. Be excited to build a complex open source platform that can be easily configured and launched into any cloud by others.</p>
+
+                 <p>3. Be ready to take the lead on building complex integration tests involved dozens of containers and integrating this into a CI/CD system.</p>
+
+                 <p>4. Understand modern security and data privacy laws and best practices.</p>
+
+                 <p>5. Want to design a top-rate monitoring, log-aggregation, and alerting system that makes running the platform a pleasure.</p>
+
+                 <p>6. Be prepared to prove the reliability of your system, with chaos where appropriate.</p>
+
                  </div>
-
                </div>
              </div>
            </div>
+
 
          </div>
 </div>
@@ -264,7 +312,7 @@
          <div class="footer">
          </div>
 
-         <script src="//unpkg.com/navigo@6"></script>
+         <script src="//unpkg.com/navigo@8"></script>
          <script src="js/main.js"></script>
          <script id="__bs_script__">//<![CDATA[
            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.5'><\/script>".replace("HOST", location.hostname));

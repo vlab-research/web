@@ -24,23 +24,12 @@
   }
 
   var router = new Navigo(null);
-
-  function registerHandler(name, path) {
-    document
-      .querySelector('nav li.' + name)
-      .addEventListener('click', function (e) {
-        e.preventDefault()
-        router.navigate(path)
-      })
-  }
-
   var conf = [
-    ['documentation', 'documentation', '/documentation'],
-    ['studies', 'studies', '/studies'],
-    ['*', 'overview', '']
+    ['software', 'software'],
+    ['studies', 'studies'],
+    ['*', 'overview']
   ]
 
-  conf.forEach(function (c) { registerHandler(c[1], c[2]) })
   router
     .on(conf.reduce(function (a, c) {
       return _add_route(a, c[0], c[1])
