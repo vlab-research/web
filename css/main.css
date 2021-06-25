@@ -47,7 +47,13 @@ textarea {
   padding: 0.2em 0;
 }
 
+
 a {
+  /* text-decoration: inherit; */
+  color: #00236aff;
+}
+
+nav a {
   text-decoration: inherit;
   color: inherit;
 }
@@ -225,7 +231,6 @@ div.contact {
 }
 
 div.contact a {
-  text-decoration: underline;
   display: inline-block;
   margin: .5em 0 1.5em 0;
   font-size: 1.44rem;
