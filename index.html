@@ -292,13 +292,13 @@ Our mission is to make it easier and cheaper for researchers, governments, and N
 
                <div class="content privacy-content">
                  <p>
-                   Virtual Lab, LLC ("VLab", "we", "us") operates a research platform that enables academic institutions and nonprofits to design, recruit for, and run behavioral studies. This policy describes what data we collect, why, how we use it, and the choices you have. It applies to both the VLab Dashboard &amp; API (study configuration, recruitment, and analytics) and Fly (chatbot-based survey delivery over Facebook Messenger and the web).
+                   Virtual Lab, LLC ("VLab", "we", "us") operates a research platform that enables academic institutions and nonprofits to design, recruit for, and run behavioral studies. This policy describes what data we collect, why, how we use it, and the choices you have. It applies to both the VLab Dashboard &amp; API (study configuration, recruitment, and analytics) and Fly, our survey-delivery service that runs over chat, messaging, SMS, and web channels — including Facebook Messenger and other platforms researchers may connect.
                  </p>
 
                  <h2>1. Who this policy covers</h2>
                  <p>This policy applies to two groups:</p>
                  <ul>
-                   <li><strong>Researchers</strong> — staff at academic, nonprofit, or partner organizations who use the VLab Dashboard to configure studies and manage Facebook integrations.</li>
+                   <li><strong>Researchers</strong> — staff at academic, nonprofit, or partner organizations who use the VLab Dashboard to configure studies and connect external messaging and advertising platforms.</li>
                    <li><strong>Participants</strong> — individuals who answer a VLab-powered survey.</li>
                  </ul>
                  <p>For participant data, the researcher's institution is normally the <strong>data controller</strong> and VLab acts as a <strong>data processor</strong> on their behalf. For researcher account data, VLab is the controller.</p>
@@ -308,7 +308,7 @@ Our mission is to make it easier and cheaper for researchers, governments, and N
                  <h3>2.1 From researchers</h3>
                  <ul>
                    <li><strong>Account information:</strong> name, email address, organization, and authentication identifiers.</li>
-                   <li><strong>Facebook integration data:</strong> Page IDs, ad account IDs, ad set / campaign metadata, and OAuth tokens used to call the Facebook Graph and Marketing APIs on the researcher's behalf.</li>
+                   <li><strong>Platform integration data:</strong> identifiers, campaign metadata, and access tokens for the third-party messaging and advertising platforms a researcher connects (for example, Meta / Facebook), used to call those platforms' APIs on the researcher's behalf.</li>
                    <li><strong>Study configuration:</strong> survey definitions, targeting specifications, message templates, recruitment parameters, and budget settings.</li>
                    <li><strong>Operational telemetry:</strong> logs of dashboard activity used to operate and secure the service.</li>
                  </ul>
@@ -316,10 +316,10 @@ Our mission is to make it easier and cheaper for researchers, governments, and N
                  <h3>2.2 From participants</h3>
                  <p>The exact fields depend on the study. Typical categories include:</p>
                  <ul>
-                   <li><strong>Platform-assigned identifiers</strong> such as Facebook Messenger PSID or anonymous web session ID.</li>
+                   <li><strong>Platform-assigned identifiers</strong> issued by the channel a participant uses (for example, a Facebook Messenger PSID, a phone number where SMS is used with the participant's consent, or an anonymous web session ID).</li>
                    <li><strong>Survey responses</strong> to questions authored by the researcher.</li>
                    <li><strong>Message metadata</strong> such as timestamps, message direction, delivery status, and chatbot state.</li>
-                   <li><strong>Consent records</strong> for follow-up contact in multi-wave studies, recorded with timestamp.</li>
+                   <li><strong>Consent and permission records</strong> for follow-up contact — for example study opt-ins, recurring-notification opt-ins, or platform-specific messaging permissions — recorded with timestamp.</li>
                    <li><strong>Limited profile data</strong> that the messaging platform exposes (e.g. first name, locale).</li>
                  </ul>
                  <p>We do not ask researchers to collect, and we do not knowingly process, payment card data or government identifiers.</p>
@@ -335,8 +335,8 @@ Our mission is to make it easier and cheaper for researchers, governments, and N
                  <ul>
                    <li>Authenticate researchers and provide the dashboard, API, and admin tooling.</li>
                    <li>Execute the studies researchers configure — sending survey messages, recording responses, and surfacing results to the researcher.</li>
-                   <li>Manage advertising campaigns on connected Facebook ad accounts.</li>
-                   <li>Send <strong>utility messages</strong> to participants who have explicitly opted in to follow-up contact in a multi-wave study. These messages are transactional and contain no promotional content.</li>
+                   <li>Manage advertising and recruitment campaigns on connected platforms (such as Meta ad accounts).</li>
+                   <li>Send <strong>non-promotional follow-up messages</strong> — such as utility messages, opt-in confirmations, multi-wave study invitations, or reminders to complete a survey — only where the participant has granted the necessary permission (a study opt-in, an SMS opt-in, a Facebook Messenger message tag, or an analogous platform mechanism), and only within what that permission allows. These messages are transactional or research-related and contain no third-party promotional content.</li>
                    <li>Operate, monitor, debug, and secure the service.</li>
                    <li>Comply with legal obligations.</li>
                  </ul>
@@ -346,7 +346,7 @@ Our mission is to make it easier and cheaper for researchers, governments, and N
                  <p>Where the GDPR or UK GDPR applies, we rely on the following legal bases:</p>
                  <ul>
                    <li><strong>Contract</strong> — to provide the dashboard and API to researchers and their organizations.</li>
-                   <li><strong>Consent</strong> — for participant survey responses and for follow-up contact in multi-wave studies.</li>
+                   <li><strong>Consent</strong> — for participant survey responses and for follow-up contact under the relevant opt-in or platform permission.</li>
                    <li><strong>Legitimate interests</strong> — for operational logging, security monitoring, and abuse prevention.</li>
                    <li><strong>Legal obligation</strong> — for responding to lawful requests and meeting record-keeping requirements.</li>
                  </ul>
@@ -357,7 +357,7 @@ Our mission is to make it easier and cheaper for researchers, governments, and N
                  <ul>
                    <li><strong>With the researcher / their institution</strong> — all data collected under a researcher's study is available to that researcher and their authorized colleagues.</li>
                    <li><strong>With infrastructure providers</strong> — Google Cloud (EU regions) hosts our application servers, databases, and storage, and Auth0 (an Okta company) provides authentication. These providers process data on our behalf under their standard data processing terms.</li>
-                   <li><strong>With Facebook / Meta</strong> — when researchers connect a Page or ad account, we exchange data with Facebook strictly to perform the actions the researcher has requested. Use of Facebook data is also governed by <a href="https://developers.facebook.com/terms/" target="_blank" rel="noopener">Meta's Platform Terms</a>.</li>
+                   <li><strong>With connected third-party platforms</strong> — when a researcher connects an external messaging, social, or advertising platform (for example, Meta / Facebook), we exchange data with that platform strictly to perform the actions the researcher has requested. Use of that data is also governed by the platform's own terms (e.g. <a href="https://developers.facebook.com/terms/" target="_blank" rel="noopener">Meta's Platform Terms</a>).</li>
                    <li><strong>For legal reasons</strong> — when required by law, subpoena, or to protect the rights, property, or safety of VLab, our users, or others.</li>
                  </ul>
                  <p>We do not sell or rent personal data to third parties.</p>
@@ -369,7 +369,7 @@ Our mission is to make it easier and cheaper for researchers, governments, and N
                  <ul>
                    <li><strong>Researcher account data</strong> — retained while the account is active and for 90 days after account closure.</li>
                    <li><strong>Study and participant data</strong> — retained for the duration of the study and afterward according to the researcher's institutional retention policy. Researchers can delete studies and participant records at any time.</li>
-                   <li><strong>Facebook OAuth tokens</strong> — revoked when a researcher disconnects a Page or ad account.</li>
+                   <li><strong>Platform access tokens</strong> — revoked when the researcher disconnects the corresponding account.</li>
                    <li><strong>Operational logs</strong> — retained on a 90-day rolling basis.</li>
                    <li><strong>Database backups</strong> — encrypted and deleted after 90 days by storage-bucket lifecycle policy.</li>
                  </ul>
