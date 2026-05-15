@@ -283,6 +283,66 @@ div.jobs h3 {
   margin: 3em 0 0 0;
 }
 
+div.privacy-content {
+  max-width: 800px;
+  margin: 4em auto 0 auto;
+}
+
+div.privacy-content h2 {
+  margin: 2.5em 0 0.75em 0;
+  font-size: 1.6rem;
+}
+
+div.privacy-content h3 {
+  margin: 2em 0 0.5em 0;
+  font-size: 1.2rem;
+}
+
+div.privacy-content p {
+  margin: 1em 0 0 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+div.privacy-content ul {
+  margin: 1em 0 0 0;
+  padding-left: 1.5em;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+div.privacy-content li {
+  margin: 0.4em 0;
+}
+
+div.privacy-content .meta {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25em;
+}
+
+#privacy div.intro {
+  margin: 4em 0 0 0;
+}
+
+#privacy div.intro p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  div.privacy-content h2 {
+    font-size: 2rem;
+  }
+  div.privacy-content h3 {
+    font-size: 1.4rem;
+  }
+  div.privacy-content p,
+  div.privacy-content ul {
+    font-size: 1.2rem;
+  }
+}
+
 @media only screen and (min-width: 550px) {
   nav {
     font-size: 1.2rem;

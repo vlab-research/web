@@ -27,6 +27,7 @@
   var conf = [
     ['software', 'software'],
     ['studies', 'studies'],
+    ['privacy', 'privacy'],
     ['*', 'overview']
   ]
 
