@@ -1,0 +1,14 @@
+# Generated. `python3 scripts/build-coverage-map.py` recreates it.
+build/
+_site/
+
+# Eleventy (D-006) once the build is scaffolded.
+node_modules/
+
+# 226 MB of raw field photographs, untracked and never committed.
+# AGENTS.md: never `git add media/`. This is the guard, not a suggestion.
+media/
+
+__pycache__/
+*.pyc
+.DS_Store
