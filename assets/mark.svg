@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22" fill="currentColor" stroke="none">
+  <!-- Virtual Lab mark. M1 cell lattice, nine cells, five at target (DESIGN.md 8 Nav).
+       Cell 6, pitch 8 - 6 + 8 + 8 = 22, so the nine cells land exactly in the 22px
+       nav mark. The 6 tiling ratio (4:9) is deliberately NOT used here: at 22px it
+       yields 4px cells and the mark dies at favicon size. See scratchpad/ws-icons.md.
+       Row 0: at, at, under.  Row 1: at, under, at.  Row 2: under, at, under. -->
+  <rect x="0"  y="0"  width="6" height="6"/>
+  <rect x="8"  y="0"  width="6" height="6"/>
+  <rect x="16" y="0"  width="6" height="6" fill-opacity=".28"/>
+  <rect x="0"  y="8"  width="6" height="6"/>
+  <rect x="8"  y="8"  width="6" height="6" fill-opacity=".28"/>
+  <rect x="16" y="8"  width="6" height="6"/>
+  <rect x="0"  y="16" width="6" height="6" fill-opacity=".28"/>
+  <rect x="8"  y="16" width="6" height="6"/>
+  <rect x="16" y="16" width="6" height="6" fill-opacity=".28"/>
+</svg>

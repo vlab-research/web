@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- The Home page copy deck from CONTENT.md, annotated. This is what a Phase 4 page
+     looks like when it satisfies both rules. Every figure here is a VERIFIED value and
+     every one carries a source line inside its own cell. -->
+<html lang="en">
+<head><meta charset="utf-8"><title>Virtual Lab</title></head>
+<body>
+
+<section class="hero">
+  <p class="eyebrow">SURVEY SAMPLING VIA AD PLATFORMS</p>
+  <h1>Population-representative samples, recruited through ad platforms.</h1>
+  <p>You set the target distribution. We reallocate ad budget hourly until the achieved
+     sample matches it. The method is published and the code is open.</p>
+</section>
+
+<section class="stat-row">
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-001">33</div>
+    <div class="label">STUDIES RUN</div>
+    <div class="src" data-claim-source>Donati &amp; Rao</div>
+  </div>
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-002">23</div>
+    <div class="label">COUNTRIES</div>
+    <div class="src" data-claim-source>Donati &amp; Rao</div>
+  </div>
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-003">6.1<span class="unit">p.p.</span></div>
+    <div class="label">MEAN ABS. DEVIATION</div>
+    <div class="src" data-claim-source>vs. GSS 2024, CPS 2024, Pew 2023</div>
+  </div>
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-005">1,500</div>
+    <div class="label">US VALIDATION SAMPLE</div>
+    <div class="src" data-claim-source>Donati &amp; Rao</div>
+  </div>
+</section>
+
+<!-- D-023: no comparison against another recruitment source. This section carried a
+     three-way ranking until 2026-08-20; C-006, C-007, C-008 and C-009 are WITHHELD and
+     any of them reappearing here is a hard failure, which is what fail-withheld.html
+     now exercises. The deviation stands on C-003 alone. -->
+<section class="band inv">
+  <h2>Every recruitment method deviates from the truth. Ours is measured.</h2>
+  <figure data-claim-unit>
+    <p><span data-claim="C-003">6.1 p.p.</span> mean absolute deviation</p>
+    <figcaption>Mean absolute deviation across all outcome variables,
+      post-stratification weighted, against GSS 2024, CPS 2024 and Pew 2023,
+      n=<span data-claim="C-005">1,500</span>. Donati &amp; Rao, 2025.</figcaption>
+  </figure>
+</section>
+
+<section class="studies">
+  <article class="card">
+    <p class="kicker">ITALY · <span data-claim="none">2020</span></p>
+    <h3>Covid-19 and stereotypes</h3>
+    <p>Respondents recruited across <span data-claim="C-042">542</span> municipalities
+       and <span data-claim="C-042">90</span> provinces using geographic targeting, then
+       surveyed at weekly and bi-weekly intervals through the pandemic.</p>
+    <p class="src" data-claim-source>Donati D., Gars J., and Rao N., working paper.</p>
+  </article>
+</section>
+
+<section class="scale">
+  <p><span data-claim="C-010">841,660</span> respondents in
+     <span data-claim="C-017">41</span> countries, across
+     <span data-claim="C-019">175</span> studies. Half of studies field in under three
+     weeks — the median field window is <span data-claim="C-011">19 days</span>.</p>
+  <p class="src" data-claim-source>Virtual Lab production data, 2026-08-20.</p>
+</section>
+
+<!-- Legal copy states retention periods and article numbers. They are policy, not
+     claims about our work, so the section opts out of numeral scanning. Banned values
+     are still checked inside it. -->
+<section id="privacy" data-claim-scan="off">
+  <h2>7. Retention</h2>
+  <p>Operational logs are retained on a 90-day rolling basis. We notify a controller
+     within 72 hours, consistent with GDPR Article 33.</p>
+</section>
+
+<footer>
+  <p>Virtual Lab, LLC · Corvallis, OR 97330, USA</p>
+</footer>
+</body>
+</html>

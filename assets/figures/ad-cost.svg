@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 152" width="100%"
+     class="fig-cost" role="img" aria-labelledby="costTitle costDesc"
+     preserveAspectRatio="xMinYMin meet" data-claim-unit="">
+  <title id="costTitle">Respondents recruited per study on an active day</title>
+  <desc id="costDesc">Advertising cost per respondent newly recruited, across 44 studies. The median study pays $1.05. The middle half fall between $0.29 and $1.57. The tenth percentile is $0.09 and the ninetieth $3.67, read against a scale from $0 to $4. The full range runs $0.04 to $8.89. Advertising spend only. This is a distribution across studies, not an uncertainty interval on an estimate.</desc>
+
+  <style>
+    /* Local roles, resolved from DESIGN.md sec 3 tokens only. No literal colour. */
+    .fig-cost{
+      --cost-data:  var(--data);
+      --cost-label: var(--ink);
+      --cost-rule:  var(--rule);
+      --cost-axis:  var(--ink-3);
+      --cost-src:   var(--ink-3);
+    }
+    /* On an ink band. --data reads 2.10:1 and --ink-3 reads 4.00:1 there; see sec 3. */
+    .fig-cost.inv{
+      --cost-data:  var(--data-inv);
+      --cost-label: var(--on-invert);
+      --cost-rule:  var(--rule-invert);
+      --cost-axis:  var(--on-invert-2);
+      --cost-src:   var(--on-invert-2);
+    }
+    .fig-cost .box    { fill: var(--cost-data); fill-opacity:.26;
+                        stroke: var(--cost-data); stroke-width:1 }
+    .fig-cost .cell   { fill: var(--cost-data) }
+    .fig-cost .whisk  { stroke: var(--cost-data); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-cost .rule   { stroke: var(--cost-rule); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-cost .axis   { stroke: var(--cost-axis); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-cost .lab{
+      font:600 13px/1 "Source Sans 3","Helvetica Neue",Arial,sans-serif;
+      fill: var(--cost-label);
+    }
+    .fig-cost .num{
+      font:400 15px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:-.01em;
+      fill: var(--cost-data); text-anchor:middle;
+    }
+    .fig-cost .qnum{
+      font:400 12px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums;
+      fill: var(--cost-data); text-anchor:middle;
+    }
+    .fig-cost .tik{
+      font:500 9.5px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:.11em;
+      text-transform:uppercase; fill: var(--cost-axis);
+    }
+    .fig-cost .src{
+      font:italic 400 12px/1 "Source Serif 4",Georgia,serif;
+      fill: var(--cost-src);
+    }
+  </style>
+
+  <text class="lab" x="0" y="28">Advertising cost</text>
+  <text class="lab" x="0" y="46">per respondent</text>
+
+  <!-- The values, above the interval they mark. C-091. -->
+  <g data-claim="C-091">
+    <text class="qnum" x="207.8" y="14">$0.29</text>
+    <text class="num"  x="280.8" y="14">$1.05</text>
+    <text class="qnum" x="330.7" y="14">$1.57</text>
+  </g>
+
+  <!-- M3 interval. Bracket, bar, cell: three of the four primitives. -->
+  <line class="whisk" x1="188.6" y1="34.0" x2="207.8" y2="34.0"/>
+  <line class="whisk" x1="330.7" y1="34.0" x2="532.3" y2="34.0"/>
+  <line class="whisk" x1="188.6" y1="25.0" x2="188.6" y2="43.0"/>
+  <line class="whisk" x1="532.3" y1="25.0" x2="532.3" y2="43.0"/>
+  <rect class="box" x="207.8" y="22.0" width="122.9" height="24.0"/>
+  <rect class="cell" x="274.8" y="28.0" width="12.0" height="12.0"/>
+
+  <!-- M4 tick rule: the scale the interval is read against -->
+  <line class="axis" x1="180.0" y1="58.0" x2="564.0" y2="58.0"/>
+  <line class="axis" x1="180.0" y1="58.0" x2="180.0" y2="65.0"/>
+  <line class="axis" x1="228.0" y1="58.0" x2="228.0" y2="62.0"/>
+  <line class="axis" x1="276.0" y1="58.0" x2="276.0" y2="62.0"/>
+  <line class="axis" x1="324.0" y1="58.0" x2="324.0" y2="62.0"/>
+  <line class="axis" x1="372.0" y1="58.0" x2="372.0" y2="65.0"/>
+  <line class="axis" x1="420.0" y1="58.0" x2="420.0" y2="62.0"/>
+  <line class="axis" x1="468.0" y1="58.0" x2="468.0" y2="62.0"/>
+  <line class="axis" x1="516.0" y1="58.0" x2="516.0" y2="62.0"/>
+  <line class="axis" x1="564.0" y1="58.0" x2="564.0" y2="65.0"/>
+  <text class="tik" x="180.0" y="78" data-claim="none">$0</text>
+  <text class="tik" x="372.0" y="78" text-anchor="middle" data-claim="none">$2</text>
+  <text class="tik" x="564.0" y="78" text-anchor="end" data-claim="none">$4 PER RESPONDENT</text>
+
+  <line class="rule" x1="0" y1="92" x2="620" y2="92"/>
+
+  <!-- Provenance rule, DESIGN.md sec 2. Mandatory, same visual unit as the figure. -->
+  <text class="src" x="0" y="110" data-claim-source="">Advertising spend only — not the incentive, not the survey platform, not our fee. Distribution across 44 studies. Box: 25th to 75th percentile. Whiskers: 10th ($0.09) to 90th ($3.67); the range runs $0.04 to $8.89.</text>
+  <text class="src" x="0" y="126" data-claim-source="">Per respondent newly recruited, $166,243 over 163,555 respondents. Virtual Lab production database, August 2026.</text>
+</svg>

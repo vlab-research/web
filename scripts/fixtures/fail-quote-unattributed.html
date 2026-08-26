@@ -1,0 +1,18 @@
+<!-- The loophole this must not open: a quote block with no attribution, used to smuggle
+     a withheld figure onto a page. Also covers a block naming a source that is not a
+     CLAIMS.md row. Expected: exit 1, kind "quote" - never a silent pass. -->
+<main>
+<blockquote data-claim-quote="C-055">
+  <p>Recruiting cost about $0.30 per question per respondent.</p>
+</blockquote>
+
+<blockquote data-claim-quote="the paper">
+  <p>A US sample of 1,500 respondents.</p>
+  <p class="src" data-claim-source>Donati &amp; Rao, 2025.</p>
+</blockquote>
+
+<blockquote data-claim-quote="C-004">
+  <p>Some 841,660 respondents.</p>
+  <p class="src" data-claim-source>Donati &amp; Rao, 2025.</p>
+</blockquote>
+</main>

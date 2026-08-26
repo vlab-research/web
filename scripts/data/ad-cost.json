@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "generated": "2026-08-25",
+    "purpose": "Source data for assets/figures/ad-cost.svg. Advertising spend only -- not incentives, not the survey platform, not our fee. Computed read-only against Virtual Lab production CockroachDB cluster vprod.",
+    "claims": [
+      "C-091"
+    ],
+    "read_before_use": [
+      "This is NOT a price and must never be rendered as one. Advertising spend only.",
+      "The unit is the STUDY, not the country. Country averages hide the spread that matters: Nigeria alone runs $0.04 to $8.89 across 20 studies while its country average is $4.74.",
+      "Denominator is respondents the study NEWLY RECRUITED -- first appearance in any study. An endline re-contacts a panel it did not pay to recruit.",
+      "Spend is the MAX reported cumulative spend per campaign/stratum/day, never the sum -- temp=true rows are cumulative intra-day snapshots."
+    ]
+  },
+  "as_of": "2026-08-25",
+  "population": {
+    "unit": "study",
+    "n_studies": 44,
+    "description": "Advertising cost per respondent newly recruited, one value per study.",
+    "newly_recruited": "A respondent whose first appearance in any study is in this one.",
+    "filters": [
+      "at least 200 newly recruited respondents",
+      "at least 80% of the study's first-appearance respondents are uniquely its own -- excludes umbrella study groups whose rows share one respondent set",
+      "campaigns appearing under more than one study_id are dropped (7 of 157)"
+    ]
+  },
+  "percentiles": {
+    "p10": 0.09,
+    "p25": 0.29,
+    "median": 1.05,
+    "p75": 1.57,
+    "p90": 3.67
+  },
+  "min": 0.04,
+  "max": 8.89,
+  "totals": {
+    "spend_usd": 166243,
+    "new_respondents": 163555,
+    "pooled_cost": 1.02
+  },
+  "spread_within_one_country": {
+    "note": "Nigeria, 20 studies. This is why the country average was the wrong unit.",
+    "country": "NG",
+    "min": 0.04,
+    "max": 8.89,
+    "country_average_rejected": 4.74
+  },
+  "context_not_published": {
+    "note": "Country-level figures, computed first and rejected as the unit. Kept so the reasoning can be re-checked. DO NOT RENDER.",
+    "by_country": {
+      "BD": 0.21,
+      "PK": 0.3,
+      "ID": 0.33,
+      "KG": 0.73,
+      "KE": 1.06,
+      "GH": 1.08,
+      "BG": 1.1,
+      "US": 1.34,
+      "RS": 1.58,
+      "NG": 4.74
+    },
+    "all_country_spend_usd": 483846.88
+  },
+  "axis": {
+    "min": 0,
+    "max": 4,
+    "tick_every": 0.5,
+    "major_ticks": [
+      0,
+      2,
+      4
+    ]
+  },
+  "query": "WITH x AS (SELECT c.key AS camp, s.key AS strat, coalesce(s.value->>'date_start', e.period_start::date::string) AS d, max((s.value->>'spend')::float8) AS spend FROM recruitment_data_events e, jsonb_each(e.data) AS c, jsonb_each(c.value) AS s WHERE jsonb_typeof(c.value)='object' AND s.value->>'spend' IS NOT NULL GROUP BY 1,2,3), cs AS (SELECT c.key AS camp, min(e.study_id::string) AS sid FROM recruitment_data_events e, jsonb_each(e.data) AS c WHERE jsonb_typeof(c.value)='object' GROUP BY c.key HAVING count(DISTINCT e.study_id)=1), sp AS (SELECT cs.sid, sum(x.spend) AS spend FROM x JOIN cs ON cs.camp=x.camp GROUP BY 1), fs AS (SELECT study_id, user_id, min(timestamp) AS ts FROM inference_data GROUP BY 1,2), t0 AS (SELECT user_id, min(ts) AS t FROM fs GROUP BY 1), firsts AS (SELECT f.user_id, f.study_id FROM fs f JOIN t0 ON t0.user_id=f.user_id AND f.ts=t0.t), k AS (SELECT user_id, count(DISTINCT study_id) AS n FROM firsts GROUP BY 1), per AS (SELECT f.study_id::string AS sid, count(*)::float8 AS all_first, count(*) FILTER (WHERE k.n=1)::float8 AS newresp FROM firsts f JOIN k ON k.user_id=f.user_id GROUP BY 1), t AS (SELECT sp.sid, sp.spend, per.newresp, sp.spend/per.newresp AS cost FROM sp JOIN per ON per.sid=sp.sid WHERE per.newresp >= 200 AND per.newresp/per.all_first >= 0.8) SELECT count(*), percentile_cont(0.10) WITHIN GROUP (ORDER BY cost), percentile_cont(0.25) WITHIN GROUP (ORDER BY cost), percentile_cont(0.50) WITHIN GROUP (ORDER BY cost), percentile_cont(0.75) WITHIN GROUP (ORDER BY cost), percentile_cont(0.90) WITHIN GROUP (ORDER BY cost), min(cost), max(cost), sum(spend), sum(newresp) FROM t;",
+  "query_host": "kubectl exec -n vprod gbv-cockroachdb-0 -- ./cockroach sql --insecure --database=vlab --execute=\"<query>\""
+}

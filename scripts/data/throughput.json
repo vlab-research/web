@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "generated": "2026-08-22",
+    "purpose": "Source data for assets/figures/throughput-box.svg. Every value below is computed by the query in this file, read-only, against Virtual Lab production CockroachDB cluster vprod. Nothing here is typed by hand or estimated.",
+    "claims": ["C-089", "C-090"],
+    "read_before_use": [
+      "CLAIMS.md is the authority on what may be published. This file records what the database SAYS.",
+      "Each respondent is assigned to ONE study per day before counting. Without that de-duplication every figure inflates by ~1.67x -- see the umbrella-group defect under C-089.",
+      "The >=20 floor is an analyst's choice and must be published as one. The figure's source line states it."
+    ]
+  },
+  "as_of": "2026-08-22",
+  "population": {
+    "unit": "study",
+    "n_studies": 129,
+    "description": "Distribution across studies, each represented by its own median active day.",
+    "active_day": "A study-day on which at least 20 respondents were recruited.",
+    "recruited_on_day": "The date of a respondent's first response within that study, UTC."
+  },
+  "percentiles": { "p10": 41, "p25": 69, "median": 140, "p75": 300, "p90": 531 },
+  "max_study_median_day": 1880,
+  "median_active_days": 11,
+  "median_recruited_per_study": 2483,
+  "sensitivity_floor_10": { "n_studies": 131, "p25": 47, "median": 121, "p75": 268 },
+  "study_day_level": {
+    "note": "Lower than the per-study distribution because long slow studies contribute many days each. Not the published figure -- weight each study once.",
+    "study_days": 2484, "recruited": 660699, "p25": 41, "median": 88, "p75": 257, "p90": 613, "max": 6554
+  },
+  "coverage": {
+    "respondents_on_qualifying_days": 660699,
+    "respondents_all_time": 841660,
+    "share": 0.785,
+    "studies_with_no_qualifying_day": 46,
+    "studies_all_time": 175
+  },
+  "axis": { "min": 0, "max": 550, "tick_every": 100, "major_ticks": [0, 250, 500] },
+  "query": "WITH sc AS (SELECT DISTINCT cc.campaignid, sh AS shortcode FROM campaign_confs cc, jsonb_array_elements(cc.conf) AS s, jsonb_array_elements_text(s->'shortcodes') AS sh WHERE cc.conf_type='stratum'), old_fs AS (SELECT sc.campaignid::string AS sid, r.userid AS uid, min(r.timestamp)::date AS day FROM responses r JOIN sc ON sc.shortcode = r.shortcode GROUP BY 1,2), old_one AS (SELECT uid, day, min(sid) AS sid FROM old_fs GROUP BY 1,2), new_fs AS (SELECT study_id::string AS sid, user_id AS uid, min(timestamp)::date AS day FROM vlab.public.inference_data GROUP BY 1,2), new_one AS (SELECT uid, day, min(sid) AS sid FROM new_fs GROUP BY 1,2), pooled AS (SELECT * FROM old_one UNION ALL SELECT * FROM new_one), d AS (SELECT sid, day, count(*) AS n FROM pooled GROUP BY 1,2), q AS (SELECT * FROM d WHERE n >= 20), ps AS (SELECT sid, count(*) AS qdays, sum(n) AS recruited, percentile_cont(0.5) WITHIN GROUP (ORDER BY n::float8) AS med_day FROM q GROUP BY sid) SELECT count(*) AS studies, percentile_cont(0.10) WITHIN GROUP (ORDER BY med_day)::int AS p10, percentile_cont(0.25) WITHIN GROUP (ORDER BY med_day)::int AS p25, percentile_cont(0.50) WITHIN GROUP (ORDER BY med_day)::int AS median_study, percentile_cont(0.75) WITHIN GROUP (ORDER BY med_day)::int AS p75, percentile_cont(0.90) WITHIN GROUP (ORDER BY med_day)::int AS p90, max(med_day)::int AS mx, percentile_cont(0.5) WITHIN GROUP (ORDER BY qdays::float8)::int AS median_active_days, percentile_cont(0.5) WITHIN GROUP (ORDER BY recruited::float8)::int AS median_recruited FROM ps;",
+  "query_host": "kubectl exec -n vprod gbv-cockroachdb-0 -- ./cockroach sql --insecure --database=chatroach --execute=\"<query>\"",
+  "cockroach_quirk": "count(DISTINCT x) returns a wrong value when it shares a SELECT list with percentile_cont(). Compute distinct counts in their own query."
+}

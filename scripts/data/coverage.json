@@ -1,0 +1,130 @@
+{
+  "_source": "Virtual Lab production CockroachDB, cluster vprod, read-only.",
+  "_refresh": "See CLAIMS.md, 'Refreshing the placeholders'. Update as_of when re-run.",
+  "as_of": "2026-08-20",
+  "totals": {
+    "respondents": 841660,
+    "responses": 17979910,
+    "countries": 41
+  },
+  "respondents": {
+    "US": 103475,
+    "NG": 88460,
+    "JO": 79915,
+    "IQ": 75209,
+    "BD": 72201,
+    "LB": 49529,
+    "AE": 48373,
+    "EG": 22786,
+    "PK": 18830,
+    "KE": 17226,
+    "HT": 16545,
+    "IL": 16028,
+    "ID": 14584,
+    "ZM": 11923,
+    "GH": 9307,
+    "LY": 8460,
+    "RS": 7669,
+    "BG": 7563,
+    "KG": 7235,
+    "HN": 6933,
+    "KW": 6571,
+    "LA": 6202,
+    "JM": 6006,
+    "RO": 5024,
+    "DJ": 4284,
+    "TD": 4122,
+    "SA": 3930,
+    "CM": 3701,
+    "BZ": 3599,
+    "UA": 2853,
+    "PG": 2838,
+    "CG": 2519,
+    "GM": 2274,
+    "IN": 1643,
+    "MA": 562,
+    "IE": 206,
+    "DE": 23
+  },
+  "pending": [
+    "MD",
+    "MK",
+    "PS",
+    "XK"
+  ],
+  "_pending_note": "Coverage verified, count not computed. Never render as zero.",
+  "regions": [
+    {
+      "name": "Sub-Saharan Africa",
+      "countries": [
+        "NG",
+        "KE",
+        "ZM",
+        "GH",
+        "DJ",
+        "TD",
+        "CM",
+        "CG",
+        "GM"
+      ]
+    },
+    {
+      "name": "Middle East & North Africa",
+      "countries": [
+        "JO",
+        "IQ",
+        "LB",
+        "AE",
+        "EG",
+        "IL",
+        "LY",
+        "KW",
+        "SA",
+        "MA",
+        "PS"
+      ]
+    },
+    {
+      "name": "South & Southeast Asia",
+      "countries": [
+        "BD",
+        "PK",
+        "ID",
+        "LA",
+        "IN"
+      ]
+    },
+    {
+      "name": "Americas",
+      "countries": [
+        "US",
+        "HT",
+        "JM",
+        "HN",
+        "BZ"
+      ]
+    },
+    {
+      "name": "Europe & Central Asia",
+      "countries": [
+        "RS",
+        "BG",
+        "KG",
+        "RO",
+        "UA",
+        "IE",
+        "DE",
+        "MD",
+        "MK",
+        "XK"
+      ]
+    },
+    {
+      "name": "Pacific",
+      "countries": [
+        "PG"
+      ]
+    }
+  ],
+  "_regions_note": "Region totals are floors where a region contains a country from `pending`. Say so on the page; never imply the total is complete."
+}

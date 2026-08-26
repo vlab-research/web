@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 124" width="100%"
+     class="fig-mad" role="img" aria-labelledby="madTitle madDesc"
+     preserveAspectRatio="xMinYMin meet">
+  <title id="madTitle">Mean absolute deviation from gold-standard benchmarks</title>
+  <desc id="madDesc">Virtual Lab 6.1 percentage points, read against a scale running from zero to twelve percentage points. Zero is the benchmark. Post-stratification weighted, measured against GSS 2024, CPS 2024 and Pew 2023. Lower is closer to the benchmark. The paper reports no interval for this estimate.</desc>
+
+  <style>
+    /* Local roles, resolved from DESIGN.md §3 tokens only. No literal colour. */
+    .fig-mad{
+      --mad-ours:   var(--data);
+      --mad-label:  var(--ink);
+      --mad-rule:   var(--rule);
+      --mad-axis:   var(--ink-3);
+      --mad-src:    var(--ink-3);
+    }
+    /* On an ink band. --data reads 2.10:1 and --ink-3 reads 4.00:1 there; see §3. */
+    .fig-mad.inv{
+      --mad-ours:   var(--data-inv);
+      --mad-label:  var(--on-invert);
+      --mad-rule:   var(--rule-invert);
+      --mad-axis:   var(--on-invert-2);
+      --mad-src:    var(--on-invert-2);
+    }
+    .fig-mad .bar-ours{ fill: var(--mad-ours) }
+    .fig-mad .rule    { stroke: var(--mad-rule); stroke-width:1; shape-rendering:crispEdges }
+    .fig-mad .axis    { stroke: var(--mad-axis); stroke-width:1; shape-rendering:crispEdges }
+    .fig-mad .lab{
+      font:600 13px/1 "Source Sans 3","Helvetica Neue",Arial,sans-serif;
+      fill: var(--mad-label);
+    }
+    .fig-mad .num{
+      font:400 15px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:-.01em;
+      fill: var(--mad-ours);
+    }
+    .fig-mad .tik{
+      font:500 9.5px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:.11em;
+      text-transform:uppercase; fill: var(--mad-axis);
+    }
+    .fig-mad .src{
+      font:italic 400 12px/1 "Source Serif 4",Georgia,serif;
+      fill: var(--mad-src);
+    }
+  </style>
+
+  <!-- One row: label · bar · readout. Scale 0–12 p.p., 32px per p.p. from x=180.
+       The ruler is unchanged from the three-source edition of this figure: when the
+       comparators came off (D-023) the scale stayed, so nobody can read a rescale
+       into it. Zero is the benchmark, which is what makes 6.1 legible on its own. -->
+
+  <!-- Virtual Lab — 6.1 p.p. weighted, C-003 -->
+  <text class="lab" x="0" y="34">Virtual Lab</text>
+  <rect class="bar-ours" x="180" y="24" width="195.2" height="14"/>
+  <text class="num" x="385.2" y="35">6.1</text>
+
+  <!-- M4 tick rule: the measurement scale the bar is read against -->
+  <line class="axis" x1="180" y1="54" x2="564" y2="54"/>
+  <line class="axis" x1="180.5" y1="54" x2="180.5" y2="61"/>
+  <line class="axis" x1="276.5" y1="54" x2="276.5" y2="59"/>
+  <line class="axis" x1="372.5" y1="54" x2="372.5" y2="61"/>
+  <line class="axis" x1="468.5" y1="54" x2="468.5" y2="59"/>
+  <line class="axis" x1="564.5" y1="54" x2="564.5" y2="61"/>
+  <text class="tik" x="180" y="74">0 &#8212; BENCHMARK</text>
+  <text class="tik" x="372" y="74">6</text>
+  <text class="tik" x="556" y="74">12 P.P.</text>
+
+  <line class="rule" x1="0" y1="88" x2="620" y2="88"/>
+
+  <!-- Provenance rule, DESIGN.md §2. Mandatory, same visual unit as the figure. -->
+  <text class="src" x="0" y="104">Mean absolute deviation across all outcome variables, post-stratification weighted, n=1,500,</text>
+  <text class="src" x="0" y="120">against GSS 2024, CPS 2024 and Pew 2023. Donati &amp; Rao, 2025. Lower is closer. No interval is reported.</text>
+</svg>

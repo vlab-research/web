@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 152" width="100%"
+     class="fig-thru" role="img" aria-labelledby="thruTitle thruDesc"
+     preserveAspectRatio="xMinYMin meet" data-claim-unit="">
+  <title id="thruTitle">Respondents recruited per study on an active day</title>
+  <desc id="thruDesc">Respondents recruited per study on a day of active recruitment, across 129 studies. The median study recruits 140 on such a day. The middle half of studies fall between 69 and 300. The tenth percentile is 41 and the ninetieth is 531, read against a scale running from 0 to 550 respondents. This is a distribution across studies, not an uncertainty interval on an estimate.</desc>
+
+  <style>
+    /* Local roles, resolved from DESIGN.md sec 3 tokens only. No literal colour. */
+    .fig-thru{
+      --thru-data:  var(--data);
+      --thru-label: var(--ink);
+      --thru-rule:  var(--rule);
+      --thru-axis:  var(--ink-3);
+      --thru-src:   var(--ink-3);
+    }
+    /* On an ink band. --data reads 2.10:1 and --ink-3 reads 4.00:1 there; see sec 3. */
+    .fig-thru.inv{
+      --thru-data:  var(--data-inv);
+      --thru-label: var(--on-invert);
+      --thru-rule:  var(--rule-invert);
+      --thru-axis:  var(--on-invert-2);
+      --thru-src:   var(--on-invert-2);
+    }
+    .fig-thru .box    { fill: var(--thru-data); fill-opacity:.26;
+                        stroke: var(--thru-data); stroke-width:1 }
+    .fig-thru .cell   { fill: var(--thru-data) }
+    .fig-thru .whisk  { stroke: var(--thru-data); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-thru .rule   { stroke: var(--thru-rule); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-thru .axis   { stroke: var(--thru-axis); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-thru .lab{
+      font:600 13px/1 "Source Sans 3","Helvetica Neue",Arial,sans-serif;
+      fill: var(--thru-label);
+    }
+    .fig-thru .num{
+      font:400 15px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:-.01em;
+      fill: var(--thru-data); text-anchor:middle;
+    }
+    .fig-thru .qnum{
+      font:400 12px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums;
+      fill: var(--thru-data); text-anchor:middle;
+    }
+    .fig-thru .tik{
+      font:500 9.5px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:.11em;
+      text-transform:uppercase; fill: var(--thru-axis);
+    }
+    .fig-thru .src{
+      font:italic 400 12px/1 "Source Serif 4",Georgia,serif;
+      fill: var(--thru-src);
+    }
+  </style>
+
+  <text class="lab" x="0" y="28">Respondents recruited</text>
+  <text class="lab" x="0" y="46">per active day</text>
+
+  <!-- The values, above the interval they mark. C-089. -->
+  <g data-claim="C-089">
+    <text class="qnum" x="228.2" y="14">69</text>
+    <text class="num"  x="277.7" y="14">140</text>
+    <text class="qnum" x="389.5" y="14">300</text>
+  </g>
+
+  <!-- M3 interval. Bracket, bar, cell: three of the four primitives. -->
+  <line class="whisk" x1="208.6" y1="34.0" x2="228.2" y2="34.0"/>
+  <line class="whisk" x1="389.5" y1="34.0" x2="550.7" y2="34.0"/>
+  <line class="whisk" x1="208.6" y1="25.0" x2="208.6" y2="43.0"/>
+  <line class="whisk" x1="550.7" y1="25.0" x2="550.7" y2="43.0"/>
+  <rect class="box" x="228.2" y="22.0" width="161.3" height="24.0"/>
+  <rect class="cell" x="271.7" y="28.0" width="12.0" height="12.0"/>
+
+  <!-- M4 tick rule: the scale the interval is read against -->
+  <line class="axis" x1="180.0" y1="58.0" x2="564.0" y2="58.0"/>
+  <line class="axis" x1="180.0" y1="58.0" x2="180.0" y2="65.0"/>
+  <line class="axis" x1="249.8" y1="58.0" x2="249.8" y2="62.0"/>
+  <line class="axis" x1="319.6" y1="58.0" x2="319.6" y2="62.0"/>
+  <line class="axis" x1="389.5" y1="58.0" x2="389.5" y2="62.0"/>
+  <line class="axis" x1="459.3" y1="58.0" x2="459.3" y2="62.0"/>
+  <line class="axis" x1="529.1" y1="58.0" x2="529.1" y2="65.0"/>
+  <text class="tik" x="180.0" y="78" data-claim="none">0</text>
+  <text class="tik" x="354.5" y="78" text-anchor="middle" data-claim="none">250</text>
+  <text class="tik" x="564.0" y="78" text-anchor="end" data-claim="none">500 RESPONDENTS</text>
+
+  <line class="rule" x1="0" y1="92" x2="620" y2="92"/>
+
+  <!-- Provenance rule, DESIGN.md sec 2. Mandatory, same visual unit as the figure. -->
+  <text class="src" x="0" y="110" data-claim-source="">Distribution across 129 studies, each at its own median active day. Box: 25th to 75th percentile. Whiskers: 10th (41) to 90th (531).</text>
+  <text class="src" x="0" y="126" data-claim-source="">An active day is a study-day recruiting at least 20 respondents; half of studies have 11 or more. Virtual Lab production database, August 2026.</text>
+</svg>

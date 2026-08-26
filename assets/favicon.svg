@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Virtual Lab favicon. Motif M2, bar and target tick, on an ink tile.
+       An ink band is dark in BOTH themes, so every colour here is a token that is
+       identical in both: invert #1F272E, on-invert #EDF1F2, data-inv #4E9DB0,
+       brass-inv #C9A250 (DESIGN.md section 3). No media query is needed and none
+       is wanted: a favicon has no theme context to inherit.
+       Top bar reaches the tick (at target, data-inv); bottom bar stops short
+       (under target, brass-inv). State is carried by hue AND by length; M2's
+       135deg hatch is dropped because it does not exist at 16px. -->
+  <rect width="32" height="32" rx="2" fill="#1F272E"/>
+  <rect x="23" y="4"  width="3"  height="24" fill="#EDF1F2"/>
+  <rect x="6"  y="7"  width="17" height="6"  fill="#4E9DB0"/>
+  <rect x="6"  y="19" width="10" height="6"  fill="#C9A250"/>
+</svg>
