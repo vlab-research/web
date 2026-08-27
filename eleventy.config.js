@@ -13,7 +13,23 @@ export default function (eleventyConfig) {
   //   from a Google origin at runtime.
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
-  eleventyConfig.addPassthroughCopy("assets");
+  // assets/ is copied SUBDIRECTORY BY SUBDIRECTORY, deliberately, so that
+  // assets/logos/ is NOT published. Not one of those eight institutional marks is
+  // cleared (D-014): every institution requires permission for third-party use, and
+  // the World Bank, Harvard and WashU explicitly bar use that implies affiliation.
+  // Copying assets/ wholesale would host eight third-party trademarks on our own
+  // domain, publicly fetchable, with no permission for any of them — and nothing on
+  // the site references them, because the client wall renders as type until a mark
+  // is both supplied AND cleared.
+  //
+  // When a mark clears, add its file here as well as flipping `cleared` in
+  // _data/clients.js. Two separate things, exactly as that file says.
+  eleventyConfig.addPassthroughCopy("assets/figures");
+  eleventyConfig.addPassthroughCopy("assets/icons");
+  eleventyConfig.addPassthroughCopy("assets/favicon.svg");
+  eleventyConfig.addPassthroughCopy("assets/favicon.ico");
+  eleventyConfig.addPassthroughCopy("assets/apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("assets/mark.svg");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_redirects");
 

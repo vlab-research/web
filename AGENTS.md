@@ -132,6 +132,7 @@ easier to hold once you have seen the page.
 |---|---|
 | `package.json` | Eleventy **pinned at 3.1.6** with a lockfile (D-006). `build` · `serve` · `check` · `figures`. `type: module` |
 | `eleventy.config.js` | Input is the **repo root**, so `_includes/base.html` and `_data/` sit where D-006 says. Passthrough: `css` `fonts` `assets` `robots.txt` `_redirects` |
+| **`assets/logos/` is NOT published** | `eleventy.config.js` copies `assets/` subdirectory by subdirectory so the eight institutional marks never reach the build. **Not one is cleared (D-014)** — copying `assets/` wholesale would host eight third-party trademarks on our own domain, publicly fetchable, with no permission for any. Nothing references them; the wall renders as type. **When a mark clears, add its file to the passthrough list AND flip `cleared` in `_data/clients.js`** — two separate things |
 | `.eleventyignore` | The documentation set, `notes/`, `scripts/`, `js/`, `img/`. `build/` `media/` `node_modules/` `_site/` come free from `.gitignore`, which Eleventy honours |
 | `_includes/base.html` | Head, the inlined icon sprite, nav, footer, scroll-progress rule. **No analytics** — see D-009 below |
 | `_includes/macros.njk` | **New 2026-08-26.** `lattice(id, inv)` and `objective()`. The M1 lattice takes an id because each instance needs its OWN `<pattern>` — one shared pattern in `<head>` would break the `.inv` colour swap, since `currentColor` inside a `<pattern>` resolves where the pattern is **defined**, not where it is used |
