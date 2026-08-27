@@ -119,10 +119,25 @@ a page the crawler reads; it earns the same discipline as the page a human reads
 ### 4.2 · The site has no geographic text at all — and this is the headline finding
 
 **Parsed with `SKIP={script, style, svg}` over the built page: not one of the 41 country
-names and not one of the 6 region names appears in the homepage's real text.** Every
-geographic string on a site that has fielded studies in 41 countries lives inside an SVG
-`<title>` — a tooltip. It is in the DOM, Google parses it, and it carries close to no
-ranking weight.
+names and not one of the 6 region names appears in the homepage's HTML text.** Every
+geographic string on a site that has fielded studies in 41 countries is inside the SVG.
+
+**One correction, and it matters — the regions improved on 2026-08-26.** The strip gained a
+label band the same day this was written (Nandan: *"The bars per continent are missing the
+continents"*), so the six region names now render as SVG `<text>`:
+
+```
+<text class="cs-lab" x="0.00" y="50.0">MIDDLE EAST &amp; NORTH AFRICA</text>
+<text class="cs-lab" x="487.89" y="50.0">SUB-SAHARAN AFRICA</text>
+```
+
+**`<text>` is not `<title>`.** A `<title>` is a tooltip; `<text>` is rendered content, and
+Google extracts it — below HTML body text, but far above nothing. So the regional position
+is meaningfully better than this memo first recorded, and the ranking severity below is
+reduced accordingly.
+
+**The 37 country names are unchanged and are still `<title>` only** — tooltips, weighed at
+close to nothing. And no geographic string of either kind is HTML text.
 
 **The cause is a correctly-taken fallback, not a build error.** `COPY.md` marks the region
 totals **[P-4]** *"ships only if the region buckets are confirmed (`CLAIMS.md`, open, owner
@@ -185,6 +200,24 @@ only geographic text, **the bucket names are search terms**. *"Americas"* is acc
 matches nothing anyone types; it also silently averages the US with Haiti. That is a
 `CLAIMS.md` decision with an SEO consequence attached, and it should be taken knowing both.
 
+### 4.4 · The paper's own keywords name the audience we are avoiding
+
+`_data/paper.json` carries the manuscript's keyword line, identical in all three editions:
+
+> Ad Platforms · APIs · **Consumer Insights** · Online Sampling · Survey Research
+
+**"Consumer Insights" is on this memo's own banned list** (§6) — it is the exact audience the
+brief said not to attract. The keywords are the authors' and they are not wrong on a journal
+submission; the market-research framing is genuinely where a methods paper finds readers.
+
+**The rule that resolves it is D-023's, applied to a surface it was not written for.**
+Structured data is our own voice, not a quotation — nothing obliges us to reproduce a
+keyword line, and emitting it would be us telling Google we are relevant to consumer
+insights. So `_data/schema.js` publishes **no `keywords` field at all** and uses its own
+`knowsAbout` list instead. Recorded because the shortcut — *the paper says it, so it is
+sourced* — is exactly the move that would undo the negative filter, and it would have looked
+like good provenance discipline while doing it.
+
 ### 4.4 · The page is not thin, which is the good news
 
 1,130 indexable words on the homepage. For a one-page site that is a real document, not a
@@ -194,8 +227,11 @@ fix for §2's forfeited half is more pages, and never more words on this one.
 
 ## 5 · On-domain work — the whole list
 
-Ordered by leverage. **None of it touches `COPY.md`, D-007 or D-023.** All of it is still
-outstanding as of the 2026-08-26 build.
+Ordered by leverage. **None of it touches `COPY.md`, D-007 or D-023.**
+
+**Items 5.2, 5.4 and 5.5 shipped on 2026-08-26** — Nandan: *"work on the structured stuff.
+That doesn't change copy at all, and it's a freebie."* What shipped is marked below. 5.0 and
+5.1 are his; 5.3 is blocked on an asset and 5.6 needs a DNS record.
 
 ### 5.0 Confirm the region buckets — and it is not really an SEO task
 
@@ -220,7 +256,7 @@ The description is where the negative filter does most of its work: name researc
 funders and agencies explicitly; name the regions; carry the paper. Never *market research*,
 *consumer insights*, *audience insights*, *brand tracking*, *voice of customer*.
 
-### 5.2 Structured data — the entity play, and the best negative-targeting lever available
+### 5.2 Structured data — the entity play — **SHIPPED 2026-08-26**
 
 Invisible, copy-free, and the most direct way to tell Google *this is a research
 organisation, not a martech vendor*:
@@ -233,18 +269,40 @@ organisation, not a martech vendor*:
 - **Deliberately not** `ProfessionalService` or any marketing-adjacent type. The type
   vocabulary is itself a signal.
 
-### 5.3 `og:image` — a regression
+### 5.3 `og:image` — a regression, **still open and blocked on an asset**
 
 `_includes/base.html` carries `og:title`, `og:description` and `og:url` and **no
 `og:image`**. Commit `92e25f7` added one to the legacy SPA; the rebuild dropped it. Every
-share of this site currently renders blank. Needs a generated brand-system image.
+share of this site currently renders blank.
 
-### 5.4 `sitemap.xml`, and the `robots.txt` directive
+**Deliberately not shipped with the rest, for two reasons.** The tag is one line; the image
+is not. A social card is raster — the platforms do not render SVG for `og:image` — so it
+cannot come from the four primitives the way everything else on this site does, and
+`assets/apple-touch-icon.png` is the only precedent (a committed static asset, which is the
+right pattern: `netlify.toml` promises `scripts/` is stdlib Python needing nothing
+installed, and a rasterizer in the build would break that promise).
 
-Neither exists. Two files, near-zero effort. `robots.txt` currently allows everything and
-points at nothing.
+**And the brand faces are not installed system-wide**, so any local rasterization renders
+Zilla Slab as a fallback and ships off-brand type. Closing that needs `fonttools` to convert
+the woff2 kit, which is a toolchain decision.
 
-### 5.5 Search Console — and it is clean under D-009
+**What it actually needs is a design call, not a script**: a 1200×630 card is a composition —
+mark, wordmark, and which line of type, if any. That is `DESIGN.md`'s to answer. Shipping a
+guess would be worse than the current blank, because a social card is the one asset nobody
+reviews again once it looks fine.
+
+### 5.4 `sitemap.xml` and the `robots.txt` directive — **SHIPPED 2026-08-26**
+
+`sitemap.njk` emits `/sitemap.xml` from `collections.all`, and `robots.txt` points at it.
+
+**It lists one URL, and that is the decision worth recording.** `/404.html` is not content.
+`/privacy/` is deliberately unlinked — Nandan, 2026-08-25: it *"exists at its URL for anyone
+who needs it"* — and **a sitemap entry is a positive request to index**, which is the
+opposite of that intent. It carries no `noindex`, so anyone holding the URL still gets the
+page; it is simply not advertised. Both already set `eleventyExcludeFromCollections`, so the
+collection does the right thing on its own. **If the policy is ever linked, revisit it.**
+
+### 5.5 Search Console — clean under D-009, **needs a DNS record from Nandan**
 
 **Verify by DNS TXT, not by meta tag or script.** Search Console is server-side: no
 client-side code, no cookie, no consent question, so it does not touch D-009 or sit beside

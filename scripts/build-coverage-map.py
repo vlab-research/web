@@ -215,6 +215,9 @@ CSS_STRIP = """  .cs-bar    { display:block; width:100%; height:auto }
   .cs-ground { fill:var(--rule) }
   .cs-seg    { fill:var(--data) }
   .cs-tick   { stroke:var(--rule-2); stroke-width:1; shape-rendering:crispEdges }
+  .cs-num    { font:400 22px "IBM Plex Mono", ui-monospace, monospace;
+               letter-spacing:-.025em; fill:var(--ink);
+               font-variant-numeric:tabular-nums }
   .cs-lab    { font:500 10px "IBM Plex Mono", ui-monospace, monospace;
                letter-spacing:.13em; fill:var(--ink-2) }
   .src       { font:400 13px/1.5 "Source Serif 4", Georgia, serif; font-style:italic;
@@ -369,10 +372,20 @@ def build_map(cov, feats, by3, by_name):
 # Names only, never values. The bucketing is editorial and has no CLAIMS.md row, so the
 # six numbers stay off the page; a name is not a figure and the widths are drawn from a
 # VERIFIED table.
-LAB_SIZE = 10.0      # mono, uppercase
+# TWO-TIER LABEL, 2026-08-26. The value sits above its region name, and the value is the
+# dominant element: Nandan, "the numbers are too small. How was it before?" Before, the six
+# amounts lived in cells at clamp(22px,2.2vw,28px) Plex Mono and the strip carried names
+# only. The cells were withdrawn as redundant with the strip -- so the strip has to carry
+# the weight the cells were carrying, not just their content.
+#
+# 22px matches the bottom of the cells' clamp, which is what these were at a phone width.
+# The strip scales with the page, so a fixed size here IS responsive.
+NUM_SIZE = 22.0      # mono, the value
+NUM_CPW = NUM_SIZE * 0.6                          # mono advance, no tracking on numerals
+LAB_SIZE = 10.0      # mono, uppercase, the region name
 LAB_TRACK = 0.13     # letter-spacing, em -- sec 4: uppercase always carries >= .11em
 LAB_CPW = LAB_SIZE * 0.6 + LAB_SIZE * LAB_TRACK   # advance per character, ~7.3px
-LAB_ROWS = (20.0, 38.0, 56.0)  # candidate baselines below the bar
+LAB_ROWS = (28.0, 74.0, 120.0)  # candidate baselines below the bar, one per two-tier label
 LAB_PAD = 10.0                 # space kept clear at the right edge
 LAB_GAP = 20.0                 # clear space between two labels sharing a baseline
 
@@ -407,8 +420,10 @@ def build_strip(cov, rows, attributed):
         # same six regions twice, in the same order, immediately below each other.
         # Nandan: "It's redundant. I like either the cells or the strip. But I prefer the
         # strip." So the strip absorbed the amounts and the cells came off the page.
-        name = f'{r["total"]:,} \u00b7 {r["name"].upper()}'
-        est = len(name) * LAB_CPW
+        value = f'{r["total"]:,}'
+        name = r["name"].upper()
+        # The block is as wide as its widest line.
+        est = max(len(value) * NUM_CPW, len(name) * LAB_CPW)
         lx = max(0.0, min(x, STRIP_W - LAB_PAD - est))
         row = next((k for k in range(len(LAB_ROWS)) if lx >= row_end[k]), None)
         if row is None:                       # every baseline occupied at this x
@@ -418,12 +433,15 @@ def build_strip(cov, rows, attributed):
         ly = LAB_ROWS[row]
         ticks.append(f'<line class="cs-tick" x1="{x:.2f}" y1="{STRIP_H:.0f}" '
                      f'x2="{x:.2f}" y2="{STRIP_H + ly - LAB_SIZE:.1f}"/>')
-        labels.append(f'<text class="cs-lab" x="{lx:.2f}" '
-                      f'y="{STRIP_H + ly:.1f}" data-claim="C-098">{esc(name)}</text>')
+        labels.append(
+            f'<text class="cs-num" x="{lx:.2f}" y="{STRIP_H + ly:.1f}" '
+            f'data-claim="C-098">{esc(value)}</text>'
+            f'<text class="cs-lab" x="{lx:.2f}" y="{STRIP_H + ly + 17:.1f}">'
+            f'{esc(name)}</text>')
         x += w + STRIP_GAP
 
     used = [LAB_ROWS[k] for k in range(len(LAB_ROWS)) if row_end[k] > 0.0]
-    band = STRIP_H + (max(used) if used else 0.0) + 6.0
+    band = STRIP_H + (max(used) if used else 0.0) + 24.0
     label = "; ".join(f'{r["name"]} {r["total"]:,}' for r in rows)
     # preserveAspectRatio="none" is GONE. It let the 30px bar stay 30px at any width, and
     # it also stretched everything else horizontally -- which is why this drawing could
@@ -508,9 +526,43 @@ def build_regions(cov, rows, attributed, pending_display):
 
 # --- cli --------------------------------------------------------------------
 
+def build_countries(cov, by3, by_name):
+    """The 41 countries as data, for consumers that are not the map.
+
+    Added 2026-08-26 for the JSON-LD `areaServed` block, which needs country
+    *names* and had none: coverage.json carries ISO-2 codes only, and the names
+    live in world.geojson, which only this script reads. Emitting them here keeps
+    one source of truth -- the structured data and the map cannot disagree about
+    which countries we cover, because the same run produces both.
+
+    All 41 are listed: 37 with a count, and the 4 in `pending`, which have
+    verified coverage and no computed count. `pending` is not drawn on the map
+    (see build_map) but coverage is coverage, and `areaServed` is a statement
+    about where we operate rather than about respondent counts. `respondents` is
+    null for those four -- never 0, which coverage.json's own note forbids.
+    """
+    respondents = cov["respondents"]
+    out = []
+    for cc in list(respondents) + list(cov["pending"]):
+        f = feature_for(cc, by3, by_name)
+        out.append({
+            "code": cc,
+            "name": DISPLAY_NAME.get(cc, f["properties"]["name"] if f else cc),
+            "respondents": respondents.get(cc),
+        })
+    out.sort(key=lambda r: (-(r["respondents"] or 0), r["name"]))
+    return json.dumps({
+        "_generated_by": "scripts/build-coverage-map.py -- do not hand-edit",
+        "_source": cov["_source"],
+        "as_of": cov["as_of"],
+        "countries": out,
+    }, ensure_ascii=False, indent=2)
+
+
 FILENAMES = {"map": "coverage-map.html",
              "strip": "coverage-strip.html",
-             "regions": "coverage-regions.html"}
+             "regions": "coverage-regions.html",
+             "countries": "coverage-countries.json"}
 
 
 def main():
@@ -555,6 +607,8 @@ def main():
     if "regions" in wanted:
         fragments["regions"] = build_regions(
             cov, rows, attributed, pending_names(cov, by3, by_name))
+    if "countries" in wanted:
+        fragments["countries"] = build_countries(cov, by3, by_name)
 
     if args.stdout:
         print(fragments[wanted[0]])
@@ -569,6 +623,10 @@ def main():
         print(f"{drawn} countries drawn; {len(cov['pending'])} pending, not drawn "
               f"({', '.join(cov['pending'])})",
               file=sys.stderr)
+    if "countries" in fragments:
+        n = len(cov["respondents"]) + len(cov["pending"])
+        print(f"{n} countries listed for structured data "
+              f"({len(cov['pending'])} without a count)", file=sys.stderr)
     if "strip" in fragments or "regions" in fragments:
         total = cov["totals"]["respondents"]
         print(f"{len(rows)} regions, {attributed:,} of {total:,} respondents "

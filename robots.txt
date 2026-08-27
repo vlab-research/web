@@ -3,3 +3,7 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
+
+# /privacy/ is not listed in the sitemap and is not linked from any page. It is not
+# disallowed either — anyone who has the URL should get the page. See sitemap.njk.
+Sitemap: https://vlab.digital/sitemap.xml

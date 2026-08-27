@@ -26,6 +26,17 @@
 <meta property="og:description" content="{{ description or site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
+{#- JSON-LD, built in _data/schema.js. Homepage only: the graph describes the
+    organisation and the paper, and neither the privacy policy nor the 404 is a
+    surface either belongs on.
+
+    It carries NO FIGURES, by design and not by luck. check-claims.py skips
+    <script>, so nothing in here is scanned — read the header of _data/schema.js
+    before adding a field, especially one with a number in it. -#}
+{%- if page.url == "/" %}
+<script type="application/ld+json">{{ schema | dump | safe }}</script>
+{%- endif %}
+
 {#- No analytics. D-009 is open and its recommendation is cookieless and
     EU-hosted; PostHog shipped on the legacy SPA with no consent mechanism, on
     the same origin as our own privacy policy. Nothing is loaded here until that

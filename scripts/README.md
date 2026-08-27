@@ -13,7 +13,7 @@ Nothing here needs a dependency. Python 3, standard library, run from anywhere.
 | `check-claims.py` | Every number on a page traces to a `VERIFIED` row in `CLAIMS.md`, and carries a visible source line in the same visual unit | Before publishing any page that states a figure |
 | `test-check-claims.py` | Ten fixtures asserting how `check-claims.py` behaves | After touching `check-claims.py`, or `CLAIMS.md`'s status vocabulary or publication rules |
 | `check-contrast.py` | Every colour pair in `DESIGN.md` §3 meets its stated WCAG target | Before publishing anything with a new colour pairing |
-| `build-coverage-map.py` | Emits the coverage section's three artefacts from one data file | After `scripts/data/coverage.json` changes — and never hand-edit the output |
+| `build-coverage-map.py` | Emits the coverage section's three artefacts **plus the country list for structured data** from one data file | After `scripts/data/coverage.json` changes — and never hand-edit the output |
 | `build-throughput-figure.py` | Emits `assets/figures/throughput-box.svg` — respondents recruited per study per active day | After `scripts/data/throughput.json` changes — and never hand-edit the output |
 | `build-adcost-figure.py` | Emits `assets/figures/ad-cost.svg` — advertising cost per respondent recruited | After `scripts/data/ad-cost.json` changes — and never hand-edit the output |
 | `build-reallocations-figure.py` | Emits `assets/figures/reallocations-box.svg` — budget reallocations per study. **Blocked: exits 1 until `p10` and `p25` exist** | After `scripts/data/reallocations.json` gets its two missing percentiles |
@@ -147,15 +147,26 @@ and not `--ink-3` (4.00:1). **An ink band is dark in both themes and the tokens 
 ## `build-coverage-map.py` — the coverage section
 
 ```
-python3 scripts/build-coverage-map.py                       # all three, to build/
+python3 scripts/build-coverage-map.py                       # all four, to build/
 python3 scripts/build-coverage-map.py --only map --stdout
+python3 scripts/build-coverage-map.py --only countries       # just the JSON
 ```
 
 Reads `scripts/data/coverage.json` and a vendored Natural Earth 1:110m boundary file;
-writes `build/coverage-map.html`, `build/coverage-strip.html` and
-`build/coverage-regions.html`. The treatment is settled in D-018 and described in
-`DESIGN.md` §8, "Coverage section". **Do not hand-edit the output** — refresh the data and
-re-run, which is the whole reason the three artefacts come from one command.
+writes `build/coverage-map.html`, `build/coverage-strip.html`,
+`build/coverage-regions.html` and `build/coverage-countries.json`. The treatment is settled
+in D-018 and described in `DESIGN.md` §8, "Coverage section". **Do not hand-edit the
+output** — refresh the data and re-run, which is the whole reason the artefacts come from
+one command.
+
+**`coverage-countries.json` is the fourth artefact, added 2026-08-26**, and it is the only
+one no human reads: `_data/schema.js` uses it for the JSON-LD `areaServed` block.
+`coverage.json` carries ISO-2 codes and no names, and the names live in `world.geojson`,
+which only this script reads — so emitting them here is what keeps the structured data and
+the map from disagreeing about where we work. **It lists all 41**: the 37 with a count and
+the 4 in `pending`, whose `respondents` is `null` and **never `0`**. `areaServed` is a
+statement about where we operate, not about counts, so the pending four belong in it even
+though the map does not draw them.
 
 **Countries in `pending` are no longer drawn** (2026-08-26). They are covered but not yet
 counted; they used to render as a dashed outline with their own legend state and a
@@ -236,9 +247,10 @@ that is exactly the drift it exists to prevent. A fixture comparing the two woul
 writing before Phase 4.
 
 
-### `build-reallocations-figure.py` is blocked, and that is the script working
+### `build-reallocations-figure.py` was blocked, and the block worked
 
-**Added 2026-08-26 and it has never drawn.** It exits 1 naming what is missing:
+**Added 2026-08-26, blocked for an afternoon, drawn the same day.** While `p10` and `p25`
+were missing it exited 1 and named them:
 
 ```
 BLOCKED: p10, p25 missing from reallocations.json.
@@ -260,5 +272,22 @@ deliberately one figure in three units, so a reader who learns to read one has l
 read all of them. An asymmetric variant invented for this dataset because two numbers are
 absent would spend that property to ship a week early.
 
-It has been dry-run against substituted values and draws correctly — geometry, wrapping,
-axis labels from `major_ticks`, and the axis guard all behave. **Only the data is missing.**
+**The query was run read-only against cluster `vprod` on 2026-08-26** and returned p10 = 13,
+p25 = 28 — plus median 61, p75 165, max 1,308 and 17,596 across 109 studies, **every one of
+which reconciled with C-092 as it already stood.** That is the more useful half of the result:
+it confirms the `report_type` filter and shows the row had not drifted.
+
+**Add a third trap to the two above.** CockroachDB's `percentile_cont` needs a **FLOAT**
+ordering column — `count(*)::FLOAT` — or it fails outright with *unknown signature:
+percentile_cont_impl(decimal, int)*.
+
+**The repo has production access and nothing recorded it.** `kubectl` is configured against
+`gke_toixotoixo_europe-west1-b_toixo`, namespace `vprod`:
+
+```
+kubectl exec -n vprod gbv-cockroachdb-0 -- \
+  /cockroach/cockroach sql --insecure --database=vlab --execute="SELECT …"
+```
+
+**Every figure in `CLAIMS.md` can therefore be re-derived rather than taken on trust.** Read
+only; nothing in this repo has any business writing to that cluster.

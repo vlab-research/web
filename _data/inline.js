@@ -29,6 +29,7 @@ export default {
     // M5, the thread. Hand-authored rather than generated: it draws no data, so there
     // is nothing for a generator to read. Its numerals are list indices and carry
     // data-claim="none".
+    reallocations: read("assets/figures/reallocations-box.svg"),
     thread: read("assets/figures/thread.svg"),
   },
 };

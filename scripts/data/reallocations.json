@@ -2,42 +2,43 @@
   "_meta": {
     "generated": "2026-08-26",
     "purpose": "Source data for assets/figures/reallocations-box.svg -- budget reallocations per study. Every value below must be computed by the query in this file, read-only, against Virtual Lab production CockroachDB cluster vprod. Nothing here is typed by hand or estimated.",
-    "claims": ["C-092"],
+    "claims": [
+      "C-092"
+    ],
     "read_before_use": [
       "CLAIMS.md is the authority on what may be published. This file records what the database SAYS.",
-      "INCOMPLETE. p10 and p25 are null and the figure CANNOT be drawn until they exist. C-092 records median/p75/p90/max only. A box plot's box spans p25 to p75 and its whiskers span p10 to p90, so two of the five values the form needs are missing. AGENTS.md hard rule 2: never invent a figure, not as a placeholder, not to be replaced later. build-reallocations-figure.py exits non-zero while either is null.",
-      "ALWAYS filter by report_type. adopt_reports holds three types -- FACEBOOK_ADOPT (17,596), cost_over_time (7,244) and respondents_over_time (7,226). Only the first is a DECISION; the other two are monitoring. Counting all three gives a median of 84 instead of 61, which is how C-092 was wrong once.",
-      "CockroachDB: count(DISTINCT x) returns garbage when it shares a SELECT list with percentile_cont(). Compute distinct counts separately -- this quirk produced a wrong number once already."
+      "Queried read-only against cluster vprod on 2026-08-26 via kubectl. Every value reconciles with C-092 as it already stood: median 61, p75 165, max 1,308, 17,596 across 109 studies. p10 and p25 are the two the row did not carry, and they are what unblocked the figure.",
+      "p90 returns 351.4 and is recorded as 351, which is what C-092 already published.",
+      "ALWAYS filter by report_type. adopt_reports holds four types -- FACEBOOK_ADOPT (17,596), cost_over_time (7,256), respondents_over_time (7,238) and one test row. Only the first is a DECISION; the others are monitoring. Counting them all gives a median of 84 instead of 61, which is how C-092 was wrong once.",
+      "CockroachDB: percentile_cont needs a FLOAT ordering column -- count(*)::FLOAT -- or it fails with 'unknown signature: percentile_cont_impl(decimal, int)'. And never put count(DISTINCT x) in a SELECT list with percentile_cont(); n_studies is computed in its own statement for that reason."
     ]
   },
-
-  "as_of": null,
-
+  "as_of": "2026-08-26",
   "population": {
     "unit": "study",
     "n_studies": 109,
     "description": "Distribution across studies, each counted once by its own number of budget reallocations.",
     "reallocation": "One row of vlab.adopt_reports with report_type='FACEBOOK_ADOPT'. One row is one reallocation across every stratum, carrying each stratum's current budget, participants, price per participant and desired share."
   },
-
   "percentiles": {
-    "p10": null,
-    "p25": null,
+    "p10": 13,
+    "p25": 28,
     "median": 61,
     "p75": 165,
     "p90": 351
   },
-
   "max": 1308,
   "total_reallocations": 17596,
-
   "axis": {
-    "_note": "Set once p90 is confirmed against real p10/p25. The generator exits non-zero if any drawn value falls outside this range, so do not widen it to make a value fit -- that guard is the reason a figure cannot silently clip a claim.",
+    "_note": "The generator exits non-zero if any drawn value falls outside this range. p90 is 351, so 400 holds every drawn value; max (1,308) is stated in the source line rather than drawn, exactly as the other two figures state their own outer range.",
     "min": 0,
     "max": 400,
     "tick_every": 100,
-    "major_ticks": [0, 200, 400]
+    "major_ticks": [
+      0,
+      200,
+      400
+    ]
   },
-
   "query": "-- Budget reallocations per study. Fills percentiles.p10 and percentiles.p25,\n-- and re-confirms median/p75/p90/max, which CLAIMS.md C-092 already carries.\n--\n-- Run read-only against cluster vprod. The report_type filter is not optional:\n-- adopt_reports holds monitoring rows too, and counting them gives 84, not 61.\n--\n-- percentile_cont is kept away from count(DISTINCT ...) deliberately -- see\n-- read_before_use. n_studies is computed in its own statement.\n\nWITH per_study AS (\n  SELECT study_id, count(*) AS reallocations\n  FROM vlab.adopt_reports\n  WHERE report_type = 'FACEBOOK_ADOPT'\n  GROUP BY study_id\n)\nSELECT\n  percentile_cont(0.10) WITHIN GROUP (ORDER BY reallocations) AS p10,\n  percentile_cont(0.25) WITHIN GROUP (ORDER BY reallocations) AS p25,\n  percentile_cont(0.50) WITHIN GROUP (ORDER BY reallocations) AS median,\n  percentile_cont(0.75) WITHIN GROUP (ORDER BY reallocations) AS p75,\n  percentile_cont(0.90) WITHIN GROUP (ORDER BY reallocations) AS p90,\n  max(reallocations)                                          AS max,\n  sum(reallocations)                                          AS total_reallocations\nFROM per_study;\n\n-- Separately, for the reason in read_before_use:\nSELECT count(*) AS n_studies FROM (\n  SELECT study_id FROM vlab.adopt_reports\n  WHERE report_type = 'FACEBOOK_ADOPT' GROUP BY study_id\n);\n"
 }

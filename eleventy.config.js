@@ -31,8 +31,12 @@ export default function (eleventyConfig) {
     },
     // Pages are .html with front matter and a layout: line (D-006). Nunjucks is
     // the engine for both the page body and the layout chain.
+    //
+    // "njk" is here for exactly one file — sitemap.njk, which emits /sitemap.xml.
+    // It is not a page and carries no layout, so giving it a .html extension would
+    // be worse: it would read as a page to everyone who opened the directory.
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    templateFormats: ["html"],
+    templateFormats: ["html", "njk"],
   };
 }

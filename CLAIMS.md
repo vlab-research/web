@@ -493,7 +493,7 @@ want"* (Nandan, 2026-08-25).
 
 | ID | Claim | Value | Definition | Status | Checked |
 |---|---|---|---|---|---|
-| C-092 | Budget reallocations per study | **median 61** · p75 165 · p90 351 · max **1,308** · 17,596 across 109 studies | Count of `report_type='FACEBOOK_ADOPT'` rows in `vlab.adopt_reports`. One row is one reallocation across every stratum, carrying each stratum's current budget, participants, price per participant and desired share | `VERIFIED` | 2026-08-25 |
+| C-092 | Budget reallocations per study | **p10 13** · **p25 28** · **median 61** · p75 165 · p90 351 · max **1,308** · 17,596 across 109 studies | Count of `report_type='FACEBOOK_ADOPT'` rows in `vlab.adopt_reports`. One row is one reallocation across every stratum, carrying each stratum's current budget, participants, price per participant and desired share | `VERIFIED` | 2026-08-25 |
 | C-093 | Strata per study | **median 6** · p75 11 · p90 18 · max **120** · 1,413 across 135 studies | Length of the latest `strata` conf array per study in `vlab.study_confs` | `VERIFIED` | 2026-08-25 |
 
 **C-092 was wrong once and the error is instructive.** Counting every row of `adopt_reports`
@@ -511,25 +511,27 @@ is reaching for a number this register does not have.
 what a researcher can or cannot manage by hand would need evidence about researchers, which
 we do not have.
 
-### C-092 needs two more percentiles before it can be drawn
+### ~~C-092 needs two more percentiles~~ — closed 2026-08-26, and every value reconciled
 
-**Open, 2026-08-26, and it is one read-only query.** C-092 carries **median · p75 · p90 ·
-max**. The site's box-plot form needs **p10 · p25 · median · p75 · p90** — the box spans the
-interquartile range and the whiskers span the tenth to the ninetieth — so **p10 and p25 are
-missing** and the figure cannot be drawn.
+**Closed 2026-08-26.** The query was run read-only against cluster `vprod`: **p10 = 13,
+p25 = 28**. **Every other value it returned reconciled with what this row already said** —
+median 61, p75 165, max 1,308, 17,596 reallocations across 109 studies — which is the useful
+part of the result, because it confirms the `report_type` filter is the right one and that
+the row had not drifted. p90 returns 351.4 and the row's 351 stands.
+
+**Two query traps, both now recorded in `scripts/data/reallocations.json`:** CockroachDB's
+`percentile_cont` needs a **FLOAT** ordering column (`count(*)::FLOAT`) or it fails outright,
+and `count(DISTINCT …)` still must not share a `SELECT` list with it — `n_studies` is
+computed in its own statement.
 
 Nandan, 2026-08-26: *"If we want to include a box plot of budget reallocations, we can. That
 may be nice. Try that as a third box plot."* Everything except the two values is built:
 `scripts/data/reallocations.json` holds the query, and
 `scripts/build-reallocations-figure.py` is complete and **exits 1 until they exist**.
 
-**This is not a `PLACEHOLDER` row and C-092 does not change status.** What it already
-records is `VERIFIED` and publishable; what is missing is two further percentiles of the
-same distribution. Adding them extends the row, it does not replace it.
-
-**Do not estimate them from the ones we have.** Percentiles are not derivable from other
-percentiles, and a median of 61 against a p75 of 165 says nothing reliable about where the
-25th falls.
+**The figure is on the page**, under the paragraph about the price per stratum being learned
+while the campaign runs — that paragraph describes the loop, and this is how often the loop
+turns.
 
 ### C-091 and C-014 do not contradict each other, and a page must not let them look as if they do
 

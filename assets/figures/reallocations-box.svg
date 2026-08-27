@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 136" width="100%"
+     class="fig-realloc" role="img" aria-labelledby="reallocTitle reallocDesc"
+     preserveAspectRatio="xMinYMin meet" data-claim-unit="">
+  <title id="reallocTitle">Budget reallocations per study</title>
+  <desc id="reallocDesc">Budget reallocations per study, across 109 studies. The median study takes 61. The middle half of studies fall between 28 and 165. The tenth percentile is 13 and the ninetieth is 351, read against a scale running from 0 to 400 reallocations; the longest study ran to 1,308. This is a distribution across studies, not an uncertainty interval on an estimate.</desc>
+
+  <style>
+    /* Local roles, resolved from DESIGN.md sec 3 tokens only. No literal colour. */
+    .fig-realloc{
+      --realloc-data:  var(--data);
+      --realloc-label: var(--ink);
+      --realloc-rule:  var(--rule);
+      --realloc-axis:  var(--ink-3);
+      --realloc-src:   var(--ink-3);
+    }
+    /* On an ink band. --data reads 2.10:1 and --ink-3 reads 4.00:1 there; see sec 3. */
+    .fig-realloc.inv{
+      --realloc-data:  var(--data-inv);
+      --realloc-label: var(--on-invert);
+      --realloc-rule:  var(--rule-invert);
+      --realloc-axis:  var(--on-invert-2);
+      --realloc-src:   var(--on-invert-2);
+    }
+    .fig-realloc .box    { fill: var(--realloc-data); fill-opacity:.26;
+                        stroke: var(--realloc-data); stroke-width:1 }
+    .fig-realloc .cell   { fill: var(--realloc-data) }
+    .fig-realloc .whisk  { stroke: var(--realloc-data); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-realloc .rule   { stroke: var(--realloc-rule); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-realloc .axis   { stroke: var(--realloc-axis); stroke-width:1;
+                        shape-rendering:crispEdges }
+    .fig-realloc .lab{
+      font:600 13px/1 "Source Sans 3","Helvetica Neue",Arial,sans-serif;
+      fill: var(--realloc-label);
+    }
+    .fig-realloc .num{
+      font:400 15px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:-.01em;
+      fill: var(--realloc-data); text-anchor:middle;
+    }
+    .fig-realloc .qnum{
+      font:400 12px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums;
+      fill: var(--realloc-data); text-anchor:middle;
+    }
+    .fig-realloc .tik{
+      font:500 9.5px/1 "IBM Plex Mono",ui-monospace,monospace;
+      font-variant-numeric: tabular-nums; letter-spacing:.11em;
+      text-transform:uppercase; fill: var(--realloc-axis);
+    }
+    .fig-realloc .src{
+      font:italic 400 12px/1 "Source Serif 4",Georgia,serif;
+      fill: var(--realloc-src);
+    }
+  </style>
+
+  <text class="lab" x="0" y="28">Budget reallocations</text>
+  <text class="lab" x="0" y="46">per study</text>
+
+  <!-- The values, above the interval they mark. C-089. -->
+  <g data-claim="C-089">
+    <text class="qnum" x="244.7" y="14">28</text>
+    <text class="num"  x="320.9" y="14">61</text>
+    <text class="qnum" x="561.1" y="14">165</text>
+  </g>
+
+  <!-- M3 interval. Bracket, bar, cell: three of the four primitives. -->
+  <line class="whisk" x1="210.0" y1="34.0" x2="244.7" y2="34.0"/>
+  <line class="whisk" x1="561.1" y1="34.0" x2="990.8" y2="34.0"/>
+  <line class="whisk" x1="210.0" y1="25.0" x2="210.0" y2="43.0"/>
+  <line class="whisk" x1="990.8" y1="25.0" x2="990.8" y2="43.0"/>
+  <rect class="box" x="244.7" y="22.0" width="316.5" height="24.0"/>
+  <rect class="cell" x="314.9" y="28.0" width="12.0" height="12.0"/>
+
+  <!-- M4 tick rule: the scale the interval is read against -->
+  <line class="axis" x1="180.0" y1="58.0" x2="1104.0" y2="58.0"/>
+  <line class="axis" x1="180.0" y1="58.0" x2="180.0" y2="65.0"/>
+  <line class="axis" x1="411.0" y1="58.0" x2="411.0" y2="62.0"/>
+  <line class="axis" x1="642.0" y1="58.0" x2="642.0" y2="65.0"/>
+  <line class="axis" x1="873.0" y1="58.0" x2="873.0" y2="62.0"/>
+  <line class="axis" x1="1104.0" y1="58.0" x2="1104.0" y2="65.0"/>
+  <text class="tik" x="180.0" y="78" data-claim="none">0</text>
+  <text class="tik" x="642.0" y="78" text-anchor="middle" data-claim="none">200</text>
+  <text class="tik" x="1104.0" y="78" text-anchor="end" data-claim="none">400 REALLOCATIONS</text>
+
+  <line class="rule" x1="0" y1="92" x2="1160" y2="92"/>
+
+  <!-- Provenance rule, DESIGN.md sec 2. Mandatory, same visual unit as the figure. -->
+  <text class="src" x="0" y="110" data-claim-source="">Distribution across 109 studies, each counted once. Box: 25th to 75th percentile. Whiskers: 10th (13) to 90th (351); the longest ran to 1,308.</text>
+  <text class="src" x="0" y="126" data-claim-source="">One reallocation is one pass over every stratum, resetting each budget from what the stratum currently costs and how far it is from its target share.</text>
+</svg>

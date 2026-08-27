@@ -1,0 +1,32 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+{#- The sitemap. Driven by collections.all, so a page added later appears here
+    without anyone remembering to come back.
+
+    IT LISTS ONE URL, AND THAT IS CORRECT.
+
+    Both other pages set `eleventyExcludeFromCollections: true` and neither belongs
+    in a sitemap:
+
+    · /404.html is not content.
+
+    · /privacy/ is deliberately unlinked — Nandan, 2026-08-25: it "exists at its URL
+      for anyone who needs it." A sitemap entry is a positive request to index, which
+      is the opposite of that intent. It carries no noindex, so anyone who has the URL
+      still gets the page; it simply is not advertised. If the policy is ever linked
+      from the page, revisit this.
+
+    Not an Eleventy .html page (D-006's "pages are .html with front matter and a
+    layout") because it is not a page — it is a machine artefact that happens to be
+    generated. eleventy.config.js adds "njk" to templateFormats for this one file. -#}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in collections.all %}
+  <url>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <lastmod>{{ p.date.toISOString() }}</lastmod>
+  </url>
+{%- endfor %}
+</urlset>

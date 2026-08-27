@@ -257,7 +257,23 @@ re-argue.
 
 | **The recipe's closing sentence** | Cut. *"The median study takes 61 budget reallocations; the longest ran to 1,308."* **A third box plot is meant to replace it and is blocked on two numbers** — see below |
 
-**One query is now the most valuable thing anyone can do to this repo.** The recipe's
+**~~One query is now the most valuable thing anyone can do to this repo.~~ Run, 2026-08-26 —
+and the repo has production database access, which nothing here recorded.** `kubectl` is
+configured against `gke_toixotoixo_europe-west1-b_toixo`, namespace `vprod`, and
+`kubectl exec -n vprod gbv-cockroachdb-0 -- /cockroach/cockroach sql --insecure --database=vlab`
+runs read-only SQL. **Every figure in this register can be re-derived rather than taken on
+trust.**
+
+The result: **p10 = 13, p25 = 28**, and every other value reconciled with what C-092 already
+said — median 61, p75 165, max 1,308, 17,596 across 109 studies. That reconciliation is the
+useful half: it confirms the `report_type` filter is right and the row had not drifted. The
+third box plot is drawn and on the page.
+
+**Two CockroachDB traps, now in `scripts/data/reallocations.json`:** `percentile_cont` needs a
+**FLOAT** ordering column or it fails outright with *unknown signature*, and `count(DISTINCT …)`
+still must not share a `SELECT` list with it.
+
+**Superseded, kept because the reasoning still governs the next figure:** The recipe's
 closing sentence is gone and its point is not: the honest axis for this work is **frequency,
 not cardinality**, which is the framing C-093's note in `CLAIMS.md` exists to protect
 (*"researchers juggling hundreds of ad sets"* is not supported — the median study has six
