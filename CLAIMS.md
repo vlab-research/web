@@ -14,6 +14,34 @@ carries its source in the same visual unit). This file enforces it factually. A
 plausible-looking number with no source is the single most damaging thing that can
 reach this site, because it discredits every number beside it.
 
+### Source or Definition — which column a table has, and why it matters
+
+**Added 2026-08-26, and it is now load-bearing rather than cosmetic.** The tables in this
+file differ in their fourth column, and that difference decides whether a figure on the
+site must carry a visible citation:
+
+| Fourth column | Means | On the page |
+|---|---|---|
+| **Source** | Where **somebody else** published it — Donati & Rao, a working paper, an IRB footnote, our own repos and docs | **Carries its citation**, in the same visual unit |
+| **Definition** | How **we** computed it from **our** data | **Carries nothing** |
+
+Nandan, 2026-08-26: *"We are the ones claiming the data. Nobody cares where it comes from.
+They're assuming we have access to our own data."* A line reading "Virtual Lab production
+database" under a Virtual Lab figure cites nothing a reader could check — and printing it
+beside a real citation devalues the real one.
+
+**`scripts/check-claims.py` reads this distinction from the table header**, not from the
+markup, because whether a claim is somebody else's is a fact about the claim and a page
+must not be able to talk its way out of a citation. **It fails safe:** exemption requires
+a `Definition` column, so a new row added to a `Source` table is enforced by default.
+
+**Adding a table?** Pick the column name deliberately. `Definition` on a third-party claim
+silently removes its citation from every page that uses it.
+
+**A definition is not an attribution and is never removed.** The box plots' caption lines
+— what an *active day* is, what the box spans — stay, because they tell a reader something
+about the number rather than about us.
+
 **Status values**
 
 | Status | Meaning |
@@ -256,6 +284,7 @@ Donati & Rao for scale.
 | C-011 | Field window, median | **14 days planned · 19 days actual** | Planned: `end_date − start_date` on the latest recruitment conf, n=137. Actual: first-to-last `adopt_reports` per study, n=116, IQR 8–90 days | `VERIFIED` | 2026-08-20 |
 | C-018 | Operating since | **2020-02-13** | Earliest response in `chatroach.responses` | `VERIFIED` | 2026-08-20 |
 | C-019 | Studies fielded, all time | **175** | 119 distinct `study_id` in `vlab.adopt_reports` (2022-07-29 → 2026-08-20) **+** 56 `chatroach.campaigns` rows. Definition settled by Nandan 2026-08-20 — see below | `VERIFIED` | 2026-08-20 |
+| C-097 | Respondents attributable to a country | **738,608** of 841,660 | Sum of the per-country table below — 37 of 41 countries. Attribution method is `C-017`'s: stratum country targeting joined to response shortcodes on both schemas. The remaining 103,052 belong to studies whose strata carry **no country tag**, not to countries outside the 41. Counts are floors, not exact — see "Two limits on this table" below. **Added 2026-08-25**, when the coverage prose was built: the figure was already stated and sourced in that section but had no id, so the one sentence COPY.md §1.3 requires could not be annotated. **This is bookkeeping, not a new claim** — and it is not a precedent for the regional totals, whose objection is the *bucketing*, which is editorial. Country attribution is not | `VERIFIED` | 2026-08-20 |
 
 ### The 41 countries
 
@@ -481,6 +510,26 @@ is reaching for a number this register does not have.
 what a researcher can or cannot manage by hand would need evidence about researchers, which
 we do not have.
 
+### C-092 needs two more percentiles before it can be drawn
+
+**Open, 2026-08-26, and it is one read-only query.** C-092 carries **median · p75 · p90 ·
+max**. The site's box-plot form needs **p10 · p25 · median · p75 · p90** — the box spans the
+interquartile range and the whiskers span the tenth to the ninetieth — so **p10 and p25 are
+missing** and the figure cannot be drawn.
+
+Nandan, 2026-08-26: *"If we want to include a box plot of budget reallocations, we can. That
+may be nice. Try that as a third box plot."* Everything except the two values is built:
+`scripts/data/reallocations.json` holds the query, and
+`scripts/build-reallocations-figure.py` is complete and **exits 1 until they exist**.
+
+**This is not a `PLACEHOLDER` row and C-092 does not change status.** What it already
+records is `VERIFIED` and publishable; what is missing is two further percentiles of the
+same distribution. Adding them extends the row, it does not replace it.
+
+**Do not estimate them from the ones we have.** Percentiles are not derivable from other
+percentiles, and a median of 61 against a p75 of 165 says nothing reliable about where the
+25th falls.
+
 ### C-091 and C-014 do not contradict each other, and a page must not let them look as if they do
 
 C-014 is **$6.30 of advertising per participant in the paper's US validation study**.
@@ -553,6 +602,31 @@ this register does not have — and since D-023 the site makes no comparison wit
 recruitment source in any case. See the note under C-006, and the framing rules in
 `AGENTS.md`.
 
+### C-066 was reversed on 2026-08-26, and the reversal has a condition attached
+
+**It was `WITHHELD` in the strongest terms this register uses.** The row read *"designed,
+then deliberately deferred"*, cited a commit whose message is *"stop claiming we support
+it"*, and named itself **the limit of the forward rule rather than an exception to it**:
+*"Never publish, in any form, until it is built."*
+
+**Nandan reversed it, 2026-08-26: _"Forget the ban."_** He is the operator and the decision
+is his; the row is now `VERIFIED` and the capability is on the page. This entry exists so
+that the reversal is a decision on the record rather than drift, because a page that
+publishes what the register withholds is the exact failure the register exists to catch —
+and `check-claims.py` would **not** have caught this one, since the claim carries no numeral.
+
+**One thing is unresolved and it is a buyer's question, not a lawyer's.** The old row
+recorded a mechanism: **the file itself is never stored — what is kept is a platform
+reference that expires.** If that is still true, then *"respondents can send a photo"* and
+*"you receive the photos"* are different claims, and only the first is supported. The copy on
+the page states the first and nothing more.
+
+**Before this is written any wider — a study card, a proposal, an email — confirm what a
+researcher actually receives at the end of a study.** If the images are exportable, C-072 and
+C-074 should say so and the cell can be strengthened. If a reference expires, that belongs in
+the sentence, because a buyer who expects files and receives links has been misled by
+omission.
+
 ### Instrument capability claims — Fly
 
 **Merged 2026-08-21, when D-024 closed.** Fly is the survey instrument — the questionnaire
@@ -601,7 +675,7 @@ register:
 | C-063 | Randomised assignment to arms | Each participant's arm is a hash of the form and the participant, so assignment reproduces from the exported data | `fly/replybot/lib/typewheels/utils.js` (`randomSeed`, FarmHash fingerprint); `fly/replybot/lib/typewheels/form.js` (`getSeed`); `docs` → `content/fly/reference/seeds.md` | `VERIFIED` | 2026-08-21 |
 | C-064 | Video delivered in-chat, with watching recorded | Play, pause, seek, completion and a heartbeat while playing are all recorded as events; the survey can hold until the video is played | `fly/moviehouse/`; `fly/dean/queries.go`; `fly/documentation/questions.md`. **Verified on Messenger; no WhatsApp path found in source.** Do not name a platform in the copy — say what the instrument does | `VERIFIED` | 2026-08-21 |
 | C-065 | Links whose clicks are recorded | A link is sent as a button and the click is recorded against the participant | `fly/linksniffer/` (deployed, `production.yaml`); `fly/documentation/questions.md`. The current-generation syntax lives on a feature branch; the capability is reachable on `main` by the older syntax | `VERIFIED` | 2026-08-21 |
-| C-066 | Collecting photographs or files from respondents | **Not published** | **Designed, then deliberately deferred** — `fly/planning/inbound-media.md`, and a commit whose message is *"stop claiming we support it"*. The file itself is never stored; what is kept is a platform reference that expires. **This is the limit of the forward rule, not an exception to it: the feature was pulled, not postponed.** Never publish, in any form, until it is built | `WITHHELD` | 2026-08-21 |
+| C-066 | Collecting photographs from respondents | **A question can ask for a photo and the respondent sends one** | `fly/planning/inbound-media.md`. **Released for publication by Nandan Rao, 2026-08-26** — *"Forget the ban"* — reversing the 2026-08-21 `WITHHELD`. Operator knowledge, the same source type as C-032 and C-094–C-096. **Read the retention note below before writing another word about it** | `VERIFIED` | 2026-08-26 |
 | C-067 | Multilingual studies | Each language is its own linked form; closed-ended answers are mapped to one base language as they are recorded, so a multilingual study exports as one dataset | `fly/devops/migrations` (`translation_conf`, `translated_response`); `trans/forms.go`, `trans/responses.go`; `fly/scribble/response.go`; `fly/formcentral/server.go`. **Scope: closed-ended answers only — free text is not mapped. Never write "full multilingual support"** | `VERIFIED` | 2026-08-21 |
 | C-068 | Questionnaire messages in the respondent's language | Fly's own rejection, nudge and closing messages are set per form, not fixed in English | `docs` → `content/fly/reference/messages.md`; `fly/replybot/lib/generic-validator.js` | `VERIFIED` | 2026-08-21 |
 | C-069 | One run of a form per account | A participant cannot restart a form the same account has already entered | `fly/replybot/lib/typewheels/machine.js` (`REFERRAL` branch, `_hasForm`). **Scope: one account. It says nothing about one person holding several accounts, and must never be written as a fraud or duplicate-prevention claim** | `VERIFIED` | 2026-08-21 |

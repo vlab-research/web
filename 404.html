@@ -1,0 +1,25 @@
+---
+layout: base.html
+title: "Not found — Virtual Lab"
+description: "That page does not exist."
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+{% from "macros.njk" import lattice %}
+{#- Netlify serves this for any unmatched path. It carries no claim and no figure:
+    there is nothing here to source. M1 is sanctioned on a 404 (DESIGN.md §6). -#}
+<section class="sec has-lat" style="padding-top:96px;padding-bottom:120px">
+  {{ lattice("404") }}
+  <div class="wrap">
+    <div class="stack loose">
+      <span class="eyebrow">Not found</span>
+      <h1>That page does not exist.</h1>
+      <p class="sub">The site is one page. Everything on it is below.</p>
+      <div class="btns">
+        <a class="btn pri" href="/">Go to the page</a>
+        <span class="dot">&middot;</span>
+        <a class="btn sec" href="/#paper">Read the paper</a>
+      </div>
+    </div>
+  </div>
+</section>

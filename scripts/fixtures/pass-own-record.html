@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- THE CITATION RULE, asserted.
+
+     Every figure on this page is a VERIFIED value from a register table whose fourth
+     column is "Definition" -- our own operating record, computed from our own data.
+     NONE of them carries a source line, and the page must still exit 0.
+
+     Nandan, 2026-08-26: "We are the ones claiming the data. Nobody cares where it comes
+     from. They're assuming we have access to our own data." A line reading "Virtual Lab
+     production database" under a Virtual Lab figure cites nothing a reader can check; it
+     restates who is speaking, and printing it beside a real citation devalues the real
+     one.
+
+     The other half of the rule is asserted by fail-provenance.html, which declares
+     C-001/C-003/C-005 -- Headline figures, sourced to Donati & Rao -- with no source
+     line, and must exit 1. Read the two together: if BOTH ever pass, the citation
+     requirement has stopped applying to anything. -->
+<html lang="en">
+<head><meta charset="utf-8"><title>Virtual Lab</title></head>
+<body>
+
+<section class="stat-row">
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-010">841,660</div>
+    <div class="label">RESPONDENTS</div>
+  </div>
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-016">17,979,910</div>
+    <div class="label">SURVEY RESPONSES</div>
+  </div>
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-017">41</div>
+    <div class="label">COUNTRIES</div>
+  </div>
+  <div class="cell" data-claim-unit>
+    <div class="num" data-claim="C-019">175</div>
+    <div class="label">STUDIES FIELDED</div>
+  </div>
+</section>
+
+<!-- Prose, outside any cell, still exempt: the claim is first-party wherever it sits. -->
+<p data-claim-unit>The median study takes <span data-claim="C-092">61</span> budget
+   reallocations; the longest ran to <span data-claim="C-092">1,308</span>.</p>
+
+<!-- A definition is NOT an attribution, and is never forbidden. The box plots keep
+     theirs, because "an active day is a study-day recruiting at least 20 respondents"
+     is something a reader needs in order to read the figure at all. -->
+<figure data-claim-unit>
+  <figcaption class="src" data-claim-source>Distribution across studies. Box: 25th to
+    75th percentile.</figcaption>
+</figure>
+
+</body>
+</html>

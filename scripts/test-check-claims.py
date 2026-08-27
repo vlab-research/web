@@ -35,6 +35,10 @@ FIXTURES = os.path.join(REPO, "scripts", "fixtures")
 
 # (fixture, expected exit, what it proves)
 CASES = [
+    ("pass-own-record.html", 0,
+     "first-party figures with NO source line - the citation rule, and the half that "
+     "fail-provenance.html cannot assert. If both ever pass, citation has stopped "
+     "applying to anything"),
     ("pass.html", 0,
      "annotated copy deck with every figure sourced - including the 2025 citation year"),
     ("fail-unsourced.html", 1, "a numeral with no VERIFIED row"),

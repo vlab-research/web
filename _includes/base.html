@@ -1,0 +1,85 @@
+{% from "macros.njk" import lattice %}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{ title }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+{#- Self-hosted fonts only. D-012: never link a fonts.googleapis.com stylesheet
+    from a page. css/site.css imports css/fonts.css, which points at fonts/. -#}
+<link rel="preload" href="/fonts/ZillaSlab-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/SourceSans3-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/assets/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+{#- No analytics. D-009 is open and its recommendation is cookieless and
+    EU-hosted; PostHog shipped on the legacy SPA with no consent mechanism, on
+    the same origin as our own privacy policy. Nothing is loaded here until that
+    decision closes. -#}
+</head>
+<body>
+
+{#- §7: <use href="external.svg#id"> does not resolve cross-document in Chrome
+    or Safari, so the sprite is inlined. It is written to be dropped in as-is. -#}
+{{ inline.sprite | safe }}
+
+{#- §9 motion 2 · scroll progress, a 2px brass tick rule. Decorative. -#}
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span aria-hidden="true">{{ inline.mark | safe }}</span>
+      <span>Virtual&nbsp;Lab</span>
+    </a>
+    {#- No top navigation. Nandan, 2026-08-26: "It's okay if we don't have any top
+        navigation. It's a one page site." Two links that scrolled the page you were
+        already on were a table of contents pretending to be a nav. What is left is the
+        mark and the one conversion action, which is what §8 says a nav is for.
+
+        /#paper and /#code still exist as anchors — COPY.md keeps them so a procurement
+        reviewer or an academic has a URL to link — they are simply not advertised.
+        (/#code was /#audit until 2026-08-26, when that section became "The code is open
+        source"; _redirects points the old SPA's /software at it.) -#}
+    <a class="btn pri" href="/#contact">Request a proposal</a>
+  </div>
+</header>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer class="foot has-lat">
+  {{ lattice("foot", true) }}
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span aria-hidden="true">{{ inline.mark | safe }}</span>
+      <span>Virtual&nbsp;Lab</span>
+    </a>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="{{ site.github }}" rel="noopener">GitHub</a></li>
+        <li><a href="/#paper">The paper</a></li>
+      </ul>
+    </nav>
+    <p class="fine">{{ site.legal }} &middot; Corvallis, Oregon, USA</p>
+  </div>
+</footer>
+
+</body>
+</html>

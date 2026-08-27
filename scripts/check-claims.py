@@ -8,9 +8,18 @@ Run before publishing any page that states a figure:
     python3 scripts/check-claims.py _site/index.html
 
 This is the check that enforces the brand. DESIGN.md §2 states the provenance rule —
-no number appears without its source attached, in the same visual unit — and CLAIMS.md
-states the factual one: no number reaches a page without a VERIFIED row. Both were
-prose until this script existed. check-contrast.py exists because a colour bug shipped
+a number rests on somebody else's document, and that citation appears in the same visual
+unit — and CLAIMS.md states the factual one: no number reaches a page without a VERIFIED
+row. Both were prose until this script existed.
+
+**The provenance half does not apply to our own operating record** (2026-08-26). A line
+reading "Virtual Lab production database" under a Virtual Lab figure cites nothing a
+reader can check; it restates who is speaking, and printing it beside a real citation
+devalues the real one. The split is read from the register, never from the markup —
+a table whose fourth column is "Definition" says how we computed a number from our own
+data, and one whose fourth column is "Source" says where somebody else published it.
+Only the first is exempt, so the rule fails safe. See "THE CITATION RULE" below, and the
+pair of fixtures that assert both halves: pass-own-record.html and fail-provenance.html. check-contrast.py exists because a colour bug shipped
 once; this exists so a figure bug never does, because a plausible number with no source
 discredits every number beside it.
 
@@ -24,7 +33,8 @@ Failure kinds, in order of severity:
   phrase      public copy names an internal platform, schema or migration, against
               CLAIMS.md "Publication rules for scale figures", rule 2. Not a numeric
               check, but it travels with the numbers it qualifies.
-  provenance  an element carrying a claim has no visible source line in its unit.
+  provenance  an element carrying a THIRD-PARTY claim has no visible citation in its
+              unit. First-party claims are exempt — see above.
   unsourced   a numeral in body text matches no VERIFIED value.
 
 HOW A PAGE DECLARES ITS PROVENANCE
@@ -212,8 +222,14 @@ MULTIPLIER = {"k": 1e3, "K": 1e3, "thousand": 1e3, "m": 1e6, "million": 1e6,
 # --- the register ------------------------------------------------------------------
 
 class Claim:
-    def __init__(self, cid, value_text, extra_text, status, caveat, checked, row_text):
+    def __init__(self, cid, value_text, extra_text, status, caveat, checked, row_text,
+                 first_party=False):
         self.cid = cid
+        # True when the row came from a register table whose fourth column is
+        # "Definition" rather than "Source" -- i.e. the claim is our own operating
+        # record, computed from our own data, and there is no external document to
+        # cite. Such a claim needs no visible source line. See CITATION_RULE below.
+        self.first_party = first_party
         self.value_text = value_text
         self.status = status          # one of STATUSES, or the raw cell if unrecognised
         self.caveat = caveat          # prose after the status word, if any
@@ -350,6 +366,8 @@ def read_register(path):
                     cols["status"] = i
                 elif name == "checked":
                     cols["checked"] = i
+                elif name == "definition":
+                    cols["definition"] = i
             if "id" not in cols or "status" not in cols:
                 header, cols = None, {}
             continue
@@ -375,6 +393,7 @@ def read_register(path):
             caveat,
             cells[cols["checked"]] if "checked" in cols else "",
             " | ".join(cells),
+            first_party="definition" in cols,
         )
         prior = claims.get(cid)
         if prior:
@@ -717,6 +736,32 @@ def check_file(path, claims, publishable, banned, weak, exempt_ids, only_failure
                        f'"{shown}" — declares {", ".join(ids)}, which permits {permitted}', line)
                 continue
             key = id(declared_node)
+            # THE CITATION RULE. A source line is required where the claim rests on
+            # somebody else's document, and not where it is our own operating record.
+            #
+            # Nandan, 2026-08-26: "We are the ones claiming the data. Nobody cares
+            # where it comes from. They're assuming we have access to our own data."
+            # He is right, and the rule is better for it: "Virtual Lab production
+            # database" under a Virtual Lab figure is not a citation, it is a
+            # restatement of who is speaking. It cites nothing a reader could check,
+            # and printing it beside a real citation devalues the real one.
+            #
+            # The split is a fact about the claim, so it lives in the register, not in
+            # the markup -- a page must not be able to talk its way out of a citation.
+            # A register table whose fourth column is "Definition" says how WE computed
+            # a number from OUR data; a table whose fourth column is "Source" says
+            # where somebody else published it. Only the first is exempt.
+            #
+            # It fails safe: exemption requires a Definition column, so anything
+            # unmarked, mis-parsed, or newly added to a Source table still demands a
+            # citation. A source line is never FORBIDDEN here -- the box plots keep
+            # theirs, because those state what an "active day" is and what the box
+            # spans, which is a definition a reader needs and not an attribution.
+            if all(claims[i].first_party for i in ids):
+                seen_claim_nodes.add(key)
+                if not only_failures:
+                    record("ok", ", ".join(ids), f'"{shown}" — our own record', line)
+                continue
             units = units_of(declared_node)
             if not has_source(units):
                 if key not in seen_claim_nodes:
@@ -759,18 +804,59 @@ def check_file(path, claims, publishable, banned, weak, exempt_ids, only_failure
     return annotated, lines, failures
 
 
+def is_template(path):
+    """An Eleventy source template, not a page. D-006: pages are .html with front
+    matter and a layout: line, and Eleventy renders them into _site/. A template's
+    own text is not what ships — its {# #} comments carry section numbers, motif ids
+    and claim ids that are stripped at build time, and scanning them reports drift
+    that does not exist on any page. The built output is scanned instead.
+
+    Detected by the front-matter fence on the first line, which is what makes the
+    file a template in the first place. A plain .html file with no front matter is
+    still walked, so this narrows nothing that was previously covered."""
+    try:
+        with open(path, encoding="utf-8") as fh:
+            return fh.readline().rstrip("\n\r") == "---"
+    except OSError:
+        return False
+
+
 def html_files(paths, include_vendor):
+    """Default walk: everything that ships, and nothing that is built to fail.
+
+    _site/ is walked when it exists — it is the built site, and it is what a visitor
+    receives. The source templates that produced it are skipped (see is_template).
+    Before a first build there is no _site/, so the root .html files are walked as
+    they always were and the gate still means something on a clean checkout.
+
+    Always skipped: scripts/fixtures/, nine pages whose entire job is to fail — a
+    gate that can never pass is a gate nobody runs."""
     if paths:
         return paths
-    found = []
+    site = os.path.join(REPO, "_site")
+    built = os.path.isdir(site)
+    found, skipped = [], []
     for root, dirs, files in os.walk(REPO):
         if not include_vendor:
-            dirs[:] = [d for d in dirs
-                       if d not in (".git", "node_modules", "_site", "media",
-                                    "fixtures")]
+            # _includes/ holds layouts and partials. A layout is not a page — it is
+            # half of one, and it reaches a visitor only through the built output that
+            # is already being scanned. Its comments carry the same section numbers a
+            # template's do.
+            drop = {".git", "node_modules", "media", "fixtures", "_includes"}
+            if not built:
+                drop.add("_site")
+            dirs[:] = [d for d in dirs if d not in drop]
         for f in sorted(files):
-            if f.endswith(".html"):
-                found.append(os.path.join(root, f))
+            if not f.endswith(".html"):
+                continue
+            full = os.path.join(root, f)
+            if built and is_template(full):
+                skipped.append(full)
+                continue
+            found.append(full)
+    for t in sorted(skipped):
+        print(f"  note  {short(t)} is an Eleventy template; its built output in "
+              f"_site/ is scanned instead")
     return sorted(found)
 
 
@@ -781,7 +867,7 @@ def main():
     ap.add_argument("--exempt-id", action="append", default=[], metavar="ID",
                     help="skip numerals inside this element id (repeatable)")
     ap.add_argument("--include-vendor", action="store_true",
-                    help="also walk node_modules and _site")
+                    help="also walk node_modules, and source templates")
     ap.add_argument("--only-failures", action="store_true", help="print failures only")
     ap.add_argument("--register", action="store_true",
                     help="print the parsed register and exit")
@@ -846,10 +932,12 @@ def main():
             print(f"  {kind} ({len(by_kind[kind])})")
             for path, detail, line in by_kind[kind]:
                 print(f"    {short(path)}:{line}  {detail}")
-        print("\nEvery number needs a VERIFIED row in CLAIMS.md and a source line in the\n"
-              "same visual unit. If a value is missing, render — and add a PLACEHOLDER row.")
+        print("\nEvery number needs a VERIFIED row in CLAIMS.md. A claim resting on\n"
+              "somebody else's document also needs its citation in the same visual\n"
+              "unit; a claim from our own record does not. If a value is missing,\n"
+              "render — and add a PLACEHOLDER row.")
         return 1
-    print("Every number on every page traces to a VERIFIED row and carries its source.")
+    print("Every number traces to a VERIFIED row, and every third-party claim is cited.")
     return 0
 
 

@@ -1,0 +1,16 @@
+{
+  "name": "vlab-digital",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The public website for Virtual Lab, LLC. Eleventy, per DECISIONS.md D-006.",
+  "scripts": {
+    "figures": "python3 scripts/build-coverage-map.py",
+    "build": "npm run figures && eleventy",
+    "serve": "npm run figures && eleventy --serve",
+    "check": "python3 scripts/test-check-claims.py && python3 scripts/check-contrast.py && python3 scripts/check-claims.py _site/index.html _site/privacy/index.html"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6"
+  }
+}

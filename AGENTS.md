@@ -3,8 +3,11 @@
 The public website for Virtual Lab, LLC. This file tells you how to work in this
 repo. Read it fully before writing markup, copy, or config.
 
-**Current state, 2026-08-25: the copy is finished and the build has not started. That is the
-next job.**
+**Current state, 2026-08-26: the site is built and it runs.** Eleventy, the design system in
+CSS, the page in `COPY.md`'s order, and privacy at its URL. `npm run serve` to see it,
+`npm run check` for the three gates. **Two things on the page are deliberately held and are
+not oversights** — the hero readout and the region totals; both are in "What is held" below,
+with the one-line change that ships each. The next job is review, not construction.
 
 The site is now **one page plus an unlinked privacy policy**, and every word of it is written
 in **`COPY.md`** with each figure traced to a `CLAIMS.md` row. The brand is built — fonts,
@@ -39,9 +42,12 @@ and where a script and a paragraph disagree the script is what actually runs:
 5. **`scripts/README.md`** — the four scripts, when to run each, and what a non-zero
    exit means. `check-claims.py` is the provenance rule, `check-contrast.py` is §3, and
    `build-coverage-map.py` is the only thing permitted to write the coverage artefacts.
-6. **`scripts/fixtures/`** — nine cases asserting how `check-claims.py` behaves, two of
-   them covering attributed quotation. Read `quote-abstract.html` beside
-   `fail-quote-unattributed.html` before widening anything about quotation.
+6. **`scripts/fixtures/`** — **ten** cases asserting how `check-claims.py` behaves. Two
+   cover attributed quotation: read `quote-abstract.html` beside
+   `fail-quote-unattributed.html` before widening anything about quotation. Two cover
+   **citation**: read `pass-own-record.html` beside `fail-provenance.html` before touching
+   the provenance check — **if both ever pass, citation has stopped applying to
+   anything.**
 7. **`_data/paper.json`** — the manuscript as structured data. **Read the
    `not_for_publication` note at the top of it before using any field**; several are
    `WITHHELD` claims, and exactly two of them render.
@@ -69,7 +75,7 @@ Four phases, each with a human gate. Do not start a phase whose gate has not clo
 | 3 · Content | Copy material + the claim register | **Complete** — 2026-08-22 |
 | 3.5 · Narrative | The spine the site argues, and the sitemap derived from it | **Complete** — 2026-08-22. D-027 and D-007 |
 | 4 · Copy | Every word of the page, against the spine | **Complete — 2026-08-25.** `COPY.md`. Nandan: *"the plan is in a pretty good place. Let's wrap this up for now and a future agent will begin to scaffold the site"* |
-| 5 · Build | Eleventy scaffold, the design system in CSS, the page | **Not started. This is the next job.** Nothing blocks it |
+| 5 · Build | Eleventy scaffold, the design system in CSS, the page | **Built 2026-08-25.** Deploys from `netlify.toml`; three gates pass; two components held on decisions, not on work |
 
 **The gate rule:** each phase ends with a deliverable the user reviews and approves —
 usually published as an Artifact so it can be seen rather than described. Do not
@@ -99,7 +105,7 @@ say and which draft it replaced.
 
 | | |
 |---|---|
-| **The page** | Opening (hero · totals band · coverage · two distributions · client wall) · what it takes (recipe · math · paper · instrument) · the audit trail · the close |
+| **The page** | Opening (hero · totals band · **client wall** · coverage · how fast a study fills · what the advertising costs) · what it takes (recipe · math · paper · instrument) · **the code is open source** · the close. **Reordered and re-cut 2026-08-26 — see below** |
 | **Privacy** | Carried over near-verbatim, and **not linked**. It still needs `data-claim-scan="off"` on the legal copy |
 
 **Cut, with reasons recorded in `COPY.md`:** the brief form (replaced by `info@vlab.digital`),
@@ -117,31 +123,357 @@ settled to a recorded replay; D-019 stopped blocking it when the coverage sectio
 on Home. The region-bucket question and D-021, D-022 travel *with* sections rather than
 in front of them, and each has a recorded fallback, so none of them holds a build.
 
-### If you are here to scaffold the site, read this and then `COPY.md`
+### The build, as it stands 2026-08-25
 
-**Nothing blocks you.** The order below is the shortest path from this repo to a deployed page.
+**`npm run serve` and look at it before you read another word of this.** Everything below is
+easier to hold once you have seen the page.
 
-1. **Skeleton.** Eleventy, version-pinned (D-006). `_includes/base.html` holds head, the three
-   theme states, the inlined icon sprite, nav and footer. `netlify.toml` gains a build command
-   publishing `_site`. **`.gitignore` already exists.** Done when a placeholder page deploys.
-2. **The stylesheet, from `DESIGN.md` and not from `css/main.css`.** Tokens verbatim from §3,
-   type scale §4, layout §5. **`css/main.css` is the legacy SPA's and its first line imports
-   Google Fonts, which D-012 bans** — take nothing from it. Gate: `check-contrast.py`, plus
-   all three theme states including unstamped.
-3. **Components before pages** — §8: stat row, ink band, client wall, coverage section, the
-   two figure slots, buttons, nav. Publishing them as an Artifact for review makes step 4
-   assembly rather than design.
-4. **The page**, in `COPY.md`'s order. Annotate every figure with `data-claim` as you go; an
-   un-annotated page passes heuristically and a false pass is what the rule exists to prevent.
-5. **Privacy**, carried over with `data-claim-scan="off"`, at its URL and unlinked.
-6. **Cutover.** Retire the SPA, **remove the BrowserSync `document.write` tag currently
-   shipping to production**, resolve D-009 (PostHog has no consent mechanism and sits beside
-   our own policy), check `_redirects`, then delete the legacy CSS.
+| | |
+|---|---|
+| `package.json` | Eleventy **pinned at 3.1.6** with a lockfile (D-006). `build` · `serve` · `check` · `figures`. `type: module` |
+| `eleventy.config.js` | Input is the **repo root**, so `_includes/base.html` and `_data/` sit where D-006 says. Passthrough: `css` `fonts` `assets` `robots.txt` `_redirects` |
+| `.eleventyignore` | The documentation set, `notes/`, `scripts/`, `js/`, `img/`. `build/` `media/` `node_modules/` `_site/` come free from `.gitignore`, which Eleventy honours |
+| `_includes/base.html` | Head, the inlined icon sprite, nav, footer, scroll-progress rule. **No analytics** — see D-009 below |
+| `_includes/macros.njk` | **New 2026-08-26.** `lattice(id, inv)` and `objective()`. The M1 lattice takes an id because each instance needs its OWN `<pattern>` — one shared pattern in `<head>` would break the `.inv` colour swap, since `currentColor` inside a `<pattern>` resolves where the pattern is **defined**, not where it is used |
+| `css/site.css` | `DESIGN.md` §3–§9 in section order, ~620 lines. Built from the document, **not** from `css/main.css`, which is deleted |
+| `index.html` · `privacy.html` · `404.html` | The three pages. `privacy.html` permalinks to `/privacy/` and is **not linked from anywhere** |
+| `_data/coverage.js` | Reads `build/*.html` and strips the generator's "Required CSS" comment. **Raises if `build/` is missing** rather than rendering an empty coverage section |
+| `_data/inline.js` | The sprite, the mark, and the two figure SVGs, inlined whole so they take `currentColor` |
+| `_data/clients.js` | The six institutions, each with `logo` **and** `cleared`. **A mark renders only when both are true**, and `cleared` is false on all six until D-014 closes |
+| `netlify.toml` | `npm run build` → `_site`. That is `build-coverage-map.py` **and then** Eleventy: `build/` is untracked, so the deploy regenerates it |
 
-**Four things in `COPY.md` are load-bearing and are easy to flatten by accident:** the two box
-plots sit **together** in one beat; the math is an **ink band** and the footer is the only
-other one; the paper's abstract is **quoted, never paraphrased**; and the client wall
-**degrades to type**, which is not a fallback but the shipping mechanism.
+**Retired in the same change, and all of it is recoverable with `git checkout`:** the SPA
+`index.html`, `css/main.css`, `css/normalize*.css`, `js/` — and with them the **BrowserSync
+`document.write` tag that was shipping to production** and the **PostHog snippet**. The
+`_redirects` catch-all `/* /index.html 200` is gone too: it is what a client-side router
+needs, and under Eleventy it would turn every 404, including a typo'd `/privacy`, into a
+silent homepage. Four 301s replace it for the old SPA fragments.
+
+### index.html is a page, not a notebook — keep it that way
+
+**Halved on 2026-08-26**, 729 lines to 485, after Nandan: *"It's very hard to look at
+index.html and edit."*
+
+**The SVG was not the problem** — inline lattice and MathML were 25 lines. **Half the file
+was commentary.** The reasoning belongs in `COPY.md`, `CLAIMS.md` and `DESIGN.md`, which
+already held all of it; the page had grown a second copy.
+
+**The rule going forward: a comment in `index.html` earns its place only if someone editing
+that line would break something without it.** Everything else is a pointer. What stays inline
+is the short form — *this is held and why*, *this claim has a scope note*, *this list of five
+exclusions* — and the argument lives in the documents.
+
+**Two mechanical wins in the same pass:** the M1 lattice and the objective function moved into
+`_includes/macros.njk`, so a band is now one line.
+
+**One thing was lost and restored, and it is a warning.** The compression was done with a
+regex over comment blocks and it swallowed the **held reallocations figure** — markup *inside*
+a comment. **The whole rebuild is uncommitted**, so git could not recover it; it was rewritten
+from the session. Commit before running a sweeping edit over this file.
+
+### What is held, and why — read this before "fixing" either
+
+**Neither is unfinished work. Both are one line, and both are somebody's decision.**
+
+- **[P-1] The hero readout.** `COPY.md` §1.1 wants a recorded replay of a live stratum
+  readout. The component's rows are `achieved / target` **per stratum** — real values from a
+  real study — and **no `CLAIMS.md` row exists for any of them.** Rendering it today means
+  inventing figures, which hard rule 2 forbids in exactly these words: *"Not as a placeholder,
+  not 'to be replaced later,' not in a mockup."* So the hero ships as type on a lattice. It
+  needs a recording from a study cleared for it, not a designer.
+- **[P-4] The region totals.** Held per `COPY.md`'s own gate: the six figures are sums of a
+  `VERIFIED` table, but the **bucketing is editorial** and has no row. `{{ coverage.regions }}`
+  is one line away in `index.html` the day it gets one. **The region strip [P-3] does ship** —
+  `COPY.md` lists it ungated — and that is worth a second look, because the strip states the
+  same six regional values in its `aria-label` and its per-segment `<title>`. `check-claims.py`
+  does not scan inside SVG, so it passes; that is a checker limit, not clearance.
+- **The client wall** renders all six as **type**, because D-014 has cleared no mark. The
+  files are in `assets/logos/`. Flip `cleared` in `_data/clients.js` per institution as
+  permissions land; the wall is built to look deliberate at any mix.
+- **D-009 · no analytics ship.** PostHog was on every page of the SPA with no consent
+  mechanism, on the same origin as our own privacy policy. The decision is open and its own
+  recommendation is cookieless and EU-hosted, so nothing is loaded until it closes. This is
+  the reversible direction.
+
+### The provenance rule was amended, 2026-08-26 — read this before writing a source line
+
+**Nandan:** *"Remove all the mentions of Virtual Lab production database. That's
+ridiculous. Nobody puts that on a website. We are the ones claiming the data. Nobody cares
+where it comes from. They're assuming we have access to our own data."*
+
+**He is right and the rule is sharper for it.** A number resting on somebody else's
+document carries that citation in the same visual unit. **A figure from our own operating
+record carries nothing.** The totals band was the case that made it obvious: four cells
+repeating *"Virtual Lab production database, August 2026"* across one row, plus a fifth
+under the prose beside it. That is the provenance rule **performed rather than applied**,
+and it actively devalued the one real citation on the page — *Donati & Rao, 2025*, under
+the math — by making provenance look like a house style instead of an argument.
+
+**Where the line falls is read from `CLAIMS.md`, never from the markup**, because whether
+a claim is somebody else's is a fact about the claim and a page must not be able to talk
+its way out of a citation. A register table whose fourth column is **`Definition`** says
+how we computed a number from our own data and is exempt; one whose fourth column is
+**`Source`** says where somebody else published it and is not. **It fails safe:** exemption
+requires the `Definition` column, so anything unmarked, mis-parsed or newly added to a
+`Source` table still demands its citation.
+
+**A definition is not an attribution and was not removed.** The box plots keep their
+caption lines — *"an active day is a study-day recruiting at least 20 respondents"*,
+*"box: 25th to 75th percentile"* — because those tell a reader how to read the figure.
+**The test: does the line say something about the number, or only about us?**
+
+**Two fixtures pin the two halves**, and neither is sufficient alone:
+`pass-own-record.html` (first-party, no source line, exit 0) and `fail-provenance.html`
+(Donati & Rao figures, no source line, exit 1). **If both ever pass, citation has stopped
+applying to anything.** Ten cases now, not nine.
+
+Full statement in `DESIGN.md` §2; the register convention in `CLAIMS.md`; hard rule 1
+above carries the short form.
+
+### The 2026-08-26 review pass, in order — read before re-deriving any of it
+
+**Each of these is Nandan's call, made looking at the built page, and three of them reverse
+something a document recorded as settled.** They are cheap to undo and expensive to
+re-argue.
+
+| | |
+|---|---|
+| **Self-attribution, everywhere** | Removed. This is the provenance-rule amendment above — the biggest change in the session |
+| **The four uncounted countries** | Off the map entirely, chrome and all |
+| **Top navigation** | Gone; the mark and the one CTA remain |
+| **The coverage prose** | *"Country figures cover 738,608 of the 841,660 respondents…"* — *"We dont need this."* A reconciliation between two internal denominators, on a section whose job is to show where the respondents are. **The region strip's caption said the same sentence and went with it** — keeping it there would have reinstated by the back door what was removed from the front. **C-097 is now published nowhere**; the row stays `VERIFIED`, like C-032 |
+| **The coverage heading** | *"Where the respondents are"* → **"We have recruited in 41 countries:"**. It now **carries a claim** (C-017) where the old one deliberately carried none. Note the decided tension: the heading says 41, the map draws 37 |
+| **The region strip's missing labels** | *"The bars per continent are missing the continents."* Names added, greedily placed on three baselines with leader ticks. **Names only, never values** — the bucketing still has no row |
+| **The box plots** | *"beautiful but too small."* **Redrawn at 1160 units, not scaled up** — see below |
+| **The figures' heading** | Split into **two sections**, one figure each. **Reverses the one-beat rule** COPY.md records from 2026-08-25 |
+| **The client wall** | **Moved directly under the totals band.** The band says how much we have run; the wall says who trusted us to run it |
+| **"There is no black box"** | Rewritten as **"The code is open source"** — two paragraphs and a GitHub link, anchor `/#code`. *"Those are really the only two points."* **Ethics left the site with it** — see below |
+
+| **The recipe's closing sentence** | Cut. *"The median study takes 61 budget reallocations; the longest ran to 1,308."* **A third box plot is meant to replace it and is blocked on two numbers** — see below |
+
+**One query is now the most valuable thing anyone can do to this repo.** The recipe's
+closing sentence is gone and its point is not: the honest axis for this work is **frequency,
+not cardinality**, which is the framing C-093's note in `CLAIMS.md` exists to protect
+(*"researchers juggling hundreds of ad sets"* is not supported — the median study has six
+strata). A third box plot of **budget reallocations per study** is the replacement.
+
+**It is blocked on p10 and p25, and nothing else.** C-092 carries median 61, p75 165, p90
+351 and max 1,308; a box plot's box spans p25–p75 and its whiskers span p10–p90, so two of
+the five values do not exist. Hard rule 2 forbids inventing either, so
+`scripts/build-reallocations-figure.py` **exits 1 and names them.** The generator is
+complete and has been dry-run against substituted values — geometry, wrapping, axis labels
+and the axis guard all behave. `scripts/data/reallocations.json` carries the query and both
+traps that have produced a wrong number here before. The markup is in `index.html` ready to
+uncomment, **after the recipe** rather than beside the other two: those answer *how fast* and
+*how much*, this one answers *what the work consists of*.
+
+**Do not draw a variant that fits the data we have.** The three box plots are deliberately
+one figure in three units, so a reader who learns to read one has learned to read all of
+them. Inventing an asymmetric form for this dataset spends that to ship a week early.
+
+**The rewrite costs one thing and it is worth naming.** *"There is no black box"* was six
+terms and their definitions; four of the six are gone. Three of those cost nothing — the
+CSV/API export is already said better in §2.4 in the reader's own terms, and Auth0 was a
+vendor name doing no work. **The fourth was the IRB line, and ethics is now absent from the
+site.** C-054 stays `VERIFIED` and unpublished. `DESIGN.md` §1's audience table lists ethics
+among what the **priority-1 audience** — institutional buyers — needs from a page; four of
+its five items are still there and that one is not. **If it returns it returns with its
+scope attached** (the validation study described in the paper, and nothing else), and as a
+third-party claim it **carries a citation** under §2 as amended.
+
+**"Secure" is not written as an adjective anywhere in the replacement.** It is written as
+*encrypted in transit and at rest* (C-051), because a vague security word is the sentence
+§2's voice test throws out: could a reviewer ask us to substantiate this, and would we have
+the citation?
+
+**The box plots are the one to understand rather than copy.** "Full width" was implemented
+by **redrawing the figures at W=1160 in the generators**, not by letting a 620-unit drawing
+stretch. These SVGs carry their own type at absolute sizes — 13px labels, 15px numerals,
+12px source lines — so scaling a 620 drawing across 1116 CSS px multiplies every one of
+them by 1.8 and lands the axis labels between `h3` and `h2` on a scale `DESIGN.md` §4 fixes
+exactly. Widening the viewBox keeps the type at its designed size and spends the room on
+the ruler, which is where it is worth having. **1160 matches `STRIP_W`, so every full-width
+drawing on the page is set out on one measure.**
+
+**Two reversals worth their reasoning, because both look like inconsistency and are not.**
+The one-beat rule was given when the plots sat side by side at 557px, where they read as a
+pair *because they shared a line*; stacked at full measure, a compound heading was one
+heading doing two jobs, and the pairing survives on form — same M3 interval, same M4 tick
+rule, adjacent. And the coverage heading was written to carry no claim on the argument that
+a heading stacked on artefacts that already speak is "looking for something to do" — true of
+a heading with no claim in it, and not of one that states the fact the map illustrates.
+
+### Part 2 was rebuilt 2026-08-26 — one list, two callbacks
+
+**Four structures were mocked and reviewed before this was chosen**, and two earlier
+attempts were rejected outright: splitting the list in half, and a two-column job-left /
+answer-right layout. **Do not re-propose either.** The two-column one failed a specific
+test — below 900px it collapses into the split-list version anyway, so it bought a desktop
+affordance while spending the ink band and forcing the copy to fit a 320px column.
+
+**The structure now:** one list of six steps, each carrying a **handle**, and the sections
+after it point back with a **recap** of number and handle.
+
+| | |
+|---|---|
+| **The list** | *What it takes to recruit respondents on social media.* Six steps: STRATA · ALLOCATION · PRICES · UNIQUENESS · INCENTIVES · FOLLOW-UP |
+| **01–03** | *Those three are one optimization problem.* Ink band, recap, the two math blocks, `Donati & Rao, 2025` |
+| **The paper** | *The method is published.* Byline, abstract quoted verbatim, the separation clause, SSRN link |
+| **04–06** | *Those three are a chatbot survey platform.* Recap, prose, the M5 thread beside it, an eight-cell feature list |
+
+**The handles must earn their keep**, and this is the rule to hold when editing: a handle is
+decoration unless the copy uses it afterwards. If a section reads identically with the names
+deleted, the list has grown a column for nothing. The band's closing line was rewritten to
+*"Prices are not known in advance"* for exactly this reason.
+
+**UNIQUENESS is not "one per person", deliberately.** The list says *person*; C-069 supports
+per **account** only, and its scope note forbids writing it as fraud or duplicate prevention.
+The neutral handle keeps the gap visible instead of quietly closing it.
+
+**The step numbers carry `data-claim="none"`.** They are list counters. The predecessor used
+a CSS counter and had no text node; these are real text and would otherwise report
+`unannotated` — which is how they were caught.
+
+### The ink band moved to the step list, and the paper folded into the math
+
+**Two changes on 2026-08-26 that interact, so make them together or not at all.**
+
+**The band moved.** Nandan: *"I suspect the recipe should be dark background."* §8 allows
+**two bands per page, never adjacent** — this page's are the list and the footer — so the
+math came off the band in the same change rather than the page growing a third. It reads
+better both ways: the list is the pivot, the moment the page stops saying what we have done
+and starts saying what the work *is*; and the equations are calmer on paper than reversed out
+of ink, where two dense math blocks and a lattice fought for the same space. **On the band
+the step list swaps every role to its inverted token** — `--ink-3` is 4.00:1 there and
+`--ink` vanishes.
+
+**The math was cut to one equation and one constraint, 2026-08-26.** The **sample bound**
+(Σ n_h ≤ N_d) went — *"keep it just to a budget constraint as the only constraint"* — and so
+did the **closed form** for n_h*. Both were true; both were in the way. The closed form was
+the mathematically satisfying part and the least useful, and it **delayed the sentence the
+section exists to reach**: that the price per stratum is unknown, has to be learned from the
+running campaign, and that every estimate changes the allocation which changes what you learn
+next. **That loop is the argument for software**, and it is stronger than the algebra that
+was standing in front of it. Do not restore either block without a reason that outranks that.
+
+**The paper folded in.** *"Let's combine the optimization problem and the read the paper into
+one section."* They were two sections saying one thing: the math **is** the method, and the
+paper **is** the math published. **Then flattened the same day** — *"make it one section
+with the paper itself. So it's all one thing."* The first pass kept an `H3` behind a
+hairline, which was still a seam; there is nothing for a seam to divide. One sentence carries
+the reader across and the paper's own title is the only heading inside the section.
+**`/#paper` sits on that title**, so the anchor lands on the citation and not on the
+equations.
+
+### C-066 was reversed, and this is how a ban gets lifted
+
+**The photo capability was `WITHHELD` in the strongest terms this register uses** — *built,
+then deliberately pulled*, citing a commit reading *"stop claiming we support it"*, and
+naming itself **the limit of the forward rule rather than an exception to it**: *"Never
+publish, in any form, until it is built."*
+
+**Nandan lifted it on 2026-08-26** — *"Forget the ban"*, then *"or rather, update the
+register."* That second message is the important one and it is the rule for next time:
+**the register is changed in the same breath as the page.** A page that publishes what
+`CLAIMS.md` withholds is the precise failure the register exists to catch, and
+**`check-claims.py` would not have caught this one** — the claim carries no numeral, so
+nothing mechanical was ever going to notice. C-066 is now `VERIFIED` with the reversal, its
+date and its author recorded on the row.
+
+**One edge is still open and it is a buyer's question.** The old row recorded that the file
+itself is never stored and that what is kept is **a platform reference that expires**. So
+*"a respondent can send a photo"* and *"you receive the photos"* are different claims, and
+only the first is on the page. Confirm what a researcher actually receives before writing the
+second anywhere — a buyer who expects files and gets expiring links has been misled by
+omission.
+
+### The paper is not the company's origin story, and three changes say so
+
+**Nandan, 2026-08-26:** *"we don't want people to think we wrote the paper to start a
+company. They're two separate things, and that needs to be understood."*
+
+The misreading is that a paper was published and then monetised — academic-flavoured
+marketing, which would discredit both halves. The true order is the opposite and C-018
+carries it. Three changes, all the same point:
+
+1. **The hero eyebrow went.** It read *SURVEY SAMPLING VIA AD PLATFORMS* — the paper's
+   subject and very nearly its title. *"That's the name in the paper. Not the company."*
+2. **The hero's "Read the paper" button went.** A CTA is a thing we want you to do, so the
+   paper sitting beside *Request a proposal* made it one of two offers. **The SSRN link at
+   the foot of the paper section stays** — a citation's destination is not a CTA.
+3. **A clause after the abstract states the sequence:** *"The company did not begin with it:
+   Virtual Lab has been fielding studies since February 2020, and the paper validates a
+   method that was already running."*
+
+**Note carefully what that clause does not claim, because both are easy to add by accident.**
+Not independence of authorship — the byline directly above reads *Nandan Rao · Virtual Lab*,
+so the company is in the paper and implying otherwise would be the very failure the clause
+exists to prevent. And **not peer review**: `_data/paper.json`'s editions are an SSRN working
+paper and a JMR *submission*. "Peer reviewed" is not ours to say.
+
+### Two things came off the page the same day
+
+- **The four uncounted countries.** *"If that's true, just leave them off entirely. Those
+  are small details nobody cares about."* MD, MK, PS and XK had a dashed-outline state, a
+  legend entry and a sentence of prose — **three pieces of chrome for four countries whose
+  only property is that a query has not been run.** They are now dropped in
+  `build-coverage-map.py` at collection, which matters: deleting the outline alone would
+  have left them in `covered_ids`, which is what the ghost pass skips, so they would have
+  rendered as **invisible holes in the world** and still framed the viewBox. They now fall
+  through to the same hairline as every other country we have not surveyed, and the map
+  states no country count in its label. **Not drawing a country is not calling it zero** —
+  `coverage.json` still records all four and still says never render them as zero.
+- **The top navigation.** *"It's okay if we don't have any top navigation. It's a one page
+  site."* The bar carried *The paper* and *Audit trail*, two links that scrolled you down
+  the page you were already on. What is left is the mark and the one CTA. **The anchors
+  still exist** — `/#paper`, `/#code` — so a procurement reviewer or an academic has a URL
+  to link; they are simply not advertised.
+
+### Three bugs the build found, all fixed in the generator or the checker
+
+**None was in the copy, and each had been shipping or would have shipped.**
+
+1. **Both figure source lines were silently truncated.** `build-throughput-figure.py` and
+   `build-adcost-figure.py` emitted each provenance line as one unwrapped `<text>` at 12px in
+   a 620-unit viewBox, and an outer `<svg>` clips at its own bounds. The throughput figure
+   stopped at *"Whiskers: 10th"* with no closing value; the ad-cost figure lost *"not our
+   fee"* entirely — **the figures looked finished while failing the one rule they exist to
+   demonstrate.** Both now wrap and grow the viewBox, and both **exit non-zero** on a word
+   wider than the box, the same shape of guard as the axis one.
+2. **The coverage legend's magnitude labels** carried no `data-claim`. This was already
+   recorded as drift and the fix was already identified — in the generator, never the output.
+   Done. It mattered more than it looked: on a page that annotates its own figures, an
+   un-annotated numeral escalates from `unsourced` to `unannotated`.
+3. **`check-claims.py` was scanning inputs instead of outputs.** Once pages became Eleventy
+   templates, the bare walk read their `{# #}` comments — section numbers, motif ids — and
+   reported ten findings that existed on no page. It now skips front-matter templates and
+   `_includes/`, walks `_site/` when it exists, and **prints a note naming every template it
+   skipped** so a skip is never silent. Ten fixtures still pass.
+
+**One value was added to the register: C-097**, respondents attributable to a country,
+738,608 of 841,660. It was already stated and sourced in `CLAIMS.md`'s per-country section but
+had no id, so the one sentence `COPY.md` §1.3 requires could not be annotated. **Bookkeeping,
+not a new claim** — and deliberately *not* a precedent for the regional totals, whose
+objection is the bucketing.
+
+### Two `DESIGN.md` corrections, made in the same change as the code
+
+- **§8 client wall: three columns, not four.** The wall is now exactly six institutions; six
+  in four columns leaves two dead cells, and a wall whose last row is half empty reads as a
+  wall that lost two logos.
+- **§10's 44px touch target and §8's 11px/19px button padding disagreed** — that padding
+  computes to 42px. Neither number moved: `@media (pointer: coarse)` lifts block padding to
+  12px, so the drawn button is unchanged and the floor is met where a finger is. **A pointer
+  query, never a width query.**
+
+### What the page does not have, and it is worth knowing
+
+**None of the twelve §7 icons appears on any page.** The sprite is built, inlined and
+resolving, and `COPY.md` calls for an icon nowhere. Forcing them in was tried and rejected:
+the recipe's six beats and the old audit trail's six rows each had two or three items with no
+icon in the set, and a half-iconned list is worse than a plain one. **This is a fact to
+decide about, not a gap to quietly close** — either the copy grows a place for them or §7
+covers a set the site does not currently use.
 
 ### Read D-027 first. It is the spine everything else serves.
 
@@ -287,7 +619,7 @@ row's *caveat prose* was read as its *status*.
    the $0.30 and $0.32 it withholds in exactly that cell, and losing them would unban the
    figure the register exists to withhold.
 
-`scripts/test-check-claims.py` runs **nine cases** over the fixtures in
+`scripts/test-check-claims.py` runs **ten cases** over the fixtures in
 `scripts/fixtures/`. Two of the nine cover attributed quotation: `quote-abstract.html` is
 the Papers abstract (exit 0, one warn on the withheld $0.30), and
 `fail-quote-unattributed.html` is the same attribute used as a loophole in three shapes
@@ -324,8 +656,8 @@ statement in hard rule 1, markup in `DESIGN.md` §8, reasoning in D-016.
 
 | | |
 |---|---|
-| **D-014** | **The logos.** Eight authentic files are in `assets/logos/`; **not one is cleared.** Every institution requires permission for third-party use, and World Bank, Harvard and WashU explicitly bar implying affiliation — which a logo wall is. WashU's own policy describes this exact case and allows **text only**. D-014 quotes each source. **The wall degrades to type, so the page ships regardless** |
-| **D-025** | **May the privacy policy be amended?** Three things the instrument does are not described in it. Still open **even though the policy is now unlinked** — unlinked is not unamended |
+| **D-014** | **The logos — now the only thing between the wall and marks.** The page is built and renders all six as type. Eight authentic files are in `assets/logos/`; **not one is cleared.** Every institution requires permission for third-party use, and World Bank, Harvard and WashU explicitly bar implying affiliation — which a logo wall is. WashU's own policy describes this exact case and allows **text only**. D-014 quotes each source. **The wall degrades to type, so the page ships regardless** |
+| **D-025** | **May the privacy policy be amended?** *The policy is now carried over and live at `/privacy/`, unlinked, with `data-claim-scan="off"` on the legal copy.* Three things the instrument does are not described in it. Still open **even though the policy is now unlinked** — unlinked is not unamended |
 | **SSRN edition** | **Which edition is posted?** The only compiled PDF we hold is the blinded submission with no byline. The page cites and links the paper, so if that is what was uploaded a reader gets an author-less document under a byline we printed. Ten seconds for him, unanswerable from here |
 | **Region buckets** | The six regional totals still have no row because the bucketing is editorial. Fallback recorded: publish country figures, drop the regional layer |
 | D-022 | Whether the region strip draws the unattributed respondents as a ghost segment |
@@ -337,23 +669,39 @@ sitemap (one page); C-094 to C-096 (the three universities, on operator knowledg
 coming off the page; 6.1 p.p. becoming quote-only; and the client wall becoming marks rather
 than type-with-engagements.
 
-### Known drift — re-derived 2026-08-25 by running the checks
+### Known drift — re-derived 2026-08-25 **after** the build
 
-`python3 scripts/check-claims.py` reports **23 findings**, and the walker skips
-`scripts/fixtures/`, so all 23 are real. They fall in three places:
+`python3 scripts/check-claims.py` reports **9 findings, down from 23**, and every one of
+them is in **`build/coverage-regions.html`** — the six per-region totals and their country
+counts. **A decision, not a bug:** the figures are sums of a verified table; the *bucketing*
+is editorial and has no row. The fallback is recorded, and **the artefact does not reach a
+page**, because [P-4] is held.
 
-- **11 in `index.html`** — the **legacy SPA**, which is being replaced, not fixed. The Nigeria
-  funnel figures and study-design facts have no rows, and two privacy numerals need
-  `data-claim-scan="off"`. **Scaffolding the new site retires all eleven.**
-- **9 in `build/coverage-regions.html`** — the six per-region totals and their country counts.
-  **A decision, not a bug:** the figures are sums of a verified table; the *bucketing* is
-  editorial and has no row. Fallback recorded.
-- **3 in `build/coverage-map.html`** — the legend's magnitude labels. **A cheap spec drift:**
-  §8 says they carry `data-claim="none"` and `build-coverage-map.py` emits no `data-claim` at
-  all. **Fix the generator, never the output.**
+The other fourteen are gone, and it is worth knowing which way each went:
 
-`test-check-claims.py` — 9/9. `check-contrast.py` — 22 pairs, all pass.
-`build-coverage-map.py` — clean, 41 countries, 6 regions.
+- **11 in `index.html`** — the legacy SPA. **Retired**, not fixed, exactly as planned.
+- **3 in `build/coverage-map.html`** — the legend's magnitude labels. **Fixed in
+  `build-coverage-map.py`**, never in its output.
+
+**The two pages that ship are clean**, and this is the invocation that says so:
+
+```
+npm run build && python3 scripts/check-claims.py _site/index.html _site/privacy/index.html
+```
+
+Eight values trace and carry their source lines; **one `warn`**, and it is the expected one —
+the abstract's `$0.30`, shielded as attributed quotation and reported anyway, on every run,
+per D-016.
+
+`test-check-claims.py` — 10/10. `check-contrast.py` — 22 pairs, all pass.
+`build-coverage-map.py` — clean, 41 countries, 6 regions. Both figure generators — clean.
+
+**One limit of the checker, now that figures are on the page.** `check-claims.py` does not
+scan text inside `<svg>`, so the two box plots and all three coverage artefacts are **not**
+machine-checked. They carry their own `data-claim`, their own source lines and their own
+axis guards, and the guards are what actually protect them — but do not read a clean run as
+having verified them. It is also why the region strip passes while stating six figures that
+have no row.
 
 **Two rules that no checker can enforce, so they are yours to hold:**
 
@@ -363,9 +711,10 @@ than type-with-engagements.
 2. **The client wall's names are verified; its logos are not.** A verified row licenses the
    relationship, never the mark.
 
-**Still true and still worth knowing:** `build/` is generated and now git-ignored; the
-generated artefacts have generators and **hand-editing one desynchronises the sprite**; and
-`notes/` is nine workstream memos that are not a source of truth.
+**Still true and still worth knowing:** `build/` is generated and git-ignored — and is now
+**regenerated on every deploy**, because `netlify.toml` runs the generator before Eleventy;
+the generated artefacts have generators and **hand-editing one desynchronises the sprite**;
+and `notes/` is nine workstream memos that are not a source of truth.
 
 ### One positioning fact, now examined — and one number in this file was wrong
 
@@ -429,16 +778,32 @@ it does not resurrect either banned framing.
 
 ## Hard rules
 
-1. **The provenance rule.** Every number on the public site carries its source in the
-   same visual unit — same card, same weight as the label. If you cannot cite it from
-   `CLAIMS.md`, it does not go on the page. This is the whole brand proposition;
+1. **The provenance rule.** Every number on the public site needs a `VERIFIED` row in
+   `CLAIMS.md`, and **a number resting on somebody else's document carries that citation
+   in the same visual unit** — same card, same weight as the label. If you cannot trace
+   it from `CLAIMS.md`, it does not go on the page. This is the whole brand proposition;
    breaking it is the most expensive mistake available in this repo.
+
+   **A figure from our own operating record carries no source line** (2026-08-26).
+   Nandan: *"We are the ones claiming the data. Nobody cares where it comes from."*
+   "Virtual Lab production database" under a Virtual Lab figure cites nothing a reader
+   can check, and **printing it beside "Donati & Rao, 2025" devalues the real citation.**
+   The line is read from the register, never from the markup: a table whose fourth column
+   is **Definition** is ours and is exempt; a table whose fourth column is **Source** is
+   somebody else's and is not. It **fails safe** — exemption requires the `Definition`
+   column. Full statement in `DESIGN.md` §2; the two fixtures that pin both halves are
+   `pass-own-record.html` and `fail-provenance.html`.
+
+   **A definition is not an attribution.** The box plots keep their caption lines —
+   *"an active day is a study-day recruiting at least 20 respondents"* — because that is
+   what lets a reader read the figure. The test: **does the line say something about the
+   number, or only about us?**
 
    `python3 scripts/check-claims.py` enforces both halves of this rule. Pages declare
    their claims with `data-claim` (see `DESIGN.md` §8, "Claim annotation"); an
    un-annotated page is still scanned heuristically, but heuristic mode can pass a number
    by coincidence, so annotate. **Run `python3 scripts/test-check-claims.py` whenever you
-   touch the checker or the register's status vocabulary** — the checker is the rule, so a
+   touch the checker, the register's status vocabulary, or a table's column names** — the checker is the rule, so a
    broken checker is a broken rule.
 
    **One exemption exists and it is not an exception to the rule.** `data-claim-quote="C-nnn"`
@@ -486,21 +851,25 @@ it does not resurrect either banned framing.
   field photographs — is untracked and has never been committed, so it is also backed
   up by nothing. `.git` is 9.9 MB. Never `git add media/`, and see D-010 before adding
   anything else large.
-- **The current site is a hand-rolled SPA.** `index.html` holds every page as a `div`,
-  switched client-side by Navigo 8 loaded from unpkg. `css/main.css` is hand-written.
-  There is no build step. The target architecture is Eleventy (D-006) — do not extend
-  the SPA; it is being replaced, not carried forward.
-- **There is a live BrowserSync `document.write` script tag** at the bottom of
-  `index.html` pointing at `http://HOST:3000`. It is development leftover shipping to
-  production. Remove it in the rebuild.
-- **PostHog is loaded on every page** with no consent mechanism (see D-009). This sits
-  awkwardly beside our own privacy policy.
+- **~~The current site is a hand-rolled SPA.~~ Retired 2026-08-25.** It held every page as a
+  `div`, switched client-side by Navigo 8 from unpkg. `index.html`, `css/main.css`,
+  `css/normalize*.css` and `js/` are deleted; **all of it is recoverable with
+  `git checkout <path>`** if something turns out to have been carried over wrong. Eleventy
+  (D-006) replaces it.
+- **~~There is a live BrowserSync `document.write` script tag~~ — gone**, with the SPA that
+  carried it. It pointed at `http://HOST:3000` and had been shipping to production.
+- **~~PostHog is loaded on every page~~ — no analytics ship at all** as of 2026-08-25. The
+  snippet went with the SPA and nothing replaced it, because **D-009 is open** and its own
+  recommendation is cookieless and EU-hosted. Loading nothing is the reversible direction;
+  adding a tracker to a page that sits beside our privacy policy is not.
 - **The privacy policy is genuinely good** and recently updated (2026-05-15). It is the
   one piece of existing content worth carrying over close to verbatim. Do not
   regenerate it; move it.
-- **`build/` is generated.** `scripts/build-coverage-map.py` writes there. It is not
-  committed; add `build/` to `.gitignore` when one exists (there is no `.gitignore` in
-  this repo at all yet, which is its own small problem).
+- **`build/` is generated**, git-ignored, and **regenerated on every deploy** —
+  `netlify.toml` runs `npm run build`, which is `build-coverage-map.py` and then Eleventy.
+  `_data/coverage.js` raises if it is missing rather than rendering an empty coverage
+  section, which is the intended behaviour: a deploy should fail loudly, not ship a page
+  with a hole where the map was.
 - **`scripts/fixtures/` is full of pages designed to fail.** Nine of them, deliberately,
   and they are inside the tree `check-claims.py` used to walk by default, which made a
   bare run exit 1 no matter how healthy the site was. **Fixed 2026-08-21:** the walker
@@ -533,7 +902,7 @@ it does not resurrect either banned framing.
 Run through this list. Do not report work complete until every line passes or you have
 said explicitly which one does not and why.
 
-- [ ] `python3 scripts/test-check-claims.py` passes — all nine cases, meaning the
+- [ ] `python3 scripts/test-check-claims.py` passes — all **ten** cases, meaning the
       checker itself still works
 - [ ] `python3 scripts/check-claims.py <the files you changed>` is clean — every number
       traces to a `VERIFIED` row and carries a visible source line in its own visual unit.

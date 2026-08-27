@@ -20,8 +20,21 @@ OUT = ROOT / "assets" / "figures" / "throughput-box.svg"
 
 # Geometry. Width matches assets/figures/mad-comparison.svg so the two figures sit
 # on one page without a rescale being read into either.
-W = 620
-PLOT_X0, PLOT_X1 = 180.0, 564.0
+# Width. Widened 620 -> 1160 on 2026-08-26: Nandan, "The box plots are beautiful but too
+# small. Should probably be full width. Need to be bigger."
+#
+# The figure is REDRAWN wider rather than scaled up, and the difference is the whole
+# point. These SVGs carry their own type at absolute sizes -- 13px labels, 15px numerals,
+# 12px source lines -- so stretching a 620-unit drawing across 1116 CSS px would scale
+# every one of them by 1.8x and land the axis labels somewhere between h3 and h2 on a
+# scale DESIGN.md sec 4 fixes exactly. Widening the viewBox instead keeps the type at its
+# designed size and spends the extra room on the ruler, which is where it is worth having:
+# the same interval is drawn against three times the graduation.
+#
+# 1160 matches STRIP_W in build-coverage-map.py, so every full-width drawing on the page
+# is set out on one measure.
+W = 1160
+PLOT_X0, PLOT_X1 = 180.0, W - 56.0
 Y_MID = 34.0          # the interval's centreline
 BOX_H = 24.0          # the bar primitive
 CELL = 12.0           # the median cell -- a cell, never a dot (sec 6 M3)
@@ -32,6 +45,55 @@ H = 152
 
 def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+# --- Source-line wrapping ------------------------------------------------------
+# DESIGN.md sec 2 makes the source line mandatory and sec 8 puts it in the same
+# visual unit as the figure -- so it lives inside this SVG. An outer <svg> clips at
+# its own bounds, and both source strings are longer than W at 12px, so the second
+# half of each was being SILENTLY TRUNCATED: "Whiskers: 10th" with no closing value,
+# and the ad-cost line losing "not our fee" entirely. A figure that drops half its
+# provenance is the one failure this drawing cannot afford, so the lines wrap and
+# the viewBox grows to hold them.
+#
+# SRC_CPL is a character budget, not a measurement: there is no font metric here and
+# no dependency is permitted. 12px Source Serif 4 italic averages a shade under 6px
+# per character, so W/6 is the budget and it is deliberately conservative.
+SRC_SIZE = 12.0
+SRC_LEAD = 16.0
+SRC_CPL = int(W // 6)
+
+
+def wrap_src(text, cpl=SRC_CPL):
+    """Greedy wrap on spaces. Never breaks a word -- a hyphenated figure caption
+    reads as a typo, and every one of these strings carries a number."""
+    lines, cur = [], ""
+    for word in text.split():
+        trial = f"{cur} {word}".strip()
+        if cur and len(trial) > cpl:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = trial
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def src_block(*texts, y0):
+    """The wrapped source lines as SVG, plus the y of the last baseline.
+
+    Exits non-zero on a single word wider than the box, for the same reason the
+    axis guard exists: a figure must fail loudly rather than clip its evidence."""
+    lines = [ln for t in texts for ln in wrap_src(t)]
+    for ln in lines:
+        if len(ln) > SRC_CPL:
+            sys.exit(f"FIGURE CLIPPED: source line does not fit {W}px at {SRC_SIZE}px "
+                     f"({len(ln)} > {SRC_CPL} chars): {ln!r}")
+    svg = "\n".join(
+        f'  <text class="src" x="0" y="{y0 + i * SRC_LEAD:.0f}" '
+        f'data-claim-source="">{esc(ln)}</text>'
+        for i, ln in enumerate(lines))
+    return svg, y0 + SRC_LEAD * (len(lines) - 1)
 
 
 def main():
@@ -64,9 +126,13 @@ def main():
     src1 = (f'Distribution across {pop["n_studies"]} studies, each at its own median '
             f'active day. Box: 25th to 75th percentile. Whiskers: 10th ({p["p10"]}) '
             f'to 90th ({p["p90"]}).')
+    # No "Virtual Lab production database" line. Nandan, 2026-08-26: "We are the ones
+    # claiming the data. Nobody cares where it comes from." What stays is the DEFINITION
+    # -- what an active day is, what the box spans -- because a reader cannot read this
+    # figure without it. A definition is not an attribution. See check-claims.py,
+    # "THE CITATION RULE".
     src2 = (f'An active day is a study-day recruiting at least 20 respondents; half of '
-            f'studies have {d["median_active_days"]} or more. Virtual Lab production '
-            f'database, August 2026.')
+            f'studies have {d["median_active_days"]} or more.')
 
     desc = (f'Respondents recruited per study on a day of active recruitment, across '
             f'{pop["n_studies"]} studies. The median study recruits {p["median"]} on '
@@ -75,6 +141,10 @@ def main():
             f'{p["p90"]}, read against a scale running from {int(lo)} to {int(hi)} '
             f'respondents. This is a distribution across studies, not an uncertainty '
             f'interval on an estimate.')
+
+    # Wrap the provenance lines and size the viewBox to hold them.
+    src_svg, src_last_y = src_block(src1, src2, y0=Y_AXIS + 52)
+    H = int(src_last_y + 10)
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%"
      class="fig-thru" role="img" aria-labelledby="thruTitle thruDesc"
@@ -161,8 +231,7 @@ def main():
   <line class="rule" x1="0" y1="{Y_AXIS + 34:.0f}" x2="{W}" y2="{Y_AXIS + 34:.0f}"/>
 
   <!-- Provenance rule, DESIGN.md sec 2. Mandatory, same visual unit as the figure. -->
-  <text class="src" x="0" y="{Y_AXIS + 52:.0f}" data-claim-source="">{esc(src1)}</text>
-  <text class="src" x="0" y="{Y_AXIS + 68:.0f}" data-claim-source="">{esc(src2)}</text>
+{src_svg}
 </svg>
 '''
     OUT.parent.mkdir(parents=True, exist_ok=True)

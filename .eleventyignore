@@ -1,0 +1,16 @@
+# The documentation set. These are the specification, not pages.
+*.md
+notes/
+
+# Scripts, and the nine fixture pages whose entire job is to fail check-claims.py.
+scripts/
+
+# The legacy SPA's client-side router and stylesheet, retired at cutover.
+js/
+
+# Raster field photography from the SPA era. The rebuild ships no raster images;
+# DESIGN.md hard rule 8 — all graphics are inline SVG from the four primitives.
+img/
+
+# build/ and media/ and node_modules/ and _site/ are already excluded via .gitignore,
+# which Eleventy honours. build/ is *read* by _data/coverage.js rather than rendered.

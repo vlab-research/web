@@ -1,0 +1,46 @@
+{#- Reusable markup, so pages stay readable.
+
+    M1 · lattice — DESIGN.md §6. Cell 8, pitch 18; the ratio does not change at any
+    scale, and opacity comes from --lat-op / --lat-op-inv only. Each instance needs its
+    OWN <pattern id>, which is why this takes one: a single shared pattern defined in
+    <head> would break the .inv colour swap, because currentColor inside a <pattern>
+    resolves where the pattern is DEFINED, not where it is used.
+
+    The parent needs .has-lat (position:relative; overflow:hidden) and the content above
+    it needs position:relative — .wrap already does. -#}
+{% macro lattice(id, inv=false) %}
+  <svg class="lat{% if inv %} inv{% endif %}" aria-hidden="true">
+    <defs><pattern id="lat-{{ id }}" width="18" height="18" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="currentColor"/></pattern></defs>
+    <rect width="100%" height="100%" fill="url(#lat-{{ id }})"/>
+  </svg>
+{% endmacro %}
+
+
+{#- The objective function. DESIGN.md §8 "Math notation": displayed math is NOTATION,
+    not a figure, so the block carries data-claim="none" — never data-claim-scan="off",
+    which is reserved for legal copy. The surrounding prose is NOT exempt.
+
+    Rendered as MathML rather than an image so it inherits currentColor, holds in all
+    three theme states, and stays selectable.
+
+    One constraint, no closed form — COPY.md records why both cuts were made. -#}
+{% macro objective() %}
+  <div class="math" data-claim="none">
+    <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+      <munder>
+        <mo movablelimits="false">argmin</mo>
+        <mrow><msub><mi>n</mi><mn>1</mn></msub><mo>&#x2026;</mo><msub><mi>n</mi><mi>H</mi></msub></mrow>
+      </munder>
+      <munder><mo>&#x2211;</mo><mi>h</mi></munder>
+      <mfrac>
+        <mrow><msubsup><mi>W</mi><mi>h</mi><mn>2</mn></msubsup><msubsup><mi>&#x3C3;</mi><mi>h</mi><mn>2</mn></msubsup></mrow>
+        <msub><mi>n</mi><mi>h</mi></msub>
+      </mfrac>
+      <mspace width="1.6em"/><mtext>subject to</mtext><mspace width="0.6em"/>
+      <munder><mo>&#x2211;</mo><mi>h</mi></munder>
+      <msub><mi>p</mi><mi>h</mi></msub><msub><mi>n</mi><mi>h</mi></msub>
+      <mo>&#x2264;</mo><mi>B</mi>
+    </math>
+  </div>
+{% endmacro %}

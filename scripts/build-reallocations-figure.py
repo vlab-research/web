@@ -1,23 +1,36 @@
 #!/usr/bin/env python3
-"""Build assets/figures/ad-cost.svg from scripts/data/ad-cost.json.
+"""Build assets/figures/reallocations-box.svg from scripts/data/reallocations.json.
+
+BLOCKED, 2026-08-26. This script is complete and it will not draw yet, on purpose.
+C-092 gives median 61, p75 165, p90 351 and max 1,308 -- but a box plot's box spans
+p25 to p75 and its whiskers span p10 to p90, so TWO of the five values the form needs
+do not exist. AGENTS.md hard rule 2: never invent a figure, not as a placeholder, not
+"to be replaced later". So it exits non-zero and names what is missing.
+
+The query that fills them is in scripts/data/reallocations.json. One read-only run and
+this figure draws.
+
+Why the same form and not a different one: the three box plots are deliberately ONE
+figure in three units, so a reader who learns to read one has learned to read all of
+them. Inventing an asymmetric variant for this dataset because two numbers are absent
+would break that for the sake of shipping a week early.
 
 The figure is M3 (interval) drawn on M4 (tick rule), from the four primitives only:
 a bracket at each whisker end, a bar for the interquartile box, a cell for the median,
-and ticks for the ruler. Same form as the throughput figure, deliberately -- speed and
-cost read as one pair. No chart library, no literal colour -- hard rule 8 and
+and ticks for the ruler. No chart library, no literal colour -- hard rule 8 and
 DESIGN.md sec 3.
 
 Never hand-edit the SVG. Change this script or the data and re-run.
 
-    python3 scripts/build-adcost-figure.py
+    python3 scripts/build-throughput-figure.py
 """
 import json
 import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "scripts" / "data" / "ad-cost.json"
-OUT = ROOT / "assets" / "figures" / "ad-cost.svg"
+DATA = ROOT / "scripts" / "data" / "reallocations.json"
+OUT = ROOT / "assets" / "figures" / "reallocations-box.svg"
 
 # Geometry. Width matches assets/figures/mad-comparison.svg so the two figures sit
 # on one page without a rescale being read into either.
@@ -100,6 +113,17 @@ def src_block(*texts, y0):
 def main():
     d = json.loads(DATA.read_text())
     p = d["percentiles"]
+
+    # The block. Same shape as the axis guard below: fail loudly rather than draw
+    # something that is not the claim.
+    absent = [k for k in ("p10", "p25", "median", "p75", "p90") if p.get(k) is None]
+    if absent:
+        sys.exit(
+            f"BLOCKED: {', '.join(absent)} missing from {DATA.name}.\n"
+            f"  C-092 records median/p75/p90/max only. A box plot's box is p25-p75 and\n"
+            f"  its whiskers are p10-p90, so this figure cannot be drawn from it.\n"
+            f"  Hard rule 2: never invent a figure, not even as a placeholder.\n"
+            f"  The query that fills them is the `query` field of {DATA.name}.")
     ax = d["axis"]
     pop = d["population"]
 
@@ -116,101 +140,113 @@ def main():
 
     # Ruler graduations. Major marks reach higher than minor ones (sec 6 M4).
     ticks = []
-    v = lo
-    while v <= hi + 1e-9:
+    v = int(lo)
+    while v <= hi:
         major = v in ax["major_ticks"]
         tx = x(v)
         ticks.append(f'  <line class="axis" x1="{tx:.1f}" y1="{Y_AXIS}" '
                      f'x2="{tx:.1f}" y2="{Y_AXIS + (7 if major else 4)}"/>')
         v += ax["tick_every"]
 
-    src1 = (f'Advertising spend only — not the incentive, not the survey platform, not our '
-            f'fee. Distribution across {pop["n_studies"]} studies. Box: 25th to 75th '
-            f'percentile. Whiskers: 10th (${p["p10"]:.2f}) to 90th (${p["p90"]:.2f}); '
-            f'the range runs ${d["min"]:.2f} to ${d["max"]:.2f}.')
-    # No "Virtual Lab production database" line -- see build-throughput-figure.py and
-    # check-claims.py, "THE CITATION RULE". The scope clause in src1 stays and is the
-    # load-bearing half: this figure is advertising spend and is never a price.
-    src2 = (f'Per respondent newly recruited, ${d["totals"]["spend_usd"]:,} over '
-            f'{d["totals"]["new_respondents"]:,} respondents.')
+    # Axis labels come from the data file's major_ticks, so the ruler and its numbers
+    # can never disagree. The last one carries the unit.
+    mt = ax["major_ticks"]
+    tick_labels = []
+    for i, v in enumerate(mt):
+        anchor = ("" if i == 0 else
+                  ' text-anchor="end"' if i == len(mt) - 1 else ' text-anchor="middle"')
+        txt = f"{v:,} REALLOCATIONS" if i == len(mt) - 1 else f"{v:,}"
+        tick_labels.append(
+            f'  <text class="tik" x="{x(v):.1f}" y="{Y_AXIS + 20:.0f}"{anchor} '
+            f'data-claim="none">{txt}</text>')
 
-    desc = (f'Advertising cost per respondent newly recruited, across {pop["n_studies"]} '
-            f'studies. The median study pays ${p["median"]:.2f}. The middle half fall '
-            f'between ${p["p25"]:.2f} and ${p["p75"]:.2f}. The tenth percentile is '
-            f'${p["p10"]:.2f} and the ninetieth ${p["p90"]:.2f}, read against a scale '
-            f'from $0 to ${int(hi)}. The full range runs ${d["min"]:.2f} to '
-            f'${d["max"]:.2f}. Advertising spend only. This is a distribution across '
-            f'studies, not an uncertainty interval on an estimate.')
+    src1 = (f'Distribution across {pop["n_studies"]} studies, each counted once. '
+            f'Box: 25th to 75th percentile. Whiskers: 10th ({p["p10"]}) '
+            f'to 90th ({p["p90"]}); the longest ran to {d["max"]:,}.')
+    # No "Virtual Lab production database" line. Nandan, 2026-08-26: "We are the ones
+    # claiming the data. Nobody cares where it comes from." What stays is the DEFINITION
+    # -- what an active day is, what the box spans -- because a reader cannot read this
+    # figure without it. A definition is not an attribution. See check-claims.py,
+    # "THE CITATION RULE".
+    src2 = ('One reallocation is one pass over every stratum, resetting each budget from '
+            'what the stratum currently costs and how far it is from its target share.')
+
+    desc = (f'Budget reallocations per study, across {pop["n_studies"]} studies. The '
+            f'median study takes {p["median"]}. The middle half of studies fall between '
+            f'{p["p25"]} and {p["p75"]}. The tenth percentile is {p["p10"]} and the '
+            f'ninetieth is {p["p90"]}, read against a scale running from {int(lo)} to '
+            f'{int(hi)} reallocations; the longest study ran to {d["max"]:,}. This is a '
+            f'distribution across studies, not an uncertainty interval on an estimate.')
 
     # Wrap the provenance lines and size the viewBox to hold them.
     src_svg, src_last_y = src_block(src1, src2, y0=Y_AXIS + 52)
     H = int(src_last_y + 10)
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%"
-     class="fig-cost" role="img" aria-labelledby="costTitle costDesc"
+     class="fig-realloc" role="img" aria-labelledby="reallocTitle reallocDesc"
      preserveAspectRatio="xMinYMin meet" data-claim-unit="">
-  <title id="costTitle">Respondents recruited per study on an active day</title>
-  <desc id="costDesc">{esc(desc)}</desc>
+  <title id="reallocTitle">Budget reallocations per study</title>
+  <desc id="reallocDesc">{esc(desc)}</desc>
 
   <style>
     /* Local roles, resolved from DESIGN.md sec 3 tokens only. No literal colour. */
-    .fig-cost{{
-      --cost-data:  var(--data);
-      --cost-label: var(--ink);
-      --cost-rule:  var(--rule);
-      --cost-axis:  var(--ink-3);
-      --cost-src:   var(--ink-3);
+    .fig-realloc{{
+      --realloc-data:  var(--data);
+      --realloc-label: var(--ink);
+      --realloc-rule:  var(--rule);
+      --realloc-axis:  var(--ink-3);
+      --realloc-src:   var(--ink-3);
     }}
     /* On an ink band. --data reads 2.10:1 and --ink-3 reads 4.00:1 there; see sec 3. */
-    .fig-cost.inv{{
-      --cost-data:  var(--data-inv);
-      --cost-label: var(--on-invert);
-      --cost-rule:  var(--rule-invert);
-      --cost-axis:  var(--on-invert-2);
-      --cost-src:   var(--on-invert-2);
+    .fig-realloc.inv{{
+      --realloc-data:  var(--data-inv);
+      --realloc-label: var(--on-invert);
+      --realloc-rule:  var(--rule-invert);
+      --realloc-axis:  var(--on-invert-2);
+      --realloc-src:   var(--on-invert-2);
     }}
-    .fig-cost .box    {{ fill: var(--cost-data); fill-opacity:.26;
-                        stroke: var(--cost-data); stroke-width:1 }}
-    .fig-cost .cell   {{ fill: var(--cost-data) }}
-    .fig-cost .whisk  {{ stroke: var(--cost-data); stroke-width:1;
+    .fig-realloc .box    {{ fill: var(--realloc-data); fill-opacity:.26;
+                        stroke: var(--realloc-data); stroke-width:1 }}
+    .fig-realloc .cell   {{ fill: var(--realloc-data) }}
+    .fig-realloc .whisk  {{ stroke: var(--realloc-data); stroke-width:1;
                         shape-rendering:crispEdges }}
-    .fig-cost .rule   {{ stroke: var(--cost-rule); stroke-width:1;
+    .fig-realloc .rule   {{ stroke: var(--realloc-rule); stroke-width:1;
                         shape-rendering:crispEdges }}
-    .fig-cost .axis   {{ stroke: var(--cost-axis); stroke-width:1;
+    .fig-realloc .axis   {{ stroke: var(--realloc-axis); stroke-width:1;
                         shape-rendering:crispEdges }}
-    .fig-cost .lab{{
+    .fig-realloc .lab{{
       font:600 13px/1 "Source Sans 3","Helvetica Neue",Arial,sans-serif;
-      fill: var(--cost-label);
+      fill: var(--realloc-label);
     }}
-    .fig-cost .num{{
+    .fig-realloc .num{{
       font:400 15px/1 "IBM Plex Mono",ui-monospace,monospace;
       font-variant-numeric: tabular-nums; letter-spacing:-.01em;
-      fill: var(--cost-data); text-anchor:middle;
+      fill: var(--realloc-data); text-anchor:middle;
     }}
-    .fig-cost .qnum{{
+    .fig-realloc .qnum{{
       font:400 12px/1 "IBM Plex Mono",ui-monospace,monospace;
       font-variant-numeric: tabular-nums;
-      fill: var(--cost-data); text-anchor:middle;
+      fill: var(--realloc-data); text-anchor:middle;
     }}
-    .fig-cost .tik{{
+    .fig-realloc .tik{{
       font:500 9.5px/1 "IBM Plex Mono",ui-monospace,monospace;
       font-variant-numeric: tabular-nums; letter-spacing:.11em;
-      text-transform:uppercase; fill: var(--cost-axis);
+      text-transform:uppercase; fill: var(--realloc-axis);
     }}
-    .fig-cost .src{{
+    .fig-realloc .src{{
       font:italic 400 12px/1 "Source Serif 4",Georgia,serif;
-      fill: var(--cost-src);
+      fill: var(--realloc-src);
     }}
   </style>
 
-  <text class="lab" x="0" y="{Y_MID - 6:.0f}">Advertising cost</text>
-  <text class="lab" x="0" y="{Y_MID + 12:.0f}">per respondent</text>
+  <text class="lab" x="0" y="{Y_MID - 6:.0f}">Budget reallocations</text>
+  <text class="lab" x="0" y="{Y_MID + 12:.0f}">per study</text>
 
-  <!-- The values, above the interval they mark. C-091. -->
-  <g data-claim="C-091">
-    <text class="qnum" x="{x25:.1f}" y="14">${p["p25"]:.2f}</text>
-    <text class="num"  x="{x50:.1f}" y="14">${p["median"]:.2f}</text>
-    <text class="qnum" x="{x75:.1f}" y="14">${p["p75"]:.2f}</text>
+  <!-- The values, above the interval they mark. C-089. -->
+  <g data-claim="C-089">
+    <text class="qnum" x="{x25:.1f}" y="14">{p["p25"]}</text>
+    <text class="num"  x="{x50:.1f}" y="14">{p["median"]}</text>
+    <text class="qnum" x="{x75:.1f}" y="14">{p["p75"]}</text>
   </g>
 
   <!-- M3 interval. Bracket, bar, cell: three of the four primitives. -->
@@ -224,9 +260,7 @@ def main():
   <!-- M4 tick rule: the scale the interval is read against -->
   <line class="axis" x1="{PLOT_X0}" y1="{Y_AXIS}" x2="{PLOT_X1}" y2="{Y_AXIS}"/>
 {chr(10).join(ticks)}
-  <text class="tik" x="{PLOT_X0}" y="{Y_AXIS + 20:.0f}" data-claim="none">$0</text>
-  <text class="tik" x="{x(2):.1f}" y="{Y_AXIS + 20:.0f}" text-anchor="middle" data-claim="none">$2</text>
-  <text class="tik" x="{PLOT_X1}" y="{Y_AXIS + 20:.0f}" text-anchor="end" data-claim="none">$4 PER RESPONDENT</text>
+{chr(10).join(tick_labels)}
 
   <line class="rule" x1="0" y1="{Y_AXIS + 34:.0f}" x2="{W}" y2="{Y_AXIS + 34:.0f}"/>
 
@@ -237,8 +271,8 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(svg)
     print(f"wrote {OUT}")
-    print(f"  box ${p['p25']:.2f}-${p['p75']:.2f}, median ${p['median']:.2f}, "
-          f"whiskers ${p['p10']:.2f}-${p['p90']:.2f}, n={pop['n_studies']} studies")
+    print(f"  box {p['p25']}-{p['p75']}, median {p['median']}, "
+          f"whiskers {p['p10']}-{p['p90']}, n={pop['n_studies']} studies")
 
 
 if __name__ == "__main__":

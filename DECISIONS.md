@@ -1133,6 +1133,14 @@ cookieless, EU-hosted analytics product that needs no banner.
 **Recommendation:** cookieless and EU-hosted. A consent banner on a site whose pitch is
 methodological rigour and data ethics costs more than the data is worth.
 
+**State as of the build, 2026-08-25: the site ships no analytics at all.** The PostHog
+snippet went with the legacy SPA and nothing replaced it. **This does not close the
+decision** — it is the reversible direction while the decision is open. Loading nothing
+costs a few weeks of traffic data; loading a US-hosted tracker with no consent mechanism on
+the same origin as a privacy policy that states EU hosting is the thing D-012 spent a court
+ruling arguing against. `_includes/base.html` carries a comment saying so at the point where
+a snippet would go, so the absence reads as a decision rather than an oversight.
+
 ---
 
 ### D-010 — Repo history

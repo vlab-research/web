@@ -1,1 +1,15 @@
-/* /index.html 200
+# The SPA's catch-all is gone.
+#
+# It read `/* /index.html 200`, which is what a client-side router needs: every
+# path serves the homepage and Navigo decides what to show. Under Eleventy every
+# page is a real file, and keeping the catch-all would turn every 404 — including
+# a typo'd link to /privacy — into a silent homepage, which is worse than a 404.
+#
+# The old SPA route fragments, for anyone following a link that is now years old.
+# /privacy is deliberately not a destination anyone is redirected to: it keeps its
+# own URL and is simply not linked from the page (Nandan, 2026-08-25).
+
+/overview   /         301
+/studies    /         301
+/software   /#code    301
+/jobs       /         301

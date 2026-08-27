@@ -1,0 +1,708 @@
+/* ==========================================================================
+   site.css — the Virtual Lab design system, DESIGN.md §3–§9.
+   --------------------------------------------------------------------------
+   Built from DESIGN.md, not from css/main.css. main.css is the legacy SPA's:
+   its first line imports a Google Fonts stylesheet, which D-012 bans, and
+   nothing in it was carried over.
+
+   Order below follows DESIGN.md: §3 color, §4 type, §5 layout, §8 components,
+   §9 motion, §10 accessibility.
+
+   Two rules govern more of this file than any other:
+
+     · Three theme states, not two — explicit light, explicit dark, and
+       UNSTAMPED, which is what most visitors get. No colour is ever declared
+       only inside a media query or a [data-theme] block.
+     · An ink band is dark in BOTH themes and the tokens are not. On an ink
+       band, brass is --brass-inv, data is --data-inv, and a source line is
+       --on-invert-2 — never --ink-3, which reads 4.00:1 there.
+       scripts/check-contrast.py is the enforcement; this comment is not.
+   ========================================================================== */
+
+@import url("fonts.css");
+
+/* ==========================================================================
+   §3 · Color — tokens verbatim from DESIGN.md. A new colour is a DESIGN.md
+   change first, agreed with the user (hard rule 5). No literal hex below this
+   block, anywhere, for any reason.
+   ========================================================================== */
+
+:root{
+  /* surfaces */
+  --paper:#F1F4F5;   --surface:#FFFFFF;   --sunk:#E5EBED;   --invert:#1F272E;
+  /* text */
+  --ink:#1F272E;     --ink-2:#4A555E;     --ink-3:#79858D;
+  /* structure */
+  --rule:#CFD9DD;    --rule-2:#AEBCC2;
+  /* accent + semantic */
+  --brass:#7A5C1E;   --brass-2:#96742C;
+  /* data */
+  --data:#1D5F6E;    --data-2:#9DB6BC;
+  /* on inverted ground */
+  --on-invert:#EDF1F2; --on-invert-2:#A9B8BF; --rule-invert:#33404A;
+  --brass-inv:#C9A250; /* brass ON an ink band — identical in BOTH themes */
+  --data-inv:#4E9DB0;  /* data  ON an ink band — identical in BOTH themes */
+  /* lattice ground opacity */
+  --lat-op:.042;     --lat-op-inv:.065;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#13181C;   --surface:#1C2227;   --sunk:#262E34;   --invert:#0C1013;
+    --ink:#E6EBEE;     --ink-2:#B2BEC6;     --ink-3:#808E97;
+    --rule:#2A343B;    --rule-2:#414F58;
+    --brass:#C9A250;   --brass-2:#DBB768;
+    --data:#4E9DB0;    --data-2:#4A6871;
+    --on-invert:#E6EBEE; --on-invert-2:#94A3AB; --rule-invert:#232C33;
+    --brass-inv:#C9A250; --data-inv:#4E9DB0;
+    --lat-op:.055;     --lat-op-inv:.065;
+  }
+}
+
+/* Identical to the media block above. DESIGN.md §3: repeat it, do not @import
+   or alias. The explicit stamp must win over the system preference in both
+   directions, which an alias cannot do. */
+:root[data-theme="dark"]{
+  --paper:#13181C;   --surface:#1C2227;   --sunk:#262E34;   --invert:#0C1013;
+  --ink:#E6EBEE;     --ink-2:#B2BEC6;     --ink-3:#808E97;
+  --rule:#2A343B;    --rule-2:#414F58;
+  --brass:#C9A250;   --brass-2:#DBB768;
+  --data:#4E9DB0;    --data-2:#4A6871;
+  --on-invert:#E6EBEE; --on-invert-2:#94A3AB; --rule-invert:#232C33;
+  --brass-inv:#C9A250; --data-inv:#4E9DB0;
+  --lat-op:.055;     --lat-op-inv:.065;
+}
+
+/* ==========================================================================
+   §4 · Typography — four faces, each with exactly one job.
+   Stacks are declared once here and referenced everywhere; DESIGN.md §4 names
+   a real fallback for each, and a bare generic is not one of them.
+   ========================================================================== */
+
+:root{
+  --display:"Zilla Slab", Georgia, serif;
+  --ui:"Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+  --prose:"Source Serif 4", Georgia, serif;
+
+  --wrap:1180px;      /* §5 container */
+  --gut:32px;         /* §5 container padding */
+  --pad:84px;         /* §5 standard section rhythm */
+  --pad-tight:56px;   /* §5 compressed band */
+  --r:2px;            /* §5 radius, everywhere, or 0. Never more. */
+}
+
+/* ==========================================================================
+   Reset — the minimum. normalize.min.css belongs to the SPA and is not linked.
+   ========================================================================== */
+
+*,*::before,*::after{ box-sizing:border-box }
+
+html{ -webkit-text-size-adjust:100% }
+
+body{
+  margin:0;
+  /* Explicit, from a token. A transparent body borrows the host's ground and
+     renders one theme's text on the other theme's surface. */
+  background:var(--paper);
+  color:var(--ink);
+  font:400 16.5px/1.6 var(--ui);
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+/* §5: the body never scrolls sideways — but overflow-x:hidden is the wrong way to
+   get there. It makes body a scroll container, which kills position:sticky on the
+   nav, and it HIDES an overflow instead of fixing it. Wide content carries its own
+   overflow-x:auto (.scroll-x, .math, .scroll containers); if the body ever scrolls
+   sideways, that is a bug to find, not to mask. */
+
+img,svg{ max-width:100% }
+svg{ height:auto }
+
+h1,h2,h3,h4,p,ul,ol,figure,blockquote,dl,dd{ margin:0 }
+ul,ol{ padding:0; list-style:none }
+
+a{ color:var(--brass); text-decoration-thickness:1px; text-underline-offset:3px }
+a:hover{ color:var(--brass-2) }
+
+/* §10 · Visible focus on everything interactive: 2px brass, 3px offset. */
+:where(a,button,summary,input,[tabindex]):focus-visible{
+  outline:2px solid var(--brass);
+  outline-offset:3px;
+  border-radius:var(--r);
+}
+
+/* §4 · Every numeral is tabular, without exception. */
+.n,.num,.mono,.eyebrow,.stat,table,code,time{ font-variant-numeric:tabular-nums }
+
+/* ==========================================================================
+   §4 · Scale
+   ========================================================================== */
+
+h1,h2,h3{ text-wrap:balance }
+
+h1{
+  font:300 clamp(42px,6vw,70px)/1.02 var(--display);
+  letter-spacing:-.018em;
+  color:var(--ink);
+}
+h2{
+  font:300 clamp(28px,3.6vw,42px)/1.10 var(--display);
+  letter-spacing:-.012em;
+  color:var(--ink);
+}
+h3{ font:400 20px/1.30 var(--display); color:var(--ink) }
+
+.sub{ font-size:18px; line-height:1.55; max-width:50ch; color:var(--ink-2) }
+small,.caption{ font-size:13px }
+
+.eyebrow{
+  font:500 11px/1 var(--mono);
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  display:block;
+}
+
+/* Running text caps at ~65ch; abstracts at ~62ch (§4). */
+.prose{ max-width:65ch; color:var(--ink-2) }
+.prose + .prose{ margin-top:1em }
+.prose strong{ color:var(--ink); font-weight:600 }
+
+.serif{ font-family:var(--prose) }
+
+/* The source line. Mandatory beside every figure, in the same visual unit, at
+   the same weight as the label — DESIGN.md §2, the provenance rule. */
+.src{
+  font:400 13px/1.5 var(--prose);
+  font-style:italic;
+  color:var(--ink-3);
+  max-width:66ch;
+}
+
+/* ==========================================================================
+   §5 · Layout — everything is left-aligned. No centred headline, no centred
+   hero, no centred CTA.
+   ========================================================================== */
+
+.wrap{ max-width:var(--wrap); margin:0 auto; padding:0 var(--gut) }
+
+/* Sections separate with a hairline. The grid is visible: structure is part of
+   the argument. */
+.sec{ padding:var(--pad) 0; border-top:1px solid var(--rule) }
+.sec:first-of-type{ border-top:0 }
+.sec.tight{ padding:var(--pad-tight) 0 }
+
+/* Sibling groups lay out with gap, never with per-element margins that collapse. */
+/* align-items stays at its default `stretch`. flex-start shrink-wraps every
+   child, which collapses any grid or table descendant to its minimum content
+   width — the recipe list rendered one word per line. Children that must not be
+   full-bleed carry their own max-width (.prose 65ch, .sub 50ch, blockquote 62ch),
+   which is where the measure belongs. */
+.stack{ display:flex; flex-direction:column; gap:24px }
+.stack.close{ gap:14px }
+.stack.loose{ gap:38px }
+
+.scroll-x{ overflow-x:auto }
+
+/* ==========================================================================
+   §6 M1 · Cell lattice — load-bearing. Cell 8px, pitch 18px; the ratio does not
+   change at any scale. Opacity comes from --lat-op / --lat-op-inv only.
+   Parent needs position:relative; overflow:hidden. Content above needs
+   position:relative.
+   ========================================================================== */
+
+.lat{
+  position:absolute; inset:0; width:100%; height:100%;
+  color:var(--ink); opacity:var(--lat-op);
+  pointer-events:none;
+}
+.lat.inv{ color:var(--on-invert); opacity:var(--lat-op-inv) }
+
+.has-lat{ position:relative; overflow:hidden }
+.has-lat > .wrap,
+.has-lat > .inner{ position:relative }
+
+/* ==========================================================================
+   §8 · Ink band — the site's one contrast device. No more than two per page,
+   never adjacent. On this page: the math (§2.2) and the footer.
+   ========================================================================== */
+
+.band{ background:var(--invert); border-top:0 }
+.band, .band h1, .band h2, .band h3{ color:var(--on-invert) }
+.band .prose,
+.band p{ color:var(--on-invert-2) }
+.band .prose strong{ color:var(--on-invert) }
+.band .eyebrow{ color:var(--on-invert-2) }
+.band a{ color:var(--brass-inv) }          /* never --brass — 2.43:1 in light mode */
+.band a:hover{ color:var(--brass-inv) }
+.band .src{ color:var(--on-invert-2) }     /* never --ink-3 — 4.00:1 on an ink band */
+.band hr,
+.band .rule-line{ border-color:var(--rule-invert) }
+.band :where(a,button,summary,[tabindex]):focus-visible{ outline-color:var(--brass-inv) }
+
+/* ==========================================================================
+   §8 · Buttons — 11px/19px padding, 2px radius, 14.5px 600. Transitions on
+   colour only, 150ms.
+   ========================================================================== */
+
+.btn{
+  display:inline-block;
+  padding:11px 19px;
+  border-radius:var(--r);
+  font:600 14.5px/1.25 var(--ui);
+  text-decoration:none;
+  border:1px solid transparent;
+  transition:background-color 150ms, color 150ms, border-color 150ms;
+  cursor:pointer;
+}
+
+.btn.pri{ background:var(--ink); color:var(--paper); border-color:var(--ink) }
+.btn.pri:hover{ background:var(--ink-2); border-color:var(--ink-2); color:var(--paper) }
+
+.btn.sec{ background:none; color:var(--ink); border-color:var(--rule-2) }
+.btn.sec:hover{ color:var(--ink); border-color:var(--ink) }
+
+.btn.brass{
+  padding:0; border:0; background:none;
+  color:var(--brass); font-weight:600;
+}
+.btn.brass:hover{ color:var(--brass-2) }
+.btn.brass::after{ content:" \2192" }
+
+/* Primary inside an ink band flips ground and text. */
+.band .btn.oninv,
+.btn.oninv{ background:var(--on-invert); color:var(--invert); border-color:var(--on-invert) }
+.btn.oninv:hover{ background:var(--on-invert-2); border-color:var(--on-invert-2); color:var(--invert) }
+
+@media (pointer: coarse){
+  .btn{ padding-block:12px }          /* 44px, §10 */
+  .brand{ padding-block:11px }
+  .foot ul a{ display:inline-block; padding-block:10px }
+}
+
+.btns{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 18px }
+.btns .dot{ color:var(--ink-3) }
+.band .btns .dot{ color:var(--on-invert-2) }
+
+/* ==========================================================================
+   §8 · Nav — sticky, 66px, translucent paper, 1px bottom rule.
+   ========================================================================== */
+
+.nav{
+  position:sticky; top:0; z-index:20;
+  height:66px;
+  background:color-mix(in srgb, var(--paper) 86%, transparent);
+  border-bottom:1px solid var(--rule);
+}
+@supports (backdrop-filter: blur(1px)){
+  .nav{ backdrop-filter:saturate(180%) blur(12px) }
+}
+
+.nav .wrap{
+  height:100%;
+  display:flex; align-items:center; gap:28px;
+}
+
+.brand{
+  display:flex; align-items:center; gap:10px;
+  text-decoration:none; color:var(--ink);
+  font:300 19px/1 var(--display);
+  letter-spacing:-.01em;
+  margin-right:auto;
+}
+.brand svg{ display:block; width:22px; height:22px; color:var(--ink) }
+
+/* The nav's link list and its active-link underline are gone with the links
+   themselves (2026-08-26). §8 describes them; they apply the day this site has a
+   second surface to navigate to. The nav is now the mark and the one CTA. */
+
+/* ==========================================================================
+   §8 · Stat row — four cells, 1px gaps over a --rule ground, top and bottom
+   rules. Source line mandatory in every cell.
+   ========================================================================== */
+
+.stats{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--rule);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.stats .cell{
+  background:var(--paper);
+  padding:22px 20px 20px;
+  display:flex; flex-direction:column;
+}
+.stats .n{
+  font:400 clamp(32px,3.6vw,42px)/1 var(--mono);
+  letter-spacing:-.025em;
+  color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.stats .n .unit{ font-size:.46em; color:var(--ink-2); margin-left:.35em }
+.stats .label{
+  margin-top:12px;
+  font:500 10px/1.5 var(--mono);
+  letter-spacing:.13em; text-transform:uppercase;
+  color:var(--ink-2);
+}
+.stats .src{ margin-top:8px; font-size:12.5px }
+
+/* ==========================================================================
+   §8 · Coverage section — the generator's own class names. DESIGN.md §8 lists
+   the required CSS in the generated files' comment headers; it is reproduced
+   here so the served page has one stylesheet and the generator stays the only
+   thing that writes the markup.
+   ========================================================================== */
+
+.cov{ margin:0 }
+.coverage{ display:block; width:100%; height:auto }
+.cv-ghost { fill:none; stroke:var(--rule); stroke-width:.7 }
+.cv-on    { fill:var(--data); stroke:var(--paper); stroke-width:.6 }
+/* .cv-pending is gone with the four uncounted countries — the generator no longer
+   draws them and the legend no longer names the state (2026-08-26). */
+
+.mlegend{ display:flex; flex-wrap:wrap; gap:18px; margin-top:18px; align-items:center }
+.ml{
+  display:flex; align-items:center; gap:8px; color:var(--ink-3);
+  font:400 11.5px/1 var(--mono); font-variant-numeric:tabular-nums;
+}
+.ml i{ width:20px; height:10px; background:var(--data); display:block; border-radius:var(--r) }
+
+/* The strip carries its own type now (region names), so it scales uniformly rather
+   than with preserveAspectRatio="none", and its height comes from the viewBox. */
+.cs-bar   { display:block; width:100%; height:auto }
+.cs-ground{ fill:var(--rule) }
+.cs-seg   { fill:var(--data) }
+.cs-tick  { stroke:var(--rule-2); stroke-width:1; shape-rendering:crispEdges }
+.cs-lab   { font:500 10px "IBM Plex Mono", ui-monospace, monospace;
+            letter-spacing:.13em; fill:var(--ink-2) }
+
+.cs-cells{
+  display:grid; grid-template-columns:repeat(6,1fr); gap:1px;
+  background:var(--rule);
+  border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+  margin-top:1px;
+}
+.cs-cell{ background:var(--paper); padding:18px 16px 16px; display:flex; flex-direction:column; gap:0 }
+.cs-n{
+  font:400 clamp(22px,2.2vw,28px)/1 var(--mono);
+  letter-spacing:-.025em; color:var(--ink); font-variant-numeric:tabular-nums;
+}
+.cs-r{
+  margin-top:11px; font:500 10px/1.5 var(--mono);
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-2);
+}
+.cs-m{ margin-top:7px; font:400 12.5px/1.5 var(--prose); font-style:italic; color:var(--ink-3) }
+.cs-p{ margin-top:5px; font:400 11px/1.5 var(--mono); color:var(--brass); font-variant-numeric:tabular-nums }
+
+.note{
+  border-left:2px solid var(--brass);
+  padding:4px 0 4px 18px;
+  display:flex; flex-direction:column; gap:9px; max-width:66ch;
+}
+.note .hd{
+  font:500 10.5px/1 var(--mono); letter-spacing:.14em;
+  text-transform:uppercase; color:var(--brass);
+}
+.note p{ font:400 15px/1.6 var(--ui); color:var(--ink-2); margin:0 }
+
+/* ==========================================================================
+   Figure slots — assets/figures/*.svg carry their own scoped <style>, their own
+   <title>/<desc> and their own source lines. The page gives them width and a
+   scroll container and states nothing they already state.
+   ========================================================================== */
+
+/* One figure per row, each the full measure. They still sit in ONE beat — the pairing
+   COPY.md §1.4 insists on is that a reader meets them together, not that they share a
+   line. Side by side they were 557px of a 1160-unit drawing, which is where "beautiful
+   but too small" came from; the generators now draw at 1160 so the type inside is at
+   its designed size rather than scaled. */
+.figs{ display:grid; grid-template-columns:1fr; gap:1px; background:var(--rule) }
+.figs .fig{ background:var(--paper); padding:26px 0 22px; min-width:0; overflow-x:auto }
+/* Below about 640px of drawing width the source line falls under 10px — the provenance
+   rule technically present and practically unreadable. §5's answer for wide content:
+   keep a legible minimum and scroll inside your own container. The body never scrolls
+   sideways. */
+.fig > svg{ display:block; width:100%; height:auto; min-width:640px }
+
+
+/* ==========================================================================
+   §8 · Client wall
+   --------------------------------------------------------------------------
+   Three columns, not the four §8 recorded. The count is now exactly six
+   (COPY.md §1.5, 2026-08-25); four columns leaves two dead cells in the second
+   row, and a wall whose last row is half empty reads as a wall that lost two
+   logos. Three columns × two rows is a full rectangle at every mix of mark and
+   type. Recorded as a §8 correction in the same change.
+
+   Marks are monochrome currentColor SVG at uniform OPTICAL height — not uniform
+   bounding-box height. No colour, no shadow, no mark larger than another.
+   A mark that is not cleared or not supplied renders as the institution's name
+   in Zilla Slab 400 17px in the same cell.
+   ========================================================================== */
+
+.wall{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+  background:var(--rule);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.wall .cell{
+  background:var(--paper);
+  min-height:108px;
+  padding:22px 24px;
+  display:flex; align-items:center;
+}
+.wall .mark{ color:var(--ink); display:block; max-height:34px; width:auto }
+.wall .name{
+  font:400 17px/1.35 var(--display);
+  color:var(--ink);
+  text-wrap:balance;
+}
+
+/* ==========================================================================
+   §8 · Math notation — MathML, not an image. It inherits currentColor, so it
+   holds in all three theme states and on an ink band, and it stays selectable.
+   No new typeface: math is set in the existing serif and mono (§8).
+   ========================================================================== */
+
+.math{
+  display:block;
+  overflow-x:auto;
+  padding:20px 0;
+  font-family:var(--prose);
+  font-size:clamp(16px,1.9vw,21px);
+}
+/* MathML display blocks center themselves by default. DESIGN.md §5: everything on
+   this site is left-aligned — no centred headline, no centred hero, and no centred
+   equation. text-align covers Chrome/Safari; margin-inline covers the engines that
+   center by auto margins instead. */
+.math math{ font-family:var(--prose) }
+/* Chromium lays block math out as a full-width box and centres its contents
+   inside it — text-align and auto margins do not reach that. Shrinking the box
+   to its content leaves nothing to centre, so the equation sits flush left.
+   No max-width: an equation wider than the column overflows into .math's own
+   overflow-x:auto rather than shrinking, which is §5's rule for wide content. */
+.math math[display="block"]{ width:max-content; margin-inline:0; text-align:left }
+/* Identifiers set in the serif; digits and operators keep tabular mono figures. */
+.math mn{ font-family:var(--mono); font-variant-numeric:tabular-nums }
+.band .math{ color:var(--on-invert) }
+
+/* The step list on an ink band. --ink-3 measures 4.00:1 there and --ink vanishes
+   outright, so every role swaps to its inverted token. Verified by
+   scripts/check-contrast.py: --on-invert-2 on --invert is 7.42:1 light / 7.36:1 dark. */
+.band .steps li{ border-color:var(--rule-invert); color:var(--on-invert-2) }
+.band .steps .n{ color:var(--on-invert-2) }
+.band .steps .nm{ color:var(--on-invert) }
+.band .steps strong{ color:var(--on-invert) }
+
+/* The paper's own title is the only heading inside the optimization section — the
+   subsection wrapper and its hairline are gone (2026-08-26). The math IS the method
+   and the paper IS the method published, so there was nothing for a seam to divide.
+   §4: h3 is Zilla Slab 400 / 20px. */
+.ptitle{ font:400 20px/1.3 var(--display); color:var(--ink); scroll-margin-top:86px }
+
+/* ==========================================================================
+   §8 · The step list, and the recap that points back into it
+   --------------------------------------------------------------------------
+   Added 2026-08-26. The six steps stay in one list and each carries a HANDLE —
+   a short mono name beside its number — so the sections that follow can refer
+   to them without repeating them. The recap is the pointer: number and handle
+   only, no description, directly under the section heading.
+
+   Three columns at full measure: number, handle, text. Below 640px the handle
+   moves above the text in the second column, because a 128px name column and a
+   readable measure do not both fit on a phone.
+   ========================================================================== */
+
+.steps{ display:flex; flex-direction:column; max-width:78ch }
+.steps li{
+  display:grid; grid-template-columns:38px 132px 1fr; gap:0 18px;
+  padding:16px 0; align-items:baseline;
+  border-top:1px solid var(--rule);
+  color:var(--ink-2);
+}
+.steps li:last-child{ border-bottom:1px solid var(--rule) }
+.steps .n{
+  font:500 11px/1.7 var(--mono); letter-spacing:.1em;
+  color:var(--ink-3); font-variant-numeric:tabular-nums;
+}
+.steps .nm{
+  font:500 11px/1.7 var(--mono); letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink);
+}
+.steps .t{ min-width:0 }
+.steps strong{ color:var(--ink); font-weight:600 }
+
+/* The recap. Same two tokens as the list it points at, so the reference is
+   recognisable as a reference rather than as a new list. */
+.recap{ display:flex; flex-direction:column; max-width:320px }
+.recap li{
+  display:grid; grid-template-columns:38px 1fr; gap:0 18px;
+  padding:9px 0; border-top:1px solid var(--rule);
+}
+.recap li:last-child{ border-bottom:1px solid var(--rule) }
+.recap .n{
+  font:500 11px/1.6 var(--mono); letter-spacing:.1em;
+  color:var(--ink-3); font-variant-numeric:tabular-nums;
+}
+.recap .nm{
+  font:500 11px/1.6 var(--mono); letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink);
+}
+/* On an ink band, --ink-3 reads 4.00:1 and --ink disappears entirely. */
+.band .recap li{ border-color:var(--rule-invert) }
+.band .recap .n{ color:var(--on-invert-2) }
+.band .recap .nm{ color:var(--on-invert) }
+
+/* The platform block: words left, thread right. The only two-column block on the
+   page, and it is prose beside an ILLUSTRATION rather than job beside answer —
+   the arrangement rejected for the step list, whose mapping had to survive a
+   phone. This one does not: stacked, the thread simply follows the words. */
+.platform{ display:grid; grid-template-columns:1fr minmax(340px,500px); gap:0 56px; align-items:start }
+
+/* M5 · the thread. Its own scroll container: the drawing is 460 units wide and
+   its type is sized for that, so it keeps a legible minimum and scrolls rather
+   than shrinking under it. */
+.threadwrap{ overflow-x:auto; width:100% }
+.thread{ display:block; width:100%; min-width:400px; height:auto }
+
+/* The platform's feature list. A <dl>: each cell is a term and its definition,
+   which is what these are. Two columns, 1px gaps over --rule, exactly the stat
+   row's construction at a smaller scale. */
+.feat{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+  background:var(--rule);
+  border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+}
+.feat > div{ background:var(--paper); padding:16px 20px 18px }
+.feat dt{
+  font:500 10px/1.5 var(--mono); letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink-2); margin-bottom:6px;
+}
+.feat dd{ margin:0; font-size:14.5px; line-height:1.55; color:var(--ink-2) }
+
+/* The audit trail's definition list is gone with the section (2026-08-26).
+   "There is no black box" was six terms and their definitions; it is now
+   "The code is open source", two paragraphs and a link. If a term/definition
+   component is ever needed again, DESIGN.md §8 has no entry for one — it was
+   built for that section and went with it. */
+
+/* §8 · Attributed quotation — the paper's abstract, verbatim. */
+blockquote.quote{
+  border-left:2px solid var(--rule-2);
+  padding:2px 0 2px 24px;
+  max-width:62ch;
+}
+blockquote.quote p{
+  font:400 16px/1.62 var(--prose);
+  color:var(--ink-2);
+}
+blockquote.quote .src{ margin-top:14px }
+
+.byline{ font:400 15px/1.6 var(--ui); color:var(--ink-2) }
+.byline b{ font-weight:600; color:var(--ink) }
+
+/* ==========================================================================
+   Footer — ink band 2 of 2.
+   ========================================================================== */
+
+.foot{ background:var(--invert); color:var(--on-invert-2); padding:var(--pad-tight) 0 }
+.foot .wrap{ display:flex; flex-wrap:wrap; gap:28px 48px; align-items:flex-start }
+.foot .brand{ color:var(--on-invert); margin-right:auto }
+.foot .brand svg{ color:var(--on-invert) }
+.foot a{ color:var(--brass-inv); text-decoration:none }
+.foot a:hover{ text-decoration:underline }
+.foot ul{ display:flex; flex-wrap:wrap; gap:20px; font:400 14.5px/1 var(--ui) }
+.foot .fine{ font:400 13px/1.6 var(--ui); color:var(--on-invert-2); width:100% }
+.foot :where(a,button):focus-visible{ outline-color:var(--brass-inv) }
+
+/* Legal copy — the privacy policy. §4: long-form prose in Source Serif. */
+.legal{ max-width:72ch }
+.legal h2{
+  font:300 clamp(24px,2.6vw,30px)/1.15 var(--display);
+  margin:44px 0 14px;
+  letter-spacing:-.01em;
+}
+.legal h3{ margin:28px 0 10px }
+.legal p{ font:400 16px/1.65 var(--prose); color:var(--ink-2); margin:0 0 14px }
+.legal ul{ margin:0 0 16px; padding:0; display:flex; flex-direction:column; gap:9px }
+.legal li{
+  font:400 16px/1.6 var(--prose); color:var(--ink-2);
+  padding-left:20px; position:relative;
+}
+.legal li::before{
+  content:""; position:absolute; left:2px; top:.62em;
+  width:6px; height:6px; background:var(--rule-2);
+}
+.legal strong{ color:var(--ink); font-weight:600 }
+.legal code{ font:400 14.5px/1 var(--mono); color:var(--ink) }
+
+/* ==========================================================================
+   §9 · Motion — three things move on this site and nothing else.
+   Every one is disabled under prefers-reduced-motion: reduce.
+   ========================================================================== */
+
+/* 2 · Scroll progress — a 2px brass tick rule pinned to the top (M4 doing real
+   work). Driven by scroll-timeline where supported; it degrades to nothing,
+   which is the correct fallback for a decoration. */
+.progress{
+  position:fixed; inset:0 auto auto 0; z-index:30;
+  height:2px; width:100%;
+  background:var(--brass);
+  transform-origin:0 50%;
+  transform:scaleX(0);
+  pointer-events:none;
+}
+@supports (animation-timeline: scroll()){
+  .progress{
+    animation:progress linear;
+    animation-timeline:scroll(root block);
+  }
+}
+@keyframes progress{ from{ transform:scaleX(0) } to{ transform:scaleX(1) } }
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+  .progress{ display:none }
+}
+
+/* ==========================================================================
+   §5 · Breakpoints — 960 (hero stacks), 900 (two-col → one),
+   860 (nav collapses, three-col → one), 760 (stat row → 2×2).
+   ========================================================================== */
+
+@media (max-width:1000px){ .cs-cells{ grid-template-columns:repeat(3,1fr) } }
+
+@media (max-width:900px){
+  .figs{ grid-template-columns:1fr }
+  .platform{ grid-template-columns:1fr; gap:34px 0 }
+}
+
+@media (max-width:860px){
+  :root{ --pad:60px; --pad-tight:44px; --gut:22px }
+  .wall{ grid-template-columns:repeat(2,1fr) }
+}
+
+@media (max-width:760px){
+  .stats{ grid-template-columns:repeat(2,1fr) }
+  h1{ font-size:clamp(34px,9vw,44px) }
+}
+
+@media (max-width:640px){
+  .feat{ grid-template-columns:1fr }
+  .cs-cells{ grid-template-columns:repeat(2,1fr) }
+  .wall{ grid-template-columns:1fr }
+  /* The handle moves above the text. A 132px name column and a readable measure
+     do not both fit on a phone, and the handle is what the recap points at, so
+     it keeps its own line rather than being squeezed. */
+  .steps li{ grid-template-columns:30px 1fr; gap:0 12px }
+  .steps .nm{ grid-column:2; margin-bottom:5px }
+  .steps .t{ grid-column:2 }
+}

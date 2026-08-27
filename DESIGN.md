@@ -69,10 +69,10 @@ have the citation?* If not, cut it.
 
 ### The provenance rule — non-negotiable
 
-**No number appears without its source attached, in the same visual unit.**
-Not a footnote, not a link at the bottom — the source line sits directly under the
-figure in the same card, at the same weight as the label. This is the single most
-important rule in this document. Our whole proposition is that we do not overclaim;
+**A number that rests on somebody else's document carries that citation in the same
+visual unit.** Not a footnote, not a link at the bottom — the citation sits directly
+under the figure in the same card, at the same weight as the label. This is the single
+most important rule in this document. Our whole proposition is that we do not overclaim;
 the design must demonstrate it before the copy claims it.
 
 ```
@@ -80,6 +80,44 @@ the design must demonstrate it before the copy claims it.
 STUDIES RUN                 MEAN ABS. DEVIATION
 Donati & Rao                vs. GSS, CPS, Pew
 ```
+
+**A figure from our own operating record carries nothing.** *Amended 2026-08-26, and it
+is the sharpest the rule has been.* Nandan: *"We are the ones claiming the data. Nobody
+cares where it comes from. They're assuming we have access to our own data."*
+
+He is right, and the rule is **stronger** for it rather than weaker. "Virtual Lab
+production database, August 2026" under a Virtual Lab figure is not a citation. It cites
+nothing a reader could go and check; it restates who is speaking, which the page already
+said at the top. Four stat cells each repeating it read as a form filled in rather than a
+claim defended — and worst of all, **printing it beside "Donati & Rao, 2025" devalues the
+real citation by making provenance look like a house style instead of an argument.**
+
+```
+841,660                     33
+RESPONDENTS                 STUDIES RUN
+                            Donati & Rao, 2025
+```
+
+**Where the line falls, and it is not a judgment call at the page.** It is read from
+`CLAIMS.md`, because whether a claim is somebody else's is a fact about the claim:
+
+| Register table | Fourth column | Needs a citation |
+|---|---|---|
+| Headline figures, the paper, the instrument, the patterns | **Source** — where somebody else published it | **Yes** |
+| Production figures | **Definition** — how *we* computed it from *our* data | **No** |
+
+`scripts/check-claims.py` enforces exactly this and **fails safe**: exemption requires a
+`Definition` column, so anything unmarked, mis-parsed or newly added to a `Source` table
+still demands its citation. Two fixtures assert the two halves —
+`pass-own-record.html` (first-party, no source line, must pass) and
+`fail-provenance.html` (Donati & Rao figures, no source line, must fail). **If both ever
+pass, citation has stopped applying to anything.**
+
+**A definition is not an attribution, and is never removed.** The two box plots keep
+their caption lines, because *"an active day is a study-day recruiting at least 20
+respondents"* and *"box: 25th to 75th percentile"* are what let a reader read the figure
+at all. The test is simple: **does the line tell the reader something about the number,
+or only about us?**
 
 ### Do / don't
 
@@ -513,10 +551,18 @@ band, a "how a study runs" walkthrough, the paper page header.
 ### Nav
 
 Sticky, 66px, translucent paper with `backdrop-filter`, 1px bottom rule. Lattice mark
-(22px, nine cells, five filled) + "Virtual Lab" in Zilla Slab 300. Links in Source Sans
-14.5px `--ink-2`; active link goes `--ink` with a 2px brass underline flush to the
-bottom rule. Primary CTA is a small solid ink button, always rightmost, always
-"Request a proposal."
+(22px, nine cells, five filled) + "Virtual Lab" in Zilla Slab 300. Primary CTA is a small
+solid ink button, always rightmost, always "Request a proposal."
+
+**There are no nav links.** *Settled 2026-08-26.* Nandan: *"It's okay if we don't have any
+top navigation. It's a one page site."* The bar carried two anchors — *The paper* and
+*Audit trail* — which scrolled you down the page you were already on: a table of contents
+wearing a navigation's clothes. **The anchors still exist** (`/#paper`, `/#code`) so a
+procurement reviewer or an academic has a URL to link; they are simply not advertised.
+
+The link treatment is kept here — *Source Sans 14.5px `--ink-2`; active link `--ink` with
+a 2px brass underline flush to the bottom rule* — and applies the day this site has a
+second surface to navigate **to**. It is not in `css/site.css` until then.
 
 ### Buttons
 
@@ -533,9 +579,16 @@ bottom rule. Primary CTA is a small solid ink button, always rightmost, always
 
 Four cells, 1px gaps over a `--rule` background, top and bottom rules. Number in Plex
 Mono at `clamp(32px,3.6vw,42px)`, unit suffix at `.46em` in `--ink-2`. Label in mono
-uppercase `--ink-2`. **Source line in Source Serif italic `--ink-3` — mandatory**
-(on an ink band, `--on-invert-2`; `--ink-3` fails contrast there — see §3). Mark it
-`data-claim-source`, and the number `data-claim="C-00n"` — see "Claim annotation" below.
+uppercase `--ink-2`. Mark the number `data-claim="C-00n"` — see "Claim annotation" below.
+
+**Source line in Source Serif italic `--ink-3` — mandatory for a third-party figure, and
+absent for our own** (§2, amended 2026-08-26). On an ink band it is `--on-invert-2`;
+`--ink-3` fails contrast there — see §3. Mark it `data-claim-source`.
+
+**The totals band on the page carries none**, because all four cells are our own
+operating record. It previously repeated *"Virtual Lab production database, August 2026"*
+four times across one row, which is the failure mode this amendment exists to stop: the
+provenance rule performed rather than applied.
 
 ### Stratum readout
 
@@ -565,7 +618,7 @@ can just be 'used by researchers from' for all logos."*
 
 - **Heading: "Used by researchers from."** One frame for every mark, including commissioned
   clients — it is the weaker claim and it is true of all of them.
-- **Four columns, 1px gaps, paper cells, min-height 108px**, unchanged.
+- **Three columns, 1px gaps, paper cells, min-height 108px.** *Corrected 2026-08-25 during the build.* This read **four columns** from the days when the wall's length was open; the wall is now exactly six institutions (COPY.md §1.5), and six in four columns leaves two dead cells in the second row. A wall whose last row is half empty reads as a wall that lost two logos — which is the one thing a client wall must not suggest. Three columns × two rows is a full rectangle at every mix of mark and type. Two columns at 860px, one at 640px.
 - **Marks are monochrome `currentColor` SVG**, set in `--ink` at the same **optical** height,
   not the same bounding-box height. A wordmark and a shield at identical box heights do not
   read as equals; normalize by eye and record the per-mark scale.
@@ -612,8 +665,30 @@ fills the shapes; do not write them by hand. (The previously published labels we
 **2 · Region strip.** One horizontal bar (M2 without a target tick — there is no target
 for "respondents by region"), regions largest first. Segment **width** carries the value;
 segment **opacity** carries the rank, on a six-step ramp `.95 / .78 / .62 / .48 / .34 /
-.22` over a `--rule` ground showing through as 1px gaps. Height 30px, full width,
-`preserveAspectRatio="none"`. Inline SVG, not flex `<div>`s — hard rule 8.
+.22` over a `--rule` ground showing through as 1px gaps. Bar height 30px, full width.
+Inline SVG, not flex `<div>`s — hard rule 8.
+
+**It carries a label band, added 2026-08-26.** Nandan: *"The bars per continent are missing
+the continents."* They were: the region names lived only in the `aria-label` and in each
+segment's `<title>`, so they reached a screen reader and a hover and nobody else. **The
+strip was drawn as the top half of a pair** whose bottom half — the six region cells — named
+the regions, and those are held on the bucket question. A bar with no labels is not half a
+component; it is an unreadable one.
+
+- **Names only, never values.** The bucketing is editorial and has no `CLAIMS.md` row, so
+  the six figures stay off the page. A name is not a figure, and the widths are drawn from
+  a `VERIFIED` table.
+- **Mono 10px uppercase, `--ink-2`, letter-spacing `.13em`** (§4: uppercase always tracks).
+- **Labels are placed greedily onto three candidate baselines**, each taking the first that
+  clears the last label already on it. Alternating by index was the first attempt and it ran
+  *"SOUTH & SOUTHEAST ASIA"* straight into *"PACIFIC"*. Four of six segments hold their own
+  name; Europe & Central Asia is 4% of the bar and the Pacific is 0.4%.
+- **A leader tick in `--rule-2` joins every label to its own segment**, which is what makes
+  pushing a label away from its segment safe.
+- **`preserveAspectRatio="none"` is gone.** It kept the bar 30px at any width and stretched
+  everything else horizontally, which is why this drawing could never carry a word of type.
+  Uniform scaling costs a pixel of bar height at full measure and buys labels that are not
+  smeared.
 
 **3 · Region totals.** Six cells, 1px gaps over `--rule`, top and bottom rules — the stat
 row at region scale, so these stay HTML rather than SVG. Number in Plex Mono
@@ -633,12 +708,95 @@ Source line mandatory on each of the three, as for any figure — see "Claim ann
 below. All colour is `var(--…)`; there is no literal hex anywhere in the emitted markup,
 so all three inherit the page theme and hold in all three theme states.
 
-**Drift, recorded 2026-08-21: the generator emits no `data-claim` attribute at all.** All
-three artefacts are therefore scanned heuristically, and the legend's five magnitude labels
-report as `unsourced` on every run of `check-claims.py` — three of them, because two are
-caught by the allowlist. **This section is the spec and it is right; the generator has not
-caught up.** The fix belongs in `build-coverage-map.py`, not in its output, which must
-never be hand-edited. See `AGENTS.md`, "Known drift".
+**~~Drift, recorded 2026-08-21: the generator emits no `data-claim` attribute at all.~~
+Fixed 2026-08-25 in `build-coverage-map.py`, where it belonged.** The legend's six labels now
+carry `data-claim="none"` and the map reports `[annotated]` and clean. The spec was right and
+the generator had not caught up; the output was never hand-edited. Two notes worth keeping:
+the fix mattered more once a page annotated its own figures, because an un-annotated numeral
+on an annotated page escalates from `unsourced` to `unannotated`; and the region totals were
+**not** fixed the same way, because their problem is not annotation — it is that the bucketing
+has no row. See `AGENTS.md`, "Known drift".
+
+### Step list, and the recap that points back into it
+
+**Added 2026-08-26.** Part 2 states its job as **one list of six steps**, and the sections
+that follow **point back into it** rather than restating it. Four structures were mocked and
+Nandan chose this one.
+
+**Every step carries a handle** — a short mono name beside its number: *Strata · Allocation ·
+Prices · Uniqueness · Incentives · Follow-up*. Three columns at full measure: number (38px),
+handle (132px), text. Number and handle in **IBM Plex Mono 500 / 11px / `.13em` uppercase**,
+number in `--ink-3`, handle in `--ink`. Hairline between rows, top and bottom.
+
+**The recap** is the pointer: number and handle only, no description, directly under the
+section heading, capped at 320px. **Same two tokens as the list it points at**, so a reader
+reads it as a reference rather than as a second list. On an ink band the numbers go
+`--on-invert-2` and the handles `--on-invert` — `--ink-3` measures 4.00:1 there and `--ink`
+disappears outright.
+
+**The handles must earn their keep.** A handle is decoration unless the copy uses it
+afterwards; if a section would read identically with the names deleted, the list has grown a
+column for nothing. The recap is the minimum use — the prose should use them as ordinary
+words too, which is why the band's closing paragraph reads *"Prices are not known in
+advance"* rather than *"p_h is not known in advance."*
+
+**One handle is doing careful work.** The list says **person**; C-069 only supports per
+**account**, and its scope note forbids writing it as a fraud or duplicate-prevention claim.
+**Uniqueness** is deliberately neutral: it keeps the gap visible instead of quietly closing
+it, and the two lines are allowed to not quite meet.
+
+**Below 640px the handle moves above the text** in the second column. A 132px name column
+and a readable measure do not both fit on a phone, and the handle is what the recap points
+at, so it keeps its own line rather than being squeezed.
+
+**The step numbers are list counters and carry `data-claim="none"`** — see "Claim
+annotation". The predecessor used a CSS counter and so had no text node to scan; these are
+real text and would otherwise report as `unannotated`.
+
+### The thread — M5 as a drawing
+
+**Added 2026-08-26**, `assets/figures/thread.svg`. Nandan asked for something showing what a
+respondent actually sees — *"chat bubbles or something like that with the questions or the
+way the list pops up in WhatsApp or Messenger"* — and §6 M5 already reserved exactly this:
+*used on: channel explanation, longitudinal story, WhatsApp/Messenger section.*
+
+- **Offset rounded rectangles, `rx` = half height.** The one place radius exceeds 2px.
+- **The survey speaks in `--sunk` with `--ink` text; the respondent answers in `--ink` with
+  `--paper` text**, right-aligned. Both invert correctly with their tokens, and an `.inv`
+  variant swaps them for an ink band, where `--sunk` and `--ink` are near invisible.
+- **A dashed `--rule-2` rule labelled `MONTHS LATER`** carries the longitudinal point.
+  **§6 M5 specifies "+4 months" and this deliberately does not use it:** C-041 is a real
+  four-month follow-up and is `PLACEHOLDER`, so a number there could be read as our
+  specification rather than as an illustration. The point does not need the number.
+- **The question and choices are illustrative** — not from a study, not a claim. Every
+  numeral carries `data-claim="none"`: the indices are indices, and the reply is the index
+  the respondent picked.
+- **Never with faces, avatars or illustrated people**, and no literal rendering of the
+  product name. Fly is drawn as M5 or it is not drawn.
+- **Hand-authored, not generated.** It encodes no data, so there is nothing for a generator
+  to read — the precedent is `assets/mark.svg`. **A double hyphen cannot appear inside an
+  XML comment** (§7): its comment names tokens without their leading dashes, and this file
+  hit that trap on its first write.
+
+**It sits beside the prose it illustrates**, in the page's only two-column block. That is
+prose beside an illustration, not job beside answer — the arrangement rejected for the step
+list, whose mapping had to survive a phone. This one does not: stacked below 900px, the
+thread simply follows the words.
+
+### Feature list
+
+**Added 2026-08-26.** A `<dl>` at the foot of the platform section: two columns, 1px gaps
+over `--rule`, top and bottom rules — **the stat row's construction at a smaller scale**.
+Term in mono 10px uppercase `--ink-2`; definition in Source Sans 14.5px `--ink-2`. One
+column below 900px.
+
+**It is a reference block, not the spine.** D-027 killed a feature inventory as the site's
+structure; this is eight sourced capabilities under a section that has already said what the
+platform is for. **Four traps travel with it**, and each has burned a draft before: no image
+collection (C-066, built then pulled), no Instagram (C-058, and the docs site is wrong), no
+*"full multilingual support"* (C-067 — closed-ended answers only), and **nothing may imply a
+form builder** (C-082 — surveys are authored in Typeform; Fly imports and runs them). A
+fifth: the **web form is a study-level destination**, so never write that Fly runs one.
 
 ### Forms
 
@@ -759,7 +917,12 @@ up. Restraint here is what separates instrument-grade from templated.
 - Decorative SVG carries `aria-hidden="true"`; meaningful SVG carries `role="img"` + `<title>`.
 - Semantic headings in order. One `h1` per page.
 - State is never carried by colour alone — see M2's hatch rule.
-- Touch targets ≥ 44px.
+- Touch targets ≥ 44px. **This and §8's button padding disagreed and both are right**
+  — 11px/19px computes to a 42px box. Resolved in the build, not by moving either number:
+  the drawn button is unchanged, and `@media (pointer: coarse)` lifts the block padding to
+  12px, giving 44px exactly where a touch target is a touch target. The nav mark and the
+  footer links take the same treatment. **A pointer query, never a width query:** a narrow
+  window on a laptop is not a finger.
 
 **All graphics are inline SVG built from the primitives.** No raster illustration, no
 icon font, no chart library. Charts are hand-built from bars, ticks and brackets.
@@ -780,7 +943,7 @@ truth for what is settled and what is not. Do not record a decision here.
 **The narrative is settled — D-027 — and the sitemap is derived from it in D-007.** Six
 surfaces plus privacy. Where an entry below or in `DECISIONS.md` names a page from the old
 seven-page structure, read it against D-007's table: *on Home* means **in the opening**, *on
-Platform* means **the audit trail**.
+Platform* means **the code-is-open-source section** (`/#code`, and it was "the audit trail" until 2026-08-26).
 
 Blocking Phase 4: **D-014** (cleared client marks). D-013 settled to a recorded replay at
 launch; D-020 settled the totals band to four cells — respondents · responses · countries ·
@@ -820,6 +983,10 @@ verification status. `DESIGN.md` tells you a figure must carry its provenance;
   emits the map, the region strip and the region totals in one run
 - Icons, mark, favicon: `assets/icons/`, `assets/mark.svg`, `assets/favicon.svg`
 - Fonts: `fonts/` + `css/fonts.css` (D-012). Never link a Google stylesheet from a page
+- **The stylesheet: `css/site.css`** — this document in CSS, in section order. Built
+  2026-08-25 from §3–§9 and **not** from `css/main.css`, which was the SPA's and is
+  now deleted. Every hex literal in it sits inside a token declaration; there is no
+  literal colour, font stack or radius anywhere else in the file or in any page
 - The paper as structured data: `_data/paper.json` — read its `not_for_publication` note
   first; several fields are `WITHHELD` claims and exactly two of them render
 

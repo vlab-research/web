@@ -1,4 +1,31 @@
+# Deployment. DECISIONS.md D-006: Netlify runs the build and publishes _site.
+#
+# The build regenerates the coverage section before Eleventy runs. build/ is
+# generated and untracked (scripts/README.md), and _data/coverage.js reads it —
+# so a deploy that skipped the generator fails loudly rather than shipping a page
+# with a missing map, which is the intended behaviour.
+
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # scripts/ is standard-library Python 3 and needs nothing installed.
+  PYTHON_VERSION = "3.12"
+
+# The fonts are self-hosted per D-012 and are content-stable: the woff2 filenames
+# encode face, weight and subset, so a changed file is a changed name.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
 [context.production.environment]
 
 [context.staging.environment]
-

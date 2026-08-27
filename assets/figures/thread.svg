@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 372" width="100%"
+     class="thread" role="img" aria-labelledby="thrTitle thrDesc">
+  <title id="thrTitle">A questionnaire running as a conversation</title>
+  <desc id="thrDesc">A survey asks a question inside a chat thread. The choices arrive as a
+    numbered list and the respondent replies with a number. A dashed rule marks a pause of
+    months, after which the same thread reopens and asks again.</desc>
+
+  <!--
+    M5, the thread. DESIGN.md sec 6: offset rounded rectangles, rx = half height, and the
+    ONE place on this site where radius exceeds 2px. It is Fly's visual identity, and the
+    bans travel with it: never with faces, avatars or illustrated people, and no literal
+    rendering of the product name.
+
+    NOTE: a double hyphen cannot appear inside an XML comment, so token names below are
+    written without their leading dashes. DESIGN.md sec 7 records this; it has bitten here
+    before.
+
+    All colour is a token, so this holds in all three theme states. On paper the survey
+    speaks in `sunk` and the respondent answers in `ink`; in dark both invert with their
+    tokens and the relationship survives. On an ink band the `.inv` variant swaps them
+    again, because `sunk` and `ink` are near invisible there.
+
+    The question and the choices are ILLUSTRATIVE. They are not a claim, they are not from
+    a real study, and every numeral carries data-claim="none": the list indices are list
+    indices, and the reply is the index the respondent picked.
+
+    The rule reads MONTHS LATER, not sec 6 M5's "+4 months". C-041 is a real four month
+    follow up and it is PLACEHOLDER, so a number here could be read as our specification
+    rather than as an illustration. The longitudinal point does not need the number.
+  -->
+  <style>
+    .thread .inb  { fill:var(--sunk) }
+    .thread .outb { fill:var(--ink) }
+    .thread .int  { font:400 13px/1.4 "Source Sans 3","Helvetica Neue",Arial,sans-serif;
+                    fill:var(--ink) }
+    .thread .outt { font:400 13px/1.4 "Source Sans 3","Helvetica Neue",Arial,sans-serif;
+                    fill:var(--paper) }
+    .thread .idx  { font:500 12px "IBM Plex Mono",ui-monospace,monospace;
+                    fill:var(--ink-3); font-variant-numeric:tabular-nums }
+    .thread .gap  { stroke:var(--rule-2); stroke-width:1; stroke-dasharray:4 4;
+                    shape-rendering:crispEdges }
+    .thread .glab { font:500 10px "IBM Plex Mono",ui-monospace,monospace;
+                    letter-spacing:.14em; fill:var(--ink-3) }
+    /* On an ink band the tokens above would collapse to near-invisible. */
+    .thread.inv .inb  { fill:var(--rule-invert) }
+    .thread.inv .int  { fill:var(--on-invert) }
+    .thread.inv .outb { fill:var(--on-invert) }
+    .thread.inv .outt { fill:var(--invert) }
+    .thread.inv .idx,
+    .thread.inv .glab { fill:var(--on-invert-2) }
+    .thread.inv .gap  { stroke:var(--rule-invert) }
+  </style>
+
+  <rect class="inb" x="0" y="0" width="300" height="34" rx="17"/>
+  <text class="int" x="18" y="21">How often do you use a mobile phone?</text>
+
+  <rect class="inb" x="0" y="42" width="256" height="86" rx="17"/>
+  <text class="idx" x="18" y="66"  data-claim="none">1</text>
+  <text class="int" x="42" y="66">Every day</text>
+  <text class="idx" x="18" y="90"  data-claim="none">2</text>
+  <text class="int" x="42" y="90">A few times a week</text>
+  <text class="idx" x="18" y="114" data-claim="none">3</text>
+  <text class="int" x="42" y="114">Rarely or never</text>
+
+  <rect class="outb" x="392" y="140" width="68" height="34" rx="17"/>
+  <text class="outt" x="421" y="161" data-claim="none">2</text>
+
+  <line class="gap" x1="0" y1="212" x2="166" y2="212"/>
+  <text class="glab" x="178" y="216">MONTHS LATER</text>
+  <line class="gap" x1="306" y1="212" x2="460" y2="212"/>
+
+  <rect class="inb" x="0" y="244" width="318" height="34" rx="17"/>
+  <text class="int" x="18" y="265">Welcome back. A few more questions.</text>
+
+  <rect class="inb" x="0" y="286" width="280" height="34" rx="17"/>
+  <text class="int" x="18" y="307">Has that changed since we last spoke?</text>
+
+  <rect class="outb" x="370" y="328" width="90" height="34" rx="17"/>
+  <text class="outt" x="399" y="349">Yes</text>
+</svg>

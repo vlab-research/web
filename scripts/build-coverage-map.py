@@ -198,7 +198,6 @@ CSS_MAP = """  .cov       { margin:0 }
   .coverage  { display:block; width:100%; height:auto }
   .cv-ghost  { fill:none; stroke:var(--rule); stroke-width:.7 }
   .cv-on     { fill:var(--data); stroke:var(--paper); stroke-width:.6 }
-  .cv-pending{ fill:none; stroke:var(--data); stroke-width:1.2; stroke-dasharray:3 2 }
   .mlegend   { display:flex; flex-wrap:wrap; gap:18px; margin-top:18px; align-items:center }
   .ml        { display:flex; align-items:center; gap:8px; color:var(--ink-3);
                font:400 11.5px "IBM Plex Mono", ui-monospace, monospace;
@@ -208,9 +207,12 @@ CSS_MAP = """  .cov       { margin:0 }
   .src       { font:400 13px/1.5 "Source Serif 4", Georgia, serif; font-style:italic;
                color:var(--ink-3); margin-top:16px; max-width:66ch }"""
 
-CSS_STRIP = """  .cs-bar    { display:block; width:100%; height:30px }
+CSS_STRIP = """  .cs-bar    { display:block; width:100%; height:auto }
   .cs-ground { fill:var(--rule) }
   .cs-seg    { fill:var(--data) }
+  .cs-tick   { stroke:var(--rule-2); stroke-width:1; shape-rendering:crispEdges }
+  .cs-lab    { font:500 10px "IBM Plex Mono", ui-monospace, monospace;
+               letter-spacing:.13em; fill:var(--ink-2) }
   .src       { font:400 13px/1.5 "Source Serif 4", Georgia, serif; font-style:italic;
                color:var(--ink-3); margin-top:16px; max-width:66ch }"""
 
@@ -248,9 +250,24 @@ def header(cov, css):
 
 
 def build_map(cov, feats, by3, by_name):
+    # `ours` is the countries with a COUNT, and nothing else. Until 2026-08-26 it also
+    # held `pending` -- the four countries covered but not yet counted -- which had two
+    # consequences beyond the dashed outline they were drawn with, and both would have
+    # survived deleting the outline alone:
+    #
+    #   1. `covered_ids` is what the ghost pass skips. A pending country that is no
+    #      longer drawn as covered but is still in `covered_ids` gets NO path at all --
+    #      an invisible hole in the world, which reads worse than the outline did.
+    #   2. The viewBox is the bounding box of `ours`, so uncounted countries were
+    #      framing a map they contributed no value to.
+    #
+    # Dropping them here fixes both: they fall through to the ghost hairline and look
+    # like every other country we have not surveyed, which is what they are on this
+    # drawing. The DATA still records them (coverage.json `pending`, and its note that
+    # they must never render as zero) -- not drawing a country is not calling it zero.
     respondents, pending = cov["respondents"], cov["pending"]
     ours, missing = {}, []
-    for cc in list(respondents) + pending:
+    for cc in list(respondents):
         f = feature_for(cc, by3, by_name)
         if f is None:
             missing.append(cc)
@@ -275,12 +292,15 @@ def build_map(cov, feats, by3, by_name):
         if d:
             ghost.append(d)
 
-    n_countries = cov["totals"]["countries"]
+    # The map states no count. It used to read "Map of the N countries", which was
+    # true only while the four uncounted countries were drawn; now that they are not,
+    # a count in the label would disagree with the shapes underneath it. The totals
+    # band states the country figure (C-017) and the map is a picture of coverage --
+    # one number, in one place, is the whole point.
     svg = [
         '<svg class="coverage" xmlns="http://www.w3.org/2000/svg" '
         f'viewBox="{vb[0]:.0f} {vb[1]:.0f} {vb[2]:.0f} {vb[3]:.0f}" role="img" '
-        f'aria-label="Map of the {n_countries} countries where Virtual Lab '
-        'has fielded studies">',
+        'aria-label="Map of the countries where Virtual Lab has fielded studies">',
         "<title>Countries where Virtual Lab has fielded studies</title>",
         f'<path class="cv-ghost" d="{"".join(ghost)}"/>',
     ]
@@ -295,30 +315,62 @@ def build_map(cov, feats, by3, by_name):
             svg.append(
                 f'<path class="cv-on" fill-opacity="{OPACITY[magnitude(n)]}" d="{d}">'
                 f"<title>{name} — {n:,} respondents</title></path>")
-        else:
-            svg.append(f'<path class="cv-pending" d="{d}">'
-                       f"<title>{name} — covered, count pending</title></path>")
+        # Countries in `pending` are NOT DRAWN. Nandan, 2026-08-26: "If that's true,
+        # just leave them off entirely. Those are small details nobody cares about."
+        # They used to render as a dashed outline with its own legend state and a
+        # sentence of explanation -- three pieces of chrome for four countries whose
+        # only property is that we have not finished a query. The data keeps them
+        # (`pending` in coverage.json is still true and still says never render as
+        # zero); the drawing does not. Leaving them off is not the same as calling
+        # them zero, which is what that rule guards against.
     svg.append("</svg>")
 
+    # The five step labels are thresholds by order of magnitude — scale marks on a
+    # legend, not claims about anything. DESIGN.md 8 "Coverage section" says they carry
+    # data-claim="none"; until 2026-08-25 this emitted no data-claim at all, so three of
+    # them reported as `unsourced` on every run of check-claims.py and, once a page
+    # annotated its own figures, as `unannotated`. The spec was right and the generator
+    # had not caught up. Fixed here rather than in the output, which is never hand-edited.
     legend = ['<div class="mlegend">']
     for step in sorted(OPACITY):
         style = f' style="opacity:{OPACITY[step]}"' if OPACITY[step] != "1" else ""
-        legend.append(f'<span class="ml"><i{style}></i>{MAG_LABEL[step]}</span>')
-    legend.append('<span class="ml"><i class="p"></i>covered, count pending</span>')
+        legend.append(f'<span class="ml" data-claim="none">'
+                      f'<i{style}></i>{MAG_LABEL[step]}</span>')
     legend.append("</div>")
 
-    src = (f'Virtual Lab production database, queried read-only, {cov["as_of"]}. '
-           f'{n_countries} countries; {len(pending)} of them '
-           f'({", ".join(pending)}) are covered but not yet counted, and are drawn '
-           "as an outline rather than as a value.")
-    return "\n".join([
+    # No source line. It read "Virtual Lab production database, queried read-only,
+    # <date>" plus a sentence about the four uncounted countries, and both halves are
+    # gone for the same reason -- see check-claims.py, "THE CITATION RULE". A map of
+    # our own coverage attributed to our own database cites nothing a reader can check.
+    # The legend still names every state it draws, which is what a reader actually
+    # needs, and the magnitude labels carry data-claim="none".
+    src = None
+    return "\n".join(x for x in [
         header(cov, CSS_MAP),
         '<figure class="cov cov-map">',
         "".join(svg),
         "\n".join(legend),
-        f'<figcaption class="src">{esc(src)}</figcaption>',
+        f'<figcaption class="src">{esc(src)}</figcaption>' if src else None,
         "</figure>",
-    ]), len(ours), len(missing)
+    ] if x is not None), len(ours), len(missing)
+
+
+# Label band under the bar. Added 2026-08-26 -- Nandan: "The bars per continent are
+# missing the continents." They were: the region names existed only in the aria-label and
+# in each segment's <title>, so they reached a screen reader and a hover and nobody else.
+# The strip was drawn as the top half of a pair whose bottom half -- the six region cells,
+# [P-4] -- carried the names, and [P-4] is held on the bucket question. A bar with no
+# labels is not half a component, it is an unreadable one.
+#
+# Names only, never values. The bucketing is editorial and has no CLAIMS.md row, so the
+# six numbers stay off the page; a name is not a figure and the widths are drawn from a
+# VERIFIED table.
+LAB_SIZE = 10.0      # mono, uppercase
+LAB_TRACK = 0.13     # letter-spacing, em -- sec 4: uppercase always carries >= .11em
+LAB_CPW = LAB_SIZE * 0.6 + LAB_SIZE * LAB_TRACK   # advance per character, ~7.3px
+LAB_ROWS = (20.0, 38.0, 56.0)  # candidate baselines below the bar
+LAB_PAD = 10.0                 # space kept clear at the right edge
+LAB_GAP = 20.0                 # clear space between two labels sharing a baseline
 
 
 def build_strip(cov, rows, attributed):
@@ -326,8 +378,9 @@ def build_strip(cov, rows, attributed):
     inner = STRIP_W - STRIP_GAP * (len(rows) - 1)
     widths = [max(STRIP_MIN, inner * r["total"] / attributed) if attributed else 0.0
               for r in rows]
-    segs, x = [], 0.0
-    for r, w in zip(rows, widths):
+    segs, labels, ticks, x = [], [], [], 0.0
+    row_end = [0.0] * len(LAB_ROWS)   # rightmost x consumed on each baseline
+    for i, (r, w) in enumerate(zip(rows, widths)):
         share = 100.0 * r["total"] / attributed if attributed else 0.0
         floor = " or more" if r["pending"] else ""
         segs.append(
@@ -335,30 +388,67 @@ def build_strip(cov, rows, attributed):
             f'fill-opacity="{r["opacity"]:.2f}">'
             f'<title>{esc(r["name"])} — {r["total"]:,}{floor} respondents, '
             f"{share:.1f}% of those attributed to a country</title></rect>")
+
+        # Four of the six segments are wide enough to hold their own name; Europe &
+        # Central Asia is 4% of the bar and the Pacific is 0.4%, so their labels are far
+        # wider than the thing they name. Labels are therefore placed GREEDILY onto the
+        # first baseline where they clear the last label already on it -- alternating by
+        # index was the first attempt and it ran "SOUTH & SOUTHEAST ASIA" straight into
+        # "PACIFIC", which reads as one region with a strange name.
+        #
+        # A leader tick keeps every label attached to its own segment however far the
+        # text has been pushed, which is what makes pushing safe.
+        name = r["name"].upper()
+        est = len(name) * LAB_CPW
+        lx = max(0.0, min(x, STRIP_W - LAB_PAD - est))
+        row = next((k for k in range(len(LAB_ROWS)) if lx >= row_end[k]), None)
+        if row is None:                       # every baseline occupied at this x
+            row = min(range(len(LAB_ROWS)), key=lambda k: row_end[k])
+            lx = max(lx, row_end[row])
+        row_end[row] = lx + est + LAB_GAP
+        ly = LAB_ROWS[row]
+        ticks.append(f'<line class="cs-tick" x1="{x:.2f}" y1="{STRIP_H:.0f}" '
+                     f'x2="{x:.2f}" y2="{STRIP_H + ly - LAB_SIZE:.1f}"/>')
+        labels.append(f'<text class="cs-lab" x="{lx:.2f}" '
+                      f'y="{STRIP_H + ly:.1f}">{esc(name)}</text>')
         x += w + STRIP_GAP
 
+    used = [LAB_ROWS[k] for k in range(len(LAB_ROWS)) if row_end[k] > 0.0]
+    band = STRIP_H + (max(used) if used else 0.0) + 6.0
     label = "; ".join(f'{r["name"]} {r["total"]:,}' for r in rows)
+    # preserveAspectRatio="none" is GONE. It let the 30px bar stay 30px at any width, and
+    # it also stretched everything else horizontally -- which is why this drawing could
+    # never carry a word of type. Uniform scaling costs a pixel of bar height at full
+    # measure and buys labels that are not smeared.
     svg = ("".join([
         '<svg class="cs-bar" xmlns="http://www.w3.org/2000/svg" '
-        f'viewBox="0 0 {STRIP_W:.0f} {STRIP_H:.0f}" preserveAspectRatio="none" '
+        f'viewBox="0 0 {STRIP_W:.0f} {band:.0f}" '
         f'role="img" aria-label="Respondents by region, largest first: {esc(label)}">',
         "<title>Respondents by region</title>",
         f'<rect class="cs-ground" x="0" y="0" width="{STRIP_W:.0f}" '
         f'height="{STRIP_H:.0f}"/>',
         "".join(segs),
+        "".join(ticks),
+        "".join(labels),
         "</svg>",
     ]))
-    src = (f'Virtual Lab production database, queried read-only, {cov["as_of"]}. '
-           f"The bar spans the {attributed:,} respondents attributable to a country, "
-           f"not the {total:,} total: the remaining {total - attributed:,} belong to "
-           "studies whose strata carry no country tag.")
-    return "\n".join([
+    # No source line at all. It read "The bar spans the N respondents attributable to a
+    # country, not the M total: the remaining K belong to studies whose strata carry no
+    # country tag" -- which is word for word the sentence Nandan cut from the prose
+    # beneath this section on 2026-08-26 ("We dont need this"). Keeping it in the caption
+    # would be reinstating by the back door what was removed from the front.
+    #
+    # What is lost is a reconciliation between two internal denominators. What is gained
+    # is a figure that states its regions and nothing else. The numbers are still in
+    # CLAIMS.md if a reader ever asks.
+    src = None
+    return "\n".join(x for x in [
         header(cov, CSS_STRIP),
         '<figure class="cov cov-strip">',
         svg,
-        f'<figcaption class="src">{esc(src)}</figcaption>',
+        f'<figcaption class="src">{esc(src)}</figcaption>' if src else None,
         "</figure>",
-    ])
+    ] if x is not None)
 
 
 def build_regions(cov, rows, attributed, pending_display):
@@ -377,8 +467,7 @@ def build_regions(cov, rows, attributed, pending_display):
     cells.append("</div>")
 
     floors = [r["name"] for r in rows if r["pending"]]
-    src = (f'Virtual Lab production database, queried read-only, {cov["as_of"]}. '
-           f"Region totals sum to {attributed:,} of {total:,} respondents; the "
+    src = (f"Region totals sum to {attributed:,} of {total:,} respondents; the "
            f"remaining {total - attributed:,} belong to studies whose strata carry no "
            f"country tag, not to any country outside the "
            f'{cov["totals"]["countries"]}.')
@@ -461,7 +550,8 @@ def main():
             print(f"wrote {path}", file=sys.stderr)
 
     if "map" in fragments:
-        print(f"{drawn} countries drawn, {len(cov['pending'])} of them pending",
+        print(f"{drawn} countries drawn; {len(cov['pending'])} pending, not drawn "
+              f"({', '.join(cov['pending'])})",
               file=sys.stderr)
     if "strip" in fragments or "regions" in fragments:
         total = cov["totals"]["respondents"]
