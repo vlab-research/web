@@ -30,6 +30,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets/favicon.ico");
   eleventyConfig.addPassthroughCopy("assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("assets/mark.svg");
+  // The share card. og.png only — assets/og.svg is the generated source and nothing
+  // fetches it, so it stays unpublished on the same principle as the rest of this list.
+  eleventyConfig.addPassthroughCopy("assets/og.png");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_redirects");
 

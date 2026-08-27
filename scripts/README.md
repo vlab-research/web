@@ -17,6 +17,7 @@ Nothing here needs a dependency. Python 3, standard library, run from anywhere.
 | `build-throughput-figure.py` | Emits `assets/figures/throughput-box.svg` — respondents recruited per study per active day | After `scripts/data/throughput.json` changes — and never hand-edit the output |
 | `build-adcost-figure.py` | Emits `assets/figures/ad-cost.svg` — advertising cost per respondent recruited | After `scripts/data/ad-cost.json` changes — and never hand-edit the output |
 | `build-reallocations-figure.py` | Emits `assets/figures/reallocations-box.svg` — budget reallocations per study. **Blocked: exits 1 until `p10` and `p25` exist** | After `scripts/data/reallocations.json` gets its two missing percentiles |
+| `build-og-image.py` | Emits `assets/og.svg` — the 1200×630 social share card, figures and map from `coverage.json` | After `scripts/data/coverage.json` changes. **Re-rasterize `og.png` in the same change** |
 | `build-icons.py` | Emits the twelve §7 icons **and** the sprite from one geometric table | After any icon change — editing an icon file by hand desynchronises the sprite |
 | `build-paper-json.py` | Emits `_data/paper.json` from the manuscript in the paper repo | After the manuscript changes. Reads a repo outside this one |
 | `build-review.py` | Builds the self-contained asset-review page (`DESIGN.md` §13) into `build/` | After any asset changes, if the review page is being republished |
@@ -144,6 +145,40 @@ It exists because the bug shipped once: `--brass` on an ink band measures 2.43:1
 mode and looks perfect in dark. Three pairs in the list are that trap and its relatives —
 `--brass-inv`, `--data-inv`, and the source line on an ink band, which is `--on-invert-2`
 and not `--ink-3` (4.00:1). **An ink band is dark in both themes and the tokens are not.**
+
+## `build-og-image.py` — the social share card
+
+```
+python3 scripts/build-og-image.py            # -> assets/og.svg
+python3 scripts/build-og-image.py --stdout
+```
+
+Direction 08 "Atlas Plate", chosen 2026-08-27. The script's docstring holds the
+composition reasoning — why the country count is absent, why the ramp is flat, why
+paper rather than ink, and why `top = 262` is derived rather than chosen. **Read it
+before changing the layout**; three of those four are load-bearing.
+
+It **imports `build-coverage-map.py` by path** and uses its projection, its ISO
+lookups and its coverage loader, so the card's map and the page's map cannot disagree.
+Figures come from `coverage.json` `totals` and are never typed.
+
+**Rasterizing is a separate, local step and is deliberately not in the deploy.**
+`netlify.toml` promises `scripts/` is standard-library Python needing nothing
+installed; a rasterizer would break that. `assets/og.png` is **committed**, exactly as
+`assets/apple-touch-icon.png` is. The brand faces are not installed system-wide, so a
+naive `rsvg-convert` renders fallback type — the woff2 kit has to be converted and
+pointed at first:
+
+```
+pip install fonttools brotli          # in a throwaway venv; not a repo dependency
+# convert fonts/*.woff2 -> .ttf, setting name IDs 1/2/4/6 and OS/2.usWeightClass
+# to match what og.svg asks for: Zilla Slab 300, IBM Plex Mono 400 and 500
+FONTCONFIG_FILE=<conf pointing at those ttfs> \
+  rsvg-convert -w 1200 -h 630 assets/og.svg -o assets/og.png
+```
+
+**Look at the output at 360px as well as 1200px.** A share card is rendered about a
+third of size in a feed, and the direction this one beat died exactly there.
 
 ## `build-coverage-map.py` — the coverage section
 

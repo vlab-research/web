@@ -38,6 +38,21 @@
 <meta property="og:description" content="{{ description or site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
+{#- The share card. Direction 08 "Atlas Plate", chosen 2026-08-27 from eight mocked
+    options; scripts/build-og-image.py generates the SVG and carries the reasoning.
+
+    The URL must be ABSOLUTE — several platforms silently drop a relative og:image,
+    which is how a card goes missing without anything looking broken. Width and height
+    let the unfurl reserve space before the image arrives.
+
+    twitter:card is what makes X render the large card rather than a thumbnail; the
+    other three og: tags above already supply its title, description and image. -#}
+<meta property="og:image" content="{{ site.url }}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Virtual Lab — the countries where studies have been fielded, with total respondents and survey responses">
+<meta name="twitter:card" content="summary_large_image">
+
 {#- JSON-LD, built in _data/schema.js. Homepage only: the graph describes the
     organisation and the paper, and neither the privacy policy nor the 404 is a
     surface either belongs on.
