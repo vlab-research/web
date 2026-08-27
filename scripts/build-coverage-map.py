@@ -164,6 +164,10 @@ def region_rows(cov):
             "name": r["name"],
             "total": sum(resp.get(c, 0) for c in countries),
             "countries": len(countries),
+            # Countries WITH a computed value. The cell shows this rather than the
+            # bucket's full membership, so the count and the sum above it describe
+            # exactly the same set (2026-08-26).
+            "counted": sum(1 for c in countries if c in resp),
             "pending": [c for c in countries if c in pending],
         })
     rows.sort(key=lambda r: -r["total"])
@@ -452,40 +456,47 @@ def build_strip(cov, rows, attributed):
 
 
 def build_regions(cov, rows, attributed, pending_display):
-    total = cov["totals"]["respondents"]
+    """The six regional totals. Shipped 2026-08-26 -- Nandan: "we need the region
+    amounts!" -- after being held since the build began because the BUCKETING is an
+    editorial choice and had no CLAIMS.md row. It has one now, C-098, and the row carries
+    the sensitivity that kept it back.
+
+    Three things this used to emit are gone, and all three are the same detail Nandan cut
+    from the map on the same day:
+
+      1. The source line, "Region totals sum to N of M respondents; the remaining K
+         belong to studies whose strata carry no country tag." He quoted it back:
+         "that shouldn't be there." It is also unnecessary now -- C-098 is first-party,
+         and DESIGN.md 2 as amended requires a citation only where somebody else's
+         document is the source.
+      2. The per-cell "floor -- N not yet counted" markers.
+      3. The note block explaining that Moldova, North Macedonia, Palestine and Kosovo
+         have coverage but no count.
+
+    The four uncounted countries are drawn nowhere and named nowhere, so an apparatus
+    explaining their absence from these totals was explaining a gap the reader cannot
+    see. The consequence is recorded honestly in C-098 rather than on the page: MENA and
+    Europe & Central Asia are FLOORS, because each contains a covered country with no
+    computed count.
+
+    The country count per region now counts only countries WITH a value, so each cell is
+    internally consistent: the number above it is the sum of exactly those countries."""
     cells = ['<div class="cs-cells">']
     for r in rows:
+        n = r["counted"]
         cells.append(
-            '<div class="cs-cell">'
-            f'<span class="cs-n">{r["total"]:,}</span>'
+            '<div class="cs-cell" data-claim-unit="">'
+            f'<span class="cs-n" data-claim="C-098">{r["total"]:,}</span>'
             f'<span class="cs-r">{esc(r["name"])}</span>'
-            f'<span class="cs-m">{r["countries"]} '
-            f'{"country" if r["countries"] == 1 else "countries"}</span>'
-            + (f'<span class="cs-p">floor — {len(r["pending"])} not yet counted</span>'
-               if r["pending"] else "")
-            + "</div>")
+            f'<span class="cs-m" data-claim="none">{n} '
+            f'{"country" if n == 1 else "countries"}</span>'
+            "</div>")
     cells.append("</div>")
 
-    floors = [r["name"] for r in rows if r["pending"]]
-    src = (f"Region totals sum to {attributed:,} of {total:,} respondents; the "
-           f"remaining {total - attributed:,} belong to studies whose strata carry no "
-           f"country tag, not to any country outside the "
-           f'{cov["totals"]["countries"]}.')
-    one = len(floors) == 1
-    note = (f'{prose_list(pending_display)} have verified coverage but no computed '
-            "respondent count yet, so they contribute nothing to the totals above. "
-            f'{prose_list(floors)} {"is" if one else "are"} '
-            f'therefore {"a floor, not a complete figure" if one else "floors, not complete figures"}'
-            " — the affected cells carry the note themselves rather than a footnote.")
-    heading = ("Why a regional total is a floor" if one
-               else "Why these regional totals are floors")
     return "\n".join([
         header(cov, CSS_REGIONS),
         '<div class="cov cov-regions">',
         "".join(cells),
-        f'<p class="src">{esc(src)}</p>',
-        f'<div class="note"><span class="hd">{esc(heading)}</span>'
-        f"<p>{esc(note)}</p></div>",
         "</div>",
     ])
 

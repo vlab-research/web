@@ -285,6 +285,7 @@ Donati & Rao for scale.
 | C-018 | Operating since | **2020-02-13** | Earliest response in `chatroach.responses` | `VERIFIED` | 2026-08-20 |
 | C-019 | Studies fielded, all time | **175** | 119 distinct `study_id` in `vlab.adopt_reports` (2022-07-29 → 2026-08-20) **+** 56 `chatroach.campaigns` rows. Definition settled by Nandan 2026-08-20 — see below | `VERIFIED` | 2026-08-20 |
 | C-097 | Respondents attributable to a country | **738,608** of 841,660 | Sum of the per-country table below — 37 of 41 countries. Attribution method is `C-017`'s: stratum country targeting joined to response shortcodes on both schemas. The remaining 103,052 belong to studies whose strata carry **no country tag**, not to countries outside the 41. Counts are floors, not exact — see "Two limits on this table" below. **Added 2026-08-25**, when the coverage prose was built: the figure was already stated and sourced in that section but had no id, so the one sentence COPY.md §1.3 requires could not be annotated. **This is bookkeeping, not a new claim** — and it is not a precedent for the regional totals, whose objection is the *bucketing*, which is editorial. Country attribution is not | `VERIFIED` | 2026-08-20 |
+| C-098 | Respondents by region | **MENA 311,363** · **Sub-Saharan Africa 143,816** · **Americas 136,558** · **South & Southeast Asia 113,460** · **Europe & Central Asia 30,573** · **Pacific 2,838** | Sums of the per-country table below, bucketed by `regions` in `scripts/data/coverage.json` and computed at build time by `build-coverage-map.py`. **Released for publication by Nandan Rao, 2026-08-26** — *"we need the region amounts!"* — which settles the bucketing question that had held this back since the build began. **Two of the six are floors; read the note below before quoting any of them** | `VERIFIED` | 2026-08-26 |
 
 ### The 41 countries
 
@@ -601,6 +602,36 @@ fieldwork cannot go" or any comparison with panels or field agencies; those need
 this register does not have — and since D-023 the site makes no comparison with another
 recruitment source in any case. See the note under C-006, and the framing rules in
 `AGENTS.md`.
+
+### C-098 settles the region buckets, and inherits two things it must carry
+
+**The regional totals were held from the day the build started**, and not because the
+arithmetic was in doubt — they are sums of a `VERIFIED` table. They were held because
+**the bucketing is an editorial choice**, made in `scripts/data/coverage.json` rather than
+derived from the database, and this register had no row saying a regional figure was
+publishable. Nandan settled it on 2026-08-26: *"we need the region amounts!"*
+
+**The sensitivity that kept it back has not gone away, and adopting the row adopts it.**
+Recorded in this file before the row existed: **the MENA bucket includes Israel**, and a
+buyer in Amman and a buyer in Tel Aviv will each read that grouping as a statement. Nothing
+about publishing the figures resolves that — it commits to it. **If the grouping is ever
+questioned, the answer is to change `coverage.json` and re-run, not to argue the point.**
+
+**Two of the six are floors.** MENA contains Palestine and Europe & Central Asia contains
+Moldova, North Macedonia and Kosovo — all covered, none with a computed count — so those two
+totals are **at least** the figure shown. The page used to say so, in a per-cell marker and a
+note; **both went on 2026-08-26** with the four countries themselves, because an apparatus
+explaining a gap the reader cannot see is explaining nothing. **The fact lives here instead.**
+It is not published, and a page that ever needs to be exact about MENA or Europe & Central
+Asia must come back to this row first.
+
+**The country count in each cell counts only countries with a value**, so the number and the
+count describe the same set. MENA reads 10 countries, not 11.
+
+**No source line.** C-098 sits in a `Definition` table — our own record — so §2 as amended
+requires no citation. That is also why the old *"Region totals sum to 738,608 of 841,660…"*
+line is gone: it was never a citation, it was a reconciliation between two internal
+denominators.
 
 ### C-069's scope note was lifted on 2026-08-26, and C-077 was not
 

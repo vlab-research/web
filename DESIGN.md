@@ -690,19 +690,36 @@ component; it is an unreadable one.
   Uniform scaling costs a pixel of bar height at full measure and buys labels that are not
   smeared.
 
-**3 · Region totals.** Six cells, 1px gaps over `--rule`, top and bottom rules — the stat
-row at region scale, so these stay HTML rather than SVG. Number in Plex Mono
+**3 · Region totals — shipped 2026-08-26** (C-098), after being held for the whole build
+because the bucketing is editorial and had no row. Six cells, 1px gaps over `--rule`, top and
+bottom rules — the stat row at region scale, so these stay HTML rather than SVG. Number in
+Plex Mono
 `clamp(22px,2.2vw,28px)`, region in mono uppercase `--ink-2`, country count in Source
-Serif italic `--ink-3`. A region containing a country with no count carries
-`floor — N not yet counted` in `--brass` **in the cell**, and the block below it explains
-why in prose.
+Serif italic `--ink-3`. ~~A region containing a country with no count carries `floor — N not yet counted` in
+`--brass` **in the cell**, and the block below it explains why in prose.~~ **Both removed
+2026-08-26**, with the four covered-but-uncounted countries themselves: an apparatus
+explaining a gap the reader cannot see explains nothing. **The fact that MENA and Europe &
+Central Asia are floors is recorded in C-098 and published nowhere** — a page that ever needs
+to be exact about either must read that row first.
 
-**The bar and the cells span the attributed respondents, not the whole.** 103,052 of
-841,660 belong to studies whose strata carry no country tag (`CLAIMS.md`). Each of the
-three source lines states its own denominator; none of them may imply the regions sum to
-the headline figure, and none may run the two gaps together — the missing 103,052 is the
-unattributed studies, **not** the four countries that are covered but not yet counted.
-Whether the strip draws the unattributed remainder as a ghost segment is **D-022, open**.
+**The country count in each cell counts only countries with a value**, so the count and the
+sum above it describe the same set. **The cells carry `data-claim="C-098"`** and a
+`data-claim-unit`; the country counts carry `data-claim="none"`. **No source line** — C-098
+is first-party, and §2 as amended requires a citation only where somebody else's document is
+the source.
+
+**The bar and the cells span the attributed respondents, not the whole**, and **none of the
+three carries a source line any more.** The reconciliation they used to print — *"the
+remaining 103,052 belong to studies whose strata carry no country tag"* — was cut on
+2026-08-26: Nandan, *"that shouldn't be there."* It was never a citation, it was arithmetic
+between two internal denominators, and §2 as amended asks for a citation only where somebody
+else's document is the source. **The denominators are in `CLAIMS.md`** (C-097, C-098) for
+anyone who needs them.
+
+**The two gaps must still never be run together** if either is ever written again: the
+missing 103,052 is the unattributed studies, **not** the four countries that are covered but
+not yet counted. Whether the strip draws the unattributed remainder as a ghost segment is
+**D-022, open**.
 
 Source line mandatory on each of the three, as for any figure — see "Claim annotation"
 below. All colour is `var(--…)`; there is no literal hex anywhere in the emitted markup,

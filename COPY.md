@@ -758,8 +758,8 @@ if the policy is wrong, it is wrong at its URL too.
 |---|---|---|---|
 | **P-1** | Hero readout — recorded replay | 1.1 | Component exists in spec (§8, stratum readout); recording to be made. Recorded at launch, live as a fast-follow (D-013) |
 | **P-2** | Coverage map | 1.3 | **Generated** — `scripts/build-coverage-map.py`. Exists in `build/` |
-| **P-3** | Region strip | 1.3 | **Generated** — same script. D-022 open: whether the unattributed remainder draws as a ghost segment |
-| **P-4** | Region totals, six cells | 1.3 | **Generated, but gated.** Region buckets have no `CLAIMS.md` row; owner Nandan. Fallback recorded: ship country figures, drop the regional layer |
+| **P-3** | Region strip | 1.3 | **Generated** — same script; region names added 2026-08-26. D-022 open: whether the unattributed remainder draws as a ghost segment |
+| **P-4** | Region totals, six cells | 1.3 | **Generated, and SHIPS from 2026-08-26.** C-098 gives the regional figures a row, settling the bucketing question that gated it all build |
 | **P-5** | ~~Deviation figure~~ | **unused** | Built and correct — `assets/figures/mad-comparison.svg`. Nothing renders it now that 6.1 is quote-only. **Do not delete** |
 | **P-11** | Advertising cost figure | 1.4 | **Built** — `assets/figures/ad-cost.svg`, from `build-adcost-figure.py`. Box plot across 44 studies |
 | **P-10** | Throughput figure | 1.4 | **Built** — `assets/figures/throughput-box.svg`, from `build-throughput-figure.py`. Box plot: M3 interval on an M4 tick rule |
@@ -775,8 +775,8 @@ recording.
 |---|---|
 | **P-1** Hero readout | **Held.** Its rows are `achieved / target` per stratum — real values with **no `CLAIMS.md` row**, so drawing it means inventing figures and hard rule 2 forbids that in terms. The hero ships as type on an M1 lattice. It needs a **recording from a study cleared for it**, which is a clearance question before it is a design one |
 | **P-2** Coverage map | **Renders.** Generated, inlined, `[annotated]` and clean |
-| **P-3** Region strip | **Renders**, per this file listing it ungated — **and it is worth a second look.** Its `aria-label` and its per-segment `<title>` state the same six regional values P-4 is held for. `check-claims.py` does not scan inside `<svg>`, so it passes; that is a checker limit, not clearance. If the buckets are declined, this goes with P-4 |
-| **P-4** Region totals | **Held**, per this file's own gate. One line in `index.html` the day the buckets get a row |
+| **P-3** Region strip | **Renders**, with region names added 2026-08-26. The question that hung over it is closed: the six regional values it states now have a row (C-098). **Note the new redundancy** — the strip labels the six regions and the cells beneath name them again, in the same order |
+| **P-4** Region totals | **Ships, from 2026-08-26.** Nandan: *"we need the region amounts!"* — which settles the bucketing question that held it back all build. C-098 is the row. No source line, no floor markers, no note: all three went with the four uncounted countries |
 | **P-9** Six institutional marks | **Renders as type**, all six. The files exist in `assets/logos/` and **not one is cleared** (D-014). `_data/clients.js` holds `logo` and `cleared` separately, and a mark renders only when both are true |
 | **P-10 · P-11** The two box plots | **Render, side by side, in one beat**, as specified. **Both were silently truncating their own source lines** — see `AGENTS.md`; fixed in the generators |
 | **P-5** Deviation figure | Still unused, still built, still not to be deleted |

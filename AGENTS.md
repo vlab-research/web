@@ -184,12 +184,13 @@ record that these slots exist. Read it before concluding the page is missing som
   inventing figures, which hard rule 2 forbids in exactly these words: *"Not as a placeholder,
   not 'to be replaced later,' not in a mockup."* So the hero ships as type on a lattice. It
   needs a recording from a study cleared for it, not a designer.
-- **[P-4] The region totals.** Held per `COPY.md`'s own gate: the six figures are sums of a
-  `VERIFIED` table, but the **bucketing is editorial** and has no row. `{{ coverage.regions }}`
-  is one line away in `index.html` the day it gets one. **The region strip [P-3] does ship** —
-  `COPY.md` lists it ungated — and that is worth a second look, because the strip states the
-  same six regional values in its `aria-label` and its per-segment `<title>`. `check-claims.py`
-  does not scan inside SVG, so it passes; that is a checker limit, not clearance.
+- ~~**[P-4] The region totals.**~~ **Shipped 2026-08-26** — *"we need the region amounts!"* —
+  which settles the bucketing question that had held them since the build began. **C-098 is
+  the row, and adopting it adopts the sensitivity that kept it back:** the MENA bucket
+  includes Israel, and that grouping is an editorial choice made in `coverage.json`, not a
+  fact from the database. **Two of the six are floors** — MENA and Europe & Central Asia each
+  contain a covered country with no computed count — and that is recorded in C-098 and
+  published nowhere.
 - **The client wall** renders all six as **type**, because D-014 has cleared no mark. The
   files are in `assets/logos/`. Flip `cleared` in `_data/clients.js` per institution as
   permissions land; the wall is built to look deliberate at any mix.
@@ -691,17 +692,19 @@ than type-with-engagements.
 
 ### Known drift — re-derived 2026-08-25 **after** the build
 
-`python3 scripts/check-claims.py` reports **9 findings, down from 23**, and every one of
-them is in **`build/coverage-regions.html`** — the six per-region totals and their country
-counts. **A decision, not a bug:** the figures are sums of a verified table; the *bucketing*
-is editorial and has no row. The fallback is recorded, and **the artefact does not reach a
-page**, because [P-4] is held.
+**`python3 scripts/check-claims.py` now reports ZERO findings**, for the first time since the
+checker was written. It was 23 at the start of the 2026-08-25 build and 9 after it. The last
+9 were the region totals, and they went not by being fixed but by being **decided**: C-098
+gives the regional figures a row, so the artefact that had always failed now passes and
+ships. **A clean bare run is the new baseline — if it is ever non-zero again, something
+actually drifted.**
 
-The other fourteen are gone, and it is worth knowing which way each went:
+The twenty-three went three different ways, and the distinction is worth keeping:
 
 - **11 in `index.html`** — the legacy SPA. **Retired**, not fixed, exactly as planned.
 - **3 in `build/coverage-map.html`** — the legend's magnitude labels. **Fixed in
   `build-coverage-map.py`**, never in its output.
+- **9 in `build/coverage-regions.html`** — the region totals. **Decided**, not fixed: C-098.
 
 **The two pages that ship are clean**, and this is the invocation that says so:
 
