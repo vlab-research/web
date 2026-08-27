@@ -184,8 +184,10 @@ record that these slots exist. Read it before concluding the page is missing som
   inventing figures, which hard rule 2 forbids in exactly these words: *"Not as a placeholder,
   not 'to be replaced later,' not in a mockup."* So the hero ships as type on a lattice. It
   needs a recording from a study cleared for it, not a designer.
-- ~~**[P-4] The region totals.**~~ **Shipped 2026-08-26** — *"we need the region amounts!"* —
-  which settles the bucketing question that had held them since the build began. **C-098 is
+- ~~**[P-4] The region totals.**~~ **The figures ship; the cells do not.** *"We need the region
+  amounts!"* settled the bucketing question that had held them since the build began — and
+  the cells that first carried them were withdrawn the same day as redundant with the strip
+  directly above (*"I prefer the strip"*). **The amounts moved into the strip's labels.** **C-098 is
   the row, and adopting it adopts the sensitivity that kept it back:** the MENA bucket
   includes Israel, and that grouping is an editorial choice made in `coverage.json`, not a
   fact from the database. **Two of the six are floors** — MENA and Europe & Central Asia each

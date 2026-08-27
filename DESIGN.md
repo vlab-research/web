@@ -690,8 +690,14 @@ component; it is an unreadable one.
   Uniform scaling costs a pixel of bar height at full measure and buys labels that are not
   smeared.
 
-**3 · Region totals — shipped 2026-08-26** (C-098), after being held for the whole build
-because the bucketing is editorial and had no row. Six cells, 1px gaps over `--rule`, top and
+**3 · Region totals — the cells are NOT on the page.** Shipped 2026-08-26 and withdrawn the
+same day: with the strip directly above them, the six regions were named twice in the same
+order, immediately below each other. Nandan: *"It's redundant. I like either the cells or the
+strip. But I prefer the strip."* **The strip absorbed the amounts** — its labels now read
+`311,363 · MIDDLE EAST & NORTH AFRICA` — and the cells came off. C-098 is still the row and
+the generator still emits the fragment; nothing renders it.
+
+The component spec below stands for the day a surface wants the cells without the strip. Six cells, 1px gaps over `--rule`, top and
 bottom rules — the stat row at region scale, so these stay HTML rather than SVG. Number in
 Plex Mono
 `clamp(22px,2.2vw,28px)`, region in mono uppercase `--ink-2`, country count in Source

@@ -402,7 +402,12 @@ def build_strip(cov, rows, attributed):
         #
         # A leader tick keeps every label attached to its own segment however far the
         # text has been pushed, which is what makes pushing safe.
-        name = r["name"].upper()
+        # The label carries the VALUE and the NAME. Until 2026-08-26 it carried the name
+        # only and the six amounts lived in a separate cell row beneath -- which said the
+        # same six regions twice, in the same order, immediately below each other.
+        # Nandan: "It's redundant. I like either the cells or the strip. But I prefer the
+        # strip." So the strip absorbed the amounts and the cells came off the page.
+        name = f'{r["total"]:,} \u00b7 {r["name"].upper()}'
         est = len(name) * LAB_CPW
         lx = max(0.0, min(x, STRIP_W - LAB_PAD - est))
         row = next((k for k in range(len(LAB_ROWS)) if lx >= row_end[k]), None)
@@ -414,7 +419,7 @@ def build_strip(cov, rows, attributed):
         ticks.append(f'<line class="cs-tick" x1="{x:.2f}" y1="{STRIP_H:.0f}" '
                      f'x2="{x:.2f}" y2="{STRIP_H + ly - LAB_SIZE:.1f}"/>')
         labels.append(f'<text class="cs-lab" x="{lx:.2f}" '
-                      f'y="{STRIP_H + ly:.1f}">{esc(name)}</text>')
+                      f'y="{STRIP_H + ly:.1f}" data-claim="C-098">{esc(name)}</text>')
         x += w + STRIP_GAP
 
     used = [LAB_ROWS[k] for k in range(len(LAB_ROWS)) if row_end[k] > 0.0]
