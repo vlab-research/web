@@ -31,6 +31,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "scripts" / "data" / "reallocations.json"
 OUT = ROOT / "assets" / "figures" / "reallocations-box.svg"
+NARROW_OUT = ROOT / "assets" / "figures" / "reallocations-box-narrow.svg"
 
 # Geometry. Width matches assets/figures/mad-comparison.svg so the two figures sit
 # on one page without a rescale being read into either.
@@ -93,16 +94,17 @@ def wrap_src(text, cpl=SRC_CPL):
     return lines
 
 
-def src_block(*texts, y0):
+def src_block(*texts, y0, W=W, cpl=None):
     """The wrapped source lines as SVG, plus the y of the last baseline.
 
     Exits non-zero on a single word wider than the box, for the same reason the
     axis guard exists: a figure must fail loudly rather than clip its evidence."""
-    lines = [ln for t in texts for ln in wrap_src(t)]
+    cpl = cpl or int(W // 6)
+    lines = [ln for t in texts for ln in wrap_src(t, cpl)]
     for ln in lines:
-        if len(ln) > SRC_CPL:
+        if len(ln) > cpl:
             sys.exit(f"FIGURE CLIPPED: source line does not fit {W}px at {SRC_SIZE}px "
-                     f"({len(ln)} > {SRC_CPL} chars): {ln!r}")
+                     f"({len(ln)} > {cpl} chars): {ln!r}")
     svg = "\n".join(
         f'  <text class="src" x="0" y="{y0 + i * SRC_LEAD:.0f}" '
         f'data-claim-source="">{esc(ln)}</text>'
@@ -110,7 +112,20 @@ def src_block(*texts, y0):
     return svg, y0 + SRC_LEAD * (len(lines) - 1)
 
 
-def main():
+def render(W, PLOT_X0, PLOT_X1, Y_MID, Y_AXIS, narrow=False):
+    """One figure at one width. Called twice.
+
+    NARROW VARIANT, added 2026-08-26 -- Nandan: "The box plots don't always fit on the
+    page in mobile." They did not: the drawing is 1160 units wide and its type is sized
+    in absolute pixels, so scaling it into ~440px of phone puts the 13px label at 5px.
+    A minimum width plus overflow-x kept it legible but made it scroll, which is what he
+    was seeing.
+
+    An SVG scales its text with itself, so the only real fix is a SECOND viewBox that is
+    already narrow. Same drawing, same primitives, same source text -- the label moves
+    above the plot instead of beside it, the plot starts at x=0, and the source lines
+    rewrap to the narrower budget. CSS shows exactly one; both come from this script.
+    """
     d = json.loads(DATA.read_text())
     p = d["percentiles"]
 
@@ -178,12 +193,15 @@ def main():
             f'{int(hi)} reallocations; the longest study ran to {d["max"]:,}. This is a '
             f'distribution across studies, not an uncertainty interval on an estimate.')
 
+    LAB_Y1 = 14 if narrow else Y_MID - 6
+    LAB_Y2 = 30 if narrow else Y_MID + 12
+
     # Wrap the provenance lines and size the viewBox to hold them.
-    src_svg, src_last_y = src_block(src1, src2, y0=Y_AXIS + 52)
+    src_svg, src_last_y = src_block(src1, src2, y0=Y_AXIS + 52, W=W)
     H = int(src_last_y + 10)
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%"
-     class="fig-realloc" role="img" aria-labelledby="reallocTitle reallocDesc"
+     class="fig-realloc{" narrow" if narrow else ""}" role="img" aria-labelledby="reallocTitle reallocDesc"
      preserveAspectRatio="xMinYMin meet" data-claim-unit="">
   <title id="reallocTitle">Budget reallocations per study</title>
   <desc id="reallocDesc">{esc(desc)}</desc>
@@ -239,14 +257,14 @@ def main():
     }}
   </style>
 
-  <text class="lab" x="0" y="{Y_MID - 6:.0f}">Budget reallocations</text>
-  <text class="lab" x="0" y="{Y_MID + 12:.0f}">per study</text>
+  <text class="lab" x="0" y="{LAB_Y1}">Budget reallocations</text>
+  <text class="lab" x="0" y="{LAB_Y2}">per study</text>
 
   <!-- The values, above the interval they mark. C-089. -->
   <g data-claim="C-089">
-    <text class="qnum" x="{x25:.1f}" y="14">{p["p25"]}</text>
-    <text class="num"  x="{x50:.1f}" y="14">{p["median"]}</text>
-    <text class="qnum" x="{x75:.1f}" y="14">{p["p75"]}</text>
+    <text class="qnum" x="{x25:.1f}" y="{Y_MID - 20:.0f}">{p["p25"]}</text>
+    <text class="num"  x="{x50:.1f}" y="{Y_MID - 20:.0f}">{p["median"]}</text>
+    <text class="qnum" x="{x75:.1f}" y="{Y_MID - 20:.0f}">{p["p75"]}</text>
   </g>
 
   <!-- M3 interval. Bracket, bar, cell: three of the four primitives. -->
@@ -268,11 +286,21 @@ def main():
 {src_svg}
 </svg>
 '''
+    if not narrow:
+        print(f"  box {p['p25']}-{p['p75']}, median {p['median']}, "
+              f"whiskers {p['p10']}-{p['p90']}, n={pop['n_studies']} studies")
+    return svg
+
+
+def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(svg)
+    wide = render(1160, 180.0, 1104.0, 34.0, 58.0)
+    OUT.write_text(wide)
     print(f"wrote {OUT}")
-    print(f"  box {p['p25']}-{p['p75']}, median {p['median']}, "
-          f"whiskers {p['p10']}-{p['p90']}, n={pop['n_studies']} studies")
+    # The narrow variant: label above, plot flush left, source lines rewrapped.
+    narrow = render(480, 0.0, 468.0, 68.0, 92.0, narrow=True)
+    NARROW_OUT.write_text(narrow)
+    print(f"wrote {NARROW_OUT}")
 
 
 if __name__ == "__main__":

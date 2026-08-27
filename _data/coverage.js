@@ -31,8 +31,14 @@ function fragment(name) {
     .trim();
 }
 
-export default {
+// A FUNCTION, not an object. An object literal is evaluated once when Node imports
+// this module and the ESM loader then pins it for the life of the process — so
+// `eleventy --serve` kept serving whatever build/ held at server start, no matter how
+// many times the generator re-ran. That is exactly the bug it looked like: correct on
+// a one-shot `npm run build`, stale on the dev server, and appearing to flicker between
+// the two. Eleventy calls this function on every build, so the files are re-read.
+export default () => ({
   map: fragment("coverage-map.html"),
   strip: fragment("coverage-strip.html"),
   regions: fragment("coverage-regions.html"),
-};
+});

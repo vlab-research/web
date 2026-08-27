@@ -20,16 +20,24 @@ import path from "node:path";
 const ROOT = path.join(import.meta.dirname, "..");
 const read = (p) => fs.readFileSync(path.join(ROOT, p), "utf8").trim();
 
-export default {
+// A function, not an object — see the note in coverage.js. Evaluated once at
+// import, this pinned stale asset content for the life of `eleventy --serve`.
+export default () => ({
   sprite: read("assets/icons/icons.svg"),
   mark: read("assets/mark.svg"),
   figures: {
     throughput: read("assets/figures/throughput-box.svg"),
     adcost: read("assets/figures/ad-cost.svg"),
+    // Narrow variants. An SVG scales its text with itself, so a 1160-unit drawing
+    // in 440px of phone puts its 13px label at 5px. These are a second viewBox that
+    // is already narrow; CSS shows exactly one. Both come from the same generator.
+    throughputNarrow: read("assets/figures/throughput-box-narrow.svg"),
+    adcostNarrow: read("assets/figures/ad-cost-narrow.svg"),
+    reallocationsNarrow: read("assets/figures/reallocations-box-narrow.svg"),
     // M5, the thread. Hand-authored rather than generated: it draws no data, so there
     // is nothing for a generator to read. Its numerals are list indices and carry
     // data-claim="none".
     reallocations: read("assets/figures/reallocations-box.svg"),
     thread: read("assets/figures/thread.svg"),
   },
-};
+});

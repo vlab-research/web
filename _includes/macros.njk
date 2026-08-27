@@ -44,3 +44,30 @@
     </math>
   </div>
 {% endmacro %}
+
+
+{#- M4 · tick rule. A hairline carrying graduated ticks, major reaching higher than
+    minor. DESIGN.md §6: the cheapest way to make an empty margin read as an instrument
+    face rather than as whitespace.
+
+    NO viewBox, deliberately. With one, the ticks scale with the cell and compress into a
+    smeared 3px-pitch smudge at wide widths. Without one, user units are CSS pixels and
+    the pattern tiles at true size at every width. Adding a viewBox to "fix" it is the bug
+    returning. -#}
+{% macro tickrule(id) %}
+  <div class="edge" aria-hidden="true">
+    <svg width="100%" height="26" focusable="false">
+      <defs>
+        <pattern id="tick-{{ id }}" width="45" height="26" patternUnits="userSpaceOnUse">
+          <rect x="0"  y="12" width="1" height="14" fill="currentColor"/>
+          <rect x="9"  y="19" width="1" height="7"  fill="currentColor"/>
+          <rect x="18" y="19" width="1" height="7"  fill="currentColor"/>
+          <rect x="27" y="19" width="1" height="7"  fill="currentColor"/>
+          <rect x="36" y="19" width="1" height="7"  fill="currentColor"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#tick-{{ id }})"/>
+      <rect x="0" y="25" width="100%" height="1" fill="currentColor"/>
+    </svg>
+  </div>
+{% endmacro %}

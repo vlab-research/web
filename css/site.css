@@ -318,35 +318,67 @@ small,.caption{ font-size:13px }
    second surface to navigate to. The nav is now the mark and the one CTA. */
 
 /* ==========================================================================
-   §8 · Stat row — four cells, 1px gaps over a --rule ground, top and bottom
-   rules. Source line mandatory in every cell.
+   §8 · Stat row — THREE cells, and the columns are not equal
+   --------------------------------------------------------------------------
+   Rebuilt 2026-08-26. It was four cells at repeat(4,1fr); Nandan: "I dont care
+   for the last number, 175 studies. Let's stick to three. Let's not make them
+   even spaced, the size of the numbers drives the size of the cell."
+
+   Each track is max-content, so the NUMBER sets the cell's width and the LABEL
+   sets its floor — which is what stops `41` from getting a two-character cell:
+   it gets one as wide as COUNTRIES. That, plus the fixed side padding, takes the
+   raw 5:1 disparity between 17,979,910 and 41 down to about 2.5:1 on screen, so
+   the row reads as three deliberately different cells rather than one starved one.
+
+   The measure's remainder is a wordless fourth cell carrying an M4 tick rule, so
+   the space the short figure does not use reads as an instrument face rather than
+   as a row that ran out. §6: M4 is "the cheapest way to make an empty margin read
+   as an instrument face rather than as whitespace", and this is the first place on
+   the site with an empty margin that needs it.
    ========================================================================== */
 
 .stats{
-  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  display:grid;
+  grid-template-columns:max-content max-content max-content minmax(0,1fr);
+  gap:1px;
   background:var(--rule);
   border-top:1px solid var(--rule);
   border-bottom:1px solid var(--rule);
 }
 .stats .cell{
   background:var(--paper);
-  padding:22px 20px 20px;
+  padding:26px 34px 22px;
   display:flex; flex-direction:column;
 }
+/* Flush left, so the first digit sits on the same left edge as the headline
+   above it. §5: everything is left-aligned, the grid included. */
+.stats .cell:first-child{ padding-left:0 }
+
 .stats .n{
-  font:400 clamp(32px,3.6vw,42px)/1 var(--mono);
-  letter-spacing:-.025em;
+  font:400 clamp(34px,4.4vw,52px)/1 var(--mono);
+  letter-spacing:-.03em;
   color:var(--ink);
   font-variant-numeric:tabular-nums;
 }
 .stats .n .unit{ font-size:.46em; color:var(--ink-2); margin-left:.35em }
 .stats .label{
-  margin-top:12px;
+  margin-top:14px;
   font:500 10px/1.5 var(--mono);
   letter-spacing:.13em; text-transform:uppercase;
   color:var(--ink-2);
 }
 .stats .src{ margin-top:8px; font-size:12.5px }
+
+/* The remainder. It carries NO label: an unlabelled rule is an edge, a labelled
+   one would read as an axis encoding something, which is the D-018 test failed
+   on purpose. "Since February 2020." stays below the band for the same reason. */
+.stats .edge{
+  background:var(--paper);
+  display:flex; align-items:flex-end;
+  padding:0 0 22px;
+  min-width:0;
+}
+.stats .edge svg{ display:block; width:100%; height:26px; color:var(--rule-2) }
 
 /* ==========================================================================
    §8 · Coverage section — the generator's own class names. DESIGN.md §8 lists
@@ -372,6 +404,21 @@ small,.caption{ font-size:13px }
 /* The strip carries its own type now (region names), so it scales uniformly rather
    than with preserveAspectRatio="none", and its height comes from the viewBox. */
 .cs-bar   { display:block; width:100%; height:auto }
+/* The vertical variant, for narrow viewports. One stacked bar scaled into a phone
+   puts its numerals at ~8px and squeezes the Pacific segment under two pixels: the
+   horizontal form compares PROPORTIONS and needs width to do it. Below 700px the
+   same data draws as one row per region — M2 without a target tick, the same motif
+   turned ninety degrees. Both variants come from build-coverage-map.py; CSS shows
+   exactly one, and nothing is generated in the browser. */
+.cs-tall  { display:none; width:100%; height:auto }
+@media (max-width:700px){
+  .cs-bar  { display:none }
+  .cs-tall { display:block }
+  /* The map legend goes too. Six opacity swatches wrapping over three lines cost a
+     third of the block to explain a shading a reader is not reading closely at this
+     size. The map still carries per-country titles. */
+  .mlegend { display:none }
+}
 .cs-ground{ fill:var(--rule) }
 .cs-seg   { fill:var(--data) }
 .cs-tick  { stroke:var(--rule-2); stroke-width:1; shape-rendering:crispEdges }
@@ -422,11 +469,17 @@ small,.caption{ font-size:13px }
    its designed size rather than scaled. */
 .figs{ display:grid; grid-template-columns:1fr; gap:1px; background:var(--rule) }
 .figs .fig{ background:var(--paper); padding:26px 0 22px; min-width:0; overflow-x:auto }
-/* Below about 640px of drawing width the source line falls under 10px — the provenance
-   rule technically present and practically unreadable. §5's answer for wide content:
-   keep a legible minimum and scroll inside your own container. The body never scrolls
-   sideways. */
-.fig > svg{ display:block; width:100%; height:auto; min-width:640px }
+/* Two viewBoxes, one shown. The drawings carry their own type at absolute sizes, so a
+   1160-unit figure scaled into a phone puts its 13px label at 5px. A minimum width kept
+   it legible but made it scroll, which is not fitting on the page either. Below 760px
+   the narrow variant takes over — same drawing, same source text, a viewBox that is
+   already narrow. Both come from the generator; nothing is redrawn in the browser. */
+.fig > svg{ display:block; width:100%; height:auto }
+.fig > svg.narrow{ display:none }
+@media (max-width:760px){
+  .fig > svg{ display:none }
+  .fig > svg.narrow{ display:block }
+}
 
 
 /* ==========================================================================
@@ -693,7 +746,12 @@ blockquote.quote .src{ margin-top:14px }
 }
 
 @media (max-width:760px){
-  .stats{ grid-template-columns:repeat(2,1fr) }
+  /* One column of full-width rows. The tick rule is a device for a remainder
+     that no longer exists once the cells span the measure. */
+  .stats{ grid-template-columns:minmax(0,1fr) }
+  .stats .cell{ padding:20px 0 18px }
+  .stats .cell:first-child{ padding-top:22px }
+  .stats .edge{ display:none }
   h1{ font-size:clamp(34px,9vw,44px) }
 }
 

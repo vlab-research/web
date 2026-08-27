@@ -2,7 +2,7 @@
 layout: base.html
 title: "Virtual Lab — population-representative samples, recruited through ad platforms"
 ---
-{% from "macros.njk" import lattice, objective %}
+{% from "macros.njk" import lattice, objective, tickrule %}
 
 
 <section class="sec has-lat" style="padding-top:76px">
@@ -40,10 +40,7 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
           <span class="n" data-claim="C-017">41</span>
           <span class="label">Countries</span>
         </div>
-        <div class="cell" data-claim-unit>
-          <span class="n" data-claim="C-019">175</span>
-          <span class="label">Studies fielded</span>
-        </div>
+        {{ tickrule("totals") }}
       </div>
 
       <p class="prose">Since February 2020.</p>
@@ -90,10 +87,10 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
 <section class="sec">
   <div class="wrap">
     <div class="stack loose">
-      <h2>How fast a study fills</h2>
+      <h2>Respondents recruited per day:</h2>
 
       <div class="figs">
-        <figure class="fig">{{ inline.figures.throughput | safe }}</figure>
+        <figure class="fig">{{ inline.figures.throughput | safe }}{{ inline.figures.throughputNarrow | safe }}</figure>
       </div>
 
     </div>
@@ -104,10 +101,24 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
 <section class="sec">
   <div class="wrap">
     <div class="stack loose">
-      <h2>What the advertising costs</h2>
+      <h2>Ad costs per respondent:</h2>
 
       <div class="figs">
-        <figure class="fig">{{ inline.figures.adcost | safe }}</figure>
+        <figure class="fig">{{ inline.figures.adcost | safe }}{{ inline.figures.adcostNarrow | safe }}</figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="sec">
+  <div class="wrap">
+    <div class="stack loose">
+      <h2>Budget allocations per study:</h2>
+
+      <div class="figs">
+        <figure class="fig">{{ inline.figures.reallocations | safe }}{{ inline.figures.reallocationsNarrow | safe }}</figure>
       </div>
 
     </div>
@@ -189,10 +200,6 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
         estimate changes the allocation, which changes what you learn next. That loop is why
         this is software and not a spreadsheet.
       </p>
-
-      <div class="figs">
-        <figure class="fig">{{ inline.figures.reallocations | safe }}</figure>
-      </div>
 
       <p class="prose">The method is published, and the validation with it.</p>
 

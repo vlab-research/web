@@ -212,6 +212,12 @@ CSS_MAP = """  .cov       { margin:0 }
                color:var(--ink-3); margin-top:16px; max-width:66ch }"""
 
 CSS_STRIP = """  .cs-bar    { display:block; width:100%; height:auto }
+  .cs-tall   { display:none; width:100%; height:auto }
+  @media (max-width:700px){
+    .cs-bar  { display:none }
+    .cs-tall { display:block }
+    .mlegend { display:none }
+  }
   .cs-ground { fill:var(--rule) }
   .cs-seg    { fill:var(--data) }
   .cs-tick   { stroke:var(--rule-2); stroke-width:1; shape-rendering:crispEdges }
@@ -459,23 +465,62 @@ def build_strip(cov, rows, attributed):
         "".join(labels),
         "</svg>",
     ]))
-    # No source line at all. It read "The bar spans the N respondents attributable to a
-    # country, not the M total: the remaining K belong to studies whose strata carry no
-    # country tag" -- which is word for word the sentence Nandan cut from the prose
-    # beneath this section on 2026-08-26 ("We dont need this"). Keeping it in the caption
-    # would be reinstating by the back door what was removed from the front.
-    #
-    # What is lost is a reconciliation between two internal denominators. What is gained
-    # is a figure that states its regions and nothing else. The numbers are still in
-    # CLAIMS.md if a reader ever asks.
+    # No source line. The caption that used to sit here reconciled two internal
+    # denominators, and Nandan cut it on 2026-08-26 -- from the prose first, then from
+    # here. Its wording is deliberately NOT quoted back in this comment: it kept turning
+    # up in greps of the repo and reading as though it were still shipping. The figures
+    # it stated are C-097 and C-098 in CLAIMS.md.
     src = None
     return "\n".join(x for x in [
         header(cov, CSS_STRIP),
         '<figure class="cov cov-strip">',
         svg,
+        build_strip_tall(rows, attributed),
         f'<figcaption class="src">{esc(src)}</figcaption>' if src else None,
         "</figure>",
     ] if x is not None)
+
+
+# Vertical variant, for narrow viewports. Added 2026-08-26 -- Nandan: "The regions strip
+# and map look silly on mobile... we need a strip that's somehow vertical or somehow
+# different."
+#
+# One stacked bar 1160 units wide, scaled into ~440px of phone, puts its 22px numerals at
+# about 8px and squeezes the Pacific segment to under two pixels. The horizontal form is
+# a comparison of PROPORTIONS and needs width to make one; at a phone width there is no
+# width to make it with.
+#
+# So the same data is drawn as one row per region, largest first: value, name, and a bar
+# whose length carries the share. That is M2 without a target tick, which is what the
+# strip already was -- the same motif, turned ninety degrees. Both variants are emitted
+# and CSS shows exactly one; neither is generated in the browser, and there is no second
+# source of truth.
+ROW_H = 62.0         # per region
+TALL_W = 460.0       # viewBox width; the drawing scales to whatever the column gives it
+TALL_BAR_H = 13.0
+
+
+def build_strip_tall(rows, attributed):
+    parts = [
+        f'<svg class="cs-tall" xmlns="http://www.w3.org/2000/svg" '
+        f'viewBox="0 0 {TALL_W:.0f} {ROW_H * len(rows):.0f}" role="img" '
+        f'aria-label="Respondents by region, largest first" focusable="false">',
+        "<title>Respondents by region</title>",
+    ]
+    for i, r in enumerate(rows):
+        y = i * ROW_H
+        w = (TALL_W * r["total"] / attributed) if attributed else 0.0
+        w = max(w, 2.0)
+        parts.append(
+            f'<text class="cs-num" x="0" y="{y + 22:.0f}" data-claim="C-098">'
+            f'{r["total"]:,}</text>'
+            f'<text class="cs-lab" x="0" y="{y + 38:.0f}">{esc(r["name"].upper())}</text>'
+            f'<rect class="cs-ground" x="0" y="{y + 46:.0f}" width="{TALL_W:.0f}" '
+            f'height="{TALL_BAR_H}"/>'
+            f'<rect class="cs-seg" x="0" y="{y + 46:.0f}" width="{w:.1f}" '
+            f'height="{TALL_BAR_H}" fill-opacity="{r["opacity"]:.2f}"/>')
+    parts.append("</svg>")
+    return "".join(parts)
 
 
 def build_regions(cov, rows, attributed, pending_display):

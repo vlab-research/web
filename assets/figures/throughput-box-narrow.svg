@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 136" width="100%"
-     class="fig-thru" role="img" aria-labelledby="thruTitle thruDesc"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 202" width="100%"
+     class="fig-thru narrow" role="img" aria-labelledby="thruTitle thruDesc"
      preserveAspectRatio="xMinYMin meet" data-claim-unit="">
   <title id="thruTitle">Respondents recruited per study on an active day</title>
   <desc id="thruDesc">Respondents recruited per study on a day of active recruitment, across 129 studies. The median study recruits 140 on such a day. The middle half of studies fall between 69 and 300. The tenth percentile is 41 and the ninetieth is 531, read against a scale running from 0 to 550 respondents. This is a distribution across studies, not an uncertainty interval on an estimate.</desc>
@@ -55,39 +55,41 @@
     }
   </style>
 
-  <text class="lab" x="0" y="28.0">Respondents recruited</text>
-  <text class="lab" x="0" y="46.0">per active day</text>
+  <text class="lab" x="0" y="14">Respondents recruited</text>
+  <text class="lab" x="0" y="30">per active day</text>
 
   <!-- The values, above the interval they mark. C-089. -->
   <g data-claim="C-089">
-    <text class="qnum" x="295.9" y="14">69</text>
-    <text class="num"  x="415.2" y="14">140</text>
-    <text class="qnum" x="684.0" y="14">300</text>
+    <text class="qnum" x="58.7" y="48">69</text>
+    <text class="num"  x="119.1" y="48">140</text>
+    <text class="qnum" x="255.3" y="48">300</text>
   </g>
 
   <!-- M3 interval. Bracket, bar, cell: three of the four primitives. -->
-  <line class="whisk" x1="248.9" y1="34.0" x2="295.9" y2="34.0"/>
-  <line class="whisk" x1="684.0" y1="34.0" x2="1072.1" y2="34.0"/>
-  <line class="whisk" x1="248.9" y1="25.0" x2="248.9" y2="43.0"/>
-  <line class="whisk" x1="1072.1" y1="25.0" x2="1072.1" y2="43.0"/>
-  <rect class="box" x="295.9" y="22.0" width="388.1" height="24.0"/>
-  <rect class="cell" x="409.2" y="28.0" width="12.0" height="12.0"/>
+  <line class="whisk" x1="34.9" y1="68.0" x2="58.7" y2="68.0"/>
+  <line class="whisk" x1="255.3" y1="68.0" x2="451.8" y2="68.0"/>
+  <line class="whisk" x1="34.9" y1="59.0" x2="34.9" y2="77.0"/>
+  <line class="whisk" x1="451.8" y1="59.0" x2="451.8" y2="77.0"/>
+  <rect class="box" x="58.7" y="56.0" width="196.6" height="24.0"/>
+  <rect class="cell" x="113.1" y="62.0" width="12.0" height="12.0"/>
 
   <!-- M4 tick rule: the scale the interval is read against -->
-  <line class="axis" x1="180.0" y1="58.0" x2="1104.0" y2="58.0"/>
-  <line class="axis" x1="180.0" y1="58.0" x2="180.0" y2="65.0"/>
-  <line class="axis" x1="348.0" y1="58.0" x2="348.0" y2="62.0"/>
-  <line class="axis" x1="516.0" y1="58.0" x2="516.0" y2="62.0"/>
-  <line class="axis" x1="684.0" y1="58.0" x2="684.0" y2="62.0"/>
-  <line class="axis" x1="852.0" y1="58.0" x2="852.0" y2="62.0"/>
-  <line class="axis" x1="1020.0" y1="58.0" x2="1020.0" y2="65.0"/>
-  <text class="tik" x="180.0" y="78" data-claim="none">0</text>
-  <text class="tik" x="600.0" y="78" text-anchor="middle" data-claim="none">250</text>
-  <text class="tik" x="1104.0" y="78" text-anchor="end" data-claim="none">500 RESPONDENTS</text>
+  <line class="axis" x1="0.0" y1="92.0" x2="468.0" y2="92.0"/>
+  <line class="axis" x1="0.0" y1="92.0" x2="0.0" y2="99.0"/>
+  <line class="axis" x1="85.1" y1="92.0" x2="85.1" y2="96.0"/>
+  <line class="axis" x1="170.2" y1="92.0" x2="170.2" y2="96.0"/>
+  <line class="axis" x1="255.3" y1="92.0" x2="255.3" y2="96.0"/>
+  <line class="axis" x1="340.4" y1="92.0" x2="340.4" y2="96.0"/>
+  <line class="axis" x1="425.5" y1="92.0" x2="425.5" y2="99.0"/>
+  <text class="tik" x="0.0" y="112" data-claim="none">0</text>
+  <text class="tik" x="212.7" y="112" text-anchor="middle" data-claim="none">250</text>
+  <text class="tik" x="468.0" y="112" text-anchor="end" data-claim="none">500 RESPONDENTS</text>
 
-  <line class="rule" x1="0" y1="92" x2="1160" y2="92"/>
+  <line class="rule" x1="0" y1="126" x2="480" y2="126"/>
 
   <!-- Provenance rule, DESIGN.md sec 2. Mandatory, same visual unit as the figure. -->
-  <text class="src" x="0" y="110" data-claim-source="">Distribution across 129 studies, each at its own median active day. Box: 25th to 75th percentile. Whiskers: 10th (41) to 90th (531).</text>
-  <text class="src" x="0" y="126" data-claim-source="">An active day is a study-day recruiting at least 20 respondents; half of studies have 11 or more.</text>
+  <text class="src" x="0" y="144" data-claim-source="">Distribution across 129 studies, each at its own median active day. Box: 25th to</text>
+  <text class="src" x="0" y="160" data-claim-source="">75th percentile. Whiskers: 10th (41) to 90th (531).</text>
+  <text class="src" x="0" y="176" data-claim-source="">An active day is a study-day recruiting at least 20 respondents; half of studies</text>
+  <text class="src" x="0" y="192" data-claim-source="">have 11 or more.</text>
 </svg>

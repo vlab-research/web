@@ -149,6 +149,27 @@ easier to hold once you have seen the page.
 needs, and under Eleventy it would turn every 404, including a typo'd `/privacy`, into a
 silent homepage. Four 301s replace it for the old SPA fragments.
 
+### `_data/*.js` must export a FUNCTION, and this one cost an hour
+
+**Both `_data/coverage.js` and `_data/inline.js` exported an object literal**, which Node
+evaluates once at import and then pins in the ESM module cache for the life of the process.
+**`eleventy --serve` therefore served whatever `build/` and `assets/figures/` held when the
+server started**, no matter how many times a generator re-ran afterwards.
+
+**The symptom was baffling and worth recognising again.** Nandan: *"I sometimes see 'the bar
+spans the X respondents' underneath the strip bar. It then sometimes disappears, then comes
+back."* It was not intermittent at all — a one-shot `npm run build` was always correct and
+the long-running dev server was always stale, so which one he was looking at decided what he
+saw. A repo-wide grep found the sentence only in a source comment, which made it look like a
+ghost.
+
+**Both files now export `() => ({ … })`.** Eleventy calls the function on every build, so the
+files are re-read. **Any new `_data/*.js` that reads from disk must do the same** — an object
+literal there is a latent version of this bug, and nothing in the checks will catch it.
+
+**A generated artefact that looks stale is this, until proved otherwise.** Kill the dev
+server, `rm -rf _site build`, `npm run build`, and compare — that is the two-command test.
+
 ### index.html is a page, not a notebook — keep it that way
 
 **Halved on 2026-08-26**, 729 lines to 485, after Nandan: *"It's very hard to look at
