@@ -976,6 +976,52 @@ where it breaks.** D-007 records that derivation.
 
 ---
 
+### D-028 — The site ships light; dark is kept dormant, not deleted
+**Status:** Settled · 2026-08-27 · *reverses the "three theme states" half of the old §3
+theme rules; the rest of §3 is untouched*
+
+**Nandan:** *"it shows up in dark mode in many browsers, I dont like that"* — and, on how far
+to go: *"I don't wanna navigate some toggle, and let's just ship default light mode. We can
+keep the dark mode dormant there to not rip the code out. Why not."*
+
+**The site renders light for everyone.** The `@media (prefers-color-scheme: dark)` block is
+gone from `css/site.css` and from the DESIGN.md §3 token block. Nothing on the site stamps
+`data-theme`, so an unstamped root — every page served — resolves to the light palette.
+
+**Rationale.** The design was drawn in light and the dark palette was built to match it. The
+site now follows the drawing rather than the visitor's OS. That is the whole reason; there is
+no claim here about what any visitor wants.
+
+**Three consequences worth writing down.**
+
+1. **`color-scheme: only light`, not plain `light`.** Deleting the media query alone would
+   have made this *worse* on Android: Chrome's Auto Dark Theme auto-darkens pages that do not
+   declare dark support, so the fix needs the declaration. `only` is what disables the UA
+   adjustment — plain `light` does not.
+
+2. **What still overrides us is not fought.** Dark Reader and its kin, and Windows
+   forced-colors, re-tint the page regardless. Both are a user darkening their entire
+   machine. No further work is warranted there, and attempts to defeat them break the
+   accessibility case that forced-colors exists for.
+
+3. **Dormant means kept, and kept checked.** The `:root[data-theme="dark"]` block stays in
+   `css/site.css` and in DESIGN.md, and `scripts/check-contrast.py` still verifies both
+   palettes. **A new colour therefore still needs its dark value chosen alongside its light
+   one.** The cost of that discipline is small; the point of it is that restoring dark stays
+   a one-block edit rather than a re-design. It also has one live consumer today —
+   `scripts/build-review.py` stamps `data-theme` itself and keeps its own copy of the tokens,
+   so its light/dark/system toggle is unaffected by any of this.
+
+**Superseded rule.** `AGENTS.md` hard rule 7 read *"three theme states, not two."* It now
+reads that the site ships light and dark is dormant. The surviving half of the old rule still
+binds: **never declare a colour whose only definition sits inside a `[data-theme]` block** —
+that block is now one nothing on the site matches at all.
+
+**To reverse this,** restore the media query in `css/site.css` §3 and drop `only light`. Both
+sites of the edit carry a comment pointing here.
+
+---
+
 ---
 
 ## Open

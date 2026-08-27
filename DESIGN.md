@@ -167,6 +167,8 @@ is broken — use a teal tint instead.
 
 ```css
 :root{
+  color-scheme: only light;   /* `only`, not plain `light` — D-028 */
+
   /* surfaces */
   --paper:#F1F4F5;   --surface:#FFFFFF;   --sunk:#E5EBED;   --invert:#1F272E;
   /* text */
@@ -184,30 +186,39 @@ is broken — use a teal tint instead.
   /* lattice ground opacity */
   --lat-op:.042;     --lat-op-inv:.065;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#13181C;   --surface:#1C2227;   --sunk:#262E34;   --invert:#0C1013;
-    --ink:#E6EBEE;     --ink-2:#B2BEC6;     --ink-3:#808E97;
-    --rule:#2A343B;    --rule-2:#414F58;
-    --brass:#C9A250;   --brass-2:#DBB768;
-    --data:#4E9DB0;    --data-2:#4A6871;
-    --on-invert:#E6EBEE; --on-invert-2:#94A3AB; --rule-invert:#232C33;
-    --brass-inv:#C9A250; --data-inv:#4E9DB0;
-    --lat-op:.055;     --lat-op-inv:.065;
-  }
-}
+/* No @media (prefers-color-scheme: dark) block. D-028: the site ships light and
+   does not follow the system preference. The dark palette below is dormant on
+   the site — nothing stamps data-theme — and live only in the review harness. */
 :root[data-theme="dark"]{
-  /* identical to the media block above — repeat it, do not @import or alias */
+  color-scheme: only dark;
+  --paper:#13181C;   --surface:#1C2227;   --sunk:#262E34;   --invert:#0C1013;
+  --ink:#E6EBEE;     --ink-2:#B2BEC6;     --ink-3:#808E97;
+  --rule:#2A343B;    --rule-2:#414F58;
+  --brass:#C9A250;   --brass-2:#DBB768;
+  --data:#4E9DB0;    --data-2:#4A6871;
+  --on-invert:#E6EBEE; --on-invert-2:#94A3AB; --rule-invert:#232C33;
+  --brass-inv:#C9A250; --data-inv:#4E9DB0;
+  --lat-op:.055;     --lat-op-inv:.065;
 }
 ```
 
 ### Theme rules
 
-- Three states, not two: explicit `data-theme="dark"` / `"light"`, and **unstamped**
-  (system default) where only `prefers-color-scheme` applies. All three must resolve.
-- **Never declare a colour only inside a media query or `[data-theme]` block.** Define
-  it on bare `:root`, redefine the *token* in the other two. A colour whose only
-  definition sits behind `[data-theme]` never applies to the unstamped majority.
+- **The site is light. D-028.** There is no `prefers-color-scheme` block, so an
+  unstamped root — every page this site serves — resolves light. Do not add one back
+  without reopening D-028.
+- **`color-scheme: only light`, not `light`.** Plain `light` leaves Chrome's Auto Dark
+  Theme on Android free to re-tint the page; `only` disables that UA adjustment. What
+  it cannot disable — Dark Reader and friends, Windows forced-colors — is a user
+  darkening their whole machine, and is not fought.
+- **Never declare a colour only inside a `[data-theme]` block.** Define it on bare
+  `:root` and redefine the *token* under `[data-theme="dark"]`. A colour whose only
+  definition sits behind `[data-theme]` never renders on this site at all.
+- **Dark is dormant, not deleted, and stays contrast-checked.** `check-contrast.py`
+  still runs both palettes. A new colour needs its dark value chosen at the same time
+  as its light one, so that restoring dark stays a one-block edit rather than a
+  re-design. The one live consumer is `scripts/build-review.py`, which stamps the root
+  itself and keeps its own copy of the tokens.
 - `body` sets an explicit `background: var(--paper)`. A transparent body borrows the
   host's ground and the page renders one theme's text on the other theme's surface.
 - Dark is a designed palette, not an inversion. Note brass **lifts** to `#C9A250` and

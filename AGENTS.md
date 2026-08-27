@@ -896,9 +896,13 @@ it does not resurrect either banned framing.
    shipped once — brass on an ink band read 2.43:1 in light mode and looked perfect in
    dark. See `DESIGN.md` §3, "The `--brass-inv` trap."
 
-7. **Three theme states, not two.** Explicit light, explicit dark, and **unstamped**
-   (system default) — which is what most visitors get. Never declare a colour whose
-   only definition sits inside a media query or a `[data-theme]` block.
+7. **The site ships light; dark is dormant.** D-028 removed the
+   `prefers-color-scheme` block, so an unstamped root — every page served — is light,
+   and `:root` carries `color-scheme: only light` to stop Chrome's Auto Dark Theme
+   re-tinting it on Android. The dark palette is kept and still contrast-checked, so
+   give a new colour its dark value at the same time as its light one. Never declare a
+   colour whose only definition sits inside a `[data-theme]` block — nothing on this
+   site matches it.
 
 8. **All graphics are inline SVG** built from the four primitives (bar, tick, cell,
    bracket). No icon fonts, no chart libraries, no raster illustration. If a needed

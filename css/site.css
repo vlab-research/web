@@ -10,9 +10,13 @@
 
    Two rules govern more of this file than any other:
 
-     · Three theme states, not two — explicit light, explicit dark, and
-       UNSTAMPED, which is what most visitors get. No colour is ever declared
-       only inside a media query or a [data-theme] block.
+     · The site ships light. D-028 dropped the prefers-color-scheme block, so
+       an unstamped page — which is every page this site serves — is light.
+       The dark palette survives under [data-theme="dark"], dormant here and
+       live only in scripts/build-review.py, which stamps the root itself.
+       The old rule still binds what remains: no colour is ever declared only
+       inside a [data-theme] block, because that block is the one most
+       visitors never match.
      · An ink band is dark in BOTH themes and the tokens are not. On an ink
        band, brass is --brass-inv, data is --data-inv, and a source line is
        --on-invert-2 — never --ink-3, which reads 4.00:1 there.
@@ -28,6 +32,12 @@
    ========================================================================== */
 
 :root{
+  /* `only light`, not `light`. Plain `light` still lets Chrome's Auto Dark
+     Theme on Android re-tint the page; `only` disables that UA adjustment.
+     D-028. Extensions (Dark Reader) and forced-colors override this and are
+     not fought — both are a user asking their machine to darken everything. */
+  color-scheme: only light;
+
   /* surfaces */
   --paper:#F1F4F5;   --surface:#FFFFFF;   --sunk:#E5EBED;   --invert:#1F272E;
   /* text */
@@ -46,23 +56,13 @@
   --lat-op:.042;     --lat-op-inv:.065;
 }
 
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#13181C;   --surface:#1C2227;   --sunk:#262E34;   --invert:#0C1013;
-    --ink:#E6EBEE;     --ink-2:#B2BEC6;     --ink-3:#808E97;
-    --rule:#2A343B;    --rule-2:#414F58;
-    --brass:#C9A250;   --brass-2:#DBB768;
-    --data:#4E9DB0;    --data-2:#4A6871;
-    --on-invert:#E6EBEE; --on-invert-2:#94A3AB; --rule-invert:#232C33;
-    --brass-inv:#C9A250; --data-inv:#4E9DB0;
-    --lat-op:.055;     --lat-op-inv:.065;
-  }
-}
-
-/* Identical to the media block above. DESIGN.md §3: repeat it, do not @import
-   or alias. The explicit stamp must win over the system preference in both
-   directions, which an alias cannot do. */
+/* D-028: the site does not follow the system dark preference. There is no
+   @media (prefers-color-scheme: dark) block here, and its absence is the
+   feature — deleting `only light` above or restoring the media query both
+   bring auto-dark back. The palette below is what a restored media query
+   would carry; it is kept, and kept checked, so that stays a one-block edit. */
 :root[data-theme="dark"]{
+  color-scheme: only dark;
   --paper:#13181C;   --surface:#1C2227;   --sunk:#262E34;   --invert:#0C1013;
   --ink:#E6EBEE;     --ink-2:#B2BEC6;     --ink-3:#808E97;
   --rule:#2A343B;    --rule-2:#414F58;

@@ -7,6 +7,9 @@ Run before publishing anything that introduces a new colour pairing:
 
 Exists because this bug already shipped once: brass on an ink band measured 2.43:1
 in light mode and looked perfect in dark mode. See DESIGN.md §3.
+
+Checks both palettes. The site itself serves only light (D-028); the dark palette is
+kept dormant and verified so that restoring it stays a one-block edit.
 """
 import sys
 
@@ -17,6 +20,10 @@ LIGHT = {
     "on-invert-2": "#A9B8BF", "brass-inv": "#C9A250", "data-inv": "#4E9DB0",
     "ink-3-on-band": "#79858D", "data-raw": "#1D5F6E",
 }
+# Still checked although the site no longer serves dark: D-028 left the palette
+# dormant rather than deleting it, on the condition that it stay verified. Do not
+# "clean this up" because no page renders it — scripts/build-review.py does, and
+# an unchecked palette makes restoring dark a re-design instead of a one-block edit.
 DARK = {
     "paper": "#13181C", "surface": "#1C2227", "sunk": "#262E34", "invert": "#0C1013",
     "ink": "#E6EBEE", "ink-2": "#B2BEC6", "ink-3": "#808E97",
