@@ -175,6 +175,9 @@ from the session. Commit before running a sweeping edit over this file.
 
 **Neither is unfinished work. Both are one line, and both are somebody's decision.**
 
+**`index.html` carries no comments at all** (2026-08-26), so everything below is the only
+record that these slots exist. Read it before concluding the page is missing something.
+
 - **[P-1] The hero readout.** `COPY.md` §1.1 wants a recorded replay of a live stratum
   readout. The component's rows are `achieved / target` **per stratum** — real values from a
   real study — and **no `CLAIMS.md` row exists for any of them.** Rendering it today means
@@ -263,9 +266,26 @@ the five values do not exist. Hard rule 2 forbids inventing either, so
 `scripts/build-reallocations-figure.py` **exits 1 and names them.** The generator is
 complete and has been dry-run against substituted values — geometry, wrapping, axis labels
 and the axis guard all behave. `scripts/data/reallocations.json` carries the query and both
-traps that have produced a wrong number here before. The markup is in `index.html` ready to
-uncomment, **after the recipe** rather than beside the other two: those answer *how fast* and
-*how much*, this one answers *what the work consists of*.
+traps that have produced a wrong number here before.
+
+**`index.html` carries no comments, so the wiring lives here.** Once `p10` and `p25` land:
+
+1. `python3 scripts/build-reallocations-figure.py` — it exits 0 and writes
+   `assets/figures/reallocations-box.svg`.
+2. Add to `_data/inline.js`, beside the other two figures:
+   `reallocations: read("assets/figures/reallocations-box.svg"),`
+3. In `index.html`, inside the optimization section and **directly after the paragraph
+   beginning "The price per stratum is not known in advance"** — that paragraph describes
+   the loop, and this is how often the loop turns:
+
+   ```
+   <div class="figs">
+     <figure class="fig">{{ inline.figures.reallocations | safe }}</figure>
+   </div>
+   ```
+
+**Not beside the other two box plots.** Those answer the opening's questions — *how fast*
+and *how much*; this one answers the recipe's, *what the work actually consists of*.
 
 **Do not draw a variant that fits the data we have.** The three box plots are deliberately
 one figure in three units, so a reader who learns to read one has learned to read all of
