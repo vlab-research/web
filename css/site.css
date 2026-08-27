@@ -617,11 +617,17 @@ small,.caption{ font-size:13px }
    phone. This one does not: stacked, the thread simply follows the words. */
 .platform{ display:grid; grid-template-columns:1fr minmax(340px,500px); gap:0 56px; align-items:start }
 
-/* M5 · the thread. Its own scroll container: the drawing is 460 units wide and
-   its type is sized for that, so it keeps a legible minimum and scrolls rather
-   than shrinking under it. */
-.threadwrap{ overflow-x:auto; width:100% }
-.thread{ display:block; width:100%; min-width:400px; height:auto }
+/* M5 · the thread. Two viewBoxes, one shown, exactly as §7's figures do it. The
+   drawing carries its own type at absolute sizes, so the 460-unit wide one cannot
+   shrink into a phone. It used to be a scroll container instead, which put the
+   respondent's replies — they sit at the right edge — off the side of a phone,
+   and a thread whose answers are out of sight is not a thread. Below 640px the
+   narrow variant takes over: the same drawing at 340 units.
+   Stacked, both are capped rather than stretched to the measure; a chat mock blown
+   up to 800px reads as a mistake. */
+.threadwrap{ width:100% }
+.thread{ display:block; width:100%; height:auto }
+.thread.narrow{ display:none }
 
 /* The platform's feature list. A <dl>: each cell is a term and its definition,
    which is what these are. Two columns, 1px gaps over --rule, exactly the stat
@@ -738,6 +744,7 @@ blockquote.quote .src{ margin-top:14px }
 @media (max-width:900px){
   .figs{ grid-template-columns:1fr }
   .platform{ grid-template-columns:1fr; gap:34px 0 }
+  .threadwrap{ max-width:460px }
 }
 
 @media (max-width:860px){
@@ -757,6 +764,10 @@ blockquote.quote .src{ margin-top:14px }
 
 @media (max-width:640px){
   .feat{ grid-template-columns:1fr }
+  /* The thread's narrow viewBox. See §6 M5. */
+  .threadwrap{ max-width:360px }
+  .thread{ display:none }
+  .thread.narrow{ display:block }
   .cs-cells{ grid-template-columns:repeat(2,1fr) }
   .wall{ grid-template-columns:1fr }
   /* The handle moves above the text. A 132px name column and a readable measure

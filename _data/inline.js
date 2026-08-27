@@ -39,5 +39,9 @@ export default () => ({
     // data-claim="none".
     reallocations: read("assets/figures/reallocations-box.svg"),
     thread: read("assets/figures/thread.svg"),
+    // Its narrow variant, on the same rule as the box figures above: the wide drawing
+    // is 460 units and the respondent's replies sit at its right edge, so on a phone
+    // they were the part that scrolled out of sight.
+    threadNarrow: read("assets/figures/thread-narrow.svg"),
   },
 });
