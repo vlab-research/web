@@ -380,21 +380,52 @@ role to its inverted token — `--ink-3` measures 4.00:1 there and `--ink` disap
 >
 > | | | |
 > |---|---|---|
-> | 01 | STRATA | **One ad set per stratum**, each targeting a different slice of the population. |
-> | 02 | ALLOCATION | **Spend adjusted continuously**, so every stratum fills toward the share you asked for rather than the share that happens to be cheap. |
-> | 03 | PRICES | **The allocation itself revisited as prices move** — some strata cost many times what others do, and the budget has to go where it buys the most precision. |
-> | 04 | UNIQUENESS | **Keeping the same person from answering twice.** |
+> | 01 | STRATA | **One ad set per stratum**, each targeting a different slice of the population, based on the appropriate stratification variables. |
+> | 02 | ALLOCATION | **Spend allocated among strata**, so every stratum fills toward the share you asked for rather than the share that happens to be cheap. |
+> | 03 | PRICES | **The allocation itself revisited as prices move** — prices for each stratum need to be estimated individually, live, to know how to reallocate spend to buy the most precision in your final estimator. |
+> | 04 | UNIQUENESS | **Verifying the identity of each respondent** — because otherwise everyone on the internet will answer your survey many times over. |
 > | 05 | INCENTIVES | **Paying an incentive to each respondent**, in their own country and in a form they can actually use. |
-> | 06 | FOLLOW-UP | **The same people found again months later** for an endline. |
+> | 06 | FOLLOW-UP | **The same people found again months later** for an endline survey, where appropriate. |
+
+**Rewritten by Nandan, 2026-08-26**, and step 04 is the one to read twice.
+
+**Step 04 lifts C-069's scope note.** It had read *"Keeping the same person from answering
+twice"*, deliberately neutral because the register said the row *"must never be written as a
+fraud or duplicate-prevention claim"*. It now says **verifying the identity** and gives the
+reason. That was raised before it was written and Nandan wrote it himself, which is the
+decision; **`CLAIMS.md` carries the lift**, on the rule he set at C-066 — update the register
+in the same breath.
+
+**C-077 did not move, and this is the line to hold.** Any **measured or comparative** claim
+about fraud, duplicates or identity verification **against another recruitment source** is
+still `WITHHELD`, because no measurement exists and D-023 forbids the comparison
+independently. The description is sanctioned; **a number or a rival attached to it is not.**
 
 **The handles must earn their keep.** A handle is decoration unless the copy uses it
 afterwards. The recap is the minimum use; the prose should use them as words too, which is
-why the band now closes on *"Prices are not known in advance"* rather than *"p_h is not
-known in advance."*
+why the band now closes on *"The price per stratum is not known in advance"*.
 
-**UNIQUENESS is deliberately neutral and is not "one per person."** The list says *person*;
-C-069 only supports per *account* and its scope note forbids writing it as a fraud or
-duplicate-prevention claim. The handle keeps that gap visible rather than quietly closing it.
+**~~UNIQUENESS is deliberately neutral~~ — superseded 2026-08-26**, see step 04 above. The
+handle is unchanged; what changed is the line beside it.
+
+#### Cut by Nandan, 2026-08-26 — four things, recorded so they are not restored by accident
+
+- **The throughput figure's prose**, *"A distribution across studies, not an average. The
+  spread is the useful part."* Both figures now stand on their own source lines.
+- **The math's source line**, *"Donati & Rao, 2025."* The paper is directly beneath it, so
+  the line cited the same document twice in three lines. **`DESIGN.md` §8 is updated: if the
+  math is ever separated from the paper again, the source line comes back.**
+- **The separation clause**, *"The paper analyzes thirty-three studies. The company did not
+  begin with it…"* — written two messages before it was cut, to answer *"we don't want people
+  to think we wrote the paper to start a company."* **The concern it answered is not on the
+  page any more.** The order still argues it implicitly — the totals band and *since February
+  2020* come long before the paper — but nothing states it. Worth a second look.
+- **"Ours is called Fly, and it is open source."** Replaced by *"We built a chatbot survey
+  platform to facilitate online recruitment, surveying, and interventions."*
+  **Fly is now named nowhere on the page.** D-024 settled that Fly *may* be named, not that
+  it must, so this breaks no rule — but it was a decision worth making deliberately, and the
+  only surviving occurrence is inside an SVG comment that ships to the browser and is visible
+  to nobody.
 
 #### 01–03 · the optimization problem, **and the paper** — paper ground
 

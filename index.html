@@ -96,9 +96,6 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
         <figure class="fig">{{ inline.figures.throughput | safe }}</figure>
       </div>
 
-      <p class="prose">
-        A distribution across studies, not an average. The spread is the useful part.
-      </p>
     </div>
   </div>
 </section>
@@ -128,23 +125,22 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
         <li>
           <span class="n" data-claim="none">01</span><span class="nm">Strata</span>
           <span class="t"><strong>One ad set per stratum</strong>, each targeting a
-            different slice of the population.</span>
+            different slice of the population, based on the appropriate stratification variables.</span>
         </li>
         <li>
           <span class="n" data-claim="none">02</span><span class="nm">Allocation</span>
-          <span class="t"><strong>Spend adjusted continuously</strong>, so every stratum
+          <span class="t"><strong>Spend allocated among strata</strong>, so every stratum
             fills toward the share you asked for rather than the share that happens to be
             cheap.</span>
         </li>
         <li>
           <span class="n" data-claim="none">03</span><span class="nm">Prices</span>
           <span class="t"><strong>The allocation itself revisited as prices move</strong>
-            &mdash; some strata cost many times what others do, and the budget has to go
-            where it buys the most precision.</span>
+            &mdash; prices for each stratum need to be estimated individually, live, to know how to reallocate spend to buy the most precision in your final estimator.</span>
         </li>
         <li>
           <span class="n" data-claim="none">04</span><span class="nm">Uniqueness</span>
-          <span class="t"><strong>Keeping the same person from answering twice.</strong></span>
+          <span class="t"><strong>Verifying the identity of each respondent</strong>&mdash; because otherwise everyone on the internet will answer your survey many times over.</span>
         </li>
         <li>
           <span class="n" data-claim="none">05</span><span class="nm">Incentives</span>
@@ -154,7 +150,7 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
         <li>
           <span class="n" data-claim="none">06</span><span class="nm">Follow-up</span>
           <span class="t"><strong>The same people found again months later</strong> for an
-            endline.</span>
+            endline survey, where appropriate.</span>
         </li>
       </ol>
     </div>
@@ -175,8 +171,7 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
 
       <p class="prose">
         You are choosing how many respondents to recruit in each stratum. You want the
-        smallest variance on your weighted estimate, and you are bounded by what you can
-        spend.
+        smallest variance on your weighted estimate, and you are bounded by your budget.
       </p>
 
       {{ objective() }}
@@ -194,9 +189,6 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
         estimate changes the allocation, which changes what you learn next. That loop is why
         this is software and not a spreadsheet.
       </p>
-
-      <p class="src" data-claim-source>Donati &amp; Rao, 2025.</p>
-
 
       <p class="prose">The method is published, and the validation with it.</p>
 
@@ -216,13 +208,6 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
           https://ssrn.com/abstract=5495148
         </p>
       </blockquote>
-
-      <p class="prose">
-        The paper analyzes thirty-three studies. <strong>The company did not begin with
-        it:</strong> Virtual Lab has been fielding studies since February 2020, and the
-        paper validates a method that was already running. Our operating history is the band
-        at the top of this page.
-      </p>
 
       <p><a class="btn sec" href="https://ssrn.com/abstract=5495148" rel="noopener">Read the paper on SSRN</a></p>
     </div>
@@ -244,11 +229,8 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
           </ol>
 
           <p class="prose">
-            Ours is called Fly, and it is open source. The questionnaire runs as a
-            conversation inside the messaging app the respondent already uses &mdash;
-            Messenger or WhatsApp &mdash; one question at a time, in their own language.
+            We built a chatbot survey platform to facilitate online recruitment, surveying, and interventions. The questionnaire runs as a conversation inside the messaging app the respondent already uses &mdash; Messenger or WhatsApp &mdash; one question at a time, in their own language.
           </p>
-
           <p class="prose">
             It asks, the respondent answers, and the thread stays open. Months later the
             same conversation reopens for an endline, with no one re-enrolling.
@@ -277,8 +259,7 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
         <div>
           <dt>Actions recorded, not just answers</dt>
           <dd>A link is sent as a button and the click is recorded. A video plays inside
-            the thread, and play, pause, seek and completion are recorded as events &mdash;
-            a question can wait until it has been watched.</dd>
+            the thread, and play, pause, seek and completion are recorded as events.</dd>
         </div>
         <div>
           <dt>Conditional logic</dt>
@@ -334,8 +315,7 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
     <div class="stack">
       <h2>Tell us what you need to measure</h2>
       <p class="prose">
-        Tell us who you need to measure it among, where, and by when, and we will come
-        back with a design, a timeline and a price.
+        Tell us what you want to measure, as a survey or an impact evaluation, and we will help you come up with a design, a timeline, and a price.
       </p>
       <p><a class="btn pri" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     </div>

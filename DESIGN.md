@@ -850,8 +850,12 @@ are structure, and a numeral inside them is not a value anyone can check against
   reserved for legal copy.
 - **The surrounding prose is not exempt.** If a sentence beside the math states a value, that
   value needs a row like any other.
-- **The block still carries a source line** — the math is somebody's published formulation
-  and is cited as such.
+- **The block carried a source line until 2026-08-26**, when the paper moved directly
+  beneath it. The math is somebody's published formulation and must be cited as such — but
+  with the title, byline, abstract and SSRN link now immediately below, a *"Donati & Rao,
+  2025"* line between the two cited the same document twice in three lines. The citation is
+  the paper block. **If the math is ever separated from it again, the source line comes
+  back.**
 - **No new typeface.** Math is set in the existing serif and mono; a math face would be a
   §4 change and rule 5 applies.
 - **Render as MathML**, not as an image: it inherits `currentColor`, so it holds in all three

@@ -602,6 +602,34 @@ this register does not have — and since D-023 the site makes no comparison wit
 recruitment source in any case. See the note under C-006, and the framing rules in
 `AGENTS.md`.
 
+### C-069's scope note was lifted on 2026-08-26, and C-077 was not
+
+**The page now says this**, in the step list, in Nandan's own words:
+
+> **Verifying the identity of each respondent** — because otherwise everyone on the internet
+> will answer your survey many times over.
+
+**That is the wording C-069's scope note forbade** — *"must never be written as a fraud or
+duplicate-prevention claim"* — and it was raised before it was written. Nandan wrote it into
+the page himself and asked for the change to be committed, which is the decision; the row is
+updated here so the register and the page agree, on the rule he set when C-066 was reversed:
+**update the register in the same breath.**
+
+**What is now published:** the *mechanism plus its rationale*. One run per form per account,
+and the reason that matters — an open web survey can be answered repeatedly by anyone.
+
+**What C-077 still withholds, and it did not move:** any **measured or comparative** claim
+about fraud, duplicate respondents or identity verification **against another recruitment
+source**. No measurement exists; it is traceable only to a sales call in which the speaker
+labels it an assumption and offers the figure as a guess, and the signed scope of that
+engagement sells manual photo-ID review instead. **D-023 forbids the comparison
+independently.** So: no rate, no percentage, no "better than", no named competitor.
+
+**The line to hold from here.** *"Verifying the identity of each respondent"* is now
+sanctioned as a description of what the platform account does. **A number attached to it is
+not**, and neither is a comparison. If either is wanted, that is a measurement someone has to
+run, and until they do it is the one thing this register exists to prevent.
+
 ### C-066 was reversed on 2026-08-26, and the reversal has a condition attached
 
 **It was `WITHHELD` in the strongest terms this register uses.** The row read *"designed,
@@ -678,7 +706,7 @@ register:
 | C-066 | Collecting photographs from respondents | **A question can ask for a photo and the respondent sends one** | `fly/planning/inbound-media.md`. **Released for publication by Nandan Rao, 2026-08-26** — *"Forget the ban"* — reversing the 2026-08-21 `WITHHELD`. Operator knowledge, the same source type as C-032 and C-094–C-096. **Read the retention note below before writing another word about it** | `VERIFIED` | 2026-08-26 |
 | C-067 | Multilingual studies | Each language is its own linked form; closed-ended answers are mapped to one base language as they are recorded, so a multilingual study exports as one dataset | `fly/devops/migrations` (`translation_conf`, `translated_response`); `trans/forms.go`, `trans/responses.go`; `fly/scribble/response.go`; `fly/formcentral/server.go`. **Scope: closed-ended answers only — free text is not mapped. Never write "full multilingual support"** | `VERIFIED` | 2026-08-21 |
 | C-068 | Questionnaire messages in the respondent's language | Fly's own rejection, nudge and closing messages are set per form, not fixed in English | `docs` → `content/fly/reference/messages.md`; `fly/replybot/lib/generic-validator.js` | `VERIFIED` | 2026-08-21 |
-| C-069 | One run of a form per account | A participant cannot restart a form the same account has already entered | `fly/replybot/lib/typewheels/machine.js` (`REFERRAL` branch, `_hasForm`). **Scope: one account. It says nothing about one person holding several accounts, and must never be written as a fraud or duplicate-prevention claim** | `VERIFIED` | 2026-08-21 |
+| C-069 | One run of a form per account | A participant cannot restart a form the same account has already entered | `fly/replybot/lib/typewheels/machine.js` (`REFERRAL` branch, `_hasForm`). **Scope: one account. It says nothing about one person holding several accounts.** ~~must never be written as a fraud or duplicate-prevention claim~~ — **that clause was lifted by Nandan Rao, 2026-08-26; read "C-069's scope note was lifted" below before writing this anywhere** | `VERIFIED` | 2026-08-26 |
 | C-070 | Attrition handling | Standing rules move participants who match a condition — including "has not answered for N weeks" — from one form to another, with the matched set previewable before the rule runs | `docs` → `content/fly/reference/bails.md`; `fly/exodus/`; `fly/documentation/bail-systems.md` | `VERIFIED` | 2026-08-21 |
 | C-071 | Longitudinal studies | Forms chain to one another and carry metadata forward, so one participant runs a baseline and an endline months apart inside one study | `docs` → `content/fly/core-concepts.md`, `content/fly/reference/questions.md` §Stitch; `fly/README.md`. Consistent with C-011's long right tail | `VERIFIED` | 2026-08-21 |
 | C-072 | The record of a study | Every message exchanged with every participant is recorded and exportable, alongside the response data | `fly/documentation/chat-message-logging.md`, `full-messages-export.md` | `VERIFIED` | 2026-08-21 |
