@@ -1,14 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- Virtual Lab favicon. Motif M2, bar and target tick, on an ink tile.
-       An ink band is dark in BOTH themes, so every colour here is a token that is
-       identical in both: invert #1F272E, on-invert #EDF1F2, data-inv #4E9DB0,
-       brass-inv #C9A250 (DESIGN.md section 3). No media query is needed and none
-       is wanted: a favicon has no theme context to inherit.
-       Top bar reaches the tick (at target, data-inv); bottom bar stops short
-       (under target, brass-inv). State is carried by hue AND by length; M2's
-       135deg hatch is dropped because it does not exist at 16px. -->
+  <!-- D1. Motif M1, cell lattice. The nav mark, squared onto an ink tile - the same
+       lock-up the footer already uses (ink band, on-invert lattice, DESIGN.md 8).
+       Nine cells, five at target. Cell 8, gap 2, block 28, margin 2, so at 16px every
+       cell is exactly 4 device px and every gap exactly 1. Colours: invert 1F272E,
+       on-invert EDF1F2. Under-target cells are the same on-invert at reduced opacity,
+       which is what assets/mark.svg does; no second hue is introduced. -->
   <rect width="32" height="32" rx="2" fill="#1F272E"/>
-  <rect x="23" y="4"  width="3"  height="24" fill="#EDF1F2"/>
-  <rect x="6"  y="7"  width="17" height="6"  fill="#4E9DB0"/>
-  <rect x="6"  y="19" width="10" height="6"  fill="#C9A250"/>
+  <g fill="#EDF1F2">
+    <rect x="2"  y="2"  width="8" height="8"/>
+    <rect x="12" y="2"  width="8" height="8"/>
+    <rect x="22" y="2"  width="8" height="8" fill-opacity=".34"/>
+    <rect x="2"  y="12" width="8" height="8"/>
+    <rect x="12" y="12" width="8" height="8" fill-opacity=".34"/>
+    <rect x="22" y="12" width="8" height="8"/>
+    <rect x="2"  y="22" width="8" height="8" fill-opacity=".34"/>
+    <rect x="12" y="22" width="8" height="8"/>
+    <rect x="22" y="22" width="8" height="8" fill-opacity=".34"/>
+  </g>
 </svg>

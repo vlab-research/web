@@ -383,7 +383,8 @@ cells, some full, some empty.
   must read as texture on inspection and as nothing at a glance.
 - Each instance needs a unique `<pattern id>`.
 - Parent needs `position:relative; overflow:hidden`; content above it needs `position:relative`.
-- **Used on:** hero, ink bands, CTA, footer, 404, loading states, country coverage map, the mark.
+- **Used on:** hero, ink bands, CTA, footer, 404, loading states, country coverage map,
+  the mark — **and the favicon**, from 2026-08-26.
 
 ### M2 · Bar and target tick — *load-bearing, the signature*
 
@@ -404,7 +405,18 @@ optimiser and the literal thing a buyer purchases.
   it. The redundancy requirement of D-011 is met by length rather than by pattern; it is
   never met by hue alone.
 - Any stack of bars carries a legend naming both states.
-- **Used on:** hero, study cards, dashboard, proposal PDFs, favicon.
+- **Used on:** hero, study cards, dashboard, proposal PDFs. ~~favicon~~ — **removed
+  2026-08-26; the favicon is now M1.** Nandan: *"That one doesn't really fit the visual
+  style of the page."* Two things were wrong and only the first was obvious. **The tab
+  showed M2 while the mark beside the wordmark showed M1** — different motifs for the same
+  company, two centimetres apart. And, louder: an ink tile carrying **both** teal and brass
+  made it **the most saturated object in the whole system**, on a site whose first screen
+  carries no filled colour at all and whose mark is a bare ink glyph on paper.
+
+  What replaced it invents nothing — it is the **footer lock-up** (ink band, on-invert
+  lattice, beside the wordmark) cropped square, with `assets/mark.svg`'s own nine cells and
+  five-at-target pattern. **M2 is therefore no longer in browser chrome**, which is the
+  real cost of the change and was accepted with it.
 
 ### M3 · Interval — *specialist*
 
@@ -1009,6 +1021,10 @@ verification status. `DESIGN.md` tells you a figure must carry its provenance;
 - Coverage section: `python3 scripts/build-coverage-map.py` (data in `scripts/data/`) —
   emits the map, the region strip and the region totals in one run
 - Icons, mark, favicon: `assets/icons/`, `assets/mark.svg`, `assets/favicon.svg`
+- Favicon derivatives: `python3 scripts/build-favicon.py` — `favicon.ico` (16/32/48) and
+  `apple-touch-icon.png` (180) come from `favicon.svg` and are **never** hand-edited.
+  The script refuses any colour outside `--invert` and `--on-invert`, the two tokens
+  whose value is identical in both themes, because a favicon has no theme to inherit
 - Fonts: `fonts/` + `css/fonts.css` (D-012). Never link a Google stylesheet from a page
 - **The stylesheet: `css/site.css`** — this document in CSS, in section order. Built
   2026-08-25 from §3–§9 and **not** from `css/main.css`, which was the SPA's and is

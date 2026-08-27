@@ -1,6 +1,6 @@
 # scripts
 
-Eleven scripts. **Three are rules from the documentation made executable**
+Twelve scripts. **Three are rules from the documentation made executable**
 (`check-claims.py`, `test-check-claims.py`, `check-contrast.py`), **seven generate committed
 or built artefacts**, and **one** is a piece of arithmetic kept because a design rule rests
 on it. **Where a script and a paragraph disagree, the script is what runs** — so fix the
@@ -20,6 +20,7 @@ Nothing here needs a dependency. Python 3, standard library, run from anywhere.
 | `build-icons.py` | Emits the twelve §7 icons **and** the sprite from one geometric table | After any icon change — editing an icon file by hand desynchronises the sprite |
 | `build-paper-json.py` | Emits `_data/paper.json` from the manuscript in the paper repo | After the manuscript changes. Reads a repo outside this one |
 | `build-review.py` | Builds the self-contained asset-review page (`DESIGN.md` §13) into `build/` | After any asset changes, if the review page is being republished |
+| `build-favicon.py` | Emits `assets/favicon.ico` and `apple-touch-icon.png` from `assets/favicon.svg` | After the favicon changes — and never hand-edit either derivative |
 | `check-fourth-hue.py` | Shows that no fourth brand hue can satisfy both AA on `--paper` and D-011's greyscale requirement | Only if someone proposes a product colour (D-024) |
 
 **Seven of these write into the repo** — `build-icons.py` (`assets/icons/`),

@@ -167,7 +167,7 @@ def render(W, PLOT_X0, PLOT_X1, Y_MID, Y_AXIS, narrow=False):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%"
      class="fig-cost{" narrow" if narrow else ""}" role="img" aria-labelledby="costTitle costDesc"
      preserveAspectRatio="xMinYMin meet" data-claim-unit="">
-  <title id="costTitle">Respondents recruited per study on an active day</title>
+  <title id="costTitle">Advertising cost per respondent newly recruited</title>
   <desc id="costDesc">{esc(desc)}</desc>
 
   <style>

@@ -240,21 +240,48 @@ Nandan, it unblocks a component `COPY.md` already specifies, and it is the only 
 this list that puts the brief's own vocabulary into the index. Read §4.3 before choosing the
 labels.
 
-### 5.1 `<title>` and meta description — the highest-leverage strings on the site
+### 5.1 `<title>` and meta description — **SHIPPED 2026-08-26**
 
-Currently `"Virtual Lab — population-representative samples, recruited through ad
-platforms"`. 79 characters; the SERP truncates near 60, so the mechanism clause — the part
-doing the work — is the part that gets cut.
+Settled with Nandan. Both live in `index.html`'s front matter, with the reasoning beside
+them; neither is page copy and no reader on the page sees either.
 
-The title has three jobs at once: match the search register, qualify the buyer so a brand
-manager self-deselects from the snippet, and stay in voice. **Direction, not final copy —
-this is the one string where search register meets §2, so it needs Nandan's sign-off:**
+```
+title        Survey respondent recruitment in 41 countries — Virtual Lab      (59)
+description  Population-representative samples for researchers, funders and
+             agencies — recruited via ad platforms across Africa, the Middle
+             East, Asia and the Americas.                                    (155)
+```
 
-> `Survey respondent recruitment in 41 countries — Virtual Lab`
+**The title, at 59 against a ~60 budget.** The previous one was 79 and truncated at
+*"...recruited thro"* — losing the half that carried the meaning. *"Survey respondent
+recruitment"* is the search register; nobody types *population-representative*. *"41
+countries"* is specificity that lifts click-through and is **the page's only geographic
+signal in HTML text**, now that the region cells came off (`a39ac2a`) and every country name
+sits in SVG.
 
-The description is where the negative filter does most of its work: name researchers,
-funders and agencies explicitly; name the regions; carry the paper. Never *market research*,
-*consumer insights*, *audience insights*, *brand tracking*, *voice of customer*.
+**It needed one attribute, and the reason is worth recording.** `check-claims.py` does not
+skip `<title>`, so a bare number there fails as unannotated — verified, not assumed. The
+title is now annotated per page via a `titleClaim` front-matter key, so privacy and 404 do
+not carry a claim they have no figure for.
+
+**The description, at 155 against ~155–160.** The old one was `site.js`'s, at 221, and lost
+its last third. *"for researchers, funders and agencies"* is the negative filter in D-001's
+own audience language — the title wins the impression, this wins or loses the click.
+
+**Four regions, and the Americas is Nandan's call, 2026-08-26.** It is supportable and it is
+the bucket's own name: 136,558 across five countries. **What stays out is "Latin America"** —
+§4.3's finding is unaffected, since the Americas is 76% United States with no South America
+at all, and the narrower phrase is the one the register cannot carry. The four named regions
+carry 705,197 of the 738,608 attributed respondents.
+
+**No figure appears in the description, deliberately.** `check-claims.py` reads text nodes,
+not attributes, so a number inside `meta content` is never scanned — a fabricated
+`999,999,999` passes silently. **That is a third blind spot alongside `<script>` and
+`<svg>`.** The one figure lives in the title, where it is checked and annotated.
+
+**`site.description` is deliberately unchanged** and is now used only by the JSON-LD
+`Organization`, where there is no length budget and the fuller mechanism sentence is the
+better description. SERP and social get the tight pair; structured data keeps the long one.
 
 ### 5.2 Structured data — the entity play — **SHIPPED 2026-08-26**
 

@@ -1,6 +1,40 @@
 ---
 layout: base.html
-title: "Virtual Lab — population-representative samples, recruited through ad platforms"
+
+# TITLE AND DESCRIPTION ARE SERP ARTEFACTS, NOT PAGE COPY. No reader on the page
+# sees either one, which is why they are allowed the search register that DESIGN.md
+# §2 keeps out of the copy — and why changing them changes no copy. Settled with
+# Nandan 2026-08-26; the reasoning is notes/ws-seo.md §5.1.
+#
+# The title is 59 characters. Google shows ~60: the previous one was 79 and
+# truncated at "...recruited thro", losing the half that carried the meaning.
+# "Survey respondent recruitment" is the search register — the phrase buyers
+# actually type, where nobody types "population-representative".
+#
+# "41 countries" is C-017 and it is why `titleClaim` exists below: check-claims.py
+# does NOT skip <title>, so a bare number there fails as unannotated. It is also
+# the page's only geographic signal in HTML text, since the region cells came off
+# (a39ac2a) and every country name lives in SVG.
+title: "Survey respondent recruitment in 41 countries — Virtual Lab"
+titleClaim: "C-017"
+
+# 155 characters; Google shows ~155-160. The previous description was site.js's,
+# at 221, and lost its last third.
+#
+# "for researchers, funders and agencies" is the negative filter, in D-001's own
+# audience language. The title wins the impression; this wins or loses the click,
+# and it is where a brand manager self-deselects. Never "market research",
+# "consumer insights", "audience insights", "brand tracking", "voice of customer".
+#
+# The four regions are the four largest buckets and carry 705,197 of the 738,608
+# attributed respondents. Latin America is deliberately absent: "Americas" is
+# 76% United States and there is no South America at all, so the narrower claim
+# is one CLAIMS.md cannot support. See ws-seo.md §4.3.
+#
+# NO FIGURES HERE, deliberately. check-claims.py reads text nodes, not attributes,
+# so a number inside meta content is never scanned — a fabricated 999,999,999
+# passes silently. The one figure lives in the title, where it IS checked.
+description: "Population-representative samples for researchers, funders and agencies — recruited via ad platforms across Africa, the Middle East, Asia and the Americas."
 ---
 {% from "macros.njk" import lattice, objective, tickrule %}
 
@@ -172,7 +206,7 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
 <section class="sec">
   <div class="wrap">
     <div class="stack loose" data-claim-unit>
-      <h2>Those three are one optimization problem</h2>
+      <h2>For advertising allocation, we built an optimization problem</h2>
 
       <ol class="recap">
         <li><span class="n" data-claim="none">01</span><span class="nm">Strata</span></li>
@@ -229,7 +263,7 @@ title: "Virtual Lab — population-representative samples, recruited through ad 
 <section class="sec">
   <div class="wrap">
     <div class="stack loose">
-      <h2>Those three are a chatbot survey platform</h2>
+      <h2>For surveying, we built a chatbot</h2>
 
       <div class="platform">
         <div class="stack">

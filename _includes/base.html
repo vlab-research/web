@@ -5,7 +5,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{{ title }}</title>
+{#- `titleClaim` annotates the title when it carries a figure. check-claims.py does
+    not skip <title>, so an un-annotated number there fails as unannotated — and the
+    attribute is per-page because privacy and 404 carry no figure to claim. -#}
+<title{% if titleClaim %} data-claim="{{ titleClaim }}"{% endif %}>{{ title }}</title>
 <meta name="description" content="{{ description or site.description }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
@@ -19,6 +22,15 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="/assets/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+{#- Meta domain verification, carried over verbatim from the legacy SPA (eab83eb,
+    2021-06-22), where it sat in index.html's head immediately after the icons. The
+    rebuild dropped it; restored 2026-08-26 on Nandan's instruction — it does a job
+    in Business Manager and this is not the moment to find out which.
+
+    NOT analytics, and D-009 does not reach it: no script, no request, no cookie. It
+    is a string Meta reads to confirm we own the domain, and nothing else. -#}
+<meta name="facebook-domain-verification" content="zodast4mg13zv4ymn1y84kx498huin">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.name }}">

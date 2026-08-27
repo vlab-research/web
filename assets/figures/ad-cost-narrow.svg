@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 202" width="100%"
      class="fig-cost narrow" role="img" aria-labelledby="costTitle costDesc"
      preserveAspectRatio="xMinYMin meet" data-claim-unit="">
-  <title id="costTitle">Respondents recruited per study on an active day</title>
+  <title id="costTitle">Advertising cost per respondent newly recruited</title>
   <desc id="costDesc">Advertising cost per respondent newly recruited, across 44 studies. The median study pays $1.05. The middle half fall between $0.29 and $1.57. The tenth percentile is $0.09 and the ninetieth $3.67, read against a scale from $0 to $4. The full range runs $0.04 to $8.89. Advertising spend only. This is a distribution across studies, not an uncertainty interval on an estimate.</desc>
 
   <style>
