@@ -120,7 +120,7 @@ does**.
 
 **D-014 is the only decision blocking Phase 4.** D-013 stopped blocking it when the hero
 settled to a recorded replay; D-019 stopped blocking it when the coverage section landed
-on Home. The region-bucket question and D-021, D-022 travel *with* sections rather than
+on Home. The region-bucket question and D-021 travel *with* sections rather than
 in front of them, and each has a recorded fallback, so none of them holds a build.
 
 ### The build, as it stands 2026-08-25
@@ -721,7 +721,6 @@ statement in hard rule 1, markup in `DESIGN.md` §8, reasoning in D-016.
 | **D-025** | **May the privacy policy be amended?** *The policy is now carried over and live at `/privacy/`, unlinked, with `data-claim-scan="off"` on the legal copy.* Three things the instrument does are not described in it. Still open **even though the policy is now unlinked** — unlinked is not unamended |
 | **SSRN edition** | **Which edition is posted?** The only compiled PDF we hold is the blinded submission with no byline. The page cites and links the paper, so if that is what was uploaded a reader gets an author-less document under a byline we printed. Ten seconds for him, unanswerable from here |
 | **Region buckets** | The six regional totals still have no row because the bucketing is editorial. Fallback recorded: publish country figures, drop the regional layer |
-| D-022 | Whether the region strip draws the unattributed respondents as a ghost segment |
 | D-021 | Two motif rules; question 2 is live drift in `assets/mark.svg` |
 | D-017 | Jobs posting |
 

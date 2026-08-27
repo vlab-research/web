@@ -1092,20 +1092,30 @@ map and a banned globe — is **resolved in D-018** and written into §6.
 ---
 
 ### D-022 — Should the region strip show the unattributed respondents?
-**Status:** OPEN · Owner: Nandan · *low stakes*
+**Status:** SETTLED · 2026-08-26 · **No. Leave it. Do not reopen.**
 
-The region strip spans the **738,608** respondents attributable to a country. The other
-**103,052** (12.2%) belong to studies whose strata carry no country tag. Today the bar is
-100% "attributed" and the gap is named only in the source line beneath it.
+**Nandan:** *"This is ridiculous. Don't worry about that at all. Nobody is gonna count up
+the numbers. It really doesn't matter. It's okay that they don't add up. Forget it."*
 
-**Options:** leave it as built, with the gap in prose only; or add a sixth-and-a-bit
-segment in `--rule` with a dashed `--data` edge — the same treatment the map already
-gives coverage without a count — labelled "not attributed to a country".
+The strip spans the **738,608** respondents attributable to a country; the other **103,052**
+belong to studies whose strata carry no country tag. No ghost segment, no caption, no note.
+**The two figures do not reconcile on the page and that is accepted.**
 
-**Recommendation:** leave as built for now. The ghost segment is more honest at a glance,
-but it puts an eighth of the strip into a category a buyer cannot act on, and it invites
-the reading that we lost track of those respondents rather than that they were recruited
-without country strata. Revisit if the strip ever appears without its source line.
+**The old recommendation carried a trigger and it has been overtaken.** It read *"revisit if
+the strip ever appears without its source line"* — and the source line was removed on
+2026-08-26, so by its own terms this was due for another look. It got one, and the answer
+was no. **The trigger is now void; do not let it fire again.**
+
+**Why this is right and not merely a shortcut.** Nobody sums a stacked bar against a figure
+three sections above it. The ghost segment would have put an eighth of the strip into a
+category a buyer cannot act on, and invited the reading that we lost track of those
+respondents rather than that they were recruited without country strata — a worse impression
+than the one it fixes.
+
+**The denominators are still in `CLAIMS.md`** — C-097 and C-098 — for anyone who ever needs
+them. **The provenance rule is not weakened by this.** Every figure on the page still traces
+to a `VERIFIED` row; what is declined is an on-page reconciliation *between two of our own
+figures*, which was never what that rule was for.
 
 ---
 

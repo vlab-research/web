@@ -736,8 +736,10 @@ anyone who needs them.
 
 **The two gaps must still never be run together** if either is ever written again: the
 missing 103,052 is the unattributed studies, **not** the four countries that are covered but
-not yet counted. Whether the strip draws the unattributed remainder as a ghost segment is
-**D-022, open**.
+not yet counted. Whether the strip draws the unattributed remainder as a ghost segment was **D-022, and it
+is settled: no.** The bar spans the attributed respondents, the totals band states the
+headline, the two do not reconcile on the page, and that is accepted — *"nobody is gonna
+count up the numbers"* (2026-08-26). No ghost segment, no caption.
 
 Source line mandatory on each of the three, as for any figure — see "Claim annotation"
 below. All colour is `var(--…)`; there is no literal hex anywhere in the emitted markup,

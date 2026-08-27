@@ -758,7 +758,7 @@ if the policy is wrong, it is wrong at its URL too.
 |---|---|---|---|
 | **P-1** | Hero readout — recorded replay | 1.1 | Component exists in spec (§8, stratum readout); recording to be made. Recorded at launch, live as a fast-follow (D-013) |
 | **P-2** | Coverage map | 1.3 | **Generated** — `scripts/build-coverage-map.py`. Exists in `build/` |
-| **P-3** | Region strip | 1.3 | **Generated** — same script; region names added 2026-08-26. D-022 open: whether the unattributed remainder draws as a ghost segment |
+| **P-3** | Region strip | 1.3 | **Generated** — same script; region names added 2026-08-26. D-022 settled 2026-08-26: no ghost segment, and the figures need not reconcile on the page |
 | **P-4** | Region totals, six cells | 1.3 | **Generated, and SHIPS from 2026-08-26.** C-098 gives the regional figures a row, settling the bucketing question that gated it all build |
 | **P-5** | ~~Deviation figure~~ | **unused** | Built and correct — `assets/figures/mad-comparison.svg`. Nothing renders it now that 6.1 is quote-only. **Do not delete** |
 | **P-11** | Advertising cost figure | 1.4 | **Built** — `assets/figures/ad-cost.svg`, from `build-adcost-figure.py`. Box plot across 44 studies |
@@ -823,7 +823,7 @@ recording.
    and coverage publishes country figures only. Fallback recorded either way.
 4. **D-025, the privacy policy.** Still open, and still open even though the policy is now
    unlinked — three things the instrument does are not described in it.
-5. **D-022** — whether the region strip draws the unattributed respondents as a ghost segment.
+5. ~~**D-022**~~ — **settled 2026-08-26: no ghost segment.** The strip spans the attributed respondents and the page does not reconcile the difference.
 6. **D-021** — two motif rules, one of them live drift in `assets/mark.svg` (cell 6 / pitch 8,
    a ratio §6 does not sanction).
 7. **The homepage math is ahead of the posted paper**, deliberately and with an expiry. Revisit
