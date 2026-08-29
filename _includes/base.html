@@ -8,7 +8,10 @@
 {#- `titleClaim` annotates the title when it carries a figure. check-claims.py does
     not skip <title>, so an un-annotated number there fails as unannotated — and the
     attribute is per-page because privacy and 404 carry no figure to claim. -#}
-<title{% if titleClaim %} data-claim="{{ titleClaim }}"{% endif %}>{{ title }}</title>
+{#- `headTitle` is the docs pages' SEO title, set in docs/docs.11tydata.js:
+    "Bails" is the right <h1> and the wrong search result. Every other page sets
+    no headTitle and falls through to `title`, which is what it always was. -#}
+<title{% if titleClaim %} data-claim="{{ titleClaim }}"{% endif %}>{{ headTitle or title }}</title>
 <meta name="description" content="{{ description or site.description }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
@@ -18,6 +21,9 @@
 <link rel="preload" href="/fonts/SourceSans3-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
+{%- if docsSection %}
+<link rel="stylesheet" href="/css/docs.css">
+{%- endif %}
 
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="/assets/favicon.ico" sizes="32x32">
@@ -34,7 +40,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.name }}">
-<meta property="og:title" content="{{ title }}">
+<meta property="og:title" content="{{ headTitle or title }}">
 <meta property="og:description" content="{{ description or site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
@@ -80,9 +86,10 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="/">
+    <a class="brand" href="{% if docsSection %}/docs/{% else %}/{% endif %}">
       <span aria-hidden="true">{{ inline.mark | safe }}</span>
       <span>Virtual&nbsp;Lab</span>
+      {%- if docsSection %}<span class="brand-tag">Docs</span>{% endif %}
     </a>
     {#- No top navigation. Nandan, 2026-08-26: "It's okay if we don't have any top
         navigation. It's a one page site." Two links that scrolled the page you were
@@ -93,13 +100,26 @@
         reviewer or an academic has a URL to link — they are simply not advertised.
         (/#code was /#audit until 2026-08-26, when that section became "The code is open
         source"; _redirects points the old SPA's /software at it.) -#}
+    {#- The docs are the one exception, and D-008 is why: shared nav, separate shell,
+        and docs do not carry marketing chrome. A reader who came to look up a field
+        name is not in the market for a proposal, and putting the conversion action
+        over a reference page is the "software tool" pull D-002 spends its whole entry
+        avoiding. They get the way back to the site instead. -#}
+    {%- if docsSection %}
+    <a class="nav-back" href="/">Virtual&nbsp;Lab &rarr;</a>
+    {%- else %}
     <a class="btn pri" href="/#contact">Request a proposal</a>
+    {%- endif %}
   </div>
 </header>
 
 <main id="main">
 {{ content | safe }}
 </main>
+
+{%- if docsSection %}
+<script src="/docs/docs.js" defer></script>
+{%- endif %}
 
 <footer class="foot has-lat">
   {{ lattice("foot", true) }}

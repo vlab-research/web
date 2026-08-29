@@ -331,6 +331,31 @@ small,.caption{ font-size:13px }
   webfonts also loses the display/prose contrast between them. Open: whether the Zilla
   fallback should move to a distinct slab or system serif.*
 
+### Documentation scale — `/docs/` only
+
+The scale above assumes a page with three headings. A reference page has
+twenty-nine `h2`s (`docs/fly/reference/questions.md`), and 42px Zilla Slab
+twenty-nine times is a poster, not a document. **Same four faces, same weights,
+tighter steps.** D-029. Lives in `css/docs.css`, scoped to `.doc-body`.
+
+```css
+.doc-main > h1 { font: 300 clamp(32px,4.2vw,42px)/1.08 "Zilla Slab" }
+.doc-body h2   { font: 300 26px/1.20 "Zilla Slab";  border-top: 1px solid var(--rule) }
+.doc-body h3   { font: 400 18.5px/1.30 "Zilla Slab" }
+.doc-body h4   { font: 500 11.5px/1.4 "IBM Plex Mono"; letter-spacing:.13em; text-transform:uppercase }
+```
+
+- **Every `h2` opens with a hairline.** §5 — structure is part of the argument, and
+  at this density it is also what lets the eye find a section.
+- **`h4` gets the eyebrow treatment.** Six exist across 47 pages, all deep inside
+  reference material, and at that depth they are labels rather than headings.
+- **Measure is 68ch, not 65ch** (`--doc-measure`). §4's figure stands for prose; a
+  reference page spends two characters a line on inline `code` spans that a
+  marketing page does not. Tables, code blocks and screenshots span the full column
+  and scroll in their own containers.
+- **`h1` is the short name.** "Bails", not "Bails — Virtual Lab Documentation".
+  The long form is `headTitle` and only `<head>` reads it.
+
 ### Font hosting — self-host, do not use the Google CDN
 
 All seven face+weight combinations are in `fonts/` and declared in `css/fonts.css` —
@@ -887,6 +912,56 @@ scanned, heuristically, against every numeral in the register — but heuristic 
 pass a number by coincidence, and a false pass is exactly what this rule exists to
 prevent.
 
+### Documentation components — *`/docs/` only, D-008*
+
+Everything here is in `css/docs.css`, loaded only on pages under `/docs/`. It adds
+**no colour and no typeface** — see D-029.
+
+**Sidebar tree.** Nesting drawn with a hairline down the left of each level (the
+bracket primitive, §6), not by indentation alone. Only the branch containing the
+current page is open; everything else stays shut, which is what keeps 47 pages
+readable in one column. **The current page carries a 2px brass tick** — M2's target
+marker doing the job it does everywhere else on the site: marking the thing you are
+aiming at.
+
+**Callouts.** Two types and no more. A third needs an entry here first, not another
+CSS rule.
+
+| Type | Ground | Left edge | Label |
+|---|---|---|---|
+| `::: note` | `--sunk` | `--rule-2` | `--ink-3`, eyebrow |
+| `::: warning` | `--sunk` | `--brass` | `--brass`, eyebrow |
+
+Warning is brass because §3 already gives brass the semantic job. **A red would be a
+fourth hue and there is no red.**
+
+**Code.** On `--surface`, not `--sunk`, and the reason is measured rather than
+aesthetic: `--data` on `--sunk` is **4.45:1 in dark** — a fail, and dark stays
+contrast-checked under hard rule 7 — and `--ink-3` on `--sunk` is 3.14:1, which is a
+caption minimum and not a code-comment minimum. Both clear 4.5 on `--surface`.
+Prism's theme uses the three hues at their three jobs: **ink is chrome** (punctuation,
+operators, comments — comments italic), **teal is data** (every literal value),
+**brass is accent** (keywords, functions, class names). Blocks scroll in their own
+container and cap at `--code-max`.
+
+**Screenshots.** The only raster images on the property (D-029). Hairline, `--surface`
+mat, 6px pad — so a capture of a differently-branded UI reads as a *specimen on* the
+page rather than as part of it.
+
+**Contents rail.** Right column above 1180px, a `<details>` inside the article below
+it. One source — the rendered headings — in two placements; there is no second list
+to keep in step.
+
+**Search.** D-030 governs what it may do. Visually: a `--surface` input on the
+sidebar, results in a bordered panel, `--sunk` on the active row, each row a title in
+UI type over a mono eyebrow giving section and matched heading.
+
+**Breakpoints.** 1180px the contents rail goes; 860px (§5's own) the three columns
+become one and the sidebar becomes a capped scroller above the article — **not** a
+`<details>`, because overriding the UA's hiding of details content is a trick browsers
+have changed the mechanism of twice. 47 links must not be what a phone reader scrolls
+past to reach the page they asked for.
+
 ### Math notation
 
 **Added 2026-08-25**, when the homepage gained the optimization block. Displayed math is
@@ -1008,6 +1083,14 @@ has no sitemap.** **Nothing in this document changed except §6**: M5 is now the
 the Banned list gains the literal-rendering line. **§3, §5 and §7 are untouched** — no
 token, no radius change, no thirteenth icon, and `check-contrast.py` still passes 22 pairs.
 Fly's signature is the radius §5 already reserved for the thread.
+
+**Settled 2026-08-29: D-008** — the documentation folded into this site at `/docs/`,
+Hugo retired, one shell for the whole property. **No token was added** and no typeface;
+what §4 and §8 gained is a documentation *scale* and a set of documentation
+*components*, both scoped to `/docs/` and both recorded above. `check-contrast.py` now
+measures **38 pairs** rather than 22 — the extra eight are the two grounds documentation
+introduces, `--surface` under code and `--sunk` under callouts. D-029 and D-030 record
+the two rules that had to be scoped and the one capability that was added.
 
 ---
 

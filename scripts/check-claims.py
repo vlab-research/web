@@ -830,7 +830,21 @@ def html_files(paths, include_vendor):
     they always were and the gate still means something on a clean checkout.
 
     Always skipped: scripts/fixtures/, nine pages whose entire job is to fail — a
-    gate that can never pass is a gate nobody runs."""
+    gate that can never pass is a gate nobody runs.
+
+    Also always skipped: docs/ and its build output in _site/docs/. D-029.
+    The provenance rule governs CLAIMS — a figure offered as evidence for what
+    Virtual Lab can do. Reference documentation is not making claims: its numerals
+    are JSON payloads, timeout values, HTTP codes, field weights and API examples,
+    and there is nothing for a reader to check because nothing is being asserted.
+    Pointing this checker at 47 such pages produces hundreds of findings, and a gate
+    that reports hundreds of non-problems is the same dead gate scripts/fixtures/
+    already taught us not to build.
+
+    THE RULE ITSELF IS NOT NARROWED. If a docs page ever states an outcome figure —
+    a response rate, a cost, a sample achieved — it is a claim wherever it is
+    printed, and it goes in CLAIMS.md and gets scanned by naming the file
+    explicitly, which the `paths` argument above has always allowed."""
     if paths:
         return paths
     site = os.path.join(REPO, "_site")
@@ -842,7 +856,7 @@ def html_files(paths, include_vendor):
             # half of one, and it reaches a visitor only through the built output that
             # is already being scanned. Its comments carry the same section numbers a
             # template's do.
-            drop = {".git", "node_modules", "media", "fixtures", "_includes"}
+            drop = {".git", "node_modules", "media", "fixtures", "_includes", "docs"}
             if not built:
                 drop.add("_site")
             dirs[:] = [d for d in dirs if d not in drop]

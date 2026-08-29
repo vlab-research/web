@@ -13,3 +13,18 @@
 /studies    /         301
 /software   /#code    301
 /jobs       /         301
+
+# docs.vlab.digital, folded into this site 2026-08-29 (D-008). The docs were a
+# separate Hugo site on GitHub Pages; they are now /docs/ here, and every URL that
+# subdomain ever served maps one-to-one onto a URL under it — /fly/reference/bails/
+# became /docs/fly/reference/bails/ and so on for all 47.
+#
+# The source is an ABSOLUTE URL, which scopes the rule to that host. A bare `/*`
+# here would swallow every path on vlab.digital itself.
+#
+# REQUIRES ONE DNS CHANGE, and this rule does nothing until it is made: add
+# docs.vlab.digital as a domain alias on the Netlify site and point its DNS here.
+# Until then the old GitHub Pages site keeps answering that host and the two
+# diverge silently, which is the one failure mode worth watching for.
+https://docs.vlab.digital/*   https://vlab.digital/docs/:splat   301!
+http://docs.vlab.digital/*    https://vlab.digital/docs/:splat   301!

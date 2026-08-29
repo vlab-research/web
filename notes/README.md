@@ -73,6 +73,12 @@ were overruled by each other.** D-024 closed on 2026-08-21 and is the answer:
   §2.7–2.8 comparative material stays `WITHHELD`; the forward rule does not reach a
   measurement nobody has taken.
 
+**`ws-docs-screenshots.md` is not a workstream memo and is the one exception here.** It is a
+capture plan carried over from the old docs repo when D-008 folded it in — the six `bails-*`
+screenshots that `docs/fly/reference/bails.md` references and nobody has taken. It is here
+rather than in `docs/` because it is instructions for a person, not a page. It stops being
+needed the day `scripts/check-links.py` reports 0.
+
 ## The rule for adding one
 
 A memo goes here when it holds reasoning a future reader would otherwise have to redo.

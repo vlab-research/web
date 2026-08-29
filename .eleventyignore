@@ -1,5 +1,10 @@
 # The documentation set. These are the specification, not pages.
-*.md
+#
+# `/*.md` is ROOT-LEVEL ONLY, and the leading slash is load-bearing: a bare `*.md`
+# matches at every depth and would swallow docs/ as well, which is 47 real pages
+# (D-008). Every .md in this repo is either the specification at the root, a memo
+# in notes/, or a docs page — there is no fourth kind.
+/*.md
 notes/
 
 # Scripts, and the nine fixture pages whose entire job is to fail check-claims.py.

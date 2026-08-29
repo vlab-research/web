@@ -1022,6 +1022,147 @@ sites of the edit carry a comment pointing here.
 
 ---
 
+### D-008 — `docs.vlab.digital` folds into this site, at `/docs/`
+**Status:** Settled · 2026-08-29 · *opened as "shared nav, separate shell", and that is what
+it settled as — the surprise was how much cheaper it turned out to be than the entry assumed*
+
+**The documentation is now 47 Markdown pages in `docs/`, rendered by this repo's Eleventy
+build, served at `vlab.digital/docs/`, sharing one head, one font kit, one stylesheet and
+one footer with the marketing page.** Hugo is gone. The old repo stays as the history
+archive; nothing is deleted from it.
+
+| | Before | After |
+|---|---|---|
+| Generator | Hugo 0.147 + vendored geekdoc | Eleventy 3.1.6, the same one |
+| Repo | `../docs.vlab.digital` | `docs/` here |
+| Deploy | GitHub Pages via Actions | Netlify, the same build |
+| URL | `docs.vlab.digital` | `vlab.digital/docs/`, with 301s |
+| Shell | geekdoc's | `_includes/base.html`, shared |
+
+**Why Eleventy rather than keeping Hugo — and the reason is not that Hugo is worse.** The
+thing being shared is `_includes/base.html`, `css/site.css`, `_data/site.js` and `fonts/`.
+Those are Eleventy artefacts. Sharing them under Hugo means writing the head, the mark, the
+footer and the font loading a second time in Go templates and keeping the two in step by
+hand — which is **D-006's own argument against a plain directory of HTML**, applied across
+two engines instead of across two pages. The shell has to have one definition or it is not
+shared, it is copied.
+
+**The Hugo lock-in was four shortcodes.** `ref` ×116, `hint` ×27, `toc` ×14, `toc-tree` ×5,
+and front matter of `title`/`weight`/`draft`/`date`/`author`. No mermaid, no tabs, no
+columns, no raw HTML, no custom layouts — `layouts/` held a `.gitkeep`. That was the whole
+surface, and it is why this cost a day rather than a month.
+
+**`ref` was resolved to real URLs once, permanently, rather than reimplemented.** All 116.
+The content no longer carries a templating idiom and now renders as ordinary Markdown
+anywhere. That gives up the one thing `ref` did — failing the build on a broken link — so
+**`scripts/check-links.py` replaces it, and covers more**: it validates every internal href,
+every `<img src>`, and every `#fragment` against the ids on the page it points at, which
+`ref` never checked at all.
+
+**What docs do not inherit.** The nav's *Request a proposal* button. A reader looking up a
+field name is not in the market for a proposal, and a conversion action over a reference
+page is exactly the "software tool" pull D-002 exists to avoid. They get a way back to the
+site instead. That is the "separate shell" half of the original recommendation, and it is
+one `{% if docsSection %}` in `base.html`.
+
+**Consequences elsewhere, each with its own entry:** D-029 (the two `DESIGN.md` rules that
+cannot reach documentation) and D-030 (the first client-side JavaScript on the property).
+
+**One deploy step is outstanding and this decision is not live without it:** add
+`docs.vlab.digital` as a domain alias on the Netlify site and point its DNS there.
+`_redirects` carries the host-scoped 301s and says so.
+
+**Rejected: `git subtree` to preserve the docs repo's 60 commits.** That repo vendors an
+11 MB Hugo theme across 232 tracked files, and the subtree would have carried all of it into
+this repo's history permanently — roughly doubling a 9.9 MB `.git` to import the history of
+a theme being deleted. D-010's "keep the history" is about not rewriting *ours*; it is not a
+reason to import somebody else's. The old repo is the archive, and it costs nothing to keep.
+
+---
+
+### D-029 — The provenance rule and the raster ban do not reach the documentation
+**Status:** Settled · 2026-08-29 · *the two `DESIGN.md` rules that D-008 collided with*
+
+**Neither rule is narrowed. Both are scoped to what they were written about.**
+
+**1. Hard rule 8 — "all graphics are inline SVG from the four primitives" — is carved out
+for `docs/`.** The docs carry 39 screenshots and **a capture of the Fly UI is the
+documentation**; there is no version of that made from a bar, a tick, a cell and a bracket.
+The ban holds everywhere else on the property, and `.eleventyignore` still excludes `img/`.
+
+Two things worth knowing. **The screenshots are of a UI that contradicts this design
+system** — D-015 records that Fly's dashboard ships a Create-React-App favicon, Ant Design
+`#1890ff` and `font-family: Avenir`. That is unavoidable in documentation and is a second
+argument for eventually rebranding that dashboard. `css/docs.css` gives every capture a
+hairline and a paper mat so it reads as a *specimen on* the page rather than as part of it.
+**And nine of them do not exist** — six `bails-*` and three `fly-monitor-*`, missing on the
+Hugo site too. `notes/ws-docs-screenshots.md` is the capture plan.
+
+**2. `check-claims.py` skips `docs/` and `_site/docs/`.** The provenance rule governs
+**claims** — a figure offered as evidence for what Virtual Lab can do. Reference
+documentation asserts nothing: its numerals are JSON payloads, HTTP codes, timeout values,
+field weights and API examples, and there is nothing for a reader to check because nothing
+is being claimed. Pointing the checker at 47 such pages yields hundreds of findings, and
+**a gate that reports hundreds of non-problems is the dead gate `scripts/fixtures/` already
+taught this repo not to build.**
+
+**The rule keeps its full force, and the test is unchanged:** *does the line say something
+about the number, or only about us?* **If a docs page ever states an outcome figure** — a
+response rate, a cost, a sample achieved — **it is a claim wherever it is printed**, it needs
+a `VERIFIED` row, and it is scanned by naming the file, which `check-claims.py` has always
+accepted as an argument.
+
+**No colour was added.** The warning callout is `--brass`, which §3 already assigns the
+semantic job; the note callout is neutral. Prism's theme uses the three existing hues doing
+their three existing jobs — ink is chrome, teal is every literal **value**, brass is
+keywords. `check-fourth-hue.py` was not needed and `check-contrast.py` grew from 22 measured
+pairs to 38, all passing in both themes.
+
+**One `DESIGN.md` addition was unavoidable and it is a scale, not a colour.** §4's display
+sizes assume a page with three headings; `questions.md` has twenty-nine `h2`s, and 42px
+Zilla Slab twenty-nine times is a poster rather than a document. Same four faces, same
+weights, tighter steps. Recorded in §4 as the documentation scale.
+
+---
+
+### D-030 — The docs ship client-side JavaScript; nothing else does
+**Status:** Settled · 2026-08-29 · Owner: Nandan · *decided against the recommendation, which
+was to defer it*
+
+**`/docs/` loads `docs.js`, a search box. It is the only JavaScript on the property.**
+
+The recommendation was to ship the sidebar tree first and add search only if it was missed —
+47 pages is navigable, and this is the first script on a site that had none. **Nandan chose
+to build it in**, on the grounds that search is genuinely useful in reference material and
+that removing a capability the Hugo site already had is a regression for the people using it.
+
+**What that is allowed to mean, and these are the constraints, not a description:**
+
+- **`/docs/` only.** `base.html` gates both the script and `css/docs.css` on `docsSection`,
+  so the marketing pages' payload does not grow by one byte.
+- **No library, no bundler, no CDN.** ~230 lines of vanilla JavaScript, copied to the output
+  verbatim. D-006's "no asset pipeline" holds, and D-012's reasoning about self-hosting —
+  we sell to EU institutions and our privacy policy states EU hosting — applies to a script
+  origin exactly as it applies to a font origin.
+- **One request, same-origin, on first focus.** `/docs/search-index.json` is 200 kB raw and
+  63 kB gzipped, and **it is not fetched on page load**. A reader who never searches never
+  pays for it.
+- **No cookie, no storage, no beacon, nothing reported anywhere.** **D-009 (analytics) stays
+  open and this does not touch it.** Search runs entirely in the reader's browser; we cannot
+  see what anyone searched for, and nothing here is a step toward being able to.
+- **It degrades honestly.** The search box ships `hidden` and the script unhides it, because
+  an input that accepts text and does nothing is worse than no input.
+
+**The index is generated from the rendered pages** (`docs-search-index.njk`), not from the
+Markdown, so it cannot describe a page the site does not serve and its deep links use the
+ids `markdown-it-anchor` actually emitted.
+
+**If a second script is ever proposed for this property, this entry is the precedent and the
+limit — not the opening of a door.** Anything that observes the reader rather than serving
+them is D-009's question, and D-009 is open.
+
+---
+
 ---
 
 ## Open
@@ -1162,18 +1303,6 @@ than the one it fixes.
 them. **The provenance rule is not weakened by this.** Every figure on the page still traces
 to a `VERIFIED` row; what is declined is an on-page reconciliation *between two of our own
 figures*, which was never what that rule was for.
-
----
-
-### D-008 — Relationship to `docs.vlab.digital`
-**Status:** OPEN · Owner: Nandan
-
-A separate repo exists at `../docs.vlab.digital`. Options: shared nav and shell so the
-two read as one property; or deliberately separate, with docs kept plain.
-
-**Recommendation:** shared nav, separate shell. A technical buyer moving from the
-marketing site to the docs should not feel they have left the company, but docs should
-not carry marketing chrome.
 
 ---
 

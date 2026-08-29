@@ -1,0 +1,498 @@
+/* ==========================================================================
+   Documentation — css/docs.css
+   --------------------------------------------------------------------------
+   Loaded ONLY on pages under /docs/ (base.html gates it on `docsSection`), so
+   the marketing page's payload does not grow for a section it never renders.
+
+   Everything here obeys DESIGN.md: the four faces, the tokens, radius 2px or 0,
+   left aligned, hairlines as structure. It introduces NO colour — see D-029 on
+   why the warning callout is brass rather than a fourth hue.
+
+   The one thing it does add is a SCALE. §4's display sizes are built for a page
+   with three headings; a reference page here carries twenty-nine h2s, and 42px
+   Zilla Slab twenty-nine times is a poster, not a document. Same faces, same
+   weights, tighter steps. DESIGN.md §4 "Documentation scale" records it.
+   ========================================================================== */
+
+:root{
+  --doc-side:236px;      /* sidebar track */
+  --doc-rail:186px;      /* contents rail track */
+  --doc-gap:44px;
+  --doc-measure:68ch;    /* §4's ~65ch, given the two characters that a reference
+                            page's inline `code` spans keep spending */
+  --doc-sticky:90px;     /* 66px nav + 24px */
+  --code-max:46rem;      /* a JSON response body should not be the whole page */
+}
+
+/* ==========================================================================
+   Shell
+   ========================================================================== */
+
+.doc-shell{
+  display:grid;
+  grid-template-columns:var(--doc-side) minmax(0,1fr) var(--doc-rail);
+  gap:0 var(--doc-gap);
+  align-items:start;
+  padding:36px 0 96px;
+}
+
+/* Both rails scroll with their own overflow so a long tree never pushes the
+   page height, and never traps the article behind it. */
+.doc-side,
+.doc-toc{
+  position:sticky; top:var(--doc-sticky);
+  max-height:calc(100vh - var(--doc-sticky) - 24px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+
+.doc-main{ min-width:0 }   /* without this, a wide <pre> stretches the grid track */
+
+/* ==========================================================================
+   Nav additions — the docs half of the shared header (D-008)
+   ========================================================================== */
+
+.brand-tag{
+  font:500 10px/1 var(--mono);
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--ink-3);
+  border:1px solid var(--rule-2);
+  border-radius:var(--r);
+  padding:4px 6px 3px;
+  margin-left:2px;
+}
+
+/* Not a .btn: it is a way back, not a conversion action. */
+.nav-back{
+  font:400 14px/1 var(--ui);
+  color:var(--ink-2);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule-2);
+  padding-bottom:3px;
+}
+.nav-back:hover{ color:var(--ink); border-color:var(--ink) }
+
+/* ==========================================================================
+   Sidebar tree
+   --------------------------------------------------------------------------
+   Nesting is drawn with a hairline down the left of each level — the bracket
+   primitive (§6) — rather than with indentation alone. The current page carries
+   a brass tick, which is M2's target marker doing the one job it does elsewhere
+   on the site: marking the thing you are aiming at.
+   ========================================================================== */
+
+.doc-tree{ list-style:none; margin:0; padding:0 }
+
+.doc-tree.d2,
+.doc-tree.d3{
+  margin:2px 0 6px;
+  padding-left:13px;
+  border-left:1px solid var(--rule);
+}
+
+.doc-tree a{
+  display:block;
+  padding:5px 0 5px 11px;
+  font:400 14.5px/1.35 var(--ui);
+  color:var(--ink-2);
+  text-decoration:none;
+  border-left:2px solid transparent;
+  margin-left:-13px;      /* pull the marker onto the nesting hairline */
+  padding-left:24px;
+}
+.doc-tree.d1 > li > a{
+  margin-left:0; padding-left:11px;
+  font:400 15px/1.35 var(--display);
+  color:var(--ink);
+}
+.doc-tree a:hover{ color:var(--ink) }
+
+/* The target tick. */
+.doc-tree a[aria-current="page"]{
+  color:var(--ink);
+  font-weight:600;
+  border-left-color:var(--brass);
+}
+
+/* ==========================================================================
+   Search
+   ========================================================================== */
+
+.doc-search{ position:relative; margin:0 0 20px }
+
+.doc-search input{
+  width:100%;
+  font:400 14.5px/1 var(--ui);
+  color:var(--ink);
+  background:var(--surface);
+  border:1px solid var(--rule-2);
+  border-radius:var(--r);
+  padding:9px 11px;
+  -webkit-appearance:none; appearance:none;
+}
+.doc-search input::placeholder{ color:var(--ink-3) }
+.doc-search input:focus{ border-color:var(--ink) }
+
+.doc-results{
+  position:absolute; z-index:30; left:0; right:0; top:calc(100% + 4px);
+  max-height:60vh; overflow-y:auto;
+  background:var(--surface);
+  border:1px solid var(--rule-2);
+  border-radius:var(--r);
+  box-shadow:0 6px 24px rgb(31 39 46 / .10);
+}
+.doc-results a{
+  display:block; padding:9px 11px;
+  border-top:1px solid var(--rule);
+  text-decoration:none;
+}
+.doc-results a:first-child{ border-top:0 }
+.doc-results a:hover,
+.doc-results a[aria-selected="true"]{ background:var(--sunk) }
+
+.doc-results .r-t{ display:block; font:400 14.5px/1.3 var(--ui); color:var(--ink) }
+.doc-results .r-s{
+  display:block; margin-top:2px;
+  font:400 11px/1.3 var(--mono);
+  letter-spacing:.06em; text-transform:uppercase;
+  color:var(--ink-3);
+}
+.doc-results .r-none{ padding:11px; font-size:14px; color:var(--ink-3) }
+
+/* ==========================================================================
+   Breadcrumbs
+   ========================================================================== */
+
+.doc-crumbs ol{
+  list-style:none; margin:0 0 18px; padding:0;
+  display:flex; flex-wrap:wrap; align-items:center; gap:0 8px;
+  font:500 11px/1.5 var(--mono);
+  letter-spacing:.11em; text-transform:uppercase;
+  color:var(--ink-3);
+}
+.doc-crumbs li + li::before{ content:"/"; margin-right:8px; color:var(--rule-2) }
+.doc-crumbs a{ color:var(--ink-3); text-decoration:none }
+.doc-crumbs a:hover{ color:var(--brass) }
+.doc-crumbs [aria-current]{ color:var(--ink-2) }
+
+/* ==========================================================================
+   Documentation scale — DESIGN.md §4
+   ========================================================================== */
+
+.doc-main > h1{
+  font:300 clamp(32px,4.2vw,42px)/1.08 var(--display);
+  letter-spacing:-.015em;
+  margin:0 0 22px;
+  max-width:22ch;
+}
+
+.doc-body{ color:var(--ink-2) }
+
+.doc-body h2{
+  font:300 26px/1.2 var(--display);
+  letter-spacing:-.008em;
+  color:var(--ink);
+  /* Structure is part of the argument (§5): every h2 opens with a hairline. */
+  border-top:1px solid var(--rule);
+  padding-top:22px;
+  margin:44px 0 14px;
+  max-width:var(--doc-measure);
+}
+.doc-body h3{
+  font:400 18.5px/1.3 var(--display);
+  color:var(--ink);
+  margin:32px 0 10px;
+  max-width:var(--doc-measure);
+}
+/* Only six of these exist across 47 pages, and they sit deep inside reference
+   material — the eyebrow treatment reads as a label, which is what they are. */
+.doc-body h4{
+  font:500 11.5px/1.4 var(--mono);
+  letter-spacing:.13em; text-transform:uppercase;
+  color:var(--ink-3);
+  margin:26px 0 8px;
+}
+
+.doc-body :where(h2,h3,h4):first-child{ margin-top:0; border-top:0; padding-top:0 }
+
+/* markdown-it-anchor wraps the heading text in a link. It must not read as a
+   link — the heading is not a destination, it just has one. */
+.doc-body .header-anchor{ color:inherit; text-decoration:none }
+.doc-body .header-anchor:hover{ color:var(--brass) }
+
+/* ==========================================================================
+   Prose
+   ========================================================================== */
+
+.doc-body p,
+.doc-body li{ max-width:var(--doc-measure) }
+.doc-body p{ margin:0 0 15px }
+.doc-body strong{ color:var(--ink); font-weight:600 }
+
+.doc-body ul,
+.doc-body ol{ margin:0 0 15px; padding-left:22px }
+.doc-body li{ margin:0 0 7px }
+.doc-body li > ul,
+.doc-body li > ol{ margin:7px 0 0 }
+.doc-body ul{ list-style:square }        /* the cell primitive, near enough, and
+                                            a disc is the one bullet §6 has no
+                                            form for */
+.doc-body li::marker{ color:var(--rule-2) }
+.doc-body ol > li::marker{
+  font:400 14px var(--mono); color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+}
+
+.doc-body hr{
+  border:0; border-top:1px solid var(--rule);
+  margin:34px 0; max-width:var(--doc-measure);
+}
+
+.doc-body blockquote{
+  margin:0 0 15px; padding:2px 0 2px 18px;
+  border-left:2px solid var(--rule-2);
+  color:var(--ink-2); font-family:var(--prose);
+  max-width:var(--doc-measure);
+}
+
+/* ==========================================================================
+   Code
+   ========================================================================== */
+
+.doc-body :not(pre) > code{
+  font:400 .875em/1.4 var(--mono);
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  padding:1px 4px;
+  color:var(--ink);
+  overflow-wrap:break-word;
+}
+
+.doc-body pre{
+  margin:0 0 18px;
+  padding:15px 17px;
+  /* --surface, NOT --sunk. Measured: --data on --sunk is 4.45:1 in dark and
+     --ink-3 on --sunk is 3.14:1 — a code comment is text, not a caption, so it
+     needs 4.5. Both clear it on --surface. check-contrast.py holds this. */
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  /* §5: wide content scrolls inside its own container; the body never scrolls
+     sideways. This is the container. */
+  overflow-x:auto;
+  max-height:var(--code-max);
+}
+.doc-body pre code{
+  font:400 13.5px/1.65 var(--mono);
+  color:var(--ink);
+  background:none; border:0; padding:0;
+  white-space:pre;
+  font-variant-numeric:normal;   /* code is not a data table; tabular figures
+                                    misalign against proportional punctuation */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.doc-body .table-wrap{ overflow-x:auto; margin:0 0 20px }
+.doc-body table{
+  border-collapse:collapse;
+  width:100%;
+  font:400 14.5px/1.45 var(--ui);
+}
+.doc-body thead th{
+  text-align:left;
+  font:500 11px/1.4 var(--mono);
+  letter-spacing:.11em; text-transform:uppercase;
+  color:var(--ink-3);
+  border-bottom:1px solid var(--rule-2);
+  padding:0 14px 8px 0;
+  white-space:nowrap;
+}
+.doc-body tbody td{
+  border-bottom:1px solid var(--rule);
+  padding:9px 14px 9px 0;
+  color:var(--ink-2);
+  vertical-align:top;
+}
+.doc-body tbody tr:last-child td{ border-bottom:0 }
+.doc-body td:last-child,
+.doc-body th:last-child{ padding-right:0 }
+
+/* ==========================================================================
+   Screenshots — D-029
+   --------------------------------------------------------------------------
+   The only raster images on the property. They get a hairline and a paper mat so
+   that a capture of a differently-branded UI reads as a specimen ON the page
+   rather than as part of it.
+   ========================================================================== */
+
+.doc-body img{
+  display:block;
+  max-width:100%; height:auto;
+  margin:4px 0 20px;
+  background:var(--surface);
+  border:1px solid var(--rule-2);
+  border-radius:var(--r);
+  padding:6px;
+}
+
+/* ==========================================================================
+   Callouts — the two the docs use, and no more
+   --------------------------------------------------------------------------
+   No new colour. Note is neutral; warning is brass, which §3 already assigns
+   the semantic job. A third type needs a DESIGN.md entry, not another rule.
+   ========================================================================== */
+
+.callout{
+  margin:0 0 20px;
+  padding:13px 16px;
+  background:var(--sunk);
+  border:1px solid var(--rule);
+  border-left:2px solid var(--rule-2);
+  border-radius:0 var(--r) var(--r) 0;
+  max-width:var(--doc-measure);
+}
+.callout > :last-child{ margin-bottom:0 }
+.callout p{ max-width:none }
+
+.callout-label{
+  font:500 10.5px/1 var(--mono);
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0 0 8px;
+}
+
+.callout.warning{ border-left-color:var(--brass) }
+.callout.warning .callout-label{ color:var(--brass) }
+
+/* ==========================================================================
+   Contents rail
+   ========================================================================== */
+
+.doc-toc .eyebrow{ margin:0 0 10px }
+.doc-toc ol{ list-style:none; margin:0; padding:0 }
+.doc-toc li{ margin:0 }
+.doc-toc a{
+  display:block;
+  padding:4px 0 4px 11px;
+  border-left:1px solid var(--rule);
+  font:400 13px/1.35 var(--ui);
+  color:var(--ink-3);
+  text-decoration:none;
+}
+.doc-toc a:hover{ color:var(--ink); border-left-color:var(--rule-2) }
+.doc-toc .l3 a{ padding-left:22px }
+
+/* The same list, inside the article, for the widths where the rail is gone. */
+.doc-toc-inline{ display:none; margin:0 0 26px; max-width:var(--doc-measure) }
+.doc-toc-inline summary{
+  cursor:pointer;
+  font:500 11px/1 var(--mono);
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--ink-3);
+  padding:9px 0;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.doc-toc-inline[open] summary{ border-bottom-color:transparent }
+.doc-toc-inline ol{ list-style:none; margin:10px 0 0; padding:0 }
+.doc-toc-inline a{
+  display:block; padding:4px 0 4px 11px;
+  border-left:1px solid var(--rule);
+  font:400 14px/1.35 var(--ui); color:var(--ink-2); text-decoration:none;
+}
+.doc-toc-inline .l3 a{ padding-left:22px }
+
+/* ==========================================================================
+   Prism — the theme is ours
+   --------------------------------------------------------------------------
+   Three colours, doing the three jobs §3 assigns them: ink is chrome (syntax
+   the eye skips), teal is DATA (every literal value), brass is accent (the
+   keywords that carry meaning). No fourth hue enters through the code blocks.
+   ========================================================================== */
+
+.token.comment,
+.token.prolog,
+.token.cdata{ color:var(--ink-2); font-style:italic }
+.token.punctuation,
+.token.operator,
+.token.entity,
+.token.url{ color:var(--ink-2) }
+.token.property,
+.token.tag,
+.token.symbol,
+.token.attr-name{ color:var(--ink) }
+.token.string,
+.token.char,
+.token.number,
+.token.boolean,
+.token.constant,
+.token.attr-value,
+.token.inserted{ color:var(--data) }
+.token.keyword,
+.token.selector,
+.token.atrule,
+.token.function,
+.token.class-name,
+.token.important{ color:var(--brass) }
+.token.deleted{ color:var(--brass-2) }
+.token.bold{ font-weight:600 }
+.token.italic{ font-style:italic }
+
+/* ==========================================================================
+   Utility
+   ========================================================================== */
+
+/* Visually hidden, still announced. */
+.vh{
+  position:absolute; width:1px; height:1px;
+  margin:-1px; padding:0; overflow:hidden;
+  clip-path:inset(50%); white-space:nowrap; border:0;
+}
+
+/* ==========================================================================
+   Responsive — §5 breakpoints, plus one this layout needs
+   ========================================================================== */
+
+/* 1180px: the contents rail is the first thing to go. It is an aid; the sidebar
+   is navigation and the article is the point. */
+@media (max-width:1180px){
+  .doc-shell{ grid-template-columns:var(--doc-side) minmax(0,1fr) }
+  .doc-toc{ display:none }
+  .doc-toc-inline{ display:block }
+}
+
+/* 860px: §5's breakpoint, where three columns become one. The sidebar folds into
+   a disclosure ABOVE the article — 47 links must not be what a phone reader
+   scrolls past to reach the page they asked for. */
+@media (max-width:860px){
+  .doc-shell{ grid-template-columns:minmax(0,1fr); padding-top:24px }
+  /* Bounded rather than folded into a <details>: the disclosure trick needs
+     author CSS to beat the UA's hiding of details content, which browsers have
+     changed the mechanism of twice. A capped scroller behaves the same
+     everywhere and needs no JavaScript to be correct. */
+  .doc-side{
+    position:static;
+    max-height:min(45vh,360px); overflow-y:auto;
+    overscroll-behavior:auto;
+    margin:0 0 26px; padding:0 0 18px;
+    border-bottom:1px solid var(--rule);
+  }
+  .doc-tree.d2, .doc-tree.d3{ padding-left:15px }
+}
+
+@media (max-width:520px){
+  .doc-body pre code{ font-size:12.5px }
+  .doc-main > h1{ font-size:30px }
+}
+
+/* §9 · Motion respects the preference. The only motion here is the smooth jump
+   to an anchor, and it is off by default for anyone who asked. */
+@media (prefers-reduced-motion:no-preference){
+  html{ scroll-behavior:smooth }
+}
+/* Anchored headings must not land under the sticky nav. */
+.doc-body :where(h2,h3,h4){ scroll-margin-top:var(--doc-sticky) }

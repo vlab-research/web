@@ -46,6 +46,17 @@ PAIRS = [
     ("on-invert-2", "invert", 4.5, "prose on an ink band"),
     ("data-inv",    "invert", 4.5, "data on an ink band - NOT --data, which is 2.10:1"),
     ("on-invert-2", "invert", 4.5, "source line on an ink band - NOT --ink-3, which is 4.00:1"),
+
+    # css/docs.css. Documentation adds two grounds the marketing page never uses:
+    # --surface under code, and --sunk under callouts. D-029.
+    ("ink",         "surface",4.5, "code, and search result titles"),
+    ("ink-2",       "surface",4.5, "code punctuation, operators and comments"),
+    ("data",        "surface",4.5, "code literals - on --sunk this is 4.45:1 in dark, which is why code sits on --surface"),
+    ("ink-3",       "surface",3.0, "search result sub-line - a label, not prose"),
+    ("ink",         "sunk",   4.5, "bold text inside a callout"),
+    ("ink-2",       "sunk",   4.5, "callout body text"),
+    ("ink-3",       "sunk",   3.0, "callout label - eyebrow treatment, label minimum"),
+    ("brass",       "sunk",   4.5, "warning callout label"),
 ]
 
 

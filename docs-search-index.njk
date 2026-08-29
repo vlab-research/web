@@ -1,0 +1,34 @@
+---
+permalink: /docs/search-index.json
+eleventyExcludeFromCollections: true
+---
+{#- The search index, built from the pages Eleventy just rendered rather than from
+    the Markdown. That is the point: the index cannot describe a page the site does
+    not actually serve, and the heading ids it links to are the ids that
+    markdown-it-anchor emitted, not a second guess at them.
+
+    It sits at the ROOT, beside sitemap.njk, and not in docs/ — docs/docs.json sets
+    templateEngineOverride:"md" for everything in that directory, which would render
+    this file as Markdown and emit a JSON file full of <p> tags. Same reason
+    sitemap.njk is not in a content directory.
+
+    It is NOT loaded with the page. docs.js fetches it on the first focus of the
+    search box, so a reader who never searches never pays for it.
+
+    Keys are one letter because this file ships to the browser: u=url, t=title,
+    s=section, h=headings [{i:id, t:text}], x=text. -#}
+[
+{%- for p in collections.docs %}
+  {%- set crumbs = p.url | crumbs(collections.docs) %}
+  {%- set sect = [] %}
+  {%- for c in crumbs %}{% if not loop.last and c.url != "/docs/" %}{% set _ = sect.push(c.title) %}{% endif %}{% endfor %}
+  {%- set hs = p.templateContent | headings %}
+  {
+    "u": {{ p.url | dump | safe }},
+    "t": {{ p.data.title | dump | safe }},
+    "s": {{ sect.join(" / ") | dump | safe }},
+    "h": [{% for h in hs %}{"i":{{ h.id | dump | safe }},"t":{{ h.text | dump | safe }}}{% if not loop.last %},{% endif %}{% endfor %}],
+    "x": {{ p.templateContent | searchText | dump | safe }}
+  }{% if not loop.last %},{% endif %}
+{%- endfor %}
+]
