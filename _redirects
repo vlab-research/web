@@ -28,3 +28,16 @@
 # diverge silently, which is the one failure mode worth watching for.
 https://docs.vlab.digital/*   https://vlab.digital/docs/:splat   301!
 http://docs.vlab.digital/*    https://vlab.digital/docs/:splat   301!
+
+# BELT AND BRACES, and not redundant. Netlify runs its OWN redirect from every
+# non-primary domain to the primary one, and that redirect preserves the path
+# WITHOUT adding a prefix — so if it wins the race against the two rules above,
+# docs.vlab.digital/fly/reference/bails/ lands on vlab.digital/fly/reference/bails/
+# and 404s. The host-scoped rules should take precedence. These make it not matter.
+#
+# The old Hugo site served exactly two top-level trees, /fly/ and /vlab/, and
+# neither path is used on this domain — every section here is an anchor. So these
+# cost nothing and catch the one failure mode that would otherwise turn the whole
+# cutover into 404s for every deep link.
+/fly/*    /docs/fly/:splat    301!
+/vlab/*   /docs/vlab/:splat   301!
