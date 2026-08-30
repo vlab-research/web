@@ -4,8 +4,8 @@ title: Virtual Lab Documentation
 
 This is the documentation for using the tools created by Virtual Lab:
 
-1. [**Virtual Lab**](/docs/vlab/): the recruitment optimization tool.
-2. [**Fly**](/docs/fly/): a chatbot survey tool optimized for longitudinal surveys and incentive reimbursement.
+1. [**Study Recruitment**](/docs/vlab/) — **Virtual Lab**, the recruitment optimization tool.
+2. [**Fly Surveys**](/docs/fly/) — **Fly**, a chatbot survey tool optimized for longitudinal surveys and incentive reimbursement.
 
 These two tools are often used together, but can also be used separately.
 

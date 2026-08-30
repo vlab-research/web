@@ -655,6 +655,28 @@ that decided each, then what it costs.
    three mechanism-step labels, which stay verbs: a proper noun in the third slot asks a
    reader to learn a name before they have learned the mechanism.
 
+**Applied to the documentation nav, 2026-08-30 — ruling 4, and the docs were breaking
+it.** The two top-level sections were labelled **Virtual Lab** and **Fly**: two product
+names, which ruling 4 forbids in a nav. They are now **Study Recruitment** and **Fly
+Surveys**. Nandan proposed both.
+
+**The first was the worse offence.** A sidebar item reading *Virtual Lab*, sitting under a
+brand mark reading *Virtual Lab · Docs*, on a site owned by *Virtual Lab, LLC* — ruling 2
+declares that overload honest, and it is, but it becomes unreadable at exactly the moment
+a reader has to choose between two tools. It also produced the page title
+*"Virtual Lab — Virtual Lab Documentation"*.
+
+**The asymmetry is the decision, not an oversight.** One label carries a product name and
+the other does not, because rulings 1 and 2 say precisely that: Fly is named because it is
+separable, and the recruitment side is not because you cannot obtain it without buying a
+study. *Fly Surveys* also satisfies the register rule — the name carries its job in the
+same breath, and a nav is often a first mention.
+
+**The product names survive in prose**, on the section page each label opens and in the
+landing list. That is the split ruling 4 describes: the label says what the thing is for,
+the prose says what it is called — which is also what lets a reader match the label to the
+header of the dashboard they are logged into.
+
 **Standing — Fly is scope, not proof, and D-002 holds.** D-002's sentence, *"the
 open-source platform is the credibility engine … not the thing being purchased"*, was
 written with **one** piece of software in view: the optimiser. Two are in play and they do
