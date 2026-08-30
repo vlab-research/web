@@ -15,4 +15,4 @@ WhatsApp study, the two pages to read first are
 two — and [WhatsApp Surveys](/docs/fly/reference/whatsapp/) — how
 people get into one.
 
-This documentation is a work in progress. Please feel free to contribute: https://github.com/vlab-research/docs.vlab.digital
+This documentation is a work in progress. Please feel free to contribute — the pages live in [vlab-research/web](https://github.com/vlab-research/web) under `docs/`.
