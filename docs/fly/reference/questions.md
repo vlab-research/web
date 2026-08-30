@@ -327,7 +327,7 @@ In Typeform, pick **Statement**.
 
 The `url` is what you get by uploading the file in the dashboard's **Media** tab
 and clicking to copy it — see [Media Library](/docs/fly/reference/media/).
-The same URL works on WhatsApp, Messenger and Instagram; there is nothing
+The same URL works on WhatsApp and Messenger; there is nothing
 per-platform to configure.
 
 `keepMoving: true` sends the attachment and moves straight on to the next
@@ -363,7 +363,7 @@ GIF and WebP images are not supported: convert them to PNG, JPEG, or MP4.
 ### Captions
 
 On **WhatsApp**, the Typeform question title is sent as the caption, so it
-appears with the image, video or document. On **Messenger and Instagram** the
+appears with the image, video or document. On **Messenger** the
 platform supports no caption and the title is not shown — if the text matters
 there, send it as a separate Statement.
 
