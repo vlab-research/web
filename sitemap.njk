@@ -5,10 +5,13 @@ eleventyExcludeFromCollections: true
 {#- The sitemap. Driven by collections.all, so a page added later appears here
     without anyone remembering to come back.
 
-    IT LISTS ONE URL, AND THAT IS CORRECT.
+    IT LISTED ONE URL UNTIL 2026-08-29, AND THAT WAS CORRECT. It now lists 48: the
+    homepage and the 47 documentation pages (D-008). Docs are meant to be found —
+    a technical buyer searching for a field name is exactly the reader they are for
+    — so unlike privacy they are a positive request to index.
 
-    Both other pages set `eleventyExcludeFromCollections: true` and neither belongs
-    in a sitemap:
+    Both non-docs pages set `eleventyExcludeFromCollections: true` and neither
+    belongs in a sitemap:
 
     · /404.html is not content.
 
@@ -20,7 +23,8 @@ eleventyExcludeFromCollections: true
 
     Not an Eleventy .html page (D-006's "pages are .html with front matter and a
     layout") because it is not a page — it is a machine artefact that happens to be
-    generated. eleventy.config.js adds "njk" to templateFormats for this one file. -#}
+    generated. eleventy.config.js adds "njk" to templateFormats for this file and
+    for docs-search-index.njk, which is a machine artefact on the same terms. -#}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for p in collections.all %}

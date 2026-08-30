@@ -1,9 +1,9 @@
 # scripts
 
-Twelve scripts. **Three are rules from the documentation made executable**
-(`check-claims.py`, `test-check-claims.py`, `check-contrast.py`), **seven generate committed
-or built artefacts**, and **one** is a piece of arithmetic kept because a design rule rests
-on it. **Where a script and a paragraph disagree, the script is what runs** — so fix the
+Thirteen scripts. **Four are rules from the documentation made executable**
+(`check-claims.py`, `test-check-claims.py`, `check-contrast.py`, `check-links.py`), **seven
+generate committed or built artefacts**, and **one** is a piece of arithmetic kept because a
+design rule rests on it. **Where a script and a paragraph disagree, the script is what runs** — so fix the
 paragraph, in the same change.
 
 Nothing here needs a dependency. Python 3, standard library, run from anywhere.
@@ -12,7 +12,8 @@ Nothing here needs a dependency. Python 3, standard library, run from anywhere.
 |---|---|---|
 | `check-claims.py` | Every number on a page traces to a `VERIFIED` row in `CLAIMS.md`, and carries a visible source line in the same visual unit | Before publishing any page that states a figure |
 | `test-check-claims.py` | Ten fixtures asserting how `check-claims.py` behaves | After touching `check-claims.py`, or `CLAIMS.md`'s status vocabulary or publication rules |
-| `check-contrast.py` | Every colour pair in `DESIGN.md` §3 meets its stated WCAG target | Before publishing anything with a new colour pairing |
+| `check-contrast.py` | Every colour pair in `DESIGN.md` §3 meets its stated WCAG target — 38 pairs across both themes | Before publishing anything with a new colour pairing |
+| `check-links.py` | Every internal link, `<img src>` and `#fragment` in `_site/` resolves — the fragment against the ids on the page it points at | After the build, and after moving or renaming any docs page or heading. **Expected count is 9, not 0** — see below |
 | `build-coverage-map.py` | Emits the coverage section's three artefacts **plus the country list for structured data** from one data file | After `scripts/data/coverage.json` changes — and never hand-edit the output |
 | `build-throughput-figure.py` | Emits `assets/figures/throughput-box.svg` — respondents recruited per study per active day | After `scripts/data/throughput.json` changes — and never hand-edit the output |
 | `build-adcost-figure.py` | Emits `assets/figures/ad-cost.svg` — advertising cost per respondent recruited | After `scripts/data/ad-cost.json` changes — and never hand-edit the output |
@@ -23,6 +24,15 @@ Nothing here needs a dependency. Python 3, standard library, run from anywhere.
 | `build-review.py` | Builds the self-contained asset-review page (`DESIGN.md` §13) into `build/` | After any asset changes, if the review page is being republished |
 | `build-favicon.py` | Emits `assets/favicon.ico` and `apple-touch-icon.png` from `assets/favicon.svg` | After the favicon changes — and never hand-edit either derivative |
 | `check-fourth-hue.py` | Shows that no fourth brand hue can satisfy both AA on `--paper` and D-011's greyscale requirement | Only if someone proposes a product colour (D-024) |
+
+**`check-links.py` exists because of what the docs migration gave up.** Under Hugo, internal
+links were `{{< ref "..." >}}` and the build failed on a broken one. D-008 resolved all 116
+of those to plain URLs — the right end state, but it hands the guarantee back. This checker
+takes it, and covers more: `ref` validated the path and took the `#anchor` on trust, and
+heading ids are generated from heading *text*, so rewording a heading silently breaks every
+link into it. **It reports 9 today**, all screenshots that were never committed and were
+broken on the Hugo site too (`notes/ws-docs-screenshots.md`). Any other number is a
+regression.
 
 **Seven of these write into the repo** — `build-icons.py` (`assets/icons/`),
 `build-paper-json.py` (`_data/paper.json`), `build-throughput-figure.py` and

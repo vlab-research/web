@@ -76,6 +76,7 @@ Four phases, each with a human gate. Do not start a phase whose gate has not clo
 | 3.5 · Narrative | The spine the site argues, and the sitemap derived from it | **Complete** — 2026-08-22. D-027 and D-007 |
 | 4 · Copy | Every word of the page, against the spine | **Complete — 2026-08-25.** `COPY.md`. Nandan: *"the plan is in a pretty good place. Let's wrap this up for now and a future agent will begin to scaffold the site"* |
 | 5 · Build | Eleventy scaffold, the design system in CSS, the page | **Built 2026-08-25.** Deploys from `netlify.toml`; three gates pass; two components held on decisions, not on work |
+| 6 · Docs | `docs.vlab.digital` folded into this build at `/docs/` | **Built 2026-08-29.** D-008. 47 pages, Hugo retired, one shell for the property. One DNS step outstanding — see below |
 
 **The gate rule:** each phase ends with a deliverable the user reviews and approves —
 usually published as an Artifact so it can be seen rather than described. Do not
@@ -85,6 +86,69 @@ roll from one phase into the next on your own initiative. Present, then wait.
 through several rounds of review and every round produced settled decisions — that is
 review happening, not review finishing. Read the distinction in "Picking this up" below
 before assuming the build may start.
+
+---
+
+## The documentation lives here now — 2026-08-29
+
+**`docs/` is 47 Markdown pages served at `vlab.digital/docs/`.** They were a separate Hugo
+site at `../docs.vlab.digital`; D-008 folded them in. **Read D-008, D-029 and D-030 before
+touching anything under `docs/`** — between them they say what the docs inherit from this
+design system, what they are exempt from, and what the search script is allowed to do.
+
+**Four things about it that will otherwise cost you an hour each.**
+
+- **Docs Markdown is NOT templated, and this is not a preference.**
+  `docs/docs.11tydata.js` sets `templateEngineOverride: "md"`. The repo default is
+  `markdownTemplateEngine: "njk"`, and Nunjucks over this content **fails the build**:
+  Fly's message interpolation is written `{{hidden:name}}`, and documenting that syntax
+  is much of what these pages are for. Turning Nunjucks back on to get one dynamic value
+  will break six pages. Put dynamic things in the layout.
+- **`.eleventyignore` says `/*.md`, and the leading slash is load-bearing.** A bare
+  `*.md` matches at every depth and silently swallows all 47 docs pages.
+- **`check-claims.py` skips `docs/`** (D-029) and so the bare run still means something.
+  The provenance rule is **not** narrowed: a docs page that states an outcome figure is
+  making a claim and gets scanned by naming the file.
+- **`scripts/check-links.py` is new and it currently reports 9.** All nine are screenshots
+  that were never committed — six `bails-*`, three `fly-monitor-*` — and were broken on the
+  Hugo site too. `notes/ws-docs-screenshots.md` is the capture plan. **The expected count is
+  9, not 0**, until those images land; treat any other number as a regression.
+
+**One deploy step is outstanding, and the docs are not live at their old URL without it:**
+add `docs.vlab.digital` as a domain alias on the Netlify site and point its DNS there.
+`_redirects` carries the host-scoped 301s. Until that is done the old GitHub Pages site
+still answers that host and the two diverge silently.
+
+**Two things changed on 2026-08-30, after Nandan looked at it.** Both are recorded in
+`DESIGN.md` §8 and both reverse something the first pass did:
+
+- **The shell is three columns centred in a wider container** — `--wrap-docs: 1440px`,
+  with `body.docs` giving the nav and footer the same container. §5's 1180px does not
+  apply under `/docs/` and that is the only exception on the property. **This took three
+  tries and the rule that came out of it is the useful part:** a new surface may use a
+  pattern this site does not have — docs are functionally a different app — but **not an
+  invented one.** Full bleed with the tracks left-packed was the invention; no
+  documentation site does that. Take the pattern from somewhere it demonstrably works,
+  and `DESIGN.md` §8 names five.
+- **The sidebar tree is fully expanded at every depth**, not open-along-the-current-path.
+  A collapsed branch hides the shape of the set from a reader who does not yet know the
+  vocabulary.
+
+**And one regression was found and fixed in the same pass, which is worth knowing about
+because the same trap is still there.** Stripping `{{< toc-tree >}}` from the section
+indexes left **five section pages rendering as a heading over nothing** — the shortcode
+had been their entire body. `sectionIndex` in `eleventy.config.js` restores it, listing
+each child with its own first sentence. **The lesson generalises: a Hugo shortcode that
+was removed rather than replaced is a page that silently lost its content, and the build
+will not tell you.** Five of those pages still have no intro prose of their own, so
+their index rows show bare titles — a content gap, not a layout bug.
+
+**How the pieces fit:** `docs/*.md` → `_includes/docs.html` (sidebar, breadcrumbs,
+contents rail, section index) → `_includes/base.html` (the shared head, mark and footer, with the
+marketing CTA switched off by `docsSection`). The sidebar comes from the `docsTree`
+collection in `eleventy.config.js`, ordered by front-matter `weight`. `docs-search-index.njk`
+sits at the ROOT, beside `sitemap.njk`, because anything inside `docs/` would inherit the
+Markdown override and emit JSON full of `<p>` tags.
 
 ---
 
@@ -861,6 +925,13 @@ it does not resurrect either banned framing.
    what lets a reader read the figure. The test: **does the line say something about the
    number, or only about us?**
 
+   **It does not reach `docs/` (D-029, 2026-08-29).** The provenance rule governs
+   *claims* — figures offered as evidence for what Virtual Lab can do. Reference
+   documentation asserts nothing: its numerals are JSON payloads, HTTP codes, timeouts
+   and field weights. **The rule itself is unnarrowed** — a docs page stating an outcome
+   figure is making a claim wherever it is printed, needs a `VERIFIED` row, and is scanned
+   by naming the file.
+
    `python3 scripts/check-claims.py` enforces both halves of this rule. Pages declare
    their claims with `data-claim` (see `DESIGN.md` §8, "Claim annotation"); an
    un-annotated page is still scanned heuristically, but heuristic mode can pass a number
@@ -909,6 +980,18 @@ it does not resurrect either banned framing.
    drawing cannot be made from the primitives, that is a signal the concept does not
    belong on the page — raise it rather than reaching outside the system.
 
+   **`docs/` is carved out, and only `docs/` (D-029, 2026-08-29).** Documentation carries
+   39 UI screenshots, because a capture of the Fly dashboard **is** the documentation and
+   there is no version of one made from a bar and a tick. `css/docs.css` mats every capture
+   in a hairline so it reads as a specimen on the page. The ban holds everywhere else, and
+   `.eleventyignore` still excludes `img/`.
+
+9. **`/docs/` ships JavaScript. Nothing else does, and D-030 is the limit rather than the
+   precedent.** One search script, `/docs/` only, no library, no CDN, one same-origin fetch
+   on first focus, no cookie and no storage and nothing reported anywhere. **D-009
+   (analytics) is still open and this does not touch it.** A second script is a question for
+   the user, not a decision for you.
+
 ---
 
 ## Things about this repo you should not have to discover the hard way
@@ -954,6 +1037,15 @@ it does not resurrect either banned framing.
 - **`build/` is generated and untracked.** `python3 scripts/build-coverage-map.py`
   recreates it. Deleting it costs one command.
 - **Deployment is Netlify** (`netlify.toml`, `_redirects`).
+- **`docs/` is content, not documentation-about-the-repo.** It is the 47-page public
+  documentation set (D-008) — the only Markdown in this repo that is a *page*. The
+  specification is the root `.md` files; `notes/` is the memos; `docs/` is the product.
+  Its screenshots are in `docs/images/`, the only raster images published anywhere.
+- **`docs/docs.js` is the only client-side JavaScript on the property** and is copied to
+  the output verbatim — no bundler, no minifier, what you read is what runs (D-030).
+- **`docs-search-index.njk` is at the repo ROOT for a reason.** Beside `sitemap.njk`, and
+  for the same reason it is: it is a machine artefact, not a page. Moving it into `docs/`
+  makes it inherit `templateEngineOverride: "md"` and emit JSON full of `<p>` tags.
 - **The brand already existed in the proposals repo** before the website caught up:
   `../proposals/src/vlab_proposals/static/style.css` and `static/fonts/` hold the
   wordmark, colours and three of the four `.woff2` files. The website inherits from
@@ -975,7 +1067,11 @@ said explicitly which one does not and why.
       **Name the files.** The bare command also walks `scripts/fixtures/`, which is nine
       pages built to fail, so it exits 1 by design and always will; the number to compare
       against is the one in "Known drift", not zero
-- [ ] `python3 scripts/check-contrast.py` passes — 22 pairs
+- [ ] `python3 scripts/check-contrast.py` passes — **38 pairs** (22 until D-029 added the
+      two grounds documentation introduces, `--surface` under code and `--sunk` under callouts)
+- [ ] `python3 scripts/check-links.py` reports **9**, not 0 — every internal link, image
+      and `#fragment` in `_site/` resolves except the nine screenshots that were never
+      committed (`notes/ws-docs-screenshots.md`). Any other number is a regression
 - [ ] `python3 scripts/build-coverage-map.py` runs clean if coverage data changed
       (it exits non-zero and prints a banner for any country it cannot draw, or for a
       country that is in no region or in two — never ignore either)

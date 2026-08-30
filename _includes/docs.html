@@ -1,0 +1,118 @@
+---
+layout: base.html
+---
+{#- The documentation shell. D-008: shared nav, separate shell — this chains onto
+    base.html so the head, the fonts, the mark and the footer have exactly one
+    definition on the property, and adds the chrome docs need and the marketing
+    page deliberately does not have (AGENTS.md: "It's a one page site").
+
+    THREE COLUMNS — navigation, article, contents — CENTRED in a wider container
+    than §5's. Not full bleed, and not the marketing page's 1180px either: this is
+    the layout of every documentation site a reader of this one has already used,
+    and it is deliberately not a new idea. `--wrap-docs` is 1440px, which is the
+    middle of where those sites sit. base.html gives the nav and footer the same
+    container so the whole page shares one left edge. DESIGN.md §5 records it.
+
+    Three columns down to 1240px, one at 860px. The contents rail goes first, then
+    the sidebar becomes a capped scroller above the article — a sidebar is a
+    navigation aid, and on a phone it must not be the first 46 links a reader has to
+    scroll past to reach the page they asked for. -#}
+
+{%- macro tree(nodes, current, depth) %}
+<ul class="doc-tree d{{ depth }}">
+  {%- for n in nodes %}
+  <li>
+    <a href="{{ n.url }}"{% if current == n.url %} aria-current="page"{% endif %}>{{ n.title }}</a>
+    {#- ALWAYS expanded, at every depth. It was open-along-the-current-path until
+        2026-08-30; Nandan: the old site "was entirely expanded from the start, which
+        I think helped." A collapsed branch hides the one thing a reader who does not
+        yet know the vocabulary needs to see — the shape of the whole set. -#}
+    {%- if n.children.length %}
+      {{ tree(n.children, current, depth + 1) }}
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ul>
+{%- endmacro %}
+
+{%- set toc = content | headings %}
+{%- set crumbs = page.url | crumbs(collections.docs) %}
+{%- set kids = collections.docsTree | sectionIndex(page.url, collections.docs) %}
+
+<div class="doc-shell">
+
+  <aside class="doc-side" aria-label="Documentation">
+    {#- Search. Hidden until docs.js runs: without JavaScript the input would sit
+        there accepting text and doing nothing, which is worse than not offering it.
+        The index is fetched on first focus, not on page load — see docs.js. -#}
+    <div class="doc-search" hidden data-search>
+      <label class="vh" for="doc-q">Search the documentation</label>
+      <input type="search" id="doc-q" placeholder="Search…" autocomplete="off"
+             role="combobox" aria-expanded="false" aria-controls="doc-results" aria-autocomplete="list">
+      <div class="doc-results" id="doc-results" role="listbox" hidden></div>
+    </div>
+
+    <nav aria-label="Documentation sections">
+      {{ tree(collections.docsTree, page.url, 1) }}
+    </nav>
+  </aside>
+
+  <article class="doc-main">
+    {%- if crumbs.length > 1 %}
+    <nav class="doc-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/docs/">Docs</a></li>
+        {%- for c in crumbs %}
+          {%- if c.url != "/docs/" %}
+          <li>{% if loop.last %}<span aria-current="page">{{ c.title }}</span>{% else %}<a href="{{ c.url }}">{{ c.title }}</a>{% endif %}</li>
+          {%- endif %}
+        {%- endfor %}
+      </ol>
+    </nav>
+    {%- endif %}
+
+    <h1>{{ title }}</h1>
+
+    {#- The contents rail duplicates into the article below 1180px, where the third
+        column is gone. One source, two placements, no second list to keep in step. -#}
+    {%- if toc.length > 2 %}
+    <details class="doc-toc-inline">
+      <summary>On this page</summary>
+      <ol>
+        {%- for h in toc %}<li class="l{{ h.level }}"><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}
+      </ol>
+    </details>
+    {%- endif %}
+
+    <div class="doc-body">
+      {{ content | safe }}
+    </div>
+
+    {#- What {{< toc-tree >}} did under Hugo. Four of the five section pages have no
+        body at all — the shortcode WAS their content — so without this they render as
+        a heading over nothing. Each child carries its own first sentence, which is
+        more use than a bare list of titles. -#}
+    {%- if kids.length %}
+    <ul class="doc-index">
+      {%- for k in kids %}
+      <li>
+        <a href="{{ k.url }}">
+          <span class="i-t">{{ k.title }}</span>
+          {%- if k.description %}<span class="i-d">{{ k.description }}</span>{% endif %}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </article>
+
+  {%- if toc.length > 2 %}
+  <nav class="doc-toc" aria-label="On this page">
+    <p class="eyebrow">On this page</p>
+    <ol>
+      {%- for h in toc %}<li class="l{{ h.level }}"><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}
+    </ol>
+  </nav>
+  {%- endif %}
+
+</div>

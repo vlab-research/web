@@ -8,9 +8,13 @@
     "figures": "python3 scripts/build-coverage-map.py",
     "build": "npm run figures && eleventy",
     "serve": "npm run figures && eleventy --serve",
-    "check": "python3 scripts/test-check-claims.py && python3 scripts/check-contrast.py && python3 scripts/check-claims.py _site/index.html _site/privacy/index.html"
+    "check": "python3 scripts/test-check-claims.py && python3 scripts/check-contrast.py && python3 scripts/check-claims.py _site/index.html _site/privacy/index.html && python3 scripts/check-links.py"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.1.6"
+    "@11ty/eleventy": "3.1.6",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
+    "markdown-it": "14.3.0",
+    "markdown-it-anchor": "9.2.0",
+    "markdown-it-container": "4.0.0"
   }
 }
