@@ -1185,6 +1185,39 @@ them is D-009's question, and D-009 is open.
 
 ---
 
+### D-031 — The docs are reached from the footer and the open-source section, not the nav
+**Status:** Settled · 2026-08-30 · *the nav link was built, looked at, and taken back out*
+
+**Two routes, and neither is in the top bar:**
+
+- **`#code`, "The code is open source"** — a second brass link beside the GitHub one,
+  *"Read the documentation."*
+- **The footer**, on every page including privacy and the 404, beside GitHub and The paper.
+
+**The nav was the obvious answer and it was wrong.** `DESIGN.md` §8 had kept the nav-link
+treatment against the day the site had *"a second surface to navigate to"*, and D-008 made
+that day arrive — 47 pages of it. The condition being met is not the same as the link being
+right. **The bar is the highest-emphasis space on a page whose one job is
+`Request a proposal`,** and D-001 puts institutional buyers first with academics second:
+spending that space on the second audience inverts the priority. **Docs in a header is also
+the developer-product signal** D-002 spends its whole entry avoiding.
+
+**Why `#code` is the right home rather than a compromise.** That section already ends
+*"you are welcome to run it yourself"* — documentation is the literal next thing that
+reader needs, and it is **the only section on the page that already converts outward**, to
+GitHub. Adding the docs there is the same gesture at the same reader in the same moment,
+not a new one. A link in the nav would have been a new gesture, addressed to everybody.
+
+**What this does not decide.** §8's nav-link treatment stays specified and unbuilt, for
+whatever surface next makes the case. **The trigger it names is a necessary condition, not
+a sufficient one** — and that wording has been corrected in §8, because as written the next
+agent to add a surface would read it as automatic.
+
+**Reversal is one `{% if %}`.** If the docs turn out to be something buyers ask for by
+name, the bar is where they go, and §8 already says exactly what the link looks like.
+
+---
+
 ---
 
 ## Open

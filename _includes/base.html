@@ -99,15 +99,20 @@
         already on were a table of contents pretending to be a nav. What is left is the
         mark and the one conversion action, which is what §8 says a nav is for.
 
+        THE DOCS DID NOT CHANGE THIS, and they were the test of it. §8 kept the nav-link
+        treatment against the day the site had "a second surface to navigate to", and
+        2026-08-30 was that day — 47 pages of it. The link was built and then taken back
+        out (D-031): the bar is the highest-emphasis space on a page whose one job is
+        Request a proposal, and docs in a header is the developer-product signal D-002
+        spends its whole entry avoiding. The docs are reached from the footer and from
+        the open-source section, where the reader who wants them already is.
+
         /#paper and /#code still exist as anchors — COPY.md keeps them so a procurement
-        reviewer or an academic has a URL to link — they are simply not advertised.
-        (/#code was /#audit until 2026-08-26, when that section became "The code is open
-        source"; _redirects points the old SPA's /software at it.) -#}
-    {#- The docs are the one exception, and D-008 is why: shared nav, separate shell,
-        and docs do not carry marketing chrome. A reader who came to look up a field
-        name is not in the market for a proposal, and putting the conversion action
-        over a reference page is the "software tool" pull D-002 spends its whole entry
-        avoiding. They get the way back to the site instead. -#}
+        reviewer or an academic has a URL to link — they are simply not advertised. -#}
+    {#- The docs are the one exception to the CTA, and D-008 is why: a reader who came to
+        look up a field name is not in the market for a proposal, and putting the
+        conversion action over a reference page is the "software tool" pull D-002 spends
+        its whole entry avoiding. They get the way back to the site instead. -#}
     {%- if docsSection %}
     <a class="nav-back" href="/">Virtual&nbsp;Lab &rarr;</a>
     {%- else %}
@@ -135,6 +140,7 @@
       <ul>
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         <li><a href="{{ site.github }}" rel="noopener">GitHub</a></li>
+        <li><a href="/docs/">Documentation</a></li>
         <li><a href="/#paper">The paper</a></li>
       </ul>
     </nav>

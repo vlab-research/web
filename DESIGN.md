@@ -611,8 +611,17 @@ wearing a navigation's clothes. **The anchors still exist** (`/#paper`, `/#code`
 procurement reviewer or an academic has a URL to link; they are simply not advertised.
 
 The link treatment is kept here — *Source Sans 14.5px `--ink-2`; active link `--ink` with
-a 2px brass underline flush to the bottom rule* — and applies the day this site has a
-second surface to navigate **to**. It is not in `css/site.css` until then.
+a 2px brass underline flush to the bottom rule* — for the day a second surface makes the
+case for it. It is not in `css/site.css`, and it was not added when that day came.
+
+**Read this before you reach for it. Having a second surface is a NECESSARY condition, not
+a sufficient one** — the earlier wording said "applies the day this site has a second
+surface to navigate **to**", which reads as automatic and is not. The docs arrived on
+2026-08-30 with 47 pages, the link was built, and it came straight back out (**D-031**):
+the bar is the highest-emphasis space on a page whose one job is *Request a proposal*, and
+D-001 puts institutional buyers first. The docs are reached from the footer and from the
+open-source section instead. **A new surface earns a nav link by being something a buyer
+asks for by name, not by existing.**
 
 ### Buttons
 
