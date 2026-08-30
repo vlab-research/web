@@ -926,12 +926,19 @@ brand mark sits directly above the sidebar and the page has a single left edge.
 
 | Track | Width |
 |---|---|
-| Sidebar | 260px |
-| Article | 800px |
-| Contents rail | 220px |
-| Gaps | 48px × 2 |
+| Sidebar | 264px |
+| Article | 840px |
+| Contents rail | 224px |
+| Gaps | 64px × 2 |
 
-**260 + 800 + 220 + 96 = 1376 = 1440 − two 32px gutters.**
+**264 + 840 + 224 + 128 = 1456 = 1520 − two 32px gutters.**
+
+**The gaps carry the breathing room, not the measure.** Prose is capped at
+`--doc-measure` whatever the article track is, so a wider track only buys room for
+tables and code — a wider gap buys air around all of it. And on a 1440px laptop the
+container is viewport-limited, which makes the gaps the only thing doing any work.
+*(Widened from 1440/48px on 2026-08-30 — Nandan: "let it breathe a bit more… something
+to not feel so crowded.")*
 
 **This layout is not a design decision to defend; it is the convention.** Tailwind,
 Docusaurus, Starlight, Stripe and MDN all ship a centred container of 1400–1500px with
@@ -1002,7 +1009,10 @@ to keep in step.
 sidebar, results in a bordered panel, `--sunk` on the active row, each row a title in
 UI type over a mono eyebrow giving section and matched heading.
 
-**Breakpoints.** 1240px the contents rail goes — the width at which the three tracks stop fitting, and where the same column drops on every site named above; 860px (§5's own) the three columns
+**Breakpoints.** 1400px the contents rail goes, and **the article sets that number, not
+the tracks** — three columns technically fit to about 1240px, but by then the article is
+back to the ~600px that this whole argument started over. Below 1400 the rail is worth
+less than the width it costs, so it goes and the article takes it. 860px (§5's own) the three columns
 become one, the sidebar loses its right-hand hairline and becomes a capped scroller
 above the article — **not** a `<details>`, because overriding the UA's hiding of details
 content is a trick browsers have changed the mechanism of twice. With the tree fully

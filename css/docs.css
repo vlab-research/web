@@ -16,15 +16,23 @@
 
 :root{
   /* The documentation container. WIDER than §5's 1180px and centred like it —
-     1440 is the middle of where the docs sites everyone has already used sit
+     1520 sits in the range the docs sites everyone has already used occupy
      (Tailwind ~1440, Docusaurus 1440, Starlight ~1500, Stripe and MDN centred at
-     a comparable width). The three tracks below total exactly 1376, which is
-     1440 less the two 32px gutters. */
-  --wrap-docs:1440px;
-  --doc-side:260px;      /* sidebar track */
-  --doc-main:800px;      /* article track */
-  --doc-rail:220px;      /* contents rail track */
-  --doc-gap:48px;
+     a comparable width). The three tracks below total exactly 1456, which is
+     1520 less the two 32px gutters.
+
+     Widened from 1440, and the gaps from 48px, on 2026-08-30 — Nandan: "let it
+     breathe a bit more… something to not feel so crowded." Most of that went into
+     the GAPS rather than the measure. Prose is capped at --doc-measure whatever
+     the article track is, so a wider track only buys room for tables and code,
+     while a wider gap buys air around all of it. And on a 1440px laptop the
+     container is viewport-limited, so the gaps are the only thing doing any work
+     at all — which is the case worth optimising for. */
+  --wrap-docs:1520px;
+  --doc-side:264px;      /* sidebar track */
+  --doc-main:840px;      /* article track */
+  --doc-rail:224px;      /* contents rail track */
+  --doc-gap:64px;
   --doc-measure:68ch;    /* §4's ~65ch, given the two characters that a reference
                             page's inline `code` spans keep spending */
   --doc-sticky:90px;     /* 66px nav + 24px */
@@ -50,7 +58,7 @@
   align-items:start;
   max-width:var(--wrap-docs);
   margin:0 auto;
-  padding:36px var(--gut) 96px;
+  padding:48px var(--gut) 112px;
 }
 
 /* The nav and the footer take the SAME container, so the brand mark sits directly
@@ -543,10 +551,12 @@ body.docs .foot .wrap{ max-width:var(--wrap-docs) }
 
 /* 1180px: the contents rail is the first thing to go. It is an aid; the sidebar
    is navigation and the article is the point. */
-/* 1240px: the contents rail goes, and the article keeps its width. This is the
-   width at which sidebar + article + rail stop fitting, which is where every docs
-   site drops the same column. */
-@media (max-width:1240px){
+/* 1400px: the contents rail goes. Set by the ARTICLE rather than by whether three
+   tracks technically fit — they fit down to about 1240px, but by then the article
+   is back to the ~600px that started this whole conversation. Below 1400 the rail
+   is worth less than the width it costs, so it goes and the article takes it: at
+   1366px that is 840px of article instead of 686. */
+@media (max-width:1400px){
   .doc-shell{ grid-template-columns:var(--doc-side) minmax(0,var(--doc-main)) }
   .doc-toc{ display:none }
   .doc-toc-inline{ display:block }
