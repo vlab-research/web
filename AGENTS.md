@@ -122,10 +122,14 @@ still answers that host and the two diverge silently.
 **Two things changed on 2026-08-30, after Nandan looked at it.** Both are recorded in
 `DESIGN.md` §8 and both reverse something the first pass did:
 
-- **The shell is full bleed** — the sidebar is pinned to the left edge and `body.docs`
-  widens the nav and footer to match. §5's 1180px container does not apply under
-  `/docs/`, and that is the only exception on the property. The *article* is capped
-  (`--doc-main`), not the page.
+- **The shell is three columns centred in a wider container** — `--wrap-docs: 1440px`,
+  with `body.docs` giving the nav and footer the same container. §5's 1180px does not
+  apply under `/docs/` and that is the only exception on the property. **This took three
+  tries and the rule that came out of it is the useful part:** a new surface may use a
+  pattern this site does not have — docs are functionally a different app — but **not an
+  invented one.** Full bleed with the tracks left-packed was the invention; no
+  documentation site does that. Take the pattern from somewhere it demonstrably works,
+  and `DESIGN.md` §8 names five.
 - **The sidebar tree is fully expanded at every depth**, not open-along-the-current-path.
   A collapsed branch hides the shape of the set from a reader who does not yet know the
   vocabulary.

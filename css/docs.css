@@ -15,10 +15,16 @@
    ========================================================================== */
 
 :root{
-  --doc-side:268px;      /* sidebar track */
-  --doc-main:840px;      /* article track CEILING — see .doc-shell */
-  --doc-rail:200px;      /* contents rail track */
-  --doc-gap:40px;
+  /* The documentation container. WIDER than §5's 1180px and centred like it —
+     1440 is the middle of where the docs sites everyone has already used sit
+     (Tailwind ~1440, Docusaurus 1440, Starlight ~1500, Stripe and MDN centred at
+     a comparable width). The three tracks below total exactly 1376, which is
+     1440 less the two 32px gutters. */
+  --wrap-docs:1440px;
+  --doc-side:260px;      /* sidebar track */
+  --doc-main:800px;      /* article track */
+  --doc-rail:220px;      /* contents rail track */
+  --doc-gap:48px;
   --doc-measure:68ch;    /* §4's ~65ch, given the two characters that a reference
                             page's inline `code` spans keep spending */
   --doc-sticky:90px;     /* 66px nav + 24px */
@@ -29,24 +35,29 @@
    Shell
    ========================================================================== */
 
-/* FULL BLEED. Not inside .wrap, and the article is capped instead of the page.
-   The sidebar is pinned to the left edge of the screen where the eye finds it
-   without hunting; the prose keeps its measure regardless of how wide the monitor
-   is; `justify-content:start` packs the three tracks left rather than stretching
-   them across two thousand pixels of desk. */
+/* Three columns — navigation, article, contents — CENTRED in a wide container.
+   This is the layout every documentation site a reader of this one has already
+   used, and it is deliberately not a new idea.
+   
+   It was full bleed and left-packed for one day (2026-08-30) and that was the
+   invention: the tracks were pinned to the left edge with the remainder of a wide
+   monitor left empty beside them. Nandan: "now it's all on the left." Centring a
+   wide container is what the convention actually is. */
 .doc-shell{
   display:grid;
   grid-template-columns:var(--doc-side) minmax(0,var(--doc-main)) var(--doc-rail);
-  justify-content:start;
   gap:0 var(--doc-gap);
   align-items:start;
-  padding:36px var(--gut) 96px 0;
+  max-width:var(--wrap-docs);
+  margin:0 auto;
+  padding:36px var(--gut) 96px;
 }
 
-/* The nav and the footer widen to match, so the brand mark sits directly above
-   the sidebar and the page has one left edge. Docs pages only. */
+/* The nav and the footer take the SAME container, so the brand mark sits directly
+   above the sidebar and the whole page shares one left edge. Docs pages only —
+   the marketing page keeps §5's 1180px. */
 body.docs .nav .wrap,
-body.docs .foot .wrap{ max-width:none }
+body.docs .foot .wrap{ max-width:var(--wrap-docs) }
 
 /* Both rails scroll with their own overflow so a long tree never pushes the
    page height, and never traps the article behind it. The tree is fully expanded
@@ -63,7 +74,7 @@ body.docs .foot .wrap{ max-width:none }
    rather than stopping under the last link. §5 — the grid is visible. */
 .doc-side{
   min-height:calc(100vh - var(--doc-sticky) - 24px);
-  padding:0 24px 24px var(--gut);
+  padding:0 24px 24px 0;
   border-right:1px solid var(--rule);
 }
 
@@ -532,7 +543,10 @@ body.docs .foot .wrap{ max-width:none }
 
 /* 1180px: the contents rail is the first thing to go. It is an aid; the sidebar
    is navigation and the article is the point. */
-@media (max-width:1180px){
+/* 1240px: the contents rail goes, and the article keeps its width. This is the
+   width at which sidebar + article + rail stop fitting, which is where every docs
+   site drops the same column. */
+@media (max-width:1240px){
   .doc-shell{ grid-template-columns:var(--doc-side) minmax(0,var(--doc-main)) }
   .doc-toc{ display:none }
   .doc-toc-inline{ display:block }

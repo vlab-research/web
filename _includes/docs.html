@@ -6,14 +6,14 @@ layout: base.html
     definition on the property, and adds the chrome docs need and the marketing
     page deliberately does not have (AGENTS.md: "It's a one page site").
 
-    FULL BLEED, and deliberately not inside .wrap. The marketing page is an
-    argument and reads better bounded at 1180px; a documentation set is a reference
-    and wants its navigation pinned to the edge of the screen where the eye can find
-    it without hunting. base.html widens the nav and footer to match on docs pages
-    only, so the brand mark sits directly above the sidebar and the whole page
-    shares one left edge. DESIGN.md §5 records the deviation.
+    THREE COLUMNS — navigation, article, contents — CENTRED in a wider container
+    than §5's. Not full bleed, and not the marketing page's 1180px either: this is
+    the layout of every documentation site a reader of this one has already used,
+    and it is deliberately not a new idea. `--wrap-docs` is 1440px, which is the
+    middle of where those sites sit. base.html gives the nav and footer the same
+    container so the whole page shares one left edge. DESIGN.md §5 records it.
 
-    Three columns at full width, one at 860px. The contents rail goes first, then
+    Three columns down to 1240px, one at 860px. The contents rail goes first, then
     the sidebar becomes a capped scroller above the article — a sidebar is a
     navigation aid, and on a phone it must not be the first 46 links a reader has to
     scroll past to reach the page they asked for. -#}

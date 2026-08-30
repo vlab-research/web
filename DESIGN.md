@@ -375,8 +375,8 @@ permits no other font host. That is a constraint of the preview, not the spec.)*
 ## 5. Layout
 
 - Container: `max-width: 1180px`, `padding: 0 32px`. **One exception, and it is the
-  whole of `/docs/`:** the documentation shell is full bleed and caps its article
-  instead of its page. §8, "Documentation components". Nothing else may.
+  whole of `/docs/`:** documentation uses a wider container, `--wrap-docs: 1440px`,
+  **centred exactly like this one**. §8, "Documentation components". Nothing else may.
 - **Everything is left-aligned.** No centred headlines, no centred hero, no centred CTA.
 - Sections separate with a `1px solid var(--rule)` top border. The grid is visible —
   structure is part of the argument.
@@ -919,18 +919,36 @@ prevent.
 Everything here is in `css/docs.css`, loaded only on pages under `/docs/`. It adds
 **no colour and no typeface** — see D-029.
 
-**The shell is full bleed, and this is the one place §5's 1180px container does not
-apply.** The sidebar is pinned to the left edge of the screen; `body.docs` widens the
-nav and the footer to match, so the brand mark sits directly above the sidebar and the
-page has a single left edge. **The article is capped instead of the page** —
-`--doc-main: 840px`, with the prose measure inside that — so a wider monitor buys more
-room for navigation rather than longer lines. The tracks pack left
-(`justify-content: start`) rather than stretching across a desk.
+**Three columns — navigation, article, contents — centred in a wider container.** This
+is the one place §5's 1180px does not apply: `--wrap-docs: 1440px`, **centred exactly as
+§5's container is**. `body.docs` gives the nav and the footer that same container, so the
+brand mark sits directly above the sidebar and the page has a single left edge.
 
-*Why the deviation is right here:* the marketing page is an argument and reads better
-bounded; a documentation set is a reference, and its navigation wants to be where the
-eye can find it without hunting. Nandan, 2026-08-30: *"push the sidebar all the way to
-the left, not in a container… it feels cramped."*
+| Track | Width |
+|---|---|
+| Sidebar | 260px |
+| Article | 800px |
+| Contents rail | 220px |
+| Gaps | 48px × 2 |
+
+**260 + 800 + 220 + 96 = 1376 = 1440 − two 32px gutters.**
+
+**This layout is not a design decision to defend; it is the convention.** Tailwind,
+Docusaurus, Starlight, Stripe and MDN all ship a centred container of 1400–1500px with
+these three columns — which is the point. A reader arrives already knowing where the
+navigation, the page and the section list are.
+
+> **The rule this produced, and it outlives the layout:** a new surface may use a pattern
+> this site does not already have — documentation is functionally a different app. **It may
+> not use an invented one.** Take the pattern from somewhere it demonstrably works.
+> *(Nandan, 2026-08-30.)*
+
+*Two attempts got this wrong first, both the same day.* The first put the three tracks
+inside §5's 1180px, squeezing the article to ~600px — Nandan: *"it feels cramped."* The
+second went full bleed with `justify-content: start`, pinning the tracks to the left edge
+and leaving the rest of a wide monitor empty beside them — Nandan: *"now it's all on the
+left."* **The second was the actual invention: no documentation site left-packs its
+shell.** Neither the container nor the third column was the problem. The width was.
 
 **Sidebar tree.** Nesting drawn with a hairline down the left of each level (the
 bracket primitive, §6), not by indentation alone. **Fully expanded at every depth, all
@@ -984,7 +1002,7 @@ to keep in step.
 sidebar, results in a bordered panel, `--sunk` on the active row, each row a title in
 UI type over a mono eyebrow giving section and matched heading.
 
-**Breakpoints.** 1180px the contents rail goes; 860px (§5's own) the three columns
+**Breakpoints.** 1240px the contents rail goes — the width at which the three tracks stop fitting, and where the same column drops on every site named above; 860px (§5's own) the three columns
 become one, the sidebar loses its right-hand hairline and becomes a capped scroller
 above the article — **not** a `<details>`, because overriding the UA's hiding of details
 content is a trick browsers have changed the mechanism of twice. With the tree fully
