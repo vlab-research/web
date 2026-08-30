@@ -185,6 +185,34 @@ export default function (eleventyConfig) {
     return out;
   });
 
+  // The children of a section page, with their descriptions — what Hugo's
+  // {{< toc-tree >}} shortcode did on the five section indexes. Four of those
+  // pages have NO body of their own (their whole content was that shortcode), so
+  // without this they render as a bare heading over nothing.
+  //
+  // Descriptions come from collections.docs rather than from the tree, because
+  // they are eleventyComputed and are only resolved on the page data.
+  eleventyConfig.addFilter("sectionIndex", (tree, url, docs) => {
+    const find = (nodes) => {
+      for (const n of nodes) {
+        if (n.url === url) return n;
+        const hit = find(n.children);
+        if (hit) return hit;
+      }
+      return null;
+    };
+    const node = find(tree || []);
+    if (!node) return [];
+    return node.children.map((c) => {
+      const page = (docs || []).find((d) => d.url === c.url);
+      return {
+        url: c.url,
+        title: c.title,
+        description: (page && page.data && page.data.description) || "",
+      };
+    });
+  });
+
   // Plain text of a rendered page, for the search index. Code blocks are kept —
   // half of what anyone searches this site for is a field name that only ever
   // appears inside one — but the anchor links markdown-it-anchor injects into

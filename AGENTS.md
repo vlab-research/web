@@ -119,8 +119,28 @@ add `docs.vlab.digital` as a domain alias on the Netlify site and point its DNS 
 `_redirects` carries the host-scoped 301s. Until that is done the old GitHub Pages site
 still answers that host and the two diverge silently.
 
+**Two things changed on 2026-08-30, after Nandan looked at it.** Both are recorded in
+`DESIGN.md` §8 and both reverse something the first pass did:
+
+- **The shell is full bleed** — the sidebar is pinned to the left edge and `body.docs`
+  widens the nav and footer to match. §5's 1180px container does not apply under
+  `/docs/`, and that is the only exception on the property. The *article* is capped
+  (`--doc-main`), not the page.
+- **The sidebar tree is fully expanded at every depth**, not open-along-the-current-path.
+  A collapsed branch hides the shape of the set from a reader who does not yet know the
+  vocabulary.
+
+**And one regression was found and fixed in the same pass, which is worth knowing about
+because the same trap is still there.** Stripping `{{< toc-tree >}}` from the section
+indexes left **five section pages rendering as a heading over nothing** — the shortcode
+had been their entire body. `sectionIndex` in `eleventy.config.js` restores it, listing
+each child with its own first sentence. **The lesson generalises: a Hugo shortcode that
+was removed rather than replaced is a page that silently lost its content, and the build
+will not tell you.** Five of those pages still have no intro prose of their own, so
+their index rows show bare titles — a content gap, not a layout bug.
+
 **How the pieces fit:** `docs/*.md` → `_includes/docs.html` (sidebar, breadcrumbs,
-contents rail) → `_includes/base.html` (the shared head, mark and footer, with the
+contents rail, section index) → `_includes/base.html` (the shared head, mark and footer, with the
 marketing CTA switched off by `docsSection`). The sidebar comes from the `docsTree`
 collection in `eleventy.config.js`, ordered by front-matter `weight`. `docs-search-index.njk`
 sits at the ROOT, beside `sitemap.njk`, because anything inside `docs/` would inherit the

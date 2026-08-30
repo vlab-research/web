@@ -374,7 +374,9 @@ permits no other font host. That is a constraint of the preview, not the spec.)*
 
 ## 5. Layout
 
-- Container: `max-width: 1180px`, `padding: 0 32px`.
+- Container: `max-width: 1180px`, `padding: 0 32px`. **One exception, and it is the
+  whole of `/docs/`:** the documentation shell is full bleed and caps its article
+  instead of its page. §8, "Documentation components". Nothing else may.
 - **Everything is left-aligned.** No centred headlines, no centred hero, no centred CTA.
 - Sections separate with a `1px solid var(--rule)` top border. The grid is visible —
   structure is part of the argument.
@@ -917,12 +919,38 @@ prevent.
 Everything here is in `css/docs.css`, loaded only on pages under `/docs/`. It adds
 **no colour and no typeface** — see D-029.
 
+**The shell is full bleed, and this is the one place §5's 1180px container does not
+apply.** The sidebar is pinned to the left edge of the screen; `body.docs` widens the
+nav and the footer to match, so the brand mark sits directly above the sidebar and the
+page has a single left edge. **The article is capped instead of the page** —
+`--doc-main: 840px`, with the prose measure inside that — so a wider monitor buys more
+room for navigation rather than longer lines. The tracks pack left
+(`justify-content: start`) rather than stretching across a desk.
+
+*Why the deviation is right here:* the marketing page is an argument and reads better
+bounded; a documentation set is a reference, and its navigation wants to be where the
+eye can find it without hunting. Nandan, 2026-08-30: *"push the sidebar all the way to
+the left, not in a container… it feels cramped."*
+
 **Sidebar tree.** Nesting drawn with a hairline down the left of each level (the
-bracket primitive, §6), not by indentation alone. Only the branch containing the
-current page is open; everything else stays shut, which is what keeps 47 pages
-readable in one column. **The current page carries a 2px brass tick** — M2's target
-marker doing the job it does everywhere else on the site: marking the thing you are
-aiming at.
+bracket primitive, §6), not by indentation alone. **Fully expanded at every depth, all
+46 links, on every page.** Three levels get three treatments so the tree still reads as
+a shape rather than a wall: depth 1 is the product (Zilla Slab 300/18px, ink), depth 2
+the section (Source Sans 600/13.5px), depth 3 the page (Source Sans 400/13.5px). **The
+current page carries a 2px brass tick** — M2's target marker doing the job it does
+everywhere else on the site: marking the thing you are aiming at.
+
+*It was open-along-the-current-path until 2026-08-30.* Nandan: the old site *"was
+entirely expanded from the start, which I think helped… it's not clear for people which
+headings to click on to find what they want."* **A collapsed branch hides the one thing
+a reader who does not yet know the vocabulary needs — the shape of the whole set.** The
+sidebar's own scroll is now load-bearing rather than a precaution.
+
+**Section index.** A section page lists its children, each with that child's own first
+sentence, under a hairline. This is what Hugo's `{{< toc-tree >}}` did, and it is not
+decoration: **five of the seven section pages have no body of their own**, so the index
+*is* the page. A row whose child has no opening prose shows the title alone — that is a
+content gap showing through honestly, not a layout to design around.
 
 **Callouts.** Two types and no more. A third needs an entry here first, not another
 CSS rule.
@@ -957,10 +985,11 @@ sidebar, results in a bordered panel, `--sunk` on the active row, each row a tit
 UI type over a mono eyebrow giving section and matched heading.
 
 **Breakpoints.** 1180px the contents rail goes; 860px (§5's own) the three columns
-become one and the sidebar becomes a capped scroller above the article — **not** a
-`<details>`, because overriding the UA's hiding of details content is a trick browsers
-have changed the mechanism of twice. 47 links must not be what a phone reader scrolls
-past to reach the page they asked for.
+become one, the sidebar loses its right-hand hairline and becomes a capped scroller
+above the article — **not** a `<details>`, because overriding the UA's hiding of details
+content is a trick browsers have changed the mechanism of twice. With the tree fully
+expanded that cap matters more, not less: 46 links must not be what a phone reader
+scrolls past to reach the page they asked for.
 
 ### Math notation
 

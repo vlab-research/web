@@ -6,20 +6,28 @@ layout: base.html
     definition on the property, and adds the chrome docs need and the marketing
     page deliberately does not have (AGENTS.md: "It's a one page site").
 
-    Three columns at full width, one at 1040px. The contents rail goes first, then
-    the sidebar collapses into a <details> above the article — a sidebar is a
-    navigation aid, and on a phone it must not be the first 47 links a reader has
-    to scroll past to reach the page they asked for. -#}
+    FULL BLEED, and deliberately not inside .wrap. The marketing page is an
+    argument and reads better bounded at 1180px; a documentation set is a reference
+    and wants its navigation pinned to the edge of the screen where the eye can find
+    it without hunting. base.html widens the nav and footer to match on docs pages
+    only, so the brand mark sits directly above the sidebar and the whole page
+    shares one left edge. DESIGN.md §5 records the deviation.
+
+    Three columns at full width, one at 860px. The contents rail goes first, then
+    the sidebar becomes a capped scroller above the article — a sidebar is a
+    navigation aid, and on a phone it must not be the first 46 links a reader has to
+    scroll past to reach the page they asked for. -#}
 
 {%- macro tree(nodes, current, depth) %}
 <ul class="doc-tree d{{ depth }}">
   {%- for n in nodes %}
-  {#- A branch is open when the reader is inside it. Everything else stays shut,
-      which is what keeps 47 pages readable in one column. -#}
-  {%- set inside = current.startsWith(n.url) %}
   <li>
     <a href="{{ n.url }}"{% if current == n.url %} aria-current="page"{% endif %}>{{ n.title }}</a>
-    {%- if n.children.length and inside %}
+    {#- ALWAYS expanded, at every depth. It was open-along-the-current-path until
+        2026-08-30; Nandan: the old site "was entirely expanded from the start, which
+        I think helped." A collapsed branch hides the one thing a reader who does not
+        yet know the vocabulary needs to see — the shape of the whole set. -#}
+    {%- if n.children.length %}
       {{ tree(n.children, current, depth + 1) }}
     {%- endif %}
   </li>
@@ -29,8 +37,9 @@ layout: base.html
 
 {%- set toc = content | headings %}
 {%- set crumbs = page.url | crumbs(collections.docs) %}
+{%- set kids = collections.docsTree | sectionIndex(page.url, collections.docs) %}
 
-<div class="doc-shell wrap">
+<div class="doc-shell">
 
   <aside class="doc-side" aria-label="Documentation">
     {#- Search. Hidden until docs.js runs: without JavaScript the input would sit
@@ -64,7 +73,7 @@ layout: base.html
 
     <h1>{{ title }}</h1>
 
-    {#- The contents rail duplicates into the article below 1040px, where the third
+    {#- The contents rail duplicates into the article below 1180px, where the third
         column is gone. One source, two placements, no second list to keep in step. -#}
     {%- if toc.length > 2 %}
     <details class="doc-toc-inline">
@@ -78,6 +87,23 @@ layout: base.html
     <div class="doc-body">
       {{ content | safe }}
     </div>
+
+    {#- What {{< toc-tree >}} did under Hugo. Four of the five section pages have no
+        body at all — the shortcode WAS their content — so without this they render as
+        a heading over nothing. Each child carries its own first sentence, which is
+        more use than a bare list of titles. -#}
+    {%- if kids.length %}
+    <ul class="doc-index">
+      {%- for k in kids %}
+      <li>
+        <a href="{{ k.url }}">
+          <span class="i-t">{{ k.title }}</span>
+          {%- if k.description %}<span class="i-d">{{ k.description }}</span>{% endif %}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
   </article>
 
   {%- if toc.length > 2 %}

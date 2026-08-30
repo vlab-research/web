@@ -15,9 +15,10 @@
    ========================================================================== */
 
 :root{
-  --doc-side:236px;      /* sidebar track */
-  --doc-rail:186px;      /* contents rail track */
-  --doc-gap:44px;
+  --doc-side:268px;      /* sidebar track */
+  --doc-main:840px;      /* article track CEILING — see .doc-shell */
+  --doc-rail:200px;      /* contents rail track */
+  --doc-gap:40px;
   --doc-measure:68ch;    /* §4's ~65ch, given the two characters that a reference
                             page's inline `code` spans keep spending */
   --doc-sticky:90px;     /* 66px nav + 24px */
@@ -28,22 +29,42 @@
    Shell
    ========================================================================== */
 
+/* FULL BLEED. Not inside .wrap, and the article is capped instead of the page.
+   The sidebar is pinned to the left edge of the screen where the eye finds it
+   without hunting; the prose keeps its measure regardless of how wide the monitor
+   is; `justify-content:start` packs the three tracks left rather than stretching
+   them across two thousand pixels of desk. */
 .doc-shell{
   display:grid;
-  grid-template-columns:var(--doc-side) minmax(0,1fr) var(--doc-rail);
+  grid-template-columns:var(--doc-side) minmax(0,var(--doc-main)) var(--doc-rail);
+  justify-content:start;
   gap:0 var(--doc-gap);
   align-items:start;
-  padding:36px 0 96px;
+  padding:36px var(--gut) 96px 0;
 }
 
+/* The nav and the footer widen to match, so the brand mark sits directly above
+   the sidebar and the page has one left edge. Docs pages only. */
+body.docs .nav .wrap,
+body.docs .foot .wrap{ max-width:none }
+
 /* Both rails scroll with their own overflow so a long tree never pushes the
-   page height, and never traps the article behind it. */
+   page height, and never traps the article behind it. The tree is fully expanded
+   now, so the sidebar's own scroll is load-bearing rather than a precaution. */
 .doc-side,
 .doc-toc{
   position:sticky; top:var(--doc-sticky);
   max-height:calc(100vh - var(--doc-sticky) - 24px);
   overflow-y:auto;
   overscroll-behavior:contain;
+}
+
+/* min-height equal to max-height so the hairline runs the full visible column
+   rather than stopping under the last link. §5 — the grid is visible. */
+.doc-side{
+  min-height:calc(100vh - var(--doc-sticky) - 24px);
+  padding:0 24px 24px var(--gut);
+  border-right:1px solid var(--rule);
 }
 
 .doc-main{ min-width:0 }   /* without this, a wide <pre> stretches the grid track */
@@ -83,31 +104,46 @@
 
 .doc-tree{ list-style:none; margin:0; padding:0 }
 
-.doc-tree.d2,
-.doc-tree.d3{
-  margin:2px 0 6px;
-  padding-left:13px;
-  border-left:1px solid var(--rule);
-}
-
+/* Three levels, three weights, so a fully expanded tree of forty-six links still
+   reads as a shape rather than as a wall. Depth 1 is the product (Zilla, ink),
+   depth 2 the section, depth 3 the page. */
 .doc-tree a{
   display:block;
-  padding:5px 0 5px 11px;
-  font:400 14.5px/1.35 var(--ui);
-  color:var(--ink-2);
   text-decoration:none;
   border-left:2px solid transparent;
-  margin-left:-13px;      /* pull the marker onto the nesting hairline */
-  padding-left:24px;
 }
+
+.doc-tree.d1 > li{ margin-top:26px }
+.doc-tree.d1 > li:first-child{ margin-top:0 }
 .doc-tree.d1 > li > a{
-  margin-left:0; padding-left:11px;
-  font:400 15px/1.35 var(--display);
+  padding:4px 0 6px 11px;
+  margin-left:-11px;
+  font:300 18px/1.3 var(--display);
+  letter-spacing:-.01em;
   color:var(--ink);
 }
-.doc-tree a:hover{ color:var(--ink) }
 
-/* The target tick. */
+/* Nesting drawn with a hairline down the left of each level — the bracket
+   primitive (§6) — not by indentation alone. */
+.doc-tree.d2,
+.doc-tree.d3{
+  margin:4px 0 0;
+  padding-left:12px;
+  border-left:1px solid var(--rule);
+}
+.doc-tree.d2 > li > a,
+.doc-tree.d3 > li > a{
+  margin-left:-12px;
+  padding:4px 0 4px 22px;
+}
+.doc-tree.d2 > li > a{ font:600 13.5px/1.35 var(--ui); color:var(--ink-2) }
+.doc-tree.d3 > li > a{ font:400 13.5px/1.35 var(--ui); color:var(--ink-2) }
+.doc-tree.d3{ margin-bottom:8px }
+
+.doc-tree a:hover{ color:var(--ink); border-left-color:var(--rule-2) }
+
+/* The target tick. M2's marker doing the job it does everywhere else on the
+   site: marking the thing you are aiming at. */
 .doc-tree a[aria-current="page"]{
   color:var(--ink);
   font-weight:600;
@@ -369,6 +405,43 @@
 .callout.warning .callout-label{ color:var(--brass) }
 
 /* ==========================================================================
+   Section index — what {{< toc-tree >}} did
+   --------------------------------------------------------------------------
+   Four of the five section pages have no body of their own, so this IS the page.
+   Each row carries the child's own first sentence, which is what makes it a way
+   in rather than a second copy of the sidebar.
+   ========================================================================== */
+
+.doc-index{
+  list-style:none;
+  margin:22px 0 0;
+  padding:0;
+  border-top:1px solid var(--rule);
+  max-width:var(--doc-measure);
+}
+.doc-index li{ margin:0 }
+.doc-index a{
+  display:block;
+  padding:15px 0;
+  border-bottom:1px solid var(--rule);
+  text-decoration:none;
+}
+.doc-index a:hover{ background:var(--sunk) }
+
+.doc-index .i-t{
+  display:block;
+  font:400 17px/1.3 var(--display);
+  color:var(--ink);
+}
+.doc-index a:hover .i-t{ color:var(--brass) }
+.doc-index .i-d{
+  display:block;
+  margin-top:4px;
+  font:400 14.5px/1.45 var(--ui);
+  color:var(--ink-2);
+}
+
+/* ==========================================================================
    Contents rail
    ========================================================================== */
 
@@ -460,7 +533,7 @@
 /* 1180px: the contents rail is the first thing to go. It is an aid; the sidebar
    is navigation and the article is the point. */
 @media (max-width:1180px){
-  .doc-shell{ grid-template-columns:var(--doc-side) minmax(0,1fr) }
+  .doc-shell{ grid-template-columns:var(--doc-side) minmax(0,var(--doc-main)) }
   .doc-toc{ display:none }
   .doc-toc-inline{ display:block }
 }
@@ -469,16 +542,18 @@
    a disclosure ABOVE the article — 47 links must not be what a phone reader
    scrolls past to reach the page they asked for. */
 @media (max-width:860px){
-  .doc-shell{ grid-template-columns:minmax(0,1fr); padding-top:24px }
+  .doc-shell{ grid-template-columns:minmax(0,1fr); padding:24px var(--gut) 72px }
   /* Bounded rather than folded into a <details>: the disclosure trick needs
      author CSS to beat the UA's hiding of details content, which browsers have
      changed the mechanism of twice. A capped scroller behaves the same
      everywhere and needs no JavaScript to be correct. */
   .doc-side{
     position:static;
+    min-height:0;
     max-height:min(45vh,360px); overflow-y:auto;
     overscroll-behavior:auto;
     margin:0 0 26px; padding:0 0 18px;
+    border-right:0;
     border-bottom:1px solid var(--rule);
   }
   .doc-tree.d2, .doc-tree.d3{ padding-left:15px }

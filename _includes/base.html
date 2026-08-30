@@ -75,7 +75,10 @@
     the same origin as our own privacy policy. Nothing is loaded here until that
     decision closes. -#}
 </head>
-<body>
+{#- `docs` widens the nav and the footer to full bleed so the brand mark sits
+    directly above the sidebar and the whole page shares one left edge. Docs only:
+    the marketing page stays bounded at 1180px (DESIGN.md §5). -#}
+<body{% if docsSection %} class="docs"{% endif %}>
 
 {#- §7: <use href="external.svg#id"> does not resolve cross-document in Chrome
     or Safari, so the sprite is inlined. It is written to be dropped in as-is. -#}
