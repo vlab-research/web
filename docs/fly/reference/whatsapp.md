@@ -201,7 +201,10 @@ only about a third of genuine ad arrivals, because it depends on a separate
 referral webhook that frequently does not arrive. The same jump there would turn
 away roughly two thirds of your real respondents.
 
-If one survey serves both channels, add `platform is whatsapp` to the condition.
+If one survey serves both channels, add `platform` **is** `whatsapp` to the
+condition, so the gate applies on WhatsApp only. `platform` is a hidden field Fly
+sets on every conversation and its value is exactly `messenger` or `whatsapp`,
+lower case — see [Hidden Fields](/docs/fly/reference/hidden/).
 :::
 
 ### Example 1 — the simple gate
