@@ -152,11 +152,10 @@ reference easy to send correctly rather than easy to type from memory.
 
 **If your WhatsApp survey pays an incentive, read this before you launch.**
 
-A live study was entered by **7,500 people in three hours, of whom 19 had clicked
-an ad.** The rest were forwarded the entry reference by a real respondent. It cost
-several hundred dollars in incentives against $1.63 of ad spend, and nothing in
-the system objected — every one of those arrivals looks like an ordinary
-completion.
+The entry reference is the only thing standing between a stranger and your
+survey, and on WhatsApp every respondent can read it. Anyone they pass it on to
+can send the same text and be enrolled — and in your data that arrival is
+indistinguishable from a real one.
 :::
 
 This is structural, not a bug, and it is specific to WhatsApp.
@@ -164,8 +163,21 @@ This is structural, not a bug, and it is specific to WhatsApp.
 On Messenger the entry reference is invisible: it travels inside the link or the
 ad, and a respondent never sees a string they could pass on. On WhatsApp **the
 entry reference is the respondent's own message.** It sits in their compose box
-before they press send, where they can read it, screenshot it, and forward it to
-a group. Anyone who receives it can send the same text and start the survey.
+before they press send, where they can read it, screenshot it and forward it.
+
+Four properties combine badly on a survey that pays:
+
+- **Possession is the whole check.** Fly starts a survey for anyone who sends a
+  valid reference. There is no second test.
+- **A forwarded arrival is invisible to you.** It answers the same questions and
+  reaches the same ending, so nothing in your responses, your completion count or
+  the Monitor tab distinguishes it from a respondent you paid to recruit.
+- **Your budget limits who sees the ad; nothing limits who receives a forward.**
+  Ad delivery is metered and costs money per click. Forwarding a message to a
+  group is free, instant, and repeats without bound.
+- **The respondent learns it pays only after they have the reference.** The
+  incentive is announced inside the survey — by which point the text that starts
+  it is already sitting in their message history, ready to share.
 
 So on a paid WhatsApp study, treat the entry reference as public. What separates a
 real respondent from a forwarded one is not the reference — it is `ad_id`.
