@@ -17,7 +17,7 @@ Fly sets itself.
 | `pageid` | The messaging account they arrived on — a Facebook page id, or a WhatsApp number's id. Fly sets this. |
 | `startTime` | When the conversation started. Fly sets this. |
 | `seed` | The respondent's random seed. See [Randomization](/docs/fly/reference/seeds/). |
-| `ad_id` | The id of the ad they clicked, when the platform told us. Fly sets this; it is not available for every arrival. |
+| `ad_id` | The id of the ad they clicked, when the platform told us. Fly sets this; it is not available for every arrival. On WhatsApp it is what separates a real ad click from a forwarded entry reference — see [Keeping out people who did not click your ad](/docs/fly/reference/whatsapp/#keeping-out-people-who-did-not-click-your-ad). |
 | `vt` | The opaque attribution token, when the ad carried one. Fly sets this. See [what an ad's ref carries](/docs/vlab/study-configuration/destination/#what-an-ads-ref-carries). |
 | `e_*` | Values delivered by external events — payment results, and metadata handed back by another app after a [handoff](/docs/fly/reference/questions/#passing-thread-control-handoff). |
 

@@ -146,6 +146,104 @@ it does mean a respondent who mistypes the reference gets silence rather than
 help. Expect a small number of arrivals to be lost this way, and make the entry
 reference easy to send correctly rather than easy to type from memory.
 
+## Keeping out people who did not click your ad
+
+::: warning
+
+**If your WhatsApp survey pays an incentive, read this before you launch.**
+
+A live study was entered by **7,500 people in three hours, of whom 19 had clicked
+an ad.** The rest were forwarded the entry reference by a real respondent. It cost
+several hundred dollars in incentives against $1.63 of ad spend, and nothing in
+the system objected — every one of those arrivals looks like an ordinary
+completion.
+:::
+
+This is structural, not a bug, and it is specific to WhatsApp.
+
+On Messenger the entry reference is invisible: it travels inside the link or the
+ad, and a respondent never sees a string they could pass on. On WhatsApp **the
+entry reference is the respondent's own message.** It sits in their compose box
+before they press send, where they can read it, screenshot it, and forward it to
+a group. Anyone who receives it can send the same text and start the survey.
+
+So on a paid WhatsApp study, treat the entry reference as public. What separates a
+real respondent from a forwarded one is not the reference — it is `ad_id`.
+
+### Why `ad_id` is the right test
+
+`ad_id` is set by Fly from what the messaging platform reports about the click. It
+**cannot be set from a link or a message**: if a reference contains
+`ad_id.something`, that value is discarded rather than used. See
+[Hidden Fields](/docs/fly/reference/hidden/). Somebody who was forwarded your
+reference has no way to manufacture one.
+
+On WhatsApp it is also reliably present — a click-to-WhatsApp referral arrives
+attached to the first message of the conversation, so an ad click carries an
+`ad_id` and a forwarded reference does not.
+
+::: warning
+
+**Do not copy this rule onto a Messenger survey.** Messenger delivers the ad id on
+only about a third of genuine ad arrivals, because it depends on a separate
+referral webhook that frequently does not arrive. The same jump there would turn
+away roughly two thirds of your real respondents.
+
+If one survey serves both channels, add `platform is whatsapp` to the condition.
+:::
+
+### Example 1 — the simple gate
+
+Add a logic jump on your **first question**, so nobody reaches an incentive
+question, and point it at an "ineligible" ending you have already written:
+
+> On `consent_1`: if `ad_id` **is** empty → jump to the ending `ty_ineligible`.
+
+That is the whole rule. Two things about it are worth knowing before you rely on
+it:
+
+- **There is no `is_empty` operator.** The operators available are `is` / `equal`,
+  `is_not` / `not_equal`, `contains`, `not_contains`, the four numeric
+  comparisons, `and`, `or` and `always`. Compare `ad_id` against an empty value
+  with `is` — a respondent who arrived without an ad has `ad_id` set to an empty
+  string, so this matches.
+- **The jump fires after the question is answered**, as all logic jumps do. A
+  blocked respondent sees your first question and answers it before being sent to
+  the ending. Put the rule on the first question and this costs one tap; put it
+  after the phone-number question and it costs you the incentive.
+
+### Example 2 — with an escape hatch for testing
+
+The rule above locks *you* out too. You cannot test with a `wa.me` link, because
+a link carries no `ad_id` — only a real ad click does.
+
+The fix is a second hidden field that only testers use. Pick any name; `testing`
+is the obvious one. Turn away a respondent only when **both** are empty:
+
+> On `consent_1`: if `ad_id` **is** empty **and** `testing` **is** empty → jump to
+> the ending `ty_ineligible`.
+
+Testers then start the survey with the extra key/value pair on the end:
+
+```
+https://wa.me/<number>?text=form.mytestcode.testing.1
+```
+
+which arrives as the hidden field `testing` and holds the gate open for that one
+conversation. Everyone else — including everyone who was forwarded your plain
+reference — still has both fields empty and is turned away.
+
+::: note
+
+**`testing` is an ordinary reference field, so anyone who learns the trick can use
+it.** It keeps out forwarding, which is what actually happens; it is not a
+password. Do not print it on anything public, and prefer an unguessable name over
+`testing` if your reference has already been shared widely.
+:::
+
+Declare both `ad_id` and `testing` as hidden fields on the form so they are
+available to the logic.
+
 ## Testing a WhatsApp survey
 
 Before an ad exists, and before any money is spent:
@@ -160,6 +258,12 @@ find the channel-specific failures on the
 [Channels](/docs/fly/reference/channels/) list before your respondents
 do. Watch the [Monitor tab](/docs/fly/reference/monitoring/) while you
 do it.
+
+**If you added the `ad_id` gate above**, step 2 will send you straight to your
+ineligible ending — a `wa.me` link carries no `ad_id`, which is the entire point
+of the gate. Add your tester field to the reference instead:
+`https://wa.me/<number>?text=form.<shortcode>.testing.1`. See
+[Example 2](#example-2-with-an-escape-hatch-for-testing).
 
 **Fly does not let anyone take a survey twice.** To test the same form again, use
 the reset reference your administrator gave you, exactly as on Messenger. See

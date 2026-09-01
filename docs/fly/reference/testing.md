@@ -58,6 +58,20 @@ Extra metadata works as it does on Messenger:
 https://wa.me/<number>?text=form.mytestcode.creative.3b.gender.men
 ```
 
+::: note
+
+**A paid WhatsApp survey may refuse this link on purpose.** If the survey has the
+recommended gate that turns away anyone without an `ad_id`, a `wa.me` link sends
+you straight to the ineligible ending — no link can carry an `ad_id`, only a real
+ad click can. Add the survey's tester field to the reference:
+
+```
+https://wa.me/<number>?text=form.mytestcode.testing.1
+```
+
+See [Keeping out people who did not click your ad](/docs/fly/reference/whatsapp/#keeping-out-people-who-did-not-click-your-ad).
+:::
+
 **Test on a real phone.** Click-to-WhatsApp context is mobile-only, and several
 of the WhatsApp-specific failures — a question with too many choices, a button
 label over 20 characters, a long wait with no template — only show up when a real
