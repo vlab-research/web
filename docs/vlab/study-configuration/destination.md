@@ -17,10 +17,10 @@ elsewhere.
 
 - `name`: The name of the destination, used to refer to it in other
   configuration screens.
-- `Where does this ad's stratum data end up?`: what the ad's *ref* carries — see
-  [What an ad's ref carries](#what-an-ads-ref-carries) below. Leave it alone if
-  you do not know what it means; the default is the way Virtual Lab has always
-  worked.
+- `This study's ad refs`: whether the ad carries a **plain ref** or an
+  **encoded ref** — see [What an ad's ref carries](#what-an-ads-ref-carries)
+  below. Leave it alone if you do not know what it means; the default is the way
+  Virtual Lab has always worked.
 
 The chat destinations (Messenger, WhatsApp, Multi) also share:
 
@@ -71,7 +71,7 @@ Lab sets it as the ad's autofill text. Two things follow:
 - The respondent can **read and edit it** before pressing send. If your ad's ref
   carries stratum values, they can see themselves described as
   `gender.men.age.25_34`. That is an ethical question, not a technical one, and
-  it is a reason some studies choose the opaque ref described
+  it is a reason some studies choose an encoded ref, described
   [below](#what-an-ads-ref-carries).
 - If anything replaces that text, the respondent lands in the wrong survey with
   no error anywhere. See
@@ -137,14 +137,21 @@ Every recruitment ad carries a **ref**: a string that comes back to Virtual Lab
 when someone clicks it. The ref is how a respondent is connected back to the ad
 that recruited them, and therefore to their stratum.
 
-The destination form asks one question about it:
+The destination form offers two, and they have names — the same names used
+throughout this documentation:
 
-> **Where does this ad's stratum data end up?**
+> **This study's ad refs**
 >
-> - *In the data itself — gender and region arrive as columns*
-> - *Looked up afterwards, from the ad-attributions export*
+> - **Plain ref** — *The ref spells the stratum out, so gender and region arrive
+>   as columns in your response data with nothing to join. The ref is long and
+>   editable anywhere the respondent can see it, so use this only where they
+>   cannot: Messenger hides it, WhatsApp does not.*
+> - **Encoded ref** — *The ref is a short code, so the respondent never sees
+>   anything readable. Strata come from the ad-attributions export instead,
+>   joined to your responses on `ref_token`. Works the same on every channel,
+>   which is why a study running on more than one should prefer it.*
 
-### In the data itself (the default)
+### Plain ref (the default)
 
 The ref spells out the stratum:
 
@@ -163,7 +170,7 @@ saved does. Choose it when:
   or `gender` need the values present in the conversation; or
 - you want the simplest possible export.
 
-### Looked up afterwards
+### Encoded ref
 
 The ref carries a short opaque token instead:
 
@@ -184,8 +191,8 @@ what each ad meant when it created it, and you join the two afterwards using the
 
 **Choosing this also requires a matching Data Extraction setting.** The two are
 independent settings and neither checks the other, so it is possible to save one
-without the other — and a study that thins its ref without reading the ad lookup
-has *no* stratification data at all. Every stratum counts zero and the optimizer
+without the other — and a study whose ads carry an encoded ref that nothing
+reads has *no* stratification data at all. Every stratum counts zero and the optimizer
 spends on nothing.
 
 Set both, or neither. See

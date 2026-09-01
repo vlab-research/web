@@ -23,13 +23,13 @@ attributable to a stratum, and therefore what the optimizer counts.
 
 There are two ways a study can do this, and it is a per-destination choice:
 
-- **The ref spells the stratum out.** `creative.X.gender.men.form.mnchweek`
+- **A plain ref spells the stratum out.** `creative.X.gender.men.form.mnchweek`
   arrives as metadata on the respondent's record, and your export already has the
   columns. This is the default and how Virtual Lab has always worked.
-- **The ref carries an opaque token.** Nothing about the stratum travels with the
-  ad; Virtual Lab records what each ad meant when it created it, and you join the
-  two afterwards from the [Ad Attributions](/docs/vlab/study-configuration/ad_attributions/)
-  export.
+- **An encoded ref carries a short opaque code.** Nothing about the stratum
+  travels with the ad; Virtual Lab records what each ad meant when it created it,
+  and you join the two afterwards from the
+  [Ad Attributions](/docs/vlab/study-configuration/ad_attributions/) export.
 
 The second exists because on some channels — click-to-WhatsApp in particular —
 the ref sits in the respondent's own message where they can read and edit it. See

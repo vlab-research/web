@@ -46,7 +46,7 @@ The metadata every respondent carries — including `platform`, which tells you
 whether they answered on Messenger or WhatsApp — is listed under
 [Hidden Fields](/docs/fly/reference/hidden/#what-a-respondent-arrives-with).
 
-### If your study's ads carry a looked-up ref
+### If your study's ads carry an encoded ref
 
 Some Virtual Lab studies send an opaque token in the ad instead of spelling the
 stratum out, so `creative` and `gender` are **not** in the export. Add the

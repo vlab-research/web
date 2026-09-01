@@ -103,9 +103,10 @@ for location:
 
 ### Pattern #3: Looking up the ad
 
-Use this when your destinations carry a **looked-up ref** — the setting under
+Use this when your destinations carry an **encoded ref** — the setting under
 [Destinations](/docs/vlab/study-configuration/destination/#what-an-ads-ref-carries) where the
-ad carries a short opaque token instead of spelling the stratum out.
+ad carries a short opaque token instead of spelling the stratum out. It is the
+read half of that setting: set both, or neither.
 
 The respondent brings back a token, not an answer. Virtual Lab resolves it
 against the [Ad Attributions](/docs/vlab/study-configuration/ad_attributions/) record of the ad

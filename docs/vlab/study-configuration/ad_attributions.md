@@ -11,9 +11,9 @@ with.
 It exists for two reasons, and both are about analysis rather than
 configuration:
 
-1. It is the table that makes a **looked-up ref** work — the setting under
+1. It is the table that makes an **encoded ref** work — the setting under
    [Destinations](/docs/vlab/study-configuration/destination/#what-an-ads-ref-carries) where the
-   ad carries a short token instead of spelling out the stratum.
+   ad carries a short token instead of spelling the stratum out.
 2. It gives you, for any study, an exact ad-by-ad record you can join your
    survey export against — including for ads that no longer exist.
 
@@ -30,7 +30,7 @@ edited afterwards.
 |---|---|
 | `ad_id` | The ad's id on the network. Useful for lining a row up against Meta's own reporting. |
 | `network` | The ad network the id belongs to. `facebook` for both Messenger and WhatsApp ads — they are both Meta ads in one id namespace. |
-| `ref_token` | The opaque token that ad's ref carries, and the key the lookup joins on. Empty for ads whose ref spells out the stratum instead. |
+| `ref_token` | The opaque token that ad's ref carries, and the key the lookup joins on. Empty for ads that carry a plain ref, which spells the stratum out instead. |
 | `creative` | The creative name. |
 | `form` | The shortcode the ad recruits into. |
 | *(your variables)* | One column per stratification variable — `gender`, `Age`, `Region`, and anything you added as Additional Metadata. |
@@ -55,7 +55,7 @@ The point of the export is that it is one sentence:
 > **Left-join your survey export on the join key, and your stratum columns come
 > back, named as they always were.**
 
-The join key depends on which ref mode the study used:
+The join key depends on which kind of ref the study's ads carry:
 
 - **`ref_token`** for a study whose ads carry a token. In your Fly export this
   arrives as the metadata column `vt` — add it under *Metadata to add as columns
@@ -65,7 +65,7 @@ The join key depends on which ref mode the study used:
   complete record — Meta only sends it for some Messenger arrivals — so do not
   use it as your primary join.
 
-A study whose ads spell the stratum out inline needs no join at all: the columns
+A study whose ads carry a plain ref needs no join at all: the columns
 are already in the export. The Ad Attributions table is still written for it, and
 is still useful as a record of exactly which ads ran.
 
