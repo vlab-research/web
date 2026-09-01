@@ -87,7 +87,8 @@ check you are not reading the superseded one.**
 the front page. That really belongs in another page or maybe it doesn't belong anywhere on
 the website. Now it can stay in the paper."* Settled at the narrower reading: **6.1 p.p.
 appears on the site only inside the quoted abstract on the paper surface**, attributed to
-Donati & Rao — exactly the treatment the withheld $0.30 gets. **The site makes no accuracy
+Donati & Rao — exactly the treatment the withheld $0.30 gets. **And since 2026-08-31 that
+block is held off the site (D-016), so it appears nowhere at all.** **The site makes no accuracy
 claim in its own voice anywhere.**
 
 **The reasoning, and it is not squeamishness.** A bare 6.1 p.p. is a figure a reader cannot
@@ -133,7 +134,7 @@ withheld figure:
 | C-012 | Gold standard at $3.00 / $6.67 per question, us far below | **Yes.** The GSS side stands alone; our operand is not printed. |
 | C-013 | ~3× Prolific's ~$0.10 per question | **Yes.** The ratio stands; our operand is not printed. |
 | C-014 | $6.30 advertising per participant, $0.70–$20 by stratum, $11.60 with the $5 incentive | **Yes, unaffected.** Per participant, not per question. |
-| The paper's abstract, on Papers | **Yes — as attributed quotation only.** Verbatim, inside `data-claim-quote="C-055"`, with a visible attribution line, warned on every run. Never paraphrased, never quoted in part, never lifted out of the block. |
+| The paper's abstract, on Papers | **Yes — as attributed quotation only, and it is not currently on the site.** Verbatim, inside `data-claim-quote="C-055"`, with a visible attribution line, warned on every run. Never paraphrased, never quoted in part, never lifted out of the block. **Held 2026-08-31** at Nandan's request, *"for now"* — D-016. Nothing here is withdrawn; the block simply does not render, so $0.30 appears nowhere at all. |
 | The paper's cost table, anywhere | **No, permanently.** Every row is per question; reproducing it publishes C-004 four times over in our own voice. Quoting does not reach it. |
 
 So the cost section is built on **C-014**, with the C-012 and C-013 comparisons kept as
@@ -141,7 +142,9 @@ So the cost section is built on **C-014**, with the C-012 and C-013 comparisons 
 framing C-013 exists to protect — that we are not the cheap option — survives intact,
 because it was never the absolute figure doing that work.
 
-**One page reproduces the figure, and it is not an exception to any of the above.** The
+**One page reproduces the figure, and it is not an exception to any of the above** —
+**though as of 2026-08-31 that block is held off the site (D-016), so the figure is published
+nowhere in any form.** The
 Papers page carries the paper's abstract **verbatim, as attributed quotation**, and the
 abstract states $0.30 per question. **A quotation is attributed speech, not a claim.**
 This register governs what Virtual Lab asserts; reproducing what the paper says,
@@ -218,7 +221,9 @@ Two things are deliberately outside it:
   unflattering half deleted. If Nandan reads the decision as covering cost too, C-013 is
   the row to reopen first, because the Method cost section is built on it.
 
-**A third thing is outside it, and it is the one that looks like a breach.** The paper's
+**A third thing is outside it, and it is the one that looks like a breach** — **dormant
+since 2026-08-31, when the quotation was held off the site (D-016); it applies again the day
+the block returns.** The paper's
 abstract — reproduced verbatim on the Papers page since 2026-08-21, D-016 — contains the
 sentence "improving on both the online panel provider and LLM-based approaches". That is
 C-006 and C-007 in the authors' own words. **It ships only as part of the quoted
@@ -567,13 +572,18 @@ scale. Any page that reads "33 studies across 23 countries" as a scale claim is
 understating the business. The Studies index opener did; it was replaced 2026-08-20 with
 175 studies across 41 countries, sourced to production.
 
-**Where these two rows appear: on the Papers page, inside the quoted abstract, and
-nowhere else.** The abstract reads "over 33 studies across 23 countries" and is reproduced
+**Where these two rows appear: nowhere, as of 2026-08-31.** Their only home was the quoted
+abstract on the paper beat, and that block is held off the site (D-016). The rest of this
+entry describes the treatment they get the day it returns.
+
+**On the Papers page, inside the quoted abstract, and nowhere else.** The abstract reads
+"over 33 studies across 23 countries" and is reproduced
 verbatim as attributed quotation (D-016, restored 2026-08-21). Nothing on the site states
 either number in its own voice.
 
 **That makes the "say which population this counts" clause mandatory again**, and it is
-the reason it exists. One clause, in our own voice and **outside the quoted block**, sits
+the reason it exists. **It travels with the quotation** — with the block held, there is no
+sentence for it to sit beneath, and it must return in the same change the block does. One clause, in our own voice and **outside the quoted block**, sits
 immediately beneath it: *the abstract describes the thirty-three studies analysed in the
 paper; our operating history is larger and is reported on the Studies index.* It must stay
 outside the block — editing the abstract to fix a problem of ours is exactly what verbatim
@@ -892,7 +902,9 @@ anywhere in the paper repository; the URL below came from the author directly:
 |---|---|---|---|---|---|
 | C-055 | Public URL for the paper (SSRN) | `https://ssrn.com/abstract=5495148` | **Supplied by Nandan Rao, co-author, 2026-08-20.** Long form: `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5495148`. **Not independently verified** — see the note below. **Also the row the quoted abstract is attributed to** — see below | `VERIFIED` | 2026-08-20 |
 
-**C-055 is load-bearing twice over, and the second job is new as of 2026-08-21.** It is
+**C-055 is load-bearing twice over, and the second job is new as of 2026-08-21** —
+**though the second job is dormant while the quotation is held off the site, 2026-08-31,
+D-016; the row is still the link and is still `VERIFIED`.** It is
 the link a reader clicks, and it is **the row the Papers page attributes the quoted
 abstract to** — `data-claim-quote="C-055"` names the document being quoted, which is what
 makes the quotation a quotation rather than an unattributed exemption. `check-claims.py`

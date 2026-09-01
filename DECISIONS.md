@@ -368,7 +368,10 @@ own voice**. That qualifier was added 2026-08-21 and is not a softening — see 
 
 - **Quoted source text is out of scope.** The Papers page reproduces the paper's abstract
   verbatim (D-016), and that abstract names Prolific and digital twins and says the method
-  improves "on both". It ships. **Nandan, 2026-08-21, shown the sentence and asked
+  improves "on both". It ships. **Not while the 2026-08-31 hold stands** — the block is off
+  the page, so no comparison appears on the site in any voice, and this decision is back on
+  the premise it was settled on. The reasoning below is unchanged and governs the day the
+  quotation returns. **Nandan, 2026-08-21, shown the sentence and asked
   directly: "keep it — quotation is quotation."** The same distinction that admits the
   withheld $0.30 admits this: D-023 governs what Virtual Lab asserts, and reproducing a
   source accurately is a different act from asserting its contents. The boundary is hard
@@ -468,7 +471,24 @@ Home, not a Phase 4 blocker.
 ---
 
 ### D-016 — The Papers page cites, links, and quotes the abstract verbatim
-**Status:** Settled · 2026-08-21 · *reverses the reading taken on 2026-08-20; the earlier
+**Status:** Settled · 2026-08-21 · **the quotation is held off the site as of 2026-08-31** ·
+*reverses the reading taken on 2026-08-20; the earlier
+
+**Held 2026-08-31 — the abstract renders nowhere.** Nandan: *"Let's remove the abstract
+from the paper part for now on the website."* **"For now" is the whole of it.** Nothing below
+is withdrawn: the reasoning that admits a verbatim quotation, and the reasoning that keeps
+$0.30 and 6.1 p.p. inside it, both still hold. What changed is that the block is not on the
+page. **The paper beat is now title · byline · SSRN link**, with no quotation between them.
+
+**Restoring it is one block** — the `<blockquote class="quote" data-claim-quote="C-055">` in
+`index.html`, between the byline `div` and the SSRN button, with `{{ paper.abstract.verbatim }}`
+and its `data-claim-source` line. `_data/paper.json` still carries the text.
+
+**Two consequences worth knowing before anything is written against them.** `data-claim-quote`
+now appears **nowhere** on the site, so hard rule 1's count is zero and the next use is a first
+use. And **C-001, C-002, C-003 and C-005 are published nowhere** — the abstract was the only place
+"33 studies across 23 countries" and 6.1 p.p. appeared, so the reconciliation the site owed that
+sentence is moot while the hold stands.
 
 **Amended 2026-08-25 — the abstract also appears on the homepage.** Nandan, asked because
 hard rule 1 says a second use of `data-claim-quote` is a signal to stop and ask: *"It's ok to

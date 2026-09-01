@@ -130,13 +130,16 @@ const article = {
   mainEntityOfPage: `${site.url}/`,
   publisher: { "@id": ORG },
 
-  // NO `abstract`, and this is a decision rather than an omission. The abstract is
-  // on the page, quoted verbatim inside data-claim-quote="C-055" with its visible
-  // attribution — that block is the whole of D-016's permission. It also names
-  // Prolific and digital twins, and D-023 is explicit that the quotation is admitted
-  // only in its block: "never pulled out of the block, never restated in a heading,
-  // never summarised beneath it." Lifting it into a JSON-LD field is pulling it out
-  // of the block. A reader who wants the abstract has it on the page and at SSRN.
+  // NO `abstract`, and this is a decision rather than an omission. D-016 permits the
+  // abstract on the page only as a verbatim quotation inside data-claim-quote="C-055"
+  // with its visible attribution — that block is the whole of the permission. It also
+  // names Prolific and digital twins, and D-023 is explicit that the quotation is
+  // admitted only in its block: "never pulled out of the block, never restated in a
+  // heading, never summarised beneath it." Lifting it into a JSON-LD field is pulling
+  // it out of the block. A reader who wants the abstract has it at SSRN.
+  //
+  // The block itself came off the page 2026-08-31, held "for now" (D-016), which makes
+  // this field the only place an abstract could reappear by accident. It must not.
   //
   // NO `keywords`, for the reason recorded at KNOWS_ABOUT above.
 };

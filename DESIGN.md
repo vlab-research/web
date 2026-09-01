@@ -1041,7 +1041,7 @@ are structure, and a numeral inside them is not a value anyone can check against
   value needs a row like any other.
 - **The block carried a source line until 2026-08-26**, when the paper moved directly
   beneath it. The math is somebody's published formulation and must be cited as such — but
-  with the title, byline, abstract and SSRN link now immediately below, a *"Donati & Rao,
+  with the title, byline and SSRN link now immediately below, a *"Donati & Rao,
   2025"* line between the two cited the same document twice in three lines. The citation is
   the paper block. **If the math is ever separated from it again, the source line comes
   back.**
@@ -1082,8 +1082,11 @@ rather than describing them:
 difference.** The exemption belongs to the container, so anything written inside inherits
 a shield it did not earn. Quote, or write outside the block.
 
-**Expect this attribute exactly once on the whole site** — the abstract on the Papers page
-(D-016). **A second use is a signal to stop and ask, not a pattern to copy.** If a second
+**Expect this attribute at most once on the whole site** — the abstract on the Papers page
+(D-016). **It is currently used zero times:** the abstract was held off the page 2026-08-31
+at Nandan's request, *"for now"*. The mechanism below is intact and is what the block returns
+to; nothing here changed but the count. **A second use is a signal to stop and ask, not a
+pattern to copy.** If a second
 page needs to quote a source, that is a content decision for Nandan before it is a markup
 decision, because the interesting question is never whether the markup validates.
 

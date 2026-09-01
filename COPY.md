@@ -40,10 +40,10 @@ of blanks is worse than no page**.
 - **What we have run** — no study cards for now. C-040 and C-041 are `PLACEHOLDER` in full and
   C-042 renders two dashes. **The client wall survives and moves into the opening**, where
   "we have done this a lot" is already the job.
-- **The paper as its own page** — the page now carries the citation, the abstract and the
-  link. What was left was BibTeX and a PDF download, and **there is no hostable PDF**: the only
-  compiled edition is the blinded submission with no byline. Worth rebuilding the day a
-  bylined PDF exists.
+- **The paper as its own page** — the page now carries the citation and the link. (It carried
+  the abstract too until 2026-08-31, when the quotation was held — D-016.) What was left was
+  BibTeX and a PDF download, and **there is no hostable PDF**: the only compiled edition is the
+  blinded submission with no byline. Worth rebuilding the day a bylined PDF exists.
 
 **Anchors, not pages.** `/#code` and `/#paper` give a procurement reviewer or an academic a
 URL to link, so splitting a section out later costs nothing and rewrites no copy.
@@ -786,8 +786,9 @@ recording.
 # What this copy deliberately does not say
 
 - **No comparison with another recruitment source, anywhere** — no panel, no LLM digital
-  twins, no "closer than" in any form (D-023). The one place a comparison appears is inside
-  the quoted abstract on Surface 3, as somebody else's sentence.
+  twins, no "closer than" in any form (D-023). The one place a comparison appeared was inside
+  the quoted abstract on Surface 3, as somebody else's sentence, and **that block came off the
+  page 2026-08-31** (D-016). The rule now has no exception on the site at all.
 - **No cost-per-question figure in our own voice** (C-004). The walk's cost readout is
   per participant.
 - **No AI** (hard rule 3). The optimizer is convex optimization, and beat 2 says so.
@@ -799,7 +800,8 @@ recording.
 - **No form builder** (C-082 — surveys are authored in Typeform; Fly imports and runs).
 - **No platform, schema or migration language**, anywhere, for any figure (C-019
   publication rule 2).
-- **No "33 studies across 23 countries"** outside the quoted abstract (C-001, C-002).
+- **No "33 studies across 23 countries"** outside the quoted abstract (C-001, C-002) —
+  and with the abstract held since 2026-08-31, nowhere at all.
 - **No IRB claim beyond the validation study** (C-054).
 - **No regional share without its denominator** — and no share at all until the buckets
   have a row.

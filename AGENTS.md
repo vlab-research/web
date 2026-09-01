@@ -6,8 +6,8 @@ repo. Read it fully before writing markup, copy, or config.
 **Current state, 2026-08-26: the site is built and it runs.** Eleventy, the design system in
 CSS, the page in `COPY.md`'s order, and privacy at its URL. `npm run serve` to see it,
 `npm run check` for the three gates. **Two things on the page are deliberately held and are
-not oversights** — the hero readout and the region totals; both are in "What is held" below,
-with the one-line change that ships each. The next job is review, not construction.
+not oversights** — the hero readout and the paper's abstract; both are in "What is held"
+below, with the one-line change that ships each. The next job is review, not construction.
 
 The site is now **one page plus an unlinked privacy policy**, and every word of it is written
 in **`COPY.md`** with each figure traced to a `CLAIMS.md` row. The brand is built — fonts,
@@ -257,9 +257,9 @@ regex over comment blocks and it swallowed the **held reallocations figure** —
 a comment. **The whole rebuild is uncommitted**, so git could not recover it; it was rewritten
 from the session. Commit before running a sweeping edit over this file.
 
-### What is held, and why — read this before "fixing" either
+### What is held, and why — read this before "fixing" any of it
 
-**Neither is unfinished work. Both are one line, and both are somebody's decision.**
+**None of it is unfinished work. Each is one line, and each is somebody's decision.**
 
 **`index.html` carries no comments at all** (2026-08-26), so everything below is the only
 record that these slots exist. Read it before concluding the page is missing something.
@@ -279,6 +279,17 @@ record that these slots exist. Read it before concluding the page is missing som
   fact from the database. **Two of the six are floors** — MENA and Europe & Central Asia each
   contain a covered country with no computed count — and that is recorded in C-098 and
   published nowhere.
+- **[No placeholder] The paper's abstract.** The paper beat is title · byline · SSRN link,
+  and it used to carry the abstract quoted verbatim between the byline and the link (D-016).
+  **Nandan, 2026-08-31:** *"Let's remove the abstract from the paper part for now on the
+  website."* **Nothing about D-016's reasoning was withdrawn** — a quotation is attributed
+  speech, the $0.30 and the 6.1 p.p. inside it were never our claims, and all of that still
+  holds. The block simply is not on the page. **It returns as one `<blockquote class="quote"
+  data-claim-quote="C-055" data-claim-unit>`** wrapping `{{ paper.abstract.verbatim }}` and
+  its `data-claim-source` line, placed between the byline `div` and the SSRN button;
+  `_data/paper.json` still holds the text. **Two things follow while the hold stands:**
+  `data-claim-quote` is used **nowhere** on the site, and **C-001, C-002, C-003 and C-005 are
+  published nowhere at all** — the quotation was their only home.
 - **The client wall** renders all six as **type**, because D-014 has cleared no mark. The
   files are in `assets/logos/`. Flip `cleared` in `_data/clients.js` per institution as
   permissions land; the wall is built to look deliberate at any mix.
@@ -772,10 +783,10 @@ statement in hard rule 1, markup in `DESIGN.md` §8, reasoning in D-016.
 | C-019 | **175 studies** — 119 current-platform plus 56 older campaigns. Publishable, but never explained with platform language |
 | D-020 | **Four-cell totals band** on Home — 841,660 respondents · 17,979,910 survey responses · 41 countries · 175 studies fielded. The old stat row is dropped; median field window (C-011) moves into the prose beside the band |
 | D-013 | **Recorded replay at launch**, live as a fast-follow. Phase 4 is no longer blocked on it |
-| D-023 | **No competitor comparison, anywhere on the site.** C-006, C-007, C-008 and C-009 are now `WITHHELD` — decided against, not pending. Home §4 is rebuilt around C-003 alone, `DESIGN.md` §2 rule 5 no longer prefers the comparative, and `assets/figures/mad-comparison.svg` is redrawn as one bar on the same ruler. **Amended 2026-08-21** to read *in our own voice*, once the abstract was restored — the amendment is a boundary, not a softening |
+| D-023 | **No competitor comparison, anywhere on the site.** C-006, C-007, C-008 and C-009 are now `WITHHELD` — decided against, not pending. Home §4 is rebuilt around C-003 alone, `DESIGN.md` §2 rule 5 no longer prefers the comparative, and `assets/figures/mad-comparison.svg` is redrawn as one bar on the same ruler. **Amended 2026-08-21** to read *in our own voice*, once the abstract was restored — the amendment is a boundary, not a softening. **Dormant since 2026-08-31:** the abstract came off the page, so no comparison ships in any voice |
 | D-019 | **Coverage section goes on Home**, on paper ground; the Studies index carries no map. Section order and the §8 adjacency check are in `CONTENT.md` Home |
-| D-016 | **Papers carries the citation, the link, and the paper's abstract quoted verbatim** — title, byline, abstract inside `data-claim-quote="C-055"`, citation, BibTeX, link. **No cost table, no figures.** *Restored 2026-08-21, reversing the previous day's "no abstract" reading — the reasoning is in D-016 and matters more than the outcome* |
-| C-055 | The paper's public URL, now **`VERIFIED`** — `https://ssrn.com/abstract=5495148`, supplied by Nandan as co-author, **not independently verified** (SSRN 403s every non-browser client). Citation year settled at **2025** and now published: source lines read "Donati & Rao, 2025". BibTeX constructed in `_data/paper.json`. **C-055 is load-bearing twice over** — it is the link, and it is the row the quoted abstract is attributed to |
+| D-016 | **Papers carries the citation, the link, and the paper's abstract quoted verbatim** — title, byline, abstract inside `data-claim-quote="C-055"`, citation, BibTeX, link. **No cost table, no figures.** *Restored 2026-08-21, reversing the previous day's "no abstract" reading — the reasoning is in D-016 and matters more than the outcome.* **The quotation is held off the site as of 2026-08-31** — Nandan, *"for now"*; the paper beat is title · byline · SSRN link, and the block is one `<blockquote>` away from returning. See "What is held" |
+| C-055 | The paper's public URL, now **`VERIFIED`** — `https://ssrn.com/abstract=5495148`, supplied by Nandan as co-author, **not independently verified** (SSRN 403s every non-browser client). Citation year settled at **2025** and now published: source lines read "Donati & Rao, 2025". BibTeX constructed in `_data/paper.json`. **C-055 is load-bearing twice over** — it is the link, and it is the row the quoted abstract is attributed to, the second job dormant while the quotation is held |
 
 ### Waiting on Nandan — and none of it blocks the build
 
