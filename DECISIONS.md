@@ -1279,9 +1279,10 @@ well."* The open-source preference was his; the recommendation this entry had ca
 
 **What runs.** Umami v3, pinned, at `analytics.vlab.digital`, in the `analytics` namespace
 of the production GKE cluster (europe-west1), with its own Postgres. Manifests and the
-operator README are in **`fly/devops/umami/`**, beside the rest of the cluster's
-infrastructure — not in this repo, because the instance serves every web property we own and
-this site is only the first. **A new site is a new "website" in Umami and a `<script>` tag,
+operator README are in their own repository, **`vlab-research/analytics`** (checked out
+beside this one at `../analytics`) — not in this repo, and not in fly's `devops/`, because the
+instance serves every web property we own and this site is only the first. *Moved there the
+same day at Nandan's request: "It's an analytics repository."* **A new site is a new "website" in Umami and a `<script>` tag,
 never a new deployment.**
 
 **What the page loads.** One `<script defer>` in `_includes/base.html`, on every page,
@@ -1305,7 +1306,7 @@ analytics host do not silently drop a readership of academics running uBlock.
   keyed by `APP_SECRET`. The privacy policy says exactly this — city included — because
   under-describing it is the failure D-025 exists about.
 - **Retention.** Umami keeps everything forever by default. The nightly job in
-  `fly/devops/umami/backup.yaml` purges visitor data older than **24 months**, which is the
+  `../analytics/umami/backup.yaml` purges visitor data older than **24 months**, which is the
   figure the policy now publishes. **Change one and change the other.**
 
 **The privacy policy was amended the same day** (§1, §2.4, new §2.5, §4, §5 naming Netlify,

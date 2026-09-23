@@ -260,8 +260,8 @@ from the session. Commit before running a sweeping edit over this file.
 ### Analytics — self-hosted Umami, 2026-09-23 (D-009)
 
 **Where to look:** `https://analytics.vlab.digital`. The admin login is in the gitignored
-`fly/devops/umami/.env-umami-admin`; the manifests and the operator README are beside it in
-`fly/devops/umami/`. **The instance is shared** — it lives in its own `analytics` namespace
+`../analytics/umami/.env-umami-admin`; the manifests and the operator README are beside it.
+That is its own repository, **`vlab-research/analytics`** (private). **The instance is shared** — it lives in its own `analytics` namespace
 so other projects can be added as further "websites" in the same Umami.
 
 **Four pieces in this repo, and they only work together:**
@@ -279,7 +279,7 @@ showing up as one or two sessions located in a Netlify region means the
 deployment). Zero traffic with no console error means the `/p/` rewrites have gone.
 
 **The privacy policy describes this exactly, city-level location and 24-month retention
-included.** The retention is real only because `fly/devops/umami/backup.yaml` purges it
+included.** The retention is real only because `../analytics/umami/backup.yaml` purges it
 nightly. Enabling anything more in Umami is a policy change as well as a D-009 change.
 
 ### What is held, and why — read this before "fixing" any of it

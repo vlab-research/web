@@ -15,7 +15,7 @@
 /jobs       /         301
 
 # Analytics, D-009. The Umami tracker and its one endpoint, proxied first-party to
-# our self-hosted instance (fly/devops/umami/). Status 200 is a rewrite, not a
+# our self-hosted instance (vlab-research/analytics). Status 200 is a rewrite, not a
 # redirect: the browser only ever talks to vlab.digital, so blocklists keyed on
 # the analytics host do not drop the request. Netlify passes the visitor's IP to
 # the cluster in X-Nf-Client-Connection-Ip, which Umami reads for country and a
