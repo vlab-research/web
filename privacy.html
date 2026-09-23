@@ -15,6 +15,11 @@ eleventyExcludeFromCollections: true
     things the instrument does are not described here — and if the policy is
     wrong, it is wrong at its URL too.
 
+    AMENDED 2026-09-23 for website analytics (D-009): §1 website visitors, §2.4,
+    §2.5, §4, §5 (Netlify), §7. §2.5 describes what Umami v3 actually stores, read
+    from its schema; §7's 24 months is enforced by the purge in
+    fly/devops/umami/backup.yaml. Change either and change this in the same breath.
+
     The whole body carries data-claim-scan="off". Legal copy is the only
     sanctioned use of that attribute (DESIGN.md §8): retention periods, article
     numbers, a street address and a ZIP are numerals with no CLAIMS.md row and no
@@ -25,7 +30,7 @@ eleventyExcludeFromCollections: true
     <div class="stack">
       <span class="eyebrow">Virtual Lab, LLC</span>
       <h1>Privacy Policy</h1>
-      <p class="src">Last updated: <time datetime="2026-05-15">2026-05-15</time></p>
+      <p class="src">Last updated: <time datetime="2026-09-23">2026-09-23</time></p>
     </div>
   </div>
 </section>
@@ -37,12 +42,13 @@ eleventyExcludeFromCollections: true
       <p>Virtual Lab, LLC (&ldquo;Virtual Lab&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) operates a research platform that enables academic institutions and nonprofits to design, recruit for, and run behavioral studies. This policy describes what data we collect, why, how we use it, and the choices you have. It applies to all parts of our service &mdash; including the dashboard and API used by researchers (for study configuration, recruitment, and analytics) and our survey-delivery service, which runs over chat, messaging, SMS, and web channels (including Facebook Messenger and other platforms researchers may connect).</p>
 
       <h2>1. Who this policy covers</h2>
-      <p>This policy applies to two groups:</p>
+      <p>This policy applies to three groups:</p>
       <ul>
         <li><strong>Researchers</strong> &mdash; staff at academic, nonprofit, or partner organizations who use our dashboard to configure studies and connect external messaging and advertising platforms.</li>
         <li><strong>Participants</strong> &mdash; individuals who answer a survey delivered through our platform.</li>
+        <li><strong>Website visitors</strong> &mdash; anyone who reads our public website at vlab.digital, including its documentation.</li>
       </ul>
-      <p>For participant data, the researcher&rsquo;s institution is normally the <strong>data controller</strong> and we act as a <strong>data processor</strong> on their behalf. For researcher account data, we are the controller.</p>
+      <p>For participant data, the researcher&rsquo;s institution is normally the <strong>data controller</strong> and we act as a <strong>data processor</strong> on their behalf. For researcher account data and website visitor data, we are the controller.</p>
 
       <h2>2. Information we collect</h2>
 
@@ -69,7 +75,17 @@ eleventyExcludeFromCollections: true
       <p>Some studies may involve special categories of personal data within the meaning of GDPR Article 9 (e.g. health, political opinion, religion, ethnic origin, or sexual orientation). Where such data is collected, the researcher&rsquo;s institution is responsible for obtaining the explicit consent required under Article 9(2)(a) and any necessary ethics-committee or IRB approval. We process such data only on the controller&rsquo;s documented instructions.</p>
 
       <h3>2.4 Cookies and local storage</h3>
-      <p>The dashboard uses cookies and browser local storage only for authentication and UI preferences. We do not use third-party advertising cookies.</p>
+      <p>The dashboard uses cookies and browser local storage only for authentication and UI preferences. Our public website sets no cookies and uses no browser storage. We do not use third-party advertising cookies.</p>
+
+      <h3>2.5 From website visitors</h3>
+      <p>We measure how our public website is used with <a href="https://umami.is" target="_blank" rel="noopener">Umami</a>, an open-source analytics tool that we run on our own servers in the European Union. No third-party analytics service receives your visit. For each page view it records:</p>
+      <ul>
+        <li>The page visited, its title, and the address it was reached from (the referring page), including any campaign parameters in the link.</li>
+        <li>Your browser, operating system, device type, screen size and language.</li>
+        <li>An approximate location (country, region and city), looked up from your IP address at the moment of the visit.</li>
+        <li>Whether you clicked our contact email address.</li>
+      </ul>
+      <p><strong>Your IP address is not stored.</strong> It is used once, to look up the approximate location and to compute a visitor identifier: a one-way hash of your IP address, browser details and a secret that changes every month. The identifier lets us count unique visitors within a month. Because the IP address is discarded, the identifier cannot be traced back to it, and it does not follow you to other websites or from one month to the next. We do not combine website analytics with researcher or participant data.</p>
 
       <h2>3. How we use information</h2>
       <p>We use this data to:</p>
@@ -88,7 +104,7 @@ eleventyExcludeFromCollections: true
       <ul>
         <li><strong>Contract</strong> &mdash; to provide the dashboard and API to researchers and their organizations.</li>
         <li><strong>Consent</strong> &mdash; for participant survey responses and for follow-up contact under the relevant opt-in or platform permission.</li>
-        <li><strong>Legitimate interests</strong> &mdash; for operational logging, security monitoring, and abuse prevention.</li>
+        <li><strong>Legitimate interests</strong> &mdash; for operational logging, security monitoring, and abuse prevention, and for measuring how our public website is used (section 2.5).</li>
         <li><strong>Legal obligation</strong> &mdash; for responding to lawful requests and meeting record-keeping requirements.</li>
       </ul>
       <p>A Data Processing Agreement (DPA) is available on request to institutional customers who require one &mdash; contact <a href="mailto:privacy@vlab.digital">privacy@vlab.digital</a>.</p>
@@ -97,7 +113,7 @@ eleventyExcludeFromCollections: true
       <p>We share information only as needed to operate the service:</p>
       <ul>
         <li><strong>With the researcher / their institution</strong> &mdash; all data collected under a researcher&rsquo;s study is available to that researcher and their authorized colleagues.</li>
-        <li><strong>With infrastructure providers</strong> &mdash; Google Cloud (EU regions) hosts our application servers, databases, and storage, and Auth0 (an Okta company) provides authentication. These providers process data on our behalf under their standard data processing terms.</li>
+        <li><strong>With infrastructure providers</strong> &mdash; Google Cloud (EU regions) hosts our application servers, databases, and storage, and Auth0 (an Okta company) provides authentication. Netlify hosts our public website and relays its analytics requests to our own servers. These providers process data on our behalf under their standard data processing terms.</li>
         <li><strong>With connected third-party platforms</strong> &mdash; when a researcher connects an external messaging, social, or advertising platform (for example, Meta / Facebook), we exchange data with that platform strictly to perform the actions the researcher has requested. Use of that data is also governed by the platform&rsquo;s own terms (e.g. <a href="https://developers.facebook.com/terms/" target="_blank" rel="noopener">Meta&rsquo;s Platform Terms</a>).</li>
         <li><strong>For legal reasons</strong> &mdash; when required by law, subpoena, or to protect the rights, property, or safety of Virtual Lab, our users, or others.</li>
       </ul>
@@ -112,6 +128,7 @@ eleventyExcludeFromCollections: true
         <li><strong>Study and participant data</strong> &mdash; retained for the duration of the study and afterward according to the researcher&rsquo;s institutional retention policy. Researchers can delete studies and participant records at any time.</li>
         <li><strong>Platform access tokens</strong> &mdash; revoked when the researcher disconnects the corresponding account.</li>
         <li><strong>Operational logs</strong> &mdash; retained on a 90-day rolling basis.</li>
+        <li><strong>Website analytics</strong> &mdash; deleted after 24 months.</li>
         <li><strong>Database backups</strong> &mdash; encrypted and deleted after 90 days by storage-bucket lifecycle policy.</li>
       </ul>
       <p>Deletion requests against primary stores are honored promptly. Because backups age out on a fixed cycle, deleted records may persist in encrypted backup archives for up to 90 days.</p>

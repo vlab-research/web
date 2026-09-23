@@ -1228,6 +1228,10 @@ ids `markdown-it-anchor` actually emitted.
 limit — not the opening of a door.** Anything that observes the reader rather than serving
 them is D-009's question, and D-009 is open.
 
+**D-009 closed 2026-09-23 and answered that question for exactly one script:** the
+self-hosted Umami tracker, on every page. This entry still governs the docs search script,
+and it is still the limit for anything else.
+
 ---
 
 ### D-031 — The docs are reached from the footer and the open-source section, not the nav
@@ -1265,6 +1269,61 @@ name, the bar is where they go, and §8 already says exactly what the link looks
 
 ---
 
+### D-009 — Analytics: self-hosted Umami, cookieless, first-party
+**Status:** SETTLED 2026-09-23 · Owner: Nandan · *was OPEN since the SPA was retired*
+
+**Nandan, 2026-09-23:** *"Let's run the self hosted Umami"* — and, while it was being built,
+*"in its own namespace in the cluster, assuming that we can use it for other projects as
+well."* The open-source preference was his; the recommendation this entry had carried since
+2026-08-20 — cookieless, EU-hosted, no consent banner — is what it satisfies.
+
+**What runs.** Umami v3, pinned, at `analytics.vlab.digital`, in the `analytics` namespace
+of the production GKE cluster (europe-west1), with its own Postgres. Manifests and the
+operator README are in **`fly/devops/umami/`**, beside the rest of the cluster's
+infrastructure — not in this repo, because the instance serves every web property we own and
+this site is only the first. **A new site is a new "website" in Umami and a `<script>` tag,
+never a new deployment.**
+
+**What the page loads.** One `<script defer>` in `_includes/base.html`, on every page,
+docs included. It sets no cookie and uses no storage. It is served **first-party**:
+`_redirects` proxies `/p/s.js` and `/p/api/send` to the cluster, so blocklists keyed on the
+analytics host do not silently drop a readership of academics running uBlock.
+`data-domains="vlab.digital"` keeps deploy previews and localhost out of the numbers.
+
+**One goal is tracked:** a click on `info@vlab.digital`, as `data-umami-event="email"` with
+`where` = `close` or `footer`. It is the only conversion the page has.
+
+**Three things were verified rather than assumed, and each would otherwise be silently wrong:**
+
+- **The visitor's IP through the proxy.** Netlify's rewrite reaches the cluster from its
+  edge, so without help every visitor is Netlify. Netlify sends the client address in
+  `X-Nf-Client-Connection-Ip` — confirmed against a draft deploy proxying to an echo
+  endpoint — and Umami reads it via `CLIENT_IP_HEADER`.
+- **What Umami stores**, read from its v3.3.1 schema: page, title, referrer, query string
+  (so UTM and ad click ids), browser, OS, device, screen, language, country/region/**city**.
+  **Not the IP.** The visitor id is a hash of IP, user agent and a monthly-rotating salt
+  keyed by `APP_SECRET`. The privacy policy says exactly this — city included — because
+  under-describing it is the failure D-025 exists about.
+- **Retention.** Umami keeps everything forever by default. The nightly job in
+  `fly/devops/umami/backup.yaml` purges visitor data older than **24 months**, which is the
+  figure the policy now publishes. **Change one and change the other.**
+
+**The privacy policy was amended the same day** (§1, §2.4, new §2.5, §4, §5 naming Netlify,
+§7). That is Nandan's instruction for this processing only; D-025 stays open for the three
+instrument gaps it records.
+
+**D-030 is amended, not undone.** It said the docs search script is the only JavaScript on
+the property and that *"anything that observes the reader … is D-009's question."* D-009
+has now answered it: one observing script, this one, and its limits are above. **Anything
+beyond it — a second tracker, session replay, heatmaps, Umami's `recorder` — is a new
+decision, not an extension of this one.**
+
+**Search Console is complementary, not replaced.** Analytics counts visits; only Search
+Console reports the queries and positions `notes/ws-seo.md` §8 is judged on. It is verified
+by DNS TXT (§5.5), which is server-side and does not touch this entry.
+
+---
+
 ## Open
 
 Nobody may resolve these except the user. Recommendations are recorded so the
@@ -1273,6 +1332,10 @@ conversation starts from a position, not from zero.
 ### D-025 — May the privacy policy be amended, and how far?
 **Status:** OPEN · Owner: Nandan · **opened 2026-08-21** · *gates two sections of the
 Instrument page, and nothing else on the site*
+
+**Amended in part, 2026-09-23 — for website analytics only (D-009).** §1, §2.4, a new §2.5,
+§4, §5 and §7 now describe Umami on vlab.digital, on Nandan's instruction. **None of the three
+instrument gaps below was touched**, and this entry is still open for all of them.
 
 **`CONTENT.md` says the privacy policy is carried over near-verbatim and that "the only
 permitted edits are structural."** That rule was written to stop a marketing hand rewriting
@@ -1403,28 +1466,6 @@ than the one it fixes.
 them. **The provenance rule is not weakened by this.** Every figure on the page still traces
 to a `VERIFIED` row; what is declined is an on-page reconciliation *between two of our own
 figures*, which was never what that rule was for.
-
----
-
-### D-009 — Analytics and consent
-**Status:** OPEN · Owner: Nandan
-
-PostHog loads on every page of the current site with no consent mechanism. This sits
-awkwardly beside our own privacy policy and beside D-012's reasoning.
-
-**Options:** drop analytics entirely; keep PostHog with a consent banner; or move to a
-cookieless, EU-hosted analytics product that needs no banner.
-
-**Recommendation:** cookieless and EU-hosted. A consent banner on a site whose pitch is
-methodological rigour and data ethics costs more than the data is worth.
-
-**State as of the build, 2026-08-25: the site ships no analytics at all.** The PostHog
-snippet went with the legacy SPA and nothing replaced it. **This does not close the
-decision** — it is the reversible direction while the decision is open. Loading nothing
-costs a few weeks of traffic data; loading a US-hosted tracker with no consent mechanism on
-the same origin as a privacy policy that states EU hosting is the thing D-012 spent a court
-ruling arguing against. `_includes/base.html` carries a comment saying so at the point where
-a snippet would go, so the absence reads as a decision rather than an oversight.
 
 ---
 

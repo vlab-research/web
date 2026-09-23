@@ -14,6 +14,15 @@
 /software   /#code    301
 /jobs       /         301
 
+# Analytics, D-009. The Umami tracker and its one endpoint, proxied first-party to
+# our self-hosted instance (fly/devops/umami/). Status 200 is a rewrite, not a
+# redirect: the browser only ever talks to vlab.digital, so blocklists keyed on
+# the analytics host do not drop the request. Netlify passes the visitor's IP to
+# the cluster in X-Nf-Client-Connection-Ip, which Umami reads for country and a
+# salted daily session hash. Only these two paths; nothing else under /p/ exists.
+/p/s.js       https://analytics.vlab.digital/script.js   200
+/p/api/send   https://analytics.vlab.digital/api/send    200
+
 # docs.vlab.digital, folded into this site 2026-08-29 (D-008). The docs were a
 # separate Hugo site on GitHub Pages; they are now /docs/ here, and every URL that
 # subdomain ever served maps one-to-one onto a URL under it — /fly/reference/bails/

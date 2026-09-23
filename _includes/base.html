@@ -70,10 +70,12 @@
 <script type="application/ld+json">{{ schema | dump | safe }}</script>
 {%- endif %}
 
-{#- No analytics. D-009 is open and its recommendation is cookieless and
-    EU-hosted; PostHog shipped on the legacy SPA with no consent mechanism, on
-    the same origin as our own privacy policy. Nothing is loaded here until that
-    decision closes. -#}
+{#- Analytics, D-009: self-hosted Umami in our own cluster (EU), cookieless and
+    storage-free, so no consent banner. The path is first-party on purpose —
+    _redirects proxies /p/* to analytics.vlab.digital — so ad blockers do not
+    silently drop a research audience. data-domains keeps deploy previews and
+    localhost out of the numbers. A new site gets its own website id, not this one. -#}
+<script defer src="/p/s.js" data-website-id="{{ site.umamiWebsiteId }}" data-domains="vlab.digital"></script>
 </head>
 {#- `docs` widens the nav and the footer to full bleed so the brand mark sits
     directly above the sidebar and the whole page shares one left edge. Docs only:
@@ -138,7 +140,7 @@
     </a>
     <nav aria-label="Footer">
       <ul>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="mailto:{{ site.email }}" data-umami-event="email" data-umami-event-where="footer">{{ site.email }}</a></li>
         <li><a href="{{ site.github }}" rel="noopener">GitHub</a></li>
         <li><a href="/docs/">Documentation</a></li>
         <li><a href="/#paper">The paper</a></li>

@@ -5,6 +5,10 @@ export default {
   email: "info@vlab.digital",
   github: "https://github.com/vlab-research",
 
+  // D-009. This site's id in the self-hosted Umami at analytics.vlab.digital
+  // (fly/devops/umami/). Not a secret: it is printed in every page's <script>.
+  umamiWebsiteId: "3a81c273-95f5-463d-a582-3ed980237253",
+
   // C-055, VERIFIED — supplied by Nandan as co-author, not independently verified
   // (SSRN 403s every non-browser client). Long form:
   // https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5495148

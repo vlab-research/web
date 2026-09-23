@@ -198,7 +198,7 @@ easier to hold once you have seen the page.
 | `eleventy.config.js` | Input is the **repo root**, so `_includes/base.html` and `_data/` sit where D-006 says. Passthrough: `css` `fonts` `assets` `robots.txt` `_redirects` |
 | **`assets/logos/` is NOT published** | `eleventy.config.js` copies `assets/` subdirectory by subdirectory so the eight institutional marks never reach the build. **Not one is cleared (D-014)** — copying `assets/` wholesale would host eight third-party trademarks on our own domain, publicly fetchable, with no permission for any. Nothing references them; the wall renders as type. **When a mark clears, add its file to the passthrough list AND flip `cleared` in `_data/clients.js`** — two separate things |
 | `.eleventyignore` | The documentation set, `notes/`, `scripts/`, `js/`, `img/`. `build/` `media/` `node_modules/` `_site/` come free from `.gitignore`, which Eleventy honours |
-| `_includes/base.html` | Head, the inlined icon sprite, nav, footer, scroll-progress rule. **No analytics** — see D-009 below |
+| `_includes/base.html` | Head, the inlined icon sprite, nav, footer, scroll-progress rule, and the **Umami tracker** — see D-009 below |
 | `_includes/macros.njk` | **New 2026-08-26.** `lattice(id, inv)` and `objective()`. The M1 lattice takes an id because each instance needs its OWN `<pattern>` — one shared pattern in `<head>` would break the `.inv` colour swap, since `currentColor` inside a `<pattern>` resolves where the pattern is **defined**, not where it is used |
 | `css/site.css` | `DESIGN.md` §3–§9 in section order, ~620 lines. Built from the document, **not** from `css/main.css`, which is deleted |
 | `index.html` · `privacy.html` · `404.html` | The three pages. `privacy.html` permalinks to `/privacy/` and is **not linked from anywhere** |
@@ -257,6 +257,31 @@ regex over comment blocks and it swallowed the **held reallocations figure** —
 a comment. **The whole rebuild is uncommitted**, so git could not recover it; it was rewritten
 from the session. Commit before running a sweeping edit over this file.
 
+### Analytics — self-hosted Umami, 2026-09-23 (D-009)
+
+**Where to look:** `https://analytics.vlab.digital`. The admin login is in the gitignored
+`fly/devops/umami/.env-umami-admin`; the manifests and the operator README are beside it in
+`fly/devops/umami/`. **The instance is shared** — it lives in its own `analytics` namespace
+so other projects can be added as further "websites" in the same Umami.
+
+**Four pieces in this repo, and they only work together:**
+
+| | |
+|---|---|
+| `_includes/base.html` | The `<script defer src="/p/s.js">` tag, every page, `data-domains="vlab.digital"` |
+| `_data/site.js` | `umamiWebsiteId`. Not a secret — it is in every page's source |
+| `_redirects` | `/p/s.js` and `/p/api/send`, proxied (200) to the cluster. **First-party on purpose**, so ad blockers do not drop an academic audience. Rename these and the tracker 404s silently |
+| `index.html` + footer | `data-umami-event="email"` on both `mailto:` links, the one tracked goal |
+
+**Two things break silently, so check them if the numbers look wrong.** Every visitor
+showing up as one or two sessions located in a Netlify region means the
+`X-Nf-Client-Connection-Ip` header is no longer reaching Umami (`CLIENT_IP_HEADER` in the
+deployment). Zero traffic with no console error means the `/p/` rewrites have gone.
+
+**The privacy policy describes this exactly, city-level location and 24-month retention
+included.** The retention is real only because `fly/devops/umami/backup.yaml` purges it
+nightly. Enabling anything more in Umami is a policy change as well as a D-009 change.
+
 ### What is held, and why — read this before "fixing" any of it
 
 **None of it is unfinished work. Each is one line, and each is somebody's decision.**
@@ -293,10 +318,8 @@ record that these slots exist. Read it before concluding the page is missing som
 - **The client wall** renders all six as **type**, because D-014 has cleared no mark. The
   files are in `assets/logos/`. Flip `cleared` in `_data/clients.js` per institution as
   permissions land; the wall is built to look deliberate at any mix.
-- **D-009 · no analytics ship.** PostHog was on every page of the SPA with no consent
-  mechanism, on the same origin as our own privacy policy. The decision is open and its own
-  recommendation is cookieless and EU-hosted, so nothing is loaded until it closes. This is
-  the reversible direction.
+- ~~**D-009 · no analytics ship.**~~ **Settled 2026-09-23: self-hosted Umami.** See
+  "Analytics" below; it is no longer held.
 
 ### The provenance rule was amended, 2026-08-26 — read this before writing a source line
 
@@ -997,11 +1020,12 @@ it does not resurrect either banned framing.
    in a hairline so it reads as a specimen on the page. The ban holds everywhere else, and
    `.eleventyignore` still excludes `img/`.
 
-9. **`/docs/` ships JavaScript. Nothing else does, and D-030 is the limit rather than the
-   precedent.** One search script, `/docs/` only, no library, no CDN, one same-origin fetch
-   on first focus, no cookie and no storage and nothing reported anywhere. **D-009
-   (analytics) is still open and this does not touch it.** A second script is a question for
-   the user, not a decision for you.
+9. **Two scripts ship, and each decision is the limit rather than the precedent.** The docs
+   search (D-030): `/docs/` only, no library, no CDN, one same-origin fetch on first focus,
+   no cookie, no storage, nothing reported. And the Umami tracker (D-009, 2026-09-23): every
+   page, first-party through `/p/`, no cookie, no storage. **A third script — or turning on
+   anything more in Umami, such as its session recorder or heatmaps — is a question for the
+   user, not a decision for you**, and it would also be a privacy-policy change.
 
 ---
 
@@ -1018,11 +1042,9 @@ it does not resurrect either banned framing.
   (D-006) replaces it.
 - **~~There is a live BrowserSync `document.write` script tag~~ — gone**, with the SPA that
   carried it. It pointed at `http://HOST:3000` and had been shipping to production.
-- **~~PostHog is loaded on every page~~ — no analytics ship at all** as of 2026-08-25. The
-  snippet went with the SPA and nothing replaced it, because **D-009 is open** and its own
-  recommendation is cookieless and EU-hosted. Loading nothing is the reversible direction;
-  adding a tracker to a page that sits beside our privacy policy is not.
-- **The privacy policy is genuinely good** and recently updated (2026-05-15). It is the
+- **~~PostHog is loaded on every page~~ — gone with the SPA**, and replaced on 2026-09-23 by
+  self-hosted Umami (D-009). See "Analytics" in "Picking this up".
+- **The privacy policy is genuinely good** and recently updated (2026-05-15; amended for website analytics 2026-09-23, D-009). It is the
   one piece of existing content worth carrying over close to verbatim. Do not
   regenerate it; move it.
 - **`build/` is generated**, git-ignored, and **regenerated on every deploy** —
@@ -1052,8 +1074,10 @@ it does not resurrect either banned framing.
   documentation set (D-008) — the only Markdown in this repo that is a *page*. The
   specification is the root `.md` files; `notes/` is the memos; `docs/` is the product.
   Its screenshots are in `docs/images/`, the only raster images published anywhere.
-- **`docs/docs.js` is the only client-side JavaScript on the property** and is copied to
-  the output verbatim — no bundler, no minifier, what you read is what runs (D-030).
+- **`docs/docs.js` is the only client-side JavaScript this repo authors** and is copied to
+  the output verbatim — no bundler, no minifier, what you read is what runs (D-030). The
+  Umami tracker is the other script on the page, and it is served by our own cluster, not
+  from this repo (D-009).
 - **`docs-search-index.njk` is at the repo ROOT for a reason.** Beside `sitemap.njk`, and
   for the same reason it is: it is a machine artefact, not a page. Moving it into `docs/`
   makes it inherit `templateEngineOverride: "md"` and emit JSON full of `<p>` tags.
