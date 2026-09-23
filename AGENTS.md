@@ -64,6 +64,49 @@ trust it.
 
 ---
 
+## Where knowledge lives — tracked files, never an agent's memory
+
+**Nandan, 2026-09-23:** *"Never use memory. Keep everything and get tracked files in the
+repository that are agent agnostic."* Anything worth knowing next session — a decision, a
+preference, where something lives, a trap — goes into a tracked file in the repo it
+concerns: this file, `DECISIONS.md`, or the sibling repo's own `README.md`/`AGENTS.md`.
+**Never into an assistant's private memory store**, whatever the tool calls it: that is
+invisible to other agents and to people, unreviewed, and uncommitted. If you learn something
+and there is no obvious home for it, put it here.
+
+## Sibling repositories
+
+All under `/home/nandan/Documents/vlab-research/`. Each documents itself; this is the map.
+
+| Repo | GitHub | What it is |
+|---|---|---|
+| `vlab.digital` | `vlab-research/web` (public) | This site. **Push to `master` deploys production** (Netlify site `vlab-digital`) |
+| `analytics` | `vlab-research/analytics` (private) | Self-hosted Umami for **every** site we run (D-009). Credentials are gitignored `umami/.env-*` there, the only copy outside the cluster. Start at its `README.md` |
+| `clients` | `vlab-research/clients` (private) | Unlisted per-client study pages at `clients.vlab.digital`. **Manual deploys** (`npm run deploy`), not push-to-deploy |
+| `sales` | `vlab-research/sales` (private) | Outreach. Holds real people's names, so nothing in it is published. Read its `DECISIONS.md` before drafting anything; its `CLAIMS.md` defers to this repo's |
+| `fly` | `vlab-research/fly` (public) | The platform, and `devops/` for the cluster's own infrastructure. **Not** for shared web tooling; that is why analytics moved out |
+| `proposals` | — | Where the brand began (`static/style.css`, fonts). The website inherits from it, not the reverse |
+
+**DNS for `vlab.digital` is Netlify DNS**, zone `624a5c409559c35e79eedc19`, and the `netlify`
+CLI on this machine is logged in: `netlify api getDnsZones` / `createDnsRecord`. Cluster
+hosts are a CNAME to `vlab-cluster.vlab.digital`.
+
+## Working with Nandan — three corrections worth not repeating
+
+- **Reason from what is true, not from imagined readers.** *"It's ok if there's no client we
+  can name, if we surveyed them, we surveyed them"* (2026-08-20) rejected an argument that a
+  page would confuse a buyer, which was speculation dressed as a finding. When relaying a
+  subagent's conclusion, separate what it **verified** from what it **inferred**, and test
+  the inference first. Plain factual framing beats narrative about how a reader will feel.
+- **Borrow patterns; never invent them.** *"Pick patterns that other docs sites or other
+  sites in general use"* (2026-08-30). A surface new to this project is not licence to
+  design from scratch. Name the products a pattern is borrowed from; that naming is the
+  check that it is borrowed at all. The docs shell (`DESIGN.md` §8) is the worked example.
+- **"Say more about X" means add X, not re-centre on X.** Asked for more on what the agent
+  can write, the section was rebuilt around writing, and he corrected it (2026-09-23):
+  *"just add a couple more verbs, not change the whole direction."* Enthusiasm about one
+  item is not a ranking. If a change would re-rank or re-headline, ask first.
+
 ## Where the work stands
 
 Four phases, each with a human gate. Do not start a phase whose gate has not closed.
