@@ -331,6 +331,10 @@ collection does the right thing on its own. **If the policy is ever linked, revi
 
 ### 5.5 Search Console — clean under D-009, **needs a DNS record from Nandan**
 
+**2026-09-23: D-009 closed (self-hosted Umami, `vlab-research/analytics`). Search Console is
+still not set up** — it is waiting on the verification string; the steps are in `AGENTS.md`
+under "Waiting on Nandan".
+
 **Verify by DNS TXT, not by meta tag or script.** Search Console is server-side: no
 client-side code, no cookie, no consent question, so it does not touch D-009 or sit beside
 our own privacy policy the way PostHog did. It is also the only way to measure any of this,
