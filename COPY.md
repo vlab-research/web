@@ -663,6 +663,76 @@ the study closes and you take the data — about 290 words, narrating rather tha
 
 ---
 
+# An agent can run the survey
+
+**Added 2026-09-23 as its own section**, between the chatbot and "The code is open source".
+It began on 2026-09-07 as a third paragraph inside `#code`; Nandan moved it out — *"I agree
+it should have it's own section"* — and asked for more on writing: *"That's incredibly
+powerful for me. It can write, create logic, translate, etc."* Anchor `/#agents`.
+
+> `H2` **An agent can run the survey**
+>
+> The chatbot and the optimizer are both MCP servers, so an agent — Claude Code, Codex, or
+> any client that speaks the protocol — works on a study through the same operations humans do.
+>
+> It can write surveys, including conditional logic, follow-ups, incentive payments, and
+> translations.
+>
+> It can design recruitment, using our geotargeting tools to create custom targeting based on
+> satellite population density rasters, accessing the targeting options on Meta, and defining
+> stratification.
+>
+> And it can monitor recruitment, react to issues, manage and update settings, download and
+> analyze data, and provide feedback through the entire process.
+>
+> `.brass` Connect an agent → `/docs/fly/reference/api/mcp/`
+
+`data-claim`: none — no figures. The claims underneath it, clause by clause: MCP on both
+services C-099, C-100 · conditional logic C-079 · follow-ups C-059 · incentive payments
+C-061 · translations C-067 (closed-ended answers map to one dataset; never "full multilingual support") · geotargeting C-102 · Meta targeting options C-099 (`meta_*`, `extract_targeting`) ·
+stratification C-099 · monitoring, settings and data C-099, C-100. *Analyze* and *provide
+feedback* are the agent's own work, not a capability of ours.
+
+**Headline revised the same day.** The first draft led on writing (*"An agent can write the
+survey"*, *"Writing is where that matters most"*). Nandan: *"Lets headline 'run' the survey
+rather than just write … I was saying just add a couple more verbs, not change the whole
+direction. Writing, running, monitoring, adjusting, managing, they are all interesting."*
+**No verb leads.** One sentence each, in the order a study happens. *"We"* became
+*"humans"* in the first paragraph at Nandan's request.
+
+**Rewritten in Nandan's words, 2026-09-23 — *"I think that's misleading."*** The previous
+draft put *"set the strata and the budget, down to urban and rural areas … and launch the
+ads"* in one breath, which read as though geotargeting and budget-setting were live
+operations the agent turns like dials. **They are the design phase**, and the section now
+has three beats that say so: **write** the survey · **design** recruitment · **monitor**
+and manage it. Keep that separation: geotargeting belongs in *design*, never beside
+*launch* or *adjust*.
+
+**Geographic targeting is a clause, not yet a section** — *"We can add a section for that
+later, but let's mention it."* C-102 is the row; the agent reaches it through the
+`vlab_geotarget` CLI, not an MCP tool, which is why the copy says *"our geotargeting
+tools"* and not a tool name. A future section is also the natural home for C-087.
+
+*Notes.*
+
+**The agent is the reader's, never ours.** Hard rule 3 — *never claim AI* — is untouched:
+the agent writes and translates; Fly links the translated forms (C-067). Never write that
+Virtual Lab translates, drafts or "uses AI". If translation grows a clause, C-067's scope
+rides along — closed-ended answers only, never "full multilingual support".
+
+**"Write the questionnaire" goes through Typeform** (C-100's scope note, C-082).
+Nothing here may suggest Fly has a form builder of its own.
+
+**Client names, not "AI agents".** §2's Do/Don't bans the vague noun. Open Code was dropped
+from the list to keep it to two examples and the general case.
+
+**The button goes to the docs, not GitHub and not a sign-up.** D-024's guardrail is the
+conversion action; see the 2026-09-23 note under it. Fly's MCP page is the target because
+most of the verbs are Fly's. The optimizer's is `/docs/vlab/reference/mcp/`, and the Fly
+page does not yet link to it.
+
+---
+
 # The code is open source
 
 **Rewritten 2026-08-26, replacing "There is no black box."** Nandan: *"I don't think most

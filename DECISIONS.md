@@ -844,6 +844,31 @@ question, and a sitemap question answered after the pages exist is answered by r
 instinct was right and the execution was not: the placement half was answered by assumption
 rather than by argument, and it was withdrawn on 2026-08-22.
 
+**MCP added to `#code`, 2026-09-07 — checked against the standing rule and it does not
+reopen anything.** Both services shipped a Model Context Protocol server (C-099, C-100),
+and `COPY.md`'s "The code is open source" section grew a third paragraph naming it. The
+standing rule above is *"the guardrail is the conversion action … the moment it converts
+to GitHub or a sign-up it has become a product page and D-002 is reopened."* Two things
+keep this addition on the right side of that line. First, `#code` is not Fly's page — it
+is the shared "the platform is public" statement C-052 already covers for **both**
+systems (this entry's own table: *"C-052's scope re-checked, since 'the platform' now
+means two things to a reader"*), so a sentence about both systems' tooling continues an
+argument already made here, rather than starting Fly's separate capability pitch in a
+place that converts to GitHub. Second, the new paragraph adds no button and no new CTA —
+both existing ones (`GitHub`, `Read the documentation`) already serve it. **If Fly's own
+capability material ever grows an MCP mention on its service-side surface, that copy must
+still convert to "Request a proposal," never to GitHub — this entry does not license
+that.**
+
+**Moved to its own section, `/#agents`, 2026-09-23 — Nandan: *"I agree it should have it's
+own section."*** The paragraph above no longer lives in `#code`, so the first of the two
+reasons it cleared the guardrail (it continued C-052's argument) no longer applies, and the
+second has to carry it alone: **the section converts to documentation — *"Connect an
+agent"*, to the Fly MCP page — never to GitHub and never to a sign-up.** That is D-031's
+reasoning applied to a second reader: the literal next thing someone wanting to point an
+agent at a study needs is the connection instructions. **If this section ever grows a
+GitHub link or a sign-up, D-002 is reopened**, and the fix is to fold it back into `#code`.
+
 ---
 
 ---

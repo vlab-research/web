@@ -798,6 +798,37 @@ that line is held rather than in someone's judgment about the copy.
 
 ---
 
+### Agent capability claims — MCP, added 2026-09-07
+
+**Both services added a Model Context Protocol server** — `adopt` v0.1.87 (`vlab mcp`
+and `POST /mcp`) and the Fly dashboard's `POST /api/v1/mcp` — exposing the same
+operations §6b/§9 of each repo's `documentation/agent-api.md` already document over
+HTTP, as tools an agent calls directly. These are **capability rows, not figures**,
+same pattern as C-056–C-075 above: non-numeric, sourced to the repository, and the
+discipline is human because `check-claims.py` cannot check a sentence with no digits
+in it.
+
+| ID | Claim | Value | Source | Status | Checked |
+|---|---|---|---|---|---|
+| C-099 | The recruitment optimiser's operations, as MCP tools | Study creation and copying, every configuration section, whole-study validation, the plan/apply optimisation loop, read-only Meta lookups, and **monitoring a running study** — `strata_progress, current_data, recruitment_stats, respondents_over_time, cost_over_time, ad_attributions, study_errors`. Re-checked 2026-09-23: 16 tools at 2026-09-07, grown since | `vlab/adopt/adopt/sdk/mcp_tools.py` on `origin/main`; `vlab/documentation/agent-api.md` §6b. **No new capability over the HTTP API — the same routes, same scopes, same append-only writes.** Account and key-minting tools (`create_api_key`, connected accounts) are on `feature/mcp-accounts` only and are **not** relied on by any copy | `VERIFIED` | 2026-09-23 |
+| C-100 | The survey instrument's operations, as MCP tools | Survey authoring — `list_surveys, list_typeform_forms, create_typeform_form, create_survey, create_survey_version, update_survey_settings`; monitoring — `get_survey_health, get_states_summary, list_states, get_participant_state, get_platform_notices`; **data** — `get_responses, start_export, list_exports`; messaging templates and media; follow-up scheduling (bails). **`create_typeform_form` authors a survey's full question set and branching logic** — each field's `description` is where Fly's question vocabulary (conditional logic, piping, validation, choices, video, incentive triggers) is written, per `fly/documentation/questions.md`. `create_survey` takes `translation_conf`, which is how a translated form is linked to its base (C-067). Re-checked 2026-09-23: 5 tools at 2026-09-07, phases A–D since | `fly/dashboard-server/api/mcp/mcp.tools.js` on `main` (phases A–D, 2026-09-08 → 09-21); `fly/documentation/agent-api.md` §7 (`translation_conf`), §9 | `VERIFIED` | 2026-09-23 |
+| C-101 | Changing a live survey | A change is published as a new version; a participant already in the survey keeps the version they started on, and only new participants get the new one | `fly/documentation/agent-api.md` §1, "There is no update endpoint"; `fly/documentation/states-debugging.md` (version resolved as the newest created at or before the participant's join time). **Scope: a live conversation is never fixed retroactively — do not write that a change reaches people already answering** | `VERIFIED` | 2026-09-23 |
+| C-102 | Urban and rural geographic targeting | Circles grown around populated places and tested against a population-density raster, turned into Meta targeting per region — urban (inside the circles) and rural (the region minus the circles) — so a study can stratify on urban and rural areas | `vlab-research/geotargeting` (public), `README.md`, `vlab_geotarget` CLI: `fetch`, `build`, `compose`, `targeting`, `adsets`; latest `d508e5a`, 2026-09-11; used on `wb-kenya`, `wb-morocco`. **A CLI, not an MCP tool** — an agent reaches it by running the command. **Scope: Meta targeting only; the density thresholds are chosen per study, so never state a fixed definition of "urban". The raster is WorldPop's 1 km UN-adjusted population layer, modelled from census counts with satellite-derived covariates — "satellite population density rasters" describes it; "satellite imagery of where people live" would overstate it** | `VERIFIED` | 2026-09-23 |
+
+**C-100's scope note, read together with C-082:** the tool authors the survey **through
+Typeform's own API**, exactly as a human would authoring it by hand in Typeform — it is
+not a form-builder Fly itself has grown. C-082's rule stands: *"Fly has no question
+editor of its own. Copy must never imply a form builder we do not have."* An agent
+calling `create_typeform_form` is doing what C-082 already describes a human doing, only
+by tool call instead of by clicking.
+
+**Both rows are `VERIFIED`, not forward-ruled** — everything the copy relies on is on
+`main` (first shipped 2026-09-06; re-checked 2026-09-23 when `/#agents` became its own
+section). If either server is later pulled or narrowed, update the row rather than
+leaving it to describe a capability that no longer answers a tool call.
+
+---
+
 ### Comparative rows — both withheld, and the forward rule does not touch them
 
 | ID | Claim | Value | Source | Status | Checked |
