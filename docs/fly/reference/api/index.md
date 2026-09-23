@@ -21,3 +21,7 @@ Every request must carry a Fly API key in the `Authorization` header. See
 one, then use [List surveys](/docs/fly/reference/api/surveys/) to find
 the `survey_name` you need, and finally
 [Get responses](/docs/fly/reference/api/responses/) to pull the data.
+
+The same operations are also available as tools for an agent, over
+[MCP](/docs/fly/reference/api/mcp/) — including authoring a survey's questions
+and branching logic directly, not just downloading its responses.
