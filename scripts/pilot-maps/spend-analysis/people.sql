@@ -1,0 +1,10 @@
+-- New people only: each user is counted once, at their first arrival anywhere on the platform,
+-- in every study whose first record of them falls within an hour of that arrival (a tie set:
+-- umbrella / shared-pool studies). Aggregated to counts; no user ids leave the database.
+WITH u AS (SELECT study_id, user_id, min(timestamp) AS t FROM inference_data GROUP BY 1,2),
+t0 AS (SELECT user_id, min(t) AS t0 FROM u GROUP BY 1),
+tie AS (SELECT u.user_id, t0.t0, string_agg(u.study_id::string, ',' ORDER BY u.study_id::string) AS studies
+        FROM u JOIN t0 ON t0.user_id=u.user_id WHERE u.t < t0.t0 + INTERVAL '1 hour' GROUP BY 1,2),
+m AS (SELECT user_id, string_agg(DISTINCT regexp_replace(variable,'^md:','') || '=' || (value->>0), '|') AS md
+      FROM inference_data WHERE variable IN ('Age','md:Age','Caregiver','md:Caregiver','City','md:City','District','md:District','Division','md:Division','Ethnicity','md:Ethnicity','Ethnicity ','md:Ethnicity ','Gender','md:Gender','Genders','md:Genders','Geo','md:Geo','Geo Location','md:Geo Location','LGA','md:LGA','Language','md:Language','Location','md:Location','Location All - Ireland','md:Location All - Ireland','Location Ireland','md:Location Ireland','Locations','md:Locations','Nigeria','md:Nigeria','Province','md:Province','Race_Ethnicity','md:Race_Ethnicity','Region','md:Region','Relationship','md:Relationship','State','md:State','age','md:age','clusters','md:clusters','country','md:country','country_name','md:country_name','demo_group','md:demo_group','education','md:education','fbincome','md:fbincome','gender','md:gender','geo','md:geo','geography','md:geography','language','md:language','location','md:location','locations','md:locations','mobile','md:mobile','region','md:region','state','md:state','stratum_age','md:stratum_age','stratum_gender','md:stratum_gender','stratum_location','md:stratum_location') GROUP BY 1)
+SELECT tie.studies, date_trunc('hour', tie.t0) AS h, m.md, count(*) AS n FROM tie LEFT JOIN m ON m.user_id=tie.user_id GROUP BY 1,2,3
