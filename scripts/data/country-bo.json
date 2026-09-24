@@ -67,12 +67,12 @@
   }
  },
  "by_location": {
-  "Inside the circles": {
+  "Inside the radius areas": {
    "spend": 76.07,
    "qualified": 366,
    "cost": 0.21
   },
-  "Beyond the circles": {
+  "Outside them": {
    "spend": 239.36,
    "qualified": 196,
    "cost": 1.22
