@@ -627,29 +627,32 @@ def buckets_page():
     return "\n".join(H)
 
 
+CELLS_SLICE = {x["place"]: x["slice_place"] for x in CELLS}
+
+
 # ------------------------------------------------------------------ assemble
-CELLS_SLICE = {}
-for x in CELLS:
-    CELLS_SLICE[x["place"]] = x["slice_place"]
+def assemble(secs, tabs, label):
+    stamp = datetime.date.today().strftime("%-d %b %Y")
+    page = (HEAD.replace("<title>Country Pages Pilot</title>", "<title>Recruitment Cost Pages</title>") + EXTRA_CSS +
+            f'<div class="wrap">\n  <div class="bar">\n    <span>{label} · not on the site · '
+            f'data as of {stamp}</span>\n    <div class="tabs" role="tablist">' +
+            "".join(f'\n      <button role="tab" id="t-{i}" aria-controls="{i}">{esc(n)}</button>' for i, n in tabs) +
+            "\n    </div>\n  </div>\n" + "\n".join(secs) + "\n</div>\n" + TPL[TPL.index("<script>"):])
+    dup = [i for i in set(re.findall(r' id="([^"]+)"', page)) if page.count(f' id="{i}"') > 1]
+    open(os.path.join(OUT, "review.html"), "w").write(page)
+    print(f"wrote out/review.html: {len(tabs)} tabs, {len(page) / 1024:.0f} KB, duplicate ids: {dup or 'none'}")
+    for cc, names in UNMATCHED.items():
+        print(f"  unmatched regions {cc}: {sorted(names)}")
 
-countries = sorted({x["country"] for x in CELLS},
-                   key=lambda c: -sum(x["spend_usd"] for x in CELLS if x["country"] == c))
-secs, tabs = [], []
-for cc in countries:
-    sid, name, html = country(cc)
-    secs.append(html)
-    tabs.append((sid, name))
-secs.append(who_page()); tabs.append(("who", "Who qualified"))
-secs.append(buckets_page()); tabs.append(("buckets", "Buckets"))
 
-stamp = datetime.date.today().strftime("%-d %b %Y")
-page = (HEAD.replace("<title>Country Pages Pilot</title>", "<title>Recruitment Cost Pages</title>") + EXTRA_CSS +
-        '<div class="wrap">\n  <div class="bar">\n    <span>Pilot v9 · generated from the cell table · not on the site · '
-        f'data as of {stamp}</span>\n    <div class="tabs" role="tablist">' +
-        "".join(f'\n      <button role="tab" id="t-{i}" aria-controls="{i}">{esc(n)}</button>' for i, n in tabs) +
-        "\n    </div>\n  </div>\n" + "\n".join(secs) + "\n</div>\n" + TPL[TPL.index("<script>"):])
-dup = [i for i in set(re.findall(r' id="([^"]+)"', page)) if page.count(f' id="{i}"') > 1]
-open(os.path.join(OUT, "review.html"), "w").write(page)
-print(f"wrote out/review.html: {len(tabs)} tabs, {len(page) / 1024:.0f} KB, duplicate ids: {dup or 'none'}")
-for cc, names in UNMATCHED.items():
-    print(f"  unmatched regions {cc}: {sorted(names)}")
+if __name__ == "__main__":
+    countries = sorted({x["country"] for x in CELLS},
+                       key=lambda c: -sum(x["spend_usd"] for x in CELLS if x["country"] == c))
+    secs, tabs = [], []
+    for cc in countries:
+        sid, name, html = country(cc)
+        secs.append(html)
+        tabs.append((sid, name))
+    secs.append(who_page()); tabs.append(("who", "Who qualified"))
+    secs.append(buckets_page()); tabs.append(("buckets", "Buckets"))
+    assemble(secs, tabs, "Pilot v9 · generated from the cell table")

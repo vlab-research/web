@@ -40,6 +40,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -85,6 +87,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "screened on citizen:AE",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -128,6 +132,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -171,6 +177,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -214,6 +222,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -257,7 +267,9 @@
   "notes": "Four-day pilot of the form used in BD-2023-11b, whole divisions, gender-targeted ad sets. The rule used is the one saved when its ads ran; a re-save 18 days after its ads stopped moved it to an early question and is ignored. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -300,7 +312,9 @@
   "notes": "Seven whole divisions x two creative versions. The 'Men'/'Women' ad sets were NOT gender-targeted on Meta (no genders key): they are creative versions, so ads.genders is 'all'. Airtime of 100 taka on a stitched payment form after the qualifying point. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -344,7 +358,9 @@
   "notes": "Three-day test, whole divisions, gender-targeted. The ad set labelled for Sylhet targeted Barisal and Sylhet together, so its place is the two divisions. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -388,7 +404,9 @@
   "notes": "One day of ads ($13). Same geometry as BD-2024-06a, different form version. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -432,7 +450,9 @@
   "notes": "Three sibling test runs feeding one form, 1 km radius areas. In two of them every ad set, including those labelled for women, was targeted at men on Meta; ads.genders records the targeting, and the flag marks the mismatch. Two runs share identical targeting and are pooled per ad set. A third run spent $0.91 in one ad set and brought nobody attributable; 17 people whose labels fit two differently-targeted ad sets live on the same day are left out. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -476,7 +496,9 @@
   "notes": "Four sibling ad runs feeding one form, each with its own set of 1 km radius areas in three divisions; women 25–45 and men 30–50 as separate ad sets. People are split between the runs by the creative in their ad metadata (each run had its own creatives). The per-run reports all carry the form-wide qualified count. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -540,7 +562,9 @@
   "notes": "Three whole divisions, no gender or age targeting, one creative, three days. Qualified (1,410) is above the last per-group report (1,007): the report ran on the last ad day and the recorded answers stop there, while 356 people who had started from the ads answered the qualifying question the next day (counted from the form responses). Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -583,7 +607,9 @@
   "notes": "A fresh cross-section recruited with ads: about 6% of its people had been in an earlier Bangladesh recruitment. Four whole divisions, no gender or age targeting. Qualified is 3 above the last report, which ran two days after the last ad day. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -627,7 +653,9 @@
   "notes": "Fresh sample with ads (7% had been in an earlier Bangladesh recruitment). 1 km radius areas, gender-targeted, no age targeting. Ran alongside BD-2024-12a/c/d/e, each with its own form; 15% of its people also started one of those, and are counted in each. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -671,7 +699,9 @@
   "notes": "Fresh sample with ads (5% had been in an earlier Bangladesh recruitment; 14% also started another December form). Same radius areas as BD-2024-12b. Gender-targeted, no age targeting. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -715,7 +745,9 @@
   "notes": "Fresh sample with ads (6% had been in an earlier Bangladesh recruitment; 12% also started another December form). Same radius areas as one run of BD-2024-09b. Gender-targeted, no age targeting. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -759,7 +791,9 @@
   "notes": "Fresh sample with ads (5% had been in an earlier Bangladesh recruitment; 14% also started another December form), one division only (47 radius areas of 1 km). Gender-targeted, no age targeting. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -806,6 +840,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -851,6 +887,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -894,6 +932,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -937,6 +977,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -980,6 +1022,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -1019,6 +1063,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -1082,6 +1128,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1129,6 +1177,8 @@
   "who_comparable": false,
   "who_not_comparable_because": "qualified means returning for a later wave",
   "bucket_who": "caregivers of children aged 5–12",
+  "tier": "specialised",
+  "tier_reason": "screened on child_task, completed_follow_up",
   "bucket_length": "unknown"
  },
  {
@@ -1170,6 +1220,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -1213,6 +1265,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1259,6 +1313,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of children aged 5–12",
+  "tier": "specialised",
+  "tier_reason": "screened on child_task",
   "bucket_length": "over 20 minutes"
  },
  {
@@ -1305,6 +1361,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of children aged 5–12",
+  "tier": "specialised",
+  "tier_reason": "screened on child_task",
   "bucket_length": "over 20 minutes"
  },
  {
@@ -1366,6 +1424,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -1409,6 +1469,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1452,6 +1514,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -1498,6 +1562,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -1560,6 +1626,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "unknown"
  },
  {
@@ -1603,6 +1671,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -1649,6 +1719,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1692,6 +1764,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1736,6 +1810,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1779,6 +1855,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1823,6 +1901,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1866,6 +1946,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -1909,6 +1991,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1953,6 +2037,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -1999,6 +2085,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -2043,6 +2131,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -2088,6 +2178,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -2134,6 +2226,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -2180,6 +2274,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -2234,6 +2330,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2277,6 +2375,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -2322,6 +2422,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "over 20 minutes"
  },
  {
@@ -2365,7 +2467,9 @@
   "notes": "Four sibling configurations fed one questionnaire. Three ad sets ($20) that put two distant states in one ad set are left out. Several ad sets ran to all genders although their quota group was labelled by gender; ads.genders is the Meta targeting. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -2407,6 +2511,8 @@
   "who_comparable": false,
   "who_not_comparable_because": "under 3% qualified: the qualifying question was not on everyone's path",
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2448,6 +2554,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2491,7 +2599,9 @@
   "notes": "qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -2536,7 +2646,9 @@
   "notes": "qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2581,7 +2693,9 @@
   "notes": "qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2626,7 +2740,9 @@
   "notes": "The same short questionnaire as NG-2024-10a, fielded again two days after it ended. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2671,7 +2787,9 @@
   "notes": "A midline round recruited as a fresh sample by ads in the same places. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2716,7 +2834,9 @@
   "notes": "A midline round recruited as a fresh sample by ads in the same places. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2761,7 +2881,9 @@
   "notes": "Two ad arms (A and B) were each tied to one side of the radius lines, so inside/outside is confounded with the arm. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2797,6 +2919,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2844,6 +2968,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -2887,7 +3013,9 @@
   "notes": "An endline recruited as a fresh sample by ads. Earlier respondents who came back are not counted (no ad metadata inside the window). Ad arms A and B were tied to sides of the radius lines, as in NG-2025-04. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -2934,7 +3062,9 @@
   "notes": "qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "over 20 minutes"
  },
  {
@@ -2978,6 +3108,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of children aged 0–14",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3020,6 +3152,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of children aged 0–14",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3063,6 +3197,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3107,7 +3243,9 @@
   "notes": "A second ₦800 was offered for a follow-up survey two weeks later. One ad set targeted a Meta place pinned 67 km from the town it named; it is left out. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3153,7 +3291,9 @@
   "notes": "Credit per questionnaire completed (up to ₦3,500 across the study) and a prize draw. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3201,6 +3341,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "people with a specific behaviour",
+  "tier": "specialised",
+  "tier_reason": "screened on behaviour:attended_event",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3246,7 +3388,9 @@
   "notes": "Credit per questionnaire and a prize draw (a phone and ₦25,000 of airtime). Three campaigns with different welcome flows fed one questionnaire. qualify_point: the median number of distinct questions the qualified people had answered when they gave the qualifying answer, of those they had answered 24 hours later (counted from their responses, not from the form, because forms branch). Impressions derived from Insights spend and CPM where Meta returned no impression count.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3290,6 +3434,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3336,6 +3482,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "over 20 minutes"
  },
  {
@@ -3414,6 +3562,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3456,6 +3606,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3500,7 +3652,9 @@
   "notes": "Five whole provinces/territories x gender (women 23–49, men 25–60). Two days of ads; the last per-group report was written early on the second day (it has $286.50 of $315.68 and 1,506 qualified); the recount (2,029) agrees with the recorded answers (2,035). Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3544,7 +3698,9 @@
   "notes": "Wave 1 of a two-wave panel; wave 2 re-contacted people without ads and is out. Seven sets of radius areas in one province (1 km in two cities, 4 km and 5 km elsewhere) x gender (women 23–49, men 25–60). Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM.",
   "who_comparable": true,
   "who_not_comparable_because": null,
-  "bucket_who": "caregivers of adolescents (9–17)",
+  "bucket_who": "caregivers of girls: adolescents (9–17)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3590,6 +3746,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3633,6 +3791,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3697,6 +3857,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3744,6 +3906,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3791,6 +3955,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "caregivers of young children (under 6)",
+  "tier": "common",
+  "tier_reason": "parents or caregivers, by the child's age",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3835,6 +4001,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "people in a specific occupation",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -3880,6 +4048,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "unknown"
  },
  {
@@ -3922,6 +4092,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "young adults (up to 35)",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -3985,6 +4157,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4049,6 +4223,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4094,6 +4270,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4136,6 +4314,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4181,6 +4361,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "screened on works_or_studies_in:California",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4226,6 +4408,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4269,6 +4453,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "ad versions in a second language and aimed at particular communities were added during the run, so the ads sought specific groups even though the targeting did not",
   "bucket_length": "10–20 minutes"
  },
  {
@@ -4305,6 +4491,8 @@
   "who_comparable": false,
   "who_not_comparable_because": "over 97% qualified: screened before the first message or outside the survey",
   "bucket_who": "young adults (up to 35)",
+  "tier": "specialised",
+  "tier_reason": "Meta interest or behaviour targeting chose who saw the ads",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4347,6 +4535,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "specialised",
+  "tier_reason": "the same ads as US-2025-01, aimed at particular communities by creative and language",
   "bucket_length": "under 10 minutes"
  },
  {
@@ -4390,6 +4580,8 @@
   "who_comparable": true,
   "who_not_comparable_because": null,
   "bucket_who": "any adult",
+  "tier": "general",
+  "tier_reason": null,
   "bucket_length": "under 10 minutes"
  }
 ]

@@ -1,0 +1,5 @@
+{
+ "_meta": "Hand overrides of the audience tier computed in scripts/pilot-maps/merge_cells.py (audience_tier). One entry per recruitment id: tier (general | common | specialised) and the reason. Neutral wording: no topics or client names.",
+ "US-2025-01": {"tier": "specialised", "reason": "ad versions in a second language and aimed at particular communities were added during the run, so the ads sought specific groups even though the targeting did not"},
+ "US-2025-08": {"tier": "specialised", "reason": "the same ads as US-2025-01, aimed at particular communities by creative and language"}
+}

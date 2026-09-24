@@ -453,31 +453,29 @@
    "median_share_qualified": 0.589
   },
   "caregivers of adolescents (9–17)": {
-   "spend": 81717.24,
-   "started": 105258,
-   "qualified": 30527,
-   "cost_per_start": 0.78,
-   "cost_per_qualified": 2.68,
-   "share_qualified": 0.29,
-   "recruitments": 28,
+   "spend": 684.94,
+   "started": 785,
+   "qualified": 515,
+   "cost_per_start": 0.87,
+   "cost_per_qualified": 1.33,
+   "share_qualified": 0.656,
+   "recruitments": 1,
    "countries": [
-    "BD",
-    "NG",
-    "PK"
+    "NG"
    ],
    "range_cost_per_start": [
-    0.06,
-    11.72
+    0.87,
+    0.87
    ],
    "range_cost_per_qualified": [
-    0.16,
-    45.29
+    1.33,
+    1.33
    ],
    "range_share_qualified": [
-    0.059,
+    0.656,
     0.656
    ],
-   "median_share_qualified": 0.326
+   "median_share_qualified": 0.656
   },
   "caregivers of children aged 0–14": {
    "spend": 2430.48,
@@ -528,6 +526,33 @@
     0.177
    ],
    "median_share_qualified": 0.167
+  },
+  "caregivers of girls: adolescents (9–17)": {
+   "spend": 81032.3,
+   "started": 104473,
+   "qualified": 30012,
+   "cost_per_start": 0.78,
+   "cost_per_qualified": 2.7,
+   "share_qualified": 0.287,
+   "recruitments": 27,
+   "countries": [
+    "BD",
+    "NG",
+    "PK"
+   ],
+   "range_cost_per_start": [
+    0.06,
+    11.72
+   ],
+   "range_cost_per_qualified": [
+    0.16,
+    45.29
+   ],
+   "range_share_qualified": [
+    0.059,
+    0.644
+   ],
+   "median_share_qualified": 0.325
   },
   "caregivers of young children (under 6)": {
    "spend": 35738.55,

@@ -154,7 +154,8 @@ def who_bucket(r, override=None):
         return "pregnant or recently gave birth"
     cg = [t for t in tags if t.startswith("caregiver:child_age:")]
     if cg:
-        return "caregivers of " + child_band(cg[0])
+        girls = "caregiver:child_gender:girl" in tags
+        return "caregivers of " + ("girls: " if girls else "") + child_band(cg[0])
     if "parent_any" in tags:
         return "parents and caregivers"
     ages = [t for t in tags if t.startswith("age:")]
@@ -188,9 +189,38 @@ def who_comparable(r):
     return True, None
 
 
+# ------------------------------------------------------------------ audience tier
+# general: broad ads, any adult or an age band or one gender, screened only on who-you-are basics.
+# common: a population researchers often seek and we have recruited repeatedly (parents by child's age).
+# specialised: anything narrower; it never sets a headline and is described in one general sentence.
+BASIC = ("age:", "lives_in:", "consent", "language:", "gave_phone", "has_phone", "has_whatsapp",
+         "attention_check", "gender:", "education:", "quota_group:education")
+OVERRIDES = {k: v for k, v in json.load(open(os.path.join(DATA, "tier-overrides.json"))).items() if not k.startswith("_")}
+REC_CELLS = collections.defaultdict(list)
+for x in cells:
+    REC_CELLS[x["rec"]].append(x)
+
+
+def audience_tier(r):
+    if r["rec"] in OVERRIDES:
+        return OVERRIDES[r["rec"]]["tier"], OVERRIDES[r["rec"]]["reason"]
+    cs = REC_CELLS.get(r["rec"], [])
+    sp = sum(x["spend_usd"] for x in cs) or 1
+    if sum(x["spend_usd"] for x in cs if x["ads"].get("interests")) / sp > 0.25:
+        return "specialised", "Meta interest or behaviour targeting chose who saw the ads"
+    tags = r.get("screen") or []
+    narrow = [t for t in tags if not t.startswith(BASIC) and not t.startswith(("caregiver:", "parent_any"))]
+    if narrow:
+        return "specialised", "screened on " + ", ".join(narrow)
+    if any(t.startswith(("caregiver:", "parent_any")) for t in tags):
+        return "common", "parents or caregivers, by the child's age"
+    return "general", None
+
+
 for x in cells:
     r = REC.get(x["rec"], {})
     x["slice_place"] = place_slice(x["place"])
+    x["tier"] = audience_tier(r)[0] if r else None
     x["slice_ads_gender"] = (x["ads"].get("genders") or "all")
     x["slice_ads_age"] = ads_age(x["ads"])
     x["slice_who"] = who_bucket(r, x.get("person_override")) if who_comparable(r)[0] else "not comparable"
@@ -200,6 +230,7 @@ for r in crit:
     if r.get("round") != "excluded":
         r["who_comparable"], r["who_not_comparable_because"] = who_comparable(r)
         r["bucket_who"] = who_bucket(r)
+        r["tier"], r["tier_reason"] = audience_tier(r)
         r["bucket_length"] = length_band(r.get("median_minutes_to_qualify"))
 
 
