@@ -121,6 +121,28 @@ Every study that fails goes in the data file under `excluded_for_review`, with i
 - Say "a state" only when the targeting was the whole state. If a stratum says "State:X" but
   targets radius areas, name the towns.
 
+## Voice: our recruiting record, not a client's study
+
+Nandan, 2026-09-24: *"I'd like it to be ambiguous sometimes as to whether it's one or many
+studies. Just to keep some level of sense of 'we're sharing data from recruiting' NOT 'we're
+sharing data from one client's study'."*
+
+- **The unit is a "recruitment"**: one round of ads filling one set of quotas. Never "study",
+  "project" or "client". Sibling studies that fed one survey are one recruitment; one study
+  run in phases may be two.
+- **Ledes speak for the country's record**: *"Recruiting survey respondents in Kenya cost
+  $1.00 to $5.95 per qualified respondent between 2024 and 2026, depending on who qualified."*
+  Where there is one recruitment, date it and describe its group (*"Recruiting adults with
+  children aged 9–17 in Sindh in August and September 2025 cost $1.46 each"*). Never *"One
+  Virtual Lab study …"*.
+- **Label by what drove the cost, never by topic.** Year, who qualified, where the ads ran,
+  survey length. Topics (HPV, cannabis, vaping, polio) and programme names identify clients
+  and stay off the page. Eligibility is described as eligibility (*"caring for a girl aged
+  9–17"*), not as the research question.
+- **Hard limit: ambiguity, never falsehood.** Do not say or imply several recruitments when
+  there was one. Do not pool figures measured under different rules. Every number still traces
+  to its recruitment in the data file.
+
 ## Page structure
 
 Copy it from `scripts/pilot-maps/review-page.tpl.html`, which is the source of truth for
