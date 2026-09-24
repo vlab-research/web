@@ -1,0 +1,239 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT v2 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+  }
+ },
+ "country": "ID",
+ "study": {
+  "slug": "sigap-media-first-evaluation",
+  "fielded": "26 Apr \u2013 9 May 2025",
+  "ad_days": 14,
+  "started_survey": 14584,
+  "qualified": 4308,
+  "spend": 4852.84,
+  "cost": 1.13,
+  "incentive_usd": 1.0,
+  "channel": "Messenger",
+  "quota_rule": "answered through to the phone-number question",
+  "quotas": "Location (3 provinces \u00d7 urban/rural) \u00d7 Gender \u00d7 Age (21\u201329, 30\u201344)",
+  "target_max_sample": 5500
+ },
+ "by_location": {
+  "West Java Urban": {
+   "spend": 1318.76,
+   "qualified": 784,
+   "cost": 1.68
+  },
+  "West Java Rural": {
+   "spend": 300.38,
+   "qualified": 1303,
+   "cost": 0.23
+  },
+  "Central Java Urban": {
+   "spend": 760.06,
+   "qualified": 956,
+   "cost": 0.8
+  },
+  "Central Java Rural": {
+   "spend": 872.89,
+   "qualified": 933,
+   "cost": 0.94
+  },
+  "South Kalimantan Urban": {
+   "spend": 891.05,
+   "qualified": 244,
+   "cost": 3.65
+  },
+  "South Kalimantan Rural": {
+   "spend": 709.7,
+   "qualified": 88,
+   "cost": 8.06
+  }
+ },
+ "by_age": {
+  "21\u201329": {
+   "spend": 1815.27,
+   "qualified": 2752,
+   "cost": 0.66
+  },
+  "30\u201344": {
+   "spend": 3037.57,
+   "qualified": 1556,
+   "cost": 1.95
+  }
+ },
+ "by_gender": {
+  "Women": {
+   "spend": 2443.69,
+   "qualified": 2107,
+   "cost": 1.16
+  },
+  "Men": {
+   "spend": 2409.15,
+   "qualified": 2201,
+   "cost": 1.09
+  }
+ },
+ "strata": [
+  {
+   "id": "Location:West Java Urban,Gender:Women,Age:21",
+   "current_participants": 270,
+   "lifetime_spent": 221.89,
+   "current_price_per_participant": 1.89
+  },
+  {
+   "id": "Location:West Java Urban,Gender:Women,Age:30",
+   "current_participants": 148,
+   "lifetime_spent": 334.62999999999994,
+   "current_price_per_participant": 3.64
+  },
+  {
+   "id": "Location:West Java Urban,Gender:Men,Age:21",
+   "current_participants": 254,
+   "lifetime_spent": 273.94,
+   "current_price_per_participant": 2.1
+  },
+  {
+   "id": "Location:West Java Urban,Gender:Men,Age:30",
+   "current_participants": 112,
+   "lifetime_spent": 488.29999999999995,
+   "current_price_per_participant": 6.26
+  },
+  {
+   "id": "Location:West Java Rural,Gender:Women,Age:21",
+   "current_participants": 393,
+   "lifetime_spent": 33.00000000000001,
+   "current_price_per_participant": 1.08
+  },
+  {
+   "id": "Location:West Java Rural,Gender:Women,Age:30",
+   "current_participants": 280,
+   "lifetime_spent": 84.80000000000001,
+   "current_price_per_participant": 1.34
+  },
+  {
+   "id": "Location:West Java Rural,Gender:Men,Age:21",
+   "current_participants": 398,
+   "lifetime_spent": 45.03,
+   "current_price_per_participant": 1.09
+  },
+  {
+   "id": "Location:West Java Rural,Gender:Men,Age:30",
+   "current_participants": 232,
+   "lifetime_spent": 137.54999999999998,
+   "current_price_per_participant": 1.65
+  },
+  {
+   "id": "Location:Central Java Urban,Gender:Women,Age:21",
+   "current_participants": 274,
+   "lifetime_spent": 170.31,
+   "current_price_per_participant": 1.76
+  },
+  {
+   "id": "Location:Central Java Urban,Gender:Women,Age:30",
+   "current_participants": 150,
+   "lifetime_spent": 263.18,
+   "current_price_per_participant": 3.22
+  },
+  {
+   "id": "Location:Central Java Urban,Gender:Men,Age:21",
+   "current_participants": 322,
+   "lifetime_spent": 137.53,
+   "current_price_per_participant": 1.41
+  },
+  {
+   "id": "Location:Central Java Urban,Gender:Men,Age:30",
+   "current_participants": 210,
+   "lifetime_spent": 189.04,
+   "current_price_per_participant": 1.92
+  },
+  {
+   "id": "Location:Central Java Rural,Gender:Women,Age:21",
+   "current_participants": 309,
+   "lifetime_spent": 125.19,
+   "current_price_per_participant": 1.48
+  },
+  {
+   "id": "Location:Central Java Rural,Gender:Women,Age:30",
+   "current_participants": 130,
+   "lifetime_spent": 334.56000000000006,
+   "current_price_per_participant": 4.27
+  },
+  {
+   "id": "Location:Central Java Rural,Gender:Men,Age:21",
+   "current_participants": 304,
+   "lifetime_spent": 170.1,
+   "current_price_per_participant": 1.6
+  },
+  {
+   "id": "Location:Central Java Rural,Gender:Men,Age:30",
+   "current_participants": 190,
+   "lifetime_spent": 243.04,
+   "current_price_per_participant": 2.39
+  },
+  {
+   "id": "Location:South Kalimantan Urban,Gender:Women,Age:21",
+   "current_participants": 80,
+   "lifetime_spent": 157.43,
+   "current_price_per_participant": 4.04
+  },
+  {
+   "id": "Location:South Kalimantan Urban,Gender:Women,Age:30",
+   "current_participants": 30,
+   "lifetime_spent": 358.92,
+   "current_price_per_participant": 17.51
+  },
+  {
+   "id": "Location:South Kalimantan Urban,Gender:Men,Age:21",
+   "current_participants": 88,
+   "lifetime_spent": 162.91,
+   "current_price_per_participant": 3.56
+  },
+  {
+   "id": "Location:South Kalimantan Urban,Gender:Men,Age:30",
+   "current_participants": 46,
+   "lifetime_spent": 211.79000000000002,
+   "current_price_per_participant": 8.15
+  },
+  {
+   "id": "Location:South Kalimantan Rural,Gender:Women,Age:21",
+   "current_participants": 33,
+   "lifetime_spent": 139.82999999999998,
+   "current_price_per_participant": 5.49
+  },
+  {
+   "id": "Location:South Kalimantan Rural,Gender:Women,Age:30",
+   "current_participants": 10,
+   "lifetime_spent": 219.95000000000002,
+   "current_price_per_participant": 32.31
+  },
+  {
+   "id": "Location:South Kalimantan Rural,Gender:Men,Age:21",
+   "current_participants": 27,
+   "lifetime_spent": 178.11,
+   "current_price_per_participant": 10.05
+  },
+  {
+   "id": "Location:South Kalimantan Rural,Gender:Men,Age:30",
+   "current_participants": 18,
+   "lifetime_spent": 171.81,
+   "current_price_per_participant": 13.68
+  }
+ ],
+ "checks": [
+  "per-group spend sums to $4,852.84, exactly Meta's reported spend",
+  "3 test entries before ads started (13\u201321 Apr); every other respondent arrived during the 14 ad days"
+ ]
+}

@@ -1,375 +1,196 @@
 {
  "_meta": {
-  "generated": "2026-09-23",
-  "status": "PILOT - D-032. Not registered in CLAIMS.md, not rendered on the site. For review.",
-  "purpose": "Country page pilot. Computed read-only against production CockroachDB (vprod, database vlab). Advertising spend only - never a price.",
+  "generated": "2026-09-24",
+  "status": "PILOT v2 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once"
+  ],
   "definitions": {
-   "respondent": "newly recruited respondent: a person whose first appearance in any study is in this one, and in no sibling study at the same moment (ad-cost.json's rule)",
-   "ad_spend": "Meta-reported spend, max per campaign/stratum/day, summed; campaigns shared by more than one study dropped",
-   "group_cost": "per stratum: lifetime ad spend / respondents counted toward that stratum's quota, from the latest FACEBOOK_ADOPT report. Counts fewer people than the study total - use for comparison within a study, not as totals"
+   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
   },
   "queries": "scripts/data/country-queries.sql"
  },
  "country": "NG",
- "as_of": "2026-09-23",
- "all_respondents": {
+ "all_people_surveyed": {
   "unique_people": 55798,
   "first": "2023-08-12",
   "last": "2026-09-10",
   "studies": 49,
-  "by_first_year": {
-   "2023": 7508,
-   "2024": 9344,
-   "2025": 15500,
-   "2026": 23446
-  },
-  "note": "Current platform only (2023-); older-platform Nigeria campaigns not included. Unique people across every Nigeria study, tests and naira-account studies included - they are real respondents."
+  "note": "Anyone who answered in any Nigeria study on the current platform"
  },
- "cost_filters": [
-  "single-country Nigeria study on the current platform",
-  "at least 200 newly recruited respondents, and at least 80% of the study's first-appearance respondents uniquely its own (ad-cost.json)",
-  "ad account spends in USD: account ..7286 excluded, its CPMs of 526-1,756 are naira",
-  "2023 studies drop out: their respondents first appear in several studies at once (umbrella groups)"
- ],
- "cost_per_respondent": {
-  "studies": 15,
-  "min": 0.04,
-  "p25": 0.66,
-  "median": 1.11,
-  "p75": 3.93,
-  "max": 8.89,
-  "new_respondents": 21060,
-  "ad_spend_usd": 64393.19
+ "cost_per_qualified_respondent": {
+  "recruitments": 6,
+  "min": 2.26,
+  "median": 6.49,
+  "max": 45.7
  },
- "studies": [
+ "recruitments": [
   {
-   "study": "nigeria-hpv-test-2024",
-   "fielded_from": "2024-09-12",
-   "fielded_to": "2024-09-15",
-   "ad_days": 4,
-   "new_respondents": 1149,
-   "ad_spend_usd": 830.06,
-   "ad_cost_per_respondent": 0.72,
-   "stratified_by": [
-    "Age",
-    "State"
-   ]
-  },
-  {
-   "study": "2-short-b-hpv-baseline-nigeria",
-   "fielded_from": "2024-10-26",
-   "fielded_to": "2024-10-27",
-   "ad_days": 2,
-   "new_respondents": 465,
-   "ad_spend_usd": 694.25,
-   "ad_cost_per_respondent": 1.49,
-   "stratified_by": [
-    "Gender",
-    "State"
-   ]
-  },
-  {
-   "study": "group-a-hpv-baseline-short-nigeria",
-   "fielded_from": "2024-10-28",
-   "fielded_to": "2024-11-02",
-   "ad_days": 6,
-   "new_respondents": 2814,
-   "ad_spend_usd": 3030.35,
-   "ad_cost_per_respondent": 1.08,
-   "stratified_by": [
-    "Gender",
-    "State"
-   ]
-  },
-  {
-   "study": "group-b-hpv-baseline-short-nigeria",
-   "fielded_from": "2024-10-28",
-   "fielded_to": "2024-11-02",
-   "ad_days": 6,
-   "new_respondents": 1073,
-   "ad_spend_usd": 3870.02,
-   "ad_cost_per_respondent": 3.61,
-   "stratified_by": [
-    "Gender",
-    "State"
-   ]
-  },
-  {
-   "study": "nigeria-hpv-long-midline-group-a",
-   "fielded_from": "2025-02-07",
-   "fielded_to": "2025-02-11",
-   "ad_days": 5,
-   "new_respondents": 593,
-   "ad_spend_usd": 1380.08,
-   "ad_cost_per_respondent": 2.33,
-   "stratified_by": [
-    "Gender",
-    "State"
-   ]
-  },
-  {
-   "study": "vital-hpv-vaccine-sign-up",
-   "fielded_from": "2025-05-27",
-   "fielded_to": "2025-06-18",
+   "label": "Six states, whole-state targeting",
+   "fielded": "12 Aug \u2013 12 Sep 2023",
+   "studies": [
+    "nigeria-hpv-config-8-1",
+    "nigeria-final-hpv-august-23"
+   ],
    "ad_days": 23,
-   "new_respondents": 1303,
-   "ad_spend_usd": 782.95,
-   "ad_cost_per_respondent": 0.6,
-   "stratified_by": [
-    "State"
-   ]
+   "spend": 2955.42,
+   "qualified": 1180,
+   "quotas": "Gender \u00d7 State (6 states)",
+   "note": "Two consecutive ad runs for one survey",
+   "cost": 2.5
   },
   {
-   "study": "llm-bias-nigeria-pilot",
-   "fielded_from": "2025-06-09",
-   "fielded_to": "2025-07-09",
-   "ad_days": 16,
-   "new_respondents": 436,
-   "ad_spend_usd": 142.51,
-   "ad_cost_per_respondent": 0.33,
-   "stratified_by": [
-    "Gender",
-    "Region",
-    "Language"
-   ]
+   "label": "Abuja, Adamawa, Nasarawa: circles around towns",
+   "fielded": "12\u201325 Oct 2024",
+   "studies": [
+    "short-a-hpv-nigeria",
+    "short-b-hpv-nigeria"
+   ],
+   "ad_days": 13,
+   "spend": 10019.25,
+   "qualified": 1009,
+   "quotas": "Gender \u00d7 State",
+   "note": "Two concurrent ad runs for one survey; respondents counted once",
+   "cost": 9.93
   },
   {
-   "study": "nigeria-mr-campaign",
-   "fielded_from": "2026-01-16",
-   "fielded_to": "2026-01-19",
-   "ad_days": 4,
-   "new_respondents": 2183,
-   "ad_spend_usd": 2412.45,
-   "ad_cost_per_respondent": 1.11,
-   "stratified_by": [
-    "Age",
-    "Region"
-   ]
+   "label": "Abuja, Adamawa, Nasarawa: mixed state and area targeting",
+   "fielded": "9\u201318 Apr 2025",
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline"
+   ],
+   "ad_days": 10,
+   "spend": 4741.64,
+   "qualified": 2096,
+   "quotas": "Gender \u00d7 State \u00d7 area (A/B)",
+   "cost": 2.26
   },
   {
-   "study": "bauchi-creative-test",
-   "fielded_from": "2026-02-21",
-   "fielded_to": "2026-02-25",
-   "ad_days": 5,
-   "new_respondents": 671,
-   "ad_spend_usd": 684.94,
-   "ad_cost_per_respondent": 1.02,
-   "stratified_by": [
-    "State"
-   ]
+   "label": "Abuja, Adamawa, Nasarawa",
+   "fielded": "27 May \u2013 18 Jun 2025",
+   "studies": [
+    "vital-hpv-vaccine-sign-up"
+   ],
+   "ad_days": 23,
+   "spend": 782.95,
+   "qualified": 257,
+   "quotas": "State",
+   "cost": 3.05
   },
   {
-   "study": "bauchi-state-hpv-pilot",
-   "fielded_from": "2026-04-06",
-   "fielded_to": "2026-04-17",
+   "label": "Bauchi State: six local government areas",
+   "fielded": "6\u201317 Apr 2026",
+   "studies": [
+    "bauchi-state-hpv-pilot"
+   ],
    "ad_days": 12,
-   "new_respondents": 545,
-   "ad_spend_usd": 3914.73,
-   "ad_cost_per_respondent": 7.18,
-   "stratified_by": [
-    "Age",
-    "Local government area"
-   ]
+   "spend": 3914.73,
+   "qualified": 329,
+   "quotas": "Age \u00d7 local government area",
+   "cost": 11.9
   },
   {
-   "study": "nigeria-study",
-   "fielded_from": "2026-04-13",
-   "fielded_to": "2026-05-15",
-   "ad_days": 11,
-   "new_respondents": 1808,
-   "ad_spend_usd": 7699.69,
-   "ad_cost_per_respondent": 4.26,
-   "stratified_by": [
-    "Gender",
-    "Region"
-   ]
-  },
-  {
-   "study": "bauchi-state-hpv-mnch-week",
-   "fielded_from": "2026-05-24",
-   "fielded_to": "2026-06-20",
+   "label": "Bauchi State, whole state",
+   "fielded": "24 May \u2013 20 Jun 2026",
+   "studies": [
+    "bauchi-state-hpv-mnch-week"
+   ],
    "ad_days": 28,
-   "new_respondents": 3773,
-   "ad_spend_usd": 33545.25,
-   "ad_cost_per_respondent": 8.89,
-   "stratified_by": [
-    "Age",
-    "State"
-   ]
-  },
-  {
-   "study": "owis-nigeria-study",
-   "fielded_from": "2026-06-17",
-   "fielded_to": "2026-08-07",
-   "ad_days": 35,
-   "new_respondents": 1127,
-   "ad_spend_usd": 5021.12,
-   "ad_cost_per_respondent": 4.46,
-   "stratified_by": [
-    "Gender",
-    "Region"
-   ]
-  },
-  {
-   "study": "mentality-pilot",
-   "fielded_from": "2026-07-15",
-   "fielded_to": "2026-07-16",
-   "ad_days": 2,
-   "new_respondents": 578,
-   "ad_spend_usd": 20.27,
-   "ad_cost_per_respondent": 0.04,
-   "stratified_by": [
-    "Gender"
-   ]
-  },
-  {
-   "study": "ecd-diagnostic",
-   "fielded_from": "2026-08-11",
-   "fielded_to": "2026-08-21",
-   "ad_days": 11,
-   "new_respondents": 2542,
-   "ad_spend_usd": 364.52,
-   "ad_cost_per_respondent": 0.14,
-   "stratified_by": [
-    "Gender",
-    "Region"
-   ]
+   "spend": 33545.25,
+   "qualified": 734,
+   "quotas": "Age \u00d7 State",
+   "note": "3,773 people started the survey; 734 qualified",
+   "cost": 45.7
   }
  ],
  "by_state": {
-  "studies": [
-   "nigeria-hpv-test-2024",
-   "2-short-b-hpv-baseline-nigeria",
-   "group-a-hpv-baseline-short-nigeria",
-   "group-b-hpv-baseline-short-nigeria",
-   "nigeria-hpv-long-midline-group-a",
-   "vital-hpv-vaccine-sign-up"
-  ],
-  "pooled": {
+  "2023_whole_states": {
+   "Lagos": {
+    "spend": 226.62,
+    "qualified": 433,
+    "cost": 0.52
+   },
+   "Rivers": {
+    "spend": 190.16,
+    "qualified": 260,
+    "cost": 0.73
+   },
+   "Bauchi": {
+    "spend": 321.23,
+    "qualified": 176,
+    "cost": 1.83
+   },
+   "Niger": {
+    "spend": 452.2,
+    "qualified": 139,
+    "cost": 3.25
+   },
+   "Sokoto": {
+    "spend": 709.94,
+    "qualified": 98,
+    "cost": 7.24
+   },
+   "Anambra": {
+    "spend": 1044.83,
+    "qualified": 74,
+    "cost": 14.12
+   }
+  },
+  "2024_town_circles": {
    "Abuja": {
-    "spend": 881.2,
-    "respondents": 3136,
-    "cost": 0.28
+    "spend": 992.5,
+    "qualified": 812,
+    "cost": 1.22
    },
    "Adamawa": {
-    "spend": 4866.67,
-    "respondents": 158,
-    "cost": 30.8
+    "spend": 3488.06,
+    "qualified": 68,
+    "cost": 51.3
    },
    "Nasarawa": {
-    "spend": 4839.84,
-    "respondents": 388,
-    "cost": 12.47
+    "spend": 5536.94,
+    "qualified": 129,
+    "cost": 42.92
    }
-  },
-  "per_study": {
-   "nigeria-hpv-test-2024": {
-    "Abuja": {
-     "spend": 123.23,
-     "respondents": 114,
-     "cost": 1.08
-    },
-    "Adamawa": {
-     "spend": 309.56,
-     "respondents": 20,
-     "cost": 15.48
-    },
-    "Nasarawa": {
-     "spend": 397.27,
-     "respondents": 16,
-     "cost": 24.83
-    }
-   },
-   "2-short-b-hpv-baseline-nigeria": {
-    "Abuja": {
-     "spend": 97.84,
-     "respondents": 167,
-     "cost": 0.59
-    },
-    "Adamawa": {
-     "spend": 251.68,
-     "respondents": 12,
-     "cost": 20.97
-    },
-    "Nasarawa": {
-     "spend": 344.73,
-     "respondents": 41,
-     "cost": 8.41
-    }
-   },
-   "group-a-hpv-baseline-short-nigeria": {
-    "Abuja": {
-     "spend": 195.18,
-     "respondents": 2017,
-     "cost": 0.1
-    },
-    "Adamawa": {
-     "spend": 1404.79,
-     "respondents": 33,
-     "cost": 42.57
-    },
-    "Nasarawa": {
-     "spend": 1430.38,
-     "respondents": 133,
-     "cost": 10.75
-    }
-   },
-   "group-b-hpv-baseline-short-nigeria": {
-    "Abuja": {
-     "spend": 312.99,
-     "respondents": 487,
-     "cost": 0.64
-    },
-    "Adamawa": {
-     "spend": 1547.95,
-     "respondents": 41,
-     "cost": 37.75
-    },
-    "Nasarawa": {
-     "spend": 2009.08,
-     "respondents": 87,
-     "cost": 23.09
-    }
-   },
-   "nigeria-hpv-long-midline-group-a": {
-    "Abuja": {
-     "spend": 24.85,
-     "respondents": 206,
-     "cost": 0.12
-    },
-    "Adamawa": {
-     "spend": 939.74,
-     "respondents": 13,
-     "cost": 72.29
-    },
-    "Nasarawa": {
-     "spend": 415.49,
-     "respondents": 38,
-     "cost": 10.93
-    }
-   },
-   "vital-hpv-vaccine-sign-up": {
-    "Abuja": {
-     "spend": 127.11,
-     "respondents": 145,
-     "cost": 0.88
-    },
-    "Adamawa": {
-     "spend": 412.95,
-     "respondents": 39,
-     "cost": 10.59
-    },
-    "Nasarawa": {
-     "spend": 242.89,
-     "respondents": 73,
-     "cost": 3.33
-    }
-   }
-  },
-  "finding": "Abuja was the cheapest of the three states in all six studies"
+  }
  },
- "flags": [
-  "mentality-pilot: $20 of ads for 578 respondents - likely recruited mostly by other means; check before publishing $0.04",
-  "bauchi-state-hpv-mnch-week and bauchi-state-hpv-pilot target one state and local government areas - the expensive end is geography, not the country"
- ]
+ "excluded_for_review": {
+  "under_7_ad_days": [
+   "2-short-b-hpv-baseline-nigeria (2)",
+   "bauchi-creative-test (5)",
+   "group-a/group-b-hpv-baseline-short-nigeria (6)",
+   "nigeria-hpv-test-2024 (4)",
+   "nigeria-mr-campaign (4)",
+   "mentality-pilot (2)"
+  ],
+  "follow_up_waves": [
+   "all *-midline-*",
+   "vaxsocial-campaign-2-endline"
+  ],
+  "under_500_or_200": [
+   "ecd-diagnostic ($365)",
+   "llm-bias-nigeria-pilot ($143)",
+   "dkt-study-nigeria ($276)",
+   "nigeria-study (170 qualified)",
+   "nigeria_hpv_northern_women_addition (132 qualified)"
+  ],
+  "report_does_not_reconcile": [
+   "owis-nigeria-study (report $656 of $5,021)"
+  ],
+  "unclear_what_happened": [
+   "hpv-nigeria-pilot: shares its 1,300 respondents with four no-spend sibling studies",
+   "hpv-nigeria-long-b: shares respondents with nigeria-hpv-long, which has no spend"
+  ],
+  "naira_account": [
+   "cohort-2-pilot*",
+   "fly_test",
+   "test"
+  ]
+ }
 }

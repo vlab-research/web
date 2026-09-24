@@ -1,0 +1,5 @@
+*.geojson
+geonames/
+out/
+png/
+venv/

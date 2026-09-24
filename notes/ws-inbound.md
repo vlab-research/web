@@ -227,6 +227,13 @@ there."*
 4. **Review together**, then decide: which template(s), which countries, whether the
    handbook comes next, whether `/data/` ships with them.
 
+**v2, 2026-09-24, after Nandan's review of v1.** *"Only show clean data that we're comfortable with and that we understand exactly what happened"* — and the maps are *"the main value we should try to add"*. Four changes:
+
+- **Cost is now per *qualified* respondent**: ad spend ÷ the report's `current_participants`, meaning people in a quota group who completed screening. The old definition, spend ÷ people newly recruited, counted people a study screened out; for `nigeria-study` it gave $4.26 where the qualified cost is $45. The per-group costs and the totals now use the same denominator.
+- **Six clean-data rules** apply, listed in `country-ng.json` `_meta.rules`: a USD account; report spend that reconciles with Insights; at least 7 ad days; at least $500 and 200 qualified; recruitment waves only; siblings combined. Nigeria keeps 8 of 49 studies, as 6 recruitments.
+- **Targeting maps**: `scripts/pilot-maps/`. **The 2024 Nigeria "State:" strata are not states.** They are 130 circles of 2–4 km around Abuja, Keffi, Lafia and Yola–Jimeta. **The Bauchi "LGA" strata are points with a radius**, and the Kirfi pin sits near Bauchi city, 67 km from Kirfi.
+- **Indonesia added** (`country-id.json`): one study, the cleanest data of the three, with report spend equal to Insights to the cent. Rural West Java cost $0.23 per qualified respondent and urban West Java $1.68.
+
 **Not in the pilot:** the estimator, the handbook, `/data/`, llms.txt, the older-platform
 currency work (Nigeria's older campaigns can be left out of cost and kept in counts).
 
