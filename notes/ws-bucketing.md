@@ -4,7 +4,22 @@ The next step after the country-page pilot (D-032; `ws-inbound.md` §7, v1–v7;
 `country-recipe.md`). **Read this first to pick the work up.** Nothing here is on the site or
 pushed. `master` is ahead of `origin` by the local commits of 2026-09-23 and 2026-09-24.
 
-## Status, 2026-09-24 late: v10, three page patterns (read this first)
+## Status, 2026-09-24 night: v11 (read this first)
+
+Nandan on v10: **no dates on the pages** (they identify studies and imply a change over time we have
+no evidence for); compare places all together. **The Kenya small-run/full-run story was withdrawn**:
+those were different studies, and a test-vs-full claim needs better data (US, Nigeria). He liked the
+multiples, **as an addition** to dollar maps of cost per qualified respondent (the v8 Indonesia and
+Nigeria-states maps).
+- **Place index** (`patterns.py` `place_index`): log cost per start = recruitment + place, weighted
+  by starts, over non-specialised recruitments that ran 2+ solid places; recruitments are linked only
+  when they share 2+ places (a single shared place carried Lagos's swing into a spurious 98×).
+- **Dollars** per qualified and per start come from the same recruitments as the multiple, and are
+  shown only when every place ran in every one of them; otherwise the multiple alone, with its map.
+- Maps: dollar map first, multiples map on the place pattern; no map for fewer than 4 places or for
+  overlapping places; groups of regions are shaded, not labelled region by region.
+
+## Status, 2026-09-24 late: v10, three page patterns
 
 Nandan, after v9: *"avoid data that is overly specific and focus on the more General data wherever
 possible, even if … leaving some studies out"* (Bauchi was mostly parents of daughters; Minnesota's
