@@ -217,6 +217,10 @@ there."*
 1. **Clean and query.** One reproducible query per country page section, with the 5.3
    exclusions written into it, saved into `scripts/data/` beside the existing figure data.
    Output: `scripts/data/country-ng.json`, `country-bo.json`.
+   **Done 2026-09-23** — both files and `scripts/data/country-queries.sql` written; reviewed as a
+   standalone mock-up (an Artifact), not yet built in Eleventy. Currency is tested per ad account by
+   CPM (Nigeria CPMs are $0.20–3; naira accounts show 500+). Each file's `flags` field lists what to
+   check before publishing.
 2. **Register.** `CLAIMS.md` rows for every figure the two pages state.
 3. **Build both pages locally** at `/countries/nigeria/` and `/countries/bolivia/`, not
    linked, not in the sitemap. **Not deployed until reviewed** — `master` deploys production.

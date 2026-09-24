@@ -1,0 +1,112 @@
+{
+ "_meta": {
+  "generated": "2026-09-23",
+  "status": "PILOT - D-032. Not registered in CLAIMS.md, not rendered on the site. For review.",
+  "purpose": "Country page pilot. Computed read-only against production CockroachDB (vprod, database vlab). Advertising spend only - never a price.",
+  "definitions": {
+   "respondent": "newly recruited respondent: a person whose first appearance in any study is in this one, and in no sibling study at the same moment (ad-cost.json's rule)",
+   "ad_spend": "Meta-reported spend, max per campaign/stratum/day, summed; campaigns shared by more than one study dropped",
+   "group_cost": "per stratum: lifetime ad spend / respondents counted toward that stratum's quota, from the latest FACEBOOK_ADOPT report. Counts fewer people than the study total - use for comparison within a study, not as totals"
+  },
+  "queries": "scripts/data/country-queries.sql"
+ },
+ "country": "BO",
+ "as_of": "2026-09-23",
+ "status": "STILL FIELDING - recruitment runs to about 2026-09-29",
+ "study": {
+  "design": "one study in two arms (lac-healthy-diets-bolivia, lac-healthy-diets-bolivia-channel), counted as one: 310 people are in both",
+  "unique_respondents": 774,
+  "first": "2026-09-01",
+  "last": "2026-09-24",
+  "ad_spend_usd": 324.04,
+  "ad_cost_per_respondent": 0.42,
+  "ad_days": {
+   "arm_1": "2026-09-05..09",
+   "arm_2": "2026-09-09..24"
+  },
+  "incentive_per_respondent_usd": {
+   "arm_1": 3.0,
+   "arm_2": 1.35
+  },
+  "stratified_by": [
+   "Gender",
+   "Location (urban/rural)"
+  ],
+  "channel": "Messenger (arm 2)"
+ },
+ "by_group": {
+  "pooled": {
+   "Men \u00b7 Rural": {
+    "spend": 70.98,
+    "respondents": 106,
+    "cost": 0.67
+   },
+   "Men \u00b7 Urban": {
+    "spend": 14.13,
+    "respondents": 203,
+    "cost": 0.07
+   },
+   "Women \u00b7 Rural": {
+    "spend": 88.7,
+    "respondents": 80,
+    "cost": 1.11
+   },
+   "Women \u00b7 Urban": {
+    "spend": 32.02,
+    "respondents": 140,
+    "cost": 0.23
+   }
+  },
+  "per_arm": {
+   "lac-healthy-diets-bolivia": {
+    "Men \u00b7 Rural": {
+     "spend": 13.8,
+     "respondents": 2,
+     "cost": 6.9
+    },
+    "Men \u00b7 Urban": {
+     "spend": 5.07,
+     "respondents": 4,
+     "cost": 1.27
+    },
+    "Women \u00b7 Rural": {
+     "spend": 15.09,
+     "respondents": 3,
+     "cost": 5.03
+    },
+    "Women \u00b7 Urban": {
+     "spend": 8.06,
+     "respondents": 4,
+     "cost": 2.02
+    }
+   },
+   "lac-healthy-diets-bolivia-channel": {
+    "Men \u00b7 Rural": {
+     "spend": 57.18,
+     "respondents": 104,
+     "cost": 0.55
+    },
+    "Men \u00b7 Urban": {
+     "spend": 9.06,
+     "respondents": 199,
+     "cost": 0.05
+    },
+    "Women \u00b7 Rural": {
+     "spend": 73.61,
+     "respondents": 77,
+     "cost": 0.96
+    },
+    "Women \u00b7 Urban": {
+     "spend": 23.96,
+     "respondents": 136,
+     "cost": 0.18
+    }
+   }
+  },
+  "report_dates": {
+   "lac-healthy-diets-bolivia": "2026-09-10",
+   "lac-healthy-diets-bolivia-channel": "2026-09-23"
+  },
+  "note": "529 of 774 respondents are counted toward a group; group spend totals $205.83 of $324.04 because arm 1's report is from 2026-09-10"
+ }
+}
