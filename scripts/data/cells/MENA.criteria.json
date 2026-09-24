@@ -1,0 +1,478 @@
+[
+ {
+  "rec": "AE-2025-10",
+  "country": "AE",
+  "first": "2025-10-06",
+  "last": "2025-10-10",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99"
+  ],
+  "who_qualified": "aged 30 and over; reached the last survey question",
+  "qualify_rule": "answered the last survey question (before the payment step)",
+  "qualify_point": {
+   "question": 44,
+   "of": 45
+  },
+  "median_minutes_to_qualify": 16.44,
+  "channel": "messenger",
+  "languages": [
+   "ar"
+  ],
+  "incentive": {
+   "amount": 20,
+   "currency": "AED",
+   "form": "gift_card"
+  },
+  "started": 115,
+  "qualified": 66,
+  "notes": "Short diagnostic run in October 2025, before the main recruitment. Three places: two 25-mile (40 km) radius areas and the rest of the country outside them. Separate ad account, also USD (it runs US studies). Consent text promised a $5 gift card; the payment step sent AED 20, raised to AED 30 from 9 Oct. A citizenship question was asked but did not end the survey. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "SA-2025-10",
+  "country": "SA",
+  "first": "2025-10-28",
+  "last": "2025-11-02",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99"
+  ],
+  "who_qualified": "aged 30 and over; reached the second-to-last survey question",
+  "qualify_rule": "answered the second-to-last survey question (before the payment step)",
+  "qualify_point": {
+   "question": 45,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 15.39,
+  "channel": "messenger",
+  "languages": [
+   "ar"
+  ],
+  "incentive": {
+   "amount": 20,
+   "currency": "SAR",
+   "form": "gift_card"
+  },
+  "started": 59,
+  "qualified": 37,
+  "notes": "Pilot, late October 2025. Meta city targets with no radius (Meta's own city area). The consent text promised a $5 gift card; the payment step sent SAR 20. The pilot form's city question listed the wrong country's cities; it did not end the survey, so qualification is unaffected. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "SA-2025-11",
+  "country": "SA",
+  "first": null,
+  "last": null,
+  "round": "excluded",
+  "ads": null,
+  "screen": null,
+  "who_qualified": null,
+  "qualify_rule": null,
+  "qualify_point": null,
+  "median_minutes_to_qualify": null,
+  "channel": "messenger",
+  "languages": null,
+  "incentive": null,
+  "started": null,
+  "qualified": null,
+  "notes": "Excluded: a two-day pilot ($87, 9 people) whose targeting changed partway through from Meta city areas to 10-mile radius areas, so no single place describes it."
+ },
+ {
+  "rec": "IQ-2025-11",
+  "country": "IQ",
+  "first": "2025-11-12",
+  "last": "2025-11-13",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99"
+  ],
+  "who_qualified": "aged 30 and over; reached the third-to-last survey question",
+  "qualify_rule": "answered the third-to-last survey question (before the payment step)",
+  "qualify_point": {
+   "question": 43,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 16.77,
+  "channel": "messenger",
+  "languages": [
+   "ar"
+  ],
+  "incentive": {
+   "amount": 1300,
+   "currency": "IQD",
+   "form": "airtime"
+  },
+  "started": 344,
+  "qualified": 124,
+  "notes": "Pilot, two ad days in November 2025. The consent text promised a $5 gift card; the payment step sent IQD 1,300 of mobile credit. Same 10-mile (16.1 km) city radius areas as the main recruitment. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "EG-2025-11",
+  "country": "EG",
+  "first": null,
+  "last": null,
+  "round": "excluded",
+  "ads": null,
+  "screen": null,
+  "who_qualified": null,
+  "qualify_rule": null,
+  "qualify_point": null,
+  "median_minutes_to_qualify": null,
+  "channel": "messenger",
+  "languages": null,
+  "incentive": null,
+  "started": null,
+  "qualified": null,
+  "notes": "Excluded: a pilot with $248 of recorded ad spend over six days and no respondent carrying its ad metadata; its own forms have essentially no answers. The spend cannot be matched to people."
+ },
+ {
+  "rec": "JO-2025-11",
+  "country": "JO",
+  "first": "2025-11-18",
+  "last": "2025-11-18",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99"
+  ],
+  "who_qualified": "aged 30 and over; reached the third-to-last survey question",
+  "qualify_rule": "answered the third-to-last survey question (before the payment step)",
+  "qualify_point": {
+   "question": 43,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 16.04,
+  "channel": "messenger",
+  "languages": [
+   "ar"
+  ],
+  "incentive": {
+   "amount": 0.7,
+   "currency": "JOD",
+   "form": "airtime"
+  },
+  "started": 106,
+  "qualified": 53,
+  "notes": "Pilot, one ad day in November 2025. About half of the people these ads brought in were routed to a neighbouring country's pilot form (same questions, other city list and payment); the city question did not end the survey there either, so they count. Consent promised JOD 0.70; the payment step sent JOD 1. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "MA-2025-11",
+  "country": "MA",
+  "first": "2025-11-18",
+  "last": "2025-11-18",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99"
+  ],
+  "who_qualified": "aged 30 and over; reached the third-to-last survey question",
+  "qualify_rule": "answered the third-to-last survey question (before the payment step)",
+  "qualify_point": {
+   "question": 43,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 16.76,
+  "channel": "messenger",
+  "languages": [
+   "fr"
+  ],
+  "incentive": {
+   "amount": 6.4,
+   "currency": "MAD",
+   "form": "airtime"
+  },
+  "started": 40,
+  "qualified": 10,
+  "notes": "Pilot, one ad day in November 2025. Consent promised MAD 6.40; the payment step sent MAD 5.85. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "AE-2025-12",
+  "country": "AE",
+  "first": "2025-12-05",
+  "last": "2026-02-23",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99",
+   "citizen:AE"
+  ],
+  "who_qualified": "aged 30 and over and UAE citizens; reached the payment step after the last survey question",
+  "qualify_rule": "answered the gift-card question that follows the main survey",
+  "qualify_point": {
+   "question": 47,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 17.24,
+  "channel": "messenger",
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "incentive": {
+   "amount": 30,
+   "currency": "AED",
+   "form": "gift_card"
+  },
+  "started": 2671,
+  "qualified": 720,
+  "notes": "Main recruitment. Abu Dhabi is a Meta city with a 10-mile radius; Sharjah is Meta's own city area (no radius). The Dubai ad sets are left out (below). Non-citizens were screened out, which the other five countries did not do. The quota rule was the last survey question for three days in January and the gift-card question before and after; counted under the final rule. The gift card promised was AED 30; the payment step sent AED 30, then AED 37 from 22 Dec. Left out: Dubai: the 'Dubai' ad sets targeted Dubai and Mecca together (two cities in two countries), so their spend and people cannot be given one place ($10,327.76 of spend). Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "SA-2025-12",
+  "country": "SA",
+  "first": "2025-12-05",
+  "last": "2026-01-14",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99",
+   "lives_in:target_cities"
+  ],
+  "who_qualified": "aged 30 and over, living in one of the three cities; reached the payment step after the last survey question",
+  "qualify_rule": "answered the gift-card question that follows the main survey",
+  "qualify_point": {
+   "question": 47,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 18.4,
+  "channel": "messenger",
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "incentive": {
+   "amount": 20,
+   "currency": "SAR",
+   "form": "gift_card"
+  },
+  "started": 3590,
+  "qualified": 1069,
+  "notes": "Main recruitment. Meta city targets with no radius (Meta's own city area) from the second day; the first day ($14 of spend) used 10-mile radius areas. From 6 to 18 Dec the ad sets labelled Jeddah aimed at Mecca: those days are counted as Mecca (cells flagged label_jeddah_aimed_at_mecca), split at the configuration change (people by first-answer time, spend by Insights day, so the 18 Dec day goes to Mecca). The quota rule changed twice; counted under the final rule. Citizenship was asked, not screened. Ads cost more per person who started than in the other countries here (clicks $0.21 against $0.03-0.11 in the Dec 2025 runs); the cause is not known. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "EG-2025-12",
+  "country": "EG",
+  "first": "2025-12-11",
+  "last": "2026-01-14",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99",
+   "lives_in:target_cities"
+  ],
+  "who_qualified": "aged 30 and over, living in one of the three cities; reached the payment step after the last survey question",
+  "qualify_rule": "answered the phone-number question that follows the main survey",
+  "qualify_point": {
+   "question": 46,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 19.08,
+  "channel": "messenger",
+  "languages": [
+   "ar"
+  ],
+  "incentive": {
+   "amount": 50,
+   "currency": "EGP",
+   "form": "airtime"
+  },
+  "started": 7911,
+  "qualified": 3707,
+  "notes": "Main recruitment. The quota rule changed on 15 Jan 2026, after the last report, so qualified is recounted under the final rule (the report's 966 becomes about 3,700). The Cairo and Giza radius areas overlap (centres 7 km apart). Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "MA-2025-12",
+  "country": "MA",
+  "first": "2025-12-11",
+  "last": "2026-01-11",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99",
+   "lives_in:target_cities"
+  ],
+  "who_qualified": "aged 30 and over, living in one of the three cities; reached the payment step after the last survey question",
+  "qualify_rule": "answered the phone-number question that follows the main survey",
+  "qualify_point": {
+   "question": 46,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 22.11,
+  "channel": "messenger",
+  "languages": [
+   "ar",
+   "fr"
+  ],
+  "incentive": {
+   "amount": 9.3,
+   "currency": "MAD",
+   "form": "airtime"
+  },
+  "started": 4284,
+  "qualified": 572,
+  "notes": "Main recruitment. Only 13% of starters qualified: about half stopped at or before consent. The quota rule changed on 15 Jan 2026; recounted under the final rule. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "JO-2025-12",
+  "country": "JO",
+  "first": "2025-12-11",
+  "last": "2026-01-06",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99",
+   "lives_in:target_cities"
+  ],
+  "who_qualified": "aged 30 and over, living in one of the three cities; reached the payment step after the last survey question",
+  "qualify_rule": "answered the phone-number question that follows the main survey",
+  "qualify_point": {
+   "question": 46,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 18.23,
+  "channel": "messenger",
+  "languages": [
+   "ar"
+  ],
+  "incentive": {
+   "amount": 0.7,
+   "currency": "JOD",
+   "form": "airtime"
+  },
+  "started": 2116,
+  "qualified": 860,
+  "notes": "Main recruitment; ads on 5 days only. Three kinds of place: Amman as Meta's city area (no radius), the whole Zarqa governorate, and a 5-mile (8 km) pin at Irbid. The quota rule changed on 15 Jan 2026; recounted under the final rule. Consent promised JOD 0.70; the payment step sent JOD 1. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ },
+ {
+  "rec": "IQ-2025-12",
+  "country": "IQ",
+  "first": "2025-12-26",
+  "last": "2026-02-11",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 30,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:30-99",
+   "lives_in:target_cities"
+  ],
+  "who_qualified": "aged 30 and over, living in one of the three cities; reached the payment step after the last survey question",
+  "qualify_rule": "answered the phone-number question that follows the main survey",
+  "qualify_point": {
+   "question": 46,
+   "of": 46
+  },
+  "median_minutes_to_qualify": 19.33,
+  "channel": "messenger",
+  "languages": [
+   "ar"
+  ],
+  "incentive": {
+   "amount": 2000,
+   "currency": "IQD",
+   "form": "airtime"
+  },
+  "started": 3194,
+  "qualified": 1416,
+  "notes": "Main recruitment. Incentive: the consent text promised IQD 2,000 of mobile credit (about $1.50), paid through an outside rewards service whose amount is not held in our configuration. The study setting of $1 per respondent was an input to the budget optimiser, set to 0 on 10 Feb 2026; it was never the payment. Only about one in ten people who gave a number reached the payment-processing message, so we cannot confirm how many were paid. Question count: questions shown on the main path, including the language choice where there is one and conditional follow-ups; statements, error repeats and unshown branches not counted."
+ }
+]

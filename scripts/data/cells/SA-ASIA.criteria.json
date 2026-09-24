@@ -1,0 +1,699 @@
+[
+ {
+  "rec": "BD-2023-11a",
+  "country": "BD",
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 52 of 55",
+  "qualify_rule": "in a quota group and answered the last screening-block question near the end of the form",
+  "qualify_point": {
+   "question": 52,
+   "of": 55
+  },
+  "median_minutes_to_qualify": 15.2,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 100,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 971,
+  "qualified": 111,
+  "notes": "Four-day pilot of the form used in BD-2023-11b, whole divisions, gender-targeted ad sets. The rule used is the one saved when its ads ran; a re-save 18 days after its ads stopped moved it to an early question and is ignored. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2023-11b",
+  "country": "BD",
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "all"
+   ],
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 44 of 47",
+  "qualify_rule": "in a quota group and answered the last screening-block question near the end of the form",
+  "qualify_point": {
+   "question": 44,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 13.1,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 100,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 24686,
+  "qualified": 2878,
+  "notes": "Seven whole divisions x two creative versions. The 'Men'/'Women' ad sets were NOT gender-targeted on Meta (no genders key): they are creative versions, so ads.genders is 'all'. Airtime of 100 taka on a stitched payment form after the qualifying point. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-06a",
+  "country": "BD",
+  "first": "2024-06-16",
+  "last": "2024-06-18",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 28 of 31",
+  "qualify_rule": "in a quota group and answered the follow-up to the near-final screening-block question",
+  "qualify_point": {
+   "question": 28,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 6.7,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 547,
+  "qualified": 32,
+  "notes": "Three-day test, whole divisions, gender-targeted. The ad set labelled for Sylhet targeted Barisal and Sylhet together, so its place is the two divisions. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-06b",
+  "country": "BD",
+  "first": "2024-06-23",
+  "last": "2024-06-23",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 6.6,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 146,
+  "qualified": 48,
+  "notes": "One day of ads ($13). Same geometry as BD-2024-06a, different form version. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-09a",
+  "country": "BD",
+  "first": "2024-09-10",
+  "last": "2024-09-12",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 8.9,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 776,
+  "qualified": 202,
+  "notes": "Three sibling test runs feeding one form, 1 km radius areas. In two of them every ad set, including those labelled for women, was targeted at men on Meta; ads.genders records the targeting, and the flag marks the mismatch. Two runs share identical targeting and are pooled per ad set. A third run spent $0.91 in one ad set and brought nobody attributable; 17 people whose labels fit two differently-targeted ad sets live on the same day are left out. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-09b",
+  "country": "BD",
+  "first": "2024-09-30",
+  "last": "2024-10-10",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 25,
+   "age_max": 50,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 9.0,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 3680,
+  "qualified": 1108,
+  "notes": "Four sibling ad runs feeding one form, each with its own set of 1 km radius areas in three divisions; women 25–45 and men 30–50 as separate ad sets. People are split between the runs by the creative in their ad metadata (each run had its own creatives). The per-run reports all carry the form-wide qualified count. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-10",
+  "country": "BD",
+  "first": "2024-10-09",
+  "last": "2024-10-11",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "all"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 8.9,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 4162,
+  "qualified": 1410,
+  "notes": "Three whole divisions, no gender or age targeting, one creative, three days. Qualified (1,410) is above the last per-group report (1,007): the report ran on the last ad day and the recorded answers stop there, while 356 people who had started from the ads answered the qualifying question the next day (counted from the form responses). Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-12a",
+  "country": "BD",
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "round": "endline-fresh",
+  "ads": {
+   "genders": [
+    "all"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 8.7,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 9821,
+  "qualified": 3369,
+  "notes": "A fresh cross-section recruited with ads: about 6% of its people had been in an earlier Bangladesh recruitment. Four whole divisions, no gender or age targeting. Qualified is 3 above the last report, which ran two days after the last ad day. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-12b",
+  "country": "BD",
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "round": "endline-fresh",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 8.5,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 2424,
+  "qualified": 831,
+  "notes": "Fresh sample with ads (7% had been in an earlier Bangladesh recruitment). 1 km radius areas, gender-targeted, no age targeting. Ran alongside BD-2024-12a/c/d/e, each with its own form; 15% of its people also started one of those, and are counted in each. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-12c",
+  "country": "BD",
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "round": "endline-fresh",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 8.4,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 2563,
+  "qualified": 841,
+  "notes": "Fresh sample with ads (5% had been in an earlier Bangladesh recruitment; 14% also started another December form). Same radius areas as BD-2024-12b. Gender-targeted, no age targeting. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-12d",
+  "country": "BD",
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "round": "endline-fresh",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 8.6,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 2225,
+  "qualified": 727,
+  "notes": "Fresh sample with ads (6% had been in an earlier Bangladesh recruitment; 12% also started another December form). Same radius areas as one run of BD-2024-09b. Gender-targeted, no age targeting. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-12e",
+  "country": "BD",
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "round": "endline-fresh",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 29 of 31",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 29,
+   "of": 31
+  },
+  "median_minutes_to_qualify": 8.2,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": {
+   "amount": 200,
+   "currency": "BDT",
+   "form": "airtime"
+  },
+  "started": 1187,
+  "qualified": 386,
+  "notes": "Fresh sample with ads (5% had been in an earlier Bangladesh recruitment; 14% also started another December form), one division only (47 radius areas of 1 km). Gender-targeted, no age targeting. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "IN-2025-09",
+  "country": "IN",
+  "first": "2025-09-02",
+  "last": "2025-09-21",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent",
+   "quota_group:education_subsample",
+   "gave_phone"
+  ],
+  "who_qualified": "adults who chose English or Hindi; gave a phone number at question 47 of 47",
+  "qualify_rule": "chose English or Hindi, and answered the phone-operator question after giving a number",
+  "qualify_point": {
+   "question": 47,
+   "of": 47
+  },
+  "median_minutes_to_qualify": 14.4,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "hi"
+  ],
+  "incentive": {
+   "amount": 10,
+   "currency": "INR",
+   "form": "airtime"
+  },
+  "started": 543,
+  "qualified": 206,
+  "notes": "Whole country, gender-targeted, 18–65, with English-language and Hindi-language ad sets (cells are ad language x gender; the Hindi ad sets were renamed mid-run and are pooled). Adults only; a random share of people without a degree were screened out. The first question (language choice) is a separate form and is counted. Offer was 10–20 rupees of airtime. The per-group report ($538.62) leaves out the $86.99 spent by the Hindi ad sets before their rename. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "PK-2024-04",
+  "country": "PK",
+  "first": "2024-04-27",
+  "last": "2024-05-02",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "screen": [
+   "consent"
+  ],
+  "who_qualified": "aged 18–50 by ad targeting; reached question 38 of 41",
+  "qualify_rule": "in a quota group and answered the last question before the payment block",
+  "qualify_point": {
+   "question": 38,
+   "of": 41
+  },
+  "median_minutes_to_qualify": 11.8,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 100,
+   "currency": "PKR",
+   "form": "airtime"
+  },
+  "started": 977,
+  "qualified": 413,
+  "notes": "Inside 14 Meta cities with a 25-mile (40 km) radius against the rest of the country, gender-targeted, 18–50. The inside set names Islamabad by one Meta city key and the outside set excludes a different Islamabad key, so the two sides may overlap around Islamabad (the excluded Rawalpindi area covers most of it). Meta lists one city (Kotli) under a region it is not in, so that pin is uncertain. Qualified (413) is above the last report (291): the report ran on the last ad day and about 100 people answered the qualifying question the next day. A different ad account from the other Pakistan recruitments (US dollars, CPM $0.66). Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "PK-2024-05",
+  "country": "PK",
+  "first": "2024-05-25",
+  "last": "2024-05-27",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "screen": [
+   "consent"
+  ],
+  "who_qualified": "aged 18–50 by ad targeting; reached question 48 of 50",
+  "qualify_rule": "in a quota group and answered the last question before the payment block",
+  "qualify_point": {
+   "question": 48,
+   "of": 50
+  },
+  "median_minutes_to_qualify": 12.9,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 100,
+   "currency": "PKR",
+   "form": "airtime"
+  },
+  "started": 383,
+  "qualified": 227,
+  "notes": "Same targeting as PK-2024-04 a month later, a longer form. Three days of ads. The quota rule moved to a later question on the second ad day; the final rule is used. Qualified (227) is above the last report (133), which ran before the ads stopped. Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "PK-2025-07",
+  "country": "PK",
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 23,
+   "age_max": 60,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 26 of 30",
+  "qualify_rule": "in a quota group and answered the near-final screening-block question",
+  "qualify_point": {
+   "question": 26,
+   "of": 30
+  },
+  "median_minutes_to_qualify": 8.2,
+  "channel": "messenger",
+  "languages": [
+   "ur",
+   "sd"
+  ],
+  "incentive": {
+   "amount": 500,
+   "currency": "PKR",
+   "form": "airtime"
+  },
+  "started": 5718,
+  "qualified": 2029,
+  "notes": "Five whole provinces/territories x gender (women 23–49, men 25–60). Two days of ads; the last per-group report was written early on the second day (it has $286.50 of $315.68 and 1,506 qualified); the recount (2,029) agrees with the recorded answers (2,035). Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "PK-2025-08",
+  "country": "PK",
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 23,
+   "age_max": 60,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:9-17",
+   "caregiver:child_gender:girl"
+  ],
+  "who_qualified": "cares for a girl aged 9–17; reached question 16 of 16",
+  "qualify_rule": "in a quota group and answered the last question of the first-wave form",
+  "qualify_point": {
+   "question": 16,
+   "of": 16
+  },
+  "median_minutes_to_qualify": 5.1,
+  "channel": "messenger",
+  "languages": [
+   "ur"
+  ],
+  "incentive": {
+   "amount": 280,
+   "currency": "PKR",
+   "form": "airtime"
+  },
+  "started": 11128,
+  "qualified": 3064,
+  "notes": "Wave 1 of a two-wave panel; wave 2 re-contacted people without ads and is out. Seven sets of radius areas in one province (1 km in two cities, 4 km and 5 km elsewhere) x gender (women 23–49, men 25–60). Qualifying point: non-statement fields in form order, branches counted as if asked. Impressions derived from Insights CPM."
+ },
+ {
+  "rec": "BD-2024-09x",
+  "country": "BD",
+  "first": null,
+  "last": null,
+  "round": "excluded",
+  "ads": null,
+  "screen": [],
+  "who_qualified": null,
+  "qualify_rule": null,
+  "qualify_point": null,
+  "median_minutes_to_qualify": null,
+  "channel": "messenger",
+  "languages": [
+   "bn"
+  ],
+  "incentive": null,
+  "started": 0,
+  "qualified": 0,
+  "notes": "A fourth sibling test run of BD-2024-09a with no recorded spend and no location targeting saved; nothing to attribute."
+ }
+]

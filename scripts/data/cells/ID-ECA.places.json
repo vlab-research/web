@@ -1,0 +1,3353 @@
+{
+ "BG:city-radius:sofia-40.2km": {
+  "country": "BG",
+  "type": "city_radius",
+  "label": "Sofia, 40.2 km radius",
+  "pins": [
+   [
+    42.6975,
+    23.3241,
+    40.2
+   ]
+  ],
+  "pin_check": "1 of 1 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: sofia 1",
+  "pin_names": [
+   "Sofia"
+  ]
+ },
+ "BG:country": {
+  "country": "BG",
+  "type": "country",
+  "label": "Bulgaria, whole country"
+ },
+ "BG:country-minus:sofia-40.2km": {
+  "country": "BG",
+  "type": "country_minus",
+  "label": "Bulgaria except 1 radius area of 40.2 km around Sofia",
+  "pins_excluded": [
+   [
+    42.6975,
+    23.3241,
+    40.2
+   ]
+  ],
+  "pin_check": "1 of 1 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: sofia 1",
+  "pin_names": [
+   "Sofia"
+  ]
+ },
+ "ID:outside:central-java-88-areas-2-5km-a4aa": {
+  "country": "ID",
+  "type": "radius_outside",
+  "label": "Central Java outside its 88 radius areas and 1 excluded radius area of 40 km",
+  "regions": [
+   "Central Java"
+  ],
+  "complement_of": "ID:radius:central-java-88-areas-2-5km-46f6",
+  "pins_excluded": [
+   [
+    -7.8142,
+    110.926,
+    2.0
+   ],
+   [
+    -7.7459,
+    110.5799,
+    2.0
+   ],
+   [
+    -7.7272,
+    109.0097,
+    2.0
+   ],
+   [
+    -7.72,
+    109.9148,
+    2.0
+   ],
+   [
+    -7.7131,
+    110.0091,
+    2.0
+   ],
+   [
+    -7.705,
+    110.6018,
+    2.0
+   ],
+   [
+    -7.683,
+    110.8406,
+    2.0
+   ],
+   [
+    -7.6724,
+    109.6469,
+    2.0
+   ],
+   [
+    -7.6313,
+    109.5734,
+    2.0
+   ],
+   [
+    -7.6293,
+    109.2497,
+    2.0
+   ],
+   [
+    -7.6161,
+    110.7002,
+    2.0
+   ],
+   [
+    -7.6149,
+    109.3598,
+    2.0
+   ],
+   [
+    -7.6073,
+    109.5142,
+    2.0
+   ],
+   [
+    -7.602,
+    110.8186,
+    4.0
+   ],
+   [
+    -7.5976,
+    110.9469,
+    2.0
+   ],
+   [
+    -7.5798,
+    110.9307,
+    2.0
+   ],
+   [
+    -7.5791,
+    110.2826,
+    2.0
+   ],
+   [
+    -7.5692,
+    110.8284,
+    4.0
+   ],
+   [
+    -7.5549,
+    110.8552,
+    4.0
+   ],
+   [
+    -7.5521,
+    110.7405,
+    3.0
+   ],
+   [
+    -7.5422,
+    110.8104,
+    4.0
+   ],
+   [
+    -7.5314,
+    110.5973,
+    2.0
+   ],
+   [
+    -7.5166,
+    109.2938,
+    2.0
+   ],
+   [
+    -7.5111,
+    109.0596,
+    2.0
+   ],
+   [
+    -7.4576,
+    109.2986,
+    2.0
+   ],
+   [
+    -7.4279,
+    109.2408,
+    3.0
+   ],
+   [
+    -7.4277,
+    111.0235,
+    2.0
+   ],
+   [
+    -7.4208,
+    109.1993,
+    3.0
+   ],
+   [
+    -7.4084,
+    109.0803,
+    2.0
+   ],
+   [
+    -7.3963,
+    109.6951,
+    2.0
+   ],
+   [
+    -7.3898,
+    109.9636,
+    2.0
+   ],
+   [
+    -7.3896,
+    109.363,
+    3.0
+   ],
+   [
+    -7.3589,
+    109.9033,
+    2.0
+   ],
+   [
+    -7.3557,
+    110.5057,
+    3.0
+   ],
+   [
+    -7.3381,
+    110.5175,
+    3.0
+   ],
+   [
+    -7.3303,
+    110.4995,
+    3.0
+   ],
+   [
+    -7.3163,
+    110.1756,
+    2.0
+   ],
+   [
+    -7.3062,
+    109.3684,
+    2.0
+   ],
+   [
+    -7.2987,
+    108.7626,
+    2.0
+   ],
+   [
+    -7.2835,
+    110.1022,
+    2.0
+   ],
+   [
+    -7.2713,
+    109.7405,
+    2.0
+   ],
+   [
+    -7.2598,
+    110.4046,
+    2.0
+   ],
+   [
+    -7.2228,
+    110.3675,
+    2.0
+   ],
+   [
+    -7.1889,
+    110.4259,
+    2.0
+   ],
+   [
+    -7.1291,
+    110.4039,
+    3.0
+   ],
+   [
+    -7.1029,
+    109.3251,
+    2.0
+   ],
+   [
+    -7.0811,
+    110.9173,
+    2.0
+   ],
+   [
+    -7.0578,
+    110.669,
+    2.0
+   ],
+   [
+    -7.0534,
+    110.3163,
+    2.0
+   ],
+   [
+    -7.0498,
+    109.0978,
+    2.0
+   ],
+   [
+    -7.0311,
+    109.5784,
+    2.0
+   ],
+   [
+    -6.9904,
+    110.4229,
+    5.0
+   ],
+   [
+    -6.973,
+    109.9284,
+    2.0
+   ],
+   [
+    -6.9721,
+    110.0747,
+    2.0
+   ],
+   [
+    -6.9692,
+    111.4131,
+    2.0
+   ],
+   [
+    -6.9625,
+    109.6437,
+    2.0
+   ],
+   [
+    -6.9613,
+    110.2532,
+    2.0
+   ],
+   [
+    -6.9402,
+    109.6817,
+    2.0
+   ],
+   [
+    -6.9338,
+    109.6541,
+    2.0
+   ],
+   [
+    -6.9312,
+    109.1347,
+    4.0
+   ],
+   [
+    -6.9261,
+    110.1684,
+    2.0
+   ],
+   [
+    -6.9251,
+    110.1523,
+    2.0
+   ],
+   [
+    -6.9248,
+    109.7608,
+    2.0
+   ],
+   [
+    -6.9217,
+    110.204,
+    2.0
+   ],
+   [
+    -6.913,
+    109.4117,
+    3.0
+   ],
+   [
+    -6.9079,
+    109.7303,
+    2.0
+   ],
+   [
+    -6.9064,
+    109.5331,
+    2.0
+   ],
+   [
+    -6.8948,
+    110.6385,
+    2.0
+   ],
+   [
+    -6.8945,
+    109.455,
+    2.0
+   ],
+   [
+    -6.8927,
+    109.6364,
+    3.0
+   ],
+   [
+    -6.8905,
+    109.6761,
+    3.0
+   ],
+   [
+    -6.8904,
+    109.3806,
+    3.0
+   ],
+   [
+    -6.8752,
+    109.0988,
+    4.0
+   ],
+   [
+    -6.8371,
+    110.8365,
+    3.0
+   ],
+   [
+    -6.8078,
+    110.8417,
+    3.0
+   ],
+   [
+    -6.8058,
+    110.9173,
+    2.0
+   ],
+   [
+    -6.7692,
+    110.8541,
+    2.0
+   ],
+   [
+    -6.7541,
+    110.7242,
+    2.0
+   ],
+   [
+    -6.7534,
+    111.04,
+    2.0
+   ],
+   [
+    -6.75,
+    110.7586,
+    2.0
+   ],
+   [
+    -6.7351,
+    110.8441,
+    2.0
+   ],
+   [
+    -6.7267,
+    110.7169,
+    2.0
+   ],
+   [
+    -6.7117,
+    111.1515,
+    2.0
+   ],
+   [
+    -6.7057,
+    111.3486,
+    2.0
+   ],
+   [
+    -6.6956,
+    110.7076,
+    2.0
+   ],
+   [
+    -6.6298,
+    110.7039,
+    2.0
+   ],
+   [
+    -6.5899,
+    110.6673,
+    2.0
+   ],
+   [
+    -6.4747,
+    108.3035,
+    2.0
+   ]
+  ],
+  "pins_excluded_cities": [
+   [
+    -6.8691,
+    109.0378,
+    40.0
+   ]
+  ],
+  "pin_check": "89 of 89 pins within 5 km of a named place (Natural Earth or GeoNames; 31 of them a GeoNames place with no recorded population); admin-1 units: central java 87, central java (nearest) 1, west java 1",
+  "pin_names": [
+   "Adiwerna",
+   "Ajibarang",
+   "Ambarawa",
+   "Baekrajan",
+   "Balapulang",
+   "Bandungan",
+   "Banjarnegara",
+   "Banyumas",
+   "Batang",
+   "Blora",
+   "Bobotsari",
+   "Boyolali",
+   "Brebes",
+   "Buaran",
+   "Cilacap",
+   "Comal",
+   "Delanggu",
+   "Demak",
+   "Denokan",
+   "Desa Patukangan",
+   "Dompon",
+   "Dukoh Lor",
+   "Duwet",
+   "Gebog",
+   "Gombong",
+   "Grogol",
+   "Gubug",
+   "Jambe Kidul",
+   "Jaten",
+   "Jatibarang",
+   "Jekulo",
+   "Jepara",
+   "Johosari",
+   "Juwana",
+   "Kalibalik Tengah",
+   "Kapangsari",
+   "Karanganyar",
+   "Karanggeringging",
+   "Karangkobar",
+   "Kartasura",
+   "Kauman",
+   "Kedungwuni",
+   "Kertek",
+   "Klaten",
+   "Kroya",
+   "Kudus",
+   "Kutoarjo",
+   "Majenang",
+   "Mijen",
+   "Muntilan",
+   "Ngempon Lor",
+   "Pati",
+   "Pecangaan",
+   "Pejagoan",
+   "Pekalongan",
+   "Pemalang",
+   "Pendem",
+   "Purbalingga",
+   "Purwodadi",
+   "Purwokerto",
+   "Purworejo",
+   "Randudongkal",
+   "Rembangan",
+   "Salatiga",
+   "Sanggrahan",
+   "Semarang",
+   "Sokaraja",
+   "Sragen",
+   "Surakarta",
+   "Tahunan",
+   "Tegal",
+   "Ungaran",
+   "Wangon",
+   "Warungasem",
+   "Wedi",
+   "Weleri",
+   "Wiradesa",
+   "Wonosobo"
+  ]
+ },
+ "ID:outside:south-kalimantan-5-areas-2-3km-1cf6": {
+  "country": "ID",
+  "type": "radius_outside",
+  "label": "South Kalimantan outside its 5 radius areas",
+  "regions": [
+   "South Kalimantan"
+  ],
+  "complement_of": "ID:radius:south-kalimantan-5-areas-2-3km-4976",
+  "pins_excluded": [
+   [
+    -3.4398,
+    114.8309,
+    2.0
+   ],
+   [
+    -3.4086,
+    114.8488,
+    2.0
+   ],
+   [
+    -3.3187,
+    114.5926,
+    3.0
+   ],
+   [
+    -2.5855,
+    115.3845,
+    2.0
+   ],
+   [
+    -2.4196,
+    115.254,
+    2.0
+   ]
+  ],
+  "pin_check": "5 of 5 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: south kalimantan 5",
+  "pin_names": [
+   "Amuntai",
+   "Banjarbaru",
+   "Banjarmasin",
+   "Barabai",
+   "Martapura"
+  ]
+ },
+ "ID:outside:west-java-27-areas-2-11km-c949": {
+  "country": "ID",
+  "type": "radius_outside",
+  "label": "West Java outside its 27 radius areas and 2 excluded radius areas of 40 km",
+  "regions": [
+   "West Java"
+  ],
+  "complement_of": "ID:radius:west-java-27-areas-2-11km-c899",
+  "pins_excluded": [
+   [
+    -7.6852,
+    108.65,
+    2.0
+   ],
+   [
+    -7.3514,
+    108.308,
+    2.0
+   ],
+   [
+    -7.3499,
+    108.1107,
+    2.0
+   ],
+   [
+    -7.3267,
+    108.3531,
+    2.0
+   ],
+   [
+    -7.3262,
+    108.2201,
+    4.0
+   ],
+   [
+    -7.0099,
+    107.5507,
+    8.0
+   ],
+   [
+    -6.9876,
+    107.8398,
+    9.0
+   ],
+   [
+    -6.9821,
+    108.4768,
+    2.0
+   ],
+   [
+    -6.966,
+    109.0564,
+    2.0
+   ],
+   [
+    -6.8719,
+    108.7213,
+    2.0
+   ],
+   [
+    -6.8489,
+    108.8152,
+    2.0
+   ],
+   [
+    -6.8352,
+    108.2278,
+    2.0
+   ],
+   [
+    -6.8209,
+    108.726,
+    2.0
+   ],
+   [
+    -6.8018,
+    108.6326,
+    3.0
+   ],
+   [
+    -6.764,
+    108.1694,
+    2.0
+   ],
+   [
+    -6.7574,
+    108.4812,
+    2.0
+   ],
+   [
+    -6.7345,
+    108.2554,
+    2.0
+   ],
+   [
+    -6.7137,
+    108.5608,
+    4.0
+   ],
+   [
+    -6.7079,
+    108.4332,
+    3.0
+   ],
+   [
+    -6.6744,
+    106.8829,
+    11.0
+   ],
+   [
+    -6.6468,
+    108.4093,
+    2.0
+   ],
+   [
+    -6.4747,
+    108.3035,
+    2.0
+   ],
+   [
+    -6.4604,
+    107.9433,
+    2.0
+   ],
+   [
+    -6.3264,
+    108.3229,
+    2.0
+   ],
+   [
+    -6.315,
+    107.9944,
+    2.0
+   ],
+   [
+    -6.2842,
+    107.821,
+    2.0
+   ],
+   [
+    -6.2585,
+    107.1457,
+    11.0
+   ]
+  ],
+  "pins_excluded_cities": [
+   [
+    -7.3688,
+    108.5329,
+    40.0
+   ],
+   [
+    -6.9181,
+    106.9267,
+    40.0
+   ]
+  ],
+  "pin_check": "29 of 29 pins within 5 km of a named place (Natural Earth or GeoNames; 12 of them a GeoNames place with no recorded population); admin-1 units: central java 1, west java 28",
+  "pin_names": [
+   "Arjawinangun",
+   "Astanajapura",
+   "Banjar",
+   "Ciamis",
+   "Cikarang",
+   "Cirebon",
+   "Haurgeulis",
+   "Indramayu",
+   "Jatibarang",
+   "Jatiwangi",
+   "Kacangsuuk",
+   "Karangdogolan",
+   "Klangenan",
+   "Kuningan",
+   "Losari Kidul",
+   "Majalengka",
+   "Maleber",
+   "Manonjaya",
+   "Pamanukan",
+   "Pananjung",
+   "Pungkur",
+   "Singaparna",
+   "Soreang",
+   "Sukabumi",
+   "Sumber",
+   "Tasikmalaya",
+   "Tiben",
+   "Tiparda"
+  ]
+ },
+ "ID:radius:central-java-88-areas-2-5km-46f6": {
+  "country": "ID",
+  "type": "radius_set",
+  "label": "Inside 88 radius areas (2-5 km) in Central Java (87) and West Java (1), minus 1 excluded radius area of 40 km",
+  "pins": [
+   [
+    -7.8142,
+    110.926,
+    2.0
+   ],
+   [
+    -7.7459,
+    110.5799,
+    2.0
+   ],
+   [
+    -7.7272,
+    109.0097,
+    2.0
+   ],
+   [
+    -7.72,
+    109.9148,
+    2.0
+   ],
+   [
+    -7.7131,
+    110.0091,
+    2.0
+   ],
+   [
+    -7.705,
+    110.6018,
+    2.0
+   ],
+   [
+    -7.683,
+    110.8406,
+    2.0
+   ],
+   [
+    -7.6724,
+    109.6469,
+    2.0
+   ],
+   [
+    -7.6313,
+    109.5734,
+    2.0
+   ],
+   [
+    -7.6293,
+    109.2497,
+    2.0
+   ],
+   [
+    -7.6161,
+    110.7002,
+    2.0
+   ],
+   [
+    -7.6149,
+    109.3598,
+    2.0
+   ],
+   [
+    -7.6073,
+    109.5142,
+    2.0
+   ],
+   [
+    -7.602,
+    110.8186,
+    4.0
+   ],
+   [
+    -7.5976,
+    110.9469,
+    2.0
+   ],
+   [
+    -7.5798,
+    110.9307,
+    2.0
+   ],
+   [
+    -7.5791,
+    110.2826,
+    2.0
+   ],
+   [
+    -7.5692,
+    110.8284,
+    4.0
+   ],
+   [
+    -7.5549,
+    110.8552,
+    4.0
+   ],
+   [
+    -7.5521,
+    110.7405,
+    3.0
+   ],
+   [
+    -7.5422,
+    110.8104,
+    4.0
+   ],
+   [
+    -7.5314,
+    110.5973,
+    2.0
+   ],
+   [
+    -7.5166,
+    109.2938,
+    2.0
+   ],
+   [
+    -7.5111,
+    109.0596,
+    2.0
+   ],
+   [
+    -7.4576,
+    109.2986,
+    2.0
+   ],
+   [
+    -7.4279,
+    109.2408,
+    3.0
+   ],
+   [
+    -7.4277,
+    111.0235,
+    2.0
+   ],
+   [
+    -7.4208,
+    109.1993,
+    3.0
+   ],
+   [
+    -7.4084,
+    109.0803,
+    2.0
+   ],
+   [
+    -7.3963,
+    109.6951,
+    2.0
+   ],
+   [
+    -7.3898,
+    109.9636,
+    2.0
+   ],
+   [
+    -7.3896,
+    109.363,
+    3.0
+   ],
+   [
+    -7.3589,
+    109.9033,
+    2.0
+   ],
+   [
+    -7.3557,
+    110.5057,
+    3.0
+   ],
+   [
+    -7.3381,
+    110.5175,
+    3.0
+   ],
+   [
+    -7.3303,
+    110.4995,
+    3.0
+   ],
+   [
+    -7.3163,
+    110.1756,
+    2.0
+   ],
+   [
+    -7.3062,
+    109.3684,
+    2.0
+   ],
+   [
+    -7.2987,
+    108.7626,
+    2.0
+   ],
+   [
+    -7.2835,
+    110.1022,
+    2.0
+   ],
+   [
+    -7.2713,
+    109.7405,
+    2.0
+   ],
+   [
+    -7.2598,
+    110.4046,
+    2.0
+   ],
+   [
+    -7.2228,
+    110.3675,
+    2.0
+   ],
+   [
+    -7.1889,
+    110.4259,
+    2.0
+   ],
+   [
+    -7.1291,
+    110.4039,
+    3.0
+   ],
+   [
+    -7.1029,
+    109.3251,
+    2.0
+   ],
+   [
+    -7.0811,
+    110.9173,
+    2.0
+   ],
+   [
+    -7.0578,
+    110.669,
+    2.0
+   ],
+   [
+    -7.0534,
+    110.3163,
+    2.0
+   ],
+   [
+    -7.0498,
+    109.0978,
+    2.0
+   ],
+   [
+    -7.0311,
+    109.5784,
+    2.0
+   ],
+   [
+    -6.9904,
+    110.4229,
+    5.0
+   ],
+   [
+    -6.973,
+    109.9284,
+    2.0
+   ],
+   [
+    -6.9721,
+    110.0747,
+    2.0
+   ],
+   [
+    -6.9692,
+    111.4131,
+    2.0
+   ],
+   [
+    -6.9625,
+    109.6437,
+    2.0
+   ],
+   [
+    -6.9613,
+    110.2532,
+    2.0
+   ],
+   [
+    -6.9402,
+    109.6817,
+    2.0
+   ],
+   [
+    -6.9338,
+    109.6541,
+    2.0
+   ],
+   [
+    -6.9312,
+    109.1347,
+    4.0
+   ],
+   [
+    -6.9261,
+    110.1684,
+    2.0
+   ],
+   [
+    -6.9251,
+    110.1523,
+    2.0
+   ],
+   [
+    -6.9248,
+    109.7608,
+    2.0
+   ],
+   [
+    -6.9217,
+    110.204,
+    2.0
+   ],
+   [
+    -6.913,
+    109.4117,
+    3.0
+   ],
+   [
+    -6.9079,
+    109.7303,
+    2.0
+   ],
+   [
+    -6.9064,
+    109.5331,
+    2.0
+   ],
+   [
+    -6.8948,
+    110.6385,
+    2.0
+   ],
+   [
+    -6.8945,
+    109.455,
+    2.0
+   ],
+   [
+    -6.8927,
+    109.6364,
+    3.0
+   ],
+   [
+    -6.8905,
+    109.6761,
+    3.0
+   ],
+   [
+    -6.8904,
+    109.3806,
+    3.0
+   ],
+   [
+    -6.8752,
+    109.0988,
+    4.0
+   ],
+   [
+    -6.8371,
+    110.8365,
+    3.0
+   ],
+   [
+    -6.8078,
+    110.8417,
+    3.0
+   ],
+   [
+    -6.8058,
+    110.9173,
+    2.0
+   ],
+   [
+    -6.7692,
+    110.8541,
+    2.0
+   ],
+   [
+    -6.7541,
+    110.7242,
+    2.0
+   ],
+   [
+    -6.7534,
+    111.04,
+    2.0
+   ],
+   [
+    -6.75,
+    110.7586,
+    2.0
+   ],
+   [
+    -6.7351,
+    110.8441,
+    2.0
+   ],
+   [
+    -6.7267,
+    110.7169,
+    2.0
+   ],
+   [
+    -6.7117,
+    111.1515,
+    2.0
+   ],
+   [
+    -6.7057,
+    111.3486,
+    2.0
+   ],
+   [
+    -6.6956,
+    110.7076,
+    2.0
+   ],
+   [
+    -6.6298,
+    110.7039,
+    2.0
+   ],
+   [
+    -6.5899,
+    110.6673,
+    2.0
+   ],
+   [
+    -6.4747,
+    108.3035,
+    2.0
+   ]
+  ],
+  "pins_excluded": [
+   [
+    -6.8691,
+    109.0378,
+    40.0
+   ]
+  ],
+  "pin_check": "88 of 88 pins within 5 km of a named place (Natural Earth or GeoNames; 30 of them a GeoNames place with no recorded population); admin-1 units: central java 86, central java (nearest) 1, west java 1",
+  "pin_names": [
+   "Adiwerna",
+   "Ajibarang",
+   "Ambarawa",
+   "Baekrajan",
+   "Balapulang",
+   "Bandungan",
+   "Banjarnegara",
+   "Banyumas",
+   "Batang",
+   "Blora",
+   "Bobotsari",
+   "Boyolali",
+   "Buaran",
+   "Cilacap",
+   "Comal",
+   "Delanggu",
+   "Demak",
+   "Denokan",
+   "Desa Patukangan",
+   "Dompon",
+   "Dukoh Lor",
+   "Duwet",
+   "Gebog",
+   "Gombong",
+   "Grogol",
+   "Gubug",
+   "Jambe Kidul",
+   "Jaten",
+   "Jatibarang",
+   "Jekulo",
+   "Jepara",
+   "Johosari",
+   "Juwana",
+   "Kalibalik Tengah",
+   "Kapangsari",
+   "Karanganyar",
+   "Karanggeringging",
+   "Karangkobar",
+   "Kartasura",
+   "Kauman",
+   "Kedungwuni",
+   "Kertek",
+   "Klaten",
+   "Kroya",
+   "Kudus",
+   "Kutoarjo",
+   "Majenang",
+   "Mijen",
+   "Muntilan",
+   "Ngempon Lor",
+   "Pati",
+   "Pecangaan",
+   "Pejagoan",
+   "Pekalongan",
+   "Pemalang",
+   "Pendem",
+   "Purbalingga",
+   "Purwodadi",
+   "Purwokerto",
+   "Purworejo",
+   "Randudongkal",
+   "Rembangan",
+   "Salatiga",
+   "Sanggrahan",
+   "Semarang",
+   "Sokaraja",
+   "Sragen",
+   "Surakarta",
+   "Tahunan",
+   "Tegal",
+   "Ungaran",
+   "Wangon",
+   "Warungasem",
+   "Wedi",
+   "Weleri",
+   "Wiradesa",
+   "Wonosobo"
+  ]
+ },
+ "ID:radius:south-kalimantan-5-areas-2-3km-4976": {
+  "country": "ID",
+  "type": "radius_set",
+  "label": "Inside 5 radius areas (2-3 km) in South Kalimantan",
+  "pins": [
+   [
+    -3.4398,
+    114.8309,
+    2.0
+   ],
+   [
+    -3.4086,
+    114.8488,
+    2.0
+   ],
+   [
+    -3.3187,
+    114.5926,
+    3.0
+   ],
+   [
+    -2.5855,
+    115.3845,
+    2.0
+   ],
+   [
+    -2.4196,
+    115.254,
+    2.0
+   ]
+  ],
+  "pin_check": "5 of 5 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: south kalimantan 5",
+  "pin_names": [
+   "Amuntai",
+   "Banjarbaru",
+   "Banjarmasin",
+   "Barabai",
+   "Martapura"
+  ]
+ },
+ "ID:radius:west-java-27-areas-2-11km-c899": {
+  "country": "ID",
+  "type": "radius_set",
+  "label": "Inside 27 radius areas (2-11 km) in West Java (26) and Central Java (1), minus 2 excluded radius areas of 40 km",
+  "pins": [
+   [
+    -7.6852,
+    108.65,
+    2.0
+   ],
+   [
+    -7.3514,
+    108.308,
+    2.0
+   ],
+   [
+    -7.3499,
+    108.1107,
+    2.0
+   ],
+   [
+    -7.3267,
+    108.3531,
+    2.0
+   ],
+   [
+    -7.3262,
+    108.2201,
+    4.0
+   ],
+   [
+    -7.0099,
+    107.5507,
+    8.0
+   ],
+   [
+    -6.9876,
+    107.8398,
+    9.0
+   ],
+   [
+    -6.9821,
+    108.4768,
+    2.0
+   ],
+   [
+    -6.966,
+    109.0564,
+    2.0
+   ],
+   [
+    -6.8719,
+    108.7213,
+    2.0
+   ],
+   [
+    -6.8489,
+    108.8152,
+    2.0
+   ],
+   [
+    -6.8352,
+    108.2278,
+    2.0
+   ],
+   [
+    -6.8209,
+    108.726,
+    2.0
+   ],
+   [
+    -6.8018,
+    108.6326,
+    3.0
+   ],
+   [
+    -6.764,
+    108.1694,
+    2.0
+   ],
+   [
+    -6.7574,
+    108.4812,
+    2.0
+   ],
+   [
+    -6.7345,
+    108.2554,
+    2.0
+   ],
+   [
+    -6.7137,
+    108.5608,
+    4.0
+   ],
+   [
+    -6.7079,
+    108.4332,
+    3.0
+   ],
+   [
+    -6.6744,
+    106.8829,
+    11.0
+   ],
+   [
+    -6.6468,
+    108.4093,
+    2.0
+   ],
+   [
+    -6.4747,
+    108.3035,
+    2.0
+   ],
+   [
+    -6.4604,
+    107.9433,
+    2.0
+   ],
+   [
+    -6.3264,
+    108.3229,
+    2.0
+   ],
+   [
+    -6.315,
+    107.9944,
+    2.0
+   ],
+   [
+    -6.2842,
+    107.821,
+    2.0
+   ],
+   [
+    -6.2585,
+    107.1457,
+    11.0
+   ]
+  ],
+  "pins_excluded": [
+   [
+    -7.3688,
+    108.5329,
+    40.0
+   ],
+   [
+    -6.9181,
+    106.9267,
+    40.0
+   ]
+  ],
+  "pin_check": "27 of 27 pins within 5 km of a named place (Natural Earth or GeoNames; 11 of them a GeoNames place with no recorded population); admin-1 units: central java 1, west java 26",
+  "pin_names": [
+   "Arjawinangun",
+   "Astanajapura",
+   "Ciamis",
+   "Cikarang",
+   "Cirebon",
+   "Haurgeulis",
+   "Indramayu",
+   "Jatibarang",
+   "Jatiwangi",
+   "Kacangsuuk",
+   "Karangdogolan",
+   "Klangenan",
+   "Kuningan",
+   "Losari Kidul",
+   "Majalengka",
+   "Maleber",
+   "Manonjaya",
+   "Pamanukan",
+   "Pananjung",
+   "Pungkur",
+   "Singaparna",
+   "Soreang",
+   "Sumber",
+   "Tasikmalaya",
+   "Tiben",
+   "Tiparda"
+  ]
+ },
+ "KG:country-minus:23-areas-2-9km-8c11": {
+  "country": "KG",
+  "type": "country_minus",
+  "label": "Kyrgyzstan outside 23 radius areas (2-9 km)",
+  "pins_excluded": [
+   [
+    39.8384,
+    69.5254,
+    2.0
+   ],
+   [
+    39.9366,
+    69.5685,
+    3.0
+   ],
+   [
+    40.0614,
+    70.8218,
+    2.0
+   ],
+   [
+    40.13,
+    71.7263,
+    2.0
+   ],
+   [
+    40.2607,
+    72.1303,
+    2.0
+   ],
+   [
+    40.2657,
+    72.6178,
+    3.0
+   ],
+   [
+    40.6313,
+    73.5895,
+    2.0
+   ],
+   [
+    40.7074,
+    72.8802,
+    9.0
+   ],
+   [
+    40.7707,
+    73.2978,
+    4.0
+   ],
+   [
+    41.0299,
+    73.1943,
+    2.0
+   ],
+   [
+    41.0336,
+    72.7421,
+    4.0
+   ],
+   [
+    41.2016,
+    72.1832,
+    2.0
+   ],
+   [
+    41.2457,
+    72.448,
+    3.0
+   ],
+   [
+    41.3453,
+    72.2206,
+    4.0
+   ],
+   [
+    41.4073,
+    71.4821,
+    2.0
+   ],
+   [
+    41.4917,
+    71.7552,
+    2.0
+   ],
+   [
+    41.6342,
+    72.6787,
+    3.0
+   ],
+   [
+    41.8735,
+    72.9451,
+    2.0
+   ],
+   [
+    42.5234,
+    72.2374,
+    3.0
+   ],
+   [
+    42.8346,
+    74.1218,
+    3.0
+   ],
+   [
+    42.8373,
+    75.2954,
+    4.0
+   ],
+   [
+    42.8765,
+    74.607,
+    5.0
+   ],
+   [
+    42.8888,
+    74.8457,
+    3.0
+   ]
+  ],
+  "pin_check": "23 of 23 pins within 5 km of a named place (Natural Earth or GeoNames; 2 of them a GeoNames place with no recorded population); admin-1 units: batken 5, bishkek 1, chuy 3, jalal-abad 9, osh 3, osh (nearest) 1, talas 1",
+  "pin_names": [
+   "Ala-Buka",
+   "Batken",
+   "Bazar-Korgon",
+   "Belovodskoye",
+   "Bishkek",
+   "Kant",
+   "Kara Suu",
+   "Kara-Kulja",
+   "Kara-Kul’",
+   "Kerben",
+   "Kok Yangak",
+   "Kyzyl-Kyya",
+   "Mailuu-Suu",
+   "Nookat",
+   "Pulgon",
+   "Razzakov",
+   "Shamaldy-Say",
+   "Suluktu",
+   "Talas",
+   "Tash-Kumyr",
+   "Tokmok",
+   "Toktogul",
+   "Uzgen"
+  ]
+ },
+ "KG:radius:batken-5-areas-2-3km-5a86": {
+  "country": "KG",
+  "type": "radius_set",
+  "label": "Inside 5 radius areas (2-3 km) in Batken",
+  "pins": [
+   [
+    39.8384,
+    69.5254,
+    2.0
+   ],
+   [
+    39.9366,
+    69.5685,
+    3.0
+   ],
+   [
+    40.0614,
+    70.8218,
+    2.0
+   ],
+   [
+    40.13,
+    71.7263,
+    2.0
+   ],
+   [
+    40.2607,
+    72.1303,
+    2.0
+   ]
+  ],
+  "pin_check": "5 of 5 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: batken 5",
+  "pin_names": [
+   "Batken",
+   "Kyzyl-Kyya",
+   "Pulgon",
+   "Razzakov",
+   "Suluktu"
+  ]
+ },
+ "KG:radius:chuy-4-areas-3-5km-f844": {
+  "country": "KG",
+  "type": "radius_set",
+  "label": "Inside 4 radius areas (3-5 km) in Chuy (3) and Bishkek (1)",
+  "pins": [
+   [
+    42.8346,
+    74.1218,
+    3.0
+   ],
+   [
+    42.8373,
+    75.2954,
+    4.0
+   ],
+   [
+    42.8765,
+    74.607,
+    5.0
+   ],
+   [
+    42.8888,
+    74.8457,
+    3.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: bishkek 1, chuy 3",
+  "pin_names": [
+   "Belovodskoye",
+   "Bishkek",
+   "Kant",
+   "Tokmok"
+  ]
+ },
+ "KG:radius:jalal-abad-9-areas-2-4km-5cbd": {
+  "country": "KG",
+  "type": "radius_set",
+  "label": "Inside 9 radius areas (2-4 km) in Jalal-Abad",
+  "pins": [
+   [
+    41.0299,
+    73.1943,
+    2.0
+   ],
+   [
+    41.0336,
+    72.7421,
+    4.0
+   ],
+   [
+    41.2016,
+    72.1832,
+    2.0
+   ],
+   [
+    41.2457,
+    72.448,
+    3.0
+   ],
+   [
+    41.3453,
+    72.2206,
+    4.0
+   ],
+   [
+    41.4073,
+    71.4821,
+    2.0
+   ],
+   [
+    41.4917,
+    71.7552,
+    2.0
+   ],
+   [
+    41.6342,
+    72.6787,
+    3.0
+   ],
+   [
+    41.8735,
+    72.9451,
+    2.0
+   ]
+  ],
+  "pin_check": "9 of 9 pins within 5 km of a named place (Natural Earth or GeoNames; 2 of them a GeoNames place with no recorded population); admin-1 units: jalal-abad 9",
+  "pin_names": [
+   "Ala-Buka",
+   "Bazar-Korgon",
+   "Kara-Kul’",
+   "Kerben",
+   "Kok Yangak",
+   "Mailuu-Suu",
+   "Shamaldy-Say",
+   "Tash-Kumyr",
+   "Toktogul"
+  ]
+ },
+ "KG:radius:osh-4-areas-2-9km-55f1": {
+  "country": "KG",
+  "type": "radius_set",
+  "label": "Inside 4 radius areas (2-9 km) in Osh",
+  "pins": [
+   [
+    40.2657,
+    72.6178,
+    3.0
+   ],
+   [
+    40.6313,
+    73.5895,
+    2.0
+   ],
+   [
+    40.7074,
+    72.8802,
+    9.0
+   ],
+   [
+    40.7707,
+    73.2978,
+    4.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: osh 3, osh (nearest) 1",
+  "pin_names": [
+   "Kara Suu",
+   "Kara-Kulja",
+   "Nookat",
+   "Uzgen"
+  ]
+ },
+ "KG:radius:talas-1-areas-3km-965c": {
+  "country": "KG",
+  "type": "radius_set",
+  "label": "Inside 1 radius area (3 km) in Talas",
+  "pins": [
+   [
+    42.5234,
+    72.2374,
+    3.0
+   ]
+  ],
+  "pin_check": "1 of 1 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: talas 1",
+  "pin_names": [
+   "Talas"
+  ]
+ },
+ "RS:country": {
+  "country": "RS",
+  "type": "country",
+  "label": "Serbia, whole country"
+ },
+ "TR:outside:aegean-11-areas-4-11km-bf50": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "Aegean (8 provinces) outside its 11 radius areas",
+  "regions": [
+   "Afyonkarahisar Province",
+   "Aydın Province",
+   "Denizli Province",
+   "Kütahya Province",
+   "Manisa Province",
+   "Muğla Province",
+   "Uşak Province",
+   "İzmir Province"
+  ],
+  "complement_of": "TR:radius:aegean-11-areas-4-11km-ff2c",
+  "pins_excluded": [
+   [
+    36.6221,
+    29.1153,
+    4.0
+   ],
+   [
+    37.0343,
+    27.4307,
+    5.0
+   ],
+   [
+    37.2179,
+    28.3646,
+    4.0
+   ],
+   [
+    37.7833,
+    29.0845,
+    5.0
+   ],
+   [
+    37.8471,
+    27.8337,
+    4.0
+   ],
+   [
+    37.8632,
+    27.2669,
+    5.0
+   ],
+   [
+    38.0868,
+    27.7338,
+    4.0
+   ],
+   [
+    38.4174,
+    27.1291,
+    11.0
+   ],
+   [
+    38.6792,
+    29.4049,
+    4.0
+   ],
+   [
+    38.7555,
+    30.5386,
+    5.0
+   ],
+   [
+    39.4198,
+    29.9858,
+    6.0
+   ]
+  ],
+  "pin_check": "11 of 11 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: afyonkarahisar 1, aydin 2, denizli 1, izmir 2, kutahya 1, mugla 3, usak 1",
+  "pin_names": [
+   "Afyonkarahisar",
+   "Aydın",
+   "Bodrum",
+   "Denizli",
+   "Fethiye",
+   "Kuşadası",
+   "Kütahya",
+   "Muğla",
+   "Tire",
+   "Uşak",
+   "İzmir"
+  ]
+ },
+ "TR:outside:central-anatolia-5-areas-4-7km-acd8": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "Central Anatolia (8 provinces) outside its 5 radius areas",
+  "regions": [
+   "Aksaray Province",
+   "Kayseri Province",
+   "Kırıkkale Province",
+   "Kırşehir Province",
+   "Nevşehir Province",
+   "Niğde Province",
+   "Sivas Province",
+   "Yozgat Province"
+  ],
+  "complement_of": "TR:radius:central-anatolia-5-areas-4-7km-1860",
+  "pins_excluded": [
+   [
+    38.3705,
+    34.0269,
+    4.0
+   ],
+   [
+    38.625,
+    34.7151,
+    5.0
+   ],
+   [
+    38.6906,
+    35.5519,
+    7.0
+   ],
+   [
+    39.1461,
+    34.1606,
+    4.0
+   ],
+   [
+    39.7503,
+    37.0145,
+    5.0
+   ]
+  ],
+  "pin_check": "5 of 5 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: aksaray 1, kayseri 1, kirsehir 1, nevsehir 1, sivas 1",
+  "pin_names": [
+   "Aksaray",
+   "Kırşehir",
+   "Nevşehir",
+   "Sivas",
+   "Talas"
+  ]
+ },
+ "TR:outside:central-east-anatolia-6-areas-4-7km-fd10": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "Central East Anatolia (8 provinces) outside its 6 radius areas",
+  "regions": [
+   "Bingöl Province",
+   "Bitlis Province",
+   "Elazığ Province",
+   "Hakkâri Province",
+   "Malatya Province",
+   "Muş Province",
+   "Tunceli Province",
+   "Van Province"
+  ],
+  "complement_of": "TR:radius:central-east-anatolia-6-areas-4-7km-f857",
+  "pins_excluded": [
+   [
+    38.2953,
+    38.2475,
+    7.0
+   ],
+   [
+    38.5037,
+    43.3954,
+    6.0
+   ],
+   [
+    38.6747,
+    39.2227,
+    5.0
+   ],
+   [
+    38.7322,
+    41.4899,
+    4.0
+   ],
+   [
+    38.8861,
+    40.4972,
+    4.0
+   ],
+   [
+    39.029,
+    43.3591,
+    4.0
+   ]
+  ],
+  "pin_check": "6 of 6 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: bingol 1, elazig 1, malatya 1, mus 1, van 2",
+  "pin_names": [
+   "Bingöl",
+   "Elazığ",
+   "Erciş",
+   "Muş",
+   "Van",
+   "Yakınca"
+  ]
+ },
+ "TR:outside:east-black-sea-4-areas-4-8km-3a15": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "East Black Sea (6 provinces) outside its 4 radius areas",
+  "regions": [
+   "Artvin Province",
+   "Giresun Province",
+   "Gümüşhane Province",
+   "Ordu Province",
+   "Rize Province",
+   "Trabzon Province"
+  ],
+  "complement_of": "TR:radius:east-black-sea-4-areas-4-8km-9432",
+  "pins_excluded": [
+   [
+    40.9174,
+    38.3848,
+    4.0
+   ],
+   [
+    40.9852,
+    37.8798,
+    5.0
+   ],
+   [
+    41.0213,
+    39.5707,
+    8.0
+   ],
+   [
+    41.0248,
+    40.5199,
+    4.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: giresun 1, ordu 1, rize 1, trabzon 1",
+  "pin_names": [
+   "Akçaabat",
+   "Giresun",
+   "Ordu",
+   "Rize"
+  ]
+ },
+ "TR:outside:east-marmara-8-areas-4-11km-c557": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "East Marmara (8 provinces) outside its 8 radius areas",
+  "regions": [
+   "Bilecik Province",
+   "Bolu Province",
+   "Bursa Province",
+   "Düzce Province",
+   "Eskişehir Province",
+   "Kocaeli Province",
+   "Sakarya Province",
+   "Yalova Province"
+  ],
+  "complement_of": "TR:radius:east-marmara-8-areas-4-11km-7c38",
+  "pins_excluded": [
+   [
+    39.7654,
+    30.5238,
+    6.0
+   ],
+   [
+    40.1435,
+    29.9753,
+    4.0
+   ],
+   [
+    40.1971,
+    29.0612,
+    11.0
+   ],
+   [
+    40.3741,
+    28.8838,
+    11.0
+   ],
+   [
+    40.7333,
+    31.611,
+    4.0
+   ],
+   [
+    40.7443,
+    30.0113,
+    11.0
+   ],
+   [
+    40.7552,
+    30.4109,
+    11.0
+   ],
+   [
+    40.8391,
+    31.1595,
+    5.0
+   ]
+  ],
+  "pin_check": "8 of 8 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: bilecik 1, bolu 1, bursa 2, duzce 1, eskisehir 1, kocaeli 1, sakarya 1",
+  "pin_names": [
+   "Bilecik",
+   "Bolu",
+   "Bursa",
+   "Düzce",
+   "Eskişehir",
+   "Köseköy",
+   "Mudanya",
+   "Sakarya"
+  ]
+ },
+ "TR:outside:istanbul-4-areas-11km-1ff4": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "Istanbul outside its 4 radius areas",
+  "regions": [
+   "Istanbul Province"
+  ],
+  "complement_of": "TR:radius:istanbul-4-areas-11km-b47f",
+  "pins_excluded": [
+   [
+    40.9788,
+    28.7217,
+    11.0
+   ],
+   [
+    41.034,
+    29.1739,
+    11.0
+   ],
+   [
+    41.1695,
+    29.0544,
+    11.0
+   ],
+   [
+    41.1833,
+    28.7412,
+    11.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: istanbul 4",
+  "pin_names": [
+   "Arnavutköy",
+   "Umraniye",
+   "Yakuplu",
+   "Zekeriya"
+  ]
+ },
+ "TR:outside:mediterranean-13-areas-4-11km-288c": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "Mediterranean (7 provinces) outside its 13 radius areas",
+  "regions": [
+   "Adana Province",
+   "Burdur Province",
+   "Hatay Province",
+   "Isparta Province",
+   "Kahramanmaraş Province",
+   "Mersin Province",
+   "Osmaniye Province"
+  ],
+  "complement_of": "TR:radius:mediterranean-13-areas-4-11km-3962",
+  "pins_excluded": [
+   [
+    36.0851,
+    35.9799,
+    4.0
+   ],
+   [
+    36.5436,
+    32.0019,
+    4.0
+   ],
+   [
+    36.5891,
+    36.171,
+    11.0
+   ],
+   [
+    36.787,
+    31.4407,
+    5.0
+   ],
+   [
+    36.801,
+    34.6332,
+    11.0
+   ],
+   [
+    36.8722,
+    30.6504,
+    8.0
+   ],
+   [
+    36.9472,
+    30.8477,
+    8.0
+   ],
+   [
+    36.9891,
+    35.3409,
+    8.0
+   ],
+   [
+    37.0733,
+    36.2508,
+    4.0
+   ],
+   [
+    37.3865,
+    36.8474,
+    4.0
+   ],
+   [
+    37.5777,
+    36.9236,
+    5.0
+   ],
+   [
+    37.7248,
+    30.2887,
+    4.0
+   ],
+   [
+    37.7703,
+    30.5557,
+    5.0
+   ]
+  ],
+  "pin_check": "13 of 13 pins within 5 km of a named place (Natural Earth or GeoNames; 2 of them a GeoNames place with no recorded population); admin-1 units: adana 1, antalya 3, antalya (nearest) 1, burdur 1, hatay 2, isparta 1, kahramanmaras 2, mersin 1, osmaniye 1",
+  "pin_names": [
+   "Adana",
+   "Alanya",
+   "Antalya",
+   "Burdur",
+   "Icel",
+   "Isparta",
+   "Kahramanmaraş",
+   "Manavgat",
+   "Manavuşak Evleri",
+   "Osmaniye",
+   "Samandağ",
+   "Türkoğlu",
+   "İskenderun"
+  ]
+ },
+ "TR:outside:northeast-anatolia-2-areas-4-5km-c5af": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "Northeast Anatolia (7 provinces) outside its 2 radius areas",
+  "regions": [
+   "Ardahan Province",
+   "Ağrı Province",
+   "Bayburt Province",
+   "Erzincan Province",
+   "Erzurum Province",
+   "Iğdır Province",
+   "Kars Province"
+  ],
+  "complement_of": "TR:radius:northeast-anatolia-2-areas-4-5km-979f",
+  "pins_excluded": [
+   [
+    39.7191,
+    43.0505,
+    4.0
+   ],
+   [
+    39.9183,
+    41.2794,
+    5.0
+   ]
+  ],
+  "pin_check": "2 of 2 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: agri 1, erzurum 1",
+  "pin_names": [
+   "Ağrı",
+   "Erzurum"
+  ]
+ },
+ "TR:outside:southeast-anatolia-5-areas-4-7km-259e": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "Southeast Anatolia (9 provinces) outside its 5 radius areas",
+  "regions": [
+   "Adıyaman Province",
+   "Batman Province",
+   "Diyarbakır Province",
+   "Gaziantep Province",
+   "Kilis Province",
+   "Mardin Province",
+   "Siirt Province",
+   "Şanlıurfa Province",
+   "Şırnak Province"
+  ],
+  "complement_of": "TR:radius:southeast-anatolia-5-areas-4-7km-1128",
+  "pins_excluded": [
+   [
+    37.0574,
+    37.3794,
+    7.0
+   ],
+   [
+    37.2045,
+    38.7959,
+    7.0
+   ],
+   [
+    37.7602,
+    38.2773,
+    4.0
+   ],
+   [
+    37.8794,
+    41.1235,
+    4.0
+   ],
+   [
+    37.911,
+    40.2366,
+    6.0
+   ]
+  ],
+  "pin_check": "5 of 5 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: adiyaman 1, batman 1, diyarbakir 1, gaziantep 1, sanliurfa 1",
+  "pin_names": [
+   "Adıyaman",
+   "Batman",
+   "Diyarbakır",
+   "Gaziantep",
+   "Şanlıurfa"
+  ]
+ },
+ "TR:outside:west-anatolia-4-areas-7-10km-113c": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "West Anatolia (3 provinces) outside its 4 radius areas",
+  "regions": [
+   "Ankara Province",
+   "Karaman Province",
+   "Konya Province"
+  ],
+  "complement_of": "TR:radius:west-anatolia-4-areas-7-10km-f472",
+  "pins_excluded": [
+   [
+    37.8767,
+    32.4875,
+    7.0
+   ],
+   [
+    39.792,
+    32.8063,
+    10.0
+   ],
+   [
+    39.9321,
+    32.9082,
+    10.0
+   ],
+   [
+    39.9647,
+    32.5794,
+    10.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames; 1 of them a GeoNames place with no recorded population); admin-1 units: ankara 3, konya 1",
+  "pin_names": [
+   "Ankara",
+   "Gölbaşı",
+   "Konya",
+   "Sincan"
+  ]
+ },
+ "TR:outside:west-black-sea-8-areas-4-9km-152c": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "West Black Sea (10 provinces) outside its 8 radius areas",
+  "regions": [
+   "Amasya Province",
+   "Bartın Province",
+   "Karabük Province",
+   "Kastamonu Province",
+   "Samsun Province",
+   "Sinop Province",
+   "Tokat Province",
+   "Zonguldak Province",
+   "Çankırı Province",
+   "Çorum Province"
+  ],
+  "complement_of": "TR:radius:west-black-sea-8-areas-4-9km-fa13",
+  "pins_excluded": [
+   [
+    40.3233,
+    36.5522,
+    4.0
+   ],
+   [
+    40.5491,
+    34.9602,
+    4.0
+   ],
+   [
+    41.1955,
+    32.6231,
+    5.0
+   ],
+   [
+    41.2144,
+    36.4594,
+    9.0
+   ],
+   [
+    41.2456,
+    32.693,
+    5.0
+   ],
+   [
+    41.2795,
+    31.423,
+    4.0
+   ],
+   [
+    41.3765,
+    33.777,
+    4.0
+   ],
+   [
+    41.4868,
+    31.8384,
+    6.0
+   ]
+  ],
+  "pin_check": "8 of 8 pins within 5 km of a named place (Natural Earth or GeoNames; 1 of them a GeoNames place with no recorded population); admin-1 units: corum 1, karabuk 2, kastamonu 1, samsun 1, tokat 1, zonguldak 2",
+  "pin_names": [
+   "Ereğli",
+   "Karabük",
+   "Kastamonu",
+   "Kilimli",
+   "Safranbolu",
+   "Tekkeköy",
+   "Tokat",
+   "Çorum"
+  ]
+ },
+ "TR:outside:west-marmara-7-areas-4-6km-e78a": {
+  "country": "TR",
+  "type": "radius_outside",
+  "label": "West Marmara (5 provinces) outside its 7 radius areas",
+  "regions": [
+   "Balıkesir Province",
+   "Edirne Province",
+   "Kırklareli Province",
+   "Tekirdağ Province",
+   "Çanakkale Province"
+  ],
+  "complement_of": "TR:radius:west-marmara-7-areas-4-6km-0a23",
+  "pins_excluded": [
+   [
+    39.503,
+    26.9808,
+    4.0
+   ],
+   [
+    39.6337,
+    27.8903,
+    5.0
+   ],
+   [
+    40.1462,
+    26.4029,
+    4.0
+   ],
+   [
+    40.977,
+    27.5038,
+    5.0
+   ],
+   [
+    41.1965,
+    27.7658,
+    5.0
+   ],
+   [
+    41.2861,
+    27.9995,
+    6.0
+   ],
+   [
+    41.6759,
+    26.5587,
+    4.0
+   ]
+  ],
+  "pin_check": "7 of 7 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: balikesir 2, canakkale (nearest) 1, edirne 1, tekirdag 2, tekirdag (nearest) 1",
+  "pin_names": [
+   "Balıkesir",
+   "Burhaniye",
+   "Edirne",
+   "Tekirdağ",
+   "Çanakkale",
+   "Çerkezköy",
+   "Çorlu"
+  ]
+ },
+ "TR:radius:aegean-11-areas-4-11km-ff2c": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 11 radius areas (4-11 km) in Aegean",
+  "pins": [
+   [
+    36.6221,
+    29.1153,
+    4.0
+   ],
+   [
+    37.0343,
+    27.4307,
+    5.0
+   ],
+   [
+    37.2179,
+    28.3646,
+    4.0
+   ],
+   [
+    37.7833,
+    29.0845,
+    5.0
+   ],
+   [
+    37.8471,
+    27.8337,
+    4.0
+   ],
+   [
+    37.8632,
+    27.2669,
+    5.0
+   ],
+   [
+    38.0868,
+    27.7338,
+    4.0
+   ],
+   [
+    38.4174,
+    27.1291,
+    11.0
+   ],
+   [
+    38.6792,
+    29.4049,
+    4.0
+   ],
+   [
+    38.7555,
+    30.5386,
+    5.0
+   ],
+   [
+    39.4198,
+    29.9858,
+    6.0
+   ]
+  ],
+  "pin_check": "11 of 11 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: afyonkarahisar 1, aydin 2, denizli 1, izmir 2, kutahya 1, mugla 3, usak 1",
+  "pin_names": [
+   "Afyonkarahisar",
+   "Aydın",
+   "Bodrum",
+   "Denizli",
+   "Fethiye",
+   "Kuşadası",
+   "Kütahya",
+   "Muğla",
+   "Tire",
+   "Uşak",
+   "İzmir"
+  ]
+ },
+ "TR:radius:central-anatolia-5-areas-4-7km-1860": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 5 radius areas (4-7 km) in Central Anatolia",
+  "pins": [
+   [
+    38.3705,
+    34.0269,
+    4.0
+   ],
+   [
+    38.625,
+    34.7151,
+    5.0
+   ],
+   [
+    38.6906,
+    35.5519,
+    7.0
+   ],
+   [
+    39.1461,
+    34.1606,
+    4.0
+   ],
+   [
+    39.7503,
+    37.0145,
+    5.0
+   ]
+  ],
+  "pin_check": "5 of 5 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: aksaray 1, kayseri 1, kirsehir 1, nevsehir 1, sivas 1",
+  "pin_names": [
+   "Aksaray",
+   "Kırşehir",
+   "Nevşehir",
+   "Sivas",
+   "Talas"
+  ]
+ },
+ "TR:radius:central-east-anatolia-6-areas-4-7km-f857": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 6 radius areas (4-7 km) in Central East Anatolia",
+  "pins": [
+   [
+    38.2953,
+    38.2475,
+    7.0
+   ],
+   [
+    38.5037,
+    43.3954,
+    6.0
+   ],
+   [
+    38.6747,
+    39.2227,
+    5.0
+   ],
+   [
+    38.7322,
+    41.4899,
+    4.0
+   ],
+   [
+    38.8861,
+    40.4972,
+    4.0
+   ],
+   [
+    39.029,
+    43.3591,
+    4.0
+   ]
+  ],
+  "pin_check": "6 of 6 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: bingol 1, elazig 1, malatya 1, mus 1, van 2",
+  "pin_names": [
+   "Bingöl",
+   "Elazığ",
+   "Erciş",
+   "Muş",
+   "Van",
+   "Yakınca"
+  ]
+ },
+ "TR:radius:east-black-sea-4-areas-4-8km-9432": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 4 radius areas (4-8 km) in East Black Sea",
+  "pins": [
+   [
+    40.9174,
+    38.3848,
+    4.0
+   ],
+   [
+    40.9852,
+    37.8798,
+    5.0
+   ],
+   [
+    41.0213,
+    39.5707,
+    8.0
+   ],
+   [
+    41.0248,
+    40.5199,
+    4.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: giresun 1, ordu 1, rize 1, trabzon 1",
+  "pin_names": [
+   "Akçaabat",
+   "Giresun",
+   "Ordu",
+   "Rize"
+  ]
+ },
+ "TR:radius:east-marmara-8-areas-4-11km-7c38": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 8 radius areas (4-11 km) in East Marmara",
+  "pins": [
+   [
+    39.7654,
+    30.5238,
+    6.0
+   ],
+   [
+    40.1435,
+    29.9753,
+    4.0
+   ],
+   [
+    40.1971,
+    29.0612,
+    11.0
+   ],
+   [
+    40.3741,
+    28.8838,
+    11.0
+   ],
+   [
+    40.7333,
+    31.611,
+    4.0
+   ],
+   [
+    40.7443,
+    30.0113,
+    11.0
+   ],
+   [
+    40.7552,
+    30.4109,
+    11.0
+   ],
+   [
+    40.8391,
+    31.1595,
+    5.0
+   ]
+  ],
+  "pin_check": "8 of 8 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: bilecik 1, bolu 1, bursa 2, duzce 1, eskisehir 1, kocaeli 1, sakarya 1",
+  "pin_names": [
+   "Bilecik",
+   "Bolu",
+   "Bursa",
+   "Düzce",
+   "Eskişehir",
+   "Köseköy",
+   "Mudanya",
+   "Sakarya"
+  ]
+ },
+ "TR:radius:istanbul-4-areas-11km-b47f": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 4 radius areas (11 km) in Istanbul",
+  "pins": [
+   [
+    40.9788,
+    28.7217,
+    11.0
+   ],
+   [
+    41.034,
+    29.1739,
+    11.0
+   ],
+   [
+    41.1695,
+    29.0544,
+    11.0
+   ],
+   [
+    41.1833,
+    28.7412,
+    11.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: istanbul 4",
+  "pin_names": [
+   "Arnavutköy",
+   "Umraniye",
+   "Yakuplu",
+   "Zekeriya"
+  ]
+ },
+ "TR:radius:mediterranean-13-areas-4-11km-3962": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 13 radius areas (4-11 km) in Mediterranean",
+  "pins": [
+   [
+    36.0851,
+    35.9799,
+    4.0
+   ],
+   [
+    36.5436,
+    32.0019,
+    4.0
+   ],
+   [
+    36.5891,
+    36.171,
+    11.0
+   ],
+   [
+    36.787,
+    31.4407,
+    5.0
+   ],
+   [
+    36.801,
+    34.6332,
+    11.0
+   ],
+   [
+    36.8722,
+    30.6504,
+    8.0
+   ],
+   [
+    36.9472,
+    30.8477,
+    8.0
+   ],
+   [
+    36.9891,
+    35.3409,
+    8.0
+   ],
+   [
+    37.0733,
+    36.2508,
+    4.0
+   ],
+   [
+    37.3865,
+    36.8474,
+    4.0
+   ],
+   [
+    37.5777,
+    36.9236,
+    5.0
+   ],
+   [
+    37.7248,
+    30.2887,
+    4.0
+   ],
+   [
+    37.7703,
+    30.5557,
+    5.0
+   ]
+  ],
+  "pin_check": "13 of 13 pins within 5 km of a named place (Natural Earth or GeoNames; 2 of them a GeoNames place with no recorded population); admin-1 units: adana 1, antalya 3, antalya (nearest) 1, burdur 1, hatay 2, isparta 1, kahramanmaras 2, mersin 1, osmaniye 1",
+  "pin_names": [
+   "Adana",
+   "Alanya",
+   "Antalya",
+   "Burdur",
+   "Icel",
+   "Isparta",
+   "Kahramanmaraş",
+   "Manavgat",
+   "Manavuşak Evleri",
+   "Osmaniye",
+   "Samandağ",
+   "Türkoğlu",
+   "İskenderun"
+  ]
+ },
+ "TR:radius:northeast-anatolia-2-areas-4-5km-979f": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 2 radius areas (4-5 km) in Northeast Anatolia",
+  "pins": [
+   [
+    39.7191,
+    43.0505,
+    4.0
+   ],
+   [
+    39.9183,
+    41.2794,
+    5.0
+   ]
+  ],
+  "pin_check": "2 of 2 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: agri 1, erzurum 1",
+  "pin_names": [
+   "Ağrı",
+   "Erzurum"
+  ]
+ },
+ "TR:radius:southeast-anatolia-5-areas-4-7km-1128": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 5 radius areas (4-7 km) in Southeast Anatolia",
+  "pins": [
+   [
+    37.0574,
+    37.3794,
+    7.0
+   ],
+   [
+    37.2045,
+    38.7959,
+    7.0
+   ],
+   [
+    37.7602,
+    38.2773,
+    4.0
+   ],
+   [
+    37.8794,
+    41.1235,
+    4.0
+   ],
+   [
+    37.911,
+    40.2366,
+    6.0
+   ]
+  ],
+  "pin_check": "5 of 5 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: adiyaman 1, batman 1, diyarbakir 1, gaziantep 1, sanliurfa 1",
+  "pin_names": [
+   "Adıyaman",
+   "Batman",
+   "Diyarbakır",
+   "Gaziantep",
+   "Şanlıurfa"
+  ]
+ },
+ "TR:radius:west-anatolia-4-areas-7-10km-f472": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 4 radius areas (7-10 km) in West Anatolia",
+  "pins": [
+   [
+    37.8767,
+    32.4875,
+    7.0
+   ],
+   [
+    39.792,
+    32.8063,
+    10.0
+   ],
+   [
+    39.9321,
+    32.9082,
+    10.0
+   ],
+   [
+    39.9647,
+    32.5794,
+    10.0
+   ]
+  ],
+  "pin_check": "4 of 4 pins within 5 km of a named place (Natural Earth or GeoNames; 1 of them a GeoNames place with no recorded population); admin-1 units: ankara 3, konya 1",
+  "pin_names": [
+   "Ankara",
+   "Gölbaşı",
+   "Konya",
+   "Sincan"
+  ]
+ },
+ "TR:radius:west-black-sea-8-areas-4-9km-fa13": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 8 radius areas (4-9 km) in West Black Sea",
+  "pins": [
+   [
+    40.3233,
+    36.5522,
+    4.0
+   ],
+   [
+    40.5491,
+    34.9602,
+    4.0
+   ],
+   [
+    41.1955,
+    32.6231,
+    5.0
+   ],
+   [
+    41.2144,
+    36.4594,
+    9.0
+   ],
+   [
+    41.2456,
+    32.693,
+    5.0
+   ],
+   [
+    41.2795,
+    31.423,
+    4.0
+   ],
+   [
+    41.3765,
+    33.777,
+    4.0
+   ],
+   [
+    41.4868,
+    31.8384,
+    6.0
+   ]
+  ],
+  "pin_check": "8 of 8 pins within 5 km of a named place (Natural Earth or GeoNames; 1 of them a GeoNames place with no recorded population); admin-1 units: corum 1, karabuk 2, kastamonu 1, samsun 1, tokat 1, zonguldak 2",
+  "pin_names": [
+   "Ereğli",
+   "Karabük",
+   "Kastamonu",
+   "Kilimli",
+   "Safranbolu",
+   "Tekkeköy",
+   "Tokat",
+   "Çorum"
+  ]
+ },
+ "TR:radius:west-marmara-7-areas-4-6km-0a23": {
+  "country": "TR",
+  "type": "radius_set",
+  "label": "Inside 7 radius areas (4-6 km) in West Marmara",
+  "pins": [
+   [
+    39.503,
+    26.9808,
+    4.0
+   ],
+   [
+    39.6337,
+    27.8903,
+    5.0
+   ],
+   [
+    40.1462,
+    26.4029,
+    4.0
+   ],
+   [
+    40.977,
+    27.5038,
+    5.0
+   ],
+   [
+    41.1965,
+    27.7658,
+    5.0
+   ],
+   [
+    41.2861,
+    27.9995,
+    6.0
+   ],
+   [
+    41.6759,
+    26.5587,
+    4.0
+   ]
+  ],
+  "pin_check": "7 of 7 pins within 5 km of a named place (Natural Earth or GeoNames); admin-1 units: balikesir 2, canakkale (nearest) 1, edirne 1, tekirdag 2, tekirdag (nearest) 1",
+  "pin_names": [
+   "Balıkesir",
+   "Burhaniye",
+   "Edirne",
+   "Tekirdağ",
+   "Çanakkale",
+   "Çerkezköy",
+   "Çorlu"
+  ]
+ },
+ "TR:region:aegean-8-1b62": {
+  "country": "TR",
+  "type": "region",
+  "label": "Aegean: 8 provinces, whole (Afyonkarahisar, Aydın, Denizli, Kütahya, Manisa, Muğla, Uşak, İzmir)",
+  "regions": [
+   "Afyonkarahisar Province",
+   "Aydın Province",
+   "Denizli Province",
+   "Kütahya Province",
+   "Manisa Province",
+   "Muğla Province",
+   "Uşak Province",
+   "İzmir Province"
+  ]
+ },
+ "TR:region:central-anatolia-8-1114": {
+  "country": "TR",
+  "type": "region",
+  "label": "Central Anatolia: 8 provinces, whole (Aksaray, Kayseri, Kırıkkale, Kırşehir, Nevşehir, Niğde, Sivas, Yozgat)",
+  "regions": [
+   "Aksaray Province",
+   "Kayseri Province",
+   "Kırıkkale Province",
+   "Kırşehir Province",
+   "Nevşehir Province",
+   "Niğde Province",
+   "Sivas Province",
+   "Yozgat Province"
+  ]
+ },
+ "TR:region:central-east-anatolia-8-3092": {
+  "country": "TR",
+  "type": "region",
+  "label": "Central East Anatolia: 8 provinces, whole (Bingöl, Bitlis, Elazığ, Hakkâri, Malatya, Muş, Tunceli, Van)",
+  "regions": [
+   "Bingöl Province",
+   "Bitlis Province",
+   "Elazığ Province",
+   "Hakkâri Province",
+   "Malatya Province",
+   "Muş Province",
+   "Tunceli Province",
+   "Van Province"
+  ]
+ },
+ "TR:region:east-black-sea-6-17ae": {
+  "country": "TR",
+  "type": "region",
+  "label": "East Black Sea: 6 provinces, whole (Artvin, Giresun, Gümüşhane, Ordu, Rize, Trabzon)",
+  "regions": [
+   "Artvin Province",
+   "Giresun Province",
+   "Gümüşhane Province",
+   "Ordu Province",
+   "Rize Province",
+   "Trabzon Province"
+  ]
+ },
+ "TR:region:east-marmara-8-0aa7": {
+  "country": "TR",
+  "type": "region",
+  "label": "East Marmara: 8 provinces, whole (Bilecik, Bolu, Bursa, Düzce, Eskişehir, Kocaeli, Sakarya, Yalova)",
+  "regions": [
+   "Bilecik Province",
+   "Bolu Province",
+   "Bursa Province",
+   "Düzce Province",
+   "Eskişehir Province",
+   "Kocaeli Province",
+   "Sakarya Province",
+   "Yalova Province"
+  ]
+ },
+ "TR:region:istanbul": {
+  "country": "TR",
+  "type": "region",
+  "label": "Istanbul (whole)",
+  "regions": [
+   "Istanbul Province"
+  ]
+ },
+ "TR:region:mediterranean-7-90f9": {
+  "country": "TR",
+  "type": "region",
+  "label": "Mediterranean: 7 provinces, whole (Adana, Burdur, Hatay, Isparta, Kahramanmaraş, Mersin, Osmaniye)",
+  "regions": [
+   "Adana Province",
+   "Burdur Province",
+   "Hatay Province",
+   "Isparta Province",
+   "Kahramanmaraş Province",
+   "Mersin Province",
+   "Osmaniye Province"
+  ]
+ },
+ "TR:region:northeast-anatolia-7-be48": {
+  "country": "TR",
+  "type": "region",
+  "label": "Northeast Anatolia: 7 provinces, whole (Ardahan, Ağrı, Bayburt, Erzincan, Erzurum, Iğdır, Kars)",
+  "regions": [
+   "Ardahan Province",
+   "Ağrı Province",
+   "Bayburt Province",
+   "Erzincan Province",
+   "Erzurum Province",
+   "Iğdır Province",
+   "Kars Province"
+  ]
+ },
+ "TR:region:southeast-anatolia-9-1bca": {
+  "country": "TR",
+  "type": "region",
+  "label": "Southeast Anatolia: 9 provinces, whole (Adıyaman, Batman, Diyarbakır, Gaziantep, Kilis, Mardin, Siirt, Şanlıurfa, Şırnak)",
+  "regions": [
+   "Adıyaman Province",
+   "Batman Province",
+   "Diyarbakır Province",
+   "Gaziantep Province",
+   "Kilis Province",
+   "Mardin Province",
+   "Siirt Province",
+   "Şanlıurfa Province",
+   "Şırnak Province"
+  ]
+ },
+ "TR:region:west-anatolia-3-f67d": {
+  "country": "TR",
+  "type": "region",
+  "label": "West Anatolia: 3 provinces, whole (Ankara, Karaman, Konya)",
+  "regions": [
+   "Ankara Province",
+   "Karaman Province",
+   "Konya Province"
+  ]
+ },
+ "TR:region:west-black-sea-10-53c4": {
+  "country": "TR",
+  "type": "region",
+  "label": "West Black Sea: 10 provinces, whole (Amasya, Bartın, Karabük, Kastamonu, Samsun, Sinop, Tokat, Zonguldak, Çankırı, Çorum)",
+  "regions": [
+   "Amasya Province",
+   "Bartın Province",
+   "Karabük Province",
+   "Kastamonu Province",
+   "Samsun Province",
+   "Sinop Province",
+   "Tokat Province",
+   "Zonguldak Province",
+   "Çankırı Province",
+   "Çorum Province"
+  ]
+ },
+ "TR:region:west-marmara-5-710e": {
+  "country": "TR",
+  "type": "region",
+  "label": "West Marmara: 5 provinces, whole (Balıkesir, Edirne, Kırklareli, Tekirdağ, Çanakkale)",
+  "regions": [
+   "Balıkesir Province",
+   "Edirne Province",
+   "Kırklareli Province",
+   "Tekirdağ Province",
+   "Çanakkale Province"
+  ]
+ }
+}

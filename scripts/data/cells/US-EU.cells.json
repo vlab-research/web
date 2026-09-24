@@ -1,0 +1,7673 @@
+[
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/01",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-04-08",
+  "last": "2023-04-19",
+  "spend_days": 9,
+  "spend_usd": 4226.23,
+  "impressions": 177550,
+  "started": 2666,
+  "qualified": 83,
+  "median_daily_spend": 305.02,
+  "median_minutes_to_qualify": 11.03,
+  "flags": [
+   "placed_by_spend:2666"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/02",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-04-07",
+  "spend_days": 29,
+  "spend_usd": 515.04,
+  "impressions": 18788,
+  "started": 737,
+  "qualified": 61,
+  "median_daily_spend": 10.95,
+  "median_minutes_to_qualify": 11.27,
+  "flags": [
+   "education_major_targeting",
+   "interest_targeting",
+   "job_targeting",
+   "placed_by_spend:737",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/03",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-02-23",
+  "spend_days": 1,
+  "spend_usd": 1.15,
+  "impressions": 24,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.15,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "parent_targeting",
+   "thin",
+   "one_day"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/04",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 39,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-04-07",
+  "spend_days": 27,
+  "spend_usd": 627.42,
+  "impressions": 24337,
+  "started": 834,
+  "qualified": 51,
+  "median_daily_spend": 7.73,
+  "median_minutes_to_qualify": 17.62,
+  "flags": [
+   "education_major_targeting",
+   "interest_targeting",
+   "job_targeting",
+   "placed_by_spend:834",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/05",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 39,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-02-28",
+  "spend_days": 2,
+  "spend_usd": 1.87,
+  "impressions": 55,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 0.94,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "parent_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/06",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 40,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-04-07",
+  "spend_days": 28,
+  "spend_usd": 859.85,
+  "impressions": 24829,
+  "started": 1315,
+  "qualified": 39,
+  "median_daily_spend": 21.36,
+  "median_minutes_to_qualify": 11.53,
+  "flags": [
+   "education_major_targeting",
+   "interest_targeting",
+   "job_targeting",
+   "placed_by_spend:1315",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/07",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 40,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-02-23",
+  "spend_days": 1,
+  "spend_usd": 1.06,
+  "impressions": 19,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.06,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "parent_targeting",
+   "thin",
+   "one_day"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/08",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-04-07",
+  "spend_days": 26,
+  "spend_usd": 352.53,
+  "impressions": 13635,
+  "started": 1148,
+  "qualified": 103,
+  "median_daily_spend": 7.08,
+  "median_minutes_to_qualify": 10.6,
+  "flags": [
+   "education_major_targeting",
+   "interest_targeting",
+   "job_targeting",
+   "placed_by_spend:1148",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/09",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-02-28",
+  "spend_days": 2,
+  "spend_usd": 1.45,
+  "impressions": 44,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 0.73,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "parent_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/10",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 39,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-04-07",
+  "spend_days": 24,
+  "spend_usd": 532.04,
+  "impressions": 22796,
+  "started": 1392,
+  "qualified": 69,
+  "median_daily_spend": 12.32,
+  "median_minutes_to_qualify": 12.12,
+  "flags": [
+   "education_major_targeting",
+   "interest_targeting",
+   "job_targeting",
+   "placed_by_spend:1392",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/11",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 39,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-02-23",
+  "spend_days": 1,
+  "spend_usd": 1.1,
+  "impressions": 28,
+  "started": 17,
+  "qualified": 3,
+  "median_daily_spend": 1.1,
+  "median_minutes_to_qualify": 27942.83,
+  "flags": [
+   "parent_targeting",
+   "thin",
+   "one_day",
+   "placed_by_spend:17"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/12",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 40,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-04-07",
+  "spend_days": 29,
+  "spend_usd": 941.73,
+  "impressions": 32956,
+  "started": 2199,
+  "qualified": 50,
+  "median_daily_spend": 18.61,
+  "median_minutes_to_qualify": 11.38,
+  "flags": [
+   "education_major_targeting",
+   "interest_targeting",
+   "job_targeting",
+   "placed_by_spend:2199",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-02",
+  "cell": "US-2023-02/13",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 40,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2023-02-23",
+  "last": "2023-02-23",
+  "spend_days": 1,
+  "spend_usd": 1.14,
+  "impressions": 28,
+  "started": 15,
+  "qualified": 0,
+  "median_daily_spend": 1.14,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "parent_targeting",
+   "thin",
+   "one_day",
+   "placed_by_spend:15"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/01",
+  "country": "US",
+  "place": "US:regions:AL+AR+DE+FL+GA+KY+LA+MS+NC+NH+OH+PA+SC+TN+WV",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "spend_days": 122,
+  "spend_usd": 1996.51,
+  "impressions": 87018,
+  "started": 1017,
+  "qualified": 571,
+  "median_daily_spend": 15.64,
+  "median_minutes_to_qualify": 1360.07,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/02",
+  "country": "US",
+  "place": "US:regions:AL+AR+DE+FL+GA+KY+LA+MS+NC+NH+OH+PA+SC+TN+WV",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "spend_days": 120,
+  "spend_usd": 1185.84,
+  "impressions": 45978,
+  "started": 1557,
+  "qualified": 976,
+  "median_daily_spend": 9.39,
+  "median_minutes_to_qualify": 884.17,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/03",
+  "country": "US",
+  "place": "US:regions:AK+AZ+IL+MI+MO+MT+NM",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-06",
+  "spend_days": 142,
+  "spend_usd": 1847.44,
+  "impressions": 87335,
+  "started": 682,
+  "qualified": 333,
+  "median_daily_spend": 10.18,
+  "median_minutes_to_qualify": 1049.42,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/04",
+  "country": "US",
+  "place": "US:regions:AK+AZ+IL+MI+MO+MT+NM",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-06",
+  "spend_days": 114,
+  "spend_usd": 620.17,
+  "impressions": 26183,
+  "started": 619,
+  "qualified": 389,
+  "median_daily_spend": 4.96,
+  "median_minutes_to_qualify": 2033.83,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/05",
+  "country": "US",
+  "place": "US:regions:CA+CO+NV+OR+WA",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "spend_days": 144,
+  "spend_usd": 1220.15,
+  "impressions": 53128,
+  "started": 689,
+  "qualified": 380,
+  "median_daily_spend": 8.82,
+  "median_minutes_to_qualify": 825.68,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/06",
+  "country": "US",
+  "place": "US:regions:CA+CO+NV+OR+WA",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-05",
+  "spend_days": 117,
+  "spend_usd": 858.38,
+  "impressions": 38970,
+  "started": 714,
+  "qualified": 439,
+  "median_daily_spend": 7.59,
+  "median_minutes_to_qualify": 951.77,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/07",
+  "country": "US",
+  "place": "US:regions:CT+DC+MA+MD+ME+NJ+NY+RI+VA+VT",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "spend_days": 139,
+  "spend_usd": 1587.26,
+  "impressions": 67452,
+  "started": 743,
+  "qualified": 396,
+  "median_daily_spend": 11.5,
+  "median_minutes_to_qualify": 1208.18,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/08",
+  "country": "US",
+  "place": "US:regions:CT+DC+MA+MD+ME+NJ+NY+RI+VA+VT",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "spend_days": 112,
+  "spend_usd": 894.12,
+  "impressions": 37884,
+  "started": 796,
+  "qualified": 516,
+  "median_daily_spend": 7.22,
+  "median_minutes_to_qualify": 1188.03,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/09",
+  "country": "US",
+  "place": "US:regions:HI+IA+ID+IN+KS+MN+ND+NE+OK+SD+TX+UT+WI+WY",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "spend_days": 143,
+  "spend_usd": 1756.27,
+  "impressions": 77026,
+  "started": 807,
+  "qualified": 409,
+  "median_daily_spend": 12.57,
+  "median_minutes_to_qualify": 1259.18,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-05",
+  "cell": "US-2023-05/10",
+  "country": "US",
+  "place": "US:regions:HI+IA+ID+IN+KS+MN+ND+NE+OK+SD+TX+UT+WI+WY",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "spend_days": 116,
+  "spend_usd": 792.75,
+  "impressions": 31830,
+  "started": 854,
+  "qualified": 547,
+  "median_daily_spend": 6.88,
+  "median_minutes_to_qualify": 966.98,
+  "flags": [
+   "merged_ad_sets:5"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-08",
+  "cell": "US-2023-08/01",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 24,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-10",
+  "last": "2024-09-23",
+  "spend_days": 232,
+  "spend_usd": 45087.61,
+  "impressions": 2279763,
+  "started": 32697,
+  "qualified": 6145,
+  "median_daily_spend": 180.97,
+  "median_minutes_to_qualify": 4.03,
+  "flags": [
+   "merged_ad_sets:2"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2023-08",
+  "cell": "US-2023-08/02",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 24,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-10",
+  "last": "2024-09-23",
+  "spend_days": 164,
+  "spend_usd": 16878.99,
+  "impressions": 772795,
+  "started": 5051,
+  "qualified": 2395,
+  "median_daily_spend": 50.28,
+  "median_minutes_to_qualify": 6.68,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/01",
+  "country": "US",
+  "place": "US:regions:AL+AR+FL+GA+KY+LA+MS+NC+SC+TN+VA+WV",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 40.04,
+  "impressions": 583,
+  "started": 27,
+  "qualified": 18,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": 4.72,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/02",
+  "country": "US",
+  "place": "US:regions:AL+AR+FL+GA+KY+LA+MS+NC+SC+TN+VA+WV",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-01",
+  "spend_days": 9,
+  "spend_usd": 33.8,
+  "impressions": 471,
+  "started": 30,
+  "qualified": 18,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": 3.77,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/03",
+  "country": "US",
+  "place": "US:regions:AL+AR+FL+GA+KY+LA+MS+NC+SC+TN+VA+WV",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-25",
+  "last": "2024-02-03",
+  "spend_days": 10,
+  "spend_usd": 49.53,
+  "impressions": 729,
+  "started": 35,
+  "qualified": 23,
+  "median_daily_spend": 3.44,
+  "median_minutes_to_qualify": 3.97,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/04",
+  "country": "US",
+  "place": "US:regions:AL+AR+FL+GA+KY+LA+MS+NC+SC+TN+VA+WV",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 50.63,
+  "impressions": 702,
+  "started": 42,
+  "qualified": 31,
+  "median_daily_spend": 1.46,
+  "median_minutes_to_qualify": 3.63,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/05",
+  "country": "US",
+  "place": "US:regions:AK+AZ+CA+CO+HI+ID+MT+NM+NV+OR+UT+WA+WY",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-25",
+  "last": "2024-02-03",
+  "spend_days": 10,
+  "spend_usd": 61.76,
+  "impressions": 929,
+  "started": 27,
+  "qualified": 19,
+  "median_daily_spend": 4.24,
+  "median_minutes_to_qualify": 3.47,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/06",
+  "country": "US",
+  "place": "US:regions:AK+AZ+CA+CO+HI+ID+MT+NM+NV+OR+UT+WA+WY",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 46.54,
+  "impressions": 764,
+  "started": 30,
+  "qualified": 16,
+  "median_daily_spend": 1.8,
+  "median_minutes_to_qualify": 3.78,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/07",
+  "country": "US",
+  "place": "US:regions:AK+AZ+CA+CO+HI+ID+MT+NM+NV+OR+UT+WA+WY",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-25",
+  "last": "2024-02-03",
+  "spend_days": 10,
+  "spend_usd": 37.11,
+  "impressions": 553,
+  "started": 26,
+  "qualified": 22,
+  "median_daily_spend": 1.84,
+  "median_minutes_to_qualify": 4.17,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/08",
+  "country": "US",
+  "place": "US:regions:AK+AZ+CA+CO+HI+ID+MT+NM+NV+OR+UT+WA+WY",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 54.92,
+  "impressions": 723,
+  "started": 36,
+  "qualified": 24,
+  "median_daily_spend": 1.56,
+  "median_minutes_to_qualify": 4.17,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/09",
+  "country": "US",
+  "place": "US:regions:AZ+CO+NM+NV+TX+UT",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 58.74,
+  "impressions": 984,
+  "started": 29,
+  "qualified": 23,
+  "median_daily_spend": 2.52,
+  "median_minutes_to_qualify": 4.15,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/10",
+  "country": "US",
+  "place": "US:regions:AZ+CO+NM+NV+TX+UT",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 59.52,
+  "impressions": 907,
+  "started": 34,
+  "qualified": 24,
+  "median_daily_spend": 2.1,
+  "median_minutes_to_qualify": 4.5,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/11",
+  "country": "US",
+  "place": "US:regions:AZ+CO+NM+NV+TX+UT",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-25",
+  "last": "2024-02-03",
+  "spend_days": 10,
+  "spend_usd": 75.8,
+  "impressions": 937,
+  "started": 35,
+  "qualified": 23,
+  "median_daily_spend": 2.52,
+  "median_minutes_to_qualify": 3.23,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/12",
+  "country": "US",
+  "place": "US:regions:AZ+CO+NM+NV+TX+UT",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 10,
+  "spend_usd": 36.42,
+  "impressions": 441,
+  "started": 22,
+  "qualified": 18,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": 3.81,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/13",
+  "country": "US",
+  "place": "US:regions:CT+DE+MA+MD+ME+NH+NJ+NY+PA+RI+VT",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 44.99,
+  "impressions": 766,
+  "started": 32,
+  "qualified": 27,
+  "median_daily_spend": 1.22,
+  "median_minutes_to_qualify": 3.57,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/14",
+  "country": "US",
+  "place": "US:regions:CT+DE+MA+MD+ME+NH+NJ+NY+PA+RI+VT",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-01",
+  "spend_days": 9,
+  "spend_usd": 31.73,
+  "impressions": 531,
+  "started": 30,
+  "qualified": 19,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": 3.77,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/15",
+  "country": "US",
+  "place": "US:regions:CT+DE+MA+MD+ME+NH+NJ+NY+PA+RI+VT",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-25",
+  "last": "2024-02-01",
+  "spend_days": 8,
+  "spend_usd": 29.86,
+  "impressions": 433,
+  "started": 26,
+  "qualified": 21,
+  "median_daily_spend": 2.5,
+  "median_minutes_to_qualify": 3.88,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/16",
+  "country": "US",
+  "place": "US:regions:CT+DE+MA+MD+ME+NH+NJ+NY+PA+RI+VT",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 10,
+  "spend_usd": 30.97,
+  "impressions": 526,
+  "started": 33,
+  "qualified": 28,
+  "median_daily_spend": 1.29,
+  "median_minutes_to_qualify": 3.61,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/17",
+  "country": "US",
+  "place": "US:regions:IA+IL+IN+KS+MI+MN+MO+ND+NE+OH+SD+WI",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-02",
+  "spend_days": 10,
+  "spend_usd": 35.76,
+  "impressions": 553,
+  "started": 15,
+  "qualified": 13,
+  "median_daily_spend": 1.32,
+  "median_minutes_to_qualify": 3.35,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/18",
+  "country": "US",
+  "place": "US:regions:IA+IL+IN+KS+MI+MN+MO+ND+NE+OH+SD+WI",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 64.08,
+  "impressions": 1097,
+  "started": 24,
+  "qualified": 18,
+  "median_daily_spend": 2.54,
+  "median_minutes_to_qualify": 4.56,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/19",
+  "country": "US",
+  "place": "US:regions:IA+IL+IN+KS+MI+MN+MO+ND+NE+OH+SD+WI",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-25",
+  "last": "2024-02-03",
+  "spend_days": 10,
+  "spend_usd": 52.66,
+  "impressions": 767,
+  "started": 33,
+  "qualified": 27,
+  "median_daily_spend": 2.85,
+  "median_minutes_to_qualify": 3.88,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-01a",
+  "cell": "US-2024-01a/20",
+  "country": "US",
+  "place": "US:regions:IA+IL+IN+KS+MI+MN+MO+ND+NE+OH+SD+WI",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "spend_days": 11,
+  "spend_usd": 45.34,
+  "impressions": 617,
+  "started": 36,
+  "qualified": 28,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": 4.76,
+  "flags": [
+   "thin",
+   "age_label_not_targeted"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/01",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 46,
+  "spend_usd": 135.49,
+  "impressions": 5724,
+  "started": 20,
+  "qualified": 10,
+  "median_daily_spend": 2.37,
+  "median_minutes_to_qualify": 8.93,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/02",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-22",
+  "spend_days": 45,
+  "spend_usd": 120.49,
+  "impressions": 5100,
+  "started": 24,
+  "qualified": 14,
+  "median_daily_spend": 2.07,
+  "median_minutes_to_qualify": 9.52,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/03",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-05-30",
+  "spend_days": 13,
+  "spend_usd": 14.68,
+  "impressions": 603,
+  "started": 20,
+  "qualified": 20,
+  "median_daily_spend": 1.1,
+  "median_minutes_to_qualify": 4.17,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/04",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 39,
+  "spend_usd": 88.32,
+  "impressions": 3386,
+  "started": 26,
+  "qualified": 18,
+  "median_daily_spend": 0.97,
+  "median_minutes_to_qualify": 9.77,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/05",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 39,
+  "spend_usd": 73.76,
+  "impressions": 3225,
+  "started": 22,
+  "qualified": 14,
+  "median_daily_spend": 1.48,
+  "median_minutes_to_qualify": 8.25,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/06",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 43,
+  "spend_usd": 103.53,
+  "impressions": 3822,
+  "started": 21,
+  "qualified": 10,
+  "median_daily_spend": 1.97,
+  "median_minutes_to_qualify": 7.79,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/07",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-02",
+  "spend_days": 44,
+  "spend_usd": 125.89,
+  "impressions": 4099,
+  "started": 39,
+  "qualified": 17,
+  "median_daily_spend": 2.62,
+  "median_minutes_to_qualify": 10.03,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/08",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 49,
+  "spend_usd": 297.5,
+  "impressions": 11253,
+  "started": 46,
+  "qualified": 16,
+  "median_daily_spend": 5.81,
+  "median_minutes_to_qualify": 11.49,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/09",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-02",
+  "spend_days": 47,
+  "spend_usd": 129.0,
+  "impressions": 4211,
+  "started": 20,
+  "qualified": 15,
+  "median_daily_spend": 2.55,
+  "median_minutes_to_qualify": 11.2,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/10",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 37,
+  "spend_usd": 75.5,
+  "impressions": 1950,
+  "started": 26,
+  "qualified": 10,
+  "median_daily_spend": 1.9,
+  "median_minutes_to_qualify": 15.93,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/11",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 44,
+  "spend_usd": 122.38,
+  "impressions": 3412,
+  "started": 28,
+  "qualified": 10,
+  "median_daily_spend": 2.24,
+  "median_minutes_to_qualify": 12.08,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/12",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 47,
+  "spend_usd": 115.24,
+  "impressions": 2936,
+  "started": 25,
+  "qualified": 8,
+  "median_daily_spend": 1.93,
+  "median_minutes_to_qualify": 10.79,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/13",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 38,
+  "spend_usd": 66.1,
+  "impressions": 2180,
+  "started": 25,
+  "qualified": 16,
+  "median_daily_spend": 1.34,
+  "median_minutes_to_qualify": 8.73,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/14",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 38,
+  "spend_usd": 47.6,
+  "impressions": 1681,
+  "started": 23,
+  "qualified": 15,
+  "median_daily_spend": 1.09,
+  "median_minutes_to_qualify": 8.1,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/15",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 42,
+  "spend_usd": 69.61,
+  "impressions": 2627,
+  "started": 19,
+  "qualified": 11,
+  "median_daily_spend": 1.35,
+  "median_minutes_to_qualify": 8.67,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/16",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 35,
+  "spend_usd": 50.21,
+  "impressions": 1731,
+  "started": 30,
+  "qualified": 16,
+  "median_daily_spend": 1.31,
+  "median_minutes_to_qualify": 12.99,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/17",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 36,
+  "spend_usd": 67.99,
+  "impressions": 2094,
+  "started": 36,
+  "qualified": 22,
+  "median_daily_spend": 1.63,
+  "median_minutes_to_qualify": 12.16,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/18",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 36,
+  "spend_usd": 73.58,
+  "impressions": 2268,
+  "started": 21,
+  "qualified": 14,
+  "median_daily_spend": 1.6,
+  "median_minutes_to_qualify": 10.49,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/19",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 41,
+  "spend_usd": 103.96,
+  "impressions": 2860,
+  "started": 40,
+  "qualified": 19,
+  "median_daily_spend": 2.27,
+  "median_minutes_to_qualify": 8.45,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/20",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 50,
+  "spend_usd": 206.49,
+  "impressions": 5521,
+  "started": 56,
+  "qualified": 22,
+  "median_daily_spend": 3.03,
+  "median_minutes_to_qualify": 11.38,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/21",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-02",
+  "spend_days": 48,
+  "spend_usd": 144.09,
+  "impressions": 3776,
+  "started": 33,
+  "qualified": 15,
+  "median_daily_spend": 2.5,
+  "median_minutes_to_qualify": 12.17,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/22",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 36,
+  "spend_usd": 57.79,
+  "impressions": 1305,
+  "started": 25,
+  "qualified": 13,
+  "median_daily_spend": 0.99,
+  "median_minutes_to_qualify": 10.92,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/23",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 43,
+  "spend_usd": 144.12,
+  "impressions": 3395,
+  "started": 32,
+  "qualified": 10,
+  "median_daily_spend": 2.5,
+  "median_minutes_to_qualify": 13.62,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/24",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 45,
+  "spend_usd": 80.45,
+  "impressions": 1591,
+  "started": 28,
+  "qualified": 9,
+  "median_daily_spend": 1.5,
+  "median_minutes_to_qualify": 9.67,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/25",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 42,
+  "spend_usd": 80.79,
+  "impressions": 3020,
+  "started": 21,
+  "qualified": 13,
+  "median_daily_spend": 1.68,
+  "median_minutes_to_qualify": 8.42,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/26",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 43,
+  "spend_usd": 68.88,
+  "impressions": 2664,
+  "started": 23,
+  "qualified": 15,
+  "median_daily_spend": 1.26,
+  "median_minutes_to_qualify": 8.07,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/27",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 43,
+  "spend_usd": 112.28,
+  "impressions": 4152,
+  "started": 24,
+  "qualified": 12,
+  "median_daily_spend": 1.19,
+  "median_minutes_to_qualify": 7.82,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/28",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 38,
+  "spend_usd": 119.03,
+  "impressions": 4484,
+  "started": 34,
+  "qualified": 18,
+  "median_daily_spend": 1.58,
+  "median_minutes_to_qualify": 8.66,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/29",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 42,
+  "spend_usd": 93.87,
+  "impressions": 3752,
+  "started": 27,
+  "qualified": 16,
+  "median_daily_spend": 1.9,
+  "median_minutes_to_qualify": 21.77,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/30",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 46,
+  "spend_usd": 231.79,
+  "impressions": 9264,
+  "started": 26,
+  "qualified": 9,
+  "median_daily_spend": 3.12,
+  "median_minutes_to_qualify": 9.42,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/31",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 45,
+  "spend_usd": 121.89,
+  "impressions": 3208,
+  "started": 29,
+  "qualified": 17,
+  "median_daily_spend": 2.16,
+  "median_minutes_to_qualify": 11.18,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/32",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 49,
+  "spend_usd": 257.62,
+  "impressions": 8292,
+  "started": 48,
+  "qualified": 17,
+  "median_daily_spend": 4.21,
+  "median_minutes_to_qualify": 11.47,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/33",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 45,
+  "spend_usd": 154.58,
+  "impressions": 4693,
+  "started": 24,
+  "qualified": 13,
+  "median_daily_spend": 3.02,
+  "median_minutes_to_qualify": 14.0,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/34",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 36,
+  "spend_usd": 52.59,
+  "impressions": 1387,
+  "started": 24,
+  "qualified": 13,
+  "median_daily_spend": 1.31,
+  "median_minutes_to_qualify": 10.48,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/35",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 42,
+  "spend_usd": 103.34,
+  "impressions": 2773,
+  "started": 24,
+  "qualified": 11,
+  "median_daily_spend": 2.59,
+  "median_minutes_to_qualify": 15.28,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/36",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 44,
+  "spend_usd": 90.6,
+  "impressions": 2134,
+  "started": 16,
+  "qualified": 8,
+  "median_daily_spend": 1.6,
+  "median_minutes_to_qualify": 11.07,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/37",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 34,
+  "spend_usd": 81.09,
+  "impressions": 2426,
+  "started": 28,
+  "qualified": 17,
+  "median_daily_spend": 1.4,
+  "median_minutes_to_qualify": 8.18,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/38",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 36,
+  "spend_usd": 52.61,
+  "impressions": 1795,
+  "started": 23,
+  "qualified": 15,
+  "median_daily_spend": 1.23,
+  "median_minutes_to_qualify": 7.28,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/39",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 23,
+  "spend_usd": 16.82,
+  "impressions": 640,
+  "started": 21,
+  "qualified": 19,
+  "median_daily_spend": 0.64,
+  "median_minutes_to_qualify": 7.57,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/40",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 42,
+  "spend_usd": 54.64,
+  "impressions": 1680,
+  "started": 42,
+  "qualified": 24,
+  "median_daily_spend": 1.13,
+  "median_minutes_to_qualify": 9.01,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/41",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 38,
+  "spend_usd": 89.72,
+  "impressions": 2991,
+  "started": 24,
+  "qualified": 16,
+  "median_daily_spend": 2.17,
+  "median_minutes_to_qualify": 8.11,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/42",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 39,
+  "spend_usd": 74.13,
+  "impressions": 2427,
+  "started": 25,
+  "qualified": 14,
+  "median_daily_spend": 1.63,
+  "median_minutes_to_qualify": 10.49,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/43",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 36,
+  "spend_usd": 76.91,
+  "impressions": 1737,
+  "started": 38,
+  "qualified": 27,
+  "median_daily_spend": 1.89,
+  "median_minutes_to_qualify": 9.47,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/44",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 47,
+  "spend_usd": 153.06,
+  "impressions": 4055,
+  "started": 38,
+  "qualified": 25,
+  "median_daily_spend": 3.25,
+  "median_minutes_to_qualify": 10.45,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/45",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 43,
+  "spend_usd": 213.17,
+  "impressions": 4656,
+  "started": 36,
+  "qualified": 16,
+  "median_daily_spend": 4.25,
+  "median_minutes_to_qualify": 11.82,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/46",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 36,
+  "spend_usd": 45.6,
+  "impressions": 974,
+  "started": 25,
+  "qualified": 17,
+  "median_daily_spend": 1.31,
+  "median_minutes_to_qualify": 9.25,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/47",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 47,
+  "spend_usd": 143.64,
+  "impressions": 2739,
+  "started": 36,
+  "qualified": 14,
+  "median_daily_spend": 2.36,
+  "median_minutes_to_qualify": 10.82,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/48",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 37,
+  "spend_usd": 61.91,
+  "impressions": 1164,
+  "started": 19,
+  "qualified": 13,
+  "median_daily_spend": 1.49,
+  "median_minutes_to_qualify": 12.95,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/49",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-22",
+  "spend_days": 40,
+  "spend_usd": 65.17,
+  "impressions": 2323,
+  "started": 19,
+  "qualified": 16,
+  "median_daily_spend": 1.34,
+  "median_minutes_to_qualify": 7.99,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/50",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 40,
+  "spend_usd": 49.84,
+  "impressions": 2024,
+  "started": 19,
+  "qualified": 14,
+  "median_daily_spend": 0.9,
+  "median_minutes_to_qualify": 8.63,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/51",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 36,
+  "spend_usd": 38.34,
+  "impressions": 1609,
+  "started": 16,
+  "qualified": 14,
+  "median_daily_spend": 0.65,
+  "median_minutes_to_qualify": 9.0,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/52",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 38,
+  "spend_usd": 77.76,
+  "impressions": 2314,
+  "started": 26,
+  "qualified": 17,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": 9.88,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/53",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-22",
+  "spend_days": 44,
+  "spend_usd": 109.14,
+  "impressions": 3893,
+  "started": 38,
+  "qualified": 16,
+  "median_daily_spend": 1.79,
+  "median_minutes_to_qualify": 8.18,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/54",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 42,
+  "spend_usd": 63.62,
+  "impressions": 2402,
+  "started": 14,
+  "qualified": 11,
+  "median_daily_spend": 1.33,
+  "median_minutes_to_qualify": 13.63,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/55",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 35,
+  "spend_usd": 135.04,
+  "impressions": 3394,
+  "started": 46,
+  "qualified": 26,
+  "median_daily_spend": 2.29,
+  "median_minutes_to_qualify": 8.46,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/56",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 49,
+  "spend_usd": 179.69,
+  "impressions": 4818,
+  "started": 31,
+  "qualified": 18,
+  "median_daily_spend": 3.46,
+  "median_minutes_to_qualify": 11.26,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/57",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 44,
+  "spend_usd": 119.28,
+  "impressions": 3361,
+  "started": 22,
+  "qualified": 14,
+  "median_daily_spend": 2.4,
+  "median_minutes_to_qualify": 11.45,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/58",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 32,
+  "spend_usd": 59.36,
+  "impressions": 1289,
+  "started": 17,
+  "qualified": 12,
+  "median_daily_spend": 1.27,
+  "median_minutes_to_qualify": 9.28,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/59",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 39,
+  "spend_usd": 85.6,
+  "impressions": 2016,
+  "started": 19,
+  "qualified": 12,
+  "median_daily_spend": 1.76,
+  "median_minutes_to_qualify": 11.92,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/60",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 38,
+  "spend_usd": 72.64,
+  "impressions": 1703,
+  "started": 16,
+  "qualified": 7,
+  "median_daily_spend": 1.69,
+  "median_minutes_to_qualify": 11.5,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/61",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 42,
+  "spend_usd": 71.08,
+  "impressions": 2236,
+  "started": 26,
+  "qualified": 18,
+  "median_daily_spend": 1.26,
+  "median_minutes_to_qualify": 6.81,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/62",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 48,
+  "spend_usd": 97.98,
+  "impressions": 2666,
+  "started": 24,
+  "qualified": 13,
+  "median_daily_spend": 1.68,
+  "median_minutes_to_qualify": 8.68,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/63",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 26,
+  "spend_usd": 21.88,
+  "impressions": 711,
+  "started": 20,
+  "qualified": 16,
+  "median_daily_spend": 0.7,
+  "median_minutes_to_qualify": 9.18,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/64",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 30,
+  "spend_usd": 78.93,
+  "impressions": 2095,
+  "started": 43,
+  "qualified": 23,
+  "median_daily_spend": 1.38,
+  "median_minutes_to_qualify": 8.12,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/65",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 41,
+  "spend_usd": 78.7,
+  "impressions": 2319,
+  "started": 35,
+  "qualified": 19,
+  "median_daily_spend": 1.77,
+  "median_minutes_to_qualify": 8.47,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/66",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 33,
+  "spend_usd": 46.05,
+  "impressions": 1346,
+  "started": 25,
+  "qualified": 18,
+  "median_daily_spend": 1.15,
+  "median_minutes_to_qualify": 9.72,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/67",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 37,
+  "spend_usd": 86.85,
+  "impressions": 1903,
+  "started": 39,
+  "qualified": 26,
+  "median_daily_spend": 2.14,
+  "median_minutes_to_qualify": 9.02,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/68",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 40,
+  "spend_usd": 105.78,
+  "impressions": 2541,
+  "started": 33,
+  "qualified": 24,
+  "median_daily_spend": 2.35,
+  "median_minutes_to_qualify": 9.88,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/69",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "spend_days": 47,
+  "spend_usd": 221.2,
+  "impressions": 4276,
+  "started": 35,
+  "qualified": 15,
+  "median_daily_spend": 3.85,
+  "median_minutes_to_qualify": 9.13,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/70",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-18",
+  "spend_days": 39,
+  "spend_usd": 64.34,
+  "impressions": 1145,
+  "started": 28,
+  "qualified": 16,
+  "median_daily_spend": 1.48,
+  "median_minutes_to_qualify": 9.82,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/71",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-20",
+  "spend_days": 43,
+  "spend_usd": 122.22,
+  "impressions": 2332,
+  "started": 28,
+  "qualified": 13,
+  "median_daily_spend": 2.32,
+  "median_minutes_to_qualify": 10.12,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-04",
+  "cell": "US-2024-04/72",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-06-19",
+  "spend_days": 35,
+  "spend_usd": 58.19,
+  "impressions": 937,
+  "started": 19,
+  "qualified": 11,
+  "median_daily_spend": 1.37,
+  "median_minutes_to_qualify": 10.55,
+  "flags": [
+   "education_targeting",
+   "income_targeting",
+   "thin",
+   "geometry_unknown",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/01",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 291.32,
+  "impressions": 5096,
+  "started": 12,
+  "qualified": 9,
+  "median_daily_spend": 6.84,
+  "median_minutes_to_qualify": 0.38,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/02",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 249.44,
+  "impressions": 3794,
+  "started": 18,
+  "qualified": 12,
+  "median_daily_spend": 8.93,
+  "median_minutes_to_qualify": 0.51,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/03",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 541.71,
+  "impressions": 13983,
+  "started": 14,
+  "qualified": 9,
+  "median_daily_spend": 8.34,
+  "median_minutes_to_qualify": 0.73,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/04",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 251.22,
+  "impressions": 4209,
+  "started": 20,
+  "qualified": 18,
+  "median_daily_spend": 7.56,
+  "median_minutes_to_qualify": 0.46,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/05",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 291.59,
+  "impressions": 6016,
+  "started": 17,
+  "qualified": 12,
+  "median_daily_spend": 8.37,
+  "median_minutes_to_qualify": 0.62,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/06",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 335.54,
+  "impressions": 3948,
+  "started": 15,
+  "qualified": 12,
+  "median_daily_spend": 8.97,
+  "median_minutes_to_qualify": 0.47,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/07",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-22",
+  "spend_days": 19,
+  "spend_usd": 270.18,
+  "impressions": 4342,
+  "started": 28,
+  "qualified": 26,
+  "median_daily_spend": 5.0,
+  "median_minutes_to_qualify": 0.42,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/08",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 267.52,
+  "impressions": 5418,
+  "started": 20,
+  "qualified": 16,
+  "median_daily_spend": 8.46,
+  "median_minutes_to_qualify": 0.42,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/09",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 262.99,
+  "impressions": 3967,
+  "started": 30,
+  "qualified": 24,
+  "median_daily_spend": 7.14,
+  "median_minutes_to_qualify": 0.43,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05a",
+  "cell": "US-2024-05a/10",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "spend_days": 20,
+  "spend_usd": 335.01,
+  "impressions": 6593,
+  "started": 17,
+  "qualified": 11,
+  "median_daily_spend": 8.17,
+  "median_minutes_to_qualify": 0.75,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05b",
+  "cell": "US-2024-05b/01",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-06-01",
+  "last": "2024-06-13",
+  "spend_days": 7,
+  "spend_usd": 449.89,
+  "impressions": 10717,
+  "started": 13,
+  "qualified": 9,
+  "median_daily_spend": 15.76,
+  "median_minutes_to_qualify": 0.57,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05b",
+  "cell": "US-2024-05b/02",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-06-01",
+  "last": "2024-06-13",
+  "spend_days": 8,
+  "spend_usd": 237.5,
+  "impressions": 5598,
+  "started": 13,
+  "qualified": 12,
+  "median_daily_spend": 2.4,
+  "median_minutes_to_qualify": 0.48,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05b",
+  "cell": "US-2024-05b/03",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-01",
+  "last": "2024-06-13",
+  "spend_days": 8,
+  "spend_usd": 393.44,
+  "impressions": 8984,
+  "started": 15,
+  "qualified": 11,
+  "median_daily_spend": 7.35,
+  "median_minutes_to_qualify": 0.62,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05b",
+  "cell": "US-2024-05b/04",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-24",
+  "last": "2024-06-01",
+  "spend_days": 9,
+  "spend_usd": 5.05,
+  "impressions": 120,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 0.48,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05b",
+  "cell": "US-2024-05b/05",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-05-24",
+  "last": "2024-06-01",
+  "spend_days": 9,
+  "spend_usd": 5.35,
+  "impressions": 140,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 0.66,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "interest_targeting",
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-05b",
+  "cell": "US-2024-05b/06",
+  "country": "US",
+  "place": "US:region:California",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-24",
+  "last": "2024-06-01",
+  "spend_days": 9,
+  "spend_usd": 6.53,
+  "impressions": 165,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 0.79,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/01",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 40,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 48.65,
+  "impressions": 2228,
+  "started": 2,
+  "qualified": 2,
+  "median_daily_spend": 14.36,
+  "median_minutes_to_qualify": 0.38,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/02",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 40,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 39.62,
+  "impressions": 2810,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 11.3,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/03",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 41,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 142.7,
+  "impressions": 5010,
+  "started": 2,
+  "qualified": 1,
+  "median_daily_spend": 62.99,
+  "median_minutes_to_qualify": 5948.4,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/04",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 41,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 42.17,
+  "impressions": 1906,
+  "started": 1,
+  "qualified": 1,
+  "median_daily_spend": 10.64,
+  "median_minutes_to_qualify": 0.85,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/05",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 40,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 96.37,
+  "impressions": 3796,
+  "started": 1,
+  "qualified": 1,
+  "median_daily_spend": 27.81,
+  "median_minutes_to_qualify": 0.37,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/06",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 40,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 38.38,
+  "impressions": 2340,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 11.37,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/07",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 41,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 56.05,
+  "impressions": 1781,
+  "started": 6,
+  "qualified": 6,
+  "median_daily_spend": 11.32,
+  "median_minutes_to_qualify": 0.47,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08a",
+  "cell": "US-2024-08a/08",
+  "country": "US",
+  "place": "US:zips:9+1city-9a226c24",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 41,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "spend_days": 3,
+  "spend_usd": 39.8,
+  "impressions": 927,
+  "started": 1,
+  "qualified": 1,
+  "median_daily_spend": 12.27,
+  "median_minutes_to_qualify": 0.37,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/01",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 19.43,
+  "impressions": 1071,
+  "started": 6,
+  "qualified": 5,
+  "median_daily_spend": 0.92,
+  "median_minutes_to_qualify": 7.9,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/02",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 18,
+  "spend_usd": 16.48,
+  "impressions": 1091,
+  "started": 12,
+  "qualified": 6,
+  "median_daily_spend": 0.96,
+  "median_minutes_to_qualify": 9.23,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/03",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-13",
+  "spend_days": 10,
+  "spend_usd": 9.53,
+  "impressions": 473,
+  "started": 8,
+  "qualified": 7,
+  "median_daily_spend": 1.0,
+  "median_minutes_to_qualify": 7.05,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/04",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-15",
+  "spend_days": 14,
+  "spend_usd": 15.3,
+  "impressions": 999,
+  "started": 8,
+  "qualified": 8,
+  "median_daily_spend": 1.16,
+  "median_minutes_to_qualify": 7.28,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/05",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 20,
+  "spend_usd": 23.49,
+  "impressions": 2001,
+  "started": 13,
+  "qualified": 7,
+  "median_daily_spend": 1.09,
+  "median_minutes_to_qualify": 8.88,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/06",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 21,
+  "spend_usd": 24.18,
+  "impressions": 2224,
+  "started": 7,
+  "qualified": 4,
+  "median_daily_spend": 1.02,
+  "median_minutes_to_qualify": 8.01,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/07",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-16",
+  "spend_days": 20,
+  "spend_usd": 33.93,
+  "impressions": 1906,
+  "started": 13,
+  "qualified": 7,
+  "median_daily_spend": 1.48,
+  "median_minutes_to_qualify": 11.55,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/08",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 21,
+  "spend_usd": 72.57,
+  "impressions": 4254,
+  "started": 14,
+  "qualified": 5,
+  "median_daily_spend": 2.5,
+  "median_minutes_to_qualify": 10.23,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/09",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 21,
+  "spend_usd": 90.53,
+  "impressions": 5139,
+  "started": 10,
+  "qualified": 3,
+  "median_daily_spend": 3.34,
+  "median_minutes_to_qualify": 7.48,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/10",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 21,
+  "spend_usd": 33.94,
+  "impressions": 1889,
+  "started": 7,
+  "qualified": 3,
+  "median_daily_spend": 1.13,
+  "median_minutes_to_qualify": 10.5,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/11",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 20,
+  "spend_usd": 24.14,
+  "impressions": 1375,
+  "started": 10,
+  "qualified": 3,
+  "median_daily_spend": 1.17,
+  "median_minutes_to_qualify": 15.4,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/12",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 23,
+  "spend_usd": 78.95,
+  "impressions": 2450,
+  "started": 14,
+  "qualified": 2,
+  "median_daily_spend": 1.65,
+  "median_minutes_to_qualify": 12.85,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/13",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 18,
+  "spend_usd": 16.78,
+  "impressions": 666,
+  "started": 9,
+  "qualified": 6,
+  "median_daily_spend": 0.94,
+  "median_minutes_to_qualify": 7.93,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/14",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 23,
+  "spend_usd": 53.57,
+  "impressions": 1916,
+  "started": 13,
+  "qualified": 6,
+  "median_daily_spend": 1.37,
+  "median_minutes_to_qualify": 8.99,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/15",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 18,
+  "spend_usd": 21.33,
+  "impressions": 1037,
+  "started": 9,
+  "qualified": 5,
+  "median_daily_spend": 1.09,
+  "median_minutes_to_qualify": 7.67,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/16",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-16",
+  "spend_days": 15,
+  "spend_usd": 13.3,
+  "impressions": 608,
+  "started": 11,
+  "qualified": 8,
+  "median_daily_spend": 0.82,
+  "median_minutes_to_qualify": 6.79,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/17",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-01",
+  "spend_days": 8,
+  "spend_usd": 8.12,
+  "impressions": 329,
+  "started": 22,
+  "qualified": 17,
+  "median_daily_spend": 1.04,
+  "median_minutes_to_qualify": 9.18,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/18",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 21,
+  "spend_usd": 21.55,
+  "impressions": 1184,
+  "started": 12,
+  "qualified": 4,
+  "median_daily_spend": 1.04,
+  "median_minutes_to_qualify": 7.95,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/19",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-13",
+  "spend_days": 16,
+  "spend_usd": 24.19,
+  "impressions": 954,
+  "started": 12,
+  "qualified": 8,
+  "median_daily_spend": 1.27,
+  "median_minutes_to_qualify": 9.39,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/20",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 28.96,
+  "impressions": 1080,
+  "started": 13,
+  "qualified": 8,
+  "median_daily_spend": 1.08,
+  "median_minutes_to_qualify": 9.98,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/21",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 24.51,
+  "impressions": 1128,
+  "started": 8,
+  "qualified": 6,
+  "median_daily_spend": 1.07,
+  "median_minutes_to_qualify": 8.21,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/22",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-13",
+  "spend_days": 12,
+  "spend_usd": 12.46,
+  "impressions": 423,
+  "started": 6,
+  "qualified": 5,
+  "median_daily_spend": 1.08,
+  "median_minutes_to_qualify": 10.3,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/23",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 23,
+  "spend_usd": 35.87,
+  "impressions": 1351,
+  "started": 13,
+  "qualified": 4,
+  "median_daily_spend": 1.34,
+  "median_minutes_to_qualify": 9.13,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/24",
+  "country": "US",
+  "place": "US:cluster:25348381061475555",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-14",
+  "spend_days": 15,
+  "spend_usd": 16.61,
+  "impressions": 552,
+  "started": 6,
+  "qualified": 3,
+  "median_daily_spend": 1.04,
+  "median_minutes_to_qualify": 14.62,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/25",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 19,
+  "spend_usd": 24.13,
+  "impressions": 1085,
+  "started": 6,
+  "qualified": 5,
+  "median_daily_spend": 1.11,
+  "median_minutes_to_qualify": 8.52,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/26",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 19,
+  "spend_usd": 18.82,
+  "impressions": 1024,
+  "started": 7,
+  "qualified": 5,
+  "median_daily_spend": 0.93,
+  "median_minutes_to_qualify": 8.63,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/27",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-14",
+  "spend_days": 15,
+  "spend_usd": 13.24,
+  "impressions": 569,
+  "started": 6,
+  "qualified": 5,
+  "median_daily_spend": 1.0,
+  "median_minutes_to_qualify": 6.43,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/28",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-16",
+  "spend_days": 18,
+  "spend_usd": 21.49,
+  "impressions": 914,
+  "started": 8,
+  "qualified": 6,
+  "median_daily_spend": 1.13,
+  "median_minutes_to_qualify": 11.48,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/29",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 20,
+  "spend_usd": 23.71,
+  "impressions": 1783,
+  "started": 9,
+  "qualified": 7,
+  "median_daily_spend": 0.95,
+  "median_minutes_to_qualify": 7.38,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/30",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 20,
+  "spend_usd": 17.18,
+  "impressions": 1097,
+  "started": 10,
+  "qualified": 5,
+  "median_daily_spend": 0.79,
+  "median_minutes_to_qualify": 7.42,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/31",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 33.92,
+  "impressions": 1832,
+  "started": 11,
+  "qualified": 7,
+  "median_daily_spend": 1.22,
+  "median_minutes_to_qualify": 11.52,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/32",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 23,
+  "spend_usd": 66.67,
+  "impressions": 3540,
+  "started": 13,
+  "qualified": 7,
+  "median_daily_spend": 2.41,
+  "median_minutes_to_qualify": 11.07,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/33",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 21,
+  "spend_usd": 44.34,
+  "impressions": 2186,
+  "started": 9,
+  "qualified": 5,
+  "median_daily_spend": 1.36,
+  "median_minutes_to_qualify": 11.67,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/34",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 16,
+  "spend_usd": 19.4,
+  "impressions": 812,
+  "started": 4,
+  "qualified": 3,
+  "median_daily_spend": 1.17,
+  "median_minutes_to_qualify": 11.92,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/35",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 16,
+  "spend_usd": 14.17,
+  "impressions": 645,
+  "started": 7,
+  "qualified": 5,
+  "median_daily_spend": 0.96,
+  "median_minutes_to_qualify": 11.57,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/36",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 17,
+  "spend_usd": 24.02,
+  "impressions": 846,
+  "started": 4,
+  "qualified": 2,
+  "median_daily_spend": 1.52,
+  "median_minutes_to_qualify": 14.9,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/37",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 15,
+  "spend_usd": 17.66,
+  "impressions": 550,
+  "started": 12,
+  "qualified": 7,
+  "median_daily_spend": 0.88,
+  "median_minutes_to_qualify": 10.92,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/38",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 17,
+  "spend_usd": 13.86,
+  "impressions": 548,
+  "started": 11,
+  "qualified": 7,
+  "median_daily_spend": 0.87,
+  "median_minutes_to_qualify": 8.9,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/39",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 15,
+  "spend_usd": 15.58,
+  "impressions": 627,
+  "started": 10,
+  "qualified": 7,
+  "median_daily_spend": 0.94,
+  "median_minutes_to_qualify": 9.03,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/40",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-16",
+  "spend_days": 14,
+  "spend_usd": 10.59,
+  "impressions": 410,
+  "started": 9,
+  "qualified": 8,
+  "median_daily_spend": 0.71,
+  "median_minutes_to_qualify": 7.08,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/41",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 22,
+  "spend_usd": 29.8,
+  "impressions": 1242,
+  "started": 14,
+  "qualified": 6,
+  "median_daily_spend": 1.08,
+  "median_minutes_to_qualify": 8.11,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/42",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 21,
+  "spend_usd": 27.54,
+  "impressions": 1170,
+  "started": 12,
+  "qualified": 5,
+  "median_daily_spend": 1.11,
+  "median_minutes_to_qualify": 11.82,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/43",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-14",
+  "spend_days": 16,
+  "spend_usd": 20.26,
+  "impressions": 687,
+  "started": 12,
+  "qualified": 9,
+  "median_daily_spend": 1.13,
+  "median_minutes_to_qualify": 9.72,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/44",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 21,
+  "spend_usd": 33.22,
+  "impressions": 1321,
+  "started": 9,
+  "qualified": 7,
+  "median_daily_spend": 1.24,
+  "median_minutes_to_qualify": 8.77,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/45",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 19,
+  "spend_usd": 45.45,
+  "impressions": 1385,
+  "started": 11,
+  "qualified": 6,
+  "median_daily_spend": 1.62,
+  "median_minutes_to_qualify": 14.82,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/46",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 17,
+  "spend_usd": 17.78,
+  "impressions": 546,
+  "started": 4,
+  "qualified": 4,
+  "median_daily_spend": 1.06,
+  "median_minutes_to_qualify": 13.23,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/47",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 21,
+  "spend_usd": 34.2,
+  "impressions": 1067,
+  "started": 7,
+  "qualified": 4,
+  "median_daily_spend": 1.18,
+  "median_minutes_to_qualify": 12.66,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/48",
+  "country": "US",
+  "place": "US:cluster:7297778167017792",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 17,
+  "spend_usd": 21.19,
+  "impressions": 622,
+  "started": 5,
+  "qualified": 3,
+  "median_daily_spend": 1.09,
+  "median_minutes_to_qualify": 9.92,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/49",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-13",
+  "spend_days": 11,
+  "spend_usd": 9.85,
+  "impressions": 343,
+  "started": 11,
+  "qualified": 10,
+  "median_daily_spend": 0.97,
+  "median_minutes_to_qualify": 11.38,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/50",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 20.65,
+  "impressions": 923,
+  "started": 8,
+  "qualified": 5,
+  "median_daily_spend": 1.04,
+  "median_minutes_to_qualify": 9.2,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/51",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 16,
+  "spend_usd": 16.58,
+  "impressions": 767,
+  "started": 8,
+  "qualified": 5,
+  "median_daily_spend": 1.02,
+  "median_minutes_to_qualify": 8.75,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/52",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-13",
+  "spend_days": 9,
+  "spend_usd": 9.66,
+  "impressions": 319,
+  "started": 11,
+  "qualified": 9,
+  "median_daily_spend": 1.11,
+  "median_minutes_to_qualify": 8.45,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/53",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 19,
+  "spend_usd": 23.57,
+  "impressions": 1498,
+  "started": 6,
+  "qualified": 5,
+  "median_daily_spend": 1.17,
+  "median_minutes_to_qualify": 9.9,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/54",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 20,
+  "spend_usd": 26.1,
+  "impressions": 1490,
+  "started": 4,
+  "qualified": 3,
+  "median_daily_spend": 1.11,
+  "median_minutes_to_qualify": 8.73,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/55",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-14",
+  "spend_days": 18,
+  "spend_usd": 22.31,
+  "impressions": 745,
+  "started": 13,
+  "qualified": 10,
+  "median_daily_spend": 1.07,
+  "median_minutes_to_qualify": 7.83,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/56",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 19,
+  "spend_usd": 25.56,
+  "impressions": 1379,
+  "started": 7,
+  "qualified": 7,
+  "median_daily_spend": 1.2,
+  "median_minutes_to_qualify": 8.97,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/57",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 23,
+  "spend_usd": 54.49,
+  "impressions": 2223,
+  "started": 9,
+  "qualified": 5,
+  "median_daily_spend": 1.76,
+  "median_minutes_to_qualify": 12.57,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/58",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-13",
+  "spend_days": 10,
+  "spend_usd": 10.25,
+  "impressions": 329,
+  "started": 8,
+  "qualified": 6,
+  "median_daily_spend": 1.08,
+  "median_minutes_to_qualify": 10.5,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/59",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 33.8,
+  "impressions": 1389,
+  "started": 10,
+  "qualified": 3,
+  "median_daily_spend": 1.48,
+  "median_minutes_to_qualify": 11.93,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/60",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 19,
+  "spend_usd": 24.48,
+  "impressions": 931,
+  "started": 8,
+  "qualified": 2,
+  "median_daily_spend": 1.07,
+  "median_minutes_to_qualify": 9.3,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/61",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 18,
+  "spend_usd": 16.0,
+  "impressions": 596,
+  "started": 10,
+  "qualified": 6,
+  "median_daily_spend": 0.91,
+  "median_minutes_to_qualify": 6.23,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/62",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-14",
+  "spend_days": 20,
+  "spend_usd": 40.18,
+  "impressions": 1396,
+  "started": 13,
+  "qualified": 7,
+  "median_daily_spend": 1.18,
+  "median_minutes_to_qualify": 9.33,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/63",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 11,
+  "spend_usd": 8.9,
+  "impressions": 343,
+  "started": 13,
+  "qualified": 9,
+  "median_daily_spend": 0.97,
+  "median_minutes_to_qualify": 9.88,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/64",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-26",
+  "last": "2024-09-15",
+  "spend_days": 19,
+  "spend_usd": 19.0,
+  "impressions": 607,
+  "started": 9,
+  "qualified": 6,
+  "median_daily_spend": 0.88,
+  "median_minutes_to_qualify": 8.86,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/65",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 22.03,
+  "impressions": 961,
+  "started": 15,
+  "qualified": 7,
+  "median_daily_spend": 1.08,
+  "median_minutes_to_qualify": 8.05,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/66",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 17,
+  "spend_usd": 19.22,
+  "impressions": 738,
+  "started": 10,
+  "qualified": 6,
+  "median_daily_spend": 1.06,
+  "median_minutes_to_qualify": 11.94,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/67",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 18,
+  "spend_usd": 28.68,
+  "impressions": 827,
+  "started": 15,
+  "qualified": 11,
+  "median_daily_spend": 1.36,
+  "median_minutes_to_qualify": 11.3,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/68",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-14",
+  "spend_days": 21,
+  "spend_usd": 54.1,
+  "impressions": 1616,
+  "started": 20,
+  "qualified": 9,
+  "median_daily_spend": 1.98,
+  "median_minutes_to_qualify": 10.6,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/69",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 64,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 20,
+  "spend_usd": 34.09,
+  "impressions": 1066,
+  "started": 10,
+  "qualified": 6,
+  "median_daily_spend": 1.27,
+  "median_minutes_to_qualify": 9.06,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/70",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 16,
+  "spend_usd": 16.24,
+  "impressions": 383,
+  "started": 9,
+  "qualified": 4,
+  "median_daily_spend": 1.19,
+  "median_minutes_to_qualify": 6.95,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/71",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "spend_days": 22,
+  "spend_usd": 38.61,
+  "impressions": 1141,
+  "started": 6,
+  "qualified": 3,
+  "median_daily_spend": 1.54,
+  "median_minutes_to_qualify": 11.42,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2024-08b",
+  "cell": "US-2024-08b/72",
+  "country": "US",
+  "place": "US:cluster:7401350026626762",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 65,
+   "age_max": 65,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2024-08-25",
+  "last": "2024-09-15",
+  "spend_days": 21,
+  "spend_usd": 44.69,
+  "impressions": 926,
+  "started": 9,
+  "qualified": 3,
+  "median_daily_spend": 1.21,
+  "median_minutes_to_qualify": 584.57,
+  "flags": [
+   "education_targeting",
+   "thin",
+   "geometry_unknown"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/01",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 25,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 93.35,
+  "impressions": 8176,
+  "started": 3,
+  "qualified": 0,
+  "median_daily_spend": 13.53,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/02",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 93.63,
+  "impressions": 8110,
+  "started": 4,
+  "qualified": 1,
+  "median_daily_spend": 15.25,
+  "median_minutes_to_qualify": 33.3,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/03",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-06",
+  "last": "2025-04-03",
+  "spend_days": 56,
+  "spend_usd": 1062.68,
+  "impressions": 31598,
+  "started": 177,
+  "qualified": 115,
+  "median_daily_spend": 18.16,
+  "median_minutes_to_qualify": 13.87,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/04",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 25,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 96.16,
+  "impressions": 8616,
+  "started": 2,
+  "qualified": 1,
+  "median_daily_spend": 14.63,
+  "median_minutes_to_qualify": 114.37,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/05",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 104.01,
+  "impressions": 5954,
+  "started": 10,
+  "qualified": 6,
+  "median_daily_spend": 15.24,
+  "median_minutes_to_qualify": 10.73,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/06",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-06",
+  "last": "2025-04-03",
+  "spend_days": 50,
+  "spend_usd": 732.37,
+  "impressions": 18746,
+  "started": 179,
+  "qualified": 127,
+  "median_daily_spend": 14.08,
+  "median_minutes_to_qualify": 12.4,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/07",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 25,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 97.13,
+  "impressions": 10588,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 15.36,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/08",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 98.96,
+  "impressions": 8784,
+  "started": 4,
+  "qualified": 3,
+  "median_daily_spend": 15.83,
+  "median_minutes_to_qualify": 12.8,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/09",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-06",
+  "last": "2025-04-03",
+  "spend_days": 49,
+  "spend_usd": 855.96,
+  "impressions": 31848,
+  "started": 66,
+  "qualified": 34,
+  "median_daily_spend": 3.98,
+  "median_minutes_to_qualify": 14.01,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/10",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 25,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 96.8,
+  "impressions": 9877,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 14.58,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/11",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-01-29",
+  "last": "2025-02-03",
+  "spend_days": 6,
+  "spend_usd": 100.97,
+  "impressions": 8698,
+  "started": 2,
+  "qualified": 2,
+  "median_daily_spend": 15.57,
+  "median_minutes_to_qualify": 17.88,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-01",
+  "cell": "US-2025-01/12",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-06",
+  "last": "2025-04-01",
+  "spend_days": 42,
+  "spend_usd": 674.17,
+  "impressions": 19720,
+  "started": 72,
+  "qualified": 46,
+  "median_daily_spend": 2.1,
+  "median_minutes_to_qualify": 14.6,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-06",
+  "cell": "US-2025-06/01",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 25,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2025-06-05",
+  "last": "2025-10-24",
+  "spend_days": 51,
+  "spend_usd": 898.85,
+  "impressions": 43032,
+  "started": 371,
+  "qualified": 358,
+  "median_daily_spend": 16.53,
+  "median_minutes_to_qualify": 0.0,
+  "flags": [
+   "behaviour_targeting",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-06",
+  "cell": "US-2025-06/02",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 25,
+   "interests": true
+  },
+  "person_override": null,
+  "first": "2025-06-05",
+  "last": "2025-10-24",
+  "spend_days": 48,
+  "spend_usd": 656.09,
+  "impressions": 26314,
+  "started": 510,
+  "qualified": 497,
+  "median_daily_spend": 13.93,
+  "median_minutes_to_qualify": 0.0,
+  "flags": [
+   "behaviour_targeting",
+   "targeting_changed"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-08",
+  "cell": "US-2025-08/01",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-12",
+  "last": "2025-09-02",
+  "spend_days": 21,
+  "spend_usd": 233.62,
+  "impressions": 7031,
+  "started": 54,
+  "qualified": 43,
+  "median_daily_spend": 5.88,
+  "median_minutes_to_qualify": 9.67,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-08",
+  "cell": "US-2025-08/02",
+  "country": "US",
+  "place": "US:counties:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-12",
+  "last": "2025-08-31",
+  "spend_days": 19,
+  "spend_usd": 139.87,
+  "impressions": 3609,
+  "started": 69,
+  "qualified": 56,
+  "median_daily_spend": 2.43,
+  "median_minutes_to_qualify": 10.28,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-08",
+  "cell": "US-2025-08/03",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-12",
+  "last": "2025-09-03",
+  "spend_days": 23,
+  "spend_usd": 169.95,
+  "impressions": 6565,
+  "started": 18,
+  "qualified": 12,
+  "median_daily_spend": 5.87,
+  "median_minutes_to_qualify": 12.62,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-08",
+  "cell": "US-2025-08/04",
+  "country": "US",
+  "place": "US:region-minus:Minnesota-27-1608eec1",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-12",
+  "last": "2025-09-03",
+  "spend_days": 20,
+  "spend_usd": 57.68,
+  "impressions": 2224,
+  "started": 26,
+  "qualified": 19,
+  "median_daily_spend": 1.2,
+  "median_minutes_to_qualify": 9.32,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-12",
+  "cell": "US-2025-12/01",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-12-01",
+  "last": "2025-12-02",
+  "spend_days": 2,
+  "spend_usd": 29.04,
+  "impressions": 465,
+  "started": 20,
+  "qualified": 14,
+  "median_daily_spend": 14.52,
+  "median_minutes_to_qualify": 8.43,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "US-2025-12",
+  "cell": "US-2025-12/02",
+  "country": "US",
+  "place": "US:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-12-01",
+  "last": "2025-12-03",
+  "spend_days": 3,
+  "spend_usd": 48.12,
+  "impressions": 786,
+  "started": 26,
+  "qualified": 16,
+  "median_daily_spend": 11.92,
+  "median_minutes_to_qualify": 9.12,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/01",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 24,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-04-30",
+  "last": "2024-05-18",
+  "spend_days": 7,
+  "spend_usd": 11.03,
+  "impressions": 1406,
+  "started": 2,
+  "qualified": 0,
+  "median_daily_spend": 1.73,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/02",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 39,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-01",
+  "last": "2024-05-18",
+  "spend_days": 6,
+  "spend_usd": 10.57,
+  "impressions": 1233,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 2.15,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/03",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 40,
+   "age_max": 54,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-01",
+  "last": "2024-05-18",
+  "spend_days": 5,
+  "spend_usd": 10.6,
+  "impressions": 1208,
+  "started": 3,
+  "qualified": 0,
+  "median_daily_spend": 2.27,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/04",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 55,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-01",
+  "last": "2024-05-18",
+  "spend_days": 6,
+  "spend_usd": 10.44,
+  "impressions": 896,
+  "started": 3,
+  "qualified": 0,
+  "median_daily_spend": 2.15,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/05",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 24,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-01",
+  "last": "2024-05-18",
+  "spend_days": 6,
+  "spend_usd": 9.82,
+  "impressions": 1055,
+  "started": 3,
+  "qualified": 0,
+  "median_daily_spend": 2.08,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/06",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 39,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-01",
+  "last": "2024-05-18",
+  "spend_days": 6,
+  "spend_usd": 10.38,
+  "impressions": 1111,
+  "started": 2,
+  "qualified": 0,
+  "median_daily_spend": 2.12,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/07",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 40,
+   "age_max": 54,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-01",
+  "last": "2024-05-18",
+  "spend_days": 6,
+  "spend_usd": 10.47,
+  "impressions": 939,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 2.19,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-04",
+  "cell": "IE-2024-04/08",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 55,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-01",
+  "last": "2024-05-18",
+  "spend_days": 6,
+  "spend_usd": 10.36,
+  "impressions": 721,
+  "started": 2,
+  "qualified": 0,
+  "median_daily_spend": 2.08,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/01",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 24,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-10",
+  "spend_days": 46,
+  "spend_usd": 373.74,
+  "impressions": 64151,
+  "started": 17,
+  "qualified": 8,
+  "median_daily_spend": 8.58,
+  "median_minutes_to_qualify": 4.73,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/02",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 39,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-08",
+  "spend_days": 45,
+  "spend_usd": 268.28,
+  "impressions": 35539,
+  "started": 19,
+  "qualified": 9,
+  "median_daily_spend": 7.02,
+  "median_minutes_to_qualify": 5.95,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/03",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 40,
+   "age_max": 54,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-09",
+  "spend_days": 44,
+  "spend_usd": 265.27,
+  "impressions": 26811,
+  "started": 17,
+  "qualified": 11,
+  "median_daily_spend": 5.95,
+  "median_minutes_to_qualify": 5.53,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/04",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 55,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-10",
+  "spend_days": 47,
+  "spend_usd": 255.09,
+  "impressions": 16664,
+  "started": 31,
+  "qualified": 13,
+  "median_daily_spend": 5.16,
+  "median_minutes_to_qualify": 5.98,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/05",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 24,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-10",
+  "spend_days": 46,
+  "spend_usd": 365.58,
+  "impressions": 53179,
+  "started": 15,
+  "qualified": 7,
+  "median_daily_spend": 8.45,
+  "median_minutes_to_qualify": 4.27,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/06",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 39,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-08",
+  "spend_days": 44,
+  "spend_usd": 183.38,
+  "impressions": 18813,
+  "started": 16,
+  "qualified": 12,
+  "median_daily_spend": 4.47,
+  "median_minutes_to_qualify": 5.39,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/07",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 40,
+   "age_max": 54,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-09",
+  "spend_days": 41,
+  "spend_usd": 133.91,
+  "impressions": 10647,
+  "started": 24,
+  "qualified": 20,
+  "median_daily_spend": 3.39,
+  "median_minutes_to_qualify": 5.3,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IE-2024-06",
+  "cell": "IE-2024-06/08",
+  "country": "IE",
+  "place": "IE:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 55,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-08",
+  "last": "2024-08-09",
+  "spend_days": 45,
+  "spend_usd": 139.23,
+  "impressions": 7547,
+  "started": 29,
+  "qualified": 19,
+  "median_daily_spend": 3.26,
+  "median_minutes_to_qualify": 6.12,
+  "flags": [
+   "thin",
+   "currency_unverified"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/01",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 26,
+  "spend_usd": 38.25,
+  "impressions": 3931,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.27,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/02",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 38.4,
+  "impressions": 2950,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.36,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/03",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 59,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-20",
+  "spend_days": 17,
+  "spend_usd": 19.1,
+  "impressions": 971,
+  "started": 2,
+  "qualified": 2,
+  "median_daily_spend": 1.12,
+  "median_minutes_to_qualify": 7.7,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/04",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 60,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 41.41,
+  "impressions": 1661,
+  "started": 2,
+  "qualified": 0,
+  "median_daily_spend": 1.37,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/05",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 26,
+  "spend_usd": 36.5,
+  "impressions": 3354,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 1.24,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/06",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 26,
+  "spend_usd": 40.46,
+  "impressions": 2939,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 1.43,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/07",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 59,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 40.74,
+  "impressions": 1768,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.37,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/08",
+  "country": "DE",
+  "place": "DE:region:Berlin",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 60,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 40.41,
+  "impressions": 1559,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.46,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/09",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 26,
+  "spend_usd": 37.88,
+  "impressions": 3270,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/10",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 39.06,
+  "impressions": 2840,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.32,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/11",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 45,
+   "age_max": 59,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 40.37,
+  "impressions": 2036,
+  "started": 1,
+  "qualified": 0,
+  "median_daily_spend": 1.37,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/12",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 60,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 41.39,
+  "impressions": 1649,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.36,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/13",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 29,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 26,
+  "spend_usd": 36.85,
+  "impressions": 3106,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/14",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 44,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 39.17,
+  "impressions": 2351,
+  "started": 2,
+  "qualified": 0,
+  "median_daily_spend": 1.36,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/15",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 45,
+   "age_max": 59,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 18,
+  "spend_usd": 19.09,
+  "impressions": 789,
+  "started": 2,
+  "qualified": 1,
+  "median_daily_spend": 1.12,
+  "median_minutes_to_qualify": 16.15,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "DE-2024-02",
+  "cell": "DE-2024-02/16",
+  "country": "DE",
+  "place": "DE:region:Brandenburg",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 60,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "spend_days": 25,
+  "spend_usd": 41.94,
+  "impressions": 1495,
+  "started": 2,
+  "qualified": 0,
+  "median_daily_spend": 1.44,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ }
+]

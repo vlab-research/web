@@ -23,7 +23,7 @@ P = lambda f: os.path.join(HERE, f)
 for step in ("pipeline.py", "places.py"):
     subprocess.run([sys.executable, P(step)], check=True, stdout=subprocess.DEVNULL)
 PL = json.load(open(P("places.json")))
-EV = json.load(open(P("strata_evidence.json")))
+EV = json.load(open(os.path.join(HERE, "raw", "strata_evidence.json")))
 places = [p for p in PL["places"] if p["shown"]]
 byname = {p["name"]: p for p in PL["places"]}
 

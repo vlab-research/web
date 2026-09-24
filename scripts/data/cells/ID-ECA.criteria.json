@@ -1,0 +1,298 @@
+[
+ {
+  "rec": "BG-2023-02",
+  "country": "BG",
+  "first": "2023-02-08",
+  "last": "2023-02-17",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 40,
+   "interests": true
+  },
+  "screen": [
+   "consent",
+   "age:18-99",
+   "caregiver:child_age:0-6"
+  ],
+  "who_qualified": "aged 18 or over, with a child aged 0-6 in the family; finished the survey and agreed to be contacted again",
+  "qualify_rule": "answered the follow-up permission question (after the questions and the gift-card step)",
+  "qualify_point": {
+   "question": 64,
+   "of": 65
+  },
+  "median_minutes_to_qualify": 18.4,
+  "channel": "messenger",
+  "languages": [
+   "bg"
+  ],
+  "incentive": {
+   "amount": 7,
+   "currency": "BGN",
+   "form": "gift_card"
+  },
+  "started": 802,
+  "qualified": 171,
+  "spend_usd": 888.89,
+  "cells": 8,
+  "notes": "A 10-day first round: ads split by gender, two ad age bands (18-26, 27-40) and inside/outside a 40 km radius around Sofia, with Meta's parent-of-young-child targeting. A separate survey from BG-2023-03. The form randomises respondents into one of two question blocks; the count follows one. Question count: the path of a respondent who passes every screen, unconditional jumps only."
+ },
+ {
+  "rec": "BG-2023-03",
+  "country": "BG",
+  "first": "2023-03-29",
+  "last": "2023-10-01",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "all"
+   ],
+   "age_min": 18,
+   "age_max": 40,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:18-99",
+   "caregiver:child_age:0-6"
+  ],
+  "who_qualified": "aged 18 or over, with a child aged 0-6 in the family; finished the survey and a link step",
+  "qualify_rule": "reached the 'you have qualified' message, after the questions and a step asking them to open a link",
+  "qualify_point": {
+   "question": 56,
+   "of": 57
+  },
+  "median_minutes_to_qualify": 13.8,
+  "channel": "messenger",
+  "languages": [
+   "bg"
+  ],
+  "incentive": {
+   "amount": 7,
+   "currency": "BGN",
+   "form": "gift_card"
+  },
+  "started": 6752,
+  "qualified": 1702,
+  "spend_usd": 9875.56,
+  "cells": 1,
+  "notes": "One ad set for the whole country (ages 20-40, all genders) for six months, after four days with two age-band ad sets. Before qualifying, each respondent was asked to open a link (an app or a website, by randomised arm) and answer one question about it; any answer counted. Quota rule changed on day 10 from the follow-up question to the 'qualified' message just before it; recounted under the final rule. The first four days' two ad sets carried an age label that was never extracted, so their people cannot be told from the main ad set's: the three are pooled into one cell (flag pooled_ad_sets). On 15-16 April 2023 a configuration error pointed this ad set at Serbia for about a day ($100 of spend, 1%; arrivals fell from about 140 a day to 24 over the two days); left in. Follow-up waves re-contacted these people and are not counted."
+ },
+ {
+  "rec": "ID-2025-04",
+  "country": "ID",
+  "first": "2025-04-26",
+  "last": "2025-05-09",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 21,
+   "age_max": 44,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:0-2",
+   "age:18-99"
+  ],
+  "who_qualified": "aged 18 or over, caring for a child under 2 in their home; gave a phone number",
+  "qualify_rule": "answered the phone-number question",
+  "qualify_point": {
+   "question": 29,
+   "of": 29
+  },
+  "median_minutes_to_qualify": 6.0,
+  "channel": "messenger",
+  "languages": [
+   "id"
+  ],
+  "incentive": {
+   "amount": 10000,
+   "currency": "IDR",
+   "form": "airtime"
+  },
+  "started": 14581,
+  "qualified": 4318,
+  "spend_usd": 4852.84,
+  "cells": 24,
+  "notes": "Ads in three provinces, each split into radius areas and the rest of the province, by gender and two ad age bands (21-29, 30-44). The quota rule changed on day 6 from 'answered the last main question' to 'gave a phone number' (a few questions later); qualified is recounted under the final rule. The phone question comes after the qualifying screens; the form states the airtime amount per wave. Question count: the path of a respondent who passes every screen, unconditional jumps only."
+ },
+ {
+  "rec": "KG-2023-01",
+  "country": "KG",
+  "first": "2023-01-11",
+  "last": "2023-03-31",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": true
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:0-3",
+   "age:18-99"
+  ],
+  "who_qualified": "aged 18 or over with a child aged 0-3, whose stated age matched the ad's age band; finished the short survey",
+  "qualify_rule": "answered the follow-up permission question at the end of the survey, with a stated age in the ad set's band",
+  "qualify_point": {
+   "question": 19,
+   "of": 19
+  },
+  "median_minutes_to_qualify": 5.7,
+  "channel": "messenger",
+  "languages": [
+   "ky",
+   "ru"
+  ],
+  "incentive": {
+   "amount": 100,
+   "currency": "KGS",
+   "form": "airtime",
+   "when": "after_followup"
+  },
+  "started": 7234,
+  "qualified": 2797,
+  "spend_usd": 5309.17,
+  "cells": 36,
+  "notes": "Nothing was paid for this survey; airtime was promised for completing a follow-up weeks later. Ads by gender and two ad age bands (18-24, 25-40) across 23 radius areas of 2-9 km in five regions, and the rest of the country. From day 45 the rule also required the stated age to match the ad set's band (per cell in person_override); recounted under that final rule, which gives 2,797 qualified against the 3,004 in the last report (April 2023); the gap is not explained. Six ad sets for ages 35+ ran on the first day only; their recorded spend is very likely incomplete (flag spend_doubtful). The first question is a language choice."
+ },
+ {
+  "rec": "RS-2023-04",
+  "country": "RS",
+  "first": "2023-04-09",
+  "last": "2023-09-22",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "all"
+   ],
+   "age_min": 20,
+   "age_max": 40,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "age:18-99",
+   "caregiver:child_age:0-6"
+  ],
+  "who_qualified": "aged 18 or over, with a child aged 0-6 in the family; finished the survey and a link step",
+  "qualify_rule": "reached the 'you have qualified' message, after the questions and a step asking them to open a link",
+  "qualify_point": {
+   "question": 49,
+   "of": 50
+  },
+  "median_minutes_to_qualify": 13.7,
+  "channel": "messenger",
+  "languages": [
+   "sr"
+  ],
+  "incentive": {
+   "amount": 430,
+   "currency": "RSD",
+   "form": "gift_card"
+  },
+  "started": 7668,
+  "qualified": 3071,
+  "spend_usd": 12144.29,
+  "cells": 1,
+  "notes": "One ad set for the whole country (ages 20-40, all genders) for five and a half months. The same survey design as BG-2023-03: a link step before qualifying (any answer counted). Follow-up waves re-contacted these people and are not counted."
+ },
+ {
+  "rec": "TR-2023-01",
+  "country": "TR",
+  "first": "2023-01-30",
+  "last": "2023-06-14",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 40,
+   "interests": true
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:0-3",
+   "age:18-99"
+  ],
+  "who_qualified": "aged 18 or over with a child aged 0-3; finished the short survey",
+  "qualify_rule": "answered the follow-up permission question at the end of the survey",
+  "qualify_point": {
+   "question": 17,
+   "of": 17
+  },
+  "median_minutes_to_qualify": 3.6,
+  "channel": "messenger",
+  "languages": [
+   "tr"
+  ],
+  "incentive": {
+   "amount": 35,
+   "currency": "TRY",
+   "form": "gift_card",
+   "when": "after_followup"
+  },
+  "started": 1084,
+  "qualified": 234,
+  "spend_usd": 1755.26,
+  "cells": 96,
+  "notes": "Nothing was paid for this survey; a gift card was promised for completing a follow-up weeks later. 96 ad sets: 12 statistical regions, each split into radius areas of 2-11 km around its towns and the rest of the region, by gender and two ad age bands (18-24, 25-40). For the first week the ad sets also used Meta's parent-of-young-child targeting (flag interests_part_of_run). Daily spend per ad set was very small, so every cell is thin. Four of the Mediterranean radius areas are in Antalya province, which is in no region's whole-region targeting."
+ },
+ {
+  "rec": "TR-2023-07",
+  "country": "TR",
+  "first": "2023-07-05",
+  "last": "2023-07-11",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 40,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "caregiver:child_age:0-3",
+   "age:18-99"
+  ],
+  "who_qualified": "aged 18 or over with a child aged 0-3; finished the short survey",
+  "qualify_rule": "answered the follow-up permission question at the end of the survey",
+  "qualify_point": {
+   "question": 17,
+   "of": 17
+  },
+  "median_minutes_to_qualify": 3.3,
+  "channel": "messenger",
+  "languages": [
+   "tr"
+  ],
+  "incentive": {
+   "amount": 35,
+   "currency": "TRY",
+   "form": "gift_card",
+   "when": "after_followup"
+  },
+  "started": 275,
+  "qualified": 68,
+  "spend_usd": 548.02,
+  "cells": 24,
+  "notes": "A one-week second round of the same survey, five months after TR-2023-01, with new ad sets: 12 whole statistical regions by gender, ages 18-40. Antalya province is in no region's targeting. About a quarter of this round's labelled people first wrote after its ads stopped and are not counted."
+ }
+]

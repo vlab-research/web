@@ -1,0 +1,6381 @@
+[
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/01",
+  "country": "NG",
+  "place": "NG:region:Anambra",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 19,
+  "spend_usd": 473.51,
+  "impressions": 578443,
+  "started": 175,
+  "qualified": 46,
+  "median_daily_spend": 9.85,
+  "median_minutes_to_qualify": 13.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/02",
+  "country": "NG",
+  "place": "NG:region:Anambra",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 19,
+  "spend_usd": 527.65,
+  "impressions": 703757,
+  "started": 164,
+  "qualified": 28,
+  "median_daily_spend": 8.67,
+  "median_minutes_to_qualify": 11.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/03",
+  "country": "NG",
+  "place": "NG:region:Anambra",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.83,
+  "impressions": 826,
+  "started": 8,
+  "qualified": 1,
+  "median_daily_spend": 0.83,
+  "median_minutes_to_qualify": 26.1,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/04",
+  "country": "NG",
+  "place": "NG:region:Anambra",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 4.9,
+  "impressions": 10253,
+  "started": 12,
+  "qualified": 2,
+  "median_daily_spend": 2.45,
+  "median_minutes_to_qualify": 14.9,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:4",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/05",
+  "country": "NG",
+  "place": "NG:region:Anambra",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.94,
+  "impressions": 1038,
+  "started": 6,
+  "qualified": 0,
+  "median_daily_spend": 0.94,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/06",
+  "country": "NG",
+  "place": "NG:region:Anambra",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 38.77,
+  "impressions": 49524,
+  "started": 13,
+  "qualified": 2,
+  "median_daily_spend": 19.38,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:3",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/07",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 19,
+  "spend_usd": 164.21,
+  "impressions": 277202,
+  "started": 204,
+  "qualified": 90,
+  "median_daily_spend": 4.59,
+  "median_minutes_to_qualify": 14.2,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/08",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 18,
+  "spend_usd": 150.2,
+  "impressions": 294387,
+  "started": 220,
+  "qualified": 86,
+  "median_daily_spend": 3.21,
+  "median_minutes_to_qualify": 14.7,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/09",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.87,
+  "impressions": 788,
+  "started": 10,
+  "qualified": 2,
+  "median_daily_spend": 0.87,
+  "median_minutes_to_qualify": 15.9,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/10",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 2.49,
+  "impressions": 7285,
+  "started": 31,
+  "qualified": 7,
+  "median_daily_spend": 1.25,
+  "median_minutes_to_qualify": 21.7,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:12",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/11",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 27,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-09-15",
+  "last": "2023-09-18",
+  "spend_days": 4,
+  "spend_usd": 205.53,
+  "impressions": 119660,
+  "started": 135,
+  "qualified": 55,
+  "median_daily_spend": 47.72,
+  "median_minutes_to_qualify": 13.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/12",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.77,
+  "impressions": 544,
+  "started": 10,
+  "qualified": 3,
+  "median_daily_spend": 0.77,
+  "median_minutes_to_qualify": 14.6,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:4",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/13",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 4.33,
+  "impressions": 8302,
+  "started": 10,
+  "qualified": 2,
+  "median_daily_spend": 2.17,
+  "median_minutes_to_qualify": 13.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/14",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 16,
+  "spend_usd": 102.43,
+  "impressions": 196424,
+  "started": 634,
+  "qualified": 276,
+  "median_daily_spend": 2.44,
+  "median_minutes_to_qualify": 11.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/15",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 19,
+  "spend_usd": 113.28,
+  "impressions": 225055,
+  "started": 439,
+  "qualified": 160,
+  "median_daily_spend": 2.62,
+  "median_minutes_to_qualify": 12.8,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/16",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.8,
+  "impressions": 1758,
+  "started": 15,
+  "qualified": 0,
+  "median_daily_spend": 0.8,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:6",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/17",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 7.78,
+  "impressions": 15637,
+  "started": 49,
+  "qualified": 6,
+  "median_daily_spend": 3.89,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:17",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/18",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.82,
+  "impressions": 810,
+  "started": 11,
+  "qualified": 2,
+  "median_daily_spend": 0.82,
+  "median_minutes_to_qualify": 12.2,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:6",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/19",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 3.13,
+  "impressions": 5771,
+  "started": 30,
+  "qualified": 8,
+  "median_daily_spend": 1.57,
+  "median_minutes_to_qualify": 17.0,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:8",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/20",
+  "country": "NG",
+  "place": "NG:region:Niger",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 19,
+  "spend_usd": 203.3,
+  "impressions": 323450,
+  "started": 190,
+  "qualified": 70,
+  "median_daily_spend": 4.12,
+  "median_minutes_to_qualify": 14.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/21",
+  "country": "NG",
+  "place": "NG:region:Niger",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 17,
+  "spend_usd": 232.78,
+  "impressions": 413677,
+  "started": 217,
+  "qualified": 71,
+  "median_daily_spend": 5.44,
+  "median_minutes_to_qualify": 12.2,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/22",
+  "country": "NG",
+  "place": "NG:region:Niger",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.84,
+  "impressions": 781,
+  "started": 5,
+  "qualified": 0,
+  "median_daily_spend": 0.84,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/23",
+  "country": "NG",
+  "place": "NG:region:Niger",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 5.81,
+  "impressions": 15483,
+  "started": 18,
+  "qualified": 7,
+  "median_daily_spend": 2.91,
+  "median_minutes_to_qualify": 14.5,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:5",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/24",
+  "country": "NG",
+  "place": "NG:region:Niger",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 27,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-09-15",
+  "last": "2023-09-19",
+  "spend_days": 5,
+  "spend_usd": 282.76,
+  "impressions": 228792,
+  "started": 177,
+  "qualified": 50,
+  "median_daily_spend": 53.49,
+  "median_minutes_to_qualify": 10.8,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/25",
+  "country": "NG",
+  "place": "NG:region:Niger",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.89,
+  "impressions": 1330,
+  "started": 7,
+  "qualified": 1,
+  "median_daily_spend": 0.89,
+  "median_minutes_to_qualify": 9.9,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:3",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/26",
+  "country": "NG",
+  "place": "NG:region:Niger",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 10.31,
+  "impressions": 15719,
+  "started": 15,
+  "qualified": 3,
+  "median_daily_spend": 5.16,
+  "median_minutes_to_qualify": 40.0,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/27",
+  "country": "NG",
+  "place": "NG:region:Rivers",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 16,
+  "spend_usd": 91.39,
+  "impressions": 173446,
+  "started": 380,
+  "qualified": 159,
+  "median_daily_spend": 2.83,
+  "median_minutes_to_qualify": 12.8,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/28",
+  "country": "NG",
+  "place": "NG:region:Rivers",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 18,
+  "spend_usd": 90.01,
+  "impressions": 228016,
+  "started": 330,
+  "qualified": 105,
+  "median_daily_spend": 3.25,
+  "median_minutes_to_qualify": 13.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/29",
+  "country": "NG",
+  "place": "NG:region:Rivers",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.9,
+  "impressions": 999,
+  "started": 8,
+  "qualified": 1,
+  "median_daily_spend": 0.9,
+  "median_minutes_to_qualify": 16.9,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:1",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/30",
+  "country": "NG",
+  "place": "NG:region:Rivers",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 3.93,
+  "impressions": 9311,
+  "started": 27,
+  "qualified": 5,
+  "median_daily_spend": 1.96,
+  "median_minutes_to_qualify": 12.8,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:3",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/31",
+  "country": "NG",
+  "place": "NG:region:Rivers",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.92,
+  "impressions": 1221,
+  "started": 10,
+  "qualified": 1,
+  "median_daily_spend": 0.92,
+  "median_minutes_to_qualify": 12.8,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:3",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/32",
+  "country": "NG",
+  "place": "NG:region:Rivers",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 4.83,
+  "impressions": 9200,
+  "started": 30,
+  "qualified": 8,
+  "median_daily_spend": 2.42,
+  "median_minutes_to_qualify": 14.0,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:7",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/33",
+  "country": "NG",
+  "place": "NG:region:Sokoto",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 19,
+  "spend_usd": 351.21,
+  "impressions": 448872,
+  "started": 183,
+  "qualified": 54,
+  "median_daily_spend": 5.49,
+  "median_minutes_to_qualify": 13.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/34",
+  "country": "NG",
+  "place": "NG:region:Sokoto",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-24",
+  "last": "2023-09-11",
+  "spend_days": 19,
+  "spend_usd": 329.87,
+  "impressions": 441448,
+  "started": 159,
+  "qualified": 45,
+  "median_daily_spend": 4.91,
+  "median_minutes_to_qualify": 12.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/35",
+  "country": "NG",
+  "place": "NG:region:Sokoto",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.87,
+  "impressions": 1177,
+  "started": 9,
+  "qualified": 0,
+  "median_daily_spend": 0.87,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/36",
+  "country": "NG",
+  "place": "NG:region:Sokoto",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 7.21,
+  "impressions": 17653,
+  "started": 21,
+  "qualified": 5,
+  "median_daily_spend": 3.61,
+  "median_minutes_to_qualify": 8.1,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:9",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/37",
+  "country": "NG",
+  "place": "NG:region:Sokoto",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 27,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-09-15",
+  "last": "2023-09-21",
+  "spend_days": 7,
+  "spend_usd": 498.27,
+  "impressions": 237110,
+  "started": 121,
+  "qualified": 31,
+  "median_daily_spend": 43.36,
+  "median_minutes_to_qualify": 14.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/38",
+  "country": "NG",
+  "place": "NG:region:Sokoto",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-12",
+  "last": "2023-08-12",
+  "spend_days": 1,
+  "spend_usd": 0.99,
+  "impressions": 785,
+  "started": 4,
+  "qualified": 0,
+  "median_daily_spend": 0.99,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "one_day",
+   "ad_set_dropped_before_end",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-08",
+  "cell": "NG-2023-08/39",
+  "country": "NG",
+  "place": "NG:region:Sokoto",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-15",
+  "last": "2023-08-16",
+  "spend_days": 2,
+  "spend_usd": 21.65,
+  "impressions": 22366,
+  "started": 14,
+  "qualified": 2,
+  "median_daily_spend": 10.82,
+  "median_minutes_to_qualify": 17.4,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:2",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-10",
+  "cell": "NG-2023-10/01",
+  "country": "NG",
+  "place": "NG:region:Kano",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-10-16",
+  "last": "2023-10-17",
+  "spend_days": 2,
+  "spend_usd": 4.05,
+  "impressions": 11551,
+  "started": 36,
+  "qualified": 1,
+  "median_daily_spend": 2.02,
+  "median_minutes_to_qualify": 12.2,
+  "flags": [
+   "thin",
+   "qualify_rule_on_routed_question"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-10",
+  "cell": "NG-2023-10/02",
+  "country": "NG",
+  "place": "NG:region:Kano",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-10-16",
+  "last": "2023-10-17",
+  "spend_days": 2,
+  "spend_usd": 4.08,
+  "impressions": 10837,
+  "started": 22,
+  "qualified": 0,
+  "median_daily_spend": 2.04,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "qualify_rule_on_routed_question"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-10",
+  "cell": "NG-2023-10/03",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-10-16",
+  "last": "2023-10-17",
+  "spend_days": 2,
+  "spend_usd": 4.06,
+  "impressions": 7076,
+  "started": 64,
+  "qualified": 6,
+  "median_daily_spend": 2.03,
+  "median_minutes_to_qualify": 8.3,
+  "flags": [
+   "thin",
+   "qualify_rule_on_routed_question"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-10",
+  "cell": "NG-2023-10/04",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-10-16",
+  "last": "2023-10-19",
+  "spend_days": 4,
+  "spend_usd": 277.87,
+  "impressions": 549927,
+  "started": 851,
+  "qualified": 2,
+  "median_daily_spend": 78.36,
+  "median_minutes_to_qualify": 1215.3,
+  "flags": [
+   "qualify_rule_on_routed_question"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-11",
+  "cell": "NG-2023-11/01",
+  "country": "NG",
+  "place": "NG:region:Kano",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 35,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-23",
+  "spend_days": 15,
+  "spend_usd": 79.97,
+  "impressions": 188046,
+  "started": 1071,
+  "qualified": 798,
+  "median_daily_spend": 5.01,
+  "median_minutes_to_qualify": 9.7,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-11",
+  "cell": "NG-2023-11/02",
+  "country": "NG",
+  "place": "NG:region:Kano",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 35,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-23",
+  "spend_days": 15,
+  "spend_usd": 28.04,
+  "impressions": 65039,
+  "started": 293,
+  "qualified": 205,
+  "median_daily_spend": 1.92,
+  "median_minutes_to_qualify": 10.1,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-11",
+  "cell": "NG-2023-11/03",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 35,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-23",
+  "spend_days": 15,
+  "spend_usd": 128.91,
+  "impressions": 247505,
+  "started": 919,
+  "qualified": 794,
+  "median_daily_spend": 8.01,
+  "median_minutes_to_qualify": 7.3,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2023-11",
+  "cell": "NG-2023-11/04",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 35,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-22",
+  "spend_days": 14,
+  "spend_usd": 39.45,
+  "impressions": 71478,
+  "started": 237,
+  "qualified": 201,
+  "median_daily_spend": 3.0,
+  "median_minutes_to_qualify": 6.8,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09a",
+  "cell": "NG-2024-09a/01",
+  "country": "NG",
+  "place": "NG:region:Adamawa",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-12",
+  "last": "2024-09-15",
+  "spend_days": 4,
+  "spend_usd": 91.93,
+  "impressions": 160349,
+  "started": 61,
+  "qualified": 10,
+  "median_daily_spend": 22.91,
+  "median_minutes_to_qualify": 10.1,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09a",
+  "cell": "NG-2024-09a/02",
+  "country": "NG",
+  "place": "NG:region:Adamawa",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-12",
+  "last": "2024-09-15",
+  "spend_days": 4,
+  "spend_usd": 217.63,
+  "impressions": 354503,
+  "started": 127,
+  "qualified": 10,
+  "median_daily_spend": 55.44,
+  "median_minutes_to_qualify": 16.4,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09a",
+  "cell": "NG-2024-09a/03",
+  "country": "NG",
+  "place": "NG:region:Federal Capital Territory",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-12",
+  "last": "2024-09-14",
+  "spend_days": 3,
+  "spend_usd": 56.76,
+  "impressions": 228542,
+  "started": 428,
+  "qualified": 52,
+  "median_daily_spend": 23.77,
+  "median_minutes_to_qualify": 15.0,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09a",
+  "cell": "NG-2024-09a/04",
+  "country": "NG",
+  "place": "NG:region:Federal Capital Territory",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-12",
+  "last": "2024-09-14",
+  "spend_days": 3,
+  "spend_usd": 66.47,
+  "impressions": 272921,
+  "started": 459,
+  "qualified": 62,
+  "median_daily_spend": 27.42,
+  "median_minutes_to_qualify": 13.4,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09a",
+  "cell": "NG-2024-09a/05",
+  "country": "NG",
+  "place": "NG:region:Nasarawa",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-12",
+  "last": "2024-09-15",
+  "spend_days": 4,
+  "spend_usd": 209.1,
+  "impressions": 293897,
+  "started": 61,
+  "qualified": 8,
+  "median_daily_spend": 57.18,
+  "median_minutes_to_qualify": 14.1,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09a",
+  "cell": "NG-2024-09a/06",
+  "country": "NG",
+  "place": "NG:region:Nasarawa",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-12",
+  "last": "2024-09-15",
+  "spend_days": 4,
+  "spend_usd": 188.17,
+  "impressions": 275244,
+  "started": 98,
+  "qualified": 9,
+  "median_daily_spend": 54.55,
+  "median_minutes_to_qualify": 12.6,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/01",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 59.71,
+  "impressions": 126668,
+  "started": 68,
+  "qualified": 24,
+  "median_daily_spend": 14.79,
+  "median_minutes_to_qualify": 11.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/02",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 101.33,
+  "impressions": 161543,
+  "started": 51,
+  "qualified": 17,
+  "median_daily_spend": 20.0,
+  "median_minutes_to_qualify": 11.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/03",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 3.84,
+  "impressions": 12198,
+  "started": 23,
+  "qualified": 10,
+  "median_daily_spend": 0.87,
+  "median_minutes_to_qualify": 9.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/04",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 4.27,
+  "impressions": 15153,
+  "started": 20,
+  "qualified": 4,
+  "median_daily_spend": 1.0,
+  "median_minutes_to_qualify": 7.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/05",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-29",
+  "spend_days": 3,
+  "spend_usd": 2.69,
+  "impressions": 12664,
+  "started": 94,
+  "qualified": 64,
+  "median_daily_spend": 1.03,
+  "median_minutes_to_qualify": 8.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/06",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 3.05,
+  "impressions": 16500,
+  "started": 67,
+  "qualified": 29,
+  "median_daily_spend": 0.78,
+  "median_minutes_to_qualify": 7.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/07",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 221.84,
+  "impressions": 164503,
+  "started": 38,
+  "qualified": 8,
+  "median_daily_spend": 51.45,
+  "median_minutes_to_qualify": 27.5,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/08",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 14.23,
+  "impressions": 25708,
+  "started": 14,
+  "qualified": 6,
+  "median_daily_spend": 2.79,
+  "median_minutes_to_qualify": 7.6,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/09",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 167.65,
+  "impressions": 227840,
+  "started": 69,
+  "qualified": 19,
+  "median_daily_spend": 38.42,
+  "median_minutes_to_qualify": 7.6,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/10",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 17.47,
+  "impressions": 41956,
+  "started": 28,
+  "qualified": 10,
+  "median_daily_spend": 3.79,
+  "median_minutes_to_qualify": 9.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/11",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 129.64,
+  "impressions": 83842,
+  "started": 20,
+  "qualified": 8,
+  "median_daily_spend": 32.43,
+  "median_minutes_to_qualify": 14.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-09b",
+  "cell": "NG-2024-09b/12",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-27",
+  "last": "2024-09-30",
+  "spend_days": 4,
+  "spend_usd": 138.23,
+  "impressions": 54644,
+  "started": 13,
+  "qualified": 6,
+  "median_daily_spend": 24.77,
+  "median_minutes_to_qualify": 8.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/01",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 946.08,
+  "impressions": 385280,
+  "started": 108,
+  "qualified": 24,
+  "median_daily_spend": 91.64,
+  "median_minutes_to_qualify": 6.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/02",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 789.9,
+  "impressions": 289826,
+  "started": 77,
+  "qualified": 17,
+  "median_daily_spend": 90.48,
+  "median_minutes_to_qualify": 5.7,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/03",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 274.56,
+  "impressions": 343282,
+  "started": 565,
+  "qualified": 145,
+  "median_daily_spend": 19.23,
+  "median_minutes_to_qualify": 5.1,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/04",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 243.89,
+  "impressions": 327449,
+  "started": 401,
+  "qualified": 123,
+  "median_daily_spend": 14.81,
+  "median_minutes_to_qualify": 4.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/05",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-12",
+  "last": "2024-10-24",
+  "spend_days": 12,
+  "spend_usd": 258.96,
+  "impressions": 529060,
+  "started": 1168,
+  "qualified": 356,
+  "median_daily_spend": 17.29,
+  "median_minutes_to_qualify": 4.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/06",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 216.84,
+  "impressions": 442263,
+  "started": 846,
+  "qualified": 189,
+  "median_daily_spend": 14.14,
+  "median_minutes_to_qualify": 5.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/07",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 1687.66,
+  "impressions": 627122,
+  "started": 125,
+  "qualified": 42,
+  "median_daily_spend": 153.33,
+  "median_minutes_to_qualify": 5.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/08",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 1114.68,
+  "impressions": 437452,
+  "started": 80,
+  "qualified": 22,
+  "median_daily_spend": 120.04,
+  "median_minutes_to_qualify": 4.6,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/09",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 1645.67,
+  "impressions": 874948,
+  "started": 152,
+  "qualified": 40,
+  "median_daily_spend": 148.62,
+  "median_minutes_to_qualify": 5.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/10",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 1088.93,
+  "impressions": 603434,
+  "started": 134,
+  "qualified": 25,
+  "median_daily_spend": 97.89,
+  "median_minutes_to_qualify": 4.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/11",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 1173.98,
+  "impressions": 251323,
+  "started": 49,
+  "qualified": 16,
+  "median_daily_spend": 132.47,
+  "median_minutes_to_qualify": 5.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10a",
+  "cell": "NG-2024-10a/12",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-16",
+  "last": "2024-10-24",
+  "spend_days": 9,
+  "spend_usd": 578.1,
+  "impressions": 138010,
+  "started": 22,
+  "qualified": 11,
+  "median_daily_spend": 61.12,
+  "median_minutes_to_qualify": 5.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/01",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 1.7,
+  "impressions": 3462,
+  "started": 29,
+  "qualified": 16,
+  "median_daily_spend": 0.85,
+  "median_minutes_to_qualify": 4.8,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/02",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 960.37,
+  "impressions": 199437,
+  "started": 17,
+  "qualified": 6,
+  "median_daily_spend": 194.92,
+  "median_minutes_to_qualify": 4.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/03",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 1.75,
+  "impressions": 3094,
+  "started": 22,
+  "qualified": 10,
+  "median_daily_spend": 0.88,
+  "median_minutes_to_qualify": 4.5,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/04",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 444.42,
+  "impressions": 86817,
+  "started": 11,
+  "qualified": 3,
+  "median_daily_spend": 89.52,
+  "median_minutes_to_qualify": 6.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/05",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 58.31,
+  "impressions": 75554,
+  "started": 405,
+  "qualified": 177,
+  "median_daily_spend": 29.16,
+  "median_minutes_to_qualify": 4.5,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/06",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 211.16,
+  "impressions": 382529,
+  "started": 235,
+  "qualified": 105,
+  "median_daily_spend": 40.58,
+  "median_minutes_to_qualify": 4.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/07",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 39.53,
+  "impressions": 55563,
+  "started": 385,
+  "qualified": 189,
+  "median_daily_spend": 19.77,
+  "median_minutes_to_qualify": 4.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/08",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 101.83,
+  "impressions": 198522,
+  "started": 215,
+  "qualified": 100,
+  "median_daily_spend": 18.31,
+  "median_minutes_to_qualify": 4.1,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/09",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 1.73,
+  "impressions": 3235,
+  "started": 796,
+  "qualified": 431,
+  "median_daily_spend": 0.86,
+  "median_minutes_to_qualify": 3.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/10",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 109.51,
+  "impressions": 162011,
+  "started": 1172,
+  "qualified": 1078,
+  "median_daily_spend": 18.58,
+  "median_minutes_to_qualify": 1.8,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/11",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 1.7,
+  "impressions": 4149,
+  "started": 713,
+  "qualified": 247,
+  "median_daily_spend": 0.85,
+  "median_minutes_to_qualify": 4.2,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/12",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 85.67,
+  "impressions": 173077,
+  "started": 240,
+  "qualified": 98,
+  "median_daily_spend": 14.0,
+  "median_minutes_to_qualify": 3.5,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/13",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 231.36,
+  "impressions": 102880,
+  "started": 84,
+  "qualified": 39,
+  "median_daily_spend": 115.68,
+  "median_minutes_to_qualify": 4.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/14",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 1275.64,
+  "impressions": 531496,
+  "started": 57,
+  "qualified": 19,
+  "median_daily_spend": 249.53,
+  "median_minutes_to_qualify": 4.7,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/15",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 113.37,
+  "impressions": 62517,
+  "started": 72,
+  "qualified": 36,
+  "median_daily_spend": 56.69,
+  "median_minutes_to_qualify": 4.7,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/16",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 733.44,
+  "impressions": 322157,
+  "started": 44,
+  "qualified": 20,
+  "median_daily_spend": 107.76,
+  "median_minutes_to_qualify": 4.7,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/17",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 1.78,
+  "impressions": 3132,
+  "started": 126,
+  "qualified": 53,
+  "median_daily_spend": 0.89,
+  "median_minutes_to_qualify": 5.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/18",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 754.83,
+  "impressions": 649972,
+  "started": 101,
+  "qualified": 25,
+  "median_daily_spend": 146.97,
+  "median_minutes_to_qualify": 5.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/19",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 1.72,
+  "impressions": 2974,
+  "started": 97,
+  "qualified": 35,
+  "median_daily_spend": 0.86,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/20",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 675.55,
+  "impressions": 429924,
+  "started": 57,
+  "qualified": 21,
+  "median_daily_spend": 120.66,
+  "median_minutes_to_qualify": 4.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/21",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 175.85,
+  "impressions": 37011,
+  "started": 45,
+  "qualified": 19,
+  "median_daily_spend": 87.92,
+  "median_minutes_to_qualify": 3.6,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/22",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 959.67,
+  "impressions": 199852,
+  "started": 23,
+  "qualified": 9,
+  "median_daily_spend": 171.08,
+  "median_minutes_to_qualify": 5.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/23",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-26",
+  "last": "2024-10-27",
+  "spend_days": 2,
+  "spend_usd": 75.83,
+  "impressions": 18348,
+  "started": 16,
+  "qualified": 6,
+  "median_daily_spend": 37.91,
+  "median_minutes_to_qualify": 3.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2024-10b",
+  "cell": "NG-2024-10b/24",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-28",
+  "last": "2024-11-02",
+  "spend_days": 6,
+  "spend_usd": 588.28,
+  "impressions": 103507,
+  "started": 15,
+  "qualified": 8,
+  "median_daily_spend": 111.16,
+  "median_minutes_to_qualify": 4.5,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/01",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 648.52,
+  "impressions": 194638,
+  "started": 55,
+  "qualified": 7,
+  "median_daily_spend": 146.33,
+  "median_minutes_to_qualify": 7.6,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/02",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 291.22,
+  "impressions": 66676,
+  "started": 19,
+  "qualified": 5,
+  "median_daily_spend": 69.91,
+  "median_minutes_to_qualify": 11.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/03",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-09",
+  "spend_days": 3,
+  "spend_usd": 50.67,
+  "impressions": 120870,
+  "started": 510,
+  "qualified": 101,
+  "median_daily_spend": 5.34,
+  "median_minutes_to_qualify": 5.5,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/04",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 29.97,
+  "impressions": 84657,
+  "started": 148,
+  "qualified": 44,
+  "median_daily_spend": 2.84,
+  "median_minutes_to_qualify": 9.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/05",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-08",
+  "spend_days": 2,
+  "spend_usd": 11.62,
+  "impressions": 46416,
+  "started": 326,
+  "qualified": 128,
+  "median_daily_spend": 5.81,
+  "median_minutes_to_qualify": 7.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/06",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-09",
+  "spend_days": 3,
+  "spend_usd": 13.23,
+  "impressions": 63508,
+  "started": 239,
+  "qualified": 61,
+  "median_daily_spend": 2.94,
+  "median_minutes_to_qualify": 7.7,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/07",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 387.85,
+  "impressions": 282850,
+  "started": 83,
+  "qualified": 10,
+  "median_daily_spend": 94.79,
+  "median_minutes_to_qualify": 10.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/08",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 91.76,
+  "impressions": 109821,
+  "started": 41,
+  "qualified": 16,
+  "median_daily_spend": 19.21,
+  "median_minutes_to_qualify": 10.6,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/09",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 271.73,
+  "impressions": 368000,
+  "started": 148,
+  "qualified": 20,
+  "median_daily_spend": 50.47,
+  "median_minutes_to_qualify": 10.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/10",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 143.76,
+  "impressions": 212700,
+  "started": 85,
+  "qualified": 14,
+  "median_daily_spend": 31.47,
+  "median_minutes_to_qualify": 9.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/11",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 370.13,
+  "impressions": 183396,
+  "started": 58,
+  "qualified": 9,
+  "median_daily_spend": 90.44,
+  "median_minutes_to_qualify": 13.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02a",
+  "cell": "NG-2025-02a/12",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-07",
+  "last": "2025-02-11",
+  "spend_days": 5,
+  "spend_usd": 436.42,
+  "impressions": 103138,
+  "started": 47,
+  "qualified": 6,
+  "median_daily_spend": 82.95,
+  "median_minutes_to_qualify": 16.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/01",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 616.22,
+  "impressions": 291119,
+  "started": 93,
+  "qualified": 32,
+  "median_daily_spend": 161.7,
+  "median_minutes_to_qualify": 5.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/02",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 1855.47,
+  "impressions": 490285,
+  "started": 80,
+  "qualified": 17,
+  "median_daily_spend": 255.46,
+  "median_minutes_to_qualify": 5.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/03",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 477.23,
+  "impressions": 166964,
+  "started": 49,
+  "qualified": 15,
+  "median_daily_spend": 84.37,
+  "median_minutes_to_qualify": 4.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/04",
+  "country": "NG",
+  "place": "NG:radius:16x2.01km:4d118e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 869.76,
+  "impressions": 199188,
+  "started": 57,
+  "qualified": 14,
+  "median_daily_spend": 90.51,
+  "median_minutes_to_qualify": 5.5,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/05",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 147.51,
+  "impressions": 295589,
+  "started": 456,
+  "qualified": 191,
+  "median_daily_spend": 28.91,
+  "median_minutes_to_qualify": 3.8,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/06",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 274.04,
+  "impressions": 592603,
+  "started": 587,
+  "qualified": 179,
+  "median_daily_spend": 41.78,
+  "median_minutes_to_qualify": 4.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/07",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 105.57,
+  "impressions": 248373,
+  "started": 312,
+  "qualified": 142,
+  "median_daily_spend": 19.24,
+  "median_minutes_to_qualify": 3.7,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/08",
+  "country": "NG",
+  "place": "NG:radius:19x4.02km:52f745",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 197.1,
+  "impressions": 479558,
+  "started": 448,
+  "qualified": 137,
+  "median_daily_spend": 23.64,
+  "median_minutes_to_qualify": 4.2,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/09",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-24",
+  "spend_days": 3,
+  "spend_usd": 71.32,
+  "impressions": 156554,
+  "started": 979,
+  "qualified": 415,
+  "median_daily_spend": 25.24,
+  "median_minutes_to_qualify": 3.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/10",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-11",
+  "spend_days": 5,
+  "spend_usd": 64.82,
+  "impressions": 245172,
+  "started": 690,
+  "qualified": 218,
+  "median_daily_spend": 6.67,
+  "median_minutes_to_qualify": 4.4,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/11",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-07",
+  "spend_days": 2,
+  "spend_usd": 40.35,
+  "impressions": 125891,
+  "started": 474,
+  "qualified": 170,
+  "median_daily_spend": 20.17,
+  "median_minutes_to_qualify": 2.7,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/12",
+  "country": "NG",
+  "place": "NG:radius:24x4.02km:ae4e41",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-25",
+  "spend_days": 4,
+  "spend_usd": 72.53,
+  "impressions": 186608,
+  "started": 749,
+  "qualified": 228,
+  "median_daily_spend": 18.11,
+  "median_minutes_to_qualify": 4.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/13",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 2110.52,
+  "impressions": 967007,
+  "started": 187,
+  "qualified": 35,
+  "median_daily_spend": 372.89,
+  "median_minutes_to_qualify": 4.8,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/14",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 484.5,
+  "impressions": 402737,
+  "started": 144,
+  "qualified": 38,
+  "median_daily_spend": 100.75,
+  "median_minutes_to_qualify": 4.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/15",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 289.57,
+  "impressions": 264257,
+  "started": 120,
+  "qualified": 35,
+  "median_daily_spend": 65.66,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/16",
+  "country": "NG",
+  "place": "NG:radius:4x4.02km:00d499",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 727.53,
+  "impressions": 515084,
+  "started": 175,
+  "qualified": 44,
+  "median_daily_spend": 122.31,
+  "median_minutes_to_qualify": 4.3,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/17",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 321.66,
+  "impressions": 456165,
+  "started": 231,
+  "qualified": 65,
+  "median_daily_spend": 76.63,
+  "median_minutes_to_qualify": 4.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/18",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 881.37,
+  "impressions": 1047660,
+  "started": 317,
+  "qualified": 55,
+  "median_daily_spend": 141.02,
+  "median_minutes_to_qualify": 5.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/19",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 586.5,
+  "impressions": 673993,
+  "started": 193,
+  "qualified": 44,
+  "median_daily_spend": 91.95,
+  "median_minutes_to_qualify": 5.5,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/20",
+  "country": "NG",
+  "place": "NG:radius:60x4.02km:5a4bfb",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 321.09,
+  "impressions": 393576,
+  "started": 149,
+  "qualified": 34,
+  "median_daily_spend": 70.6,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/21",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 1070.83,
+  "impressions": 499195,
+  "started": 158,
+  "qualified": 37,
+  "median_daily_spend": 136.29,
+  "median_minutes_to_qualify": 6.6,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/22",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 482.91,
+  "impressions": 316575,
+  "started": 156,
+  "qualified": 44,
+  "median_daily_spend": 135.64,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/23",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-03-06",
+  "last": "2025-03-12",
+  "spend_days": 7,
+  "spend_usd": 982.13,
+  "impressions": 319170,
+  "started": 96,
+  "qualified": 15,
+  "median_daily_spend": 140.34,
+  "median_minutes_to_qualify": 5.2,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-02b",
+  "cell": "NG-2025-02b/24",
+  "country": "NG",
+  "place": "NG:radius:7x2.01km:c468d0",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-02-22",
+  "last": "2025-02-26",
+  "spend_days": 5,
+  "spend_usd": 536.69,
+  "impressions": 228015,
+  "started": 74,
+  "qualified": 14,
+  "median_daily_spend": 125.16,
+  "median_minutes_to_qualify": 5.4,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/01",
+  "country": "NG",
+  "place": "NG:outside:radius:1x19.31km:efb2a8:in:Federal Capital Territory",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-11",
+  "spend_days": 3,
+  "spend_usd": 50.68,
+  "impressions": 131071,
+  "started": 1193,
+  "qualified": 907,
+  "median_daily_spend": 5.63,
+  "median_minutes_to_qualify": 3.0,
+  "flags": [
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/02",
+  "country": "NG",
+  "place": "NG:outside:radius:1x19.31km:efb2a8:in:Federal Capital Territory",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 85.57,
+  "impressions": 288647,
+  "started": 1000,
+  "qualified": 465,
+  "median_daily_spend": 2.24,
+  "median_minutes_to_qualify": 3.4,
+  "flags": [
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/03",
+  "country": "NG",
+  "place": "NG:outside:radius:1x53.11km:a9b534:in:Adamawa",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 82.63,
+  "impressions": 144322,
+  "started": 96,
+  "qualified": 41,
+  "median_daily_spend": 11.23,
+  "median_minutes_to_qualify": 3.8,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/04",
+  "country": "NG",
+  "place": "NG:outside:radius:1x53.11km:a9b534:in:Adamawa",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 170.41,
+  "impressions": 162214,
+  "started": 57,
+  "qualified": 12,
+  "median_daily_spend": 24.11,
+  "median_minutes_to_qualify": 5.5,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/05",
+  "country": "NG",
+  "place": "NG:outside:radius:2x24.14km:578777:in:Nasarawa",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 143.36,
+  "impressions": 244688,
+  "started": 192,
+  "qualified": 63,
+  "median_daily_spend": 21.04,
+  "median_minutes_to_qualify": 4.1,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/06",
+  "country": "NG",
+  "place": "NG:outside:radius:2x24.14km:578777:in:Nasarawa",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 109.2,
+  "impressions": 183754,
+  "started": 117,
+  "qualified": 33,
+  "median_daily_spend": 16.55,
+  "median_minutes_to_qualify": 4.1,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/07",
+  "country": "NG",
+  "place": "NG:radius:1x19.31km:efb2a8:minus:Nasarawa",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 1326.29,
+  "impressions": 880781,
+  "started": 489,
+  "qualified": 359,
+  "median_daily_spend": 186.12,
+  "median_minutes_to_qualify": 2.2,
+  "flags": [
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/08",
+  "country": "NG",
+  "place": "NG:radius:1x19.31km:efb2a8:minus:Nasarawa",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 1500.18,
+  "impressions": 870978,
+  "started": 189,
+  "qualified": 96,
+  "median_daily_spend": 185.65,
+  "median_minutes_to_qualify": 3.5,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/09",
+  "country": "NG",
+  "place": "NG:radius:1x53.11km:a9b534",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 42.32,
+  "impressions": 117779,
+  "started": 154,
+  "qualified": 68,
+  "median_daily_spend": 5.82,
+  "median_minutes_to_qualify": 4.1,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/10",
+  "country": "NG",
+  "place": "NG:radius:1x53.11km:a9b534",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 40.22,
+  "impressions": 111060,
+  "started": 79,
+  "qualified": 32,
+  "median_daily_spend": 5.51,
+  "median_minutes_to_qualify": 4.6,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/11",
+  "country": "NG",
+  "place": "NG:radius:2x24.14km:578777",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 711.23,
+  "impressions": 245977,
+  "started": 47,
+  "qualified": 16,
+  "median_daily_spend": 95.27,
+  "median_minutes_to_qualify": 6.0,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-04",
+  "cell": "NG-2025-04/12",
+  "country": "NG",
+  "place": "NG:radius:2x24.14km:578777",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-04-09",
+  "last": "2025-04-16",
+  "spend_days": 8,
+  "spend_usd": 479.55,
+  "impressions": 118831,
+  "started": 25,
+  "qualified": 4,
+  "median_daily_spend": 74.28,
+  "median_minutes_to_qualify": 7.2,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-05",
+  "cell": "NG-2025-05/01",
+  "country": "NG",
+  "place": "NG:radius:1x53.11km:a9b534",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-05-27",
+  "last": "2025-06-18",
+  "spend_days": 23,
+  "spend_usd": 412.95,
+  "impressions": 1245709,
+  "started": 367,
+  "qualified": 39,
+  "median_daily_spend": 19.69,
+  "median_minutes_to_qualify": 0.3,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-05",
+  "cell": "NG-2025-05/02",
+  "country": "NG",
+  "place": "NG:region:Federal Capital Territory",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-05-27",
+  "last": "2025-06-18",
+  "spend_days": 21,
+  "spend_usd": 127.11,
+  "impressions": 588128,
+  "started": 520,
+  "qualified": 148,
+  "median_daily_spend": 5.66,
+  "median_minutes_to_qualify": 0.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-05",
+  "cell": "NG-2025-05/03",
+  "country": "NG",
+  "place": "NG:region:Nasarawa",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-05-27",
+  "last": "2025-06-18",
+  "spend_days": 23,
+  "spend_usd": 242.89,
+  "impressions": 743062,
+  "started": 416,
+  "qualified": 73,
+  "median_daily_spend": 11.28,
+  "median_minutes_to_qualify": 0.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-06",
+  "cell": "NG-2025-06/01",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-06-10",
+  "last": "2025-06-10",
+  "spend_days": 1,
+  "spend_usd": 0.08,
+  "impressions": 100,
+  "started": 16,
+  "qualified": 12,
+  "median_daily_spend": 0.08,
+  "median_minutes_to_qualify": 15.8,
+  "flags": [
+   "thin",
+   "one_day",
+   "assigned_by_daily_spend:1"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-06",
+  "cell": "NG-2025-06/02",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-06-10",
+  "last": "2025-07-09",
+  "spend_days": 3,
+  "spend_usd": 28.59,
+  "impressions": 78633,
+  "started": 42,
+  "qualified": 21,
+  "median_daily_spend": 6.68,
+  "median_minutes_to_qualify": 18.3,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-06",
+  "cell": "NG-2025-06/03",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-06-09",
+  "last": "2025-06-21",
+  "spend_days": 10,
+  "spend_usd": 41.59,
+  "impressions": 76694,
+  "started": 212,
+  "qualified": 135,
+  "median_daily_spend": 2.27,
+  "median_minutes_to_qualify": 14.6,
+  "flags": [
+   "assigned_by_daily_spend:138"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-06",
+  "cell": "NG-2025-06/04",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-06-10",
+  "last": "2025-06-10",
+  "spend_days": 1,
+  "spend_usd": 0.12,
+  "impressions": 198,
+  "started": 10,
+  "qualified": 7,
+  "median_daily_spend": 0.12,
+  "median_minutes_to_qualify": 15.6,
+  "flags": [
+   "thin",
+   "one_day",
+   "assigned_by_daily_spend:1"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-06",
+  "cell": "NG-2025-06/05",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-06-10",
+  "last": "2025-07-09",
+  "spend_days": 4,
+  "spend_usd": 20.88,
+  "impressions": 62623,
+  "started": 42,
+  "qualified": 25,
+  "median_daily_spend": 3.64,
+  "median_minutes_to_qualify": 18.0,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-06",
+  "cell": "NG-2025-06/06",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-06-09",
+  "last": "2025-06-22",
+  "spend_days": 9,
+  "spend_usd": 51.25,
+  "impressions": 95967,
+  "started": 109,
+  "qualified": 43,
+  "median_daily_spend": 4.32,
+  "median_minutes_to_qualify": 18.0,
+  "flags": [
+   "thin",
+   "assigned_by_daily_spend:32"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/01",
+  "country": "NG",
+  "place": "NG:outside:radius:1x19.31km:efb2a8:in:Federal Capital Territory",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 7,
+  "spend_usd": 1079.61,
+  "impressions": 945582,
+  "started": 595,
+  "qualified": 357,
+  "median_daily_spend": 203.81,
+  "median_minutes_to_qualify": 4.0,
+  "flags": [
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/02",
+  "country": "NG",
+  "place": "NG:outside:radius:1x19.31km:efb2a8:in:Federal Capital Territory",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-17",
+  "spend_days": 8,
+  "spend_usd": 1976.17,
+  "impressions": 990588,
+  "started": 283,
+  "qualified": 139,
+  "median_daily_spend": 252.97,
+  "median_minutes_to_qualify": 5.7,
+  "flags": [
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/03",
+  "country": "NG",
+  "place": "NG:outside:radius:1x53.11km:a9b534:in:Adamawa",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 7,
+  "spend_usd": 148.14,
+  "impressions": 165362,
+  "started": 79,
+  "qualified": 41,
+  "median_daily_spend": 20.47,
+  "median_minutes_to_qualify": 6.1,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/04",
+  "country": "NG",
+  "place": "NG:outside:radius:1x53.11km:a9b534:in:Adamawa",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-17",
+  "spend_days": 8,
+  "spend_usd": 107.34,
+  "impressions": 109739,
+  "started": 45,
+  "qualified": 19,
+  "median_daily_spend": 13.16,
+  "median_minutes_to_qualify": 6.0,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/05",
+  "country": "NG",
+  "place": "NG:outside:radius:2x24.14km:578777:in:Nasarawa",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 7,
+  "spend_usd": 101.44,
+  "impressions": 164784,
+  "started": 130,
+  "qualified": 62,
+  "median_daily_spend": 16.59,
+  "median_minutes_to_qualify": 6.6,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/06",
+  "country": "NG",
+  "place": "NG:outside:radius:2x24.14km:578777:in:Nasarawa",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 7,
+  "spend_usd": 54.62,
+  "impressions": 94929,
+  "started": 78,
+  "qualified": 43,
+  "median_daily_spend": 7.15,
+  "median_minutes_to_qualify": 5.6,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/07",
+  "country": "NG",
+  "place": "NG:radius:1x19.31km:efb2a8:minus:Nasarawa",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 6,
+  "spend_usd": 204.8,
+  "impressions": 363178,
+  "started": 931,
+  "qualified": 707,
+  "median_daily_spend": 34.21,
+  "median_minutes_to_qualify": 4.9,
+  "flags": [
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/08",
+  "country": "NG",
+  "place": "NG:radius:1x19.31km:efb2a8:minus:Nasarawa",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 6,
+  "spend_usd": 156.22,
+  "impressions": 278248,
+  "started": 596,
+  "qualified": 414,
+  "median_daily_spend": 20.42,
+  "median_minutes_to_qualify": 4.8,
+  "flags": [
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/09",
+  "country": "NG",
+  "place": "NG:radius:1x53.11km:a9b534",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 6,
+  "spend_usd": 27.89,
+  "impressions": 68503,
+  "started": 101,
+  "qualified": 73,
+  "median_daily_spend": 4.51,
+  "median_minutes_to_qualify": 5.6,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/10",
+  "country": "NG",
+  "place": "NG:radius:1x53.11km:a9b534",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-16",
+  "spend_days": 6,
+  "spend_usd": 20.7,
+  "impressions": 53477,
+  "started": 47,
+  "qualified": 35,
+  "median_daily_spend": 3.61,
+  "median_minutes_to_qualify": 5.8,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/11",
+  "country": "NG",
+  "place": "NG:radius:2x24.14km:578777",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-17",
+  "spend_days": 8,
+  "spend_usd": 345.89,
+  "impressions": 352955,
+  "started": 107,
+  "qualified": 45,
+  "median_daily_spend": 46.8,
+  "median_minutes_to_qualify": 6.5,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-11",
+  "cell": "NG-2025-11/12",
+  "country": "NG",
+  "place": "NG:radius:2x24.14km:578777",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-11-10",
+  "last": "2025-11-17",
+  "spend_days": 8,
+  "spend_usd": 421.92,
+  "impressions": 191459,
+  "started": 55,
+  "qualified": 27,
+  "median_daily_spend": 46.41,
+  "median_minutes_to_qualify": 7.8,
+  "flags": [
+   "thin",
+   "ad_arm_confounded_with_side"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-12a",
+  "cell": "NG-2025-12a/01",
+  "country": "NG",
+  "place": "NG:country-minus:Ekiti+Lagos+Ogun+Ondo+Osun+Oyo",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 27,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-12-13",
+  "last": "2025-12-23",
+  "spend_days": 11,
+  "spend_usd": 161.43,
+  "impressions": 168600,
+  "started": 593,
+  "qualified": 148,
+  "median_daily_spend": 11.94,
+  "median_minutes_to_qualify": 21.1,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-12a",
+  "cell": "NG-2025-12a/02",
+  "country": "NG",
+  "place": "NG:country-minus:Ekiti+Lagos+Ogun+Ondo+Osun+Oyo",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 27,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-12-12",
+  "last": "2025-12-23",
+  "spend_days": 12,
+  "spend_usd": 354.58,
+  "impressions": 479695,
+  "started": 670,
+  "qualified": 150,
+  "median_daily_spend": 28.75,
+  "median_minutes_to_qualify": 22.9,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-12b",
+  "cell": "NG-2025-12b/01",
+  "country": "NG",
+  "place": "NG:region:Abia+Akwa Ibom+Anambra+Bayelsa+Cross River+Delta+Ebonyi+Edo+Ekiti+Enugu+Imo+Lagos+Ogun+Ondo+Osun+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-12-22",
+  "last": "2025-12-23",
+  "spend_days": 2,
+  "spend_usd": 8.73,
+  "impressions": 7623,
+  "started": 163,
+  "qualified": 114,
+  "median_daily_spend": 4.37,
+  "median_minutes_to_qualify": 6.6,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2025-12b",
+  "cell": "NG-2025-12b/02",
+  "country": "NG",
+  "place": "NG:region:Abia+Akwa Ibom+Anambra+Bayelsa+Cross River+Delta+Ebonyi+Edo+Ekiti+Enugu+Imo+Lagos+Ogun+Ondo+Osun+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-12-22",
+  "last": "2025-12-23",
+  "spend_days": 2,
+  "spend_usd": 9.3,
+  "impressions": 16498,
+  "started": 61,
+  "qualified": 50,
+  "median_daily_spend": 4.65,
+  "median_minutes_to_qualify": 7.8,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-01",
+  "cell": "NG-2026-01/01",
+  "country": "NG",
+  "place": "NG:region:Abia+Anambra+Ebonyi+Enugu+Imo",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-01-16",
+  "last": "2026-01-19",
+  "spend_days": 4,
+  "spend_usd": 722.3,
+  "impressions": 756008,
+  "started": 447,
+  "qualified": 240,
+  "median_daily_spend": 97.64,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-01",
+  "cell": "NG-2026-01/02",
+  "country": "NG",
+  "place": "NG:region:Akwa Ibom+Bayelsa+Cross River+Delta+Edo+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-01-16",
+  "last": "2026-01-19",
+  "spend_days": 4,
+  "spend_usd": 788.05,
+  "impressions": 769417,
+  "started": 784,
+  "qualified": 434,
+  "median_daily_spend": 123.23,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-01",
+  "cell": "NG-2026-01/03",
+  "country": "NG",
+  "place": "NG:region:Ekiti+Lagos+Ogun+Ondo+Osun",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-01-16",
+  "last": "2026-01-19",
+  "spend_days": 4,
+  "spend_usd": 902.1,
+  "impressions": 885883,
+  "started": 1251,
+  "qualified": 778,
+  "median_daily_spend": 175.83,
+  "median_minutes_to_qualify": 8.3,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-02",
+  "cell": "NG-2026-02/01",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-02-21",
+  "last": "2026-02-25",
+  "spend_days": 4,
+  "spend_usd": 684.94,
+  "impressions": 680239,
+  "started": 785,
+  "qualified": 515,
+  "median_daily_spend": 174.47,
+  "median_minutes_to_qualify": 4.4,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04a",
+  "cell": "NG-2026-04a/01",
+  "country": "NG",
+  "place": "NG:city-radius:1x16.09km:2ba038",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 20,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-14",
+  "last": "2026-04-17",
+  "spend_days": 4,
+  "spend_usd": 363.58,
+  "impressions": 87766,
+  "started": 30,
+  "qualified": 18,
+  "median_daily_spend": 87.05,
+  "median_minutes_to_qualify": 11.6,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04a",
+  "cell": "NG-2026-04a/02",
+  "country": "NG",
+  "place": "NG:city-radius:1x16.09km:dcf8fb",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 20,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-14",
+  "last": "2026-04-17",
+  "spend_days": 4,
+  "spend_usd": 637.01,
+  "impressions": 160933,
+  "started": 53,
+  "qualified": 19,
+  "median_daily_spend": 156.98,
+  "median_minutes_to_qualify": 15.3,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04a",
+  "cell": "NG-2026-04a/03",
+  "country": "NG",
+  "place": "NG:city-radius:1x16.09km:e22298",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 20,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-14",
+  "last": "2026-04-17",
+  "spend_days": 4,
+  "spend_usd": 418.85,
+  "impressions": 151203,
+  "started": 52,
+  "qualified": 26,
+  "median_daily_spend": 90.1,
+  "median_minutes_to_qualify": 14.7,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04a",
+  "cell": "NG-2026-04a/04",
+  "country": "NG",
+  "place": "NG:city-radius:1x28.97km:769a17",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 20,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-06",
+  "last": "2026-04-17",
+  "spend_days": 12,
+  "spend_usd": 566.35,
+  "impressions": 160337,
+  "started": 61,
+  "qualified": 23,
+  "median_daily_spend": 48.64,
+  "median_minutes_to_qualify": 14.8,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04a",
+  "cell": "NG-2026-04a/05",
+  "country": "NG",
+  "place": "NG:radius:1x16.09km:5d47f1",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 20,
+   "age_max": 55,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-06",
+  "last": "2026-04-17",
+  "spend_days": 12,
+  "spend_usd": 1672.27,
+  "impressions": 509117,
+  "started": 116,
+  "qualified": 39,
+  "median_daily_spend": 100.36,
+  "median_minutes_to_qualify": 19.2,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04b",
+  "cell": "NG-2026-04b/01",
+  "country": "NG",
+  "place": "NG:region:Anambra+Edo+Federal Capital Territory+Ogun+Oyo+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 27,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-13",
+  "last": "2026-05-15",
+  "spend_days": 6,
+  "spend_usd": 322.26,
+  "impressions": 275870,
+  "started": 247,
+  "qualified": 26,
+  "median_daily_spend": 11.25,
+  "median_minutes_to_qualify": 20.3,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04b",
+  "cell": "NG-2026-04b/02",
+  "country": "NG",
+  "place": "NG:region:Anambra+Edo+Federal Capital Territory+Ogun+Oyo+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 27,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-13",
+  "last": "2026-05-15",
+  "spend_days": 6,
+  "spend_usd": 1319.56,
+  "impressions": 1254327,
+  "started": 518,
+  "qualified": 46,
+  "median_daily_spend": 28.44,
+  "median_minutes_to_qualify": 19.2,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04b",
+  "cell": "NG-2026-04b/03",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 27,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-13",
+  "last": "2026-05-15",
+  "spend_days": 6,
+  "spend_usd": 2125.84,
+  "impressions": 1742697,
+  "started": 448,
+  "qualified": 42,
+  "median_daily_spend": 6.14,
+  "median_minutes_to_qualify": 17.9,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-04b",
+  "cell": "NG-2026-04b/04",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 27,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-04-13",
+  "last": "2026-05-15",
+  "spend_days": 7,
+  "spend_usd": 3932.03,
+  "impressions": 2445977,
+  "started": 597,
+  "qualified": 56,
+  "median_daily_spend": 8.13,
+  "median_minutes_to_qualify": 15.5,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-05",
+  "cell": "NG-2026-05/01",
+  "country": "NG",
+  "place": "NG:region:Bauchi",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-05-24",
+  "last": "2026-06-19",
+  "spend_days": 27,
+  "spend_usd": 33545.25,
+  "impressions": 19281159,
+  "started": 4071,
+  "qualified": 776,
+  "median_daily_spend": 1105.52,
+  "median_minutes_to_qualify": 12.3,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-06",
+  "cell": "NG-2026-06/01",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 36,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-07-28",
+  "last": "2026-08-07",
+  "spend_days": 8,
+  "spend_usd": 210.02,
+  "impressions": 773886,
+  "started": 165,
+  "qualified": 17,
+  "median_daily_spend": 20.05,
+  "median_minutes_to_qualify": 11.1,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-06",
+  "cell": "NG-2026-06/02",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 36,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-07-28",
+  "last": "2026-08-07",
+  "spend_days": 8,
+  "spend_usd": 235.95,
+  "impressions": 776875,
+  "started": 149,
+  "qualified": 21,
+  "median_daily_spend": 18.59,
+  "median_minutes_to_qualify": 18.1,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-06",
+  "cell": "NG-2026-06/03",
+  "country": "NG",
+  "place": "NG:region:Anambra+Edo+Federal Capital Territory+Ogun+Oyo+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 36,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-06-17",
+  "last": "2026-08-07",
+  "spend_days": 24,
+  "spend_usd": 864.99,
+  "impressions": 2406661,
+  "started": 209,
+  "qualified": 39,
+  "median_daily_spend": 8.1,
+  "median_minutes_to_qualify": 9.5,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-06",
+  "cell": "NG-2026-06/04",
+  "country": "NG",
+  "place": "NG:region:Anambra+Edo+Federal Capital Territory+Ogun+Oyo+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 36,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-06-17",
+  "last": "2026-08-07",
+  "spend_days": 23,
+  "spend_usd": 1896.54,
+  "impressions": 4719815,
+  "started": 303,
+  "qualified": 54,
+  "median_daily_spend": 17.62,
+  "median_minutes_to_qualify": 0.0,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-06",
+  "cell": "NG-2026-06/05",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 36,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-06-22",
+  "last": "2026-08-07",
+  "spend_days": 17,
+  "spend_usd": 814.76,
+  "impressions": 2338005,
+  "started": 144,
+  "qualified": 23,
+  "median_daily_spend": 31.48,
+  "median_minutes_to_qualify": 0.0,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-06",
+  "cell": "NG-2026-06/06",
+  "country": "NG",
+  "place": "NG:region:Lagos",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 36,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-06-21",
+  "last": "2026-08-07",
+  "spend_days": 22,
+  "spend_usd": 998.86,
+  "impressions": 2952942,
+  "started": 122,
+  "qualified": 22,
+  "median_daily_spend": 17.11,
+  "median_minutes_to_qualify": 10.0,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-07",
+  "cell": "NG-2026-07/01",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-07-15",
+  "last": "2026-07-16",
+  "spend_days": 2,
+  "spend_usd": 10.37,
+  "impressions": 5543,
+  "started": 267,
+  "qualified": 187,
+  "median_daily_spend": 5.18,
+  "median_minutes_to_qualify": 17.8,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-07",
+  "cell": "NG-2026-07/02",
+  "country": "NG",
+  "place": "NG:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-07-15",
+  "last": "2026-07-16",
+  "spend_days": 2,
+  "spend_usd": 9.9,
+  "impressions": 6840,
+  "started": 147,
+  "qualified": 89,
+  "median_daily_spend": 4.95,
+  "median_minutes_to_qualify": 19.0,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/01",
+  "country": "NG",
+  "place": "NG:region:Abia+Anambra+Ebonyi+Enugu+Imo",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-20",
+  "spend_days": 10,
+  "spend_usd": 49.71,
+  "impressions": 99341,
+  "started": 291,
+  "qualified": 77,
+  "median_daily_spend": 2.69,
+  "median_minutes_to_qualify": 33.8,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/02",
+  "country": "NG",
+  "place": "NG:region:Abia+Anambra+Ebonyi+Enugu+Imo",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-19",
+  "spend_days": 9,
+  "spend_usd": 55.77,
+  "impressions": 92649,
+  "started": 311,
+  "qualified": 95,
+  "median_daily_spend": 5.84,
+  "median_minutes_to_qualify": 31.6,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/03",
+  "country": "NG",
+  "place": "NG:region:Adamawa+Bauchi+Borno+Gombe+Taraba+Yobe",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-15",
+  "spend_days": 4,
+  "spend_usd": 5.21,
+  "impressions": 9216,
+  "started": 105,
+  "qualified": 29,
+  "median_daily_spend": 1.33,
+  "median_minutes_to_qualify": 44.4,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/04",
+  "country": "NG",
+  "place": "NG:region:Adamawa+Bauchi+Borno+Gombe+Taraba+Yobe",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-15",
+  "spend_days": 4,
+  "spend_usd": 23.23,
+  "impressions": 40343,
+  "started": 173,
+  "qualified": 36,
+  "median_daily_spend": 5.75,
+  "median_minutes_to_qualify": 30.4,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/05",
+  "country": "NG",
+  "place": "NG:region:Akwa Ibom+Bayelsa+Cross River+Delta+Edo+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-20",
+  "spend_days": 10,
+  "spend_usd": 41.99,
+  "impressions": 76757,
+  "started": 315,
+  "qualified": 87,
+  "median_daily_spend": 2.33,
+  "median_minutes_to_qualify": 30.9,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/06",
+  "country": "NG",
+  "place": "NG:region:Akwa Ibom+Bayelsa+Cross River+Delta+Edo+Rivers",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-18",
+  "spend_days": 8,
+  "spend_usd": 60.41,
+  "impressions": 84702,
+  "started": 396,
+  "qualified": 115,
+  "median_daily_spend": 6.58,
+  "median_minutes_to_qualify": 28.0,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/07",
+  "country": "NG",
+  "place": "NG:region:Benué+Federal Capital Territory+Kogi+Kwara+Nasarawa+Niger+Plateau",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-18",
+  "spend_days": 4,
+  "spend_usd": 5.58,
+  "impressions": 8713,
+  "started": 87,
+  "qualified": 33,
+  "median_daily_spend": 1.35,
+  "median_minutes_to_qualify": 38.6,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/08",
+  "country": "NG",
+  "place": "NG:region:Benué+Federal Capital Territory+Kogi+Kwara+Nasarawa+Niger+Plateau",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-15",
+  "spend_days": 4,
+  "spend_usd": 12.57,
+  "impressions": 15573,
+  "started": 212,
+  "qualified": 50,
+  "median_daily_spend": 2.69,
+  "median_minutes_to_qualify": 31.4,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/09",
+  "country": "NG",
+  "place": "NG:region:Ekiti+Lagos+Ogun+Ondo+Osun+Oyo",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-20",
+  "spend_days": 8,
+  "spend_usd": 53.88,
+  "impressions": 127520,
+  "started": 238,
+  "qualified": 74,
+  "median_daily_spend": 1.59,
+  "median_minutes_to_qualify": 27.6,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/10",
+  "country": "NG",
+  "place": "NG:region:Ekiti+Lagos+Ogun+Ondo+Osun+Oyo",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-20",
+  "spend_days": 7,
+  "spend_usd": 37.08,
+  "impressions": 76395,
+  "started": 261,
+  "qualified": 67,
+  "median_daily_spend": 1.6,
+  "median_minutes_to_qualify": 32.5,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/11",
+  "country": "NG",
+  "place": "NG:region:Jigawa+Kaduna+Kano+Katsina+Kebbi+Sokoto+Zamfara",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-15",
+  "spend_days": 2,
+  "spend_usd": 3.29,
+  "impressions": 5729,
+  "started": 82,
+  "qualified": 26,
+  "median_daily_spend": 1.65,
+  "median_minutes_to_qualify": 48.0,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "NG-2026-08",
+  "cell": "NG-2026-08/12",
+  "country": "NG",
+  "place": "NG:region:Jigawa+Kaduna+Kano+Katsina+Kebbi+Sokoto+Zamfara",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2026-08-11",
+  "last": "2026-08-15",
+  "spend_days": 4,
+  "spend_usd": 15.8,
+  "impressions": 24500,
+  "started": 175,
+  "qualified": 52,
+  "median_daily_spend": 3.93,
+  "median_minutes_to_qualify": 36.4,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-08",
+  "cell": "GH-2023-08/01",
+  "country": "GH",
+  "place": "GH:city-radius:16xcity:2717c7",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-17",
+  "last": "2023-08-24",
+  "spend_days": 8,
+  "spend_usd": 66.37,
+  "impressions": 112932,
+  "started": 501,
+  "qualified": 48,
+  "median_daily_spend": 9.1,
+  "median_minutes_to_qualify": 22711.8,
+  "flags": [
+   "qualified_after_follow_up"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-08",
+  "cell": "GH-2023-08/02",
+  "country": "GH",
+  "place": "GH:city-radius:16xcity:2717c7",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-17",
+  "last": "2023-08-24",
+  "spend_days": 8,
+  "spend_usd": 79.07,
+  "impressions": 112238,
+  "started": 352,
+  "qualified": 49,
+  "median_daily_spend": 9.03,
+  "median_minutes_to_qualify": 22779.1,
+  "flags": [
+   "qualified_after_follow_up"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-08",
+  "cell": "GH-2023-08/03",
+  "country": "GH",
+  "place": "GH:outside:city-radius:16xcity:2717c7",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-17",
+  "last": "2023-08-24",
+  "spend_days": 8,
+  "spend_usd": 146.42,
+  "impressions": 227929,
+  "started": 299,
+  "qualified": 28,
+  "median_daily_spend": 21.8,
+  "median_minutes_to_qualify": 21940.3,
+  "flags": [
+   "qualified_after_follow_up"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-08",
+  "cell": "GH-2023-08/04",
+  "country": "GH",
+  "place": "GH:outside:city-radius:16xcity:2717c7",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-08-17",
+  "last": "2023-08-24",
+  "spend_days": 8,
+  "spend_usd": 207.22,
+  "impressions": 276243,
+  "started": 295,
+  "qualified": 21,
+  "median_daily_spend": 27.53,
+  "median_minutes_to_qualify": 21558.1,
+  "flags": [
+   "qualified_after_follow_up"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-12",
+  "cell": "GH-2023-12/01",
+  "country": "GH",
+  "place": "GH:region:Ashanti",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-12-05",
+  "last": "2023-12-07",
+  "spend_days": 3,
+  "spend_usd": 6.18,
+  "impressions": 9935,
+  "started": 17,
+  "qualified": 13,
+  "median_daily_spend": 0.93,
+  "median_minutes_to_qualify": 8.0,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-12",
+  "cell": "GH-2023-12/02",
+  "country": "GH",
+  "place": "GH:region:Ashanti",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-12-05",
+  "last": "2023-12-07",
+  "spend_days": 3,
+  "spend_usd": 11.2,
+  "impressions": 20744,
+  "started": 43,
+  "qualified": 35,
+  "median_daily_spend": 3.16,
+  "median_minutes_to_qualify": 7.8,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-12",
+  "cell": "GH-2023-12/03",
+  "country": "GH",
+  "place": "GH:region:Northern",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-12-05",
+  "last": "2023-12-07",
+  "spend_days": 3,
+  "spend_usd": 6.6,
+  "impressions": 10669,
+  "started": 14,
+  "qualified": 11,
+  "median_daily_spend": 2.15,
+  "median_minutes_to_qualify": 8.7,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2023-12",
+  "cell": "GH-2023-12/04",
+  "country": "GH",
+  "place": "GH:region:Northern",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-12-05",
+  "last": "2023-12-07",
+  "spend_days": 3,
+  "spend_usd": 14.0,
+  "impressions": 22789,
+  "started": 42,
+  "qualified": 35,
+  "median_daily_spend": 3.61,
+  "median_minutes_to_qualify": 7.6,
+  "flags": [
+   "thin"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/01",
+  "country": "GH",
+  "place": "GH:region:Ashanti",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-01",
+  "spend_days": 13,
+  "spend_usd": 543.23,
+  "impressions": 575977,
+  "started": 456,
+  "qualified": 323,
+  "median_daily_spend": 55.98,
+  "median_minutes_to_qualify": 8.0,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/02",
+  "country": "GH",
+  "place": "GH:region:Ashanti",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-01",
+  "spend_days": 13,
+  "spend_usd": 119.3,
+  "impressions": 127753,
+  "started": 124,
+  "qualified": 92,
+  "median_daily_spend": 11.73,
+  "median_minutes_to_qualify": 7.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/03",
+  "country": "GH",
+  "place": "GH:region:Ashanti",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-03",
+  "spend_days": 15,
+  "spend_usd": 659.02,
+  "impressions": 809312,
+  "started": 490,
+  "qualified": 239,
+  "median_daily_spend": 63.5,
+  "median_minutes_to_qualify": 13.7,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/04",
+  "country": "GH",
+  "place": "GH:region:Ashanti",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-02",
+  "spend_days": 14,
+  "spend_usd": 85.67,
+  "impressions": 114413,
+  "started": 74,
+  "qualified": 38,
+  "median_daily_spend": 2.27,
+  "median_minutes_to_qualify": 15.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/05",
+  "country": "GH",
+  "place": "GH:region:Northern",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-01",
+  "spend_days": 13,
+  "spend_usd": 637.02,
+  "impressions": 632518,
+  "started": 464,
+  "qualified": 341,
+  "median_daily_spend": 66.76,
+  "median_minutes_to_qualify": 8.0,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/06",
+  "country": "GH",
+  "place": "GH:region:Northern",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-01",
+  "spend_days": 13,
+  "spend_usd": 107.04,
+  "impressions": 111333,
+  "started": 84,
+  "qualified": 61,
+  "median_daily_spend": 10.59,
+  "median_minutes_to_qualify": 7.9,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/07",
+  "country": "GH",
+  "place": "GH:region:Northern",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-03",
+  "spend_days": 15,
+  "spend_usd": 572.71,
+  "impressions": 731661,
+  "started": 543,
+  "qualified": 379,
+  "median_daily_spend": 47.38,
+  "median_minutes_to_qualify": 14.6,
+  "flags": [
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01a",
+  "cell": "GH-2024-01a/08",
+  "country": "GH",
+  "place": "GH:region:Northern",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 18,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-20",
+  "last": "2024-02-03",
+  "spend_days": 15,
+  "spend_usd": 122.58,
+  "impressions": 169029,
+  "started": 127,
+  "qualified": 97,
+  "median_daily_spend": 10.26,
+  "median_minutes_to_qualify": 15.1,
+  "flags": [
+   "thin",
+   "pooled_siblings"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01b",
+  "cell": "GH-2024-01b/01",
+  "country": "GH",
+  "place": "GH:city-radius:16xcity:2717c7",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-26",
+  "last": "2024-02-09",
+  "spend_days": 15,
+  "spend_usd": 1148.15,
+  "impressions": 900794,
+  "started": 1021,
+  "qualified": 180,
+  "median_daily_spend": 70.46,
+  "median_minutes_to_qualify": 23.4,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01b",
+  "cell": "GH-2024-01b/02",
+  "country": "GH",
+  "place": "GH:city-radius:16xcity:2717c7",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-26",
+  "last": "2024-02-09",
+  "spend_days": 15,
+  "spend_usd": 1711.52,
+  "impressions": 1339197,
+  "started": 1043,
+  "qualified": 190,
+  "median_daily_spend": 99.7,
+  "median_minutes_to_qualify": 28.1,
+  "flags": [],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01b",
+  "cell": "GH-2024-01b/03",
+  "country": "GH",
+  "place": "GH:outside:city-radius:16xcity:2717c7",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-26",
+  "last": "2024-01-31",
+  "spend_days": 6,
+  "spend_usd": 165.46,
+  "impressions": 129951,
+  "started": 71,
+  "qualified": 11,
+  "median_daily_spend": 28.87,
+  "median_minutes_to_qualify": 28.6,
+  "flags": [
+   "thin",
+   "ad_set_dropped_before_end"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-01b",
+  "cell": "GH-2024-01b/04",
+  "country": "GH",
+  "place": "GH:outside:city-radius:16xcity:2717c7",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-01-26",
+  "last": "2024-01-31",
+  "spend_days": 6,
+  "spend_usd": 306.3,
+  "impressions": 114012,
+  "started": 40,
+  "qualified": 5,
+  "median_daily_spend": 55.32,
+  "median_minutes_to_qualify": 53.1,
+  "flags": [
+   "thin",
+   "ad_set_dropped_before_end"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-03",
+  "cell": "GH-2024-03/01",
+  "country": "GH",
+  "place": "GH:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-03-12",
+  "last": "2024-03-19",
+  "spend_days": 8,
+  "spend_usd": 85.99,
+  "impressions": 55726,
+  "started": 154,
+  "qualified": 27,
+  "median_daily_spend": 12.22,
+  "median_minutes_to_qualify": 25.5,
+  "flags": [
+   "thin",
+   "arm:high_incentive"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-03",
+  "cell": "GH-2024-03/02",
+  "country": "GH",
+  "place": "GH:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-03-12",
+  "last": "2024-03-19",
+  "spend_days": 8,
+  "spend_usd": 90.91,
+  "impressions": 64604,
+  "started": 108,
+  "qualified": 22,
+  "median_daily_spend": 12.12,
+  "median_minutes_to_qualify": 37.9,
+  "flags": [
+   "thin",
+   "arm:low_incentive"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-03",
+  "cell": "GH-2024-03/03",
+  "country": "GH",
+  "place": "GH:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-03-12",
+  "last": "2024-03-19",
+  "spend_days": 8,
+  "spend_usd": 102.77,
+  "impressions": 75349,
+  "started": 127,
+  "qualified": 18,
+  "median_daily_spend": 13.99,
+  "median_minutes_to_qualify": 119.6,
+  "flags": [
+   "thin",
+   "arm:high_incentive"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "GH-2024-03",
+  "cell": "GH-2024-03/04",
+  "country": "GH",
+  "place": "GH:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 26,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-03-12",
+  "last": "2024-03-19",
+  "spend_days": 8,
+  "spend_usd": 102.12,
+  "impressions": 76355,
+  "started": 124,
+  "qualified": 13,
+  "median_daily_spend": 14.15,
+  "median_minutes_to_qualify": 21.3,
+  "flags": [
+   "thin",
+   "arm:low_incentive"
+  ],
+  "attribution": "ad_metadata"
+ }
+]

@@ -1,0 +1,3669 @@
+[
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/01",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 2.78,
+  "impressions": 10439,
+  "started": 15,
+  "qualified": 4,
+  "median_daily_spend": 0.57,
+  "median_minutes_to_qualify": 24.0,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/02",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 7.27,
+  "impressions": 23112,
+  "started": 47,
+  "qualified": 7,
+  "median_daily_spend": 1.52,
+  "median_minutes_to_qualify": 12.7,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/03",
+  "country": "BD",
+  "place": "BD:region:Dhaka",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-11",
+  "spend_days": 3,
+  "spend_usd": 21.53,
+  "impressions": 64461,
+  "started": 130,
+  "qualified": 9,
+  "median_daily_spend": 6.45,
+  "median_minutes_to_qualify": 14.3,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/04",
+  "country": "BD",
+  "place": "BD:region:Khulna",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 22.84,
+  "impressions": 79155,
+  "started": 107,
+  "qualified": 9,
+  "median_daily_spend": 4.47,
+  "median_minutes_to_qualify": 14.4,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/05",
+  "country": "BD",
+  "place": "BD:region:Rajshahi",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 25.21,
+  "impressions": 87761,
+  "started": 101,
+  "qualified": 8,
+  "median_daily_spend": 4.17,
+  "median_minutes_to_qualify": 14.5,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/06",
+  "country": "BD",
+  "place": "BD:region:Rangpur",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 45.92,
+  "impressions": 125531,
+  "started": 124,
+  "qualified": 7,
+  "median_daily_spend": 6.17,
+  "median_minutes_to_qualify": 13.5,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/07",
+  "country": "BD",
+  "place": "BD:region:Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-11",
+  "spend_days": 3,
+  "spend_usd": 3.18,
+  "impressions": 10042,
+  "started": 14,
+  "qualified": 4,
+  "median_daily_spend": 0.63,
+  "median_minutes_to_qualify": 11.4,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/08",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-11",
+  "spend_days": 3,
+  "spend_usd": 4.86,
+  "impressions": 12207,
+  "started": 24,
+  "qualified": 4,
+  "median_daily_spend": 1.33,
+  "median_minutes_to_qualify": 14.9,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/09",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 5.87,
+  "impressions": 14606,
+  "started": 58,
+  "qualified": 9,
+  "median_daily_spend": 1.02,
+  "median_minutes_to_qualify": 14.1,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/10",
+  "country": "BD",
+  "place": "BD:region:Dhaka",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 6.35,
+  "impressions": 15549,
+  "started": 81,
+  "qualified": 13,
+  "median_daily_spend": 1.32,
+  "median_minutes_to_qualify": 19.7,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/11",
+  "country": "BD",
+  "place": "BD:region:Khulna",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-11",
+  "spend_days": 3,
+  "spend_usd": 4.87,
+  "impressions": 13313,
+  "started": 50,
+  "qualified": 5,
+  "median_daily_spend": 1.96,
+  "median_minutes_to_qualify": 17.7,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/12",
+  "country": "BD",
+  "place": "BD:region:Rajshahi",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 14.24,
+  "impressions": 36556,
+  "started": 111,
+  "qualified": 17,
+  "median_daily_spend": 2.44,
+  "median_minutes_to_qualify": 14.9,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/13",
+  "country": "BD",
+  "place": "BD:region:Rangpur",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-11",
+  "spend_days": 3,
+  "spend_usd": 18.7,
+  "impressions": 41872,
+  "started": 81,
+  "qualified": 8,
+  "median_daily_spend": 7.12,
+  "median_minutes_to_qualify": 22.3,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11a",
+  "cell": "BD-2023-11a/14",
+  "country": "BD",
+  "place": "BD:region:Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-09",
+  "last": "2023-11-12",
+  "spend_days": 4,
+  "spend_usd": 3.37,
+  "impressions": 8194,
+  "started": 28,
+  "qualified": 7,
+  "median_daily_spend": 0.73,
+  "median_minutes_to_qualify": 16.1,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/01",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 586.21,
+  "impressions": 1809969,
+  "started": 1348,
+  "qualified": 137,
+  "median_daily_spend": 27.91,
+  "median_minutes_to_qualify": 14.9,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/02",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-20",
+  "spend_days": 21,
+  "spend_usd": 402.87,
+  "impressions": 1351257,
+  "started": 2075,
+  "qualified": 301,
+  "median_daily_spend": 21.65,
+  "median_minutes_to_qualify": 12.7,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/03",
+  "country": "BD",
+  "place": "BD:region:Dhaka",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 306.98,
+  "impressions": 965439,
+  "started": 2798,
+  "qualified": 297,
+  "median_daily_spend": 14.64,
+  "median_minutes_to_qualify": 12.5,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/04",
+  "country": "BD",
+  "place": "BD:region:Khulna",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 337.08,
+  "impressions": 1173358,
+  "started": 1419,
+  "qualified": 166,
+  "median_daily_spend": 15.72,
+  "median_minutes_to_qualify": 13.0,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/05",
+  "country": "BD",
+  "place": "BD:region:Rajshahi",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 399.15,
+  "impressions": 1419391,
+  "started": 1607,
+  "qualified": 189,
+  "median_daily_spend": 20.64,
+  "median_minutes_to_qualify": 12.8,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/06",
+  "country": "BD",
+  "place": "BD:region:Rangpur",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 461.71,
+  "impressions": 1485514,
+  "started": 1533,
+  "qualified": 184,
+  "median_daily_spend": 21.26,
+  "median_minutes_to_qualify": 13.4,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/07",
+  "country": "BD",
+  "place": "BD:region:Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 363.98,
+  "impressions": 1088740,
+  "started": 1557,
+  "qualified": 178,
+  "median_daily_spend": 16.59,
+  "median_minutes_to_qualify": 13.0,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/08",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 667.8,
+  "impressions": 1993796,
+  "started": 1562,
+  "qualified": 128,
+  "median_daily_spend": 35.64,
+  "median_minutes_to_qualify": 15.3,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/09",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-20",
+  "spend_days": 21,
+  "spend_usd": 419.11,
+  "impressions": 1400918,
+  "started": 2109,
+  "qualified": 307,
+  "median_daily_spend": 19.4,
+  "median_minutes_to_qualify": 13.1,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/10",
+  "country": "BD",
+  "place": "BD:region:Dhaka",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 294.71,
+  "impressions": 968003,
+  "started": 2605,
+  "qualified": 292,
+  "median_daily_spend": 14.89,
+  "median_minutes_to_qualify": 13.1,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/11",
+  "country": "BD",
+  "place": "BD:region:Khulna",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 370.08,
+  "impressions": 1264197,
+  "started": 1545,
+  "qualified": 171,
+  "median_daily_spend": 18.74,
+  "median_minutes_to_qualify": 12.6,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/12",
+  "country": "BD",
+  "place": "BD:region:Rajshahi",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 415.39,
+  "impressions": 1440106,
+  "started": 1660,
+  "qualified": 170,
+  "median_daily_spend": 21.38,
+  "median_minutes_to_qualify": 13.4,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/13",
+  "country": "BD",
+  "place": "BD:region:Rangpur",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 460.19,
+  "impressions": 1453329,
+  "started": 1517,
+  "qualified": 180,
+  "median_daily_spend": 22.68,
+  "median_minutes_to_qualify": 13.6,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2023-11b",
+  "cell": "BD-2023-11b/14",
+  "country": "BD",
+  "place": "BD:region:Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2023-11-30",
+  "last": "2023-12-21",
+  "spend_days": 22,
+  "spend_usd": 424.66,
+  "impressions": 1278451,
+  "started": 1351,
+  "qualified": 178,
+  "median_daily_spend": 21.39,
+  "median_minutes_to_qualify": 12.4,
+  "flags": [
+   "gender_label_is_creative_version",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06a",
+  "cell": "BD-2024-06a/01",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-16",
+  "last": "2024-06-18",
+  "spend_days": 3,
+  "spend_usd": 8.71,
+  "impressions": 28004,
+  "started": 77,
+  "qualified": 1,
+  "median_daily_spend": 0.97,
+  "median_minutes_to_qualify": 8.3,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06a",
+  "cell": "BD-2024-06a/02",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-16",
+  "last": "2024-06-18",
+  "spend_days": 3,
+  "spend_usd": 11.03,
+  "impressions": 38568,
+  "started": 142,
+  "qualified": 11,
+  "median_daily_spend": 0.9,
+  "median_minutes_to_qualify": 5.9,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06a",
+  "cell": "BD-2024-06a/03",
+  "country": "BD",
+  "place": "BD:region:Barisal+Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-16",
+  "last": "2024-06-18",
+  "spend_days": 3,
+  "spend_usd": 6.76,
+  "impressions": 21632,
+  "started": 105,
+  "qualified": 6,
+  "median_daily_spend": 0.98,
+  "median_minutes_to_qualify": 7.3,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06a",
+  "cell": "BD-2024-06a/04",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-16",
+  "last": "2024-06-18",
+  "spend_days": 3,
+  "spend_usd": 12.16,
+  "impressions": 45163,
+  "started": 79,
+  "qualified": 1,
+  "median_daily_spend": 0.96,
+  "median_minutes_to_qualify": 9.9,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06a",
+  "cell": "BD-2024-06a/05",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-16",
+  "last": "2024-06-18",
+  "spend_days": 3,
+  "spend_usd": 6.49,
+  "impressions": 22518,
+  "started": 93,
+  "qualified": 9,
+  "median_daily_spend": 0.89,
+  "median_minutes_to_qualify": 5.8,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06a",
+  "cell": "BD-2024-06a/06",
+  "country": "BD",
+  "place": "BD:region:Barisal+Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-16",
+  "last": "2024-06-18",
+  "spend_days": 3,
+  "spend_usd": 7.88,
+  "impressions": 26518,
+  "started": 51,
+  "qualified": 4,
+  "median_daily_spend": 0.88,
+  "median_minutes_to_qualify": 8.5,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06b",
+  "cell": "BD-2024-06b/01",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-23",
+  "last": "2024-06-23",
+  "spend_days": 1,
+  "spend_usd": 1.41,
+  "impressions": 4500,
+  "started": 16,
+  "qualified": 4,
+  "median_daily_spend": 1.41,
+  "median_minutes_to_qualify": 5.5,
+  "flags": [
+   "thin",
+   "one_day",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06b",
+  "cell": "BD-2024-06b/02",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-23",
+  "last": "2024-06-23",
+  "spend_days": 1,
+  "spend_usd": 4.23,
+  "impressions": 8448,
+  "started": 41,
+  "qualified": 16,
+  "median_daily_spend": 4.23,
+  "median_minutes_to_qualify": 6.9,
+  "flags": [
+   "thin",
+   "one_day",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06b",
+  "cell": "BD-2024-06b/03",
+  "country": "BD",
+  "place": "BD:region:Barisal+Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-23",
+  "last": "2024-06-23",
+  "spend_days": 1,
+  "spend_usd": 3.29,
+  "impressions": 9342,
+  "started": 39,
+  "qualified": 8,
+  "median_daily_spend": 3.29,
+  "median_minutes_to_qualify": 7.4,
+  "flags": [
+   "thin",
+   "one_day",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06b",
+  "cell": "BD-2024-06b/04",
+  "country": "BD",
+  "place": "BD:region:Barisal",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-23",
+  "last": "2024-06-23",
+  "spend_days": 1,
+  "spend_usd": 1.5,
+  "impressions": 4662,
+  "started": 12,
+  "qualified": 3,
+  "median_daily_spend": 1.5,
+  "median_minutes_to_qualify": 6.3,
+  "flags": [
+   "thin",
+   "one_day",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06b",
+  "cell": "BD-2024-06b/05",
+  "country": "BD",
+  "place": "BD:region:Chittagong",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-23",
+  "last": "2024-06-23",
+  "spend_days": 1,
+  "spend_usd": 1.15,
+  "impressions": 3287,
+  "started": 25,
+  "qualified": 13,
+  "median_daily_spend": 1.15,
+  "median_minutes_to_qualify": 6.0,
+  "flags": [
+   "thin",
+   "one_day",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-06b",
+  "cell": "BD-2024-06b/06",
+  "country": "BD",
+  "place": "BD:region:Barisal+Sylhet",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-06-23",
+  "last": "2024-06-23",
+  "spend_days": 1,
+  "spend_usd": 1.19,
+  "impressions": 3977,
+  "started": 13,
+  "qualified": 4,
+  "median_daily_spend": 1.19,
+  "median_minutes_to_qualify": 10.2,
+  "flags": [
+   "thin",
+   "one_day",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09a",
+  "cell": "BD-2024-09a/01",
+  "country": "BD",
+  "place": "BD:radius:88x1km-716518",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-10",
+  "last": "2024-09-11",
+  "spend_days": 2,
+  "spend_usd": 0.91,
+  "impressions": 3938,
+  "started": 0,
+  "qualified": 0,
+  "median_daily_spend": 0.45,
+  "median_minutes_to_qualify": null,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09a",
+  "cell": "BD-2024-09a/02",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-10",
+  "last": "2024-09-12",
+  "spend_days": 3,
+  "spend_usd": 18.06,
+  "impressions": 68476,
+  "started": 105,
+  "qualified": 26,
+  "median_daily_spend": 7.66,
+  "median_minutes_to_qualify": 9.3,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "pooled_siblings",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09a",
+  "cell": "BD-2024-09a/03",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-10",
+  "last": "2024-09-12",
+  "spend_days": 3,
+  "spend_usd": 19.17,
+  "impressions": 69577,
+  "started": 160,
+  "qualified": 42,
+  "median_daily_spend": 7.4,
+  "median_minutes_to_qualify": 9.4,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "pooled_siblings",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09a",
+  "cell": "BD-2024-09a/04",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-10",
+  "last": "2024-09-12",
+  "spend_days": 3,
+  "spend_usd": 16.97,
+  "impressions": 55258,
+  "started": 109,
+  "qualified": 28,
+  "median_daily_spend": 7.25,
+  "median_minutes_to_qualify": 9.1,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "pooled_siblings",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09a",
+  "cell": "BD-2024-09a/05",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-10",
+  "last": "2024-09-12",
+  "spend_days": 3,
+  "spend_usd": 17.34,
+  "impressions": 62222,
+  "started": 119,
+  "qualified": 42,
+  "median_daily_spend": 7.52,
+  "median_minutes_to_qualify": 6.8,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "pooled_siblings",
+   "gender_label_differs_from_ad_targeting",
+   "some_people_attributed_by_dominant_spend",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09a",
+  "cell": "BD-2024-09a/06",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-10",
+  "last": "2024-09-12",
+  "spend_days": 3,
+  "spend_usd": 19.04,
+  "impressions": 66624,
+  "started": 178,
+  "qualified": 47,
+  "median_daily_spend": 7.55,
+  "median_minutes_to_qualify": 8.3,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "pooled_siblings",
+   "gender_label_differs_from_ad_targeting",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09a",
+  "cell": "BD-2024-09a/07",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-10",
+  "last": "2024-09-12",
+  "spend_days": 3,
+  "spend_usd": 17.75,
+  "impressions": 57277,
+  "started": 105,
+  "qualified": 17,
+  "median_daily_spend": 7.43,
+  "median_minutes_to_qualify": 8.1,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "pooled_siblings",
+   "gender_label_differs_from_ad_targeting",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/01",
+  "country": "BD",
+  "place": "BD:radius:47x1km-139efa",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 6.33,
+  "impressions": 14776,
+  "started": 31,
+  "qualified": 10,
+  "median_daily_spend": 1.04,
+  "median_minutes_to_qualify": 8.4,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/02",
+  "country": "BD",
+  "place": "BD:radius:47x1km-139efa",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 6.81,
+  "impressions": 16850,
+  "started": 62,
+  "qualified": 19,
+  "median_daily_spend": 1.16,
+  "median_minutes_to_qualify": 8.0,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/03",
+  "country": "BD",
+  "place": "BD:radius:88x1km-716518",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 9.39,
+  "impressions": 19101,
+  "started": 15,
+  "qualified": 5,
+  "median_daily_spend": 1.89,
+  "median_minutes_to_qualify": 7.6,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/04",
+  "country": "BD",
+  "place": "BD:radius:88x1km-716518",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-10",
+  "spend_days": 7,
+  "spend_usd": 103.94,
+  "impressions": 162545,
+  "started": 123,
+  "qualified": 30,
+  "median_daily_spend": 2.65,
+  "median_minutes_to_qualify": 9.1,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/05",
+  "country": "BD",
+  "place": "BD:radius:134x1km-ef9d01",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-05",
+  "last": "2024-10-08",
+  "spend_days": 4,
+  "spend_usd": 5.58,
+  "impressions": 15792,
+  "started": 41,
+  "qualified": 12,
+  "median_daily_spend": 1.65,
+  "median_minutes_to_qualify": 9.9,
+  "flags": [
+   "thin",
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/06",
+  "country": "BD",
+  "place": "BD:radius:134x1km-ef9d01",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-07",
+  "spend_days": 4,
+  "spend_usd": 5.27,
+  "impressions": 16481,
+  "started": 23,
+  "qualified": 9,
+  "median_daily_spend": 1.18,
+  "median_minutes_to_qualify": 7.0,
+  "flags": [
+   "thin",
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/07",
+  "country": "BD",
+  "place": "BD:radius:105x1km-82b746",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 8.52,
+  "impressions": 21625,
+  "started": 84,
+  "qualified": 28,
+  "median_daily_spend": 1.56,
+  "median_minutes_to_qualify": 8.9,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/08",
+  "country": "BD",
+  "place": "BD:radius:105x1km-82b746",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 9.26,
+  "impressions": 25190,
+  "started": 90,
+  "qualified": 23,
+  "median_daily_spend": 2.07,
+  "median_minutes_to_qualify": 8.7,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/09",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 9.83,
+  "impressions": 31217,
+  "started": 89,
+  "qualified": 30,
+  "median_daily_spend": 1.62,
+  "median_minutes_to_qualify": 9.3,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/10",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-10",
+  "spend_days": 7,
+  "spend_usd": 147.73,
+  "impressions": 288880,
+  "started": 280,
+  "qualified": 72,
+  "median_daily_spend": 6.95,
+  "median_minutes_to_qualify": 9.9,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/11",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 9.66,
+  "impressions": 30353,
+  "started": 196,
+  "qualified": 67,
+  "median_daily_spend": 1.7,
+  "median_minutes_to_qualify": 9.2,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/12",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-10",
+  "spend_days": 7,
+  "spend_usd": 47.86,
+  "impressions": 146907,
+  "started": 486,
+  "qualified": 180,
+  "median_daily_spend": 5.1,
+  "median_minutes_to_qualify": 8.7,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/13",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-08",
+  "spend_days": 5,
+  "spend_usd": 11.29,
+  "impressions": 29045,
+  "started": 117,
+  "qualified": 44,
+  "median_daily_spend": 2.32,
+  "median_minutes_to_qualify": 9.3,
+  "flags": [
+   "thin",
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/14",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-04",
+  "last": "2024-10-10",
+  "spend_days": 7,
+  "spend_usd": 118.27,
+  "impressions": 263914,
+  "started": 404,
+  "qualified": 127,
+  "median_daily_spend": 7.2,
+  "median_minutes_to_qualify": 8.6,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/15",
+  "country": "BD",
+  "place": "BD:radius:78x1km-91c23e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-30",
+  "last": "2024-10-10",
+  "spend_days": 8,
+  "spend_usd": 58.93,
+  "impressions": 143236,
+  "started": 262,
+  "qualified": 87,
+  "median_daily_spend": 2.54,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/16",
+  "country": "BD",
+  "place": "BD:radius:78x1km-91c23e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-30",
+  "last": "2024-10-10",
+  "spend_days": 11,
+  "spend_usd": 259.34,
+  "impressions": 524697,
+  "started": 543,
+  "qualified": 129,
+  "median_daily_spend": 5.72,
+  "median_minutes_to_qualify": 9.2,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/17",
+  "country": "BD",
+  "place": "BD:radius:145x1km-70629c",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-30",
+  "last": "2024-10-10",
+  "spend_days": 8,
+  "spend_usd": 59.5,
+  "impressions": 117908,
+  "started": 214,
+  "qualified": 69,
+  "median_daily_spend": 1.94,
+  "median_minutes_to_qualify": 9.6,
+  "flags": [
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/18",
+  "country": "BD",
+  "place": "BD:radius:145x1km-70629c",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-30",
+  "last": "2024-10-10",
+  "spend_days": 9,
+  "spend_usd": 77.58,
+  "impressions": 190480,
+  "started": 316,
+  "qualified": 93,
+  "median_daily_spend": 12.38,
+  "median_minutes_to_qualify": 9.0,
+  "flags": [
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/19",
+  "country": "BD",
+  "place": "BD:radius:91x1km-ecfdfe",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 25,
+   "age_max": 45,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-30",
+  "last": "2024-10-10",
+  "spend_days": 9,
+  "spend_usd": 201.02,
+  "impressions": 170491,
+  "started": 106,
+  "qualified": 30,
+  "median_daily_spend": 4.11,
+  "median_minutes_to_qualify": 9.9,
+  "flags": [
+   "thin",
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-09b",
+  "cell": "BD-2024-09b/20",
+  "country": "BD",
+  "place": "BD:radius:91x1km-ecfdfe",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 30,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-09-30",
+  "last": "2024-10-10",
+  "spend_days": 9,
+  "spend_usd": 140.35,
+  "impressions": 225608,
+  "started": 198,
+  "qualified": 44,
+  "median_daily_spend": 13.95,
+  "median_minutes_to_qualify": 8.4,
+  "flags": [
+   "thin",
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-10",
+  "cell": "BD-2024-10/01",
+  "country": "BD",
+  "place": "BD:region:Khulna",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-09",
+  "last": "2024-10-11",
+  "spend_days": 3,
+  "spend_usd": 73.84,
+  "impressions": 233272,
+  "started": 1284,
+  "qualified": 463,
+  "median_daily_spend": 15.37,
+  "median_minutes_to_qualify": 8.9,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-10",
+  "cell": "BD-2024-10/02",
+  "country": "BD",
+  "place": "BD:region:Rajshahi",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-09",
+  "last": "2024-10-11",
+  "spend_days": 3,
+  "spend_usd": 133.1,
+  "impressions": 411263,
+  "started": 1584,
+  "qualified": 497,
+  "median_daily_spend": 30.61,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-10",
+  "cell": "BD-2024-10/03",
+  "country": "BD",
+  "place": "BD:region:Rangpur",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-10-09",
+  "last": "2024-10-11",
+  "spend_days": 3,
+  "spend_usd": 100.19,
+  "impressions": 296158,
+  "started": 1294,
+  "qualified": 450,
+  "median_daily_spend": 23.92,
+  "median_minutes_to_qualify": 8.9,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12a",
+  "cell": "BD-2024-12a/01",
+  "country": "BD",
+  "place": "BD:region:Dhaka",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 95.02,
+  "impressions": 226084,
+  "started": 2809,
+  "qualified": 1051,
+  "median_daily_spend": 19.05,
+  "median_minutes_to_qualify": 8.5,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12a",
+  "cell": "BD-2024-12a/02",
+  "country": "BD",
+  "place": "BD:region:Khulna",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 193.49,
+  "impressions": 428256,
+  "started": 2412,
+  "qualified": 814,
+  "median_daily_spend": 50.44,
+  "median_minutes_to_qualify": 8.7,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12a",
+  "cell": "BD-2024-12a/03",
+  "country": "BD",
+  "place": "BD:region:Rajshahi",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 253.72,
+  "impressions": 587899,
+  "started": 2411,
+  "qualified": 727,
+  "median_daily_spend": 72.59,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12a",
+  "cell": "BD-2024-12a/04",
+  "country": "BD",
+  "place": "BD:region:Rangpur",
+  "side": null,
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 265.41,
+  "impressions": 561523,
+  "started": 2189,
+  "qualified": 777,
+  "median_daily_spend": 72.89,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12b",
+  "cell": "BD-2024-12b/01",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 41.64,
+  "impressions": 107206,
+  "started": 292,
+  "qualified": 103,
+  "median_daily_spend": 12.08,
+  "median_minutes_to_qualify": 9.3,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12b",
+  "cell": "BD-2024-12b/02",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-19",
+  "spend_days": 3,
+  "spend_usd": 15.06,
+  "impressions": 41398,
+  "started": 314,
+  "qualified": 109,
+  "median_daily_spend": 3.7,
+  "median_minutes_to_qualify": 8.6,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12b",
+  "cell": "BD-2024-12b/03",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 70.89,
+  "impressions": 130996,
+  "started": 276,
+  "qualified": 100,
+  "median_daily_spend": 16.34,
+  "median_minutes_to_qualify": 8.1,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12b",
+  "cell": "BD-2024-12b/04",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 105.26,
+  "impressions": 221631,
+  "started": 478,
+  "qualified": 174,
+  "median_daily_spend": 27.13,
+  "median_minutes_to_qualify": 8.3,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12b",
+  "cell": "BD-2024-12b/05",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 42.13,
+  "impressions": 104650,
+  "started": 612,
+  "qualified": 181,
+  "median_daily_spend": 9.49,
+  "median_minutes_to_qualify": 8.2,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12b",
+  "cell": "BD-2024-12b/06",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 103.15,
+  "impressions": 183602,
+  "started": 452,
+  "qualified": 164,
+  "median_daily_spend": 23.76,
+  "median_minutes_to_qualify": 8.7,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12c",
+  "cell": "BD-2024-12c/01",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 59.46,
+  "impressions": 155054,
+  "started": 374,
+  "qualified": 123,
+  "median_daily_spend": 16.1,
+  "median_minutes_to_qualify": 7.9,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12c",
+  "cell": "BD-2024-12c/02",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 18.16,
+  "impressions": 49446,
+  "started": 366,
+  "qualified": 125,
+  "median_daily_spend": 3.63,
+  "median_minutes_to_qualify": 8.1,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12c",
+  "cell": "BD-2024-12c/03",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 96.61,
+  "impressions": 184483,
+  "started": 334,
+  "qualified": 96,
+  "median_daily_spend": 19.02,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12c",
+  "cell": "BD-2024-12c/04",
+  "country": "BD",
+  "place": "BD:radius:93x1km-67097f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 121.79,
+  "impressions": 260102,
+  "started": 516,
+  "qualified": 163,
+  "median_daily_spend": 32.48,
+  "median_minutes_to_qualify": 8.7,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12c",
+  "cell": "BD-2024-12c/05",
+  "country": "BD",
+  "place": "BD:radius:138x1km-81919f",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 31.33,
+  "impressions": 78169,
+  "started": 485,
+  "qualified": 167,
+  "median_daily_spend": 6.19,
+  "median_minutes_to_qualify": 8.5,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12c",
+  "cell": "BD-2024-12c/06",
+  "country": "BD",
+  "place": "BD:radius:59x1km-e96076",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 120.31,
+  "impressions": 216729,
+  "started": 488,
+  "qualified": 167,
+  "median_daily_spend": 26.45,
+  "median_minutes_to_qualify": 7.9,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12d",
+  "cell": "BD-2024-12d/01",
+  "country": "BD",
+  "place": "BD:radius:88x1km-716518",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 167.01,
+  "impressions": 201589,
+  "started": 178,
+  "qualified": 45,
+  "median_daily_spend": 30.93,
+  "median_minutes_to_qualify": 11.8,
+  "flags": [
+   "thin",
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12d",
+  "cell": "BD-2024-12d/02",
+  "country": "BD",
+  "place": "BD:radius:134x1km-ef9d01",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 21.14,
+  "impressions": 59294,
+  "started": 403,
+  "qualified": 148,
+  "median_daily_spend": 5.35,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12d",
+  "cell": "BD-2024-12d/03",
+  "country": "BD",
+  "place": "BD:radius:105x1km-82b746",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 78.08,
+  "impressions": 144509,
+  "started": 317,
+  "qualified": 91,
+  "median_daily_spend": 19.28,
+  "median_minutes_to_qualify": 8.6,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12d",
+  "cell": "BD-2024-12d/04",
+  "country": "BD",
+  "place": "BD:radius:88x1km-716518",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 179.71,
+  "impressions": 272322,
+  "started": 334,
+  "qualified": 101,
+  "median_daily_spend": 39.3,
+  "median_minutes_to_qualify": 8.9,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12d",
+  "cell": "BD-2024-12d/05",
+  "country": "BD",
+  "place": "BD:radius:134x1km-ef9d01",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 36.91,
+  "impressions": 89495,
+  "started": 534,
+  "qualified": 198,
+  "median_daily_spend": 8.63,
+  "median_minutes_to_qualify": 8.3,
+  "flags": [
+   "pins_outside_country",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12d",
+  "cell": "BD-2024-12d/06",
+  "country": "BD",
+  "place": "BD:radius:105x1km-82b746",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 96.63,
+  "impressions": 171928,
+  "started": 459,
+  "qualified": 144,
+  "median_daily_spend": 27.3,
+  "median_minutes_to_qualify": 8.6,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12e",
+  "cell": "BD-2024-12e/01",
+  "country": "BD",
+  "place": "BD:radius:47x1km-139efa",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 139.18,
+  "impressions": 249600,
+  "started": 513,
+  "qualified": 138,
+  "median_daily_spend": 31.92,
+  "median_minutes_to_qualify": 8.3,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "BD-2024-12e",
+  "cell": "BD-2024-12e/02",
+  "country": "BD",
+  "place": "BD:radius:47x1km-139efa",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-12-13",
+  "last": "2024-12-20",
+  "spend_days": 4,
+  "spend_usd": 169.14,
+  "impressions": 292634,
+  "started": 674,
+  "qualified": 248,
+  "median_daily_spend": 45.45,
+  "median_minutes_to_qualify": 8.2,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IN-2025-09",
+  "cell": "IN-2025-09/01",
+  "country": "IN",
+  "place": "IN:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-09-02",
+  "last": "2025-09-21",
+  "spend_days": 16,
+  "spend_usd": 222.62,
+  "impressions": 487232,
+  "started": 140,
+  "qualified": 51,
+  "median_daily_spend": 2.72,
+  "median_minutes_to_qualify": 10.9,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IN-2025-09",
+  "cell": "IN-2025-09/02",
+  "country": "IN",
+  "place": "IN:country",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-09-02",
+  "last": "2025-09-20",
+  "spend_days": 7,
+  "spend_usd": 32.88,
+  "impressions": 41165,
+  "started": 152,
+  "qualified": 63,
+  "median_daily_spend": 4.18,
+  "median_minutes_to_qualify": 16.3,
+  "flags": [
+   "thin",
+   "renamed_ad_sets_pooled",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IN-2025-09",
+  "cell": "IN-2025-09/03",
+  "country": "IN",
+  "place": "IN:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-09-02",
+  "last": "2025-09-21",
+  "spend_days": 17,
+  "spend_usd": 313.78,
+  "impressions": 763011,
+  "started": 114,
+  "qualified": 41,
+  "median_daily_spend": 9.07,
+  "median_minutes_to_qualify": 14.3,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "IN-2025-09",
+  "cell": "IN-2025-09/04",
+  "country": "IN",
+  "place": "IN:country",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-09-03",
+  "last": "2025-09-20",
+  "spend_days": 7,
+  "spend_usd": 56.33,
+  "impressions": 91161,
+  "started": 137,
+  "qualified": 51,
+  "median_daily_spend": 7.45,
+  "median_minutes_to_qualify": 16.8,
+  "flags": [
+   "thin",
+   "renamed_ad_sets_pooled",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-04",
+  "cell": "PK-2024-04/01",
+  "country": "PK",
+  "place": "PK:country-minus:14-cities-40.23km-6f7085",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-05-02",
+  "spend_days": 5,
+  "spend_usd": 74.95,
+  "impressions": 149312,
+  "started": 241,
+  "qualified": 99,
+  "median_daily_spend": 8.92,
+  "median_minutes_to_qualify": 11.8,
+  "flags": [
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-04",
+  "cell": "PK-2024-04/02",
+  "country": "PK",
+  "place": "PK:city_radius:14x40.23km-411746",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-05-02",
+  "spend_days": 5,
+  "spend_usd": 77.59,
+  "impressions": 122975,
+  "started": 264,
+  "qualified": 118,
+  "median_daily_spend": 8.5,
+  "median_minutes_to_qualify": 12.5,
+  "flags": [
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-04",
+  "cell": "PK-2024-04/03",
+  "country": "PK",
+  "place": "PK:country-minus:14-cities-40.23km-6f7085",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-05-02",
+  "spend_days": 5,
+  "spend_usd": 111.09,
+  "impressions": 159976,
+  "started": 257,
+  "qualified": 87,
+  "median_daily_spend": 9.33,
+  "median_minutes_to_qualify": 11.6,
+  "flags": [
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-04",
+  "cell": "PK-2024-04/04",
+  "country": "PK",
+  "place": "PK:city_radius:14x40.23km-411746",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-04-27",
+  "last": "2024-05-02",
+  "spend_days": 4,
+  "spend_usd": 71.12,
+  "impressions": 77936,
+  "started": 215,
+  "qualified": 109,
+  "median_daily_spend": 11.76,
+  "median_minutes_to_qualify": 11.7,
+  "flags": [
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-05",
+  "cell": "PK-2024-05/01",
+  "country": "PK",
+  "place": "PK:country-minus:14-cities-40.23km-6f7085",
+  "side": "outside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-25",
+  "last": "2024-05-27",
+  "spend_days": 3,
+  "spend_usd": 49.9,
+  "impressions": 46250,
+  "started": 65,
+  "qualified": 35,
+  "median_daily_spend": 8.12,
+  "median_minutes_to_qualify": 13.5,
+  "flags": [
+   "thin",
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-05",
+  "cell": "PK-2024-05/02",
+  "country": "PK",
+  "place": "PK:city_radius:14x40.23km-411746",
+  "side": "inside",
+  "ads": {
+   "genders": "men",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-25",
+  "last": "2024-05-27",
+  "spend_days": 3,
+  "spend_usd": 48.99,
+  "impressions": 28973,
+  "started": 108,
+  "qualified": 69,
+  "median_daily_spend": 0.99,
+  "median_minutes_to_qualify": 12.1,
+  "flags": [
+   "thin",
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-05",
+  "cell": "PK-2024-05/03",
+  "country": "PK",
+  "place": "PK:country-minus:14-cities-40.23km-6f7085",
+  "side": "outside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-25",
+  "last": "2024-05-27",
+  "spend_days": 3,
+  "spend_usd": 87.68,
+  "impressions": 63098,
+  "started": 61,
+  "qualified": 31,
+  "median_daily_spend": 0.84,
+  "median_minutes_to_qualify": 14.8,
+  "flags": [
+   "thin",
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2024-05",
+  "cell": "PK-2024-05/04",
+  "country": "PK",
+  "place": "PK:city_radius:14x40.23km-411746",
+  "side": "inside",
+  "ads": {
+   "genders": "women",
+   "age_min": 18,
+   "age_max": 50,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2024-05-25",
+  "last": "2024-05-26",
+  "spend_days": 2,
+  "spend_usd": 65.07,
+  "impressions": 32282,
+  "started": 149,
+  "qualified": 92,
+  "median_daily_spend": 32.53,
+  "median_minutes_to_qualify": 12.8,
+  "flags": [
+   "thin",
+   "pin_uncertain",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/01",
+  "country": "PK",
+  "place": "PK:region:Balochistan",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 39.07,
+  "impressions": 117244,
+  "started": 373,
+  "qualified": 125,
+  "median_daily_spend": 19.54,
+  "median_minutes_to_qualify": 8.9,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/02",
+  "country": "PK",
+  "place": "PK:region:Balochistan",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 21.13,
+  "impressions": 44687,
+  "started": 119,
+  "qualified": 35,
+  "median_daily_spend": 10.56,
+  "median_minutes_to_qualify": 8.2,
+  "flags": [
+   "thin",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/03",
+  "country": "PK",
+  "place": "PK:region:Islamabad Capital Territory",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 29.35,
+  "impressions": 66946,
+  "started": 575,
+  "qualified": 193,
+  "median_daily_spend": 14.68,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/04",
+  "country": "PK",
+  "place": "PK:region:Islamabad Capital Territory",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 18.59,
+  "impressions": 31745,
+  "started": 240,
+  "qualified": 81,
+  "median_daily_spend": 9.29,
+  "median_minutes_to_qualify": 7.9,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/05",
+  "country": "PK",
+  "place": "PK:region:Khyber Pakhtunkhwa",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 29.09,
+  "impressions": 69128,
+  "started": 457,
+  "qualified": 159,
+  "median_daily_spend": 14.54,
+  "median_minutes_to_qualify": 8.2,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/06",
+  "country": "PK",
+  "place": "PK:region:Khyber Pakhtunkhwa",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 18.47,
+  "impressions": 31991,
+  "started": 200,
+  "qualified": 72,
+  "median_daily_spend": 9.23,
+  "median_minutes_to_qualify": 7.3,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/07",
+  "country": "PK",
+  "place": "PK:region:Punjab",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 62.21,
+  "impressions": 95029,
+  "started": 1570,
+  "qualified": 593,
+  "median_daily_spend": 31.11,
+  "median_minutes_to_qualify": 8.1,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/08",
+  "country": "PK",
+  "place": "PK:region:Punjab",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 43.29,
+  "impressions": 61836,
+  "started": 854,
+  "qualified": 290,
+  "median_daily_spend": 21.65,
+  "median_minutes_to_qualify": 7.3,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/09",
+  "country": "PK",
+  "place": "PK:region:Sindh",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 31.37,
+  "impressions": 55439,
+  "started": 869,
+  "qualified": 325,
+  "median_daily_spend": 15.68,
+  "median_minutes_to_qualify": 8.8,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-07",
+  "cell": "PK-2025-07/10",
+  "country": "PK",
+  "place": "PK:region:Sindh",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-07-09",
+  "last": "2025-07-10",
+  "spend_days": 2,
+  "spend_usd": 23.11,
+  "impressions": 33342,
+  "started": 461,
+  "qualified": 156,
+  "median_daily_spend": 11.55,
+  "median_minutes_to_qualify": 7.8,
+  "flags": [
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/01",
+  "country": "PK",
+  "place": "PK:radius:50x1km-86f607",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-12",
+  "spend_days": 14,
+  "spend_usd": 385.74,
+  "impressions": 547114,
+  "started": 1162,
+  "qualified": 316,
+  "median_daily_spend": 18.9,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/02",
+  "country": "PK",
+  "place": "PK:radius:50x1km-86f607",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "spend_days": 14,
+  "spend_usd": 138.25,
+  "impressions": 142787,
+  "started": 500,
+  "qualified": 147,
+  "median_daily_spend": 7.77,
+  "median_minutes_to_qualify": 4.8,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/03",
+  "country": "PK",
+  "place": "PK:radius:62x1km-4385bd",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "spend_days": 15,
+  "spend_usd": 379.4,
+  "impressions": 460298,
+  "started": 1285,
+  "qualified": 345,
+  "median_daily_spend": 21.14,
+  "median_minutes_to_qualify": 5.1,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/04",
+  "country": "PK",
+  "place": "PK:radius:62x1km-4385bd",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-11",
+  "spend_days": 12,
+  "spend_usd": 124.34,
+  "impressions": 107276,
+  "started": 424,
+  "qualified": 125,
+  "median_daily_spend": 7.0,
+  "median_minutes_to_qualify": 4.6,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/05",
+  "country": "PK",
+  "place": "PK:radius:33x1km-996952",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-11",
+  "spend_days": 13,
+  "spend_usd": 296.63,
+  "impressions": 524075,
+  "started": 1297,
+  "qualified": 356,
+  "median_daily_spend": 14.56,
+  "median_minutes_to_qualify": 5.7,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/06",
+  "country": "PK",
+  "place": "PK:radius:33x1km-996952",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-11",
+  "spend_days": 7,
+  "spend_usd": 114.85,
+  "impressions": 122061,
+  "started": 517,
+  "qualified": 162,
+  "median_daily_spend": 19.23,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/07",
+  "country": "PK",
+  "place": "PK:radius:36x5km-a943a7",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "spend_days": 15,
+  "spend_usd": 613.72,
+  "impressions": 1209212,
+  "started": 979,
+  "qualified": 260,
+  "median_daily_spend": 29.46,
+  "median_minutes_to_qualify": 5.6,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/08",
+  "country": "PK",
+  "place": "PK:radius:36x5km-a943a7",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "spend_days": 15,
+  "spend_usd": 417.19,
+  "impressions": 383837,
+  "started": 297,
+  "qualified": 71,
+  "median_daily_spend": 26.66,
+  "median_minutes_to_qualify": 5.3,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/09",
+  "country": "PK",
+  "place": "PK:radius:33x4km-d8b949",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-11",
+  "spend_days": 13,
+  "spend_usd": 389.21,
+  "impressions": 431995,
+  "started": 1277,
+  "qualified": 353,
+  "median_daily_spend": 24.63,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/10",
+  "country": "PK",
+  "place": "PK:radius:33x4km-d8b949",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-08",
+  "spend_days": 11,
+  "spend_usd": 124.23,
+  "impressions": 94010,
+  "started": 426,
+  "qualified": 123,
+  "median_daily_spend": 8.43,
+  "median_minutes_to_qualify": 4.6,
+  "flags": [
+   "pins_in_other_division",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/11",
+  "country": "PK",
+  "place": "PK:radius:15x5km-d6ab76",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "spend_days": 15,
+  "spend_usd": 515.31,
+  "impressions": 902138,
+  "started": 947,
+  "qualified": 273,
+  "median_daily_spend": 27.75,
+  "median_minutes_to_qualify": 5.5,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/12",
+  "country": "PK",
+  "place": "PK:radius:15x5km-d6ab76",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "spend_days": 15,
+  "spend_usd": 287.72,
+  "impressions": 274621,
+  "started": 284,
+  "qualified": 91,
+  "median_daily_spend": 15.15,
+  "median_minutes_to_qualify": 5.7,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/13",
+  "country": "PK",
+  "place": "PK:radius:36x1km-10303e",
+  "side": null,
+  "ads": {
+   "genders": "men",
+   "age_min": 25,
+   "age_max": 60,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-13",
+  "spend_days": 15,
+  "spend_usd": 502.44,
+  "impressions": 713872,
+  "started": 1276,
+  "qualified": 308,
+  "median_daily_spend": 31.3,
+  "median_minutes_to_qualify": 4.9,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ },
+ {
+  "rec": "PK-2025-08",
+  "cell": "PK-2025-08/14",
+  "country": "PK",
+  "place": "PK:radius:36x1km-10303e",
+  "side": null,
+  "ads": {
+   "genders": "women",
+   "age_min": 23,
+   "age_max": 49,
+   "interests": false
+  },
+  "person_override": null,
+  "first": "2025-08-28",
+  "last": "2025-09-12",
+  "spend_days": 14,
+  "spend_usd": 155.22,
+  "impressions": 161276,
+  "started": 457,
+  "qualified": 134,
+  "median_daily_spend": 7.3,
+  "median_minutes_to_qualify": 5.0,
+  "flags": [
+   "pin_checked",
+   "impressions_from_cpm"
+  ],
+  "attribution": "ad_metadata"
+ }
+]

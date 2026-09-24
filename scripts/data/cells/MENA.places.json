@@ -1,0 +1,243 @@
+{
+ "IQ:city_radius:Baghdad-16km": {
+  "country": "IQ",
+  "type": "city_radius",
+  "label": "Baghdad: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    33.34058,
+    44.40088,
+    16.1
+   ]
+  ]
+ },
+ "IQ:city_radius:Mosul-16km": {
+  "country": "IQ",
+  "type": "city_radius",
+  "label": "Mosul: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    36.335,
+    43.11889,
+    16.1
+   ]
+  ]
+ },
+ "IQ:city_radius:Basra-16km": {
+  "country": "IQ",
+  "type": "city_radius",
+  "label": "Basra: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    30.50852,
+    47.7804,
+    16.1
+   ]
+  ]
+ },
+ "EG:city_radius:Cairo-16km": {
+  "country": "EG",
+  "type": "city_radius",
+  "label": "Cairo: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    30.06263,
+    31.24967,
+    16.1
+   ]
+  ]
+ },
+ "EG:city_radius:Giza-16km": {
+  "country": "EG",
+  "type": "city_radius",
+  "label": "Giza: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    30.00944,
+    31.20861,
+    16.1
+   ]
+  ]
+ },
+ "EG:city_radius:Alexandria-16km": {
+  "country": "EG",
+  "type": "city_radius",
+  "label": "Alexandria: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    31.20176,
+    29.91582,
+    16.1
+   ]
+  ]
+ },
+ "MA:city_radius:Casablanca-16km": {
+  "country": "MA",
+  "type": "city_radius",
+  "label": "Casablanca: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    33.58831,
+    -7.61138,
+    16.1
+   ]
+  ]
+ },
+ "MA:city_radius:Fez-16km": {
+  "country": "MA",
+  "type": "city_radius",
+  "label": "Fez: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    34.03313,
+    -5.00028,
+    16.1
+   ]
+  ]
+ },
+ "MA:city_radius:Marrakesh-16km": {
+  "country": "MA",
+  "type": "city_radius",
+  "label": "Marrakesh: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    31.63416,
+    -7.99994,
+    16.1
+   ]
+  ]
+ },
+ "AE:city_radius:AbuDhabi-16km": {
+  "country": "AE",
+  "type": "city_radius",
+  "label": "Abu Dhabi: 10-mile (16.1 km) radius area around the city",
+  "pins": [
+   [
+    24.45118,
+    54.39696,
+    16.1
+   ]
+  ]
+ },
+ "AE:city_radius:AbuDhabi-40km": {
+  "country": "AE",
+  "type": "city_radius",
+  "label": "Abu Dhabi: 25-mile (40.2 km) radius area around the city",
+  "pins": [
+   [
+    24.45118,
+    54.39696,
+    40.2
+   ]
+  ]
+ },
+ "AE:city_radius:Dubai-40km": {
+  "country": "AE",
+  "type": "city_radius",
+  "label": "Dubai: 25-mile (40.2 km) radius area around the city",
+  "pins": [
+   [
+    25.231942,
+    55.278029,
+    40.2
+   ]
+  ]
+ },
+ "SA:city:Riyadh": {
+  "country": "SA",
+  "type": "city_radius",
+  "label": "Riyadh: Meta's city area (no radius set)",
+  "pins": [
+   [
+    24.68773,
+    46.72185,
+    null
+   ]
+  ]
+ },
+ "SA:city:Jeddah": {
+  "country": "SA",
+  "type": "city_radius",
+  "label": "Jeddah: Meta's city area (no radius set)",
+  "pins": [
+   [
+    21.49012,
+    39.18624,
+    null
+   ]
+  ]
+ },
+ "SA:city:Mecca": {
+  "country": "SA",
+  "type": "city_radius",
+  "label": "Mecca: Meta's city area (no radius set)",
+  "pins": [
+   [
+    21.42664,
+    39.82563,
+    null
+   ]
+  ]
+ },
+ "AE:city:Sharjah": {
+  "country": "AE",
+  "type": "city_radius",
+  "label": "Sharjah: Meta's city area (no radius set)",
+  "pins": [
+   [
+    25.3342,
+    55.41221,
+    null
+   ]
+  ]
+ },
+ "JO:city:Amman": {
+  "country": "JO",
+  "type": "city_radius",
+  "label": "Amman: Meta's city area (no radius set)",
+  "pins": [
+   [
+    31.95522,
+    35.94503,
+    null
+   ]
+  ]
+ },
+ "JO:region:Zarqa": {
+  "country": "JO",
+  "type": "region",
+  "label": "Zarqa Governorate (whole)",
+  "regions": [
+   "Zarqa Governorate"
+  ]
+ },
+ "JO:radius:Irbid-8km": {
+  "country": "JO",
+  "type": "radius_set",
+  "label": "Irbid: a 5-mile (8.0 km) radius area on a pin",
+  "pins": [
+   [
+    32.549183,
+    35.860062,
+    8.0
+   ]
+  ]
+ },
+ "AE:country_minus:Dubai+AbuDhabi-40km": {
+  "country": "AE",
+  "type": "country_minus",
+  "label": "United Arab Emirates outside the Dubai and Abu Dhabi 25-mile (40.2 km) radius areas",
+  "pins_excluded": [
+   [
+    25.231942,
+    55.278029,
+    40.2
+   ],
+   [
+    24.45118,
+    54.39696,
+    40.2
+   ]
+  ]
+ }
+}

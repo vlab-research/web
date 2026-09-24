@@ -1,0 +1,684 @@
+[
+ {
+  "rec": "KE-2024-09",
+  "country": "KE",
+  "first": "2024-09-23",
+  "last": "2024-09-27",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 35,
+   "interests": false
+  },
+  "screen": [
+   "age:15-35",
+   "consent"
+  ],
+  "who_qualified": "aged 15–35 (ads shown to 18–35); reached the end of the questions, about 21 minutes in",
+  "qualify_rule": "answered the last question before the contact and payment questions",
+  "qualify_point": {
+   "question": 61,
+   "of": 68
+  },
+  "median_minutes_to_qualify": 20.9,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 260,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 281,
+  "qualified": 160,
+  "notes": "Pilot of the next recruitment's survey: gender x inside/outside 81 radius areas around towns. The ad message offered 260 KES of airtime until 25 Sep 2024 and 130 KES after. Insights recorded no impressions field for these runs; impressions are spend / CPM (CPM $1.9-2.5, a USD account). Cost per person who started is very low ($0.04) and matches Meta's own count of conversations started (see private map). qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "KE-2025-02",
+  "country": "KE",
+  "first": "2025-02-05",
+  "last": "2025-02-19",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 35,
+   "interests": false
+  },
+  "screen": [
+   "age:15-35",
+   "consent"
+  ],
+  "who_qualified": "aged 15–35 (ads shown to 18–35), answered the gender question as a woman or a man; reached the end of the questions, about 19 minutes in",
+  "qualify_rule": "answered the last question before the contact and payment questions",
+  "qualify_point": {
+   "question": 69,
+   "of": 73
+  },
+  "median_minutes_to_qualify": 19.1,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 30,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 1399,
+  "qualified": 1162,
+  "notes": "Same survey and radius areas as KE-2024-09. Ads ran 5-7 Feb 2025 to women and men, then from 11 Feb to women only (renamed ad sets). People carry only the inside/outside label, so the 5-7 Feb cells pool the men's and women's ad sets. People already counted in KE-2024-09 are not counted again. Impressions are spend / CPM (no impressions field recorded)."
+ },
+ {
+  "rec": "KE-2025-05",
+  "country": "KE",
+  "first": "2025-05-04",
+  "last": "2025-07-14",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 24,
+   "interests": true
+  },
+  "screen": [
+   "consent",
+   "gave_phone"
+  ],
+  "who_qualified": "aged 18–24 by the ads, mostly women, chosen by Meta interests; gave a phone number and reached the end of the questions, about 13 minutes in",
+  "qualify_rule": "answered the final phone-number question (the payment step)",
+  "qualify_point": {
+   "question": 31,
+   "of": 33
+  },
+  "median_minutes_to_qualify": 12.7,
+  "channel": "messenger",
+  "languages": [
+   "sw",
+   "en"
+  ],
+  "incentive": {
+   "amount": 100,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 6501,
+  "qualified": 2712,
+  "notes": "Five audience groups, each an ad set with its own ages (18, 18-21, 22-24), gender and Meta interests/behaviours; followers of the sponsor's pages excluded. Two groups excluded cities: 10 cities at 16 km, and the capital at 24 km. The five short-named ad sets ran one day (5 May 2025) after a rename and are outside the final quota groups, so their people never qualify. No screening question beyond consent; a phone number is asked early and again at the end."
+ },
+ {
+  "rec": "KE-2025-08",
+  "country": "KE",
+  "first": "2025-08-11",
+  "last": "2025-08-14",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent",
+   "education:max_secondary",
+   "language:en"
+  ],
+  "who_qualified": "adults who had not completed a university degree and chose English; reached the end of the questions, about 13 minutes in",
+  "qualify_rule": "answered the mobile-operator question at the end, and chose English or Swahili (as the quota rule was written)",
+  "qualify_point": {
+   "question": 44,
+   "of": 44
+  },
+  "median_minutes_to_qualify": 12.6,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "sw"
+  ],
+  "incentive": {
+   "amount": 35,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 1099,
+  "qualified": 133,
+  "notes": "The final quota rule asks for language = English or 'Swahili', but the answer was stored as 'Kiswahili', so only people who chose English qualify under the rule as written (kept as written; hence the language:en tag). Each gender had two ad sets (by language) that people's labels do not separate; pooled. Screen-outs: under 18, a university or higher degree, an age answer that contradicts the age band."
+ },
+ {
+  "rec": "KE-2025-12",
+  "country": "KE",
+  "first": "2025-12-03",
+  "last": "2025-12-13",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 30,
+   "interests": false
+  },
+  "screen": [
+   "age:18-30",
+   "consent",
+   "attention_check"
+  ],
+  "who_qualified": "aged 18–30; reached the end of the questions, about 20 minutes in",
+  "qualify_rule": "answered the last question of the first questionnaire",
+  "qualify_point": {
+   "question": 65,
+   "of": 66
+  },
+  "median_minutes_to_qualify": 20.5,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 225,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 731,
+  "qualified": 519,
+  "notes": "Whole country, men and women. The ad message said 'up to 225 KES' (to 150 on 12 Dec), across two questionnaires; the consent text says 75 KES per questionnaire. Two attention checks screen out."
+ },
+ {
+  "rec": "KE-2026-01",
+  "country": "KE",
+  "first": "2026-01-14",
+  "last": "2026-01-26",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 30,
+   "interests": false
+  },
+  "screen": [
+   "age:18-30",
+   "has_whatsapp",
+   "consent",
+   "attention_check"
+  ],
+  "who_qualified": "aged 18–30; reached the end of the questions, about 24 minutes in",
+  "qualify_rule": "answered the last question of the first questionnaire",
+  "qualify_point": {
+   "question": 60,
+   "of": 64
+  },
+  "median_minutes_to_qualify": 23.6,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 150,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 439,
+  "qualified": 196,
+  "notes": "Second pilot, same survey family. 'Up to 150 KES' across questionnaires. People already counted in KE-2025-12 (736 carried over) are not counted again."
+ },
+ {
+  "rec": "KE-2026-05",
+  "country": "KE",
+  "first": "2026-05-20",
+  "last": "2026-07-07",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 30,
+   "interests": false
+  },
+  "screen": [
+   "age:18-30",
+   "has_whatsapp",
+   "consent",
+   "attention_check"
+  ],
+  "who_qualified": "aged 18–30; reached the end of the questions, about 20 minutes in",
+  "qualify_rule": "answered the last question of the first questionnaire",
+  "qualify_point": {
+   "question": 54,
+   "of": 57
+  },
+  "median_minutes_to_qualify": 20.1,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "sw"
+  ],
+  "incentive": {
+   "amount": 300,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 1289,
+  "qualified": 679,
+  "notes": "First phase of the main run (ad sets labelled for this phase); earlier pilot respondents excluded by a custom audience. 'Up to 300 KES' across questionnaires. 1,700+ people whose first record is the last question with no ad labels are not attributable and not counted."
+ },
+ {
+  "rec": "KE-2026-07",
+  "country": "KE",
+  "first": "2026-07-16",
+  "last": "2026-09-24",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 30,
+   "interests": false
+  },
+  "screen": [
+   "age:18-30",
+   "has_whatsapp",
+   "consent",
+   "attention_check"
+  ],
+  "who_qualified": "aged 18–30; reached the end of the questions, about 18 minutes in",
+  "qualify_rule": "answered the last question of the first questionnaire",
+  "qualify_point": {
+   "question": 55,
+   "of": 59
+  },
+  "median_minutes_to_qualify": 18.0,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "sw"
+  ],
+  "incentive": {
+   "amount": 300,
+   "currency": "KES",
+   "form": "airtime"
+  },
+  "started": 6619,
+  "qualified": 3429,
+  "notes": "Second phase of the main run, new ad sets, moved to another USD ad account on 8 Jul 2026; a custom audience of earlier respondents excluded. Still fielding at pull time (config end 25 Sep 2026)."
+ },
+ {
+  "rec": "KE-2026-09",
+  "country": "KE",
+  "round": "excluded",
+  "notes": "Configured (6 ad sets over 263 radius areas of 5 km, 1-15 Sep 2026) but no ads were delivered: every ad set reports no spend and no survey responses arrived. Never ran."
+ },
+ {
+  "rec": "BO-2026-09a",
+  "country": "BO",
+  "first": "2026-09-05",
+  "last": "2026-09-09",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 24 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 78,
+   "of": 80
+  },
+  "median_minutes_to_qualify": 23.9,
+  "channel": "messenger",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 11,
+   "currency": "BOB",
+   "form": "airtime"
+  },
+  "started": 26,
+  "qualified": 13,
+  "notes": "Link-click ads to a page offering Messenger or WhatsApp; most people who started wrote on Messenger. Gender x inside/outside 13 radius areas around cities. Ages by Meta default (18-65+). Few people reached the survey from these ads; a short first run. The two 'inside' ad sets were configured with the outside geometry on 5-7 Sep; those days' spend and people are placed outside (flag label_differs_from_geometry). qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "BO-2026-09b",
+  "country": "BO",
+  "first": "2026-09-09",
+  "last": "2026-09-24",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 20 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 78,
+   "of": 79
+  },
+  "median_minutes_to_qualify": 20.3,
+  "channel": "messenger",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 11,
+   "currency": "BOB",
+   "form": "airtime"
+  },
+  "started": 199,
+  "qualified": 148,
+  "notes": "Conversation ads opening Messenger, one arm of a two-channel run into the same survey as BO-2026-09a (same 13 radius areas and gender split). The arms ran on different days (both 9-12 Sep; then one at a time). Still fielding at pull time (config end 10 Oct 2026). People assigned by the platform they wrote from; each person counted once across a, b, c. qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "BO-2026-09c",
+  "country": "BO",
+  "first": "2026-09-09",
+  "last": "2026-09-19",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 21 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 78,
+   "of": 79
+  },
+  "median_minutes_to_qualify": 20.9,
+  "channel": "whatsapp",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 11,
+   "currency": "BOB",
+   "form": "airtime"
+  },
+  "started": 512,
+  "qualified": 343,
+  "notes": "Conversation ads opening Whatsapp, one arm of a two-channel run into the same survey as BO-2026-09a (same 13 radius areas and gender split). The arms ran on different days (both 9-12 Sep; then one at a time). Still fielding at pull time (config end 10 Oct 2026). People assigned by the platform they wrote from; each person counted once across a, b, c. On WhatsApp, anyone arriving without an ad referral is asked to come back through an ad. qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "AR-2026-09a",
+  "country": "AR",
+  "first": "2026-09-06",
+  "last": "2026-09-09",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 22 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 79,
+   "of": 80
+  },
+  "median_minutes_to_qualify": 21.8,
+  "channel": "messenger",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 3000,
+   "currency": "ARS",
+   "form": "airtime"
+  },
+  "started": 21,
+  "qualified": 10,
+  "notes": "Link-click ads to a page offering Messenger or WhatsApp; most people who started wrote on Messenger. Gender x inside/outside 146 radius areas around towns. Ages by Meta default (18-65+). Few people reached the survey from these ads; a short first run. qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "AR-2026-09b",
+  "country": "AR",
+  "first": "2026-09-11",
+  "last": "2026-09-24",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 17 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 79,
+   "of": 80
+  },
+  "median_minutes_to_qualify": 17.4,
+  "channel": "messenger",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 3000,
+   "currency": "ARS",
+   "form": "airtime"
+  },
+  "started": 70,
+  "qualified": 49,
+  "notes": "Conversation ads opening Messenger, one arm of a two-channel run into the same survey as AR-2026-09a (same 146 radius areas and gender split). The arms ran on different days (both 9-12 Sep; then one at a time). Still fielding at pull time (config end 10 Oct 2026). People assigned by the platform they wrote from; each person counted once across a, b, c. qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "AR-2026-09c",
+  "country": "AR",
+  "first": "2026-09-11",
+  "last": "2026-09-19",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 17 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 79,
+   "of": 80
+  },
+  "median_minutes_to_qualify": 17.1,
+  "channel": "whatsapp",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 3000,
+   "currency": "ARS",
+   "form": "airtime"
+  },
+  "started": 407,
+  "qualified": 268,
+  "notes": "Conversation ads opening Whatsapp, one arm of a two-channel run into the same survey as AR-2026-09a (same 146 radius areas and gender split). The arms ran on different days (both 9-12 Sep; then one at a time). Still fielding at pull time (config end 10 Oct 2026). People assigned by the platform they wrote from; each person counted once across a, b, c. On WhatsApp, anyone arriving without an ad referral is asked to come back through an ad. qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "HN-2026-09a",
+  "country": "HN",
+  "first": "2026-09-06",
+  "last": "2026-09-09",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 20 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 79,
+   "of": 80
+  },
+  "median_minutes_to_qualify": 20.4,
+  "channel": "messenger",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 90,
+   "currency": "HNL",
+   "form": "airtime"
+  },
+  "started": 9,
+  "qualified": 2,
+  "notes": "Link-click ads to a page offering Messenger or WhatsApp; most people who started wrote on Messenger. Gender x inside/outside 30 radius areas around towns. Ages by Meta default (18-65+). Few people reached the survey from these ads; a short first run. qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "HN-2026-09b",
+  "country": "HN",
+  "first": "2026-09-11",
+  "last": "2026-09-12",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 18 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 79,
+   "of": 80
+  },
+  "median_minutes_to_qualify": 18.5,
+  "channel": "messenger",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 90,
+   "currency": "HNL",
+   "form": "airtime"
+  },
+  "started": 35,
+  "qualified": 16,
+  "notes": "Conversation ads opening Messenger, one arm of a two-channel run into the same survey as HN-2026-09a (same 30 radius areas and gender split). The arms ran on different days (both 9-12 Sep; then one at a time). Still fielding at pull time (config end 10 Oct 2026). People assigned by the platform they wrote from; each person counted once across a, b, c. qualify_point counts every prompt answered, including 'OK' taps."
+ },
+ {
+  "rec": "HN-2026-09c",
+  "country": "HN",
+  "first": "2026-09-11",
+  "last": "2026-09-12",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "women",
+    "men"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults (18+ by birth year); reached the end of the questions, about 24 minutes in",
+  "qualify_rule": "answered the last question of the survey, before the payment form",
+  "qualify_point": {
+   "question": 79,
+   "of": 80
+  },
+  "median_minutes_to_qualify": 23.6,
+  "channel": "whatsapp",
+  "languages": [
+   "es"
+  ],
+  "incentive": {
+   "amount": 90,
+   "currency": "HNL",
+   "form": "airtime"
+  },
+  "started": 118,
+  "qualified": 74,
+  "notes": "Conversation ads opening Whatsapp, one arm of a two-channel run into the same survey as HN-2026-09a (same 30 radius areas and gender split). The arms ran on different days (both 9-12 Sep; then one at a time). Still fielding at pull time (config end 10 Oct 2026). People assigned by the platform they wrote from; each person counted once across a, b, c. On WhatsApp, anyone arriving without an ad referral is asked to come back through an ad. qualify_point counts every prompt answered, including 'OK' taps."
+ }
+]

@@ -14,8 +14,9 @@ import csv, json, os, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 P = lambda f: os.path.join(HERE, f)
-ev = json.load(open(P("strata_evidence.json")))
-fam = json.load(open(P("fam.json")))
+R = lambda f: os.path.join(HERE, "raw", f)      # pulls and pipeline.py output live in raw/ (gitignored)
+ev = json.load(open(R("strata_evidence.json")))
+fam = json.load(open(R("fam.json")))
 S2F = {s: f for f, v in fam.items() for s in v.values()}
 
 SW6 = ["Ekiti", "Lagos", "Ogun", "Ondo", "Osun", "Oyo"]
@@ -129,7 +130,7 @@ def instr(r):
 
 # conversations (Meta-counted), deduped per family x campaign x stratum x day, summed per family x stratum id
 best = {}
-for r in csv.DictReader(open(P("insights_daily.tsv")), delimiter="\t"):
+for r in csv.DictReader(open(R("insights_daily.tsv")), delimiter="\t"):
     k = (S2F[r["sid"]], r["camp"], r["strat"], r["d"])
     c = float(r["conv"]) if r["conv"] not in ("", "NULL") else None
     if k not in best or (c or 0) > (best[k] or 0):

@@ -1,0 +1,802 @@
+{
+ "_meta": {
+  "status": "PROPOSED buckets for review; not on the site",
+  "rules": "scripts/pilot-maps/merge_cells.py: place_slice, ads_age, who_bucket, length_band",
+  "pooling": "spend and people summed; ranges are across recruitments with at least 50 starts in the bucket"
+ },
+ "slice_place": {
+  "outside radius areas": {
+   "spend": 8324.75,
+   "started": 13320,
+   "qualified": 5488,
+   "cost_per_start": 0.62,
+   "cost_per_qualified": 1.52,
+   "share_qualified": 0.412,
+   "recruitments": 17,
+   "countries": [
+    "AR",
+    "BO",
+    "GH",
+    "HN",
+    "ID",
+    "KE",
+    "NG",
+    "TR"
+   ],
+   "range_cost_per_start": [
+    0.02,
+    4.25
+   ],
+   "range_cost_per_qualified": [
+    0.02,
+    29.48
+   ],
+   "range_share_qualified": [
+    0.082,
+    0.841
+   ],
+   "median_share_qualified": 0.56
+  },
+  "radius areas": {
+   "spend": 101829.78,
+   "started": 86092,
+   "qualified": 29725,
+   "cost_per_start": 1.18,
+   "cost_per_qualified": 3.43,
+   "share_qualified": 0.345,
+   "recruitments": 46,
+   "countries": [
+    "AE",
+    "AR",
+    "BD",
+    "BG",
+    "BO",
+    "EG",
+    "GH",
+    "HN",
+    "ID",
+    "IQ",
+    "JO",
+    "KE",
+    "KG",
+    "MA",
+    "NG",
+    "PK",
+    "SA",
+    "TR"
+   ],
+   "range_cost_per_start": [
+    0.03,
+    11.72
+   ],
+   "range_cost_per_qualified": [
+    0.06,
+    29.26
+   ],
+   "range_share_qualified": [
+    0.106,
+    0.825
+   ],
+   "median_share_qualified": 0.361
+  },
+  "smaller areas": {
+   "spend": 14331.04,
+   "started": 3406,
+   "qualified": 2011,
+   "cost_per_start": 4.21,
+   "cost_per_qualified": 7.13,
+   "share_qualified": 0.59,
+   "recruitments": 5,
+   "countries": [
+    "US"
+   ],
+   "range_cost_per_start": [
+    2.75,
+    7.9
+   ],
+   "range_cost_per_qualified": [
+    4.61,
+    12.26
+   ],
+   "range_share_qualified": [
+    0.557,
+    0.778
+   ],
+   "median_share_qualified": 0.62
+  },
+  "whole country": {
+   "spend": 129473.39,
+   "started": 89191,
+   "qualified": 25653,
+   "cost_per_start": 1.45,
+   "cost_per_qualified": 5.05,
+   "share_qualified": 0.288,
+   "recruitments": 25,
+   "countries": [
+    "AE",
+    "BG",
+    "GH",
+    "IE",
+    "IN",
+    "KE",
+    "KG",
+    "NG",
+    "PK",
+    "RS",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.04,
+    11.81
+   ],
+   "range_cost_per_qualified": [
+    0.07,
+    20.05
+   ],
+   "range_share_qualified": [
+    0.044,
+    0.97
+   ],
+   "median_share_qualified": 0.402
+  },
+  "whole regions": {
+   "spend": 84801.11,
+   "started": 81327,
+   "qualified": 25173,
+   "cost_per_start": 1.04,
+   "cost_per_qualified": 3.37,
+   "share_qualified": 0.31,
+   "recruitments": 29,
+   "countries": [
+    "BD",
+    "DE",
+    "GH",
+    "JO",
+    "NG",
+    "PK",
+    "TR",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.06,
+    16.21
+   ],
+   "range_cost_per_qualified": [
+    0.11,
+    45.29
+   ],
+   "range_share_qualified": [
+    0.009,
+    0.81
+   ],
+   "median_share_qualified": 0.339
+  }
+ },
+ "slice_ads_gender": {
+  "all": {
+   "spend": 80775.4,
+   "started": 73254,
+   "qualified": 20673,
+   "cost_per_start": 1.1,
+   "cost_per_qualified": 3.91,
+   "share_qualified": 0.282,
+   "recruitments": 18,
+   "countries": [
+    "BD",
+    "BG",
+    "GH",
+    "KE",
+    "NG",
+    "RS",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.01,
+    11.72
+   ],
+   "range_cost_per_qualified": [
+    0.02,
+    50.92
+   ],
+   "range_share_qualified": [
+    0.031,
+    0.868
+   ],
+   "median_share_qualified": 0.394
+  },
+  "men": {
+   "spend": 148059.18,
+   "started": 121387,
+   "qualified": 38614,
+   "cost_per_start": 1.22,
+   "cost_per_qualified": 3.83,
+   "share_qualified": 0.318,
+   "recruitments": 81,
+   "countries": [
+    "AE",
+    "AR",
+    "BD",
+    "BG",
+    "BO",
+    "DE",
+    "EG",
+    "GH",
+    "HN",
+    "ID",
+    "IE",
+    "IN",
+    "IQ",
+    "JO",
+    "KE",
+    "KG",
+    "MA",
+    "NG",
+    "PK",
+    "SA",
+    "TR",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.02,
+    20.07
+   ],
+   "range_cost_per_qualified": [
+    0.03,
+    36.0
+   ],
+   "range_share_qualified": [
+    0.052,
+    0.965
+   ],
+   "median_share_qualified": 0.368
+  },
+  "women": {
+   "spend": 109925.49,
+   "started": 78695,
+   "qualified": 28763,
+   "cost_per_start": 1.4,
+   "cost_per_qualified": 3.82,
+   "share_qualified": 0.365,
+   "recruitments": 81,
+   "countries": [
+    "AE",
+    "AR",
+    "BD",
+    "BG",
+    "BO",
+    "DE",
+    "EG",
+    "GH",
+    "HN",
+    "ID",
+    "IE",
+    "IN",
+    "IQ",
+    "JO",
+    "KE",
+    "KG",
+    "MA",
+    "NG",
+    "PK",
+    "SA",
+    "TR",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.05,
+    13.37
+   ],
+   "range_cost_per_qualified": [
+    0.11,
+    140.97
+   ],
+   "range_share_qualified": [
+    0.002,
+    0.975
+   ],
+   "median_share_qualified": 0.4
+  }
+ },
+ "slice_ads_age": {
+  "ads to 25 and over": {
+   "spend": 94442.64,
+   "started": 103957,
+   "qualified": 25636,
+   "cost_per_start": 0.91,
+   "cost_per_qualified": 3.68,
+   "share_qualified": 0.247,
+   "recruitments": 37,
+   "countries": [
+    "AE",
+    "BD",
+    "BG",
+    "DE",
+    "EG",
+    "GH",
+    "ID",
+    "IE",
+    "IQ",
+    "JO",
+    "KG",
+    "MA",
+    "NG",
+    "PK",
+    "SA",
+    "TR",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.05,
+    9.16
+   ],
+   "range_cost_per_qualified": [
+    0.14,
+    45.29
+   ],
+   "range_share_qualified": [
+    0.037,
+    0.627
+   ],
+   "median_share_qualified": 0.275
+  },
+  "ads to all adult ages": {
+   "spend": 131533.44,
+   "started": 90139,
+   "qualified": 33422,
+   "cost_per_start": 1.46,
+   "cost_per_qualified": 3.94,
+   "share_qualified": 0.371,
+   "recruitments": 54,
+   "countries": [
+    "AR",
+    "BD",
+    "BG",
+    "BO",
+    "GH",
+    "HN",
+    "IN",
+    "KE",
+    "NG",
+    "PK",
+    "RS",
+    "TR",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.04,
+    16.21
+   ],
+   "range_cost_per_qualified": [
+    0.07,
+    50.92
+   ],
+   "range_share_qualified": [
+    0.009,
+    0.81
+   ],
+   "median_share_qualified": 0.4
+  },
+  "ads to under-36s": {
+   "spend": 112783.99,
+   "started": 79240,
+   "qualified": 28992,
+   "cost_per_start": 1.42,
+   "cost_per_qualified": 3.89,
+   "share_qualified": 0.366,
+   "recruitments": 22,
+   "countries": [
+    "BG",
+    "DE",
+    "ID",
+    "IE",
+    "KE",
+    "KG",
+    "NG",
+    "TR",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.04,
+    3.3
+   ],
+   "range_cost_per_qualified": [
+    0.06,
+    9.41
+   ],
+   "range_share_qualified": [
+    0.087,
+    0.97
+   ],
+   "median_share_qualified": 0.522
+  }
+ },
+ "slice_who": {
+  "any adult": {
+   "spend": 68894.35,
+   "started": 37942,
+   "qualified": 15743,
+   "cost_per_start": 1.82,
+   "cost_per_qualified": 4.38,
+   "share_qualified": 0.415,
+   "recruitments": 41,
+   "countries": [
+    "AE",
+    "AR",
+    "BO",
+    "DE",
+    "EG",
+    "GH",
+    "HN",
+    "IE",
+    "IN",
+    "IQ",
+    "JO",
+    "KE",
+    "MA",
+    "NG",
+    "PK",
+    "SA",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.04,
+    16.21
+   ],
+   "range_cost_per_qualified": [
+    0.07,
+    27.55
+   ],
+   "range_share_qualified": [
+    0.121,
+    0.81
+   ],
+   "median_share_qualified": 0.589
+  },
+  "caregivers of adolescents (9–17)": {
+   "spend": 81717.24,
+   "started": 105258,
+   "qualified": 30527,
+   "cost_per_start": 0.78,
+   "cost_per_qualified": 2.68,
+   "share_qualified": 0.29,
+   "recruitments": 28,
+   "countries": [
+    "BD",
+    "NG",
+    "PK"
+   ],
+   "range_cost_per_start": [
+    0.06,
+    11.72
+   ],
+   "range_cost_per_qualified": [
+    0.16,
+    45.29
+   ],
+   "range_share_qualified": [
+    0.059,
+    0.656
+   ],
+   "median_share_qualified": 0.326
+  },
+  "caregivers of children aged 0–14": {
+   "spend": 2430.48,
+   "started": 2706,
+   "qualified": 1616,
+   "cost_per_start": 0.9,
+   "cost_per_qualified": 1.5,
+   "share_qualified": 0.597,
+   "recruitments": 2,
+   "countries": [
+    "NG"
+   ],
+   "range_cost_per_start": [
+    0.08,
+    0.97
+   ],
+   "range_cost_per_qualified": [
+    0.11,
+    1.66
+   ],
+   "range_share_qualified": [
+    0.585,
+    0.732
+   ],
+   "median_share_qualified": 0.659
+  },
+  "caregivers of children aged 5–12": {
+   "spend": 3713.22,
+   "started": 2688,
+   "qualified": 466,
+   "cost_per_start": 1.38,
+   "cost_per_qualified": 7.97,
+   "share_qualified": 0.173,
+   "recruitments": 2,
+   "countries": [
+    "GH"
+   ],
+   "range_cost_per_start": [
+    0.74,
+    1.53
+   ],
+   "range_cost_per_qualified": [
+    4.77,
+    8.63
+   ],
+   "range_share_qualified": [
+    0.156,
+    0.177
+   ],
+   "median_share_qualified": 0.167
+  },
+  "caregivers of young children (under 6)": {
+   "spend": 35738.55,
+   "started": 41042,
+   "qualified": 13102,
+   "cost_per_start": 0.87,
+   "cost_per_qualified": 2.73,
+   "share_qualified": 0.319,
+   "recruitments": 8,
+   "countries": [
+    "BG",
+    "ID",
+    "KG",
+    "NG",
+    "RS",
+    "TR"
+   ],
+   "range_cost_per_start": [
+    0.14,
+    1.99
+   ],
+   "range_cost_per_qualified": [
+    0.49,
+    8.06
+   ],
+   "range_share_qualified": [
+    0.213,
+    0.4
+   ],
+   "median_share_qualified": 0.266
+  },
+  "not comparable": {
+   "spend": 2344.08,
+   "started": 3301,
+   "qualified": 1010,
+   "cost_per_start": 0.71,
+   "cost_per_qualified": 2.32,
+   "share_qualified": 0.306,
+   "recruitments": 3,
+   "countries": [
+    "GH",
+    "NG",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.3,
+    1.76
+   ],
+   "range_cost_per_qualified": [
+    1.82,
+    32.23
+   ],
+   "range_share_qualified": [
+    0.009,
+    0.97
+   ],
+   "median_share_qualified": 0.101
+  },
+  "people in a specific occupation": {
+   "spend": 8062.61,
+   "started": 10323,
+   "qualified": 459,
+   "cost_per_start": 0.78,
+   "cost_per_qualified": 17.57,
+   "share_qualified": 0.044,
+   "recruitments": 1,
+   "countries": [
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.78,
+    0.78
+   ],
+   "range_cost_per_qualified": [
+    17.57,
+    17.57
+   ],
+   "range_share_qualified": [
+    0.044,
+    0.044
+   ],
+   "median_share_qualified": 0.044
+  },
+  "people with a specific behaviour": {
+   "spend": 33545.25,
+   "started": 4071,
+   "qualified": 776,
+   "cost_per_start": 8.24,
+   "cost_per_qualified": 43.23,
+   "share_qualified": 0.191,
+   "recruitments": 1,
+   "countries": [
+    "NG"
+   ],
+   "range_cost_per_start": [
+    8.24,
+    8.24
+   ],
+   "range_cost_per_qualified": [
+    43.23,
+    43.23
+   ],
+   "range_share_qualified": [
+    0.191,
+    0.191
+   ],
+   "median_share_qualified": 0.191
+  },
+  "young adults (up to 35)": {
+   "spend": 102314.29,
+   "started": 66005,
+   "qualified": 24351,
+   "cost_per_start": 1.55,
+   "cost_per_qualified": 4.2,
+   "share_qualified": 0.369,
+   "recruitments": 10,
+   "countries": [
+    "KE",
+    "NG",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.04,
+    3.3
+   ],
+   "range_cost_per_qualified": [
+    0.06,
+    7.26
+   ],
+   "range_share_qualified": [
+    0.226,
+    0.831
+   ],
+   "median_share_qualified": 0.548
+  }
+ },
+ "slice_length": {
+  "10–20 minutes": {
+   "spend": 157830.51,
+   "started": 104636,
+   "qualified": 30109,
+   "cost_per_start": 1.51,
+   "cost_per_qualified": 5.24,
+   "share_qualified": 0.288,
+   "recruitments": 35,
+   "countries": [
+    "AE",
+    "AR",
+    "BD",
+    "BG",
+    "EG",
+    "GH",
+    "HN",
+    "IN",
+    "IQ",
+    "JO",
+    "KE",
+    "MA",
+    "NG",
+    "PK",
+    "RS",
+    "SA",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.04,
+    11.72
+   ],
+   "range_cost_per_qualified": [
+    0.06,
+    45.29
+   ],
+   "range_share_qualified": [
+    0.044,
+    0.831
+   ],
+   "median_share_qualified": 0.406
+  },
+  "over 20 minutes": {
+   "spend": 10796.73,
+   "started": 14506,
+   "qualified": 4221,
+   "cost_per_start": 0.74,
+   "cost_per_qualified": 2.56,
+   "share_qualified": 0.291,
+   "recruitments": 15,
+   "countries": [
+    "AR",
+    "BO",
+    "GH",
+    "HN",
+    "KE",
+    "MA",
+    "NG"
+   ],
+   "range_cost_per_start": [
+    0.04,
+    2.0
+   ],
+   "range_cost_per_qualified": [
+    0.07,
+    8.63
+   ],
+   "range_share_qualified": [
+    0.134,
+    0.744
+   ],
+   "median_share_qualified": 0.487
+  },
+  "under 10 minutes": {
+   "spend": 156791.19,
+   "started": 144252,
+   "qualified": 48618,
+   "cost_per_start": 1.09,
+   "cost_per_qualified": 3.22,
+   "share_qualified": 0.337,
+   "recruitments": 43,
+   "countries": [
+    "BD",
+    "DE",
+    "GH",
+    "ID",
+    "IE",
+    "KG",
+    "NG",
+    "PK",
+    "TR",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.06,
+    16.21
+   ],
+   "range_cost_per_qualified": [
+    0.11,
+    32.23
+   ],
+   "range_share_qualified": [
+    0.009,
+    0.97
+   ],
+   "median_share_qualified": 0.343
+  },
+  "unknown": {
+   "spend": 13341.64,
+   "started": 9942,
+   "qualified": 5102,
+   "cost_per_start": 1.34,
+   "cost_per_qualified": 2.61,
+   "share_qualified": 0.513,
+   "recruitments": 3,
+   "countries": [
+    "GH",
+    "IE",
+    "US"
+   ],
+   "range_cost_per_start": [
+    0.34,
+    1.5
+   ],
+   "range_cost_per_qualified": [
+    2.57,
+    3.42
+   ],
+   "range_share_qualified": [
+    0.101,
+    0.585
+   ],
+   "median_share_qualified": 0.343
+  }
+ }
+}

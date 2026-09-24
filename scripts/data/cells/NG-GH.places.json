@@ -1,0 +1,2595 @@
+{
+ "NG:region:Sokoto": {
+  "country": "NG",
+  "type": "region",
+  "label": "Sokoto State (whole)",
+  "regions": [
+   "Sokoto"
+  ]
+ },
+ "NG:region:Anambra": {
+  "country": "NG",
+  "type": "region",
+  "label": "Anambra State (whole)",
+  "regions": [
+   "Anambra"
+  ]
+ },
+ "NG:region:Rivers": {
+  "country": "NG",
+  "type": "region",
+  "label": "Rivers State (whole)",
+  "regions": [
+   "Rivers"
+  ]
+ },
+ "NG:region:Lagos": {
+  "country": "NG",
+  "type": "region",
+  "label": "Lagos State (whole)",
+  "regions": [
+   "Lagos"
+  ]
+ },
+ "NG:region:Bauchi": {
+  "country": "NG",
+  "type": "region",
+  "label": "Bauchi State (whole)",
+  "regions": [
+   "Bauchi"
+  ]
+ },
+ "NG:region:Niger": {
+  "country": "NG",
+  "type": "region",
+  "label": "Niger State (whole)",
+  "regions": [
+   "Niger"
+  ]
+ },
+ "NG:region:Kano": {
+  "country": "NG",
+  "type": "region",
+  "label": "Kano State (whole)",
+  "regions": [
+   "Kano"
+  ]
+ },
+ "NG:region:Nasarawa": {
+  "country": "NG",
+  "type": "region",
+  "label": "Nasarawa State (whole)",
+  "regions": [
+   "Nasarawa"
+  ]
+ },
+ "NG:region:Federal Capital Territory": {
+  "country": "NG",
+  "type": "region",
+  "label": "FCT (whole territory)",
+  "regions": [
+   "Federal Capital Territory"
+  ]
+ },
+ "NG:region:Adamawa": {
+  "country": "NG",
+  "type": "region",
+  "label": "Adamawa State (whole)",
+  "regions": [
+   "Adamawa"
+  ]
+ },
+ "NG:radius:16x2.01km:4d118e": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "16 radius areas of 2.0 km in Adamawa, near Jimeta",
+  "pins": [
+   [
+    9.2696,
+    12.4435,
+    2.01
+   ],
+   [
+    9.2794,
+    12.4282,
+    2.01
+   ],
+   [
+    9.2878,
+    12.4586,
+    2.01
+   ],
+   [
+    9.2951,
+    12.491,
+    2.01
+   ],
+   [
+    9.3006,
+    12.4397,
+    2.01
+   ],
+   [
+    9.3024,
+    12.4724,
+    2.01
+   ],
+   [
+    9.3156,
+    12.4945,
+    2.01
+   ],
+   [
+    9.3217,
+    12.4382,
+    2.01
+   ],
+   [
+    9.3219,
+    12.4548,
+    2.01
+   ],
+   [
+    9.3253,
+    12.5085,
+    2.01
+   ],
+   [
+    9.3281,
+    12.483,
+    2.01
+   ],
+   [
+    9.3421,
+    12.4677,
+    2.01
+   ],
+   [
+    9.3437,
+    12.4526,
+    2.01
+   ],
+   [
+    9.3449,
+    12.4976,
+    2.01
+   ],
+   [
+    9.3585,
+    12.4821,
+    2.01
+   ],
+   [
+    9.3617,
+    12.4625,
+    2.01
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Bekaja",
+    "nearest_place_km": 0.3,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 1.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Damsawo",
+    "nearest_place_km": 0.3,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 3.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Nassarawo",
+    "nearest_place_km": 0.9,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 0.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Njobbore",
+    "nearest_place_km": 0.9,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 4.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Wuro Kuturu",
+    "nearest_place_km": 1.7,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 3.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Badirsa",
+    "nearest_place_km": 0.7,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 3.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Wuro Babawa",
+    "nearest_place_km": 1.8,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 5.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Fasare",
+    "nearest_place_km": 0.1,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 5.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Wuro Tammai",
+    "nearest_place_km": 0.3,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 4.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Wuro Babawa",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 7.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Gimpawo",
+    "nearest_place_km": 1.7,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 6.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Gada Ndiyam",
+    "nearest_place_km": 1.2,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 7.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Gada Ndiyam",
+    "nearest_place_km": 0.5,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 7.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Gimpawo",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 8.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Bagalchi",
+    "nearest_place_km": 0.2,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 9.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Bagalchi",
+    "nearest_place_km": 2.1,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 9.1,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:radius:24x4.02km:ae4e41": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "24 radius areas of 4 km in the FCT, near Suleja, Abuja, Bwari",
+  "pins": [
+   [
+    9.0763,
+    7.191,
+    4.02
+   ],
+   [
+    9.0814,
+    7.2566,
+    4.02
+   ],
+   [
+    9.0873,
+    7.3187,
+    4.02
+   ],
+   [
+    9.089,
+    7.3805,
+    4.02
+   ],
+   [
+    9.0896,
+    7.436,
+    4.02
+   ],
+   [
+    9.1019,
+    7.4774,
+    4.02
+   ],
+   [
+    9.1273,
+    7.2319,
+    4.02
+   ],
+   [
+    9.1368,
+    7.3019,
+    4.02
+   ],
+   [
+    9.1387,
+    7.3621,
+    4.02
+   ],
+   [
+    9.1444,
+    7.4205,
+    4.02
+   ],
+   [
+    9.1537,
+    7.4883,
+    4.02
+   ],
+   [
+    9.1567,
+    7.1939,
+    4.02
+   ],
+   [
+    9.1689,
+    7.2268,
+    4.02
+   ],
+   [
+    9.1703,
+    7.384,
+    4.02
+   ],
+   [
+    9.1722,
+    7.3247,
+    4.02
+   ],
+   [
+    9.1726,
+    7.269,
+    4.02
+   ],
+   [
+    9.175,
+    7.4496,
+    4.02
+   ],
+   [
+    9.2177,
+    7.2488,
+    4.02
+   ],
+   [
+    9.2192,
+    7.4174,
+    4.02
+   ],
+   [
+    9.2193,
+    7.3624,
+    4.02
+   ],
+   [
+    9.2216,
+    7.2982,
+    4.02
+   ],
+   [
+    9.2725,
+    7.3968,
+    4.02
+   ],
+   [
+    9.2738,
+    7.3431,
+    4.02
+   ],
+   [
+    9.3085,
+    7.3641,
+    4.02
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Tunga Maje",
+    "nearest_place_km": 2.3,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 11.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Sabojibi",
+    "nearest_place_km": 3.7,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 13.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Gwagwa",
+    "nearest_place_km": 0.3,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 18.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Idogwari",
+    "nearest_place_km": 2.5,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 13.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Jahi",
+    "nearest_place_km": 1.8,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 7.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Maitama",
+    "nearest_place_km": 2.4,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 5.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Dakwa",
+    "nearest_place_km": 1.6,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 8.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kagini",
+    "nearest_place_km": 1.1,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 14.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Dushekoro",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 17.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kado",
+    "nearest_place_km": 3.3,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 12.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Mashapa",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 10.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Niger",
+    "nearest_place": "Ibo",
+    "nearest_place_km": 1.2,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 3.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Gauraka",
+    "nearest_place_km": 3.1,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 5.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Sagwari",
+    "nearest_place_km": 0.3,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 17.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kubwa Suburban District",
+    "nearest_place_km": 4.6,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 16.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kagini",
+    "nearest_place_km": 4.4,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 9.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Pewi",
+    "nearest_place_km": 0.9,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 13.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Niger",
+    "nearest_place": "Apia",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 8.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Ushapa",
+    "nearest_place_km": 0.6,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 19.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kuchbuni",
+    "nearest_place_km": 1.2,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 20.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kato",
+    "nearest_place_km": 2.1,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 13.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Bwari",
+    "nearest_place_km": 2.0,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 26.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Aji",
+    "nearest_place_km": 2.7,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 20.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Kaduna",
+    "nearest_place": "Garam",
+    "nearest_place_km": 2.2,
+    "nearest_town": "Suleja",
+    "nearest_town_km": 24.7,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:radius:60x4.02km:5a4bfb": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "60 radius areas of 4 km in Nasarawa, near Lafia, Keffi, Abuja",
+  "pins": [
+   [
+    8.356,
+    8.5335,
+    4.02
+   ],
+   [
+    8.4185,
+    8.4978,
+    4.02
+   ],
+   [
+    8.424,
+    8.5623,
+    4.02
+   ],
+   [
+    8.4307,
+    8.4442,
+    4.02
+   ],
+   [
+    8.4362,
+    8.6076,
+    4.02
+   ],
+   [
+    8.4621,
+    8.5072,
+    4.02
+   ],
+   [
+    8.4689,
+    8.5567,
+    4.02
+   ],
+   [
+    8.4878,
+    8.3783,
+    4.02
+   ],
+   [
+    8.4878,
+    8.6282,
+    4.02
+   ],
+   [
+    8.4934,
+    8.4372,
+    4.02
+   ],
+   [
+    8.5055,
+    8.5087,
+    4.02
+   ],
+   [
+    8.5177,
+    8.3206,
+    4.02
+   ],
+   [
+    8.5205,
+    8.5759,
+    4.02
+   ],
+   [
+    8.5314,
+    8.477,
+    4.02
+   ],
+   [
+    8.5436,
+    8.5319,
+    4.02
+   ],
+   [
+    8.5489,
+    8.6433,
+    4.02
+   ],
+   [
+    8.5503,
+    8.3645,
+    4.02
+   ],
+   [
+    8.5504,
+    8.4152,
+    4.02
+   ],
+   [
+    8.5543,
+    8.289,
+    4.02
+   ],
+   [
+    8.5762,
+    8.4537,
+    4.02
+   ],
+   [
+    8.5774,
+    8.5911,
+    4.02
+   ],
+   [
+    8.583,
+    8.5031,
+    4.02
+   ],
+   [
+    8.5964,
+    8.3508,
+    4.02
+   ],
+   [
+    8.602,
+    8.407,
+    4.02
+   ],
+   [
+    8.625,
+    8.5541,
+    4.02
+   ],
+   [
+    8.6265,
+    8.4592,
+    4.02
+   ],
+   [
+    8.648,
+    8.4978,
+    4.02
+   ],
+   [
+    8.6645,
+    8.4111,
+    4.02
+   ],
+   [
+    8.7118,
+    8.0695,
+    4.02
+   ],
+   [
+    8.7174,
+    8.2985,
+    4.02
+   ],
+   [
+    8.7687,
+    7.9506,
+    4.02
+   ],
+   [
+    8.7717,
+    8.0101,
+    4.02
+   ],
+   [
+    8.807,
+    8.0582,
+    4.02
+   ],
+   [
+    8.812,
+    7.974,
+    4.02
+   ],
+   [
+    8.8202,
+    7.9122,
+    4.02
+   ],
+   [
+    8.8325,
+    7.7762,
+    4.02
+   ],
+   [
+    8.8446,
+    7.838,
+    4.02
+   ],
+   [
+    8.8477,
+    8.0128,
+    4.02
+   ],
+   [
+    8.8572,
+    8.0705,
+    4.02
+   ],
+   [
+    8.864,
+    8.1254,
+    4.02
+   ],
+   [
+    8.8754,
+    7.9374,
+    4.02
+   ],
+   [
+    8.8795,
+    7.7987,
+    4.02
+   ],
+   [
+    8.8849,
+    7.7315,
+    4.02
+   ],
+   [
+    8.8876,
+    7.8688,
+    4.02
+   ],
+   [
+    8.9036,
+    7.9836,
+    4.02
+   ],
+   [
+    8.9101,
+    8.0485,
+    4.02
+   ],
+   [
+    8.9112,
+    7.6642,
+    4.02
+   ],
+   [
+    8.9126,
+    7.7693,
+    4.02
+   ],
+   [
+    8.931,
+    7.9223,
+    4.02
+   ],
+   [
+    8.9324,
+    7.8592,
+    4.02
+   ],
+   [
+    8.9405,
+    7.7397,
+    4.02
+   ],
+   [
+    8.9405,
+    7.8056,
+    4.02
+   ],
+   [
+    8.9505,
+    7.679,
+    4.02
+   ],
+   [
+    8.9579,
+    7.9932,
+    4.02
+   ],
+   [
+    8.9888,
+    7.9137,
+    4.02
+   ],
+   [
+    8.9922,
+    7.8368,
+    4.02
+   ],
+   [
+    8.9956,
+    7.7606,
+    4.02
+   ],
+   [
+    8.997,
+    7.6986,
+    4.02
+   ],
+   [
+    9.0048,
+    7.9671,
+    4.02
+   ],
+   [
+    9.0198,
+    7.7982,
+    4.02
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Ajakiri",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 15.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gidan Ausa",
+    "nearest_place_km": 1.2,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 8.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Murya",
+    "nearest_place_km": 1.6,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 9.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Madagwa",
+    "nearest_place_km": 2.1,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 10.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Duduguru",
+    "nearest_place_km": 2.5,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 12.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Bukan Fadama",
+    "nearest_place_km": 1.1,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 3.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gimare Kosa",
+    "nearest_place_km": 1.4,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 5.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Burumburum",
+    "nearest_place_km": 3.4,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 15.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Ungwan Ayaba",
+    "nearest_place_km": 1.1,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 12.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gidan-Mata",
+    "nearest_place_km": 3.4,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 8.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Lafia",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 1.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Burum",
+    "nearest_place_km": 1.1,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 21.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Akurba",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 7.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Ankani",
+    "nearest_place_km": 2.6,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 5.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Bukar Allah",
+    "nearest_place_km": 2.0,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 5.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Adogi",
+    "nearest_place_km": 2.8,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 15.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Awunge",
+    "nearest_place_km": 2.8,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 17.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Akwiya",
+    "nearest_place_km": 3.0,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 12.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Atokopi",
+    "nearest_place_km": 1.7,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 25.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Kafin-Wambai",
+    "nearest_place_km": 1.8,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 11.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Akurba-Sanya",
+    "nearest_place_km": 2.5,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 12.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Kwandari",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 9.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Wansa",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 21.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Koro",
+    "nearest_place_km": 1.4,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 16.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Akpu",
+    "nearest_place_km": 2.2,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 15.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Wane",
+    "nearest_place_km": 4.3,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 15.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Alagani",
+    "nearest_place_km": 2.7,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 17.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Ecpong",
+    "nearest_place_km": 1.1,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 22.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Bakin-Ahini",
+    "nearest_place_km": 4.3,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 26.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Mada",
+    "nearest_place_km": 0.2,
+    "nearest_town": "Lafia",
+    "nearest_town_km": 34.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Abadu",
+    "nearest_place_km": 2.0,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 12.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Sabon Gida",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 17.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gidan Sarkin Baka",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 20.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Kadiri",
+    "nearest_place_km": 1.7,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 11.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gauta",
+    "nearest_place_km": 4.1,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 5.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gwandara",
+    "nearest_place_km": 2.8,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 10.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Sabon Gari",
+    "nearest_place_km": 2.5,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 3.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Sabon Gida",
+    "nearest_place_km": 0.1,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 15.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Angwan Bala",
+    "nearest_place_km": 0.7,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 21.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Anza",
+    "nearest_place_km": 1.8,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 27.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Anguwar Jaba",
+    "nearest_place_km": 2.5,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 7.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Icheabu",
+    "nearest_place_km": 0.4,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 9.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gora",
+    "nearest_place_km": 3.8,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 16.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Rimi",
+    "nearest_place_km": 2.0,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 4.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Magayaiki",
+    "nearest_place_km": 2.3,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 13.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Mante",
+    "nearest_place_km": 1.3,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 20.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gidan Mudu",
+    "nearest_place_km": 2.1,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 24.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gora",
+    "nearest_place_km": 3.3,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 13.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Kenye",
+    "nearest_place_km": 0.7,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 10.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Tudun Wada",
+    "nearest_place_km": 3.8,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 9.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Uke",
+    "nearest_place_km": 5.3,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 18.0,
+    "within_5km_of_a_place": false
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Bagaji",
+    "nearest_place_km": 2.3,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 12.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Uke",
+    "nearest_place_km": 4.2,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 23.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Adamu",
+    "nearest_place_km": 1.7,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 18.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Angwa Koyo",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 16.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Angwan Kato",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 16.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Ruhu",
+    "nearest_place_km": 7.5,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 20.6,
+    "within_5km_of_a_place": false
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Sabon Ruhu",
+    "nearest_place_km": 2.4,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 23.4,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gidan Agwai",
+    "nearest_place_km": 1.9,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 20.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Gidan Aleku",
+    "nearest_place_km": 4.7,
+    "nearest_town": "Keffi",
+    "nearest_town_km": 20.9,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:radius:19x4.02km:52f745": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "19 radius areas of 4 km in the FCT, near Abuja, Kuje",
+  "pins": [
+   [
+    8.8416,
+    7.2215,
+    4.02
+   ],
+   [
+    8.8735,
+    7.2847,
+    4.02
+   ],
+   [
+    8.8837,
+    7.3746,
+    4.02
+   ],
+   [
+    8.8977,
+    7.2354,
+    4.02
+   ],
+   [
+    8.9029,
+    7.4805,
+    4.02
+   ],
+   [
+    8.9047,
+    7.4285,
+    4.02
+   ],
+   [
+    8.9117,
+    7.5459,
+    4.02
+   ],
+   [
+    8.9139,
+    7.3245,
+    4.02
+   ],
+   [
+    8.9342,
+    7.3818,
+    4.02
+   ],
+   [
+    8.9449,
+    7.2646,
+    4.02
+   ],
+   [
+    8.9577,
+    7.4348,
+    4.02
+   ],
+   [
+    8.9601,
+    7.4928,
+    4.02
+   ],
+   [
+    8.9711,
+    7.5432,
+    4.02
+   ],
+   [
+    8.9768,
+    7.326,
+    4.02
+   ],
+   [
+    8.9962,
+    7.4578,
+    4.02
+   ],
+   [
+    8.999,
+    7.3825,
+    4.02
+   ],
+   [
+    9.0153,
+    7.43,
+    4.02
+   ],
+   [
+    9.023,
+    7.5277,
+    4.02
+   ],
+   [
+    9.0294,
+    7.4929,
+    4.02
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Barari",
+    "nearest_place_km": 3.3,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 4.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kuji",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 6.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kpoto",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 16.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kuje",
+    "nearest_place_km": 2.2,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 2.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Burum",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 17.2,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Sherat",
+    "nearest_place_km": 2.0,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 18.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Anka",
+    "nearest_place_km": 1.3,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 17.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Barwa",
+    "nearest_place_km": 2.3,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 11.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Ketti",
+    "nearest_place_km": 1.6,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 18.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Gidansa",
+    "nearest_place_km": 1.5,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 8.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Gbuduyi",
+    "nearest_place_km": 0.3,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 12.9,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Saban Plyore",
+    "nearest_place_km": 0.7,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 10.8,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Jikoyi",
+    "nearest_place_km": 3.0,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 11.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Rubuchi",
+    "nearest_place_km": 1.6,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 15.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Dubeidna",
+    "nearest_place_km": 0.6,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 8.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Jidu",
+    "nearest_place_km": 2.2,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 14.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Karonmajigi",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 8.6,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Kurunduma",
+    "nearest_place_km": 0.8,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 5.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Gerki",
+    "nearest_place_km": 1.3,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 3.2,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:radius:4x4.02km:00d499": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "4 radius areas of 4 km in Nasarawa, near Abuja",
+  "pins": [
+   [
+    9.0042,
+    7.5977,
+    4.02
+   ],
+   [
+    9.0144,
+    7.6197,
+    4.02
+   ],
+   [
+    9.0532,
+    7.6091,
+    4.02
+   ],
+   [
+    9.0962,
+    7.5912,
+    4.02
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Katambe",
+    "nearest_place_km": 1.7,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 12.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Ado",
+    "nearest_place_km": 0.8,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 14.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Aso",
+    "nearest_place_km": 0.4,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 12.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Jawu",
+    "nearest_place_km": 1.8,
+    "nearest_town": "Abuja",
+    "nearest_town_km": 11.4,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:radius:7x2.01km:c468d0": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "7 radius areas of 2.0 km in Adamawa, near Yola, Jimeta",
+  "pins": [
+   [
+    9.1934,
+    12.4806,
+    2.01
+   ],
+   [
+    9.2109,
+    12.472,
+    2.01
+   ],
+   [
+    9.2275,
+    12.4477,
+    2.01
+   ],
+   [
+    9.2283,
+    12.4626,
+    2.01
+   ],
+   [
+    9.2356,
+    12.4185,
+    2.01
+   ],
+   [
+    9.2495,
+    12.3924,
+    2.01
+   ],
+   [
+    9.264,
+    12.3743,
+    2.01
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Madumari",
+    "nearest_place_km": 1.0,
+    "nearest_town": "Yola",
+    "nearest_town_km": 1.7,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Yola",
+    "nearest_place_km": 1.1,
+    "nearest_town": "Yola",
+    "nearest_town_km": 1.1,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Yakamle",
+    "nearest_place_km": 0.7,
+    "nearest_town": "Yola",
+    "nearest_town_km": 4.3,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Rumnde Kofa",
+    "nearest_place_km": 1.2,
+    "nearest_town": "Yola",
+    "nearest_town_km": 3.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Baccure",
+    "nearest_place_km": 0.5,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 6.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Wauro Jabbe",
+    "nearest_place_km": 1.4,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 8.0,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Tongare",
+    "nearest_place_km": 1.6,
+    "nearest_town": "Jimeta",
+    "nearest_town_km": 9.4,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:radius:2x24.14km:578777": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "2 radius areas of 24 km in Nasarawa, near Nasarawa, Wamba",
+  "pins": [
+   [
+    8.5347,
+    7.7062,
+    24.14
+   ],
+   [
+    8.9174,
+    8.4114,
+    24.14
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Nasarawa",
+    "nearest_place_km": 0.5,
+    "nearest_town": "Nasarawa",
+    "nearest_town_km": 0.5,
+    "within_5km_of_a_place": true
+   },
+   {
+    "kind": "pin",
+    "admin1": "Nassarawa",
+    "nearest_place": "Ngankri",
+    "nearest_place_km": 0.9,
+    "nearest_town": "Wamba",
+    "nearest_town_km": 21.3,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:radius:1x19.31km:efb2a8": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "1 radius area of 19 km in the FCT, near Kuje",
+  "pins": [
+   [
+    8.8651,
+    7.3962,
+    19.31
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Jaita",
+    "nearest_place_km": 0.6,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 18.6,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:outside:radius:1x19.31km:efb2a8:in:Federal Capital Territory": {
+  "country": "NG",
+  "type": "radius_outside",
+  "label": "Federal Capital Territory outside the 1 radius area of 19 km in the FCT, near Kuje",
+  "complement_of": "NG:radius:1x19.31km:efb2a8",
+  "regions": [
+   "Federal Capital Territory"
+  ]
+ },
+ "NG:radius:1x19.31km:efb2a8:minus:Nasarawa": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "1 radius area of 19 km in the FCT, near Kuje, less the part in Nasarawa",
+  "pins": [
+   [
+    8.8651,
+    7.3962,
+    19.31
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Federal Capital Territory",
+    "nearest_place": "Jaita",
+    "nearest_place_km": 0.6,
+    "nearest_town": "Kuje",
+    "nearest_town_km": 18.6,
+    "within_5km_of_a_place": true
+   }
+  ],
+  "regions_excluded": [
+   "Nasarawa"
+  ]
+ },
+ "NG:radius:1x53.11km:a9b534": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "1 radius area of 53 km in Adamawa, near Yola",
+  "pins": [
+   [
+    9.1381,
+    12.5236,
+    53.11
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Adamawa",
+    "nearest_place": "Bole",
+    "nearest_place_km": 0.7,
+    "nearest_town": "Yola",
+    "nearest_town_km": 9.0,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:outside:radius:1x53.11km:a9b534:in:Adamawa": {
+  "country": "NG",
+  "type": "radius_outside",
+  "label": "Adamawa outside the 1 radius area of 53 km in Adamawa, near Yola",
+  "complement_of": "NG:radius:1x53.11km:a9b534",
+  "regions": [
+   "Adamawa"
+  ]
+ },
+ "NG:outside:radius:2x24.14km:578777:in:Nasarawa": {
+  "country": "NG",
+  "type": "radius_outside",
+  "label": "Nasarawa outside the 2 radius areas of 24 km in Nasarawa, near Nasarawa, Wamba",
+  "complement_of": "NG:radius:2x24.14km:578777",
+  "regions": [
+   "Nasarawa"
+  ]
+ },
+ "NG:country": {
+  "country": "NG",
+  "type": "country",
+  "label": "Nigeria, whole country"
+ },
+ "NG:country-minus:Ekiti+Lagos+Ogun+Ondo+Osun+Oyo": {
+  "country": "NG",
+  "type": "country_minus",
+  "label": "Nigeria except 6 states: Ekiti, Lagos, Ogun, Ondo, Osun, Oyo",
+  "regions_excluded": [
+   "Ekiti",
+   "Lagos",
+   "Ogun",
+   "Ondo",
+   "Osun",
+   "Oyo"
+  ]
+ },
+ "NG:region:Abia+Akwa Ibom+Anambra+Bayelsa+Cross River+Delta+Ebonyi+Edo+Ekiti+Enugu+Imo+Lagos+Ogun+Ondo+Osun+Rivers": {
+  "country": "NG",
+  "type": "region",
+  "label": "16 states together: Abia, Akwa Ibom, Anambra, Bayelsa, Cross River, Delta, Ebonyi, Edo, Ekiti, Enugu, Imo, Lagos, Ogun, Ondo, Osun, Rivers",
+  "regions": [
+   "Abia",
+   "Akwa Ibom",
+   "Anambra",
+   "Bayelsa",
+   "Cross River",
+   "Delta",
+   "Ebonyi",
+   "Edo",
+   "Ekiti",
+   "Enugu",
+   "Imo",
+   "Lagos",
+   "Ogun",
+   "Ondo",
+   "Osun",
+   "Rivers"
+  ]
+ },
+ "NG:region:Abia+Anambra+Ebonyi+Enugu+Imo": {
+  "country": "NG",
+  "type": "region",
+  "label": "5 states together: Abia, Anambra, Ebonyi, Enugu, Imo",
+  "regions": [
+   "Abia",
+   "Anambra",
+   "Ebonyi",
+   "Enugu",
+   "Imo"
+  ]
+ },
+ "NG:region:Ekiti+Lagos+Ogun+Ondo+Osun": {
+  "country": "NG",
+  "type": "region",
+  "label": "5 states together: Ekiti, Lagos, Ogun, Ondo, Osun",
+  "regions": [
+   "Ekiti",
+   "Lagos",
+   "Ogun",
+   "Ondo",
+   "Osun"
+  ]
+ },
+ "NG:region:Akwa Ibom+Bayelsa+Cross River+Delta+Edo+Rivers": {
+  "country": "NG",
+  "type": "region",
+  "label": "6 states together: Akwa Ibom, Bayelsa, Cross River, Delta, Edo, Rivers",
+  "regions": [
+   "Akwa Ibom",
+   "Bayelsa",
+   "Cross River",
+   "Delta",
+   "Edo",
+   "Rivers"
+  ]
+ },
+ "NG:radius:1x16.09km:5d47f1": {
+  "country": "NG",
+  "type": "radius_set",
+  "label": "1 radius area of 16 km in Bauchi, near Kuskie",
+  "pins": [
+   [
+    10.1381,
+    9.1516,
+    16.09
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "pin",
+    "admin1": "Bauchi",
+    "nearest_place": "Kuskie",
+    "nearest_place_km": 0.9,
+    "nearest_town": "Jos",
+    "nearest_town_km": 36.7,
+    "within_5km_of_a_place": true
+   }
+  ]
+ },
+ "NG:city-radius:1x16.09km:dcf8fb": {
+  "country": "NG",
+  "type": "city_radius",
+  "label": "1 Meta city with a 16 km radius: Jama'are",
+  "pins": [
+   [
+    11.6698,
+    9.928,
+    16.09
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "meta_city",
+    "meta_name": "Jama'are",
+    "geonameid": 2336553,
+    "feature": "PPLA2",
+    "point_name": "Jama'are",
+    "candidates": 1
+   }
+  ]
+ },
+ "NG:city-radius:1x16.09km:2ba038": {
+  "country": "NG",
+  "type": "city_radius",
+  "label": "1 Meta city with a 16 km radius: Dambam",
+  "pins": [
+   [
+    11.67893,
+    10.70792,
+    16.09
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "meta_city",
+    "meta_name": "Dambam",
+    "geonameid": 2345509,
+    "feature": "PPLA2",
+    "point_name": "Dambam",
+    "candidates": 1
+   }
+  ]
+ },
+ "NG:city-radius:1x16.09km:e22298": {
+  "country": "NG",
+  "type": "city_radius",
+  "label": "1 Meta city with a 16 km radius: Giade",
+  "pins": [
+   [
+    11.39083,
+    10.19987,
+    16.09
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "meta_city",
+    "meta_name": "Giade",
+    "geonameid": 2341212,
+    "feature": "PPLA2",
+    "point_name": "Giade",
+    "candidates": 1
+   }
+  ]
+ },
+ "NG:city-radius:1x28.97km:769a17": {
+  "country": "NG",
+  "type": "city_radius",
+  "label": "1 Meta city with a 29 km radius: Gamawa",
+  "pins": [
+   [
+    12.13379,
+    10.53785,
+    28.97
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "meta_city",
+    "meta_name": "Gamawa",
+    "geonameid": 2342199,
+    "feature": "PPLA2",
+    "point_name": "Gamawa",
+    "candidates": 1
+   }
+  ]
+ },
+ "NG:region:Anambra+Edo+Federal Capital Territory+Ogun+Oyo+Rivers": {
+  "country": "NG",
+  "type": "region",
+  "label": "6 states together: Anambra, Edo, Federal Capital Territory, Ogun, Oyo, Rivers",
+  "regions": [
+   "Anambra",
+   "Edo",
+   "Federal Capital Territory",
+   "Ogun",
+   "Oyo",
+   "Rivers"
+  ]
+ },
+ "NG:region:Ekiti+Lagos+Ogun+Ondo+Osun+Oyo": {
+  "country": "NG",
+  "type": "region",
+  "label": "6 states together: Ekiti, Lagos, Ogun, Ondo, Osun, Oyo",
+  "regions": [
+   "Ekiti",
+   "Lagos",
+   "Ogun",
+   "Ondo",
+   "Osun",
+   "Oyo"
+  ]
+ },
+ "NG:region:Benué+Federal Capital Territory+Kogi+Kwara+Nasarawa+Niger+Plateau": {
+  "country": "NG",
+  "type": "region",
+  "label": "7 states together: Benué, Federal Capital Territory, Kogi, Kwara, Nasarawa, Niger, Plateau",
+  "regions": [
+   "Benué",
+   "Federal Capital Territory",
+   "Kogi",
+   "Kwara",
+   "Nasarawa",
+   "Niger",
+   "Plateau"
+  ]
+ },
+ "NG:region:Adamawa+Bauchi+Borno+Gombe+Taraba+Yobe": {
+  "country": "NG",
+  "type": "region",
+  "label": "6 states together: Adamawa, Bauchi, Borno, Gombe, Taraba, Yobe",
+  "regions": [
+   "Adamawa",
+   "Bauchi",
+   "Borno",
+   "Gombe",
+   "Taraba",
+   "Yobe"
+  ]
+ },
+ "NG:region:Jigawa+Kaduna+Kano+Katsina+Kebbi+Sokoto+Zamfara": {
+  "country": "NG",
+  "type": "region",
+  "label": "7 states together: Jigawa, Kaduna, Kano, Katsina, Kebbi, Sokoto, Zamfara",
+  "regions": [
+   "Jigawa",
+   "Kaduna",
+   "Kano",
+   "Katsina",
+   "Kebbi",
+   "Sokoto",
+   "Zamfara"
+  ]
+ },
+ "GH:city-radius:16xcity:2717c7": {
+  "country": "GH",
+  "type": "city_radius",
+  "label": "16 Meta cities (no radius set): Accra, Ashaiman, Cape Coast, Ejura, …",
+  "pins": [
+   [
+    5.55602,
+    -0.1969,
+    null
+   ],
+   [
+    5.69951,
+    -0.03484,
+    null
+   ],
+   [
+    5.10535,
+    -1.2466,
+    null
+   ],
+   [
+    7.38558,
+    -1.35617,
+    null
+   ],
+   [
+    6.60084,
+    0.4713,
+    null
+   ],
+   [
+    6.09408,
+    -0.25913,
+    null
+   ],
+   [
+    6.68848,
+    -1.62443,
+    null
+   ],
+   [
+    5.6658,
+    -0.16307,
+    null
+   ],
+   [
+    6.190409,
+    -1.659987,
+    null
+   ],
+   [
+    4.93422,
+    -1.71454,
+    null
+   ],
+   [
+    7.33991,
+    -2.32676,
+    null
+   ],
+   [
+    4.89816,
+    -1.76029,
+    null
+   ],
+   [
+    9.40079,
+    -0.8393,
+    null
+   ],
+   [
+    5.6698,
+    -0.01657,
+    null
+   ],
+   [
+    5.58365,
+    -0.10722,
+    null
+   ],
+   [
+    10.06069,
+    -2.50192,
+    null
+   ]
+  ],
+  "pin_check": [
+   {
+    "kind": "meta_city",
+    "meta_name": "Accra",
+    "geonameid": 2306104,
+    "feature": "PPLC",
+    "point_name": "Accra",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Ashaiman",
+    "geonameid": 2304121,
+    "feature": "PPL",
+    "point_name": "Ashaiman",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Cape Coast",
+    "geonameid": 2302357,
+    "feature": "PPLA",
+    "point_name": "Cape Coast",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Ejura",
+    "geonameid": 2301217,
+    "feature": "PPL",
+    "point_name": "Ejura",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Ho",
+    "geonameid": 2300379,
+    "feature": "PPLA",
+    "point_name": "Ho",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Koforidua",
+    "geonameid": 2299522,
+    "feature": "PPLA",
+    "point_name": "Koforidua",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Kumasi",
+    "geonameid": 2298890,
+    "feature": "PPLA",
+    "point_name": "Kumasi",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Madina",
+    "geonameid": 2298330,
+    "feature": "PPL",
+    "point_name": "Medina Estates",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Obuasi",
+    "geonameid": null,
+    "feature": "NaturalEarth",
+    "point_name": "Obuasi",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Sekondi",
+    "geonameid": 11808941,
+    "feature": "PPLA2",
+    "point_name": "Sekondi",
+    "candidates": 2
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Sunyani",
+    "geonameid": 2295021,
+    "feature": "PPLA",
+    "point_name": "Sunyani",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Takoradi",
+    "geonameid": 2294915,
+    "feature": "PPL",
+    "point_name": "Takoradi",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Tamale",
+    "geonameid": 2294877,
+    "feature": "PPLA",
+    "point_name": "Tamale",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Tema",
+    "geonameid": 2294700,
+    "feature": "PPL",
+    "point_name": "Tema",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Teshie",
+    "geonameid": 2294665,
+    "feature": "PPLX",
+    "point_name": "Teshi Old Town",
+    "candidates": 1
+   },
+   {
+    "kind": "meta_city",
+    "meta_name": "Wa",
+    "geonameid": 2294206,
+    "feature": "PPLA",
+    "point_name": "Wa",
+    "candidates": 1
+   }
+  ]
+ },
+ "GH:outside:city-radius:16xcity:2717c7": {
+  "country": "GH",
+  "type": "radius_outside",
+  "label": "Ghana outside the 16 Meta cities (no radius set): Accra, Ashaiman, Cape Coast, Ejura, …",
+  "complement_of": "GH:city-radius:16xcity:2717c7",
+  "within": [
+   "Ghana"
+  ]
+ },
+ "GH:region:Northern": {
+  "country": "GH",
+  "type": "region",
+  "label": "Northern Region (whole)",
+  "regions": [
+   "Northern"
+  ]
+ },
+ "GH:region:Ashanti": {
+  "country": "GH",
+  "type": "region",
+  "label": "Ashanti Region (whole)",
+  "regions": [
+   "Ashanti"
+  ]
+ },
+ "GH:country": {
+  "country": "GH",
+  "type": "country",
+  "label": "Ghana, whole country"
+ }
+}

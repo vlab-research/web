@@ -1,0 +1,389 @@
+{
+ "DE:region:Berlin": {
+  "country": "DE",
+  "type": "region",
+  "label": "Berlin (whole state)",
+  "regions": [
+   "Berlin"
+  ]
+ },
+ "DE:region:Brandenburg": {
+  "country": "DE",
+  "type": "region",
+  "label": "Brandenburg (whole state)",
+  "regions": [
+   "Brandenburg"
+  ]
+ },
+ "IE:country": {
+  "country": "IE",
+  "type": "country",
+  "label": "Ireland, whole country"
+ },
+ "US:cluster:25348381061475555": {
+  "country": "US",
+  "type": "location_cluster",
+  "label": "US location cluster 1 (a saved Meta set of ZIP codes; contents not recorded)",
+  "note": "geometry not stored with the study; cannot be mapped"
+ },
+ "US:cluster:7297778167017792": {
+  "country": "US",
+  "type": "location_cluster",
+  "label": "US location cluster 2 (a saved Meta set of ZIP codes; contents not recorded)",
+  "note": "geometry not stored with the study; cannot be mapped"
+ },
+ "US:cluster:7401350026626762": {
+  "country": "US",
+  "type": "location_cluster",
+  "label": "US location cluster 3 (a saved Meta set of ZIP codes; contents not recorded)",
+  "note": "geometry not stored with the study; cannot be mapped"
+ },
+ "US:counties:Minnesota-27-1608eec1": {
+  "country": "US",
+  "type": "subregion_set",
+  "label": "27 counties in Minnesota",
+  "region": [
+   "Minnesota"
+  ],
+  "areas": [
+   "Anoka County",
+   "Benton County",
+   "Blue Earth County",
+   "Carlton County",
+   "Carver County",
+   "Chisago County",
+   "Clay County",
+   "Dakota County",
+   "Dodge County",
+   "Fillmore County",
+   "Hennepin County",
+   "Houston County",
+   "Isanti County",
+   "Le Sueur County",
+   "Mille Lacs County",
+   "Nicollet County",
+   "Olmsted County",
+   "Polk County",
+   "Ramsey County",
+   "Rock County",
+   "Scott County",
+   "Sherburne County",
+   "St. Louis County",
+   "Stearns County",
+   "Wabasha County",
+   "Washington County",
+   "Wright County"
+  ],
+  "note": "Meta 'medium geo areas' (US counties), each targeted whole"
+ },
+ "US:country": {
+  "country": "US",
+  "type": "country",
+  "label": "United States, whole country"
+ },
+ "US:region-minus:Minnesota-27-1608eec1": {
+  "country": "US",
+  "type": "region_minus",
+  "label": "Minnesota outside the 27 counties",
+  "regions": [
+   "Minnesota"
+  ],
+  "excluded_areas": [
+   "Anoka County",
+   "Benton County",
+   "Blue Earth County",
+   "Carlton County",
+   "Carver County",
+   "Chisago County",
+   "Clay County",
+   "Dakota County",
+   "Dodge County",
+   "Fillmore County",
+   "Hennepin County",
+   "Houston County",
+   "Isanti County",
+   "Le Sueur County",
+   "Mille Lacs County",
+   "Nicollet County",
+   "Olmsted County",
+   "Polk County",
+   "Ramsey County",
+   "Rock County",
+   "Scott County",
+   "Sherburne County",
+   "St. Louis County",
+   "Stearns County",
+   "Wabasha County",
+   "Washington County",
+   "Wright County"
+  ],
+  "complement_of": "US:counties:Minnesota-27-1608eec1"
+ },
+ "US:region:California": {
+  "country": "US",
+  "type": "region",
+  "label": "California (whole state)",
+  "regions": [
+   "California"
+  ]
+ },
+ "US:regions:AK+AZ+CA+CO+HI+ID+MT+NM+NV+OR+UT+WA+WY": {
+  "country": "US",
+  "type": "region",
+  "label": "13 whole states: AK, AZ, CA, CO, HI, ID, MT, NM, NV, OR, UT, WA, WY",
+  "regions": [
+   "Alaska",
+   "Arizona",
+   "California",
+   "Colorado",
+   "Hawaii",
+   "Idaho",
+   "Montana",
+   "Nevada",
+   "New Mexico",
+   "Oregon",
+   "Utah",
+   "Washington",
+   "Wyoming"
+  ]
+ },
+ "US:regions:AK+AZ+IL+MI+MO+MT+NM": {
+  "country": "US",
+  "type": "region",
+  "label": "7 whole states: AK, AZ, IL, MI, MO, MT, NM",
+  "regions": [
+   "Alaska",
+   "Arizona",
+   "Illinois",
+   "Michigan",
+   "Missouri",
+   "Montana",
+   "New Mexico"
+  ]
+ },
+ "US:regions:AL+AR+DE+FL+GA+KY+LA+MS+NC+NH+OH+PA+SC+TN+WV": {
+  "country": "US",
+  "type": "region",
+  "label": "15 whole states: AL, AR, DE, FL, GA, KY, LA, MS, NC, NH, OH, PA, SC, TN, WV",
+  "regions": [
+   "Alabama",
+   "Arkansas",
+   "Delaware",
+   "Florida",
+   "Georgia",
+   "Kentucky",
+   "Louisiana",
+   "Mississippi",
+   "New Hampshire",
+   "North Carolina",
+   "Ohio",
+   "Pennsylvania",
+   "South Carolina",
+   "Tennessee",
+   "West Virginia"
+  ]
+ },
+ "US:regions:AL+AR+FL+GA+KY+LA+MS+NC+SC+TN+VA+WV": {
+  "country": "US",
+  "type": "region",
+  "label": "12 whole states: AL, AR, FL, GA, KY, LA, MS, NC, SC, TN, VA, WV",
+  "regions": [
+   "Alabama",
+   "Arkansas",
+   "Florida",
+   "Georgia",
+   "Kentucky",
+   "Louisiana",
+   "Mississippi",
+   "North Carolina",
+   "South Carolina",
+   "Tennessee",
+   "Virginia",
+   "West Virginia"
+  ]
+ },
+ "US:regions:AZ+CO+NM+NV+TX+UT": {
+  "country": "US",
+  "type": "region",
+  "label": "6 whole states: AZ, CO, NM, NV, TX, UT",
+  "regions": [
+   "Arizona",
+   "Colorado",
+   "Nevada",
+   "New Mexico",
+   "Texas",
+   "Utah"
+  ]
+ },
+ "US:regions:CA+CO+NV+OR+WA": {
+  "country": "US",
+  "type": "region",
+  "label": "5 whole states: CA, CO, NV, OR, WA",
+  "regions": [
+   "California",
+   "Colorado",
+   "Nevada",
+   "Oregon",
+   "Washington"
+  ]
+ },
+ "US:regions:CT+DC+MA+MD+ME+NJ+NY+RI+VA+VT": {
+  "country": "US",
+  "type": "region",
+  "label": "10 whole states: CT, DC, MA, MD, ME, NJ, NY, RI, VA, VT",
+  "regions": [
+   "Connecticut",
+   "Maine",
+   "Maryland",
+   "Massachusetts",
+   "New Jersey",
+   "New York",
+   "Rhode Island",
+   "Vermont",
+   "Virginia",
+   "Washington D. C."
+  ]
+ },
+ "US:regions:CT+DE+MA+MD+ME+NH+NJ+NY+PA+RI+VT": {
+  "country": "US",
+  "type": "region",
+  "label": "11 whole states: CT, DE, MA, MD, ME, NH, NJ, NY, PA, RI, VT",
+  "regions": [
+   "Connecticut",
+   "Delaware",
+   "Maine",
+   "Maryland",
+   "Massachusetts",
+   "New Hampshire",
+   "New Jersey",
+   "New York",
+   "Pennsylvania",
+   "Rhode Island",
+   "Vermont"
+  ]
+ },
+ "US:regions:HI+IA+ID+IN+KS+MN+ND+NE+OK+SD+TX+UT+WI+WY": {
+  "country": "US",
+  "type": "region",
+  "label": "14 whole states: HI, IA, ID, IN, KS, MN, ND, NE, OK, SD, TX, UT, WI, WY",
+  "regions": [
+   "Hawaii",
+   "Idaho",
+   "Indiana",
+   "Iowa",
+   "Kansas",
+   "Minnesota",
+   "Nebraska",
+   "North Dakota",
+   "Oklahoma",
+   "South Dakota",
+   "Texas",
+   "Utah",
+   "Wisconsin",
+   "Wyoming"
+  ]
+ },
+ "US:regions:IA+IL+IN+KS+MI+MN+MO+ND+NE+OH+SD+WI": {
+  "country": "US",
+  "type": "region",
+  "label": "12 whole states: IA, IL, IN, KS, MI, MN, MO, ND, NE, OH, SD, WI",
+  "regions": [
+   "Illinois",
+   "Indiana",
+   "Iowa",
+   "Kansas",
+   "Michigan",
+   "Minnesota",
+   "Missouri",
+   "Nebraska",
+   "North Dakota",
+   "Ohio",
+   "South Dakota",
+   "Wisconsin"
+  ]
+ },
+ "US:zips:9+1city-9a226c24": {
+  "country": "US",
+  "type": "zip_set",
+  "label": "9 ZIP codes and 1 city in California (Meta city, no radius set)",
+  "pins": [
+   [
+    33.249,
+    -117.0122,
+    null
+   ],
+   [
+    37.5014,
+    -118.4048,
+    null
+   ],
+   [
+    38.2566,
+    -119.208,
+    null
+   ],
+   [
+    39.82,
+    -123.0585,
+    null
+   ],
+   [
+    41.0504,
+    -123.6742,
+    null
+   ],
+   [
+    41.5804,
+    -124.0387,
+    null
+   ],
+   [
+    38.3545,
+    -120.7573,
+    null
+   ],
+   [
+    38.6465,
+    -120.9641,
+    null
+   ],
+   [
+    41.8018,
+    -123.388,
+    null
+   ],
+   [
+    36.0652,
+    -119.0168,
+    null
+   ]
+  ],
+  "zips": [
+   "92082",
+   "93514",
+   "93517",
+   "95428",
+   "95546",
+   "95548",
+   "95642",
+   "95682",
+   "96039"
+  ],
+  "cities": [
+   "Porterville"
+  ],
+  "note": "pins are GeoNames centroids of the ZIP codes and the city, radius null: Meta targets the whole ZIP area and its own city area",
+  "pin_checks": [
+   "ZIP 92082: GeoNames postal centroid (Valley Center, CA)",
+   "ZIP 93514: GeoNames postal centroid (Bishop, CA)",
+   "ZIP 93517: GeoNames postal centroid (Bridgeport, CA)",
+   "ZIP 95428: GeoNames postal centroid (Covelo, CA)",
+   "ZIP 95546: GeoNames postal centroid (Hoopa, CA)",
+   "ZIP 95548: GeoNames postal centroid (Klamath, CA)",
+   "ZIP 95642: GeoNames postal centroid (Jackson, CA)",
+   "ZIP 95682: GeoNames postal centroid (Shingle Springs, CA)",
+   "ZIP 96039: GeoNames postal centroid (Happy Camp, CA)",
+   "city Porterville: GeoNames populated place, CA"
+  ]
+ }
+}

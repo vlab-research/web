@@ -1,0 +1,681 @@
+[
+ {
+  "rec": "US-2023-02",
+  "country": "US",
+  "first": "2023-02-23",
+  "last": "2023-04-19",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "all",
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": true
+  },
+  "screen": [
+   "occupation:health_worker",
+   "consent"
+  ],
+  "who_qualified": "works in one of four clinical health care roles; reached the end of the first block of questions",
+  "qualify_rule": "said they work in one of four clinical roles, and answered a question about two-thirds of the way through",
+  "qualify_point": {
+   "question": 55,
+   "of": 68
+  },
+  "median_minutes_to_qualify": 11.7,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 5.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 10323,
+  "qualified": 459,
+  "notes": "Final quota rule: health care workers only. Until mid-March a second group (parents of children under 18, reached by the same ads) was also a quota target; under the final rule they do not qualify, so most people who started did not qualify. Early ad sets (Feb-Apr 7) targeted three age bands x gender with profession and interest targeting; the last 12 days ran one whole-country ad set with no interests. qualify_point = field position in the form, which includes branches a respondent may skip. The adopt report counts people from other campaigns that shared the survey; recounted here."
+ },
+ {
+  "rec": "US-2023-05",
+  "country": "US",
+  "first": "2023-05-08",
+  "last": "2023-11-07",
+  "round": "screener",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 34,
+   "interests": false
+  },
+  "screen": [
+   "age:18-34",
+   "lives_in:US",
+   "consent",
+   "gave_phone"
+  ],
+  "who_qualified": "aged 18-34, living in the United States, gave name, phone and email, and opened the linked enrolment survey",
+  "qualify_rule": "opened the external enrolment survey from the last message (its id returned to the platform)",
+  "qualify_point": {
+   "question": 17,
+   "of": 17
+  },
+  "median_minutes_to_qualify": 1125.75,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 10.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 8478,
+  "qualified": 4956,
+  "notes": "The qualifying event happens in an external survey opened from the 17th and last message; the screener asks a specific behaviour but does not screen on it under the final rule. Incentive: $10 for the first of five surveys. Minutes to qualify run to the external survey's own record, which is written when that survey syncs (hours later), so they overstate the time. 40 ad sets in the first two weeks (same states and gender, split by answers) are folded into the 10 cells they fed."
+ },
+ {
+  "rec": "US-2023-08",
+  "country": "US",
+  "first": "2023-08-10",
+  "last": "2024-09-23",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 24,
+   "interests": false
+  },
+  "screen": [
+   "lives_in:US",
+   "age:18-24",
+   "gender:men_or_women",
+   "consent"
+  ],
+  "who_qualified": "aged 18-24, living in the United States, answered man or woman, and completed a linked external survey",
+  "qualify_rule": "returned from the external survey to the payment message",
+  "qualify_point": null,
+  "median_minutes_to_qualify": 5.07,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 5.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 37748,
+  "qualified": 8540,
+  "notes": "Three sibling configurations fed one survey (a main run, a two-week creative test and a later top-up); one recruitment, each person once. A 7-question screener in Messenger, then an external survey of unknown length, then a payment message that is the qualifying point. Gender was screened by answer (non-binary and other answers do not qualify); people stay in the cell of the ad that brought them. The adopt reports do not reconcile: one sibling's latest report is stale with zero spend, another covers part of the run."
+ },
+ {
+  "rec": "US-2024-01a",
+  "country": "US",
+  "first": "2024-01-24",
+  "last": "2024-02-03",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "lives_in:US",
+   "consent",
+   "age:18-80"
+  ],
+  "who_qualified": "living in the United States, aged 18-80, agreed to take part, reached a demographic question early in the survey",
+  "qualify_rule": "answered the education question (field 24 of 29)",
+  "qualify_point": {
+   "question": 24,
+   "of": 29
+  },
+  "median_minutes_to_qualify": 3.98,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": null,
+   "currency": "USD",
+   "form": "lottery"
+  },
+  "started": 602,
+  "qualified": 440,
+  "notes": "Ten days. The 'young'/'old' ad sets carried the same Meta age range (18-65) and differ only in their labels and budgets; the cells keep them apart as the recruitment did."
+ },
+ {
+  "rec": "US-2024-04",
+  "country": "US",
+  "first": "2024-04-27",
+  "last": "2024-08-03",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": true
+  },
+  "screen": [
+   "consent",
+   "lives_in:US",
+   "age:18-100"
+  ],
+  "who_qualified": "adults living in the United States who finished the survey",
+  "qualify_rule": "answered the second-to-last question",
+  "qualify_point": {
+   "question": 53,
+   "of": 55
+  },
+  "median_minutes_to_qualify": 9.84,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "es"
+  ],
+  "incentive": {
+   "amount": 5.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 1998,
+  "qualified": 1112,
+  "notes": "72 cells: 3 location clusters x gender x 4 age bands x 3 education levels (Meta education targeting). A language choice (English or Spanish) comes first; counted as field 1. The location clusters are saved Meta ZIP-code sets whose contents are not stored; they cannot be mapped."
+ },
+ {
+  "rec": "US-2024-05a",
+  "country": "US",
+  "first": "2024-05-02",
+  "last": "2024-05-23",
+  "round": "screener",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "screen": [
+   "lives_in:California",
+   "works_or_studies_in:California",
+   "age:18-99"
+  ],
+  "who_qualified": "aged 18+, living and working or studying in California, answered the last screening question",
+  "qualify_rule": "answered the race and ethnicity question (the last screening question)",
+  "qualify_point": {
+   "question": 6,
+   "of": 7
+  },
+  "median_minutes_to_qualify": 0.47,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "es"
+  ],
+  "incentive": {
+   "amount": 100.0,
+   "currency": "USD",
+   "form": "prize draw"
+  },
+  "started": 191,
+  "qualified": 149,
+  "notes": "A short eligibility screener that links to an external survey; qualified = passed the screener. Ad sets targeted California, split by gender and by Meta interests chosen to reach particular groups."
+ },
+ {
+  "rec": "US-2024-05b",
+  "country": "US",
+  "first": "2024-05-24",
+  "last": "2024-06-13",
+  "round": "screener",
+  "ads": {
+   "genders": "all",
+   "age_min": null,
+   "age_max": null,
+   "interests": true
+  },
+  "screen": [
+   "lives_in:California",
+   "works_or_studies_in:California",
+   "age:18-99"
+  ],
+  "who_qualified": "aged 18+, living and working or studying in California, answered the last screening question",
+  "qualify_rule": "answered the race and ethnicity question (the last screening question)",
+  "qualify_point": {
+   "question": 6,
+   "of": 7
+  },
+  "median_minutes_to_qualify": 0.55,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "es"
+  ],
+  "incentive": {
+   "amount": 100.0,
+   "currency": "USD",
+   "form": "prize draw"
+  },
+  "started": 43,
+  "qualified": 32,
+  "notes": "The same screener as US-2024-05a, re-run with three narrower interest-targeted ad sets (all genders)."
+ },
+ {
+  "rec": "US-2024-08a",
+  "country": "US",
+  "first": "2024-08-06",
+  "last": "2024-08-08",
+  "round": "screener",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "lives_in:California",
+   "works_or_studies_in:California",
+   "age:18-99"
+  ],
+  "who_qualified": "aged 18+, living and working or studying in California, answered the last screening question",
+  "qualify_rule": "answered the race and ethnicity question",
+  "qualify_point": {
+   "question": 6,
+   "of": 8
+  },
+  "median_minutes_to_qualify": 0.41,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "es"
+  ],
+  "incentive": {
+   "amount": 100.0,
+   "currency": "USD",
+   "form": "prize draw"
+  },
+  "started": 13,
+  "qualified": 12,
+  "notes": "Three days in nine ZIP codes and one city; very small."
+ },
+ {
+  "rec": "US-2024-08b",
+  "country": "US",
+  "first": "2024-08-25",
+  "last": "2024-09-16",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": true
+  },
+  "screen": [
+   "consent",
+   "lives_in:US",
+   "age:18-100"
+  ],
+  "who_qualified": "adults living in the United States who finished the survey",
+  "qualify_rule": "answered the second-to-last question",
+  "qualify_point": {
+   "question": 53,
+   "of": 55
+  },
+  "median_minutes_to_qualify": 9.15,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "es"
+  ],
+  "incentive": {
+   "amount": 5.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 708,
+  "qualified": 422,
+  "notes": "A second round of US-2024-04's design, same 72 cells, three weeks later."
+ },
+ {
+  "rec": "US-2025-01",
+  "country": "US",
+  "first": "2025-01-29",
+  "last": "2025-04-03",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent"
+  ],
+  "who_qualified": "adults in Minnesota who agreed to take part and reached a question near the end of the survey",
+  "qualify_rule": "answered a question 74 fields into an 82-field survey",
+  "qualify_point": {
+   "question": 75,
+   "of": 83
+  },
+  "median_minutes_to_qualify": 13.17,
+  "channel": "messenger",
+  "languages": [
+   "en",
+   "so"
+  ],
+  "incentive": {
+   "amount": 5.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 520,
+  "qualified": 335,
+  "notes": "A language choice (English or Somali) comes first, counted as field 1. First six days: 8 ad sets split by two Meta age bands; then 4 ad sets without an age split. Age and county are asked but do not screen."
+ },
+ {
+  "rec": "US-2025-06",
+  "country": "US",
+  "first": "2025-06-05",
+  "last": "2025-10-24",
+  "round": "screener",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 25,
+   "interests": true
+  },
+  "screen": [],
+  "who_qualified": "anyone who opened the conversation (the eligibility screen is on an external site)",
+  "qualify_rule": "received the first message",
+  "qualify_point": {
+   "question": 1,
+   "of": 4
+  },
+  "median_minutes_to_qualify": 0.0,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": null,
+  "started": 881,
+  "qualified": 855,
+  "notes": "The quota rule is met at the first message, so qualified = started; the real screen happens on an external site whose results are not recorded here. Ads targeted people on Android phones (a Meta device behaviour), aged 18-25."
+ },
+ {
+  "rec": "US-2025-08",
+  "country": "US",
+  "first": "2025-08-12",
+  "last": "2025-09-03",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": null,
+   "age_max": null,
+   "interests": false
+  },
+  "screen": [
+   "consent"
+  ],
+  "who_qualified": "adults in Minnesota who agreed to take part and reached the last question",
+  "qualify_rule": "answered the last question",
+  "qualify_point": {
+   "question": 56,
+   "of": 57
+  },
+  "median_minutes_to_qualify": 9.89,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 5.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 167,
+  "qualified": 130,
+  "notes": "A fresh cross-section in the same places as US-2025-01, seven months later; earlier respondents are left out. The quota rule moved to the last question four days in; recounted under the final rule. The count here is 11 above the adopt report."
+ },
+ {
+  "rec": "US-2025-12",
+  "country": "US",
+  "first": "2025-12-01",
+  "last": "2025-12-03",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "age:18-99",
+   "consent"
+  ],
+  "who_qualified": "adults who agreed to take part and reached a question near the end",
+  "qualify_rule": "answered a question 50 fields into a 54-field survey",
+  "qualify_point": {
+   "question": 50,
+   "of": 54
+  },
+  "median_minutes_to_qualify": 8.47,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 5.0,
+   "currency": "USD",
+   "form": "gift card"
+  },
+  "started": 46,
+  "qualified": 30,
+  "notes": "Three days; a pilot."
+ },
+ {
+  "rec": "IE-2024-04",
+  "country": "IE",
+  "first": "2024-04-30",
+  "last": "2024-05-18",
+  "round": "pilot",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "attention_check"
+  ],
+  "who_qualified": "agreed to take part, watched a short video without problems, and reached the last question block",
+  "qualify_rule": "answered a question 79 fields into an 87-field survey (fields include branches not all respondents see)",
+  "qualify_point": {
+   "question": 79,
+   "of": 87
+  },
+  "median_minutes_to_qualify": null,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": null,
+   "currency": "EUR",
+   "form": "voucher (3 or 5 by arm)"
+  },
+  "started": 17,
+  "qualified": 0,
+  "notes": "Two arms (a smaller and a larger voucher) run as two campaigns over the same 8 ad sets; pooled into one cell per ad set. Nobody who started in the window reached the qualifying question. Ad account currency not verified (the account is used only for Ireland; CPM $8-10 is plausible in USD or EUR)."
+ },
+ {
+  "rec": "IE-2024-06",
+  "country": "IE",
+  "first": "2024-06-08",
+  "last": "2024-08-10",
+  "round": "cross-section",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent",
+   "attention_check"
+  ],
+  "who_qualified": "agreed to take part, watched a short video without problems, and reached the last question block",
+  "qualify_rule": "answered a question 79 fields into an 87-field survey (fields include branches not all respondents see)",
+  "qualify_point": {
+   "question": 79,
+   "of": 87
+  },
+  "median_minutes_to_qualify": 5.48,
+  "channel": "messenger",
+  "languages": [
+   "en"
+  ],
+  "incentive": {
+   "amount": 3.0,
+   "currency": "EUR",
+   "form": "voucher"
+  },
+  "started": 168,
+  "qualified": 99,
+  "notes": "Ad account currency not verified (see IE-2024-04). The screen-out after the video is an attention/technical check."
+ },
+ {
+  "rec": "DE-2024-02",
+  "country": "DE",
+  "first": "2024-02-01",
+  "last": "2024-03-27",
+  "round": "baseline",
+  "ads": {
+   "genders": [
+    "men",
+    "women"
+   ],
+   "age_min": 18,
+   "age_max": 65,
+   "interests": false
+  },
+  "screen": [
+   "consent"
+  ],
+  "who_qualified": "completed a linked external survey and returned to the platform",
+  "qualify_rule": "returned from the external survey to the voucher message",
+  "qualify_point": null,
+  "median_minutes_to_qualify": 8.17,
+  "channel": "messenger",
+  "languages": [
+   "de"
+  ],
+  "incentive": {
+   "amount": 3.0,
+   "currency": "EUR",
+   "form": "gift voucher"
+  },
+  "started": 14,
+  "qualified": 3,
+  "notes": "The recruiting (first) wave of a panel: a two-message invitation in Messenger, then an external survey. 14 people started inside the ad window and 3 qualified for $591 of ads: the external survey lost almost everyone. Very thin; kept as recorded."
+ },
+ {
+  "rec": "IE-2024-02",
+  "country": "IE",
+  "first": null,
+  "last": null,
+  "round": "excluded",
+  "ads": null,
+  "screen": [],
+  "who_qualified": null,
+  "qualify_rule": null,
+  "qualify_point": null,
+  "median_minutes_to_qualify": null,
+  "channel": null,
+  "languages": [],
+  "incentive": null,
+  "started": 0,
+  "qualified": 0,
+  "notes": "An earlier pilot: no ad spend recorded and no location targeting in its configuration."
+ },
+ {
+  "rec": "US-2024-01b",
+  "country": "US",
+  "first": null,
+  "last": null,
+  "round": "excluded",
+  "ads": null,
+  "screen": [],
+  "who_qualified": null,
+  "qualify_rule": null,
+  "qualify_point": null,
+  "median_minutes_to_qualify": null,
+  "channel": null,
+  "languages": [],
+  "incentive": null,
+  "started": 0,
+  "qualified": 0,
+  "notes": "A web-destination pilot: no ad spend recorded and no respondents."
+ },
+ {
+  "rec": "US-2023-11",
+  "country": "US",
+  "first": null,
+  "last": null,
+  "round": "excluded",
+  "ads": null,
+  "screen": [],
+  "who_qualified": null,
+  "qualify_rule": null,
+  "qualify_point": null,
+  "median_minutes_to_qualify": null,
+  "channel": null,
+  "languages": [],
+  "incentive": null,
+  "started": 0,
+  "qualified": 0,
+  "notes": "A small-area poll: no ad spend recorded and no respondents."
+ }
+]

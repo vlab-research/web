@@ -3,3 +3,5 @@ geonames/
 out/
 png/
 venv/
+private/
+countries/*/raw/
