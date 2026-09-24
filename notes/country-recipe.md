@@ -86,7 +86,7 @@ Say on the page why it was chosen, e.g. *"We show this study because it sought a
 its cost is closest to what a general-population survey would pay."* If no study supports a
 clean comparison, layer 1 alone is a page.
 
-**Study-level rules (layer 1):** 1 (USD); 3 (at least 7 days with spend); at least **$250**
+**Study-level rules (layer 1):** 1 (USD); **no minimum number of ad days** (Nandan: *"maybe it doesnt need at least 7 days necessarily. Still interesting data."*), but every row states its days with spend; at least **$250**
 and **100 qualified**; 5 (a recruitment wave); 6 (siblings combined); plus: **the qualifying
 rule is known and can be said in plain words**, and **the total reconciles**, meaning Insights
 spend is the numerator and qualified people are counted under the study's final quota rule.
