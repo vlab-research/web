@@ -58,9 +58,43 @@ cached copy was a day stale.
 - **Advertising cost:** the report's `lifetime_spent` ÷ qualified respondents, in USD. It
   excludes incentives, the platform and our fee.
 
-## The eight rules
+## Two layers per page (2026-09-24, after v5)
 
-A study, or a group of sibling studies, reaches a page only if all eight pass:
+Nandan: *"it seems like we're only picking one study per country? Kenya has many studies,
+certainly many much cheaper … it's OK to pick one, but we need to be clever about which one.
+It's also ok to show the results from many studies."*
+
+**Layer 1: every study, one line each.** Every recruitment in the country that passes the
+**study-level rules** below. For each one: cost per qualified respondent, qualified count,
+year, and **what drove the cost, in plain words**: who qualified (e.g. "any adult", "parents of
+girls aged 9–17", "18–30-year-olds who finished a 20-minute survey"), where the ads ran
+(whole country, named regions, radius areas), and anything else that moved it. Draw it as a
+dot strip, one dot per study on one cost axis, with a table behind it. This layer carries the
+range and the reasons, and **does not need per-group costs**. A study whose group costs are
+meaningless can still have a clean total.
+
+**Layer 2: one showcase comparison, chosen on purpose, with the reason on the page.** Choose
+it for what a reader planning a study can learn from it, not for being the only clean one.
+Prefer:
+- the broadest eligibility, closest to a general sample;
+- more qualified respondents and more ad days;
+- targeting that can be stated in a sentence;
+- a comparison that matters (places, inside/outside radius areas, age, gender);
+- recent.
+
+Say on the page why it was chosen, e.g. *"We show this study because it sought any adult, so
+its cost is closest to what a general-population survey would pay."* If no study supports a
+clean comparison, layer 1 alone is a page.
+
+**Study-level rules (layer 1):** 1 (USD); 3 (at least 7 days with spend); at least **$250**
+and **100 qualified**; 5 (a recruitment wave); 6 (siblings combined); plus: **the qualifying
+rule is known and can be said in plain words**, and **the total reconciles**, meaning Insights
+spend is the numerator and qualified people are counted under the study's final quota rule.
+**Group-level rules (layer 2):** all eight rules below.
+
+## The eight rules (layer 2, the showcase comparison)
+
+A group comparison reaches a page only if all eight pass:
 
 1. USD ad account.
 2. The report's spend reconciles with Insights spend (within about 5%).
