@@ -4,6 +4,26 @@ The next step after the country-page pilot (D-032; `ws-inbound.md` §7, v1–v7;
 `country-recipe.md`). **Read this first to pick the work up.** Nothing here is on the site or
 pushed. `master` is ahead of `origin` by the local commits of 2026-09-23 and 2026-09-24.
 
+## Status, 2026-09-24 late: v10, three page patterns (read this first)
+
+Nandan, after v9: *"avoid data that is overly specific and focus on the more General data wherever
+possible, even if … leaving some studies out"* (Bauchi was mostly parents of daughters; Minnesota's
+ads aimed at particular communities). The rule now:
+- **Level (dollars) only from `general` recruitments**, or from one named `common` group where a
+  country has nothing else, with the group in the lede. `specialised` ones get one sentence.
+- **Place differences as multiples inside one recruitment**, only between places with 200+ starts
+  and $100+ of ads, never from rounds flagged `ad_arm_confounded_with_side`.
+- **Tiers:** `merge_cells.py` `audience_tier` (interest targeting on more than a quarter of the spend, or any
+  screen beyond basics and caregiver tags, is specialised); hand overrides in
+  `scripts/data/tier-overrides.json` (the two Minnesota recruitments: Somali-language and
+  multicultural ad versions added mid-run). 43 general, 37 common, 16 specialised.
+- **Patterns** (`scripts/pilot-maps/patterns.py`, `PATTERN` dict): `general` (Kenya: full runs
+  against short test runs, since run size moves cost per start 2 cents to $3.30), `group`
+  (Indonesia), `place` (Nigeria: repeated same-place comparisons, the 2023 six states, and the
+  Lagos flip). Review v10 shows those three plus a Tiers tab. **Next:** Nandan's reaction, then
+  assign a pattern to every other country.
+- The Kenya page carries a new "speed" module whose one-third figure needs a CLAIMS Definition row.
+
 ## Status, 2026-09-24 evening: step 1 done, pages generated (review v9)
 
 - **The cell table exists**: `scripts/data/cells.json` (1,081 cells, 23 countries, 96 recruitments
