@@ -246,6 +246,29 @@ there."*
 - **Two "how it works" modules sit at the top of every country page**, after the answer and before the findings. One is **location targeting on Meta**: the options Meta offers (country, region, city with a 17–80 km radius, postal codes, a pin with a 1–80 km radius); that there are no hand-drawn boundaries and no urban/rural setting; and how Meta places a person (profile "home", checked against IP address and friends; "recent", from mobile device data). The source is the Marketing API basic-targeting reference, read 2026-09-24. The other is **what the numbers count**: quotas, qualified respondents, and advertising cost.
 - **The review page's source is `scripts/pilot-maps/review-page.tpl.html`.** Edit the template, never the assembled page. A v2 fix made to the assembled page was lost in v3.
 
+**v5, 2026-09-24: seven more countries, built by agents from `notes/country-recipe.md`.** Nandan: *"we have a pretty good recipe"*, and *"the state comparisons up top are really nice. Maybe we stick with that."*
+
+- **Nigeria** is now only the 2023 six-state comparison. The April 2025 inside/outside candidate was rejected: its cost follows the ad arm (A or B), not the side of the radius line, and its Abuja pin sits 24 km south of the city.
+- **Pages built:**
+  - Bangladesh: seven whole divisions, 2023, Dhaka $1.02 to Barisal $4.71.
+  - Pakistan: Sindh radius areas, 2025, Hyderabad $0.80 to around Larkana $3.14.
+  - Kenya: national only, $5.95 per finished survey; women $6.65, men $5.48.
+  - United States: 2023; women $1.53, men $4.03; five groups of states, $2.08–3.44.
+  - Iraq, Egypt, Morocco: one programme, the same design in each, city radius areas, Dec 2025 – Feb 2026. Totals $2.00, $0.46 and $5.39.
+- **Held out:**
+  - Saudi Arabia: the "Jeddah" ad sets targeted Mecca for 12 days, and the $11 cost is unexplained.
+  - Jordan: only 5 days with spend.
+- **Fixed in every file:**
+  - The ad-days count now uses spend > 0 only. Rows exist on days with no spend, so earlier counts ran high: US 169 → 156, Bolivia 20 → 12, Nigeria 2023 23 → 22.
+  - The Meta city radius is now stated as 10–50 miles (about 16–80 km). The earlier "17 to 80 km" wrongly ruled out the 16 km the MENA studies used.
+- **Open for Nandan:**
+  - Should rule 5 exclude a fresh cross-section endline (Bangladesh, $0.24)?
+  - Is Pakistan's unexplained place gap (Sukkur and Larkana dearer; 1 km vs 5 km radii are confounded with place) acceptable under rule 8?
+  - The US groups track 2023 recreational-cannabis states. OK to leave the study's topic off the page?
+  - Kenya and Bolivia are still fielding.
+  - Did `kenya-tvet` (Sep 2026, $5,000 budget, no spend recorded) ever run?
+  - The Iraq incentive is unclear: the config says $1, but the welcome message promises Jordanian dinars.
+
 **Not in the pilot:** the estimator, the handbook, `/data/`, llms.txt, the older-platform
 currency work (Nigeria's older campaigns can be left out of cost and kept in counts).
 

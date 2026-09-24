@@ -17,3 +17,16 @@ registered in `CLAIMS.md`.
 What the maps found is in `notes/ws-inbound.md` §7. It is worth knowing before anyone writes
 "by state": the 2024 Nigeria "state" strata are 2–4 km circles around towns, and each Bauchi
 "LGA" stratum is a radius around a single point.
+
+## Country pages built by agents (2026-09-24)
+
+`countries/<CC>/` holds each agent's `build.py`, SQL, map SVGs and section HTML. Data files are
+in `../data/country-*.json`. Excluded pages (Saudi Arabia, Jordan) and the rejected Nigeria
+split keep their reasons in `countries/*.json`. `assemble.py` builds the review page from
+`review-page.tpl.html`, the maps and the sections. It still points at the session scratchpad
+paths, so re-point `SP` before running it from here. Raw query dumps were **not** committed,
+because they can hold respondent ids.
+
+**Do not push this directory or `../data/country-*.json` as they stand.** They carry study
+slugs, and many slugs name a client or a brand. This repository is public. Scrub or map the
+slugs first (hard rule 4, D-014).

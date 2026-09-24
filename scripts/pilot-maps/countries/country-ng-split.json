@@ -1,0 +1,207 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "INVESTIGATION - D-032. Result: no clean inside-vs-outside comparison exists in Nigeria. Nothing here is for the page.",
+  "recipe": "notes/country-recipe.md",
+  "definitions": {
+   "qualified_respondent": "FACEBOOK_ADOPT current_participants (quota group + answered 'seenads')",
+   "ad_cost": "per-stratum lifetime_spent / current_participants, USD"
+  },
+  "sources": {
+   "strata": "c2_strata_hist.tsv (study_confs, all 22 strata versions)",
+   "report": "c2_adopt.tsv (FACEBOOK_ADOPT, 2025-04-18 20:31 UTC)",
+   "spend": "c2_daily.tsv (recruitment_data_events)",
+   "funnel": "c2_resp_daily.tsv (inference_data) + c2_insights.tsv",
+   "geometry": "geometry.json from build.py (Natural Earth 10m admin-1, GeoNames NG)"
+  }
+ },
+ "country": "NG",
+ "verdict": "The Nigeria page is the 2023 six-state comparison only. campaign-2-nigeria-hpv-baseline is a genuine inside/outside split on paper, but it fails rule 8 (the result cannot be explained by location) and is weak on rule 7 (the FCT radius area is not on Abuja). No other Nigeria study on the current platform has a usable inside/outside split.",
+ "study": {
+  "slug": "campaign-2-nigeria-hpv-baseline",
+  "study_id": "c18d0562-df4d-4651-b1e8-67a68c7e1030",
+  "fielded": "9–16 Apr 2025 (ads); report 18 Apr",
+  "ad_days_with_spend": 8,
+  "spend_insights": 4741.64,
+  "spend_report": 4741.64,
+  "qualified": 2096,
+  "started": 3638,
+  "cost": 2.26,
+  "ad_account": "2150432608382517 (USD: CPM ~$0.54 on day 1)",
+  "channel": "Messenger, English and Hausa forms",
+  "incentive_usd": 1.0,
+  "quota_rule": "answered the 'seenads' question",
+  "quotas": "State (FCT 37.5%, Nasarawa 7.5%, Adamawa 5%, each split into sides A and B) x Gender (Men 60 / Women 40)",
+  "max_sample": 2000
+ },
+ "what_A_and_B_are": {
+  "summary": "In each state one side is the whole state minus the radius area(s), the other is the radius area(s). The letter is an experimental arm, not a side: A and B send people to different Fly survey forms (A2HPV* vs B2HPV*) with identical ad images and text. Which arm got the inside flips by state.",
+  "FCT": {
+   "A": "whole FCT minus one 12-mile (19.3 km) radius area",
+   "B": "that radius area",
+   "pin": "8.8651, 7.3962 — nearest places Jaita/Mudu (GeoNames, <1 km, no population); 23.9 km SSW of Abuja city centre (GeoNames PPLC), 18.6 km from Kuje. Abuja city centre is OUTSIDE the radius area, i.e. on the A side."
+  },
+  "Nasarawa": {
+   "A": "whole Nasarawa State minus two 15-mile (24.1 km) radius areas",
+   "B": "those two radius areas",
+   "pins": "8.5347, 7.7062 lands 0.5 km from Nasarawa town; 8.9174, 8.4114 lands 0.9 km from Akwanga. Lafia (capital) and Keffi are on the A side."
+  },
+  "Adamawa": {
+   "A": "one 33-mile (53.1 km) radius area",
+   "B": "whole Adamawa State minus it",
+   "pin": "9.1381, 12.5236 — Bole (0.7 km); Yola 9.1 km, Jimeta 17.2 km, both inside."
+  },
+  "the_two_excluded_regions": "Every stratum excludes the two OTHER study states (e.g. FCT strata exclude Adamawa and Nasarawa). For a whole-state side this is a no-op. It matters in one place: the FCT radius area crosses 65 km² into Nasarawa, and the exclusion clips it back to FCT. Reason inferred: keep each state's ad sets from overlapping another state's.",
+  "spill_not_excluded": "Nasarawa's radius areas cross 185 km² into Kaduna; Adamawa's crosses ~1,006 km² into Cameroon. Whether Meta delivers across the border for a custom location is not verified."
+ },
+ "by_side": {
+  "Abuja": {
+   "inside": {
+    "arm": "B",
+    "spend": 2826.47,
+    "qualified": 455,
+    "cost": 6.21
+   },
+   "outside": {
+    "arm": "A",
+    "spend": 136.25,
+    "qualified": 1372,
+    "cost": 0.1
+   }
+  },
+  "Adamawa": {
+   "inside": {
+    "arm": "A",
+    "spend": 82.54,
+    "qualified": 100,
+    "cost": 0.83
+   },
+   "outside": {
+    "arm": "B",
+    "spend": 253.04,
+    "qualified": 53,
+    "cost": 4.77
+   }
+  },
+  "Nasarawa": {
+   "inside": {
+    "arm": "B",
+    "spend": 1190.78,
+    "qualified": 20,
+    "cost": 59.54
+   },
+   "outside": {
+    "arm": "A",
+    "spend": 252.56,
+    "qualified": 96,
+    "cost": 2.63
+   }
+  }
+ },
+ "funnel_by_level": {
+  "Abuja A": {
+   "spend": 136.25,
+   "started": 2193,
+   "qualified": 1372,
+   "qualified_share_of_started": 0.63,
+   "cost_per_start": 0.06,
+   "meta_conversations_started": 2848,
+   "cost_per_meta_conversation": 0.05,
+   "spend_per_1000_daily_reach": 0.38
+  },
+  "Abuja B": {
+   "spend": 2826.47,
+   "started": 678,
+   "qualified": 455,
+   "qualified_share_of_started": 0.67,
+   "cost_per_start": 4.17,
+   "meta_conversations_started": 1016,
+   "cost_per_meta_conversation": 2.78,
+   "spend_per_1000_daily_reach": 3.58
+  },
+  "Adamawa A": {
+   "spend": 82.54,
+   "started": 233,
+   "qualified": 100,
+   "qualified_share_of_started": 0.43,
+   "cost_per_start": 0.35,
+   "meta_conversations_started": 407,
+   "cost_per_meta_conversation": 0.2,
+   "spend_per_1000_daily_reach": 0.51
+  },
+  "Adamawa B": {
+   "spend": 253.04,
+   "started": 153,
+   "qualified": 53,
+   "qualified_share_of_started": 0.35,
+   "cost_per_start": 1.65,
+   "meta_conversations_started": 329,
+   "cost_per_meta_conversation": 0.77,
+   "spend_per_1000_daily_reach": 1.55
+  },
+  "Nasarawa A": {
+   "spend": 252.56,
+   "started": 309,
+   "qualified": 96,
+   "qualified_share_of_started": 0.31,
+   "cost_per_start": 0.82,
+   "meta_conversations_started": 636,
+   "cost_per_meta_conversation": 0.4,
+   "spend_per_1000_daily_reach": 0.92
+  },
+  "Nasarawa B": {
+   "spend": 1190.78,
+   "started": 72,
+   "qualified": 20,
+   "qualified_share_of_started": 0.28,
+   "cost_per_start": 16.54,
+   "meta_conversations_started": 153,
+   "cost_per_meta_conversation": 7.78,
+   "spend_per_1000_daily_reach": 11.77
+  }
+ },
+ "why_it_fails": [
+  "Rule 8: arm A is the cheaper side in all three states whichever side of the line it is on (FCT: outside/A $0.10 vs inside/B $6.21; Nasarawa: outside/A $2.63 vs inside/B $59.54; Adamawa: inside/A $0.83 vs outside/B $4.77). In Nasarawa and Adamawa both sides ran the same eight days. The gap is at the ad stage (Meta cost per conversation started, spend per 1,000 reach), not in the forms: the share of starters who qualified differs by 3–8 points between arms in each state (FCT 63% vs 67%, Nasarawa 31% vs 28%, Adamawa 43% vs 35%). Ads are identical across arms, so the cause is not known. The B arms' template ad sets (120219478853510019/40/50) predate the A arms' (1202194789354x0019); whether their settings differ could not be checked (Meta read not permitted in this session).",
+  "Rule 7: the FCT radius area sits 24 km SSW of Abuja city centre, so 'inside' is Kuje and the southern fringe and 'outside' contains the city. A reader would take the opposite meaning.",
+  "Volume: Nasarawa inside has 20 qualified people; Adamawa outside 53.",
+  "Unequal fielding in FCT: FCT A (outside) overfilled in two days (1,372 against a quota of ~750) and its ad sets stopped spending; the optimiser moved the budget into FCT B for eight days. Averages at such different volumes are not comparable.",
+  "Mid-launch config: from 8 Apr 23:42 to 9 Apr 18:59 UTC the Adamawa B strata targeted the FCT pin, and FCT A Men carried arm-B creatives. Small ($5 of Adamawa B spend on 9 Apr) but it means the first day is mislabelled."
+ ],
+ "last_day_with_1usd_spend_by_stratum": {
+  "State:Abuja A,Gender:Men": "2025-04-11",
+  "State:Abuja A,Gender:Women": "2025-04-14",
+  "State:Abuja B,Gender:Men": "2025-04-16",
+  "State:Abuja B,Gender:Women": "2025-04-16",
+  "State:Adamawa A,Gender:Men": "2025-04-16",
+  "State:Adamawa A,Gender:Women": "2025-04-15",
+  "State:Adamawa B,Gender:Men": "2025-04-16",
+  "State:Adamawa B,Gender:Women": "2025-04-16",
+  "State:Nasarawa  B,Gender:Men": "2025-04-16",
+  "State:Nasarawa  B,Gender:Women": "2025-04-16",
+  "State:Nasarawa A,Gender:Men": "2025-04-16",
+  "State:Nasarawa A,Gender:Women": "2025-04-16"
+ },
+ "checks": [
+  "report spend $4,741.64 equals Insights spend $4,741.64 (one campaign, used by no other study)",
+  "latest strata conf (16 Apr) equals the targeting in force since 9 Apr 18:59 UTC; earlier versions differ only as noted",
+  "outside side excludes exactly the inside side's pins, in every state (asserted in build.py)",
+  "Meta-counted conversations exceed survey starts on every side, so the cheap A sides are ad-driven, not forwarded links"
+ ],
+ "endline_sibling": {
+  "slug": "vaxsocial-campaign-2-endline",
+  "study_id": "91a5beec-6e7e-420f-9926-958baf85102c",
+  "campaigns": "its own ('Campaign 2 Short Survey Endlin Nigeria HPV'), ads 10–20 Nov 2025; no campaign shared with the baseline",
+  "respondents": "its inference_data holds all 3,638 baseline starters with identical State and start timestamps (plus 22 more before May), then its own November recruits. It is an umbrella over the baseline (trap 3). This does not touch the baseline's figures: the baseline report is dated 18 Apr 2025, seven months before the endline existed, and baseline spend is its own campaign.",
+  "targeting": "identical A/B geography; each stratum carries both arms' creatives, so the endline has no arm/side confound, but it is a follow-up wave and excluded (rule 5)"
+ },
+ "other_nigeria_studies_scanned": {
+  "inside_outside_by_design": {
+   "upswell-fogg-1 (Jul–Aug 2022)": "inside/outside radius areas in six states, but report spend $399 of $870 Insights, 109 qualified: fails rules 2 and 4",
+   "upswell-fogg-2 (Oct 2022)": "same design; report spend $165 of $2,482, 135 qualified: fails rules 2 and 4",
+   "nigeria-hausa-pilot (Jan 2025)": "nine northern states minus/inside their capitals; $0 spend, 2 respondents",
+   "vaxsocial-campaign-2-endline": "follow-up wave (rule 5)"
+  },
+  "radius_areas_without_an_outside": "nigeria-hpv-long, hpv-nigeria-long-b, short-a/b-hpv-nigeria, 2-short-a/b-, group-a/b-hpv-baseline-short-nigeria (all 2024, radius areas only); bauchi-state-hpv-pilot (towns, pin fault)",
+  "whole_regions_only": "all other Nigeria studies target whole states, groups of states, or the whole country"
+ }
+}

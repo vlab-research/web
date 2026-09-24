@@ -1,0 +1,421 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site. Scratch output for review.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days (counted here as days with spend > 0)",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: in the targeted group (Gender, Age and City from the ad that reached them) and past the study's own quota rule, answering the phone-number question that follows the main survey.",
+   "qualified_source": "RECOMPUTED, not the report's current_participants: the latest reports of embed-egypt, embed-morocco and embed-jordan predate the final quota rule (15 Jan 2026 18:14-18:16 UTC, phone_number; pre_pay_info for embed-ksa). sql/qualified.sql counts, per stratum, people in the study's own inference pool whose ad metadata matches the stratum, who arrived in the study's window, and who answered the rule question. Validation: embed-iraq's report ran under phone_number and gives 1,413; the recomputation gives 1,415.",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent from the latest FACEBOOK_ADOPT report, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee.",
+   "ad_days": "days on which the study's campaign recorded spend > 0"
+  },
+  "terms": {
+   "radius_area": "a Meta city target plus a radius (here 10 miles, 16.1 km), or a pin plus a radius. Never 'circles' and never urban/rural."
+  },
+  "queries": "sql/*.sql in this folder (read-only). Raw outputs in raw/."
+ },
+ "country": "IQ",
+ "all_people_surveyed": {
+  "unique_people": 3492,
+  "first": "2025-11-13",
+  "last": "2026-02-22",
+  "note": "Anyone with a recorded answer whose ad carried one of this country's cities, in any study on the current platform (the embed programme and its pilot are the only ones). The studies share one survey pool, so people are assigned by ad city, never by study table."
+ },
+ "study": {
+  "slug": "embed-iraq",
+  "fielded": "26 Dec 2025 – 11 Feb 2026",
+  "ad_days": 10,
+  "first_ad_day": "2025-12-26",
+  "last_ad_day": "2026-02-11",
+  "started_survey": 3193,
+  "qualified": 1415,
+  "spend": 2830.91,
+  "cost": 2.0,
+  "insights_spend": 2830.91,
+  "report_created": "2026-02-13 22:38:01.516829+00",
+  "report_qualified": 1413,
+  "report_cost": 2.0,
+  "incentive": "phone credit, set at $1 per respondent in the study settings",
+  "channel": "Messenger (Arabic or English)",
+  "quota_rule": "answered the phone-number question that follows the main survey (final strata conf, 15 Jan 2026)",
+  "quotas": "City (3, Meta city + 10 mi radius) × Gender × Age (30–39, 40–49, 50–65): 18 groups, quota 0.045 each",
+  "screening": "survey ends early for under-30s and for anyone saying they live outside the three cities",
+  "ad_account_currency": "USD (CPM Baghdad $1.69, Basra $2.09, Mosul $1.13)"
+ },
+ "targeting": {
+  "strata_conf_created": "2026-01-30 17:08:37.310694",
+  "stable_during_fielding": true,
+  "cities": {
+   "Baghdad": {
+    "meta_key": "1050671",
+    "meta_name": "Baghdad",
+    "meta_region": "Baghdad Governorate",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   },
+   "Mosul": {
+    "meta_key": "1058260",
+    "meta_name": "Mosul",
+    "meta_region": "Nineveh Governorate",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   },
+   "Basra": {
+    "meta_key": "1051233",
+    "meta_name": "Basra",
+    "meta_region": "Basra Governorate",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   }
+  },
+  "city_points": {
+   "Baghdad": {
+    "source": "GeoNames",
+    "geonameid": 98182,
+    "lat": 33.34058,
+    "lon": 44.40088
+   },
+   "Mosul": {
+    "source": "GeoNames",
+    "geonameid": 99072,
+    "lat": 36.335,
+    "lon": 43.11889
+   },
+   "Basra": {
+    "source": "GeoNames",
+    "geonameid": 99532,
+    "lat": 30.50852,
+    "lon": 47.7804
+   }
+  }
+ },
+ "by_city": {
+  "Baghdad": {
+   "spend": 570.07,
+   "qualified": 583,
+   "started": 1348,
+   "report_qualified": 583,
+   "cost": 0.98,
+   "cost_per_started": 0.42,
+   "completion_pct": 43.2
+  },
+  "Basra": {
+   "spend": 1346.33,
+   "qualified": 307,
+   "started": 788,
+   "report_qualified": 305,
+   "cost": 4.39,
+   "cost_per_started": 1.71,
+   "completion_pct": 39.0
+  },
+  "Mosul": {
+   "spend": 914.51,
+   "qualified": 525,
+   "started": 1057,
+   "report_qualified": 525,
+   "cost": 1.74,
+   "cost_per_started": 0.87,
+   "completion_pct": 49.7
+  }
+ },
+ "by_gender": {
+  "Men": {
+   "spend": 1065.14,
+   "qualified": 901,
+   "started": 1997,
+   "report_qualified": 901,
+   "cost": 1.18,
+   "cost_per_started": 0.53,
+   "completion_pct": 45.1
+  },
+  "Women": {
+   "spend": 1765.77,
+   "qualified": 514,
+   "started": 1196,
+   "report_qualified": 512,
+   "cost": 3.44,
+   "cost_per_started": 1.48,
+   "completion_pct": 43.0
+  }
+ },
+ "by_age": {
+  "30-39": {
+   "spend": 781.9,
+   "qualified": 645,
+   "started": 1371,
+   "report_qualified": 644,
+   "cost": 1.21,
+   "cost_per_started": 0.57,
+   "completion_pct": 47.0
+  },
+  "40-49": {
+   "spend": 923.63,
+   "qualified": 359,
+   "started": 753,
+   "report_qualified": 359,
+   "cost": 2.57,
+   "cost_per_started": 1.23,
+   "completion_pct": 47.7
+  },
+  "50+": {
+   "spend": 1125.38,
+   "qualified": 411,
+   "started": 1069,
+   "report_qualified": 410,
+   "cost": 2.74,
+   "cost_per_started": 1.05,
+   "completion_pct": 38.4
+  }
+ },
+ "insights_by_city": {
+  "Baghdad": {
+   "spend": 570.07,
+   "impressions": 337300,
+   "unique_clicks": 10404
+  },
+  "Basra": {
+   "spend": 1346.33,
+   "impressions": 643698,
+   "unique_clicks": 11759
+  },
+  "Mosul": {
+   "spend": 914.51,
+   "impressions": 811149,
+   "unique_clicks": 15333
+  }
+ },
+ "strata": [
+  {
+   "id": "Gender:Men,Age:30-39,City:Baghdad",
+   "lifetime_spent": 166.65,
+   "report_current_participants": 202,
+   "qualified": 202,
+   "started": 495,
+   "current_price_per_participant": 0.9
+  },
+  {
+   "id": "Gender:Men,Age:30-39,City:Basra",
+   "lifetime_spent": 154.02,
+   "report_current_participants": 80,
+   "qualified": 80,
+   "started": 201,
+   "current_price_per_participant": 6.15
+  },
+  {
+   "id": "Gender:Men,Age:30-39,City:Mosul",
+   "lifetime_spent": 139.34,
+   "report_current_participants": 159,
+   "qualified": 159,
+   "started": 285,
+   "current_price_per_participant": 1.08
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Baghdad",
+   "lifetime_spent": 65.09,
+   "report_current_participants": 73,
+   "qualified": 73,
+   "started": 148,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Basra",
+   "lifetime_spent": 153.5,
+   "report_current_participants": 74,
+   "qualified": 74,
+   "started": 154,
+   "current_price_per_participant": 2.95
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Mosul",
+   "lifetime_spent": 77.21,
+   "report_current_participants": 69,
+   "qualified": 69,
+   "started": 124,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Baghdad",
+   "lifetime_spent": 65.42,
+   "report_current_participants": 86,
+   "qualified": 86,
+   "started": 187,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Basra",
+   "lifetime_spent": 111.39,
+   "report_current_participants": 49,
+   "qualified": 49,
+   "started": 159,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Mosul",
+   "lifetime_spent": 132.52,
+   "report_current_participants": 109,
+   "qualified": 109,
+   "started": 244,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Baghdad",
+   "lifetime_spent": 45.73,
+   "report_current_participants": 78,
+   "qualified": 78,
+   "started": 137,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Basra",
+   "lifetime_spent": 134.52,
+   "report_current_participants": 37,
+   "qualified": 38,
+   "started": 90,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Mosul",
+   "lifetime_spent": 141.64,
+   "report_current_participants": 88,
+   "qualified": 88,
+   "started": 163,
+   "current_price_per_participant": 3.05
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Baghdad",
+   "lifetime_spent": 54.58,
+   "report_current_participants": 55,
+   "qualified": 55,
+   "started": 111,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Basra",
+   "lifetime_spent": 340.46,
+   "report_current_participants": 41,
+   "qualified": 41,
+   "started": 97,
+   "current_price_per_participant": 17.14
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Mosul",
+   "lifetime_spent": 232.79,
+   "report_current_participants": 47,
+   "qualified": 47,
+   "started": 119,
+   "current_price_per_participant": 9.71
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Baghdad",
+   "lifetime_spent": 172.6,
+   "report_current_participants": 89,
+   "qualified": 89,
+   "started": 270,
+   "current_price_per_participant": 3.76
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Basra",
+   "lifetime_spent": 452.44,
+   "report_current_participants": 24,
+   "qualified": 25,
+   "started": 87,
+   "current_price_per_participant": 28.0
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Mosul",
+   "lifetime_spent": 191.01,
+   "report_current_participants": 53,
+   "qualified": 53,
+   "started": 122,
+   "current_price_per_participant": 7.78
+  }
+ ],
+ "funnel": {
+  "people": 3193,
+  "no_baseline_answer": 524,
+  "stopped_at_consent": 293,
+  "no_answer_or_consent_pct": 25.6,
+  "reached_height": 1480,
+  "screened_or_declined": 331
+ },
+ "programme": {
+  "IQ": {
+   "slug": "embed-iraq",
+   "qualified": 1415,
+   "spend": 2830.91,
+   "cost": 2.0,
+   "fielded": "26 Dec 2025 – 11 Feb 2026",
+   "ad_days": 10,
+   "started": 3193
+  },
+  "EG": {
+   "slug": "embed-egypt",
+   "qualified": 3696,
+   "spend": 1714.92,
+   "cost": 0.46,
+   "fielded": "11 Dec 2025 – 14 Jan 2026",
+   "ad_days": 11,
+   "started": 7887
+  },
+  "MA": {
+   "slug": "embed-morocco",
+   "qualified": 564,
+   "spend": 3039.44,
+   "cost": 5.39,
+   "fielded": "11 Dec 2025 – 11 Jan 2026",
+   "ad_days": 9,
+   "started": 4199
+  }
+ },
+ "checks": [
+  "per-group spend sums to $2,830.91; Insights spend $2,830.91",
+  "qualified recomputed: 1,415; the latest report counts 1,413 under the rule in force when it ran",
+  "targeting (city keys, 10 mi radius, home + recent) unchanged from before the first ad day to the end",
+  "respondent arrivals track the spend days (one-day timezone offset); a tail arrives after the ads stop"
+ ],
+ "excluded_for_review": [
+  {
+   "slug": "embed-pilot-iraq",
+   "reason": "pilot on a separate survey (Embed Mena Pilot), Nov 2025; fails rule 3 and/or rule 4",
+   "campaigns": [
+    {
+     "camp": "Embed Pilot Iraq",
+     "days_with_rows": 3,
+     "first": "2025-11-12",
+     "last": "2025-11-14",
+     "spend": 230.36
+    }
+   ]
+  },
+  {
+   "slug": "embed-ksa",
+   "reason": "Saudi Arabia, same programme: see excluded-sa.json"
+  },
+  {
+   "slug": "embed-jordan",
+   "reason": "Jordan, same programme: see excluded-jo.json"
+  }
+ ],
+ "strata_note": "Stratum ids are the study's own labels (City:Marrakech is Meta's Marrakesh)."
+}

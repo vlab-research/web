@@ -78,36 +78,23 @@ dd{margin:2px 0 0;color:var(--ink-2)}
 
 <div class="wrap">
   <div class="bar">
-    <span>Pilot v4 · not on the site · data as of 24 Sep 2026</span>
-    <div class="tabs" role="tablist">
-      <button role="tab" id="t-nigeria" aria-controls="nigeria" aria-selected="true">Nigeria</button>
-      <button role="tab" id="t-indonesia" aria-controls="indonesia" aria-selected="false">Indonesia</button>
-      <button role="tab" id="t-bolivia" aria-controls="bolivia" aria-selected="false">Bolivia</button>
-      <button role="tab" id="t-rules" aria-controls="rules" aria-selected="false">Rules</button>
-    </div>
+    <span>Pilot v5 · not on the site · data as of 24 Sep 2026</span>
+    <div class="tabs" role="tablist">{{TABS}}</div>
   </div>
 
   <!-- ============================ NIGERIA ============================ -->
   <section id="nigeria" role="tabpanel" aria-labelledby="t-nigeria">
     <div class="eyebrow">Nigeria · Recruitment cost</div>
     <h1>What does it cost to recruit survey respondents in Nigeria?</h1>
-    <p class="lede">In three Virtual Lab recruitments in Nigeria between 2023 and 2025, the advertising cost per qualified respondent ranged from <b>$0.52 to $51.30</b>, depending on where the ads ran and how tightly they were drawn.</p>
-    <p>Whole states in the south were cheapest. Small radius areas around towns in the north-east were the most expensive. The same state could cost ten times more when the ads were confined to a few towns within it.</p>
+    <p class="lede">In one Virtual Lab study that advertised to six whole Nigerian states on 22 days between 12 August and 11 September 2023, the advertising cost per qualified respondent ranged from <b>$0.52 in Lagos</b> to <b>$14.12 in Anambra</b>. Across all six states it averaged <b>$2.50</b>.</p>
 
     <div class="facts">
       <div><b>55,798</b><span>people surveyed in Nigeria, Aug 2023 – Sep 2026</span></div>
-      <div><b>$0.52</b><span>Lagos, whole state, 2023</span></div>
-      <div><b>$3.33</b><span>Nasarawa, whole state, 2025</span></div>
-      <div><b>$42.92</b><span>Nasarawa, 64 radius areas of 4 km, 2024</span></div>
+      <div><b>1,180</b><span>qualified respondents, six states, Aug–Sep 2023</span></div>
+      <div><b>$0.52</b><span>per qualified respondent in Lagos</span></div>
+      <div><b>$14.12</b><span>per qualified respondent in Anambra</span></div>
     </div>
 
-    <div class="how">
-      <div class="k">How it works · location targeting on Meta</div>
-      <h2>Why the maps show radius areas</h2>
-      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 17 to 80 km around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
-      <p>To reach people in particular towns, a study drops a pin on each and sets a radius. We call each of those a <b>radius area</b>. To reach everyone else, it targets the whole state or country and excludes the same radius areas. Throughout this page, <b>inside the radius areas</b> and <b>outside them</b> mean exactly that, not any official definition of urban or rural.</p>
-      <p>Meta decides who is in an area from where people say they live on their profile, which it checks against their IP address and their friends' locations, and from where their phone has recently been. The edges are therefore approximate.</p>
-    </div>
     <div class="how">
       <div class="k">How it works · what the numbers count</div>
       <h2>Cost per qualified respondent</h2>
@@ -116,41 +103,34 @@ dd{margin:2px 0 0;color:var(--ink-2)}
     </div>
 
     <h2>Lagos cost 52 cents; Anambra cost $14</h2>
-    <p>In August and September 2023, one survey was advertised to men and women in six whole states for 23 days. The cost per qualified respondent ran from $0.52 in Lagos to $14.12 in Anambra, a 27-fold difference within a single study.</p>
+    <p>The same survey was advertised to men and women in Bauchi, Lagos, Anambra, Rivers, Niger and Sokoto, each state targeted whole, over the same 22 days. Lagos and Rivers came in under a dollar per qualified respondent. Anambra cost 27 times as much as Lagos.</p>
     <figure>{{NG2023}}</figure>
-
-    <h2>130 radius areas in three states</h2>
-    <p>In October 2024, a study with quotas by state did not advertise to the states. It advertised inside 130 radius areas of 2 to 4 km, around Abuja, Keffi, Lafia and Yola–Jimeta. Together they cover a fifth of the Federal Capital Territory, a tenth of Nasarawa and half of one percent of Adamawa. A qualified respondent inside the Abuja radius areas cost $1.22; one inside the Yola–Jimeta radius areas cost $51.30.</p>
-    <figure>{{NG2024}}</figure>
-
-    <h2>Drawing the area wider cost less</h2>
-    <p>In May and June 2025, a different survey advertised in the same three places with far wider areas. It used the whole Federal Capital Territory, the whole of Nasarawa, and one radius area of 53 km around Yola. Each place cost less than inside the 2024 radius areas:</p>
     <div class="tbl"><table>
-      <thead><tr><th>Place</th><th>Oct 2024: radius areas</th><th class=n>Per qualified</th><th>May–Jun 2025: wider area</th><th class=n>Per qualified</th></tr></thead>
+      <thead><tr><th>State</th><th class=n>Qualified</th><th class=n>Ad spend</th><th class=n>Per qualified</th></tr></thead>
       <tbody>
-        <tr><td>Federal Capital Territory</td><td>43 areas, 4 km radius</td><td class=n>$1.22</td><td>Whole territory</td><td class=n>$0.88</td></tr>
-        <tr><td>Nasarawa</td><td>64 areas, 4 km radius</td><td class=n>$42.92</td><td>Whole state</td><td class=n>$3.33</td></tr>
-        <tr><td>Adamawa</td><td>23 areas, 2 km radius</td><td class=n>$51.30</td><td>One area, 53 km radius, around Yola</td><td class=n>$10.59</td></tr>
+        <tr><td>Lagos</td><td class=n>433</td><td class=n>$227</td><td class=n>$0.52</td></tr>
+        <tr><td>Rivers</td><td class=n>260</td><td class=n>$190</td><td class=n>$0.73</td></tr>
+        <tr><td>Bauchi</td><td class=n>176</td><td class=n>$321</td><td class=n>$1.83</td></tr>
+        <tr><td>Niger</td><td class=n>139</td><td class=n>$452</td><td class=n>$3.25</td></tr>
+        <tr><td>Sokoto</td><td class=n>98</td><td class=n>$710</td><td class=n>$7.24</td></tr>
+        <tr><td>Anambra</td><td class=n>74</td><td class=n>$1,045</td><td class=n>$14.12</td></tr>
       </tbody>
     </table></div>
-    <p class="cap">These are two different surveys, a year apart, so the comparison shows direction, not an exact ratio. 2025 figures: $127 for 145 qualified in the capital territory, $243 for 73 in Nasarawa, $413 for 39 in Adamawa.</p>
 
-    <h2>Every recruitment in the figures</h2>
-    <div class="tbl"><table>
-      <thead><tr><th>Fielded</th><th>Where</th><th class=n>Qualified</th><th class=n>Ad spend</th><th class=n>Per qualified</th><th class=n>Ad days</th></tr></thead>
-      <tbody>{{NGROWS}}</tbody>
-    </table></div>
-
-        <p class="cap">Only recruitments that meet every rule on the Rules tab are included: three recruitments made up of five of the 49 Nigeria studies.</p>
+    <h2>How the study was set up</h2>
+    <dl>
+      <dt>Quotas</dt><dd>Six states × gender: 12 groups, each state targeted by its official boundary.</dd>
+      <dt>Ads</dt><dd>22 days of ads between 12 August and 11 September 2023: a three-day first run, then the main run, advertising one survey.</dd>
+    </dl>
     <p class="cta">Planning a study in Nigeria? Write to <b>info@vlab.digital</b>.</p>
 
     <div class="note">
       <h3>For review</h3>
       <ul>
-        <li><b>Removed since v2:</b> the Bauchi pilot, whose Kirfi target was pinned 67 km from Kirfi; the 2026 Bauchi week, $45.70 per phone number and not explained; and the April 2025 study, whose targeting mixes areas too much to state in a sentence.</li>
-        <li><b>Town names on the maps are for orientation.</b> They are the nearest towns in Natural Earth or GeoNames.</li>
-        <li><b>Targeting before the config date is unverified.</b> The stored targeting was saved a few days after fielding began: 24 Aug against 12 Aug in 2023, and 15 Oct against 12 Oct in 2024.</li>
-        <li>Study IDs appear in grey for review only.</li>
+        <li><b>This is the whole Nigeria page.</b> No other Nigeria study passes the rules with a comparison worth showing. The April 2025 study splits each state into a radius area and the rest, but its cost follows the ad arm, not the side: arm A was cheaper in every state, whichever side it was on. Its Abuja "inside" pin is 24 km south of the city, near Kuje.</li>
+        <li><b>Study IDs:</b> <code>nigeria-hpv-config-8-1</code> + <code>nigeria-final-hpv-august-23</code>, which fed one survey; spend summed, respondents counted once.</li>
+        <li><b>The stored targeting was saved on 24 Aug, after the first run began on 12 Aug.</b> The first run's report covers the same six states.</li>
+        <li><b>Why Anambra is expensive is not established.</b> The finding is the spread within one study. Rule 8 allows it because nothing about the study differed by state.</li>
       </ul>
     </div>
   </section>
@@ -171,7 +151,7 @@ dd{margin:2px 0 0;color:var(--ink-2)}
     <div class="how">
       <div class="k">How it works · location targeting on Meta</div>
       <h2>Why the maps show radius areas</h2>
-      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 17 to 80 km around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
+      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 10 to 50 miles, about 16 to 80 km, around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
       <p>To reach people in particular towns, a study drops a pin on each and sets a radius. We call each of those a <b>radius area</b>. To reach everyone else, it targets the whole state or country and excludes the same radius areas. Throughout this page, <b>inside the radius areas</b> and <b>outside them</b> mean exactly that, not any official definition of urban or rural.</p>
       <p>Meta decides who is in an area from where people say they live on their profile, which it checks against their IP address and their friends' locations, and from where their phone has recently been. The edges are therefore approximate.</p>
     </div>
@@ -233,7 +213,7 @@ dd{margin:2px 0 0;color:var(--ink-2)}
     <div class="how">
       <div class="k">How it works · location targeting on Meta</div>
       <h2>Why the maps show radius areas</h2>
-      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 17 to 80 km around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
+      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 10 to 50 miles, about 16 to 80 km, around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
       <p>To reach people in particular towns, a study drops a pin on each and sets a radius. We call each of those a <b>radius area</b>. To reach everyone else, it targets the whole state or country and excludes the same radius areas. Throughout this page, <b>inside the radius areas</b> and <b>outside them</b> mean exactly that, not any official definition of urban or rural.</p>
       <p>Meta decides who is in an area from where people say they live on their profile, which it checks against their IP address and their friends' locations, and from where their phone has recently been. The edges are therefore approximate.</p>
     </div>
@@ -270,6 +250,7 @@ dd{margin:2px 0 0;color:var(--ink-2)}
     </div>
   </section>
 
+{{EXTRA_SECTIONS}}
   <!-- ============================ RULES ============================ -->
   <section id="rules" role="tabpanel" aria-labelledby="t-rules" hidden>
     <div class="eyebrow">For review · Not a page</div>
@@ -306,8 +287,8 @@ dd{margin:2px 0 0;color:var(--ink-2)}
 </div>
 
 <script>
-const tabs=["nigeria","indonesia","bolivia","rules"];
+const tabs=[...document.querySelectorAll('[role=tabpanel]')].map(s=>s.id);
 function show(id){tabs.forEach(p=>{document.getElementById("t-"+p).setAttribute("aria-selected",p===id);document.getElementById(p).hidden=p!==id})}
 tabs.forEach(p=>document.getElementById("t-"+p).addEventListener("click",()=>{show(p);try{history.replaceState(null,"","#"+p)}catch(e){}}));
-const h=location.hash.slice(1); if(tabs.includes(h)) show(h);
+const h=location.hash.slice(1); show(tabs.includes(h)?h:tabs[0]);
 </script>

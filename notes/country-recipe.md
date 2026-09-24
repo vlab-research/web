@@ -43,6 +43,8 @@ respondents and ad days) and the appendix of `ws-inbound.md`.
 | **Per-group cost** | Latest `adopt_reports`, `report_type='FACEBOOK_ADOPT'`, per stratum: `lifetime_spent` ÷ `current_participants`. **Never `current_price_per_participant`**, which is Meta's marginal estimate, not an average |
 | Account currency | `general` conf `ad_account`. Test with CPM: USD accounts run about $0.20–3; naira accounts 500+ |
 
+**When a report and the quota rule disagree:** a study's quota rule (`question_targeting`) can change mid-study, and a report written before the change counts under the old rule. Check the rule's history. If the final rule differs from the one the latest report used, recount qualified people under the final rule, and verify the recount reproduces a report that did run under it. MENA did this: the Egypt figure went from 966 qualified to 3,696.
+
 **Fetch the adopt report fresh, one study at a time** (`ORDER BY created DESC LIMIT 1`). A
 correlated `max(created)` subquery over `adopt_reports` ran for over two minutes, and a
 cached copy was a day stale.
@@ -62,7 +64,7 @@ A study, or a group of sibling studies, reaches a page only if all eight pass:
 
 1. USD ad account.
 2. The report's spend reconciles with Insights spend (within about 5%).
-3. At least 7 days of ads.
+3. At least 7 days of ads, counting **only days with spend above zero**. Insights writes rows on days with no spend, and counting rows overstated it: 169 against 156 for the US study, 20 against 12 for Bolivia (the MENA agent caught this, 2026-09-24).
 4. At least $500 of ads and 200 qualified respondents.
 5. A recruitment wave. Midlines, endlines and re-contacts are out.
 6. Studies that fed one survey at the same time are combined: spend summed, each person
@@ -79,8 +81,9 @@ Every study that fails goes in the data file under `excluded_for_review`, with i
   targeting rarely matches them. Stratum ids often say Urban/Rural; they are raw labels only.
 - **Never "circles".** Nandan: too plain.
 - **Whole state / whole province / whole country:** Meta `regions` or `countries`.
-- **Radius area:** a Meta `custom_locations` pin plus a radius (1–80 km), or a Meta city plus
-  a radius (17–80 km). The two sides are **inside the radius areas** and **outside them**.
+- **Radius area:** a Meta `custom_locations` pin plus a radius (0.63–50 miles, 1–80 km), or a
+  Meta city plus a radius (10–50 miles; Meta rounds the lower end to 17 km, but 10 miles is
+  16.1 km, which the MENA studies used). The two sides are **inside the radius areas** and **outside them**.
 - Say "a state" only when the targeting was the whole state. If a stratum says "State:X" but
   targets radius areas, name the towns.
 

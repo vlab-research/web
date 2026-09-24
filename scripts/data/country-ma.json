@@ -1,0 +1,421 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site. Scratch output for review.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days (counted here as days with spend > 0)",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: in the targeted group (Gender, Age and City from the ad that reached them) and past the study's own quota rule, answering the phone-number question that follows the main survey.",
+   "qualified_source": "RECOMPUTED, not the report's current_participants: the latest reports of embed-egypt, embed-morocco and embed-jordan predate the final quota rule (15 Jan 2026 18:14-18:16 UTC, phone_number; pre_pay_info for embed-ksa). sql/qualified.sql counts, per stratum, people in the study's own inference pool whose ad metadata matches the stratum, who arrived in the study's window, and who answered the rule question. Validation: embed-iraq's report ran under phone_number and gives 1,413; the recomputation gives 1,415.",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent from the latest FACEBOOK_ADOPT report, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee.",
+   "ad_days": "days on which the study's campaign recorded spend > 0"
+  },
+  "terms": {
+   "radius_area": "a Meta city target plus a radius (here 10 miles, 16.1 km), or a pin plus a radius. Never 'circles' and never urban/rural."
+  },
+  "queries": "sql/*.sql in this folder (read-only). Raw outputs in raw/."
+ },
+ "country": "MA",
+ "all_people_surveyed": {
+  "unique_people": 4581,
+  "first": "2025-11-18",
+  "last": "2026-02-23",
+  "note": "Anyone with a recorded answer whose ad carried one of this country's cities, in any study on the current platform (the embed programme and its pilot are the only ones). The studies share one survey pool, so people are assigned by ad city, never by study table."
+ },
+ "study": {
+  "slug": "embed-morocco",
+  "fielded": "11 Dec 2025 – 11 Jan 2026",
+  "ad_days": 9,
+  "first_ad_day": "2025-12-11",
+  "last_ad_day": "2026-01-11",
+  "started_survey": 4199,
+  "qualified": 564,
+  "spend": 3039.44,
+  "cost": 5.39,
+  "insights_spend": 3040.26,
+  "report_created": "2026-01-12 14:50:41.979484+00",
+  "report_qualified": 558,
+  "report_cost": 5.45,
+  "incentive": "phone credit, set at $1 per respondent in the study settings",
+  "channel": "Messenger (Arabic or French)",
+  "quota_rule": "answered the phone-number question that follows the main survey (final strata conf, 15 Jan 2026)",
+  "quotas": "City (3, Meta city + 10 mi radius) × Gender × Age (30–39, 40–49, 50–65): 18 groups, quota 0.045 each",
+  "screening": "survey ends early for under-30s and for anyone saying they live outside the three cities",
+  "ad_account_currency": "USD (CPM Casablanca $0.89, Fez $1.02, Marrakech $0.81)"
+ },
+ "targeting": {
+  "strata_conf_created": "2026-01-15 18:15:32.362361",
+  "stable_during_fielding": true,
+  "cities": {
+   "Fez": {
+    "meta_key": "1397769",
+    "meta_name": "Fez",
+    "meta_region": "Fès-Boulemane",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   },
+   "Casablanca": {
+    "meta_key": "1391173",
+    "meta_name": "Casablanca",
+    "meta_region": "Grand Casablanca",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   },
+   "Marrakech": {
+    "meta_key": "1402781",
+    "meta_name": "Marrakesh",
+    "meta_region": "Marrakesh-Tensift-El Haouz",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   }
+  },
+  "city_points": {
+   "Fez": {
+    "source": "GeoNames",
+    "geonameid": 2548885,
+    "lat": 34.03313,
+    "lon": -5.00028
+   },
+   "Casablanca": {
+    "source": "GeoNames",
+    "geonameid": 2553604,
+    "lat": 33.58831,
+    "lon": -7.61138
+   },
+   "Marrakech": {
+    "source": "GeoNames",
+    "geonameid": 2542997,
+    "lat": 31.63416,
+    "lon": -7.99994
+   }
+  }
+ },
+ "by_city": {
+  "Casablanca": {
+   "spend": 706.82,
+   "qualified": 253,
+   "started": 1434,
+   "report_qualified": 249,
+   "cost": 2.79,
+   "cost_per_started": 0.49,
+   "completion_pct": 17.6
+  },
+  "Fez": {
+   "spend": 1208.95,
+   "qualified": 139,
+   "started": 1072,
+   "report_qualified": 141,
+   "cost": 8.7,
+   "cost_per_started": 1.13,
+   "completion_pct": 13.0
+  },
+  "Marrakech": {
+   "spend": 1123.67,
+   "qualified": 172,
+   "started": 1693,
+   "report_qualified": 168,
+   "cost": 6.53,
+   "cost_per_started": 0.66,
+   "completion_pct": 10.2
+  }
+ },
+ "by_gender": {
+  "Men": {
+   "spend": 1346.43,
+   "qualified": 331,
+   "started": 2508,
+   "report_qualified": 325,
+   "cost": 4.07,
+   "cost_per_started": 0.54,
+   "completion_pct": 13.2
+  },
+  "Women": {
+   "spend": 1693.01,
+   "qualified": 233,
+   "started": 1691,
+   "report_qualified": 233,
+   "cost": 7.27,
+   "cost_per_started": 1.0,
+   "completion_pct": 13.8
+  }
+ },
+ "by_age": {
+  "30-39": {
+   "spend": 699.37,
+   "qualified": 241,
+   "started": 1641,
+   "report_qualified": 235,
+   "cost": 2.9,
+   "cost_per_started": 0.43,
+   "completion_pct": 14.7
+  },
+  "40-49": {
+   "spend": 1100.22,
+   "qualified": 179,
+   "started": 1341,
+   "report_qualified": 178,
+   "cost": 6.15,
+   "cost_per_started": 0.82,
+   "completion_pct": 13.3
+  },
+  "50+": {
+   "spend": 1239.85,
+   "qualified": 144,
+   "started": 1217,
+   "report_qualified": 145,
+   "cost": 8.61,
+   "cost_per_started": 1.02,
+   "completion_pct": 11.8
+  }
+ },
+ "insights_by_city": {
+  "Casablanca": {
+   "spend": 707.06,
+   "impressions": 794042,
+   "unique_clicks": 15543
+  },
+  "Fez": {
+   "spend": 1209.27,
+   "impressions": 1180260,
+   "unique_clicks": 19080
+  },
+  "Marrakech": {
+   "spend": 1123.93,
+   "impressions": 1384611,
+   "unique_clicks": 23639
+  }
+ },
+ "strata": [
+  {
+   "id": "Gender:Men,Age:30-39,City:Casablanca",
+   "lifetime_spent": 135.95,
+   "report_current_participants": 59,
+   "qualified": 63,
+   "started": 323,
+   "current_price_per_participant": 1.67
+  },
+  {
+   "id": "Gender:Men,Age:30-39,City:Fez",
+   "lifetime_spent": 95.33,
+   "report_current_participants": 46,
+   "qualified": 46,
+   "started": 232,
+   "current_price_per_participant": 2.82
+  },
+  {
+   "id": "Gender:Men,Age:30-39,City:Marrakech",
+   "lifetime_spent": 174.21,
+   "report_current_participants": 38,
+   "qualified": 38,
+   "started": 435,
+   "current_price_per_participant": 3.35
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Casablanca",
+   "lifetime_spent": 85.84,
+   "report_current_participants": 43,
+   "qualified": 42,
+   "started": 234,
+   "current_price_per_participant": 7.0
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Fez",
+   "lifetime_spent": 135.98,
+   "report_current_participants": 17,
+   "qualified": 16,
+   "started": 175,
+   "current_price_per_participant": 1.67
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Marrakech",
+   "lifetime_spent": 198.86,
+   "report_current_participants": 32,
+   "qualified": 34,
+   "started": 332,
+   "current_price_per_participant": 4.6
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Casablanca",
+   "lifetime_spent": 124.99,
+   "report_current_participants": 39,
+   "qualified": 40,
+   "started": 278,
+   "current_price_per_participant": 2.82
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Fez",
+   "lifetime_spent": 181.15,
+   "report_current_participants": 27,
+   "qualified": 28,
+   "started": 217,
+   "current_price_per_participant": 6.2
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Marrakech",
+   "lifetime_spent": 214.12,
+   "report_current_participants": 24,
+   "qualified": 24,
+   "started": 282,
+   "current_price_per_participant": 7.77
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Casablanca",
+   "lifetime_spent": 64.69,
+   "report_current_participants": 38,
+   "qualified": 37,
+   "started": 205,
+   "current_price_per_participant": 3.55
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Fez",
+   "lifetime_spent": 96.69,
+   "report_current_participants": 25,
+   "qualified": 25,
+   "started": 152,
+   "current_price_per_participant": 5.0
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Marrakech",
+   "lifetime_spent": 132.5,
+   "report_current_participants": 29,
+   "qualified": 32,
+   "started": 294,
+   "current_price_per_participant": 6.38
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Casablanca",
+   "lifetime_spent": 106.95,
+   "report_current_participants": 44,
+   "qualified": 47,
+   "started": 222,
+   "current_price_per_participant": 2.87
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Fez",
+   "lifetime_spent": 356.89,
+   "report_current_participants": 14,
+   "qualified": 13,
+   "started": 164,
+   "current_price_per_participant": 24.69
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Marrakech",
+   "lifetime_spent": 215.7,
+   "report_current_participants": 28,
+   "qualified": 27,
+   "started": 214,
+   "current_price_per_participant": 6.43
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Casablanca",
+   "lifetime_spent": 188.4,
+   "report_current_participants": 26,
+   "qualified": 24,
+   "started": 172,
+   "current_price_per_participant": 5.1
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Fez",
+   "lifetime_spent": 342.91,
+   "report_current_participants": 12,
+   "qualified": 11,
+   "started": 132,
+   "current_price_per_participant": 52.2
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Marrakech",
+   "lifetime_spent": 188.28,
+   "report_current_participants": 17,
+   "qualified": 17,
+   "started": 136,
+   "current_price_per_participant": 20.2
+  }
+ ],
+ "funnel": {
+  "people": 4522,
+  "no_baseline_answer": 1374,
+  "stopped_at_consent": 806,
+  "no_answer_or_consent_pct": 48.2,
+  "reached_height": 608,
+  "screened_or_declined": 766
+ },
+ "programme": {
+  "IQ": {
+   "slug": "embed-iraq",
+   "qualified": 1415,
+   "spend": 2830.91,
+   "cost": 2.0,
+   "fielded": "26 Dec 2025 – 11 Feb 2026",
+   "ad_days": 10,
+   "started": 3193
+  },
+  "EG": {
+   "slug": "embed-egypt",
+   "qualified": 3696,
+   "spend": 1714.92,
+   "cost": 0.46,
+   "fielded": "11 Dec 2025 – 14 Jan 2026",
+   "ad_days": 11,
+   "started": 7887
+  },
+  "MA": {
+   "slug": "embed-morocco",
+   "qualified": 564,
+   "spend": 3039.44,
+   "cost": 5.39,
+   "fielded": "11 Dec 2025 – 11 Jan 2026",
+   "ad_days": 9,
+   "started": 4199
+  }
+ },
+ "checks": [
+  "per-group spend sums to $3,039.44; Insights spend $3,040.26",
+  "qualified recomputed: 564; the latest report counts 558 under the rule in force when it ran",
+  "targeting (city keys, 10 mi radius, home + recent) unchanged from before the first ad day to the end",
+  "respondent arrivals track the spend days (one-day timezone offset); a tail arrives after the ads stop"
+ ],
+ "excluded_for_review": [
+  {
+   "slug": "embed-pilot-morocco",
+   "reason": "pilot on a separate survey (Embed Mena Pilot), Nov 2025; fails rule 3 and/or rule 4",
+   "campaigns": [
+    {
+     "camp": "Embed Pilot Morroco 2",
+     "days_with_rows": 2,
+     "first": "2025-11-18",
+     "last": "2025-11-19",
+     "spend": 72.76
+    }
+   ]
+  },
+  {
+   "slug": "embed-ksa",
+   "reason": "Saudi Arabia, same programme: see excluded-sa.json"
+  },
+  {
+   "slug": "embed-jordan",
+   "reason": "Jordan, same programme: see excluded-jo.json"
+  }
+ ],
+ "strata_note": "Stratum ids are the study's own labels (City:Marrakech is Meta's Marrakesh)."
+}

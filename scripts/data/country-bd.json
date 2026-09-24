@@ -1,0 +1,279 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+  },
+  "terms": {
+   "radius_area": "a pin Meta lets an advertiser drop on the map, with a radius of 1-80 km (Marketing API custom_locations). 'Inside the radius areas' and 'outside them' are the two sides of that line. Never 'circles' (too plain, per Nandan) and never urban/rural (official definitions vary; the targeting rarely matches them)",
+   "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions",
+   "whole_division": "ads shown to people Meta places anywhere inside the division (a Meta region). Meta offers seven Bangladeshi divisions; Mymensingh, created from Dhaka in 2015, is not one of them"
+  },
+  "queries": "scripts/data/country-queries.sql; spend.sql in this directory (per-campaign spend, CPM, ad days)"
+ },
+ "country": "BD",
+ "all_people_surveyed": {
+  "unique_people": 49986,
+  "first": "2023-11-08",
+  "last": "2024-12-22",
+  "studies": 18,
+  "note": "Distinct user_id in inference_data across every Bangladesh study on the current platform, tests and endlines included. Anyone who answered in any of them."
+ },
+ "study": {
+  "slug": "bangladesh-study-1",
+  "fielded": "30 Nov – 21 Dec 2023",
+  "ad_days": 22,
+  "started_survey": 24624,
+  "qualified": 2878,
+  "spend": 5909.92,
+  "report_spend": 5909.92,
+  "cost": 2.05,
+  "incentive_usd": null,
+  "incentive_note": "none in the study configuration (no incentive_per_respondent; no payment field in the form)",
+  "channel": "Messenger",
+  "ad_account_currency": "USD (CPM $0.31)",
+  "campaign_objective": "MESSAGES, optimised for replies",
+  "quota_rule": "in a quota group and answered the 'seen HPV vaccine ads in the last 3 months' question, question 48 of 52. The form screens out anyone who does not consent, does not care for a girl, or cares for a girl under 9 or over 17, in the first seven questions",
+  "quotas": "Division (7, whole Meta regions) × two ad sets (women's and men's creatives, NOT gender-targeted): 14 equal groups",
+  "meta_age_targeting": "25–45",
+  "target_max_sample": 4200,
+  "strata_conf_created": "2023-12-11 17:11:28.090193",
+  "report_created": "2023-12-22 08:34:07.872616+00"
+ },
+ "by_division": {
+  "Dhaka": {
+   "spend": 601.69,
+   "qualified": 590,
+   "cost": 1.02
+  },
+  "Chittagong": {
+   "spend": 821.98,
+   "qualified": 607,
+   "cost": 1.35
+  },
+  "Khulna": {
+   "spend": 707.16,
+   "qualified": 336,
+   "cost": 2.1
+  },
+  "Sylhet": {
+   "spend": 788.64,
+   "qualified": 357,
+   "cost": 2.21
+  },
+  "Rajshahi": {
+   "spend": 814.54,
+   "qualified": 358,
+   "cost": 2.28
+  },
+  "Rangpur": {
+   "spend": 921.9,
+   "qualified": 364,
+   "cost": 2.53
+  },
+  "Barisal": {
+   "spend": 1254.01,
+   "qualified": 266,
+   "cost": 4.71
+  }
+ },
+ "by_gender_adset_not_for_publication": {
+  "note": "The two 'Gender' ad sets were not restricted by gender on Meta (no genders key; the Gender variable's facebook_targeting is empty). Self-reported gender among qualified: 'Men' ad sets 629 women / 843 men; 'Women' ad sets 689 women / 761 men. So these are creative versions, not genders. Do not publish.",
+  "Men": {
+   "spend": 2857.98,
+   "qualified": 1449,
+   "cost": 1.97
+  },
+  "Women": {
+   "spend": 3051.94,
+   "qualified": 1429,
+   "cost": 2.14
+  }
+ },
+ "strata": [
+  {
+   "id": "Gender:Men,Division:Barisal,Age:Age all",
+   "current_participants": 137,
+   "lifetime_spent": 586.2099999999999,
+   "current_price_per_participant": 0.73
+  },
+  {
+   "id": "Gender:Men,Division:Chittagong,Age:Age all",
+   "current_participants": 300,
+   "lifetime_spent": 402.87,
+   "current_price_per_participant": 0.67
+  },
+  {
+   "id": "Gender:Men,Division:Dhaka,Age:Age all",
+   "current_participants": 297,
+   "lifetime_spent": 306.97999999999996,
+   "current_price_per_participant": 1.09
+  },
+  {
+   "id": "Gender:Men,Division:Khula,Age:Age all",
+   "current_participants": 164,
+   "lifetime_spent": 337.08,
+   "current_price_per_participant": 1.29
+  },
+  {
+   "id": "Gender:Men,Division:Rajshahi,Age:Age all",
+   "current_participants": 188,
+   "lifetime_spent": 399.15000000000003,
+   "current_price_per_participant": 4.0
+  },
+  {
+   "id": "Gender:Men,Division:Rangpur,Age:Age all",
+   "current_participants": 185,
+   "lifetime_spent": 461.71000000000004,
+   "current_price_per_participant": 2.29
+  },
+  {
+   "id": "Gender:Men,Division:Sylhet,Age:Age all",
+   "current_participants": 178,
+   "lifetime_spent": 363.98,
+   "current_price_per_participant": 12.0
+  },
+  {
+   "id": "Gender:Women,Division:Barisal,Age:Age all",
+   "current_participants": 129,
+   "lifetime_spent": 667.8000000000001,
+   "current_price_per_participant": 1.85
+  },
+  {
+   "id": "Gender:Women,Division:Chittagong,Age:Age all",
+   "current_participants": 307,
+   "lifetime_spent": 419.11,
+   "current_price_per_participant": 2.0
+  },
+  {
+   "id": "Gender:Women,Division:Dhaka,Age:Age all",
+   "current_participants": 293,
+   "lifetime_spent": 294.71000000000004,
+   "current_price_per_participant": 0.78
+  },
+  {
+   "id": "Gender:Women,Division:Khula,Age:Age all",
+   "current_participants": 172,
+   "lifetime_spent": 370.08,
+   "current_price_per_participant": 6.0
+  },
+  {
+   "id": "Gender:Women,Division:Rajshahi,Age:Age all",
+   "current_participants": 170,
+   "lifetime_spent": 415.39,
+   "current_price_per_participant": 1.33
+  },
+  {
+   "id": "Gender:Women,Division:Rangpur,Age:Age all",
+   "current_participants": 179,
+   "lifetime_spent": 460.19,
+   "current_price_per_participant": 1.43
+  },
+  {
+   "id": "Gender:Women,Division:Sylhet,Age:Age all",
+   "current_participants": 179,
+   "lifetime_spent": 424.65999999999997,
+   "current_price_per_participant": 3.14
+  }
+ ],
+ "checks": [
+  "per-group lifetime_spent sums to $5,909.92, exactly Meta's reported spend for the one campaign",
+  "ad account 272226257305969 (all 18 Bangladesh studies): CPM $0.23–0.62, so US dollars, not taka",
+  "targeting saved 21 Nov 2023, before the first ad day (30 Nov); the 11 Dec re-save is identical",
+  "1,000 respondents from the 8–12 Nov test run share this study's inference data under different labels ('All Age', 'Rangpour'); none match a stratum id, so none are counted as qualified",
+  "24,624 people started from the study's ads; 2,878 qualified (11.7%)"
+ ],
+ "held_for_review": {
+  "hpv_baseline_2024": {
+   "studies": [
+    "bangladesh-hpv-baseline (campaign 'T3')",
+    "bangladesh-hpv-baseline-t1",
+    "bangladesh-hpv-baseline-t2",
+    "bangladesh-hpv-baseline-t4"
+   ],
+   "fielded": "30 Sep – 10 Oct 2024",
+   "ad_days": 11,
+   "design": "one survey (BDTBaselineBangla), four concurrent ad runs, one per trial arm; each run targets its own set of 1 km radius areas (about 980 pins in total) in Chittagong, Barisal and Sylhet",
+   "spend": 1296.46,
+   "qualified": 1101,
+   "cost": 1.18,
+   "by_group": {
+    "Chittagong, women 25–45": [
+     74.74,
+     148,
+     0.5
+    ],
+    "Chittagong, men 30–50": [
+     130.71,
+     278,
+     0.47
+    ],
+    "Barisal, women 25–45": [
+     78.15,
+     120,
+     0.65
+    ],
+    "Barisal, men 30–50": [
+     511.01,
+     230,
+     2.22
+    ],
+    "Sylhet, women 25–45": [
+     227.16,
+     112,
+     2.03
+    ],
+    "Sylhet, men 30–50": [
+     274.69,
+     213,
+     1.29
+    ]
+   },
+   "why_held": [
+    "the candidate figure '$797, 1,101 qualified' for -t2 alone is double-counted: all four arms' reports carry the same 1,101 qualified (the survey-wide pool); combined it is $1,296 for 1,101",
+    "radius areas only, no 'outside' side, so no within-study place comparison",
+    "Meta places 2 of the pins in India (country 'IN'); the pins were not otherwise checked",
+    "set against 2023 it invites a cross-year comparison that cannot be explained: the 2024 survey is shorter (qualifying question 33 of 36, not 48 of 52) and used a different campaign objective"
+   ]
+  }
+ },
+ "excluded_for_review": {
+  "follow_up_waves": [
+   "remaining-divisions-bangladesh-hpv-endline (13–22 Dec 2024, $807.64, 3,366 qualified, $0.24; whole Dhaka, Khulna, Rajshahi, Rangpur). NOTE: a fresh ad-recruited cross-section, not a re-contact: only 564 of its 10,110 people were in an earlier Bangladesh study. Passes every other mechanical rule",
+   "t1-, t2-, t3-, t4-bangladesh-hpv-endline (13–22 Dec 2024, $378, $448, $579, $308; 1 km radius areas)"
+  ],
+  "under_7_ad_days": [
+   "bangladesh-survey-1-test (4 days, $187)",
+   "bangladesh-baseline-remaining-divisions (3 days, $307; 1,007 qualified, whole Khulna, Rajshahi, Rangpur)",
+   "bangladesh-baseline-test (3 days, $53)",
+   "bangladesh-baseline-test-2 (2 days, $13)",
+   "bangladesh-baseline-survey-test-t1, -t2, -t3 (6, 6, 2 days; $54, $55, $1)"
+  ],
+  "under_500_or_200": [
+   "all the tests above",
+   "bangladesh-hpv-baseline-t1/-t4 alone ($345, $13): combined with siblings, see held_for_review"
+  ],
+  "shared_campaign": [
+   "bangladesh-baseline-test and -test-2 share campaign 'Bangla HPV Baseline TEST'"
+  ],
+  "no_ad_spend": [
+   "bangladesh-baseline-survey-test-t4"
+  ],
+  "umbrella_double_count": [
+   "the four 2024 baseline arms each report the same 1,101 qualified (see held_for_review)"
+  ]
+ },
+ "strata_note": "Stratum ids are the study's own labels ('Khula' = Khulna). Meta region names are used on the page: Barisal and Chittagong, officially Barishal and Chattogram since 2018."
+}

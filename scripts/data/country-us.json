@@ -1,0 +1,380 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+  },
+  "terms": {
+   "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
+   "state_group": "several whole states targeted together in one ad set (a Meta region list). Group names on the page are ours; the study's ids (eastern, focal_rec, midwest, ne_rec, other_rec) are raw labels and are never published",
+   "qualified_respondent": "a person aged 18-34 who said they live in the United States, gave a name, phone and email, and opened the study's enrolment survey (quota rule: answered 'sguid', the id the enrolment survey hands back)"
+  }
+ },
+ "country": "US",
+ "all_people_surveyed": {
+  "unique_people": 69430,
+  "first": "2023-02-17",
+  "last": "2025-12-03",
+  "studies": 13,
+  "note": "Distinct user_id in inference_data across the 15 single-country US studies on the current platform (13 have any data). user_id is scoped to a Facebook page, so one person reached through two pages counts twice."
+ },
+ "study": {
+  "slug": "gw-marijuana-screener",
+  "fielded": "8 May – 7 Nov 2023",
+  "ad_days": 156,
+  "started_survey": 8362,
+  "qualified": 4932,
+  "spend": 12758.89,
+  "cost": 2.59,
+  "incentive": "$10 Amazon gift card for the first survey (study offered $10/$5/$20/$5/$30 over five surveys)",
+  "channel": "Messenger (Facebook and Instagram ads); screening in Messenger, then a link to the study's own enrolment survey",
+  "eligibility": "aged 18-34 and living in the United States (the screener's only disqualifying questions)",
+  "quota_rule": "opened the enrolment survey link after giving name, phone and email",
+  "quotas": "Location (5 groups of whole states) × Gender (Meta genders), ages 18-34 targeted in every group: 10 groups",
+  "target_max_sample": 5025,
+  "account_currency": "USD (ad account 1342820622846299; recruitment budget $12,500 set in dollars; the same account shows a $22 CPM on a 2025 US study)",
+  "ad_days_note": "days with spend > 0 between 8 May and 7 Nov 2023 (169 calendar days with an Insights row)"
+ },
+ "by_state_group": {
+  "15 states in the South and East": {
+   "states": [
+    "AL",
+    "AR",
+    "DE",
+    "FL",
+    "GA",
+    "KY",
+    "LA",
+    "MS",
+    "NC",
+    "NH",
+    "OH",
+    "PA",
+    "SC",
+    "TN",
+    "WV"
+   ],
+   "study_label": "eastern",
+   "spend": 3182.35,
+   "qualified": 1529,
+   "cost": 2.08
+  },
+  "5 Western states": {
+   "states": [
+    "CA",
+    "CO",
+    "NV",
+    "OR",
+    "WA"
+   ],
+   "study_label": "focal_rec",
+   "spend": 2078.53,
+   "qualified": 819,
+   "cost": 2.54
+  },
+  "14 states, Plains to Mountain West": {
+   "states": [
+    "HI",
+    "IA",
+    "ID",
+    "IN",
+    "KS",
+    "MN",
+    "ND",
+    "NE",
+    "OK",
+    "SD",
+    "TX",
+    "UT",
+    "WI",
+    "WY"
+   ],
+   "study_label": "midwest",
+   "spend": 2549.02,
+   "qualified": 956,
+   "cost": 2.67
+  },
+  "9 Northeastern states and DC": {
+   "states": [
+    "CT",
+    "DC",
+    "MA",
+    "MD",
+    "ME",
+    "NJ",
+    "NY",
+    "RI",
+    "VA",
+    "VT"
+   ],
+   "study_label": "ne_rec",
+   "spend": 2481.38,
+   "qualified": 911,
+   "cost": 2.72
+  },
+  "7 states, Alaska to Michigan": {
+   "states": [
+    "AK",
+    "AZ",
+    "IL",
+    "MI",
+    "MO",
+    "MT",
+    "NM"
+   ],
+   "study_label": "other_rec",
+   "spend": 2467.61,
+   "qualified": 717,
+   "cost": 3.44
+  }
+ },
+ "by_gender": {
+  "Men": {
+   "spend": 8407.63,
+   "qualified": 2088,
+   "cost": 4.03
+  },
+  "Women": {
+   "spend": 4351.26,
+   "qualified": 2844,
+   "cost": 1.53
+  }
+ },
+ "by_state_group_and_gender": {
+  "15 states in the South and East · Men": {
+   "spend": 1996.51,
+   "qualified": 570,
+   "cost": 3.5
+  },
+  "15 states in the South and East · Women": {
+   "spend": 1185.84,
+   "qualified": 959,
+   "cost": 1.24
+  },
+  "5 Western states · Men": {
+   "spend": 1220.15,
+   "qualified": 380,
+   "cost": 3.21
+  },
+  "5 Western states · Women": {
+   "spend": 858.38,
+   "qualified": 439,
+   "cost": 1.96
+  },
+  "14 states, Plains to Mountain West · Men": {
+   "spend": 1756.27,
+   "qualified": 409,
+   "cost": 4.29
+  },
+  "14 states, Plains to Mountain West · Women": {
+   "spend": 792.75,
+   "qualified": 547,
+   "cost": 1.45
+  },
+  "9 Northeastern states and DC · Men": {
+   "spend": 1587.26,
+   "qualified": 396,
+   "cost": 4.01
+  },
+  "9 Northeastern states and DC · Women": {
+   "spend": 894.12,
+   "qualified": 515,
+   "cost": 1.74
+  },
+  "7 states, Alaska to Michigan · Men": {
+   "spend": 1847.44,
+   "qualified": 333,
+   "cost": 5.55
+  },
+  "7 states, Alaska to Michigan · Women": {
+   "spend": 620.17,
+   "qualified": 384,
+   "cost": 1.62
+  }
+ },
+ "funnel_by_gender": {
+  "Men": {
+   "started": 3937,
+   "qualified": 2088,
+   "qualified_share_pct": 53,
+   "spend_per_started": 2.14
+  },
+  "Women": {
+   "started": 4394,
+   "qualified": 2844,
+   "qualified_share_pct": 65,
+   "spend_per_started": 0.99
+  }
+ },
+ "by_month": {
+  "2023-05": {
+   "spend": 1091.23,
+   "qualified": 930,
+   "cost": 1.17,
+   "men": 1.67,
+   "women": 0.83
+  },
+  "2023-06": {
+   "spend": 1815.88,
+   "qualified": 822,
+   "cost": 2.21,
+   "men": 3.44,
+   "women": 1.36
+  },
+  "2023-07": {
+   "spend": 2173.95,
+   "qualified": 848,
+   "cost": 2.56,
+   "men": 3.86,
+   "women": 1.74
+  },
+  "2023-08": {
+   "spend": 2775.15,
+   "qualified": 992,
+   "cost": 2.8,
+   "men": 4.04,
+   "women": 1.78
+  },
+  "2023-09": {
+   "spend": 2351.64,
+   "qualified": 813,
+   "cost": 2.89,
+   "men": 4.91,
+   "women": 1.88
+  },
+  "2023-10": {
+   "spend": 1838.9,
+   "qualified": 285,
+   "cost": 6.45,
+   "men": 6.94,
+   "women": 1.63
+  },
+  "2023-11": {
+   "spend": 712.14,
+   "qualified": 266,
+   "cost": 2.68,
+   "men": 5.78,
+   "women": 1.5
+  }
+ },
+ "by_month_note": "Insights spend in the calendar month / people whose enrolment-survey id arrived that month (inference_data 'sguid', 31 people without ad metadata left out, so the months sum to 4,956 against the report's 4,932). Oct: the 1 Oct strata change set women's quota to 0 in the South-and-East group and raised men's in four groups; reverted 31 Oct.",
+ "strata": [
+  {
+   "id": "location-eastern-gender-1",
+   "current_participants": 570,
+   "lifetime_spent": 1893.6600000000003,
+   "early_spend_8_22_may": 102.85,
+   "current_price_per_participant": 6.53
+  },
+  {
+   "id": "location-eastern-gender-2",
+   "current_participants": 959,
+   "lifetime_spent": 1091.8,
+   "early_spend_8_22_may": 94.04,
+   "current_price_per_participant": 0.8
+  },
+  {
+   "id": "location-focal_rec-gender-1",
+   "current_participants": 380,
+   "lifetime_spent": 1163.1400000000003,
+   "early_spend_8_22_may": 57.01,
+   "current_price_per_participant": 7.43
+  },
+  {
+   "id": "location-focal_rec-gender-2",
+   "current_participants": 439,
+   "lifetime_spent": 800.7400000000001,
+   "early_spend_8_22_may": 57.64,
+   "current_price_per_participant": 6.0
+  },
+  {
+   "id": "location-midwest-gender-1",
+   "current_participants": 409,
+   "lifetime_spent": 1699.6600000000008,
+   "early_spend_8_22_may": 56.61,
+   "current_price_per_participant": 6.15
+  },
+  {
+   "id": "location-midwest-gender-2",
+   "current_participants": 547,
+   "lifetime_spent": 741.7699999999999,
+   "early_spend_8_22_may": 50.98,
+   "current_price_per_participant": 2.91
+  },
+  {
+   "id": "location-ne_rec-gender-1",
+   "current_participants": 396,
+   "lifetime_spent": 1538.4999999999993,
+   "early_spend_8_22_may": 48.76,
+   "current_price_per_participant": 6.92
+  },
+  {
+   "id": "location-ne_rec-gender-2",
+   "current_participants": 515,
+   "lifetime_spent": 842.9100000000001,
+   "early_spend_8_22_may": 51.21,
+   "current_price_per_participant": 2.74
+  },
+  {
+   "id": "location-other_rec-gender-1",
+   "current_participants": 333,
+   "lifetime_spent": 1817.7100000000003,
+   "early_spend_8_22_may": 29.73,
+   "current_price_per_participant": 4.57
+  },
+  {
+   "id": "location-other_rec-gender-2",
+   "current_participants": 384,
+   "lifetime_spent": 581.7800000000001,
+   "early_spend_8_22_may": 38.39,
+   "current_price_per_participant": 1.91
+  }
+ ],
+ "checks": [
+  "report (2023-11-07 20:31 UTC) per-stratum lifetime_spent equals Insights per ad set to the cent; report total $12,171.67 of Insights $12,758.89",
+  "the $587.22 gap is 40 ad sets run 8-22 May (location × gender × race × days of use) before the study collapsed to 10 strata on 22 May; same state lists and genders, so their spend is assigned by id. With it, groups sum to $12,758.89 = Insights",
+  "state lists identical in all six strata versions (5, 12, 22, 28 May; 1, 31 Oct), and the five groups partition the 50 states and DC exactly",
+  "no sibling study: of 8,362 people, 12 appear in any other study (7 llm-bias-survey-us, 5 in European/central Asian studies, likely staff tests)",
+  "2 test entries 17-19 Apr before ads; every other person arrived 8 May - 7 Nov",
+  "screener (Fly form B85Ep3Ad, all versions from 8 May): ineligible only if age <18 or >34 or country not US; days of marijuana use is asked but does not screen"
+ ],
+ "strata_note": "Stratum ids are the study's own labels. Gender 1 = men and 2 = women (Meta genders). The '_rec' groups match the states with legal recreational cannabis in spring 2023 (INFERRED from the labels and the lists; not published).",
+ "excluded_for_review": {
+  "quota_rule_is_not_a_screen": [
+   "vapefree-evaluation-aim3: $1,554.94, 856 'qualified' of 882 - the quota rule is the first message of the chat; the real screen ran on an external site whose outcomes we do not hold. 18-25, Android phones only, whole country. Cost per person who opened the chat: men $2.51, women $1.32"
+  ],
+  "targeting_not_as_stated": [
+   "racial-attitudes-project: the 'southwest' and 'west' groups both contain Arizona, Colorado, Nevada, New Mexico and Utah; Oklahoma and DC are in no group. Also 80-95 qualified per region and two incentive-framing arms. $940.20, 440 qualified, 11 days"
+  ],
+  "siblings_do_not_reconcile": [
+   "nci-aim2-baseline ($53,256 Insights, report shows $0), nci-aim2-baseline-creative-experiment ($3,859, 253 qualified), nci-aim2-recruitment-20240408 (report $4,148 of $4,852): one survey (nciaim2baseline1), overlapping respondents, 18-24 whole country. A combined figure needs its own reconciliation"
+  ],
+  "report_does_not_reconcile": [
+   "pgp-minnesota-gen-pop-survey: report $3,324 of $4,106. The gap looks like the same renamed-strata pattern (age-split ad sets 29 Jan - 3 Feb, $781) and could be recovered; 334 qualified, metro counties vs the rest of Minnesota, $5 incentive, multi-language entry (Somali). Not built",
+   "gw-pedvax-2023: report carries lifetime_spent 0 on every stratum; $8,063 Insights. Health-care-worker targeting"
+  ],
+  "under_200_qualified": [
+   "ucsf-screener (149, $20.31)",
+   "ucsf-screener-focused (32)",
+   "ucsf-screener-phase-2 (12)",
+   "pgp-minnesota-gen-pop-xc (119)",
+   "llm-bias-survey-us (30, 3 days)"
+  ],
+  "no_data": [
+   "reno-weber-2023-district-poll",
+   "racial-attitudes"
+  ]
+ }
+}

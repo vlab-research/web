@@ -1,0 +1,128 @@
+{
+ "country": "SA",
+ "slug": "embed-ksa",
+ "verdict": "HELD OUT: rules 7 and 8",
+ "figures": {
+  "spend": 11786.02,
+  "insights_spend": 11786.15,
+  "qualified_recomputed": 1069,
+  "cost_recomputed": 11.03,
+  "report_qualified": 848,
+  "report_cost": 13.9,
+  "ad_days": 37,
+  "fielded": "5 Dec 2025 – 14 Jan 2026",
+  "started": 3568,
+  "by_city": {
+   "Jeddah": {
+    "spend": 5086.41,
+    "qualified": 360,
+    "started": 1288,
+    "report_qualified": 293,
+    "cost": 14.13,
+    "cost_per_started": 3.95,
+    "completion_pct": 28.0
+   },
+   "Mecca": {
+    "spend": 5132.08,
+    "qualified": 258,
+    "started": 1143,
+    "report_qualified": 207,
+    "cost": 19.89,
+    "cost_per_started": 4.49,
+    "completion_pct": 22.6
+   },
+   "Riyadh": {
+    "spend": 1567.53,
+    "qualified": 451,
+    "started": 1137,
+    "report_qualified": 348,
+    "cost": 3.48,
+    "cost_per_started": 1.38,
+    "completion_pct": 39.7
+   }
+  },
+  "by_gender": {
+   "Men": {
+    "spend": 4348.3,
+    "qualified": 574,
+    "started": 2043,
+    "report_qualified": 462,
+    "cost": 7.58,
+    "cost_per_started": 2.13,
+    "completion_pct": 28.1
+   },
+   "Women": {
+    "spend": 7437.72,
+    "qualified": 495,
+    "started": 1525,
+    "report_qualified": 386,
+    "cost": 15.03,
+    "cost_per_started": 4.88,
+    "completion_pct": 32.5
+   }
+  },
+  "by_age": {
+   "30-39": {
+    "spend": 2314.31,
+    "qualified": 448,
+    "started": 1275,
+    "report_qualified": 361,
+    "cost": 5.17,
+    "cost_per_started": 1.82,
+    "completion_pct": 35.1
+   },
+   "40-49": {
+    "spend": 3358.29,
+    "qualified": 375,
+    "started": 1076,
+    "report_qualified": 296,
+    "cost": 8.96,
+    "cost_per_started": 3.12,
+    "completion_pct": 34.9
+   },
+   "50+": {
+    "spend": 6113.42,
+    "qualified": 246,
+    "started": 1217,
+    "report_qualified": 191,
+    "cost": 24.85,
+    "cost_per_started": 5.02,
+    "completion_pct": 20.2
+   }
+  },
+  "insights_by_city": {
+   "Jeddah": {
+    "spend": 5086.45,
+    "impressions": 2575282,
+    "unique_clicks": 23508
+   },
+   "Mecca": {
+    "spend": 5132.09,
+    "impressions": 2756217,
+    "unique_clicks": 24080
+   },
+   "Riyadh": {
+    "spend": 1567.61,
+    "impressions": 889616,
+    "unique_clicks": 9764
+   }
+  },
+  "people": {
+   "unique_people": 3701,
+   "first": "2025-10-28",
+   "last": "2026-02-22"
+  }
+ },
+ "reasons": [
+  "Rule 7: from 6 to 18 Dec 2025 the stored strata conf aimed every 'Jeddah' ad set at Meta city key 2116956 (Mecca). $3,483 of the Jeddah strata's $5,086 (68%) was spent in that window, so the Jeddah / Mecca split is not what it says.",
+  "Cities carry no radius from 6 Dec (Meta's own city area, not a radius area), and a 10 mi radius on 5 Dec: the geography changed on day 2.",
+  "Rule 8: the figure is real (USD account; report spend reconciles with Insights to $0.13; CPM $1.76-1.98, like the other countries), but not explained. The gap is before the survey: clicks cost $0.21 (vs $0.03-0.11 elsewhere), 0.9% of impressions were clicked (vs 1.7-4.0%), and each person who started cost $3.30 in ads (Egypt $0.22, Iraq $0.89). Why people in Saudi Arabia engaged less is unknown (creatives differed: 'Group 2', 'Cats'; incentive a 20-riyal gift card).",
+  "Not an eligibility artefact: no nationality screen applied in KSA (nationality_no = 0 there; it fired only in the UAE). Completion (30%) is lower than Iraq/Egypt (44-47%), which adds to, but does not make, the cost.",
+  "Report vs recomputed: the latest report (15 Jan 16:40) counted recruit_learn answers (848); the final rule pre_pay_info gives 1,069."
+ ],
+ "also_noted": "embed-uae (not in scope) aims its 'Dubai' ad sets at Mecca as well as Dubai, so some UAE-labelled respondents are in Saudi Arabia.",
+ "pilots": [
+  "embed-pilot-ksa (6 days, $137)",
+  "embed-pilot-ksa-2 (3 days, $87)"
+ ]
+}

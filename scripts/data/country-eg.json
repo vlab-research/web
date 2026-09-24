@@ -1,0 +1,440 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site. Scratch output for review.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days (counted here as days with spend > 0)",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: in the targeted group (Gender, Age and City from the ad that reached them) and past the study's own quota rule, answering the phone-number question that follows the main survey.",
+   "qualified_source": "RECOMPUTED, not the report's current_participants: the latest reports of embed-egypt, embed-morocco and embed-jordan predate the final quota rule (15 Jan 2026 18:14-18:16 UTC, phone_number; pre_pay_info for embed-ksa). sql/qualified.sql counts, per stratum, people in the study's own inference pool whose ad metadata matches the stratum, who arrived in the study's window, and who answered the rule question. Validation: embed-iraq's report ran under phone_number and gives 1,413; the recomputation gives 1,415.",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent from the latest FACEBOOK_ADOPT report, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee.",
+   "ad_days": "days on which the study's campaign recorded spend > 0"
+  },
+  "terms": {
+   "radius_area": "a Meta city target plus a radius (here 10 miles, 16.1 km), or a pin plus a radius. Never 'circles' and never urban/rural."
+  },
+  "queries": "sql/*.sql in this folder (read-only). Raw outputs in raw/."
+ },
+ "country": "EG",
+ "all_people_surveyed": {
+  "unique_people": 7963,
+  "first": "2025-12-12",
+  "last": "2026-02-23",
+  "note": "Anyone with a recorded answer whose ad carried one of this country's cities, in any study on the current platform (the embed programme and its pilot are the only ones). The studies share one survey pool, so people are assigned by ad city, never by study table."
+ },
+ "study": {
+  "slug": "embed-egypt",
+  "fielded": "11 Dec 2025 – 14 Jan 2026",
+  "ad_days": 11,
+  "first_ad_day": "2025-12-11",
+  "last_ad_day": "2026-01-14",
+  "started_survey": 7887,
+  "qualified": 3696,
+  "spend": 1714.92,
+  "cost": 0.46,
+  "insights_spend": 1714.94,
+  "report_created": "2026-01-15 16:57:34.086463+00",
+  "report_qualified": 966,
+  "report_cost": 1.78,
+  "incentive": "phone credit, set at $1 per respondent in the study settings",
+  "channel": "Messenger (Arabic or English)",
+  "quota_rule": "answered the phone-number question that follows the main survey (final strata conf, 15 Jan 2026)",
+  "quotas": "City (3, Meta city + 10 mi radius) × Gender × Age (30–39, 40–49, 50–65): 18 groups, quota 0.045 each",
+  "screening": "survey ends early for under-30s and for anyone saying they live outside the three cities",
+  "ad_account_currency": "USD (CPM Alexandria $1.38, Cairo $1.50, Giza $1.38)"
+ },
+ "targeting": {
+  "strata_conf_created": "2026-03-24 16:57:39.100018",
+  "stable_during_fielding": true,
+  "cities": {
+   "Alexandria": {
+    "meta_key": "656306",
+    "meta_name": "Alexandria",
+    "meta_region": "Alexandria Governorate",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   },
+   "Giza": {
+    "meta_key": "661594",
+    "meta_name": "Giza",
+    "meta_region": "Giza Governorate",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   },
+   "Cairo": {
+    "meta_key": "658536",
+    "meta_name": "Cairo",
+    "meta_region": "Cairo Governorate",
+    "radius_mi": 10,
+    "radius_km": 16.1,
+    "location_types": [
+     "home",
+     "recent"
+    ]
+   }
+  },
+  "city_points": {
+   "Alexandria": {
+    "source": "GeoNames",
+    "geonameid": 361058,
+    "lat": 31.20176,
+    "lon": 29.91582
+   },
+   "Giza": {
+    "source": "GeoNames",
+    "geonameid": 360995,
+    "lat": 30.00944,
+    "lon": 31.20861
+   },
+   "Cairo": {
+    "source": "GeoNames",
+    "geonameid": 360630,
+    "lat": 30.06263,
+    "lon": 31.24967
+   }
+  }
+ },
+ "by_city": {
+  "Alexandria": {
+   "spend": 787.42,
+   "qualified": 1326,
+   "started": 2766,
+   "report_qualified": 335,
+   "cost": 0.59,
+   "cost_per_started": 0.28,
+   "completion_pct": 47.9
+  },
+  "Cairo": {
+   "spend": 450.73,
+   "qualified": 1119,
+   "started": 2522,
+   "report_qualified": 291,
+   "cost": 0.4,
+   "cost_per_started": 0.18,
+   "completion_pct": 44.4
+  },
+  "Giza": {
+   "spend": 476.77,
+   "qualified": 1251,
+   "started": 2599,
+   "report_qualified": 340,
+   "cost": 0.38,
+   "cost_per_started": 0.18,
+   "completion_pct": 48.1
+  }
+ },
+ "by_gender": {
+  "Men": {
+   "spend": 763.77,
+   "qualified": 2145,
+   "started": 4505,
+   "report_qualified": 566,
+   "cost": 0.36,
+   "cost_per_started": 0.17,
+   "completion_pct": 47.6
+  },
+  "Women": {
+   "spend": 951.15,
+   "qualified": 1551,
+   "started": 3382,
+   "report_qualified": 400,
+   "cost": 0.61,
+   "cost_per_started": 0.28,
+   "completion_pct": 45.9
+  }
+ },
+ "by_age": {
+  "30-39": {
+   "spend": 516.54,
+   "qualified": 1270,
+   "started": 2525,
+   "report_qualified": 367,
+   "cost": 0.41,
+   "cost_per_started": 0.2,
+   "completion_pct": 50.3
+  },
+  "40-49": {
+   "spend": 591.31,
+   "qualified": 1191,
+   "started": 2335,
+   "report_qualified": 336,
+   "cost": 0.5,
+   "cost_per_started": 0.25,
+   "completion_pct": 51.0
+  },
+  "50+": {
+   "spend": 607.07,
+   "qualified": 1235,
+   "started": 3027,
+   "report_qualified": 263,
+   "cost": 0.49,
+   "cost_per_started": 0.2,
+   "completion_pct": 40.8
+  }
+ },
+ "insights_by_city": {
+  "Alexandria": {
+   "spend": 787.44,
+   "impressions": 568700,
+   "unique_clicks": 19680
+  },
+  "Cairo": {
+   "spend": 450.73,
+   "impressions": 300414,
+   "unique_clicks": 14398
+  },
+  "Giza": {
+   "spend": 476.77,
+   "impressions": 345470,
+   "unique_clicks": 13854
+  }
+ },
+ "strata": [
+  {
+   "id": "Gender:Men,Age:30-39,City:Alexandria",
+   "lifetime_spent": 111.97,
+   "report_current_participants": 78,
+   "qualified": 277,
+   "started": 567,
+   "current_price_per_participant": 1.06
+  },
+  {
+   "id": "Gender:Men,Age:30-39,City:Cairo",
+   "lifetime_spent": 49.4,
+   "report_current_participants": 59,
+   "qualified": 168,
+   "started": 364,
+   "current_price_per_participant": 1.25
+  },
+  {
+   "id": "Gender:Men,Age:30-39,City:Giza",
+   "lifetime_spent": 73.23,
+   "report_current_participants": 88,
+   "qualified": 326,
+   "started": 637,
+   "current_price_per_participant": 1.06
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Alexandria",
+   "lifetime_spent": 90.92,
+   "report_current_participants": 65,
+   "qualified": 292,
+   "started": 579,
+   "current_price_per_participant": 1.09
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Cairo",
+   "lifetime_spent": 58.65,
+   "report_current_participants": 52,
+   "qualified": 138,
+   "started": 305,
+   "current_price_per_participant": 1.15
+  },
+  {
+   "id": "Gender:Men,Age:40-49,City:Giza",
+   "lifetime_spent": 76.86,
+   "report_current_participants": 60,
+   "qualified": 182,
+   "started": 342,
+   "current_price_per_participant": 1.11
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Alexandria",
+   "lifetime_spent": 100.43,
+   "report_current_participants": 52,
+   "qualified": 191,
+   "started": 430,
+   "current_price_per_participant": 1.51
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Cairo",
+   "lifetime_spent": 116.7,
+   "report_current_participants": 57,
+   "qualified": 332,
+   "started": 743,
+   "current_price_per_participant": 1.6
+  },
+  {
+   "id": "Gender:Men,Age:50+,City:Giza",
+   "lifetime_spent": 85.61,
+   "report_current_participants": 55,
+   "qualified": 239,
+   "started": 538,
+   "current_price_per_participant": 1.7
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Alexandria",
+   "lifetime_spent": 120.49,
+   "report_current_participants": 36,
+   "qualified": 141,
+   "started": 254,
+   "current_price_per_participant": 2.24
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Cairo",
+   "lifetime_spent": 57.2,
+   "report_current_participants": 44,
+   "qualified": 149,
+   "started": 284,
+   "current_price_per_participant": 1.55
+  },
+  {
+   "id": "Gender:Women,Age:30-39,City:Giza",
+   "lifetime_spent": 104.25,
+   "report_current_participants": 62,
+   "qualified": 209,
+   "started": 419,
+   "current_price_per_participant": 1.85
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Alexandria",
+   "lifetime_spent": 215.54,
+   "report_current_participants": 65,
+   "qualified": 252,
+   "started": 474,
+   "current_price_per_participant": 1.18
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Cairo",
+   "lifetime_spent": 86.73,
+   "report_current_participants": 46,
+   "qualified": 164,
+   "started": 324,
+   "current_price_per_participant": 2.48
+  },
+  {
+   "id": "Gender:Women,Age:40-49,City:Giza",
+   "lifetime_spent": 62.61,
+   "report_current_participants": 48,
+   "qualified": 163,
+   "started": 311,
+   "current_price_per_participant": 1.36
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Alexandria",
+   "lifetime_spent": 148.07,
+   "report_current_participants": 39,
+   "qualified": 173,
+   "started": 462,
+   "current_price_per_participant": 2.68
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Cairo",
+   "lifetime_spent": 82.05,
+   "report_current_participants": 33,
+   "qualified": 168,
+   "started": 502,
+   "current_price_per_participant": 4.06
+  },
+  {
+   "id": "Gender:Women,Age:50+,City:Giza",
+   "lifetime_spent": 74.21,
+   "report_current_participants": 27,
+   "qualified": 132,
+   "started": 352,
+   "current_price_per_participant": 2.21
+  }
+ ],
+ "funnel": {
+  "people": 7961,
+  "no_baseline_answer": 1063,
+  "stopped_at_consent": 684,
+  "no_answer_or_consent_pct": 21.9,
+  "reached_height": 3767,
+  "screened_or_declined": 883
+ },
+ "programme": {
+  "IQ": {
+   "slug": "embed-iraq",
+   "qualified": 1415,
+   "spend": 2830.91,
+   "cost": 2.0,
+   "fielded": "26 Dec 2025 – 11 Feb 2026",
+   "ad_days": 10,
+   "started": 3193
+  },
+  "EG": {
+   "slug": "embed-egypt",
+   "qualified": 3696,
+   "spend": 1714.92,
+   "cost": 0.46,
+   "fielded": "11 Dec 2025 – 14 Jan 2026",
+   "ad_days": 11,
+   "started": 7887
+  },
+  "MA": {
+   "slug": "embed-morocco",
+   "qualified": 564,
+   "spend": 3039.44,
+   "cost": 5.39,
+   "fielded": "11 Dec 2025 – 11 Jan 2026",
+   "ad_days": 9,
+   "started": 4199
+  }
+ },
+ "checks": [
+  "per-group spend sums to $1,714.92; Insights spend $1,714.94",
+  "qualified recomputed: 3,696; the latest report counts 966 under the rule in force when it ran",
+  "targeting (city keys, 10 mi radius, home + recent) unchanged from before the first ad day to the end",
+  "respondent arrivals track the spend days (one-day timezone offset); a tail arrives after the ads stop",
+  "Cairo and Giza radius areas overlap: centres 7.1 km apart, 72.1% of the Giza area inside Cairo's"
+ ],
+ "excluded_for_review": [
+  {
+   "slug": "embed-pilot-egypt",
+   "reason": "pilot on a separate survey (Embed Mena Pilot), Nov 2025; fails rule 3 and/or rule 4",
+   "campaigns": [
+    {
+     "camp": "Embed Pilot Egypt",
+     "days_with_rows": 2,
+     "first": "2025-11-13",
+     "last": "2025-11-14",
+     "spend": 69.28
+    },
+    {
+     "camp": "Embed Pilot Egypt 2",
+     "days_with_rows": 6,
+     "first": "2025-11-14",
+     "last": "2025-11-19",
+     "spend": 178.48
+    }
+   ],
+   "note": "none of the pilot's recorded respondents carries an Egyptian city in its ad metadata"
+  },
+  {
+   "slug": "embed-ksa",
+   "reason": "Saudi Arabia, same programme: see excluded-sa.json"
+  },
+  {
+   "slug": "embed-jordan",
+   "reason": "Jordan, same programme: see excluded-jo.json"
+  }
+ ],
+ "strata_note": "Stratum ids are the study's own labels (City:Marrakech is Meta's Marrakesh).",
+ "cairo_giza_overlap": {
+  "centre_km": 7.1,
+  "giza_share_pct": 72.1,
+  "area_km2_each": 813
+ },
+ "cairo_and_giza_pooled": {
+  "spend": 927.5,
+  "qualified": 2370,
+  "cost": 0.39
+ }
+}

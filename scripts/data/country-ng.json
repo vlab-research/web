@@ -38,12 +38,12 @@
  "recruitments": [
   {
    "label": "Six states, whole-state targeting",
-   "fielded": "12 Aug – 12 Sep 2023",
+   "fielded": "12 Aug – 11 Sep 2023",
    "studies": [
     "nigeria-hpv-config-8-1",
     "nigeria-final-hpv-august-23"
    ],
-   "ad_days": 23,
+   "ad_days": 22,
    "spend": 2955.42,
    "qualified": 1180,
    "quotas": "Gender × State (6 states)",

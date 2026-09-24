@@ -1,0 +1,106 @@
+{
+ "country": "JO",
+ "slug": "embed-jordan",
+ "verdict": "HELD OUT: rule 3 (5 days with spend)",
+ "figures": {
+  "spend": 614.16,
+  "insights_spend": 614.16,
+  "qualified_recomputed": 859,
+  "cost_recomputed": 0.71,
+  "report_qualified": 892,
+  "report_cost": 0.69,
+  "ad_days": 5,
+  "fielded": "11 Dec 2025 – 6 Jan 2026",
+  "started": 2113,
+  "by_city": {
+   "Amman": {
+    "spend": 155.12,
+    "qualified": 356,
+    "started": 937,
+    "report_qualified": 371,
+    "cost": 0.44,
+    "cost_per_started": 0.17,
+    "completion_pct": 38.0
+   },
+   "Irbid": {
+    "spend": 214.67,
+    "qualified": 264,
+    "started": 576,
+    "report_qualified": 273,
+    "cost": 0.81,
+    "cost_per_started": 0.37,
+    "completion_pct": 45.8
+   },
+   "Zarqa": {
+    "spend": 244.37,
+    "qualified": 239,
+    "started": 600,
+    "report_qualified": 248,
+    "cost": 1.02,
+    "cost_per_started": 0.41,
+    "completion_pct": 39.8
+   }
+  },
+  "by_gender": {
+   "Men": {
+    "spend": 297.3,
+    "qualified": 432,
+    "started": 1012,
+    "report_qualified": 441,
+    "cost": 0.69,
+    "cost_per_started": 0.29,
+    "completion_pct": 42.7
+   },
+   "Women": {
+    "spend": 316.86,
+    "qualified": 427,
+    "started": 1101,
+    "report_qualified": 451,
+    "cost": 0.74,
+    "cost_per_started": 0.29,
+    "completion_pct": 38.8
+   }
+  },
+  "by_age": {
+   "30-39": {
+    "spend": 188.07,
+    "qualified": 315,
+    "started": 702,
+    "report_qualified": 318,
+    "cost": 0.6,
+    "cost_per_started": 0.27,
+    "completion_pct": 44.9
+   },
+   "40-49": {
+    "spend": 182.09,
+    "qualified": 302,
+    "started": 690,
+    "report_qualified": 318,
+    "cost": 0.6,
+    "cost_per_started": 0.26,
+    "completion_pct": 43.8
+   },
+   "50+": {
+    "spend": 244.0,
+    "qualified": 242,
+    "started": 721,
+    "report_qualified": 256,
+    "cost": 1.01,
+    "cost_per_started": 0.34,
+    "completion_pct": 33.6
+   }
+  },
+  "people": {
+   "unique_people": 2224,
+   "first": "2025-11-18",
+   "last": "2026-02-03"
+  }
+ },
+ "reasons": [
+  "Rule 3: spend on 5 days only (11-12 Dec, 18-19 Dec, 6 Jan). The recipe's query reports 19, because it counts days with a row and no spend.",
+  "If Nandan counts the 27-day window instead, Jordan passes the other rules and costs $0.71 per qualified ($614, 859). Then note the targeting mixes three kinds: Amman as a Meta city with no radius, the whole Zarqa governorate, and an 8 km (5 mi) pin at Irbid (1.2 km from GeoNames' Irbid). Statable in one sentence, but the three costs compare different kinds of area."
+ ],
+ "pilots": [
+  "embed-pilot-jordan (2 days, $109)"
+ ]
+}

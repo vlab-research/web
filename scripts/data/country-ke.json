@@ -1,0 +1,129 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants). In the Kenya study the quota rule is answering the LAST question of the baseline survey, so a qualified respondent there is a completer.",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+  },
+  "terms": {
+   "radius_area": "a pin Meta lets an advertiser drop on the map, with a radius of 1-80 km (Marketing API custom_locations). 'Inside the radius areas' and 'outside them' are the two sides of that line. Never 'circles' (too plain, per Nandan) and never urban/rural (official definitions vary; the targeting rarely matches them)",
+   "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions",
+   "whole_country": "ads shown to people Meta places anywhere in the country (Marketing API geo_locations.countries)"
+  },
+  "queries": "countries/KE/build.py (read-only SELECTs; --fetch re-pulls)"
+ },
+ "country": "KE",
+ "status": "STILL FIELDING at pull time: recruitment end_date 2026-09-25; report pulled 2026-09-24 12:39 UTC. Re-pull after it closes.",
+ "all_people_surveyed": {
+  "unique_people": 19006,
+  "first": "2024-08-27",
+  "last": "2026-09-24",
+  "studies": 8,
+  "note": "Anyone who answered in any Kenya study on the current platform (distinct inference_data user_id); includes test entries before ads began"
+ },
+ "study": {
+  "slug": "girl-effect",
+  "phase": "second recruitment phase, from 2026-07-16; the report's lifetime_spent starts there",
+  "fielded": "16 Jul – 24 Sep 2026",
+  "ad_days": 51,
+  "ad_pause": "20 Aug – 9 Sep 2026 (no spend)",
+  "started_survey": 6900,
+  "qualified": 3636,
+  "spend": 21649.02,
+  "cost": 5.95,
+  "cpm_usd": 0.66,
+  "channel": "Messenger",
+  "incentive": "prepaid mobile credit, 'up to 300 KSh' per the welcome message; recruitment conf incentive_per_respondent = 0.69 (USD)",
+  "quota_rule": "arrived through the men's or women's ad set and answered gnormi_phone, the last question of the baseline survey (a gender-norms item about a household's one phone, NOT a phone-number question)",
+  "quotas": "Gender (men, women), ages 18–30, whole country; quota 50/50 from 17 Aug (women 99% to 29 Jul, 80% to 6 Aug, 60% to 17 Aug)",
+  "target_max_sample": 12000
+ },
+ "by_gender": {
+  "Men": {
+   "spend": 11841.29,
+   "insights_spend": 11841.29,
+   "qualified": 2162,
+   "cost": 5.48,
+   "entered_survey": 3376,
+   "reached_last_question_pct": 64,
+   "median_minutes_to_last_question": 16.3,
+   "ad_days": 38
+  },
+  "Women": {
+   "spend": 9807.73,
+   "insights_spend": 9807.73,
+   "qualified": 1474,
+   "cost": 6.65,
+   "entered_survey": 3452,
+   "reached_last_question_pct": 43,
+   "median_minutes_to_last_question": 19.0,
+   "ad_days": 46
+  }
+ },
+ "strata": [
+  {
+   "id": "gender:men,location:geography",
+   "current_participants": null,
+   "lifetime_spent": 0.09,
+   "current_price_per_participant": null
+  },
+  {
+   "id": "gender:men,location:location",
+   "current_participants": 2162,
+   "lifetime_spent": 11841.289999999999,
+   "current_price_per_participant": 5.24
+  },
+  {
+   "id": "gender:women,location:geography",
+   "current_participants": null,
+   "lifetime_spent": 8.11,
+   "current_price_per_participant": null
+  },
+  {
+   "id": "gender:women,location:location",
+   "current_participants": 1474,
+   "lifetime_spent": 9807.730000000001,
+   "current_price_per_participant": 7.95
+  }
+ ],
+ "checks": [
+  "report lifetime_spent per active group equals Insights spend since 2026-07-16 to the cent: men 11841.29 / 11841.29, women 9807.73 / 9807.73",
+  "two retired ad sets (location:geography) carry $8.20 in the report and no Insights spend after 16 Jul; left out of the total",
+  "CPM $0.66: a USD account",
+  "no campaign shared with another study",
+  "prior respondents excluded by custom audience, so phase 2 recruits new people",
+  "phase 1 (2026-05-20 – 2026-07-07, $2574.32 Insights) is not in the report's lifetime and is left out"
+ ],
+ "excluded_for_review": {
+  "report_does_not_cover_it": [
+   "girl-effect, phase 1 (20 May – 7 Jul 2026, $2,574 Insights, 90–99% women quota while the budget was tested): the report's lifetime_spent restarts at the 16 Jul start_date, so this spend cannot be reconciled per group"
+  ],
+  "targeting_not_statable_and_not_explained": [
+   "shujaaz-free2choose-digital-evaluation (4 May – 14 Jul 2025, 52 ad days, $2,728 Insights / $2,721 report, 2,713 qualified, $1.00 each): passes rules 1–6 but fails 7 and 8. Five ad sets are a brand's audience personas, each a different age band (18 only, 18–21, 22–24) and gender with stacks of Meta interests (some irrelevant, e.g. US alumni associations); one excludes 10 Meta cities at 10 mi, one excludes Nairobi at 15 mi, none targets inside them. Quotas switched on and off six times. Qualification is by the survey's own persona classification, not by ad set, so per-group costs run $0.07 to $3.79 and mean nothing (781 'qualified' in a group whose ad set spent $51)."
+  ],
+  "under_500_or_200": [
+   "kenya-tvet-scoping-survey ($74 Insights; also report $60 of $74, no impressions recorded so CPM untestable, and $0.05 per qualified is not explainable). The only Kenya study with an inside/outside radius-area design (81 pins of 2–9 km)",
+   "girl-effect-pilot ($73)",
+   "girl-effect-pilot-2 ($37)"
+  ],
+  "under_7_ad_days": [
+   "kenya-tvet-scoping-pilot (5 days, $11)",
+   "llm-bias-kenya-pilot (4 days, $41; the Swahili groups spent $41 and qualified nobody)"
+  ],
+  "no_ad_spend": [
+   "kenya-tvet (2026): 6 groups (men/women x control/t1/t2 clusters) over 263 radius areas of 5 km (control/t1/t2 clusters), recruitment conf 1–15 Sep 2026, budget $5,000, but no spend in Insights, no report and 7 people. Either never launched or its campaign is not recorded; worth asking"
+  ]
+ },
+ "strata_note": "Stratum ids are the study's own labels; 'location:location' is the whole country. The persona labels in the excluded study are a brand's segmentation and must not be published."
+}

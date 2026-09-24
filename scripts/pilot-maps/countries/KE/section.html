@@ -1,0 +1,62 @@
+  <!-- ============================ KENYA ============================ -->
+  <section id="kenya" role="tabpanel" aria-labelledby="t-kenya" hidden>
+    <div class="eyebrow">Kenya · Recruitment cost</div>
+    <h1>What does it cost to recruit survey respondents in Kenya?</h1>
+    <p class="lede">One Virtual Lab study, from 16 July to 24 September 2026, recruited <b>3,636 qualified respondents</b> aged 18 to 30 across Kenya for <b>$21,649</b> in advertising, or <b>$5.95 each</b>. Here a qualified respondent is someone who finished the whole survey. A man cost <b>$5.48</b> and a woman <b>$6.65</b>.</p>
+
+    <div class="facts">
+      <div><b>3,636</b><span>qualified respondents, 16 Jul – 24 Sep 2026</span></div>
+      <div><b>$5.95</b><span>advertising cost per qualified respondent</span></div>
+      <div><b>51 days</b><span>of advertising</span></div>
+      <div><b>19,006</b><span>people surveyed in Kenya, Aug 2024 – Sep 2026</span></div>
+    </div>
+
+    <div class="how">
+      <div class="k">How it works · what the numbers count</div>
+      <h2>Cost per qualified respondent</h2>
+      <p>Every study sets <b>quotas</b>: how many people it needs from each group, such as women aged 30–44 in one province. A <b>qualified respondent</b> is someone who fell into one of those groups and completed the screening questions. People who started the survey but did not qualify are not counted, but the advertising that reached them is. So a study looking for a narrow group pays more per qualified respondent.</p>
+      <p><b>Advertising cost</b> is what Meta reported spending on the study's ads, in US dollars, divided by qualified respondents. It excludes the incentive paid to respondents, the survey platform and our fee.</p>
+    </div>
+
+    <h2>Women cost more because fewer finished</h2>
+    <p>The study advertised separately to men and to women aged 18 to 30, anywhere in Kenya. The ads brought slightly more women into the survey than men, 3,452 against 3,376, for less money. But 43% of the women reached the last question, against 64% of the men. So each woman who finished cost $6.65 in advertising, and each man $5.48.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Group</th><th class=n>Started</th><th class=n>Finished</th><th class=n>Qualified</th><th class=n>Ad spend</th><th class=n>Per qualified</th></tr></thead>
+      <tbody>
+        <tr><td>Men, 18–30<span class="id">gender:men,location:location</span></td><td class=n>3,376</td><td class=n>64%</td><td class=n>2,162</td><td class=n>$11,841</td><td class=n>$5.48</td></tr>
+        <tr><td>Women, 18–30<span class="id">gender:women,location:location</span></td><td class=n>3,452</td><td class=n>43%</td><td class=n>1,474</td><td class=n>$9,808</td><td class=n>$6.65</td></tr>
+        <tr><td>Both</td><td class=n></td><td class=n></td><td class=n>3,636</td><td class=n>$21,649</td><td class=n>$5.95</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cap">Started: people who entered the survey from each group's ads. Finished: the share of them who answered the survey's last question, which is what made a respondent qualified.</p>
+
+    <h2>Qualifying meant finishing the survey</h2>
+    <p>A study can count a respondent after a few screening questions, or only at the end. This one counted a respondent only when they answered the last question of a survey on young people's health, a median of 16 minutes after they began for men and 19 minutes for women. Everyone who stopped earlier was paid for in advertising and not counted, which is why the cost per qualified respondent is higher than a short screener would give.</p>
+
+    <h2>How the study was set up</h2>
+    <dl>
+      <dt>Quotas</dt><dd>Gender (men, women), ages 18–30, the whole country: 2 groups. The quotas began weighted towards women and were equal from 17 August.</dd>
+      <dt>Channel</dt><dd>Facebook and Instagram ads leading to a survey in Messenger, in English or Swahili. Incentive: prepaid mobile credit, not included in the advertising cost. People who had answered an earlier round were excluded from the ads.</dd>
+      <dt>Qualified</dt><dd>Arrived through one of the two groups' ads, and answered the survey's last question. 3,636 of the 6,900 who started did.</dd>
+    </dl>
+
+    <p class="cta">Planning a study in Kenya? Write to <b>info@vlab.digital</b>.</p>
+
+    <div class="note">
+      <h3>For review</h3>
+      <ul>
+        <li><b>Still fielding at the pull.</b> Recruitment ends 25 Sep 2026; the report was read 24 Sep, 12:39 UTC. Re-pull after it closes (<code>build.py --fetch</code>), or mark the page provisional.</li>
+        <li><b>Reconciles to the cent.</b> The report's spend per group equals Meta's reported spend since 16 Jul: $11,841.29 and $9,807.73. CPM $0.66, a US-dollar account. Two retired ad sets carry $8.20 in the report and are left out.</li>
+        <li><b>Only the second phase is shown.</b> <code>girl-effect</code> first ran 20 May – 7 Jul 2026 ($2,574, women 90–99% of the quota while the budget was tested). The report's lifetime restarts at 16 Jul, so that phase cannot be split by group.</li>
+        <li><b>The quota variable <code>gnormi_phone</code> is not a phone number.</b> It is the survey's last question, a gender-norms item about a household's one phone. So "qualified" here means finished, unlike the Indonesia and Nigeria pages. The page says so; check the wording.</li>
+        <li><b>The quotas moved</b> (women 99% to 29 Jul, 80% to 6 Aug, 60% to 17 Aug, then 50%), and the women's ads ran 46 days against the men's 38. Checked by period (Meta spend per day ÷ finishers by entry date, approximate): before 17 Aug, men $3.09 and women $5.24; after, $6.71 and $8.35. The gap holds; both rose as the budget grew.</li>
+        <li><b>Incentive:</b> the welcome message offers "up to 300 KSh" of credit; the study config records $0.69 per respondent. Not stated as a figure on the page.</li>
+        <li><b>Why the dropout gap</b> (43% against 64%) is not known: screen-outs (under 18, no WhatsApp) and quitting are not separated here.</li>
+        <li><b>No map and no radius-area module:</b> the targeting was the whole country, so there is nothing to draw.</li>
+        <li><b>Left out</b>, reasons in <code>country-ke.json</code>: <code>shujaaz-free2choose-digital-evaluation</code> (2025, $2,728, 2,713 qualified, $1.00 each; it passes the mechanical rules, but its five ad sets are a brand's audience personas built from stacks of Meta interests, and people qualified by the survey's persona classification rather than by ad set, so group costs of $0.07–$3.79 mean nothing. One persona excluded 10 cities at 10 mi, one excluded Nairobi at 15 mi, and none targeted inside them, so there is no inside/outside comparison). Also out: <code>kenya-tvet-scoping-survey</code>, the only inside/outside radius-area design (81 pins, $74); the two <code>girl-effect-pilot</code>s and <code>llm-bias-kenya-pilot</code> (under $500 or 7 days); <code>kenya-tvet-scoping-pilot</code>.</li>
+        <li><b>Worth asking:</b> <code>kenya-tvet</code> (2026) has 263 radius areas of 5 km in three clusters (control, t1, t2), a $5,000 budget for 1–15 Sep, and no recorded spend, report or respondents (7 people).</li>
+        <li>19,006 counts anyone in any Kenya study on the current platform, including test entries before ads began (first ad: 23 Sep 2024).</li>
+        <li>Study IDs appear in grey for review only.</li>
+      </ul>
+    </div>
+  </section>

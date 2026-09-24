@@ -1,0 +1,365 @@
+{
+ "_meta": {
+  "generated": "2026-09-24",
+  "status": "PILOT - D-032 recipe. Not registered in CLAIMS.md, not on the site.",
+  "rules": [
+   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
+   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
+   "Ads ran at least 7 days",
+   "At least $500 of advertising and at least 200 qualified respondents",
+   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
+  ],
+  "definitions": {
+   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
+   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+  },
+  "terms": {
+   "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
+   "radius_area": "a pin Meta lets an advertiser drop on the map, with a radius of 1-80 km (Marketing API custom_locations). 'Inside the radius areas' and 'outside them' are the two sides of that line. Never 'circles' (too plain, per Nandan) and never urban/rural (official definitions vary; the targeting rarely matches them)",
+   "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions"
+  },
+  "queries": "scripts/data/country-queries.sql"
+ },
+ "country": "PK",
+ "study": {
+  "slug": "pakistan-hpv-pannel",
+  "study_id": "361859fc-8d49-46df-bfe7-500f939a5577",
+  "design": "wave 1 (the recruitment wave) of a two-wave panel survey, 'Pakistan HPV Panel Measurement'; wave 2 re-contacted respondents from Oct 2025 without ads and is not part of this",
+  "fielded": "28 Aug – 13 Sep 2025",
+  "ad_days": 15,
+  "ad_days_note": "spend on 15 of the 17 calendar days 28 Aug–13 Sep; none on 2 Sep and 9 Sep",
+  "started_survey": 11078,
+  "qualified": 3053,
+  "spend": 4444.25,
+  "report_spend": 4444.25,
+  "cost": 1.46,
+  "incentive_usd": 1.0,
+  "channel": "Messenger (Urdu)",
+  "cpm_usd": 0.73,
+  "eligibility": "cares for at least one girl aged 9–17 (screened in the survey; others are ended)",
+  "quota_rule": "in a place × gender group (from the ad clicked) and answered the education question, the last question of the wave-1 survey",
+  "quotas": "Place (7 sets of radius areas: 4 in Karachi, Hyderabad, around Sukkur, around Larkana) × Gender: 14 groups. Target shares 9.8% per men's group, 4.2% per women's group",
+  "ages": "Meta targeting: women 23–49, men 25–60",
+  "target_max_sample": 4160,
+  "report_created": "2025-09-13 22:31:21.03891+00"
+ },
+ "by_location": {
+  "Hyderabad": {
+   "spend": 411.48,
+   "qualified": 515,
+   "cost": 0.8,
+   "radius_areas": 33,
+   "radius_km": [
+    1.0
+   ],
+   "union_area_km2": 80.0
+  },
+  "Karachi": {
+   "spend": 2198.83,
+   "qualified": 1847,
+   "cost": 1.19,
+   "radius_areas": 181,
+   "radius_km": [
+    1.0,
+    4.0
+   ],
+   "union_area_km2": 1297.8
+  },
+  "Around Sukkur": {
+   "spend": 803.03,
+   "qualified": 363,
+   "cost": 2.21,
+   "radius_areas": 15,
+   "radius_km": [
+    5.0
+   ],
+   "union_area_km2": 969.5
+  },
+  "Around Larkana": {
+   "spend": 1030.91,
+   "qualified": 328,
+   "cost": 3.14,
+   "radius_areas": 36,
+   "radius_km": [
+    5.0
+   ],
+   "union_area_km2": 1779.3
+  }
+ },
+ "by_location_and_gender": {
+  "Hyderabad, Women": {
+   "spend": 114.85,
+   "qualified": 161,
+   "cost": 0.71
+  },
+  "Hyderabad, Men": {
+   "spend": 296.63,
+   "qualified": 354,
+   "cost": 0.84
+  },
+  "Karachi, Women": {
+   "spend": 542.04,
+   "qualified": 529,
+   "cost": 1.02
+  },
+  "Karachi, Men": {
+   "spend": 1656.79,
+   "qualified": 1318,
+   "cost": 1.26
+  },
+  "Around Sukkur, Women": {
+   "spend": 287.72,
+   "qualified": 91,
+   "cost": 3.16
+  },
+  "Around Sukkur, Men": {
+   "spend": 515.31,
+   "qualified": 272,
+   "cost": 1.89
+  },
+  "Around Larkana, Women": {
+   "spend": 417.19,
+   "qualified": 69,
+   "cost": 6.05
+  },
+  "Around Larkana, Men": {
+   "spend": 613.72,
+   "qualified": 259,
+   "cost": 2.37
+  }
+ },
+ "by_gender": {
+  "Women": {
+   "spend": 1361.8,
+   "qualified": 850,
+   "cost": 1.6,
+   "ages": "23–49"
+  },
+  "Men": {
+   "spend": 3082.45,
+   "qualified": 2203,
+   "cost": 1.4,
+   "ages": "25–60"
+  }
+ },
+ "strata": [
+  {
+   "id": "District:Central,Gender:Men",
+   "current_participants": 316,
+   "lifetime_spent": 385.74,
+   "current_price_per_participant": 1.51
+  },
+  {
+   "id": "District:Central,Gender:Women",
+   "current_participants": 147,
+   "lifetime_spent": 138.25,
+   "current_price_per_participant": 1.27
+  },
+  {
+   "id": "District:East,Gender:Men",
+   "current_participants": 344,
+   "lifetime_spent": 379.4,
+   "current_price_per_participant": 1.32
+  },
+  {
+   "id": "District:East,Gender:Women",
+   "current_participants": 125,
+   "lifetime_spent": 124.34,
+   "current_price_per_participant": 3.0
+  },
+  {
+   "id": "District:Hyderabad,Gender:Men",
+   "current_participants": 354,
+   "lifetime_spent": 296.63,
+   "current_price_per_participant": 1.4
+  },
+  {
+   "id": "District:Hyderabad,Gender:Women",
+   "current_participants": 161,
+   "lifetime_spent": 114.85,
+   "current_price_per_participant": 1.22
+  },
+  {
+   "id": "District:Larkana,Gender:Men",
+   "current_participants": 259,
+   "lifetime_spent": 613.72,
+   "current_price_per_participant": 2.14
+  },
+  {
+   "id": "District:Larkana,Gender:Women",
+   "current_participants": 69,
+   "lifetime_spent": 417.19,
+   "current_price_per_participant": 5.42
+  },
+  {
+   "id": "District:Malir,Gender:Men",
+   "current_participants": 352,
+   "lifetime_spent": 389.21,
+   "current_price_per_participant": 1.67
+  },
+  {
+   "id": "District:Malir,Gender:Women",
+   "current_participants": 123,
+   "lifetime_spent": 124.23,
+   "current_price_per_participant": 3.0
+  },
+  {
+   "id": "District:Sukkar,Gender:Men",
+   "current_participants": 272,
+   "lifetime_spent": 515.31,
+   "current_price_per_participant": 2.11
+  },
+  {
+   "id": "District:Sukkar,Gender:Women",
+   "current_participants": 91,
+   "lifetime_spent": 287.72,
+   "current_price_per_participant": 3.8
+  },
+  {
+   "id": "District:West,Gender:Men",
+   "current_participants": 306,
+   "lifetime_spent": 502.44,
+   "current_price_per_participant": 1.55
+  },
+  {
+   "id": "District:West,Gender:Women",
+   "current_participants": 134,
+   "lifetime_spent": 155.22,
+   "current_price_per_participant": 3.0
+  }
+ ],
+ "radius_areas": {
+  "total": 265,
+  "distinct_pins": 265,
+  "share_of_sindh_pct": 2.9,
+  "per_set": {
+   "Hyderabad": {
+    "radius_areas": 33,
+    "radius_km": [
+     1.0
+    ]
+   },
+   "Central": {
+    "radius_areas": 50,
+    "radius_km": [
+     1.0
+    ]
+   },
+   "East": {
+    "radius_areas": 62,
+    "radius_km": [
+     1.0
+    ]
+   },
+   "West": {
+    "radius_areas": 36,
+    "radius_km": [
+     1.0
+    ]
+   },
+   "Malir": {
+    "radius_areas": 33,
+    "radius_km": [
+     4.0
+    ]
+   },
+   "Sukkar": {
+    "radius_areas": 15,
+    "radius_km": [
+     5.0
+    ]
+   },
+   "Larkana": {
+    "radius_areas": 36,
+    "radius_km": [
+     5.0
+    ]
+   }
+  },
+  "karachi_set_overlaps_km2": {
+   "Central & East": 8.4,
+   "Central & West": 11.9,
+   "East & West": 7.6,
+   "East & Malir": 14.7,
+   "West & Malir": 11.0
+  },
+  "named_pins": {
+   "Hyderabad": {
+    "(no named place within 5 km)": 12,
+    "Hyderabad": 19,
+    "Kotri": 1,
+    "Tando Jam": 1
+   },
+   "Karachi": {
+    "Karachi": 31,
+    "Pakistan Employees Cooperative Housing Society": 25,
+    "(no named place within 5 km)": 99,
+    "Karachi University Employees Co-operative Housing Society": 21,
+    "Malir Cantonment": 5
+   },
+   "Around Sukkur": {
+    "(no named place within 5 km)": 8,
+    "Sukkur": 4,
+    "Bagarji": 2,
+    "Pano Aqil": 1
+   },
+   "Around Larkana": {
+    "(no named place within 5 km)": 18,
+    "New Badah": 2,
+    "Dokri": 2,
+    "Goth Garelo": 1,
+    "Goth Faridabad": 1,
+    "Larkana": 9,
+    "Naudero": 2,
+    "Ratodero": 1
+   }
+  }
+ },
+ "country_totals": {
+  "people_surveyed": 17983,
+  "span": "27 Apr 2024 – 13 Sep 2025",
+  "definition": "distinct inference_data.user_id across the 4 current-platform Pakistan studies; includes a handful of team test accounts (about 25 ids also appear in studies in other countries, each once)",
+  "note": "coverage.json (Aug 2026) gives PK 18,830; the difference is presumably older-platform respondents, not checked"
+ },
+ "checks": [
+  "per-group spend sums to $4,444.25, exactly Meta's reported spend (recruitment_data_events)",
+  "CPM $0.73: a US-dollar account",
+  "targeting identical in all three saved strata configs (27 Aug, 3 Sep, 10 Sep 2025); the first was saved the day before ads started",
+  "2 test entries before ads (21 and 27 Aug, no ad metadata); every other respondent arrived during the ad window",
+  "10,947 of 11,080 people were new to Virtual Lab; 133 had been in pakistan-hpv-bil-survey-july-2025 (a different survey, July 2025) and came back through these ads",
+  "report counts match inference_data within 2 per group (report of 13 Sep 22:31; last data 13 Sep 20:44)",
+  "pins land on the cities and towns their labels name (nearest Natural Earth / GeoNames places); district boundaries NOT checked, since no reliable polygons for Karachi's districts were at hand. The Sukkur set spreads 58 km, toward Pano Aqil and south of Khairpur Mir's. 4 Karachi pins sit just off Natural Earth's coastline (Korangi coast), a boundary artefact"
+ ],
+ "strata_note": "Stratum ids label the four Karachi sets as districts (Central, East, West, Malir). The 1 km sets overlap each other and the 4 km 'Malir' set (overlaps above), and cross district lines, so the page pools them as Karachi. 'Sukkar' is the study's spelling of Sukkur.",
+ "excluded_for_review": [
+  {
+   "slug": "pakistan-hpv-bil-survey-july-2025",
+   "reasons": [
+    "$315.68 of ads, under $500",
+    "report accounts for $286.50 of $315.68 (91%)"
+   ],
+   "note": "Whole provinces (Punjab, Sindh, KP, Balochistan, ICT) × gender, 9–15 Jul 2025, 1,506 qualified for $0.19 each in the report. The only province-vs-province comparison in Pakistan; would be worth a page if the $500 rule were relaxed. Qualification rule differs from the panel's."
+  },
+  {
+   "slug": "pgp-polio-pakistan",
+   "reasons": [
+    "6 ad days",
+    "$334.75 of ads, under $500",
+    "targeting not as stated: the 'urban' groups target Meta city 1796084 Islamabad (ICT) but the 'rural' groups exclude a different key, 1796082 Islamabad (Punjab), so Islamabad is in both; 'Kotli' is listed under Islamabad Capital Territory"
+   ],
+   "note": "Inside 14 city radius areas of 25 mi vs the rest of Pakistan, 27 Apr – 2 May 2024. Different ad account (1342820622846299)."
+  },
+  {
+   "slug": "pgp-polio-pakistan-x-section",
+   "reasons": [
+    "3 ad days",
+    "$251.64 of ads",
+    "same survey as pgp-polio-pakistan a month later; 714 of its 1,288 people are that study's respondents"
+   ],
+   "note": "25–27 May 2024."
+  }
+ ]
+}
