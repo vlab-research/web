@@ -1325,6 +1325,41 @@ by DNS TXT (§5.5), which is server-side and does not touch this entry.
 
 ---
 
+### D-032 — Inbound: turn the database into answers, piloted on two country pages
+**Status:** SETTLED 2026-09-23 (the pilot only) · Owner: Nandan · Working: `notes/ws-inbound.md`
+
+**Nandan, 2026-09-23:** the goal is *"converting our data into something valuable for the
+world. Something that people would really ask."* The lead question is cost — *"It's
+different per country, and we can answer it per country, which is great for SEO."* Country
+pages should work for AI answer engines as well as search, and a handbook on recruiting
+online is wanted too.
+
+**Three things are settled.**
+
+1. **Pilot two country pages first: Nigeria and Bolivia.** One many-study country and one
+   one-study country, so the page is tested at both ends. *"Then we see how those look. We
+   take a look at everything and decide what to build from there."* The pages are built at
+   `/countries/nigeria/` and `/countries/bolivia/`, unlinked and outside the sitemap, and
+   **are not deployed until Nandan has reviewed them** — pushing `master` deploys production.
+2. **Client confidentiality is not a constraint on this work.** *"I have no reason to
+   believe that my clients are overly concerned about people learning about things from
+   their study."* This lifts the per-study **disclosure check** in `CLAIMS.md` for study
+   figures such as sample size, field time, cost and strata. **It does not lift hard rule 4
+   or D-014:** naming a client and showing a client's logo are separate questions, and
+   both still stand.
+3. **Conferences are a separate path** and are not part of this decision.
+
+**What is not settled, and belongs to the review after the pilot:** which countries follow,
+whether both page templates survive, where the handbook lives (`ws-inbound.md` §3), whether
+`/data/` ships, and **whether any of it is reached from the homepage. That last one is a
+D-007 question.** The pilot pages are the evidence for it; building them does not decide it.
+
+**Unchanged:** every figure on a country page needs a `VERIFIED` `CLAIMS.md` row, as a
+`Definition` row, because these are figures from our own operating record. D-023 still
+applies — a country page compares us with nobody.
+
+---
+
 ## Open
 
 Nobody may resolve these except the user. Recommendations are recorded so the

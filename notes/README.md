@@ -38,6 +38,7 @@ disagreed rather than averaging them.
 | `ws-designs.md` | Whether there is a surface for study designs, and how it relates to Studies — **briefly settled as D-026 and demoted the same day** |
 | `ws-privacy-reconciliation.md` | The privacy policy read clause by clause against the capability register — the gate D-024 set on two sections of the instrument page |
 | `ws-seo.md` | What one page can and cannot win in search, and where the budget goes instead |
+| `ws-inbound.md` | The content map for inbound; what the production database can answer, and the traps in it; the Nigeria + Bolivia pilot (D-032) |
 
 ## Several are already superseded — check the date before trusting a recommendation
 

@@ -162,6 +162,11 @@ be worth more than everything else in §5 combined.
 
 ### 4.3 · Latin America is not supportable, and the brief should change
 
+> **Out of date as of 2026-09-23.** Argentina, Bolivia and Honduras have had current-platform
+> studies since August 2026, and none of them is in `coverage.json`. So South America now has
+> data, though very little of it. See `ws-inbound.md` §5.3, trap 7. The analysis below
+> reflects the data as of August.
+
 The brief asked for **Africa, South Asia and Latin America**. The register supports two of
 the three. Region totals, computed from `scripts/data/coverage.json`:
 

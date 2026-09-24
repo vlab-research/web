@@ -300,6 +300,23 @@ regex over comment blocks and it swallowed the **held reallocations figure** —
 a comment. **The whole rebuild is uncommitted**, so git could not recover it; it was rewritten
 from the session. Commit before running a sweeping edit over this file.
 
+### Inbound content — the next job, 2026-09-23 (D-032)
+
+**The site is to grow data pages that answer the questions researchers actually search for**,
+starting with *what does it cost to recruit in [country]?* **The next step is a pilot of two
+country pages, Nigeria and Bolivia**, built unlinked and **not deployed until Nandan has
+reviewed them**. After that review he decides what else to build. `notes/ws-inbound.md` is the
+full working: the content map, the AI-readability rules, what the database can answer, the
+queries and the pilot steps. **Read its §5.3 before querying anything.** There are seven traps
+in the production data, and each one has already produced a wrong number: spend recorded in
+local currency (naira, rupees), spend double-counted across shared campaigns, respondents
+double-counted across umbrella studies, test studies, zero-spend studies, country averages,
+and a stale `coverage.json`.
+
+**Two standing permissions came with it.** Read-only production queries are granted
+(recorded in `CLAIMS.md`), and the per-study confidentiality check is lifted (D-032). Naming
+clients and showing their logos are **not** covered by that lift.
+
 ### Analytics — self-hosted Umami, 2026-09-23 (D-009)
 
 **Where to look:** `https://analytics.vlab.digital`. The admin login is in the gitignored

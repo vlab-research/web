@@ -1101,6 +1101,9 @@ kubectl exec -n vprod gbv-cockroachdb-0 -- ./cockroach sql --insecure --database
 
 Databases: `chatroach` (older platform, holds all response data) and `vlab` (current
 platform, holds studies and configs). Coordinate with the user before every run.
+**Nandan granted standing read-only access on 2026-09-23** ("full permission to access the
+cluster and make read-only production queries"). Read-only is the whole of it. The schema, the
+queries and seven traps that each put a wrong number on a page are in `notes/ws-inbound.md` §5.
 
 - **C-010, C-015, C-016, C-018** — `SELECT count(*), count(DISTINCT userid), min(timestamp), max(timestamp) FROM responses;` in `chatroach`, and `count(DISTINCT userid) FROM states` for reach.
 - **C-017** — extract `"country"`/`"countries"` codes from `vlab.study_confs.conf` and `chatroach.campaign_confs.conf` with `regexp_extract(conf::string, '"countr(?:y|ies)":\s*\[?\s*"([A-Z]{2})"')`, then union. First-match-per-row, so it undercounts multi-country studies — 41 is a floor.
@@ -1124,8 +1127,10 @@ platform, holds studies and configs). Coordinate with the user before every run.
   distinct counts in their own query.
 - **Per-country respondents** — join `vlab.inference_data` (distinct `user_id` per `study_id`) to the country extracted per study.
 
-**C-040, C-041 — study-level figures.** Same access. Disclosure check still applies.
+**C-040, C-041 — study-level figures.** Same access. The disclosure check was lifted by D-032; see below.
 
-**Disclosure check before publishing any study-level figure:** sample sizes and field
-timings for a named client may be covered by that engagement's confidentiality terms.
-Verify per study; a figure being technically available is not permission to publish it.
+**~~Disclosure check before publishing any study-level figure~~ — lifted 2026-09-23 by
+D-032.** Nandan: *"I have no reason to believe that my clients are overly concerned about
+people learning about things from their study."* Study figures (sample size, field time,
+cost, strata) no longer need clearing study by study. **Naming the client is a separate
+question and is not lifted:** hard rule 4 and D-014 still apply.
