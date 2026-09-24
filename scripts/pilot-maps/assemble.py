@@ -2,12 +2,16 @@
 import re,os,glob
 SP=os.path.dirname(os.path.abspath(__file__)); C=SP+'/countries'
 t=open(SP+'/country-pilot.tpl.html').read()
+ng=C+'/NG/section.html'
+if os.path.exists(ng) and '<section id="nigeria"' in open(ng).read():
+    i=t.index('  <!-- ============================ NIGERIA'); j=t.index('  <!-- ============================ INDONESIA')
+    t=t[:i]+open(ng).read()+'\n'+t[j:]
 for k,f in [("NG2023","nigeria-2023-states.svg"),("ID","indonesia.svg"),("BO","bolivia.svg")]:
     t=t.replace("{{"+k+"}}",open(SP+'/geo/out/'+f).read())
 extra=[C+'/BD/section.html',C+'/PK/section.html',C+'/KE/section.html',C+'/US/section.html']+sorted(glob.glob(C+'/MENA/section-*.html'))
 secs=[open(f).read() for f in extra if os.path.exists(f)]
 t=t.replace('{{EXTRA_SECTIONS}}','\n'.join(secs))
-for k,f in [('KE','countries/KE/kenya-places.svg')]:
+for k,f in [('KE','countries/KE/kenya-places.svg'),('NGST','countries/NG/nigeria-states.svg'),('NGRA','countries/NG/nigeria-radius.svg')]:
     if os.path.exists(SP+'/'+f): t=t.replace('{{'+k+'}}',open(SP+'/'+f).read())
 order=['nigeria','bangladesh','pakistan','indonesia','kenya','united-states','iraq','jordan','egypt','saudi-arabia','morocco','bolivia','rules']
 names={'united-states':'United States','saudi-arabia':'Saudi Arabia'}

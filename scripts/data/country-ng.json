@@ -1,26 +1,27 @@
 {
  "_meta": {
   "generated": "2026-09-24",
-  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site.",
-  "rules": [
-   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
-   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
-   "Ads ran at least 7 days",
-   "At least $500 of advertising and at least 200 qualified respondents",
-   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
-   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
-   "The targeting can be stated in a sentence, and it did what it said",
-   "The result can be explained"
+  "status": "PILOT v6 - D-032 place page. Not registered in CLAIMS.md, not on the site.",
+  "method": "Every stratum of every cleaned Nigeria recruitment is evidence about a place (a Meta targeting geometry). Places pool across recruitments: spend summed, people summed, never ratios averaged. People are assigned to a place by the ad-set metadata written at their first message (inference_data variables with location 'metadata'; where sibling studies shared stratum labels, by the Fly 'creative' recorded on their first response and the ad set that was spending that day).",
+  "cleaning_rules": [
+   "USD ad account (account 2976439342687286 is naira: excluded)",
+   "spend from Insights per ad set (campaigns shared inside a family counted once, attributed by the study's final campaign name)",
+   "people recruited by ads: first message inside the ad set's spend window (1 day before to 3 after) and carrying ad metadata",
+   "sibling studies de-duplicated: each person once per recruitment",
+   "pins and regions checked against GeoNames/Natural Earth; the Kirfi 'place' (67 km off) is out",
+   "qualifying rule = the recruitment's final question_targeting, recounted from inference_data"
   ],
+  "thresholds": "places shown with at least 50 people who started; under 200 flagged",
   "definitions": {
-   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
-   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+   "started": "a person whose first message in the survey carried the ad metadata of an ad set targeting this place, during that ad set's run",
+   "qualified": "a person who started and then answered the recruitment's final quota-rule question (its question_targeting 'answered' variable)",
+   "cost_per_starter": "Insights spend / people who started",
+   "cost_per_qualified": "Insights spend / qualified people, pooled only within one questionnaire"
   },
-  "queries": "scripts/data/country-queries.sql",
   "terms": {
    "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
-   "radius_area": "a pin Meta lets an advertiser drop on the map, with a radius of 1-80 km (Marketing API custom_locations). 'Inside the radius areas' and 'outside them' are the two sides of that line. Never 'circles' (too plain, per Nandan) and never urban/rural (official definitions vary; the targeting rarely matches them)",
-   "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions"
+   "radius_area": "a pin or Meta city plus a radius; 'inside the radius areas' and 'outside them' are the two sides",
+   "recruitment": "one round of ads filling one set of quotas; sibling studies that fed one survey are one recruitment"
   }
  },
  "country": "NG",
@@ -29,163 +30,2628 @@
   "first": "2023-08-12",
   "last": "2026-09-10",
   "studies": 49,
-  "note": "Anyone who answered in any Nigeria study on the current platform"
+  "note": "Anyone who answered in any Nigeria study on the current platform (distinct inference_data user_id over studies with country NG). Unchanged from v4."
  },
- "cost_per_qualified_respondent": {
-  "recruitments": 3,
-  "note": "range across places, not recruitments: $0.52 (Lagos 2023) to $51.30 (Yola–Jimeta radius areas 2024)"
+ "totals": {
+  "places_shown": 36,
+  "recruitments": 22,
+  "spend": 104066.06,
+  "people_started": 50188,
+  "first_day": "2023-08-15",
+  "last_day": "2026-08-20",
+  "note": "people who started in two recruitments are counted in each"
  },
- "recruitments": [
+ "places": [
   {
-   "label": "Six states, whole-state targeting",
-   "fielded": "12 Aug – 11 Sep 2023",
-   "studies": [
-    "nigeria-hpv-config-8-1",
-    "nigeria-final-hpv-august-23"
+   "name": "Nigeria outside the 6 South-West states",
+   "kind": "country",
+   "spend": 516.01,
+   "starters": 1263,
+   "cost_per_starter": 0.41,
+   "first_day": "2025-12-12",
+   "last_day": "2025-12-23",
+   "ad_days": 12,
+   "recruitments": 1,
+   "families": [
+    "2025-dec-hpvv"
    ],
-   "ad_days": 22,
-   "spend": 2955.42,
-   "qualified": 1180,
-   "quotas": "Gender × State (6 states)",
-   "note": "Two consecutive ad runs for one survey",
-   "cost": 2.5
+   "studies": [
+    "hpv-nigeria-pilot"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-dec-hpvv",
+     "who": "a parent or caregiver who finished a 55-question survey and gave a number for payment (ads to ages 27–65)",
+     "spend": 516.01,
+     "starters": 1263,
+     "qualified": 298,
+     "cost_per_qualified": 1.73
+    }
+   ],
+   "by_recruitment": {
+    "2025-dec-hpvv": {
+     "spend": 516.01,
+     "starters": 1263,
+     "qualified": 298
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 1326,
+   "starters_where_conversations_recorded": 1263,
+   "thin": false,
+   "shown": true
   },
   {
-   "label": "Abuja, Keffi, Lafia, Yola–Jimeta: 130 radius areas of 2–4 km",
-   "fielded": "12–25 Oct 2024",
+   "name": "Nigeria, whole country",
+   "kind": "country",
+   "spend": 608.75,
+   "starters": 1159,
+   "cost_per_starter": 0.53,
+   "first_day": "2025-06-09",
+   "last_day": "2026-08-07",
+   "ad_days": 24,
+   "recruitments": 3,
+   "families": [
+    "2025-country-llm",
+    "2026-mentality",
+    "2026-owis"
+   ],
+   "studies": [
+    "llm-bias-nigeria-pilot",
+    "mentality-pilot",
+    "owis-nigeria-study"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-country-llm",
+     "who": "any adult who finished a 53-question survey and gave a number for payment",
+     "spend": 142.51,
+     "starters": 431,
+     "qualified": 247,
+     "cost_per_qualified": 0.58
+    },
+    {
+     "instrument": "2026-mentality",
+     "who": "an adult who reached question 38 of a 48-question follow-up (ads to ages 18–65)",
+     "spend": 20.27,
+     "starters": 414,
+     "qualified": 276,
+     "cost_per_qualified": 0.07
+    },
+    {
+     "instrument": "2026-owis",
+     "who": "a parent or caregiver who answered all 55 questions (ads to ages 36–65)",
+     "spend": 445.97,
+     "starters": 314,
+     "qualified": 38,
+     "cost_per_qualified": 11.74
+    }
+   ],
+   "by_recruitment": {
+    "2025-country-llm": {
+     "spend": 142.51,
+     "starters": 431,
+     "qualified": 247
+    },
+    "2026-mentality": {
+     "spend": 20.27,
+     "starters": 414,
+     "qualified": 276
+    },
+    "2026-owis": {
+     "spend": 445.97,
+     "starters": 314,
+     "qualified": 38
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.73,
+   "meta_conversations": 854,
+   "starters_where_conversations_recorded": 845,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "South-South: 6 states together",
+   "kind": "group",
+   "spend": 890.45,
+   "starters": 1495,
+   "cost_per_starter": 0.6,
+   "first_day": "2026-01-16",
+   "last_day": "2026-08-20",
+   "ad_days": 14,
+   "recruitments": 2,
+   "families": [
+    "2026-ecd",
+    "2026-jan-mr"
+   ],
+   "studies": [
+    "ecd-diagnostic",
+    "nigeria-mr-campaign"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-ecd",
+     "who": "an adult who answered all 131 questions (ads to ages 25–65)",
+     "spend": 102.4,
+     "starters": 711,
+     "qualified": 202,
+     "cost_per_qualified": 0.51
+    },
+    {
+     "instrument": "2026-jan-mr",
+     "who": "a parent or caregiver of a child aged 6–14 who answered 41 of 42 questions (ads to ages 18–55)",
+     "spend": 788.05,
+     "starters": 784,
+     "qualified": 434,
+     "cost_per_qualified": 1.82
+    }
+   ],
+   "by_recruitment": {
+    "2026-ecd": {
+     "spend": 102.4,
+     "starters": 711,
+     "qualified": 202
+    },
+    "2026-jan-mr": {
+     "spend": 788.05,
+     "starters": 784,
+     "qualified": 434
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.89,
+   "meta_conversations": 1491,
+   "starters_where_conversations_recorded": 1495,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "FCT, Ogun, Oyo, Anambra, Edo and Rivers together",
+   "kind": "group",
+   "spend": 4403.35,
+   "starters": 1277,
+   "cost_per_starter": 3.45,
+   "first_day": "2026-04-13",
+   "last_day": "2026-08-07",
+   "ad_days": 31,
+   "recruitments": 2,
+   "families": [
+    "2026-apr-nstudy",
+    "2026-owis"
+   ],
+   "studies": [
+    "nigeria-study",
+    "owis-nigeria-study"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-apr-nstudy",
+     "who": "a parent or caregiver who answered all 55 questions (ads to ages 27–65)",
+     "spend": 1641.82,
+     "starters": 765,
+     "qualified": 72,
+     "cost_per_qualified": 22.8
+    },
+    {
+     "instrument": "2026-owis",
+     "who": "a parent or caregiver who answered all 55 questions (ads to ages 36–65)",
+     "spend": 2761.53,
+     "starters": 512,
+     "qualified": 93,
+     "cost_per_qualified": 29.69
+    }
+   ],
+   "by_recruitment": {
+    "2026-apr-nstudy": {
+     "spend": 1641.82,
+     "starters": 765,
+     "qualified": 72
+    },
+    "2026-owis": {
+     "spend": 2761.53,
+     "starters": 512,
+     "qualified": 93
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.63,
+   "meta_conversations": 1237,
+   "starters_where_conversations_recorded": 765,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "South-West without Oyo: 5 states together",
+   "kind": "group",
+   "spend": 902.1,
+   "starters": 1251,
+   "cost_per_starter": 0.72,
+   "first_day": "2026-01-16",
+   "last_day": "2026-01-19",
+   "ad_days": 4,
+   "recruitments": 1,
+   "families": [
+    "2026-jan-mr"
+   ],
+   "studies": [
+    "nigeria-mr-campaign"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-jan-mr",
+     "who": "a parent or caregiver of a child aged 6–14 who answered 41 of 42 questions (ads to ages 18–55)",
+     "spend": 902.1,
+     "starters": 1251,
+     "qualified": 778,
+     "cost_per_qualified": 1.16
+    }
+   ],
+   "by_recruitment": {
+    "2026-jan-mr": {
+     "spend": 902.1,
+     "starters": 1251,
+     "qualified": 778
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 1367,
+   "starters_where_conversations_recorded": 1251,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "South-East: 5 states together",
+   "kind": "group",
+   "spend": 827.78,
+   "starters": 1049,
+   "cost_per_starter": 0.79,
+   "first_day": "2026-01-16",
+   "last_day": "2026-08-20",
+   "ad_days": 14,
+   "recruitments": 2,
+   "families": [
+    "2026-ecd",
+    "2026-jan-mr"
+   ],
+   "studies": [
+    "ecd-diagnostic",
+    "nigeria-mr-campaign"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-ecd",
+     "who": "an adult who answered all 131 questions (ads to ages 25–65)",
+     "spend": 105.48,
+     "starters": 602,
+     "qualified": 172,
+     "cost_per_qualified": 0.61
+    },
+    {
+     "instrument": "2026-jan-mr",
+     "who": "a parent or caregiver of a child aged 6–14 who answered 41 of 42 questions (ads to ages 18–55)",
+     "spend": 722.3,
+     "starters": 447,
+     "qualified": 240,
+     "cost_per_qualified": 3.01
+    }
+   ],
+   "by_recruitment": {
+    "2026-ecd": {
+     "spend": 105.48,
+     "starters": 602,
+     "qualified": 172
+    },
+    "2026-jan-mr": {
+     "spend": 722.3,
+     "starters": 447,
+     "qualified": 240
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.87,
+   "meta_conversations": 1039,
+   "starters_where_conversations_recorded": 1049,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "South-West: 6 states together",
+   "kind": "group",
+   "spend": 90.96,
+   "starters": 499,
+   "cost_per_starter": 0.18,
+   "first_day": "2026-08-11",
+   "last_day": "2026-08-20",
+   "ad_days": 8,
+   "recruitments": 1,
+   "families": [
+    "2026-ecd"
+   ],
+   "studies": [
+    "ecd-diagnostic"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-ecd",
+     "who": "an adult who answered all 131 questions (ads to ages 25–65)",
+     "spend": 90.96,
+     "starters": 499,
+     "qualified": 141,
+     "cost_per_qualified": 0.65
+    }
+   ],
+   "by_recruitment": {
+    "2026-ecd": {
+     "spend": 90.96,
+     "starters": 499,
+     "qualified": 141
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 359,
+   "starters_where_conversations_recorded": 499,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "North-Central with FCT: 7 together",
+   "kind": "group",
+   "spend": 18.15,
+   "starters": 299,
+   "cost_per_starter": 0.06,
+   "first_day": "2026-08-11",
+   "last_day": "2026-08-18",
+   "ad_days": 5,
+   "recruitments": 1,
+   "families": [
+    "2026-ecd"
+   ],
+   "studies": [
+    "ecd-diagnostic"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-ecd",
+     "who": "an adult who answered all 131 questions (ads to ages 25–65)",
+     "spend": 18.15,
+     "starters": 299,
+     "qualified": 83,
+     "cost_per_qualified": 0.22
+    }
+   ],
+   "by_recruitment": {
+    "2026-ecd": {
+     "spend": 18.15,
+     "starters": 299,
+     "qualified": 83
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 327,
+   "starters_where_conversations_recorded": 299,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "North-East: 6 states together",
+   "kind": "group",
+   "spend": 28.44,
+   "starters": 278,
+   "cost_per_starter": 0.1,
+   "first_day": "2026-08-11",
+   "last_day": "2026-08-15",
+   "ad_days": 5,
+   "recruitments": 1,
+   "families": [
+    "2026-ecd"
+   ],
+   "studies": [
+    "ecd-diagnostic"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-ecd",
+     "who": "an adult who answered all 131 questions (ads to ages 25–65)",
+     "spend": 28.44,
+     "starters": 278,
+     "qualified": 65,
+     "cost_per_qualified": 0.44
+    }
+   ],
+   "by_recruitment": {
+    "2026-ecd": {
+     "spend": 28.44,
+     "starters": 278,
+     "qualified": 65
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 360,
+   "starters_where_conversations_recorded": 278,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "North-West: 7 states together",
+   "kind": "group",
+   "spend": 19.09,
+   "starters": 257,
+   "cost_per_starter": 0.07,
+   "first_day": "2026-08-11",
+   "last_day": "2026-08-15",
+   "ad_days": 4,
+   "recruitments": 1,
+   "families": [
+    "2026-ecd"
+   ],
+   "studies": [
+    "ecd-diagnostic"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-ecd",
+     "who": "an adult who answered all 131 questions (ads to ages 25–65)",
+     "spend": 19.09,
+     "starters": 257,
+     "qualified": 78,
+     "cost_per_qualified": 0.24
+    }
+   ],
+   "by_recruitment": {
+    "2026-ecd": {
+     "spend": 19.09,
+     "starters": 257,
+     "qualified": 78
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 319,
+   "starters_where_conversations_recorded": 257,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "16 southern states together",
+   "kind": "group",
+   "spend": 18.03,
+   "starters": 224,
+   "cost_per_starter": 0.08,
+   "first_day": "2025-12-22",
+   "last_day": "2025-12-23",
+   "ad_days": 2,
+   "recruitments": 1,
+   "families": [
+    "2025-dec-mr-test"
+   ],
+   "studies": [
+    "nigeria-mr-test"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-dec-mr-test",
+     "who": "answered 97 of 98 questions (ads to ages 18–55)",
+     "spend": 18.03,
+     "starters": 224,
+     "qualified": 164,
+     "cost_per_qualified": 0.11
+    }
+   ],
+   "by_recruitment": {
+    "2025-dec-mr-test": {
+     "spend": 18.03,
+     "starters": 224,
+     "qualified": 164
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 218,
+   "starters_where_conversations_recorded": 224,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Abuja and Suleja: 24 radius areas of 4 km",
+   "kind": "radius",
+   "spend": 954.02,
+   "starters": 8553,
+   "cost_per_starter": 0.11,
+   "first_day": "2024-09-27",
+   "last_day": "2025-03-11",
+   "ad_days": 36,
+   "recruitments": 5,
+   "families": [
+    "2024-oct-short-1",
+    "2024-oct-short-2",
+    "2024-sep-long",
+    "2025-feb-long-mid",
+    "2025-feb-short-mid"
+   ],
+   "studies": [
+    "2-short-a-hpv-baseline-nigeria",
+    "group-a-hpv-baseline-short-nigeria",
+    "nigeria-hpv-long",
+    "nigeria-hpv-long-midline-group-a",
+    "nigeria-hpv-short-midline-2-group-a",
+    "nigeria-hpv-short-midline-group-a",
+    "short-a-hpv-nigeria"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-long",
+     "who": "cares for a girl aged 9–17 and answered 27 of 31 questions",
+     "spend": 5.74,
+     "starters": 161,
+     "qualified": 93,
+     "cost_per_qualified": 0.06
+    },
+    {
+     "instrument": "2025-feb-long-mid",
+     "who": "cares for a girl aged 9–17 and answered 28 of 31 questions",
+     "spend": 24.85,
+     "starters": 565,
+     "qualified": 189,
+     "cost_per_qualified": 0.13
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 923.43,
+     "starters": 7827,
+     "qualified": 3430,
+     "cost_per_qualified": 0.27
+    }
+   ],
+   "by_recruitment": {
+    "2024-oct-short-1": {
+     "spend": 475.8,
+     "starters": 2014,
+     "qualified": 545
+    },
+    "2024-oct-short-2": {
+     "spend": 198.61,
+     "starters": 2921,
+     "qualified": 1854
+    },
+    "2024-sep-long": {
+     "spend": 5.74,
+     "starters": 161,
+     "qualified": 93
+    },
+    "2025-feb-long-mid": {
+     "spend": 24.85,
+     "starters": 565,
+     "qualified": 189
+    },
+    "2025-feb-short-mid": {
+     "spend": 249.02,
+     "starters": 2892,
+     "qualified": 1031
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.5,
+   "meta_conversations": 12482,
+   "starters_where_conversations_recorded": 8553,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Abuja's south side and Kuje: 19 radius areas of 4 km",
+   "kind": "radius",
+   "spend": 1742.25,
+   "starters": 4710,
+   "cost_per_starter": 0.37,
+   "first_day": "2024-09-27",
+   "last_day": "2025-03-12",
+   "ad_days": 38,
+   "recruitments": 5,
+   "families": [
+    "2024-oct-short-1",
+    "2024-oct-short-2",
+    "2024-sep-long",
+    "2025-feb-long-mid",
+    "2025-feb-short-mid"
+   ],
+   "studies": [
+    "2-short-b-hpv-baseline-nigeria",
+    "group-b-hpv-baseline-short-nigeria",
+    "hpv-nigeria-long-b",
+    "nigeria-hpv-long-midline-group-b",
+    "nigeria-hpv-short-midline-2-group-b",
+    "nigeria-hpv-short-midline-group-b",
+    "short-b-hpv-nigeria"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-long",
+     "who": "cares for a girl aged 9–17 and answered 27 of 31 questions",
+     "spend": 8.11,
+     "starters": 43,
+     "qualified": 14,
+     "cost_per_qualified": 0.58
+    },
+    {
+     "instrument": "2025-feb-long-mid",
+     "who": "cares for a girl aged 9–17 and answered 28 of 31 questions",
+     "spend": 80.64,
+     "starters": 658,
+     "qualified": 145,
+     "cost_per_qualified": 0.56
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 1653.5,
+     "starters": 4009,
+     "qualified": 1488,
+     "cost_per_qualified": 1.11
+    }
+   ],
+   "by_recruitment": {
+    "2024-oct-short-1": {
+     "spend": 518.45,
+     "starters": 966,
+     "qualified": 268
+    },
+    "2024-oct-short-2": {
+     "spend": 410.83,
+     "starters": 1240,
+     "qualified": 571
+    },
+    "2024-sep-long": {
+     "spend": 8.11,
+     "starters": 43,
+     "qualified": 14
+    },
+    "2025-feb-long-mid": {
+     "spend": 80.64,
+     "starters": 658,
+     "qualified": 145
+    },
+    "2025-feb-short-mid": {
+     "spend": 724.22,
+     "starters": 1803,
+     "qualified": 649
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.42,
+   "meta_conversations": 7808,
+   "starters_where_conversations_recorded": 4710,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "South-west of Abuja around Kuje: one radius area of 19 km",
+   "kind": "radius",
+   "spend": 3187.49,
+   "starters": 2205,
+   "cost_per_starter": 1.45,
+   "first_day": "2025-04-09",
+   "last_day": "2025-11-16",
+   "ad_days": 14,
+   "recruitments": 2,
+   "families": [
+    "2025-apr-c2",
+    "2025-nov-c2-end"
+   ],
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline",
+    "vaxsocial-campaign-2-endline"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-nov-c2-end",
+     "who": "cares for a girl aged 9–17 and answered all 21 questions",
+     "spend": 361.02,
+     "starters": 1527,
+     "qualified": 1121,
+     "cost_per_qualified": 0.32
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 2826.47,
+     "starters": 678,
+     "qualified": 455,
+     "cost_per_qualified": 6.21
+    }
+   ],
+   "by_recruitment": {
+    "2025-apr-c2": {
+     "spend": 2826.47,
+     "starters": 678,
+     "qualified": 455
+    },
+    "2025-nov-c2-end": {
+     "spend": 361.02,
+     "starters": 1527,
+     "qualified": 1121
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.89,
+   "meta_conversations": 2909,
+   "starters_where_conversations_recorded": 2205,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Lafia and Keffi: 60 radius areas of 4 km",
+   "kind": "radius",
+   "spend": 6879.71,
+   "starters": 1887,
+   "cost_per_starter": 3.65,
+   "first_day": "2024-09-27",
+   "last_day": "2025-03-12",
+   "ad_days": 38,
+   "recruitments": 5,
+   "families": [
+    "2024-oct-short-1",
+    "2024-oct-short-2",
+    "2024-sep-long",
+    "2025-feb-long-mid",
+    "2025-feb-short-mid"
+   ],
+   "studies": [
+    "2-short-a-hpv-baseline-nigeria",
+    "group-a-hpv-baseline-short-nigeria",
+    "nigeria-hpv-long",
+    "nigeria-hpv-long-midline-group-a",
+    "nigeria-hpv-short-midline-2-group-a",
+    "nigeria-hpv-short-midline-group-a",
+    "short-a-hpv-nigeria"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-long",
+     "who": "cares for a girl aged 9–17 and answered 27 of 31 questions",
+     "spend": 185.12,
+     "starters": 97,
+     "qualified": 29,
+     "cost_per_qualified": 6.38
+    },
+    {
+     "instrument": "2025-feb-long-mid",
+     "who": "cares for a girl aged 9–17 and answered 28 of 31 questions",
+     "spend": 415.49,
+     "starters": 233,
+     "qualified": 34,
+     "cost_per_qualified": 12.22
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 6279.1,
+     "starters": 1557,
+     "qualified": 397,
+     "cost_per_qualified": 15.82
+    }
+   ],
+   "by_recruitment": {
+    "2024-oct-short-1": {
+     "spend": 2734.6,
+     "starters": 286,
+     "qualified": 65
+    },
+    "2024-oct-short-2": {
+     "spend": 1433.88,
+     "starters": 381,
+     "qualified": 134
+    },
+    "2024-sep-long": {
+     "spend": 185.12,
+     "starters": 97,
+     "qualified": 29
+    },
+    "2025-feb-long-mid": {
+     "spend": 415.49,
+     "starters": 233,
+     "qualified": 34
+    },
+    "2025-feb-short-mid": {
+     "spend": 2110.62,
+     "starters": 890,
+     "qualified": 198
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.4,
+   "meta_conversations": 4652,
+   "starters_where_conversations_recorded": 1887,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Yola–Jimeta: 23 radius areas of 2 km",
+   "kind": "radius",
+   "spend": 15762.37,
+   "starters": 1528,
+   "cost_per_starter": 10.32,
+   "first_day": "2024-09-27",
+   "last_day": "2025-03-12",
+   "ad_days": 38,
+   "recruitments": 5,
+   "families": [
+    "2024-oct-short-1",
+    "2024-oct-short-2",
+    "2024-sep-long",
+    "2025-feb-long-mid",
+    "2025-feb-short-mid"
+   ],
+   "studies": [
+    "2-short-a-hpv-baseline-nigeria",
+    "2-short-b-hpv-baseline-nigeria",
+    "group-a-hpv-baseline-short-nigeria",
+    "group-b-hpv-baseline-short-nigeria",
+    "hpv-nigeria-long-b",
+    "nigeria-hpv-long",
+    "nigeria-hpv-long-midline-group-a",
+    "nigeria-hpv-long-midline-group-b",
+    "nigeria-hpv-short-midline-2-group-a",
+    "nigeria-hpv-short-midline-2-group-b",
+    "nigeria-hpv-short-midline-group-a",
+    "nigeria-hpv-short-midline-group-b",
+    "short-a-hpv-nigeria",
+    "short-b-hpv-nigeria"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-long",
+     "who": "cares for a girl aged 9–17 and answered 27 of 31 questions",
+     "spend": 428.91,
+     "starters": 152,
+     "qualified": 55,
+     "cost_per_qualified": 7.8
+    },
+    {
+     "instrument": "2025-feb-long-mid",
+     "who": "cares for a girl aged 9–17 and answered 28 of 31 questions",
+     "spend": 1746.29,
+     "starters": 179,
+     "qualified": 27,
+     "cost_per_qualified": 64.68
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 13587.17,
+     "starters": 1197,
+     "qualified": 333,
+     "cost_per_qualified": 40.8
+    }
+   ],
+   "by_recruitment": {
+    "2024-oct-short-1": {
+     "spend": 3488.06,
+     "starters": 256,
+     "qualified": 68
+    },
+    "2024-oct-short-2": {
+     "spend": 3207.87,
+     "starters": 178,
+     "qualified": 77
+    },
+    "2024-sep-long": {
+     "spend": 428.91,
+     "starters": 152,
+     "qualified": 55
+    },
+    "2025-feb-long-mid": {
+     "spend": 1746.29,
+     "starters": 179,
+     "qualified": 27
+    },
+    "2025-feb-short-mid": {
+     "spend": 6891.24,
+     "starters": 763,
+     "qualified": 188
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.44,
+   "meta_conversations": 3723,
+   "starters_where_conversations_recorded": 1528,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Karu, on Abuja's edge in Nasarawa: 4 radius areas of 4 km",
+   "kind": "radius",
+   "spend": 9483.95,
+   "starters": 1264,
+   "cost_per_starter": 7.5,
+   "first_day": "2024-09-27",
+   "last_day": "2025-03-12",
+   "ad_days": 38,
+   "recruitments": 5,
+   "families": [
+    "2024-oct-short-1",
+    "2024-oct-short-2",
+    "2024-sep-long",
+    "2025-feb-long-mid",
+    "2025-feb-short-mid"
+   ],
+   "studies": [
+    "2-short-b-hpv-baseline-nigeria",
+    "group-b-hpv-baseline-short-nigeria",
+    "hpv-nigeria-long-b",
+    "nigeria-hpv-long-midline-group-b",
+    "nigeria-hpv-short-midline-2-group-b",
+    "nigeria-hpv-short-midline-group-b",
+    "short-b-hpv-nigeria"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-long",
+     "who": "cares for a girl aged 9–17 and answered 27 of 31 questions",
+     "spend": 236.07,
+     "starters": 52,
+     "qualified": 14,
+     "cost_per_qualified": 16.86
+    },
+    {
+     "instrument": "2025-feb-long-mid",
+     "who": "cares for a girl aged 9–17 and answered 28 of 31 questions",
+     "spend": 479.61,
+     "starters": 124,
+     "qualified": 26,
+     "cost_per_qualified": 18.45
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 8768.27,
+     "starters": 1088,
+     "qualified": 330,
+     "cost_per_qualified": 26.57
+    }
+   ],
+   "by_recruitment": {
+    "2024-oct-short-1": {
+     "spend": 2802.34,
+     "starters": 205,
+     "qualified": 64
+    },
+    "2024-oct-short-2": {
+     "spend": 2353.81,
+     "starters": 257,
+     "qualified": 114
+    },
+    "2024-sep-long": {
+     "spend": 236.07,
+     "starters": 52,
+     "qualified": 14
+    },
+    "2025-feb-long-mid": {
+     "spend": 479.61,
+     "starters": 124,
+     "qualified": 26
+    },
+    "2025-feb-short-mid": {
+     "spend": 3612.12,
+     "starters": 626,
+     "qualified": 152
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.38,
+   "meta_conversations": 3020,
+   "starters_where_conversations_recorded": 1264,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Yola–Jimeta: one radius area of 53 km",
+   "kind": "radius",
+   "spend": 544.08,
+   "starters": 748,
+   "cost_per_starter": 0.73,
+   "first_day": "2025-04-09",
+   "last_day": "2025-11-16",
+   "ad_days": 37,
+   "recruitments": 3,
+   "families": [
+    "2025-apr-c2",
+    "2025-may-signup",
+    "2025-nov-c2-end"
+   ],
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline",
+    "vaxsocial-campaign-2-endline",
+    "vital-hpv-vaccine-sign-up"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-may-signup",
+     "who": "left a phone number on a one-question sign-up",
+     "spend": 412.95,
+     "starters": 367,
+     "qualified": 39,
+     "cost_per_qualified": 10.59
+    },
+    {
+     "instrument": "2025-nov-c2-end",
+     "who": "cares for a girl aged 9–17 and answered all 21 questions",
+     "spend": 48.59,
+     "starters": 148,
+     "qualified": 108,
+     "cost_per_qualified": 0.45
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 82.54,
+     "starters": 233,
+     "qualified": 100,
+     "cost_per_qualified": 0.83
+    }
+   ],
+   "by_recruitment": {
+    "2025-apr-c2": {
+     "spend": 82.54,
+     "starters": 233,
+     "qualified": 100
+    },
+    "2025-may-signup": {
+     "spend": 412.95,
+     "starters": 367,
+     "qualified": 39
+    },
+    "2025-nov-c2-end": {
+     "spend": 48.59,
+     "starters": 148,
+     "qualified": 108
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.76,
+   "meta_conversations": 1174,
+   "starters_where_conversations_recorded": 748,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Nasarawa town and Akwanga: 2 radius areas of 24 km",
+   "kind": "radius",
+   "spend": 1958.59,
+   "starters": 234,
+   "cost_per_starter": 8.37,
+   "first_day": "2025-04-09",
+   "last_day": "2025-11-17",
+   "ad_days": 16,
+   "recruitments": 2,
+   "families": [
+    "2025-apr-c2",
+    "2025-nov-c2-end"
+   ],
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline",
+    "vaxsocial-campaign-2-endline"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-nov-c2-end",
+     "who": "cares for a girl aged 9–17 and answered all 21 questions",
+     "spend": 767.81,
+     "starters": 162,
+     "qualified": 72,
+     "cost_per_qualified": 10.66
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 1190.78,
+     "starters": 72,
+     "qualified": 20,
+     "cost_per_qualified": 59.54
+    }
+   ],
+   "by_recruitment": {
+    "2025-apr-c2": {
+     "spend": 1190.78,
+     "starters": 72,
+     "qualified": 20
+    },
+    "2025-nov-c2-end": {
+     "spend": 767.81,
+     "starters": 162,
+     "qualified": 72
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.61,
+   "meta_conversations": 415,
+   "starters_where_conversations_recorded": 234,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Toro: one radius area of 16 km",
+   "kind": "radius",
+   "spend": 1672.27,
+   "starters": 116,
+   "cost_per_starter": 14.42,
+   "first_day": "2026-04-06",
+   "last_day": "2026-04-17",
+   "ad_days": 12,
+   "recruitments": 1,
+   "families": [
+    "2026-apr-bauchi-pilot"
+   ],
+   "studies": [
+    "bauchi-state-hpv-pilot"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-apr-bauchi-pilot",
+     "who": "an adult with a daughter aged 9–14 at home who finished a 34-question survey and gave a number for payment (ads to ages 20–55)",
+     "spend": 1672.27,
+     "starters": 116,
+     "qualified": 39,
+     "cost_per_qualified": 42.88
+    }
+   ],
+   "by_recruitment": {
+    "2026-apr-bauchi-pilot": {
+     "spend": 1672.27,
+     "starters": 116,
+     "qualified": 39
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 157,
+   "starters_where_conversations_recorded": 116,
+   "thin": true,
+   "shown": true
+  },
+  {
+   "name": "Gamawa: one radius area of 18 miles (29 km)",
+   "kind": "radius",
+   "spend": 566.35,
+   "starters": 61,
+   "cost_per_starter": 9.28,
+   "first_day": "2026-04-06",
+   "last_day": "2026-04-17",
+   "ad_days": 12,
+   "recruitments": 1,
+   "families": [
+    "2026-apr-bauchi-pilot"
+   ],
+   "studies": [
+    "bauchi-state-hpv-pilot"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-apr-bauchi-pilot",
+     "who": "an adult with a daughter aged 9–14 at home who finished a 34-question survey and gave a number for payment (ads to ages 20–55)",
+     "spend": 566.35,
+     "starters": 61,
+     "qualified": 23,
+     "cost_per_qualified": 24.62
+    }
+   ],
+   "by_recruitment": {
+    "2026-apr-bauchi-pilot": {
+     "spend": 566.35,
+     "starters": 61,
+     "qualified": 23
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 79,
+   "starters_where_conversations_recorded": 61,
+   "thin": true,
+   "shown": true
+  },
+  {
+   "name": "Jama'are: one radius area of 10 miles (16 km)",
+   "kind": "radius",
+   "spend": 637.01,
+   "starters": 53,
+   "cost_per_starter": 12.02,
+   "first_day": "2026-04-14",
+   "last_day": "2026-04-17",
+   "ad_days": 4,
+   "recruitments": 1,
+   "families": [
+    "2026-apr-bauchi-pilot"
+   ],
+   "studies": [
+    "bauchi-state-hpv-pilot"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-apr-bauchi-pilot",
+     "who": "an adult with a daughter aged 9–14 at home who finished a 34-question survey and gave a number for payment (ads to ages 20–55)",
+     "spend": 637.01,
+     "starters": 53,
+     "qualified": 19,
+     "cost_per_qualified": 33.53
+    }
+   ],
+   "by_recruitment": {
+    "2026-apr-bauchi-pilot": {
+     "spend": 637.01,
+     "starters": 53,
+     "qualified": 19
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 71,
+   "starters_where_conversations_recorded": 53,
+   "thin": true,
+   "shown": true
+  },
+  {
+   "name": "Giade: one radius area of 10 miles (16 km)",
+   "kind": "radius",
+   "spend": 418.85,
+   "starters": 52,
+   "cost_per_starter": 8.05,
+   "first_day": "2026-04-14",
+   "last_day": "2026-04-17",
+   "ad_days": 4,
+   "recruitments": 1,
+   "families": [
+    "2026-apr-bauchi-pilot"
+   ],
+   "studies": [
+    "bauchi-state-hpv-pilot"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-apr-bauchi-pilot",
+     "who": "an adult with a daughter aged 9–14 at home who finished a 34-question survey and gave a number for payment (ads to ages 20–55)",
+     "spend": 418.85,
+     "starters": 52,
+     "qualified": 26,
+     "cost_per_qualified": 16.11
+    }
+   ],
+   "by_recruitment": {
+    "2026-apr-bauchi-pilot": {
+     "spend": 418.85,
+     "starters": 52,
+     "qualified": 26
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 69,
+   "starters_where_conversations_recorded": 52,
+   "thin": true,
+   "shown": true
+  },
+  {
+   "name": "Dambam: one radius area of 10 miles (16 km)",
+   "kind": "radius",
+   "spend": 363.58,
+   "starters": 30,
+   "cost_per_starter": 12.12,
+   "first_day": "2026-04-14",
+   "last_day": "2026-04-17",
+   "ad_days": 4,
+   "recruitments": 1,
+   "families": [
+    "2026-apr-bauchi-pilot"
+   ],
+   "studies": [
+    "bauchi-state-hpv-pilot"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2026-apr-bauchi-pilot",
+     "who": "an adult with a daughter aged 9–14 at home who finished a 34-question survey and gave a number for payment (ads to ages 20–55)",
+     "spend": 363.58,
+     "starters": 30,
+     "qualified": 18,
+     "cost_per_qualified": 20.2
+    }
+   ],
+   "by_recruitment": {
+    "2026-apr-bauchi-pilot": {
+     "spend": 363.58,
+     "starters": 30,
+     "qualified": 18
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 36,
+   "starters_where_conversations_recorded": 30,
+   "thin": true,
+   "shown": false
+  },
+  {
+   "name": "Bauchi (whole state)",
+   "kind": "state",
+   "spend": 34756.95,
+   "starters": 5462,
+   "cost_per_starter": 6.36,
+   "first_day": "2023-08-15",
+   "last_day": "2026-06-19",
+   "ad_days": 56,
+   "recruitments": 3,
+   "families": [
+    "2023-six-states",
+    "2026-feb-bauchi-ct",
+    "2026-may-bauchi-mnch"
+   ],
+   "studies": [
+    "bauchi-creative-test",
+    "bauchi-state-hpv-mnch-week",
+    "nigeria-final-hpv-august-23",
+    "nigeria-hpv-config-8-1",
+    "nigeria_hpv_northern_women_addition"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2023-six-states",
+     "who": "cares for a girl aged 9–17 and answered all 35 questions (ads to ages 30–50)",
+     "spend": 526.76,
+     "starters": 606,
+     "qualified": 245,
+     "cost_per_qualified": 2.15
+    },
+    {
+     "instrument": "2026-feb-bauchi-ct",
+     "who": "a parent or caregiver of a child aged 9–14 who finished a 12-question survey and gave a number for payment",
+     "spend": 684.94,
+     "starters": 785,
+     "qualified": 515,
+     "cost_per_qualified": 1.33
+    },
+    {
+     "instrument": "2026-may-bauchi-mnch",
+     "who": "an adult with a daughter aged 9–14 at home who finished a 38-question survey and gave a number for payment",
+     "spend": 33545.25,
+     "starters": 4071,
+     "qualified": 776,
+     "cost_per_qualified": 43.23
+    }
+   ],
+   "by_recruitment": {
+    "2023-six-states": {
+     "spend": 526.76,
+     "starters": 606,
+     "qualified": 245
+    },
+    "2026-feb-bauchi-ct": {
+     "spend": 684.94,
+     "starters": 785,
+     "qualified": 515
+    },
+    "2026-may-bauchi-mnch": {
+     "spend": 33545.25,
+     "starters": 4071,
+     "qualified": 776
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.97,
+   "meta_conversations": 9123,
+   "starters_where_conversations_recorded": 5462,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Lagos (whole state)",
+   "kind": "state",
+   "spend": 8548.4,
+   "starters": 4546,
+   "cost_per_starter": 1.88,
+   "first_day": "2023-08-15",
+   "last_day": "2026-08-07",
+   "ad_days": 70,
+   "recruitments": 4,
+   "families": [
+    "2023-lagos-kano",
+    "2023-six-states",
+    "2026-apr-nstudy",
+    "2026-owis"
+   ],
+   "studies": [
+    "dkt-study-nigeria",
+    "dkt_nigeria_test",
+    "nigeria-final-hpv-august-23",
+    "nigeria-hpv-config-8-1",
+    "nigeria-study",
+    "owis-nigeria-study"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2023-lagos-kano/dkt-study-nigeria",
+     "who": "any adult who reached question 22 of 29 (ads to ages 18–35)",
+     "spend": 168.36,
+     "starters": 1156,
+     "qualified": 995,
+     "cost_per_qualified": 0.17
+    },
+    {
+     "instrument": "2023-lagos-kano/dkt_nigeria_test",
+     "who": "reached question 27 of 29, which only some were asked (ads to ages 18–49)",
+     "spend": 281.93,
+     "starters": 915,
+     "qualified": 8,
+     "cost_per_qualified": 35.24
+    },
+    {
+     "instrument": "2023-six-states",
+     "who": "cares for a girl aged 9–17 and answered all 35 questions (ads to ages 30–50)",
+     "spend": 226.62,
+     "starters": 1164,
+     "qualified": 452,
+     "cost_per_qualified": 0.5
+    },
+    {
+     "instrument": "2026-apr-nstudy",
+     "who": "a parent or caregiver who answered all 55 questions (ads to ages 27–65)",
+     "spend": 6057.87,
+     "starters": 1045,
+     "qualified": 98,
+     "cost_per_qualified": 61.82
+    },
+    {
+     "instrument": "2026-owis",
+     "who": "a parent or caregiver who answered all 55 questions (ads to ages 36–65)",
+     "spend": 1813.62,
+     "starters": 266,
+     "qualified": 45,
+     "cost_per_qualified": 40.3
+    }
+   ],
+   "by_recruitment": {
+    "2023-lagos-kano": {
+     "spend": 450.29,
+     "starters": 2071,
+     "qualified": 1003
+    },
+    "2023-six-states": {
+     "spend": 226.62,
+     "starters": 1164,
+     "qualified": 452
+    },
+    "2026-apr-nstudy": {
+     "spend": 6057.87,
+     "starters": 1045,
+     "qualified": 98
+    },
+    "2026-owis": {
+     "spend": 1813.62,
+     "starters": 266,
+     "qualified": 45
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.71,
+   "meta_conversations": 5192,
+   "starters_where_conversations_recorded": 4280,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Kano (whole state)",
+   "kind": "state",
+   "spend": 116.14,
+   "starters": 1422,
+   "cost_per_starter": 0.08,
+   "first_day": "2023-10-16",
+   "last_day": "2023-11-23",
+   "ad_days": 17,
+   "recruitments": 1,
+   "families": [
+    "2023-lagos-kano"
+   ],
+   "studies": [
+    "dkt-study-nigeria",
+    "dkt_nigeria_test"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2023-lagos-kano/dkt-study-nigeria",
+     "who": "any adult who reached question 22 of 29 (ads to ages 18–35)",
+     "spend": 108.01,
+     "starters": 1364,
+     "qualified": 1003,
+     "cost_per_qualified": 0.11
+    },
+    {
+     "instrument": "2023-lagos-kano/dkt_nigeria_test",
+     "who": "reached question 27 of 29, which only some were asked (ads to ages 18–49)",
+     "spend": 8.13,
+     "starters": 58,
+     "qualified": 1,
+     "cost_per_qualified": 8.13
+    }
+   ],
+   "by_recruitment": {
+    "2023-lagos-kano": {
+     "spend": 116.14,
+     "starters": 1422,
+     "qualified": 1004
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 1512,
+   "starters_where_conversations_recorded": 1422,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "FCT (whole territory)",
+   "kind": "state",
+   "spend": 277.47,
+   "starters": 1407,
+   "cost_per_starter": 0.2,
+   "first_day": "2024-09-12",
+   "last_day": "2025-07-15",
+   "ad_days": 30,
+   "recruitments": 2,
+   "families": [
+    "2024-sep-three-states",
+    "2025-may-signup"
+   ],
+   "studies": [
+    "nigeria-hpv-test-2024",
+    "vital-hpv-sign-up-abuja",
+    "vital-hpv-vaccine-sign-up"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-three-states",
+     "who": "cares for a girl aged 9–17 and answered all 31 questions (ads to ages 25–55)",
+     "spend": 123.23,
+     "starters": 887,
+     "qualified": 114,
+     "cost_per_qualified": 1.08
+    },
+    {
+     "instrument": "2025-may-signup",
+     "who": "left a phone number on a one-question sign-up",
+     "spend": 154.24,
+     "starters": 520,
+     "qualified": 148,
+     "cost_per_qualified": 1.04
+    }
+   ],
+   "by_recruitment": {
+    "2024-sep-three-states": {
+     "spend": 123.23,
+     "starters": 887,
+     "qualified": 114
+    },
+    "2025-may-signup": {
+     "spend": 154.24,
+     "starters": 520,
+     "qualified": 148
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.56,
+   "meta_conversations": 2184,
+   "starters_where_conversations_recorded": 1407,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Rivers (whole state)",
+   "kind": "state",
+   "spend": 190.16,
+   "starters": 771,
+   "cost_per_starter": 0.25,
+   "first_day": "2023-08-15",
+   "last_day": "2023-09-11",
+   "ad_days": 20,
+   "recruitments": 1,
+   "families": [
+    "2023-six-states"
+   ],
+   "studies": [
+    "nigeria-final-hpv-august-23",
+    "nigeria-hpv-config-8-1"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2023-six-states",
+     "who": "cares for a girl aged 9–17 and answered all 35 questions (ads to ages 30–50)",
+     "spend": 190.16,
+     "starters": 771,
+     "qualified": 279,
+     "cost_per_qualified": 0.68
+    }
+   ],
+   "by_recruitment": {
+    "2023-six-states": {
+     "spend": 190.16,
+     "starters": 771,
+     "qualified": 279
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 813,
+   "starters_where_conversations_recorded": 771,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Niger (whole state)",
+   "kind": "state",
+   "spend": 734.96,
+   "starters": 620,
+   "cost_per_starter": 1.19,
+   "first_day": "2023-08-15",
+   "last_day": "2023-09-19",
+   "ad_days": 26,
+   "recruitments": 1,
+   "families": [
+    "2023-six-states"
+   ],
+   "studies": [
+    "nigeria-final-hpv-august-23",
+    "nigeria-hpv-config-8-1",
+    "nigeria_hpv_northern_women_addition"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2023-six-states",
+     "who": "cares for a girl aged 9–17 and answered all 35 questions (ads to ages 30–50)",
+     "spend": 734.96,
+     "starters": 620,
+     "qualified": 202,
+     "cost_per_qualified": 3.64
+    }
+   ],
+   "by_recruitment": {
+    "2023-six-states": {
+     "spend": 734.96,
+     "starters": 620,
+     "qualified": 202
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 755,
+   "starters_where_conversations_recorded": 620,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Nasarawa (whole state)",
+   "kind": "state",
+   "spend": 640.16,
+   "starters": 575,
+   "cost_per_starter": 1.11,
+   "first_day": "2024-09-12",
+   "last_day": "2025-06-18",
+   "ad_days": 27,
+   "recruitments": 2,
+   "families": [
+    "2024-sep-three-states",
+    "2025-may-signup"
+   ],
+   "studies": [
+    "nigeria-hpv-test-2024",
+    "vital-hpv-vaccine-sign-up"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-three-states",
+     "who": "cares for a girl aged 9–17 and answered all 31 questions (ads to ages 25–55)",
+     "spend": 397.27,
+     "starters": 159,
+     "qualified": 17,
+     "cost_per_qualified": 23.37
+    },
+    {
+     "instrument": "2025-may-signup",
+     "who": "left a phone number on a one-question sign-up",
+     "spend": 242.89,
+     "starters": 416,
+     "qualified": 73,
+     "cost_per_qualified": 3.33
+    }
+   ],
+   "by_recruitment": {
+    "2024-sep-three-states": {
+     "spend": 397.27,
+     "starters": 159,
+     "qualified": 17
+    },
+    "2025-may-signup": {
+     "spend": 242.89,
+     "starters": 416,
+     "qualified": 73
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.62,
+   "meta_conversations": 982,
+   "starters_where_conversations_recorded": 575,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Sokoto (whole state)",
+   "kind": "state",
+   "spend": 1208.21,
+   "starters": 502,
+   "cost_per_starter": 2.41,
+   "first_day": "2023-08-15",
+   "last_day": "2023-09-21",
+   "ad_days": 28,
+   "recruitments": 1,
+   "families": [
+    "2023-six-states"
+   ],
+   "studies": [
+    "nigeria-final-hpv-august-23",
+    "nigeria-hpv-config-8-1",
+    "nigeria_hpv_northern_women_addition"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2023-six-states",
+     "who": "cares for a girl aged 9–17 and answered all 35 questions (ads to ages 30–50)",
+     "spend": 1208.21,
+     "starters": 502,
+     "qualified": 137,
+     "cost_per_qualified": 8.82
+    }
+   ],
+   "by_recruitment": {
+    "2023-six-states": {
+     "spend": 1208.21,
+     "starters": 502,
+     "qualified": 137
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 658,
+   "starters_where_conversations_recorded": 502,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Anambra (whole state)",
+   "kind": "state",
+   "spend": 1044.83,
+   "starters": 368,
+   "cost_per_starter": 2.84,
+   "first_day": "2023-08-15",
+   "last_day": "2023-09-11",
+   "ad_days": 21,
+   "recruitments": 1,
+   "families": [
+    "2023-six-states"
+   ],
+   "studies": [
+    "nigeria-final-hpv-august-23",
+    "nigeria-hpv-config-8-1"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2023-six-states",
+     "who": "cares for a girl aged 9–17 and answered all 35 questions (ads to ages 30–50)",
+     "spend": 1044.83,
+     "starters": 368,
+     "qualified": 79,
+     "cost_per_qualified": 13.23
+    }
+   ],
+   "by_recruitment": {
+    "2023-six-states": {
+     "spend": 1044.83,
+     "starters": 368,
+     "qualified": 79
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 519,
+   "starters_where_conversations_recorded": 368,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Adamawa (whole state)",
+   "kind": "state",
+   "spend": 309.56,
+   "starters": 188,
+   "cost_per_starter": 1.65,
+   "first_day": "2024-09-12",
+   "last_day": "2024-09-15",
+   "ad_days": 4,
+   "recruitments": 1,
+   "families": [
+    "2024-sep-three-states"
+   ],
+   "studies": [
+    "nigeria-hpv-test-2024"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2024-sep-three-states",
+     "who": "cares for a girl aged 9–17 and answered all 31 questions (ads to ages 25–55)",
+     "spend": 309.56,
+     "starters": 188,
+     "qualified": 20,
+     "cost_per_qualified": 15.48
+    }
+   ],
+   "by_recruitment": {
+    "2024-sep-three-states": {
+     "spend": 309.56,
+     "starters": 188,
+     "qualified": 20
+    }
+   },
+   "largest_recruitment_share_of_spend": 1.0,
+   "meta_conversations": 426,
+   "starters_where_conversations_recorded": 188,
+   "thin": true,
+   "shown": true
+  },
+  {
+   "name": "FCT outside the radius area around Kuje",
+   "kind": "state_minus",
+   "spend": 3192.03,
+   "starters": 3071,
+   "cost_per_starter": 1.04,
+   "first_day": "2025-04-09",
+   "last_day": "2025-11-17",
+   "ad_days": 16,
+   "recruitments": 2,
+   "families": [
+    "2025-apr-c2",
+    "2025-nov-c2-end"
+   ],
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline",
+    "vaxsocial-campaign-2-endline"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-nov-c2-end",
+     "who": "cares for a girl aged 9–17 and answered all 21 questions",
+     "spend": 3055.78,
+     "starters": 878,
+     "qualified": 496,
+     "cost_per_qualified": 6.16
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 136.25,
+     "starters": 2193,
+     "qualified": 1372,
+     "cost_per_qualified": 0.1
+    }
+   ],
+   "by_recruitment": {
+    "2025-apr-c2": {
+     "spend": 136.25,
+     "starters": 2193,
+     "qualified": 1372
+    },
+    "2025-nov-c2-end": {
+     "spend": 3055.78,
+     "starters": 878,
+     "qualified": 496
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.96,
+   "meta_conversations": 3992,
+   "starters_where_conversations_recorded": 3071,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Nasarawa outside the Nasarawa-town and Akwanga radius areas",
+   "kind": "state_minus",
+   "spend": 408.62,
+   "starters": 517,
+   "cost_per_starter": 0.79,
+   "first_day": "2025-04-09",
+   "last_day": "2025-11-16",
+   "ad_days": 15,
+   "recruitments": 2,
+   "families": [
+    "2025-apr-c2",
+    "2025-nov-c2-end"
+   ],
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline",
+    "vaxsocial-campaign-2-endline"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-nov-c2-end",
+     "who": "cares for a girl aged 9–17 and answered all 21 questions",
+     "spend": 156.06,
+     "starters": 208,
+     "qualified": 105,
+     "cost_per_qualified": 1.49
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 252.56,
+     "starters": 309,
+     "qualified": 96,
+     "cost_per_qualified": 2.63
+    }
+   ],
+   "by_recruitment": {
+    "2025-apr-c2": {
+     "spend": 252.56,
+     "starters": 309,
+     "qualified": 96
+    },
+    "2025-nov-c2-end": {
+     "spend": 156.06,
+     "starters": 208,
+     "qualified": 105
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.62,
+   "meta_conversations": 936,
+   "starters_where_conversations_recorded": 517,
+   "thin": false,
+   "shown": true
+  },
+  {
+   "name": "Adamawa outside the Yola–Jimeta radius area",
+   "kind": "state_minus",
+   "spend": 508.52,
+   "starters": 277,
+   "cost_per_starter": 1.84,
+   "first_day": "2025-04-09",
+   "last_day": "2025-11-17",
+   "ad_days": 16,
+   "recruitments": 2,
+   "families": [
+    "2025-apr-c2",
+    "2025-nov-c2-end"
+   ],
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline",
+    "vaxsocial-campaign-2-endline"
+   ],
+   "qualified_by_instrument": [
+    {
+     "instrument": "2025-nov-c2-end",
+     "who": "cares for a girl aged 9–17 and answered all 21 questions",
+     "spend": 255.48,
+     "starters": 124,
+     "qualified": 60,
+     "cost_per_qualified": 4.26
+    },
+    {
+     "instrument": "S15",
+     "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+     "spend": 253.04,
+     "starters": 153,
+     "qualified": 53,
+     "cost_per_qualified": 4.77
+    }
+   ],
+   "by_recruitment": {
+    "2025-apr-c2": {
+     "spend": 253.04,
+     "starters": 153,
+     "qualified": 53
+    },
+    "2025-nov-c2-end": {
+     "spend": 255.48,
+     "starters": 124,
+     "qualified": 60
+    }
+   },
+   "largest_recruitment_share_of_spend": 0.5,
+   "meta_conversations": 559,
+   "starters_where_conversations_recorded": 277,
+   "thin": false,
+   "shown": true
+  }
+ ],
+ "gender": {
+  "cells": 58,
+  "men": {
+   "spend": 30885.26,
+   "starters": 19652,
+   "cost_per_starter": 1.57
+  },
+  "women": {
+   "spend": 26798.21,
+   "starters": 14323,
+   "cost_per_starter": 1.87
+  },
+  "note": "pooled over place x recruitment cells where ads ran separately to men and to women in the same place"
+ },
+ "instruments": {
+  "A": {
+   "key": "2023-six-states",
+   "who": "cares for a girl aged 9–17 and answered all 35 questions (ads to ages 30–50)",
+   "first_ad_day": "2023-08-15"
+  },
+  "B": {
+   "key": "2023-lagos-kano/dkt-study-nigeria",
+   "who": "any adult who reached question 22 of 29 (ads to ages 18–35)",
+   "first_ad_day": "2023-11-09"
+  },
+  "C": {
+   "key": "2024-sep-three-states",
+   "who": "cares for a girl aged 9–17 and answered all 31 questions (ads to ages 25–55)",
+   "first_ad_day": "2024-09-12"
+  },
+  "D": {
+   "key": "2024-sep-long",
+   "who": "cares for a girl aged 9–17 and answered 27 of 31 questions",
+   "first_ad_day": "2024-09-27"
+  },
+  "E": {
+   "key": "S15",
+   "who": "cares for a girl aged 9–17 and answered a 15–16-question survey",
+   "first_ad_day": "2024-10-12"
+  },
+  "F": {
+   "key": "2025-feb-long-mid",
+   "who": "cares for a girl aged 9–17 and answered 28 of 31 questions",
+   "first_ad_day": "2025-02-07"
+  },
+  "G": {
+   "key": "2025-may-signup",
+   "who": "left a phone number on a one-question sign-up",
+   "first_ad_day": "2025-05-27"
+  },
+  "H": {
+   "key": "2025-country-llm",
+   "who": "any adult who finished a 53-question survey and gave a number for payment",
+   "first_ad_day": "2025-06-09"
+  },
+  "I": {
+   "key": "2025-nov-c2-end",
+   "who": "cares for a girl aged 9–17 and answered all 21 questions",
+   "first_ad_day": "2025-11-10"
+  },
+  "J": {
+   "key": "2025-dec-hpvv",
+   "who": "a parent or caregiver who finished a 55-question survey and gave a number for payment (ads to ages 27–65)",
+   "first_ad_day": "2025-12-12"
+  },
+  "K": {
+   "key": "2025-dec-mr-test",
+   "who": "answered 97 of 98 questions (ads to ages 18–55)",
+   "first_ad_day": "2025-12-22"
+  },
+  "L": {
+   "key": "2026-jan-mr",
+   "who": "a parent or caregiver of a child aged 6–14 who answered 41 of 42 questions (ads to ages 18–55)",
+   "first_ad_day": "2026-01-16"
+  },
+  "M": {
+   "key": "2026-feb-bauchi-ct",
+   "who": "a parent or caregiver of a child aged 9–14 who finished a 12-question survey and gave a number for payment",
+   "first_ad_day": "2026-02-21"
+  },
+  "N": {
+   "key": "2026-apr-bauchi-pilot",
+   "who": "an adult with a daughter aged 9–14 at home who finished a 34-question survey and gave a number for payment (ads to ages 20–55)",
+   "first_ad_day": "2026-04-06"
+  },
+  "O": {
+   "key": "2026-apr-nstudy",
+   "who": "a parent or caregiver who answered all 55 questions (ads to ages 27–65)",
+   "first_ad_day": "2026-04-13"
+  },
+  "P": {
+   "key": "2026-may-bauchi-mnch",
+   "who": "an adult with a daughter aged 9–14 at home who finished a 38-question survey and gave a number for payment",
+   "first_ad_day": "2026-05-24"
+  },
+  "Q": {
+   "key": "2026-owis",
+   "who": "a parent or caregiver who answered all 55 questions (ads to ages 36–65)",
+   "first_ad_day": "2026-06-17"
+  },
+  "R": {
+   "key": "2026-mentality",
+   "who": "an adult who reached question 38 of a 48-question follow-up (ads to ages 18–65)",
+   "first_ad_day": "2026-07-15"
+  },
+  "S": {
+   "key": "2026-ecd",
+   "who": "an adult who answered all 131 questions (ads to ages 25–65)",
+   "first_ad_day": "2026-08-11"
+  },
+  "x19": {
+   "key": "2023-lagos-kano/dkt_nigeria_test",
+   "who": "reached question 27 of 29, which only some were asked (ads to ages 18–49)",
+   "first_ad_day": "2023-10-16"
+  }
+ },
+ "recruitments": {
+  "2023-six-states": {
+   "studies": [
+    "nigeria-final-hpv-august-23",
+    "nigeria-hpv-anambra",
+    "nigeria-hpv-config-8-1",
+    "nigeria_hpv_northern_women_addition"
+   ],
+   "first_ad_day": "2023-08-15",
+   "last_ad_day": "2023-09-30",
+   "ad_days": 32,
+   "spend": 3951.1,
+   "started": 4099,
+   "qualified": 1394,
+   "meta_conversations": 4719,
+   "started_where_conversations_recorded": 4099
+  },
+  "2023-lagos-kano": {
+   "studies": [
+    "dkt-study-nigeria",
+    "dkt_nigeria_test"
+   ],
+   "first_ad_day": "2023-10-16",
+   "last_ad_day": "2023-11-23",
+   "ad_days": 19,
+   "spend": 566.43,
+   "started": 3493,
+   "qualified": 2007,
+   "meta_conversations": 3779,
+   "started_where_conversations_recorded": 3493
+  },
+  "2024-sep-three-states": {
+   "studies": [
+    "nigeria-hpv-test-2024"
+   ],
+   "first_ad_day": "2024-09-12",
+   "last_ad_day": "2024-09-15",
+   "ad_days": 4,
+   "spend": 830.06,
+   "started": 1234,
+   "qualified": 151,
+   "meta_conversations": 2137,
+   "started_where_conversations_recorded": 1234
+  },
+  "2024-sep-long": {
+   "studies": [
+    "hpv-nigeria-long-b",
+    "nigeria-hpv-long"
+   ],
+   "first_ad_day": "2024-09-27",
+   "last_ad_day": "2024-09-30",
+   "ad_days": 4,
+   "spend": 863.95,
+   "started": 505,
+   "qualified": 205,
+   "meta_conversations": 1132,
+   "started_where_conversations_recorded": 505
+  },
+  "2024-oct-short-1": {
    "studies": [
     "short-a-hpv-nigeria",
     "short-b-hpv-nigeria"
    ],
-   "ad_days": 13,
+   "first_ad_day": "2024-10-12",
+   "last_ad_day": "2024-10-24",
+   "ad_days": 12,
    "spend": 10019.25,
-   "qualified": 1009,
-   "quotas": "Gender × State",
-   "note": "Two concurrent ad runs for one survey; respondents counted once",
-   "cost": 9.93
+   "started": 3727,
+   "qualified": 1010,
+   "meta_conversations": 8334,
+   "started_where_conversations_recorded": 3727
   },
-  {
-   "label": "Whole FCT, whole Nasarawa, one 53 km radius area around Yola",
-   "fielded": "27 May – 18 Jun 2025",
+  "2024-oct-short-2": {
    "studies": [
+    "2-short-a-hpv-baseline-nigeria",
+    "2-short-b-hpv-baseline-nigeria",
+    "group-a-hpv-baseline-short-nigeria",
+    "group-b-hpv-baseline-short-nigeria"
+   ],
+   "first_ad_day": "2024-10-26",
+   "last_ad_day": "2024-11-02",
+   "ad_days": 8,
+   "spend": 7605.0,
+   "started": 4977,
+   "qualified": 2750,
+   "meta_conversations": 6545,
+   "started_where_conversations_recorded": 4977
+  },
+  "2025-feb-long-mid": {
+   "studies": [
+    "nigeria-hpv-long-midline-group-a",
+    "nigeria-hpv-long-midline-group-b"
+   ],
+   "first_ad_day": "2025-02-07",
+   "last_ad_day": "2025-02-11",
+   "ad_days": 5,
+   "spend": 2746.88,
+   "started": 1759,
+   "qualified": 421,
+   "meta_conversations": 2476,
+   "started_where_conversations_recorded": 1759
+  },
+  "2025-feb-short-mid": {
+   "studies": [
+    "nigeria-hpv-short-midline-2-group-a",
+    "nigeria-hpv-short-midline-2-group-b",
+    "nigeria-hpv-short-midline-group-a",
+    "nigeria-hpv-short-midline-group-b"
+   ],
+   "first_ad_day": "2025-02-22",
+   "last_ad_day": "2025-03-12",
+   "ad_days": 12,
+   "spend": 13587.22,
+   "started": 6974,
+   "qualified": 2218,
+   "meta_conversations": 13198,
+   "started_where_conversations_recorded": 6974
+  },
+  "2025-apr-c2": {
+   "studies": [
+    "campaign-2-nigeria-hpv-baseline"
+   ],
+   "first_ad_day": "2025-04-09",
+   "last_ad_day": "2025-04-16",
+   "ad_days": 8,
+   "spend": 4741.64,
+   "started": 3638,
+   "qualified": 2096,
+   "meta_conversations": 5339,
+   "started_where_conversations_recorded": 3638
+  },
+  "2025-may-signup": {
+   "studies": [
+    "vital-hpv-sign-up-abuja",
     "vital-hpv-vaccine-sign-up"
    ],
-   "ad_days": 23,
-   "spend": 782.95,
-   "qualified": 257,
-   "quotas": "State",
-   "cost": 3.05
+   "first_ad_day": "2025-05-27",
+   "last_ad_day": "2025-07-15",
+   "ad_days": 29,
+   "spend": 810.08,
+   "started": 1303,
+   "qualified": 260,
+   "meta_conversations": 2007,
+   "started_where_conversations_recorded": 1303
+  },
+  "2025-country-llm": {
+   "studies": [
+    "llm-bias-nigeria-pilot"
+   ],
+   "first_ad_day": "2025-06-09",
+   "last_ad_day": "2025-07-09",
+   "ad_days": 14,
+   "spend": 142.51,
+   "started": 431,
+   "qualified": 247,
+   "meta_conversations": 206,
+   "started_where_conversations_recorded": 431
+  },
+  "2025-nov-c2-end": {
+   "studies": [
+    "vaxsocial-campaign-2-endline"
+   ],
+   "first_ad_day": "2025-11-10",
+   "last_ad_day": "2025-11-17",
+   "ad_days": 8,
+   "spend": 4644.74,
+   "started": 3047,
+   "qualified": 1962,
+   "meta_conversations": 4094,
+   "started_where_conversations_recorded": 3047
+  },
+  "2025-dec-hpvv": {
+   "studies": [
+    "hpv-nigeria-pilot"
+   ],
+   "first_ad_day": "2025-12-12",
+   "last_ad_day": "2025-12-23",
+   "ad_days": 12,
+   "spend": 516.01,
+   "started": 1263,
+   "qualified": 298,
+   "meta_conversations": 1326,
+   "started_where_conversations_recorded": 1263
+  },
+  "2025-dec-mr-test": {
+   "studies": [
+    "nigeria-mr-test"
+   ],
+   "first_ad_day": "2025-12-22",
+   "last_ad_day": "2025-12-23",
+   "ad_days": 2,
+   "spend": 18.03,
+   "started": 224,
+   "qualified": 164,
+   "meta_conversations": 218,
+   "started_where_conversations_recorded": 224
+  },
+  "2026-jan-mr": {
+   "studies": [
+    "nigeria-mr-campaign"
+   ],
+   "first_ad_day": "2026-01-16",
+   "last_ad_day": "2026-01-19",
+   "ad_days": 4,
+   "spend": 2412.45,
+   "started": 2482,
+   "qualified": 1452,
+   "meta_conversations": 2762,
+   "started_where_conversations_recorded": 2482
+  },
+  "2026-feb-bauchi-ct": {
+   "studies": [
+    "bauchi-creative-test"
+   ],
+   "first_ad_day": "2026-02-21",
+   "last_ad_day": "2026-02-25",
+   "ad_days": 4,
+   "spend": 684.94,
+   "started": 785,
+   "qualified": 515,
+   "meta_conversations": 866,
+   "started_where_conversations_recorded": 785
+  },
+  "2026-apr-bauchi-pilot": {
+   "studies": [
+    "bauchi-state-hpv-pilot"
+   ],
+   "first_ad_day": "2026-04-06",
+   "last_ad_day": "2026-04-17",
+   "ad_days": 12,
+   "spend": 3914.73,
+   "started": 633,
+   "qualified": 329,
+   "meta_conversations": 763,
+   "started_where_conversations_recorded": 633
+  },
+  "2026-apr-nstudy": {
+   "studies": [
+    "nigeria-study"
+   ],
+   "first_ad_day": "2026-04-13",
+   "last_ad_day": "2026-05-15",
+   "ad_days": 7,
+   "spend": 7699.69,
+   "started": 1810,
+   "qualified": 170,
+   "meta_conversations": 2944,
+   "started_where_conversations_recorded": 1810
+  },
+  "2026-may-bauchi-mnch": {
+   "studies": [
+    "bauchi-state-hpv-mnch-week"
+   ],
+   "first_ad_day": "2026-05-24",
+   "last_ad_day": "2026-06-19",
+   "ad_days": 27,
+   "spend": 33545.25,
+   "started": 4071,
+   "qualified": 776,
+   "meta_conversations": 7568,
+   "started_where_conversations_recorded": 4071
+  },
+  "2026-owis": {
+   "studies": [
+    "owis-nigeria-study"
+   ],
+   "first_ad_day": "2026-06-17",
+   "last_ad_day": "2026-08-07",
+   "ad_days": 30,
+   "spend": 5021.12,
+   "started": 1092,
+   "qualified": 176,
+   "meta_conversations": 0,
+   "started_where_conversations_recorded": 0
+  },
+  "2026-mentality": {
+   "studies": [
+    "mentality-pilot"
+   ],
+   "first_ad_day": "2026-07-15",
+   "last_ad_day": "2026-07-16",
+   "ad_days": 2,
+   "spend": 20.27,
+   "started": 414,
+   "qualified": 276,
+   "meta_conversations": 648,
+   "started_where_conversations_recorded": 414
+  },
+  "2026-ecd": {
+   "studies": [
+    "ecd-diagnostic"
+   ],
+   "first_ad_day": "2026-08-11",
+   "last_ad_day": "2026-08-20",
+   "ad_days": 10,
+   "spend": 364.52,
+   "started": 2646,
+   "qualified": 741,
+   "meta_conversations": 2500,
+   "started_where_conversations_recorded": 2646
   }
- ],
- "by_state": {
-  "2023_whole_states": {
-   "Lagos": {
-    "spend": 226.62,
-    "qualified": 433,
-    "cost": 0.52
+ },
+ "attribution": {
+  "2023-six-states": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 121
    },
-   "Rivers": {
-    "spend": 190.16,
-    "qualified": 260,
-    "cost": 0.73
-   },
-   "Bauchi": {
-    "spend": 321.23,
-    "qualified": 176,
-    "cost": 1.83
-   },
-   "Niger": {
-    "spend": 452.2,
-    "qualified": 139,
-    "cost": 3.25
-   },
-   "Sokoto": {
-    "spend": 709.94,
-    "qualified": 98,
-    "cost": 7.24
-   },
-   "Anambra": {
-    "spend": 1044.83,
-    "qualified": 74,
-    "cost": 14.12
-   }
+   "started_per_meta_conversation": 0.87
   },
-  "2024_radius_areas": {
-   "Abuja": {
-    "spend": 992.5,
-    "qualified": 812,
-    "cost": 1.22
+  "2023-lagos-kano": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 22,
+    "no ad metadata": 3
    },
-   "Adamawa": {
-    "spend": 3488.06,
-    "qualified": 68,
-    "cost": 51.3
-   },
-   "Nasarawa": {
-    "spend": 5536.94,
-    "qualified": 129,
-    "cost": 42.92
-   }
+   "started_per_meta_conversation": 0.92
   },
-  "2025_wider_areas": {
-   "FCT": {
-    "area": "whole territory",
-    "spend": 127.11,
-    "qualified": 145,
-    "cost": 0.88
+  "2024-sep-three-states": {
+   "unassigned": {
+    "no ad metadata": 1
    },
-   "Nasarawa": {
-    "area": "whole state",
-    "spend": 242.89,
-    "qualified": 73,
-    "cost": 3.33
+   "started_per_meta_conversation": 0.58
+  },
+  "2024-sep-long": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 17
    },
-   "Adamawa": {
-    "area": "one radius area, 33 miles (53 km), around Yola",
-    "spend": 412.95,
-    "qualified": 39,
-    "cost": 10.59
-   }
+   "started_per_meta_conversation": 0.45
+  },
+  "2024-oct-short-1": {
+   "unassigned": {},
+   "started_per_meta_conversation": 0.45
+  },
+  "2024-oct-short-2": {
+   "unassigned": {
+    "ambiguous geometry": 33,
+    "outside spend window or no matching stratum": 7,
+    "no ad metadata": 1
+   },
+   "started_per_meta_conversation": 0.76
+  },
+  "2025-feb-long-mid": {
+   "unassigned": {},
+   "started_per_meta_conversation": 0.71
+  },
+  "2025-feb-short-mid": {
+   "unassigned": {
+    "ambiguous geometry": 61,
+    "outside spend window or no matching stratum": 13
+   },
+   "started_per_meta_conversation": 0.53
+  },
+  "2025-apr-c2": {
+   "unassigned": {},
+   "started_per_meta_conversation": 0.68
+  },
+  "2025-may-signup": {
+   "unassigned": {
+    "no ad metadata": 1
+   },
+   "started_per_meta_conversation": 0.65
+  },
+  "2025-country-llm": {
+   "unassigned": {
+    "no ad metadata": 8
+   },
+   "started_per_meta_conversation": 2.09
+  },
+  "2025-nov-c2-end": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 3709,
+    "no ad metadata": 1
+   },
+   "started_per_meta_conversation": 0.74
+  },
+  "2025-dec-hpvv": {
+   "unassigned": {
+    "no ad metadata": 4
+   },
+   "started_per_meta_conversation": 0.95
+  },
+  "2025-dec-mr-test": {
+   "unassigned": {
+    "no ad metadata": 2
+   },
+   "started_per_meta_conversation": 1.03
+  },
+  "2026-jan-mr": {
+   "unassigned": {
+    "no ad metadata": 1
+   },
+   "started_per_meta_conversation": 0.9
+  },
+  "2026-feb-bauchi-ct": {
+   "unassigned": {},
+   "started_per_meta_conversation": 0.91
+  },
+  "2026-apr-bauchi-pilot": {
+   "unassigned": {
+    "no ad metadata": 2
+   },
+   "started_per_meta_conversation": 0.83
+  },
+  "2026-apr-nstudy": {
+   "unassigned": {
+    "no ad metadata": 3,
+    "outside spend window or no matching stratum": 1
+   },
+   "started_per_meta_conversation": 0.61
+  },
+  "2026-may-bauchi-mnch": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 84,
+    "no ad metadata": 3
+   },
+   "started_per_meta_conversation": 0.54
+  },
+  "2026-owis": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 44
+   },
+   "started_per_meta_conversation": null
+  },
+  "2026-mentality": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 167,
+    "no ad metadata": 1
+   },
+   "started_per_meta_conversation": 0.64
+  },
+  "2026-ecd": {
+   "unassigned": {
+    "outside spend window or no matching stratum": 32,
+    "no ad metadata": 5
+   },
+   "started_per_meta_conversation": 1.06
+  },
+  "_how_to_read": "started_per_meta_conversation at or below 1 means the survey saw no more starters than Meta counted conversations from those ad sets: consistent with every starter being ad-driven. owis records no conversation metric; the llm recruitment records it on 9 of 28 stratum-days, so its ratio is not a test.",
+  "_ambiguous": {
+   "2023-six-states|by-creative": 2,
+   "2023-six-states|ambiguous-same-geometry": 2,
+   "2024-sep-long|by-creative": 505,
+   "2024-oct-short-1|by-creative": 3594,
+   "2024-oct-short-2|by-creative": 4977,
+   "2024-oct-short-2|by-live-ad-set": 2193,
+   "2024-oct-short-2|ambiguous-same-geometry": 407,
+   "2025-feb-long-mid|by-creative": 1759,
+   "2025-feb-short-mid|by-creative": 6971,
+   "2025-feb-short-mid|by-live-ad-set": 3,
+   "2025-country-llm|ambiguous-same-geometry": 431
+  },
+  "_spend_not_attributed": {
+   "2023-six-states|Nigeria_HPV_Test|State:Anambra,Gender:Female": 0.94,
+   "2023-six-states|Nigeria_HPV_Test|State:Anambra,Gender:Male": 0.83,
+   "2023-six-states|Nigeria_HPV_Test|State:Bauchi,Gender:Female": 0.77,
+   "2023-six-states|Nigeria_HPV_Test|State:Bauchi,Gender:Male": 0.87,
+   "2023-six-states|Nigeria_HPV_Test|State:Lagos,Gender:Female": 0.82,
+   "2023-six-states|Nigeria_HPV_Test|State:Lagos,Gender:Male": 0.8,
+   "2023-six-states|Nigeria_HPV_Test|State:Niger,Gender:Female": 0.89,
+   "2023-six-states|Nigeria_HPV_Test|State:Niger,Gender:Male": 0.84,
+   "2023-six-states|Nigeria_HPV_Test|State:Rivers,Gender:Female": 0.92,
+   "2023-six-states|Nigeria_HPV_Test|State:Rivers,Gender:Male": 0.9,
+   "2023-six-states|Nigeria_HPV_Test|State:Sokoto,Gender:Female": 0.99,
+   "2023-six-states|Nigeria_HPV_Test|State:Sokoto,Gender:Male": 0.87
+  }
+ },
+ "excluded_places": {
+  "EXCLUDED: Anambra and Bauchi in one ad set ($20)": {
+   "spend": 19.56,
+   "starters": 68,
+   "families": [
+    "2023-six-states"
+   ]
+  },
+  "EXCLUDED: Meta place 'Kirfi LGA' pinned 67 km from Kirfi": {
+   "spend": 256.67,
+   "starters": 321,
+   "families": [
+    "2026-apr-bauchi-pilot"
+   ]
   }
  },
  "excluded_for_review": {
-  "under_7_ad_days": [
-   "2-short-b-hpv-baseline-nigeria (2)",
-   "bauchi-creative-test (5)",
-   "group-a/group-b-hpv-baseline-short-nigeria (6)",
-   "nigeria-hpv-test-2024 (4)",
-   "nigeria-mr-campaign (4)",
-   "mentality-pilot (2)"
-  ],
-  "follow_up_waves": [
-   "all *-midline-*",
-   "vaxsocial-campaign-2-endline"
-  ],
-  "under_500_or_200": [
-   "ecd-diagnostic ($365)",
-   "llm-bias-nigeria-pilot ($143)",
-   "dkt-study-nigeria ($276)",
-   "nigeria-study (170 qualified)",
-   "nigeria_hpv_northern_women_addition (132 qualified)"
-  ],
-  "report_does_not_reconcile": [
-   "owis-nigeria-study (report $656 of $5,021)"
-  ],
-  "unclear_what_happened": [
-   "hpv-nigeria-pilot: shares its 1,300 respondents with four no-spend sibling studies",
-   "hpv-nigeria-long-b: shares respondents with nigeria-hpv-long, which has no spend"
-  ],
   "naira_account": [
-   "cohort-2-pilot*",
-   "fly_test",
-   "test"
+   "cohort-2-pilot, -2, -3, -4, -5, fly_test, test (account ...7286, naira; Flier 1 and Flier 3 campaigns also shared between studies)"
   ],
-  "targeting_not_as_stated": [
-   "bauchi-state-hpv-pilot: Kirfi 'place' pinned 67 km from Kirfi, near Bauchi city",
-   "campaign-2-nigeria-hpv-baseline: areas A/B mix whole states, single radius areas and exclusions"
+  "no_respondent_data": [
+   "upswell-fogg-1, upswell-fogg-2 (2022, Typeform destination: no respondents in our database; reports cover $399 of $870 and $165 of $2,482)"
   ],
-  "not_explained": [
-   "bauchi-state-hpv-mnch-week: whole Bauchi State, one group, $45.70 per phone number (734 of 3,773 who started)"
+  "no_ads_or_re_contacts": [
+   "vl-pulse-nigeria-smoke ($0), vl-pulse-nigeria-smoke-wa ($1.79)",
+   "hpv-nigeria, hpv-nigeria-scale-up, test-custom-audience, nigeria-full-study (no spend; their people are other recruitments' people)",
+   "nigeria-hausa-pilot, wb-fossil-fuel-subsidies-nigeria, nigeriahpv-fly-config ($0)"
+  ],
+  "places_out": [
+   "Kirfi: Meta place 'Kirfi LGA' 67 km from Kirfi, near Bauchi city ($257, 321 started)",
+   "Anambra and Bauchi in one ad set ($20, 68 started, 0 qualified)",
+   "Dambam radius area: 30 started (under 50)"
+  ],
+  "spend_not_attributed": [
+   "$10.46 of the first 2023 run's ad sets carry stratum ids from an earlier configuration and are not in the final strata"
   ]
  }
 }
