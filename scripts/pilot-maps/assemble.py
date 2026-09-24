@@ -7,6 +7,8 @@ for k,f in [("NG2023","nigeria-2023-states.svg"),("ID","indonesia.svg"),("BO","b
 extra=[C+'/BD/section.html',C+'/PK/section.html',C+'/KE/section.html',C+'/US/section.html']+sorted(glob.glob(C+'/MENA/section-*.html'))
 secs=[open(f).read() for f in extra if os.path.exists(f)]
 t=t.replace('{{EXTRA_SECTIONS}}','\n'.join(secs))
+for k,f in [('KE','countries/KE/kenya-places.svg')]:
+    if os.path.exists(SP+'/'+f): t=t.replace('{{'+k+'}}',open(SP+'/'+f).read())
 order=['nigeria','bangladesh','pakistan','indonesia','kenya','united-states','iraq','jordan','egypt','saudi-arabia','morocco','bolivia','rules']
 names={'united-states':'United States','saudi-arabia':'Saudi Arabia'}
 ids=re.findall(r'<section id="([^"]+)" role="tabpanel"',t)

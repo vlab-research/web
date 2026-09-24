@@ -1,20 +1,22 @@
 {
  "_meta": {
   "generated": "2026-09-24",
-  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "status": "PILOT, place design (recipe 2026-09-24). Not registered in CLAIMS.md, not on the site.",
   "rules": [
-   "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
-   "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
-   "Ads ran at least 7 days",
-   "At least $500 of advertising and at least 200 qualified respondents",
-   "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
-   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
-   "The targeting can be stated in a sentence, and it did what it said",
-   "The result can be explained"
+   "USD ad account (tested by CPM where impressions exist; otherwise by the account's other studies)",
+   "Spend attributable to the stratum: Insights spend per ad set, days with spend > 0",
+   "People recruited by ads: counted only if the ad set's labels are written at their first message",
+   "Siblings de-duplicated: a person already in the sibling recruitment counts there only",
+   "The pin or region is where it claims to be",
+   "The qualifying rule is known; qualified people are counted under each recruitment's final quota rule",
+   "Places pool identical targeting geometries across recruitments: spend and people summed, never ratios averaged",
+   "Cost per qualified is never pooled across recruitments with different quota rules"
   ],
   "definitions": {
-   "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants). In the Kenya study the quota rule is answering the LAST question of the baseline survey, so a qualified respondent there is a completer.",
-   "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+   "qualified_respondent": "in one of the recruitment's quota groups and past its final question_targeting rule, counted from inference_data for attributed starters (not from the report). In Kenya every rule is the last or near-last question before payment details.",
+   "ad_cost": "Insights spend / qualified respondents, per recruitment and place. Excludes incentives, the survey platform and our fee.",
+   "started": "a person whose first message in the recruitment carried the ad set's labels (inference_data stratum variables sharing the person's earliest timestamp). The headline denominator.",
+   "ad_cost_per_started": "Insights spend on the place's ad sets / people who started from them"
   },
   "terms": {
    "radius_area": "a pin Meta lets an advertiser drop on the map, with a radius of 1-80 km (Marketing API custom_locations). 'Inside the radius areas' and 'outside them' are the two sides of that line. Never 'circles' (too plain, per Nandan) and never urban/rural (official definitions vary; the targeting rarely matches them)",
@@ -24,106 +26,945 @@
   "queries": "countries/KE/build.py (read-only SELECTs; --fetch re-pulls)"
  },
  "country": "KE",
- "status": "STILL FIELDING at pull time: recruitment end_date 2026-09-25; report pulled 2026-09-24 12:39 UTC. Re-pull after it closes.",
+ "design": "place (recipe: 'The unit is the place, not the study')",
  "all_people_surveyed": {
   "unique_people": 19006,
   "first": "2024-08-27",
   "last": "2026-09-24",
   "studies": 8,
-  "note": "Anyone who answered in any Kenya study on the current platform (distinct inference_data user_id); includes test entries before ads began"
+  "note": "anyone in any Kenya study on the current platform (distinct inference_data user_id), including test entries before ads"
  },
- "study": {
-  "slug": "girl-effect",
-  "phase": "second recruitment phase, from 2026-07-16; the report's lifetime_spent starts there",
-  "fielded": "16 Jul – 24 Sep 2026",
-  "ad_days": 51,
-  "ad_pause": "20 Aug – 9 Sep 2026 (no spend)",
-  "started_survey": 6900,
-  "qualified": 3636,
-  "spend": 21649.02,
-  "cost": 5.95,
-  "cpm_usd": 0.66,
-  "channel": "Messenger",
-  "incentive": "prepaid mobile credit, 'up to 300 KSh' per the welcome message; recruitment conf incentive_per_respondent = 0.69 (USD)",
-  "quota_rule": "arrived through the men's or women's ad set and answered gnormi_phone, the last question of the baseline survey (a gender-norms item about a household's one phone, NOT a phone-number question)",
-  "quotas": "Gender (men, women), ages 18–30, whole country; quota 50/50 from 17 Aug (women 99% to 29 Jul, 80% to 6 Aug, 60% to 17 Aug)",
-  "target_max_sample": 12000
+ "totals": {
+  "spend": 27187.46,
+  "started": 18332,
+  "qualified": 8985
  },
- "by_gender": {
+ "places": {
+  "KE": {
+   "spend": 25944.66,
+   "started": 13689,
+   "qualified": 6512,
+   "recruitments": [
+    "2025-05",
+    "2025-08",
+    "2025-12",
+    "2026-01",
+    "2026-05",
+    "2026-07"
+   ],
+   "first": "2025-05-04",
+   "last": "2026-09-24",
+   "cost_per_started": 1.9,
+   "by_recruitment": [
+    {
+     "spend": 1569.59,
+     "started": 3533,
+     "qualified": 1567,
+     "recruitments": [
+      "2025-05"
+     ],
+     "first": "2025-05-04",
+     "last": "2025-07-14",
+     "cost_per_started": 0.44,
+     "who_qualified": "aged 18–24, mostly women, chosen by Meta interests; reached the end of the questions, about 13 minutes in",
+     "cost_per_qualified": 1.0
+    },
+    {
+     "spend": 41.39,
+     "started": 1099,
+     "qualified": 133,
+     "recruitments": [
+      "2025-08"
+     ],
+     "first": "2025-08-11",
+     "last": "2025-08-14",
+     "cost_per_started": 0.04,
+     "who_qualified": "aged 18–65, chose English; reached the end of the questions, about 13 minutes in",
+     "cost_per_qualified": 0.31
+    },
+    {
+     "spend": 73.19,
+     "started": 731,
+     "qualified": 519,
+     "recruitments": [
+      "2025-12"
+     ],
+     "first": "2025-12-03",
+     "last": "2025-12-13",
+     "cost_per_started": 0.1,
+     "who_qualified": "aged 18–30; reached the end of the questions, about 21 minutes in",
+     "cost_per_qualified": 0.14
+    },
+    {
+     "spend": 37.15,
+     "started": 446,
+     "qualified": 203,
+     "recruitments": [
+      "2026-01"
+     ],
+     "first": "2026-01-14",
+     "last": "2026-01-26",
+     "cost_per_started": 0.08,
+     "who_qualified": "aged 18–30; reached the end of the questions, about 23 minutes in",
+     "cost_per_qualified": 0.18
+    },
+    {
+     "spend": 2574.32,
+     "started": 1284,
+     "qualified": 674,
+     "recruitments": [
+      "2026-05"
+     ],
+     "first": "2026-05-20",
+     "last": "2026-07-07",
+     "cost_per_started": 2.0,
+     "who_qualified": "aged 18–30; reached the end of the questions, about 20 minutes in",
+     "cost_per_qualified": 3.82
+    },
+    {
+     "spend": 21649.02,
+     "started": 6596,
+     "qualified": 3416,
+     "recruitments": [
+      "2026-07"
+     ],
+     "first": "2026-07-16",
+     "last": "2026-09-24",
+     "cost_per_started": 3.28,
+     "who_qualified": "aged 18–30; reached the end of the questions, about 18 minutes in",
+     "cost_per_qualified": 6.34
+    }
+   ],
+   "label": "Whole country",
+   "geometry": "all of Kenya",
+   "flag_under_200_started": false
+  },
+  "KE-NBO": {
+   "spend": 236.11,
+   "started": 1330,
+   "qualified": 624,
+   "recruitments": [
+    "2025-05"
+   ],
+   "first": "2025-05-04",
+   "last": "2025-06-15",
+   "cost_per_started": 0.18,
+   "by_recruitment": [
+    {
+     "spend": 236.11,
+     "started": 1330,
+     "qualified": 624,
+     "recruitments": [
+      "2025-05"
+     ],
+     "first": "2025-05-04",
+     "last": "2025-06-15",
+     "cost_per_started": 0.18,
+     "who_qualified": "aged 18–24, mostly women, chosen by Meta interests; reached the end of the questions, about 13 minutes in",
+     "cost_per_qualified": 0.38
+    }
+   ],
+   "label": "Whole country except Nairobi",
+   "geometry": "Nairobi excluded, 24 km",
+   "flag_under_200_started": false
+  },
+  "KE-10": {
+   "spend": 922.54,
+   "started": 1645,
+   "qualified": 522,
+   "recruitments": [
+    "2025-05"
+   ],
+   "first": "2025-05-04",
+   "last": "2025-07-14",
+   "cost_per_started": 0.56,
+   "by_recruitment": [
+    {
+     "spend": 922.54,
+     "started": 1645,
+     "qualified": 522,
+     "recruitments": [
+      "2025-05"
+     ],
+     "first": "2025-05-04",
+     "last": "2025-07-14",
+     "cost_per_started": 0.56,
+     "who_qualified": "aged 18–24, mostly women, chosen by Meta interests; reached the end of the questions, about 13 minutes in",
+     "cost_per_qualified": 1.77
+    }
+   ],
+   "label": "Whole country except 10 cities",
+   "geometry": "10 cities excluded, 16 km",
+   "flag_under_200_started": false
+  },
+  "IN81": {
+   "spend": 70.16,
+   "started": 1090,
+   "qualified": 859,
+   "recruitments": [
+    "2024-09",
+    "2025-02"
+   ],
+   "first": "2024-09-23",
+   "last": "2025-02-19",
+   "cost_per_started": 0.06,
+   "by_recruitment": [
+    {
+     "spend": 6.4,
+     "started": 189,
+     "qualified": 110,
+     "recruitments": [
+      "2024-09"
+     ],
+     "first": "2024-09-23",
+     "last": "2024-09-27",
+     "cost_per_started": 0.03,
+     "who_qualified": "aged 18–35; reached the end of the questions, about 21 minutes in",
+     "cost_per_qualified": 0.06
+    },
+    {
+     "spend": 63.76,
+     "started": 901,
+     "qualified": 749,
+     "recruitments": [
+      "2025-02"
+     ],
+     "first": "2025-02-05",
+     "last": "2025-02-19",
+     "cost_per_started": 0.07,
+     "who_qualified": "aged 18–35; reached the end of the questions, about 19 minutes in",
+     "cost_per_qualified": 0.09
+    }
+   ],
+   "label": "Inside 81 radius areas",
+   "geometry": "around 81 towns, 2–9 km",
+   "flag_under_200_started": false
+  },
+  "OUT81": {
+   "spend": 13.99,
+   "started": 578,
+   "qualified": 468,
+   "recruitments": [
+    "2024-09",
+    "2025-02"
+   ],
+   "first": "2024-09-23",
+   "last": "2025-02-18",
+   "cost_per_started": 0.02,
+   "by_recruitment": [
+    {
+     "spend": 4.16,
+     "started": 92,
+     "qualified": 50,
+     "recruitments": [
+      "2024-09"
+     ],
+     "first": "2024-09-23",
+     "last": "2024-09-27",
+     "cost_per_started": 0.05,
+     "who_qualified": "aged 18–35; reached the end of the questions, about 21 minutes in",
+     "cost_per_qualified": 0.08
+    },
+    {
+     "spend": 9.83,
+     "started": 486,
+     "qualified": 418,
+     "recruitments": [
+      "2025-02"
+     ],
+     "first": "2025-02-05",
+     "last": "2025-02-18",
+     "cost_per_started": 0.02,
+     "who_qualified": "aged 18–35; reached the end of the questions, about 19 minutes in",
+     "cost_per_qualified": 0.02
+    }
+   ],
+   "label": "Outside the 81 radius areas",
+   "geometry": "the rest of Kenya",
+   "flag_under_200_started": false
+  }
+ },
+ "by_gender_whole_country": {
   "Men": {
-   "spend": 11841.29,
-   "insights_spend": 11841.29,
-   "qualified": 2162,
-   "cost": 5.48,
-   "entered_survey": 3376,
-   "reached_last_question_pct": 64,
-   "median_minutes_to_last_question": 16.3,
-   "ad_days": 38
+   "spend": 11932.32,
+   "started": 5515,
+   "qualified": 3236,
+   "recruitments": [
+    "2025-05",
+    "2025-08",
+    "2025-12",
+    "2026-01",
+    "2026-05",
+    "2026-07"
+   ],
+   "first": "2025-05-04",
+   "last": "2026-09-24",
+   "cost_per_started": 2.16
   },
   "Women": {
-   "spend": 9807.73,
-   "insights_spend": 9807.73,
-   "qualified": 1474,
-   "cost": 6.65,
-   "entered_survey": 3452,
-   "reached_last_question_pct": 43,
-   "median_minutes_to_last_question": 19.0,
-   "ad_days": 46
+   "spend": 14012.34,
+   "started": 8174,
+   "qualified": 3276,
+   "recruitments": [
+    "2025-05",
+    "2025-08",
+    "2025-12",
+    "2026-01",
+    "2026-05",
+    "2026-07"
+   ],
+   "first": "2025-05-04",
+   "last": "2026-09-24",
+   "cost_per_started": 1.71
   }
  },
- "strata": [
+ "recruitments": [
   {
-   "id": "gender:men,location:geography",
-   "current_participants": null,
-   "lifetime_spent": 0.09,
-   "current_price_per_participant": null
+   "id": "2024-09",
+   "study": "kenya-tvet-scoping-pilot",
+   "who_qualified": "aged 18–35; reached the end of the questions, about 21 minutes in",
+   "median_minutes_to_qualify": 21,
+   "ad_days": 4,
+   "first": "2024-09-23",
+   "last": "2024-09-27",
+   "spend": 10.56,
+   "started": 281,
+   "qualified": 160,
+   "not_attributed": {
+    "no ad-set labels at first record (not attributable to an ad)": 8,
+    "first message outside the ad window": 2
+   },
+   "strata": [
+    {
+     "stratum": "gender:men,location:rural",
+     "place": "OUT81",
+     "gender": "Men",
+     "spend": 1.39,
+     "spend_days": 2,
+     "first": "2024-09-23",
+     "last": "2024-09-24",
+     "impressions": 0,
+     "started": 56,
+     "qualified": 30,
+     "median_minutes": 20.5
+    },
+    {
+     "stratum": "gender:men,location:urban",
+     "place": "IN81",
+     "gender": "Men",
+     "spend": 1.94,
+     "spend_days": 3,
+     "first": "2024-09-23",
+     "last": "2024-09-27",
+     "impressions": 0,
+     "started": 97,
+     "qualified": 65,
+     "median_minutes": 21.2
+    },
+    {
+     "stratum": "gender:women,location:rural",
+     "place": "OUT81",
+     "gender": "Women",
+     "spend": 2.77,
+     "spend_days": 4,
+     "first": "2024-09-23",
+     "last": "2024-09-27",
+     "impressions": 0,
+     "started": 36,
+     "qualified": 20,
+     "median_minutes": 19.1
+    },
+    {
+     "stratum": "gender:women,location:urban",
+     "place": "IN81",
+     "gender": "Women",
+     "spend": 4.46,
+     "spend_days": 4,
+     "first": "2024-09-23",
+     "last": "2024-09-27",
+     "impressions": 0,
+     "started": 92,
+     "qualified": 45,
+     "median_minutes": 22.1
+    }
+   ]
   },
   {
-   "id": "gender:men,location:location",
-   "current_participants": 2162,
-   "lifetime_spent": 11841.289999999999,
-   "current_price_per_participant": 5.24
+   "id": "2025-02",
+   "study": "kenya-tvet-scoping-survey",
+   "who_qualified": "aged 18–35; reached the end of the questions, about 19 minutes in",
+   "median_minutes_to_qualify": 19,
+   "ad_days": 12,
+   "first": "2025-02-05",
+   "last": "2025-02-19",
+   "spend": 73.59,
+   "started": 1387,
+   "qualified": 1167,
+   "not_attributed": {
+    "first message outside the ad window": 301,
+    "no ad-set labels at first record (not attributable to an ad)": 8
+   },
+   "strata": [
+    {
+     "stratum": "location:rural",
+     "place": "OUT81",
+     "gender": null,
+     "spend": 9.83,
+     "spend_days": 9,
+     "first": "2025-02-05",
+     "last": "2025-02-18",
+     "impressions": 0,
+     "started": 486,
+     "qualified": 418,
+     "median_minutes": 19.1
+    },
+    {
+     "stratum": "location:urban",
+     "place": "IN81",
+     "gender": null,
+     "spend": 63.76,
+     "spend_days": 12,
+     "first": "2025-02-05",
+     "last": "2025-02-19",
+     "impressions": 0,
+     "started": 901,
+     "qualified": 749,
+     "median_minutes": 19.4
+    }
+   ]
   },
   {
-   "id": "gender:women,location:geography",
-   "current_participants": null,
-   "lifetime_spent": 8.11,
-   "current_price_per_participant": null
+   "id": "2025-05",
+   "study": "shujaaz-free2choose-digital-evaluation",
+   "who_qualified": "aged 18–24, mostly women, chosen by Meta interests; reached the end of the questions, about 13 minutes in",
+   "median_minutes_to_qualify": 13,
+   "ad_days": 40,
+   "first": "2025-05-04",
+   "last": "2025-07-14",
+   "spend": 2728.24,
+   "started": 6508,
+   "qualified": 2713,
+   "not_attributed": {
+    "first message outside the ad window": 5
+   },
+   "strata": [
+    {
+     "stratum": "Barasa Amerix",
+     "place": "KE",
+     "gender": "Men",
+     "spend": 52.22,
+     "spend_days": 9,
+     "first": "2025-05-04",
+     "last": "2025-06-12",
+     "impressions": 70838,
+     "started": 1088,
+     "qualified": 781,
+     "median_minutes": 12.0
+    },
+    {
+     "stratum": "Barasa Wa Town",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 363.61,
+     "spend_days": 32,
+     "first": "2025-05-04",
+     "last": "2025-06-15",
+     "impressions": 641036,
+     "started": 1272,
+     "qualified": 482,
+     "median_minutes": 14.2
+    },
+    {
+     "stratum": "Nice Girl Nana",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 1152.23,
+     "spend_days": 34,
+     "first": "2025-05-04",
+     "last": "2025-07-14",
+     "impressions": 1319661,
+     "started": 1107,
+     "qualified": 304,
+     "median_minutes": 12.2
+    },
+    {
+     "stratum": "Nina Baddie",
+     "place": "KE-NBO",
+     "gender": "Women",
+     "spend": 235.57,
+     "spend_days": 33,
+     "first": "2025-05-04",
+     "last": "2025-06-15",
+     "impressions": 445230,
+     "started": 1314,
+     "qualified": 624,
+     "median_minutes": 11.7
+    },
+    {
+     "stratum": "Nina Siri",
+     "place": "KE-10",
+     "gender": "Women",
+     "spend": 922.05,
+     "spend_days": 34,
+     "first": "2025-05-04",
+     "last": "2025-07-14",
+     "impressions": 1267707,
+     "started": 1637,
+     "qualified": 522,
+     "median_minutes": 14.3
+    },
+    {
+     "stratum": "ba",
+     "place": "KE",
+     "gender": "Men",
+     "spend": 0.52,
+     "spend_days": 1,
+     "first": "2025-05-05",
+     "last": "2025-05-05",
+     "impressions": 0,
+     "started": 54,
+     "qualified": 0,
+     "median_minutes": null
+    },
+    {
+     "stratum": "bwt",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 0.51,
+     "spend_days": 1,
+     "first": "2025-05-05",
+     "last": "2025-05-05",
+     "impressions": 0,
+     "started": 8,
+     "qualified": 0,
+     "median_minutes": null
+    },
+    {
+     "stratum": "nb",
+     "place": "KE-NBO",
+     "gender": "Women",
+     "spend": 0.54,
+     "spend_days": 1,
+     "first": "2025-05-05",
+     "last": "2025-05-05",
+     "impressions": 0,
+     "started": 16,
+     "qualified": 0,
+     "median_minutes": null
+    },
+    {
+     "stratum": "ngn",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 0.5,
+     "spend_days": 1,
+     "first": "2025-05-05",
+     "last": "2025-05-05",
+     "impressions": 0,
+     "started": 4,
+     "qualified": 0,
+     "median_minutes": null
+    },
+    {
+     "stratum": "ns",
+     "place": "KE-10",
+     "gender": "Women",
+     "spend": 0.49,
+     "spend_days": 1,
+     "first": "2025-05-05",
+     "last": "2025-05-05",
+     "impressions": 0,
+     "started": 8,
+     "qualified": 0,
+     "median_minutes": null
+    }
+   ]
   },
   {
-   "id": "gender:women,location:location",
-   "current_participants": 1474,
-   "lifetime_spent": 9807.730000000001,
-   "current_price_per_participant": 7.95
+   "id": "2025-08",
+   "study": "llm-bias-kenya-pilot",
+   "who_qualified": "aged 18–65, chose English; reached the end of the questions, about 13 minutes in",
+   "median_minutes_to_qualify": 13,
+   "ad_days": 4,
+   "first": "2025-08-11",
+   "last": "2025-08-14",
+   "spend": 41.39,
+   "started": 1099,
+   "qualified": 133,
+   "not_attributed": {
+    "no ad-set labels at first record (not attributable to an ad)": 1
+   },
+   "strata": [
+    {
+     "stratum": "men",
+     "place": "KE",
+     "gender": "Men",
+     "spend": 20.98,
+     "spend_days": 4,
+     "first": "2025-08-11",
+     "last": "2025-08-14",
+     "impressions": 14182,
+     "started": 706,
+     "qualified": 87,
+     "median_minutes": 12.6
+    },
+    {
+     "stratum": "women",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 20.41,
+     "spend_days": 4,
+     "first": "2025-08-11",
+     "last": "2025-08-14",
+     "impressions": 18418,
+     "started": 393,
+     "qualified": 46,
+     "median_minutes": 12.5
+    }
+   ]
+  },
+  {
+   "id": "2025-12",
+   "study": "girl-effect-pilot",
+   "who_qualified": "aged 18–30; reached the end of the questions, about 21 minutes in",
+   "median_minutes_to_qualify": 21,
+   "ad_days": 5,
+   "first": "2025-12-03",
+   "last": "2025-12-13",
+   "spend": 73.19,
+   "started": 731,
+   "qualified": 519,
+   "not_attributed": {
+    "no ad-set labels at first record (not attributable to an ad)": 5
+   },
+   "strata": [
+    {
+     "stratum": "men",
+     "place": "KE",
+     "gender": "Men",
+     "spend": 4.59,
+     "spend_days": 3,
+     "first": "2025-12-03",
+     "last": "2025-12-05",
+     "impressions": 3778,
+     "started": 220,
+     "qualified": 181,
+     "median_minutes": 18.4
+    },
+    {
+     "stratum": "women",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 68.6,
+     "spend_days": 5,
+     "first": "2025-12-03",
+     "last": "2025-12-13",
+     "impressions": 92695,
+     "started": 511,
+     "qualified": 338,
+     "median_minutes": 22.1
+    }
+   ]
+  },
+  {
+   "id": "2026-01",
+   "study": "girl-effect-pilot-2",
+   "who_qualified": "aged 18–30; reached the end of the questions, about 23 minutes in",
+   "median_minutes_to_qualify": 23,
+   "ad_days": 8,
+   "first": "2026-01-14",
+   "last": "2026-01-26",
+   "spend": 37.15,
+   "started": 446,
+   "qualified": 203,
+   "not_attributed": {
+    "first message outside the ad window": 736,
+    "no ad-set labels at first record (not attributable to an ad)": 1
+   },
+   "strata": [
+    {
+     "stratum": "men",
+     "place": "KE",
+     "gender": "Men",
+     "spend": 2.05,
+     "spend_days": 2,
+     "first": "2026-01-16",
+     "last": "2026-01-26",
+     "impressions": 2307,
+     "started": 98,
+     "qualified": 60,
+     "median_minutes": 21.2
+    },
+    {
+     "stratum": "women",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 35.1,
+     "spend_days": 8,
+     "first": "2026-01-14",
+     "last": "2026-01-26",
+     "impressions": 47585,
+     "started": 348,
+     "qualified": 143,
+     "median_minutes": 23.9
+    }
+   ]
+  },
+  {
+   "id": "2026-05",
+   "study": "girl-effect",
+   "who_qualified": "aged 18–30; reached the end of the questions, about 20 minutes in",
+   "median_minutes_to_qualify": 20,
+   "ad_days": 23,
+   "first": "2026-05-20",
+   "last": "2026-07-07",
+   "spend": 2574.32,
+   "started": 1284,
+   "qualified": 674,
+   "not_attributed": {
+    "labelled for the other phase": 6596,
+    "no ad-set labels at first record (not attributable to an ad)": 1702,
+    "first message outside the ad window": 56
+   },
+   "strata": [
+    {
+     "stratum": "men",
+     "place": "KE",
+     "gender": "Men",
+     "spend": 10.67,
+     "spend_days": 3,
+     "first": "2026-05-20",
+     "last": "2026-06-11",
+     "impressions": 14359,
+     "started": 132,
+     "qualified": 114,
+     "median_minutes": 17.6
+    },
+    {
+     "stratum": "women",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 2563.65,
+     "spend_days": 23,
+     "first": "2026-05-20",
+     "last": "2026-07-07",
+     "impressions": 7828086,
+     "started": 1152,
+     "qualified": 560,
+     "median_minutes": 20.8
+    }
+   ]
+  },
+  {
+   "id": "2026-07",
+   "study": "girl-effect",
+   "who_qualified": "aged 18–30; reached the end of the questions, about 18 minutes in",
+   "median_minutes_to_qualify": 18,
+   "ad_days": 51,
+   "first": "2026-07-16",
+   "last": "2026-09-24",
+   "spend": 21649.02,
+   "started": 6596,
+   "qualified": 3416,
+   "not_attributed": {
+    "labelled for the other phase": 1340,
+    "no ad-set labels at first record (not attributable to an ad)": 1702
+   },
+   "strata": [
+    {
+     "stratum": "men",
+     "place": "KE",
+     "gender": "Men",
+     "spend": 11841.29,
+     "spend_days": 38,
+     "first": "2026-07-16",
+     "last": "2026-09-24",
+     "impressions": 15886677,
+     "started": 3217,
+     "qualified": 2013,
+     "median_minutes": 17.1
+    },
+    {
+     "stratum": "women",
+     "place": "KE",
+     "gender": "Women",
+     "spend": 9807.73,
+     "spend_days": 46,
+     "first": "2026-07-16",
+     "last": "2026-09-24",
+     "impressions": 16683445,
+     "started": 3379,
+     "qualified": 1403,
+     "median_minutes": 19.6
+    }
+   ]
   }
  ],
- "checks": [
-  "report lifetime_spent per active group equals Insights spend since 2026-07-16 to the cent: men 11841.29 / 11841.29, women 9807.73 / 9807.73",
-  "two retired ad sets (location:geography) carry $8.20 in the report and no Insights spend after 16 Jul; left out of the total",
-  "CPM $0.66: a USD account",
-  "no campaign shared with another study",
-  "prior respondents excluded by custom audience, so phase 2 recruits new people",
-  "phase 1 (2026-05-20 – 2026-07-07, $2574.32 Insights) is not in the report's lifetime and is left out"
- ],
- "excluded_for_review": {
-  "report_does_not_cover_it": [
-   "girl-effect, phase 1 (20 May – 7 Jul 2026, $2,574 Insights, 90–99% women quota while the budget was tested): the report's lifetime_spent restarts at the 16 Jul start_date, so this spend cannot be reconciled per group"
+ "geography": {
+  "pins": 81,
+  "pins_named": [
+   "Mogotio",
+   "Nkubu",
+   "Bondo",
+   "Kisumu",
+   "Ahero",
+   "Molo",
+   "Ol Kalou",
+   "Nakuru",
+   "Njoro",
+   "Chuka",
+   "Kericho",
+   "Njoro",
+   "Sondu",
+   "Nyeri",
+   "Garissa",
+   "Karatina",
+   "Kerugoya",
+   "Gilgil",
+   "Oyugis",
+   "Homa Bay",
+   "Embu",
+   "Sindo",
+   "Nyamira",
+   "Kutus",
+   "Kebirigo",
+   "Kisii",
+   "Nyambunwa",
+   "Naivasha",
+   "Murang’a",
+   "Rongo",
+   "Keroka",
+   "Bomet",
+   "Ogembo",
+   "Karungu",
+   "Awendo",
+   "Mwingi",
+   "Kenol",
+   "Kilgoris",
+   "Thika",
+   null,
+   "Migori",
+   "Narok",
+   "Kihancha",
+   null,
+   "Kangundo",
+   "Kitui",
+   null,
+   "Hola",
+   "Machakos",
+   "Makueni Boma",
+   "Kajiado",
+   "Malindi",
+   "Kilifi",
+   "Kaloleni",
+   "Mariakani",
+   "Ukunda",
+   "Mbale",
+   "Meru",
+   "Dadaab",
+   "Siaya",
+   "Mbale",
+   "Timau",
+   null,
+   "Mbale",
+   "Ogunja",
+   "Khayega",
+   null,
+   "Mumias",
+   "Lare",
+   "Isiolo",
+   "Eldoret",
+   "Bungoma",
+   "Iten",
+   "Moi‘s Bridge",
+   "Kitale",
+   "Maralal",
+   "Makutano",
+   "Wajir",
+   "Lodwar",
+   "Bute",
+   "Takaba"
   ],
-  "targeting_not_statable_and_not_explained": [
-   "shujaaz-free2choose-digital-evaluation (4 May – 14 Jul 2025, 52 ad days, $2,728 Insights / $2,721 report, 2,713 qualified, $1.00 each): passes rules 1–6 but fails 7 and 8. Five ad sets are a brand's audience personas, each a different age band (18 only, 18–21, 22–24) and gender with stacks of Meta interests (some irrelevant, e.g. US alumni associations); one excludes 10 Meta cities at 10 mi, one excludes Nairobi at 15 mi, none targets inside them. Quotas switched on and off six times. Qualification is by the survey's own persona classification, not by ad set, so per-group costs run $0.07 to $3.79 and mean nothing (781 'qualified' in a group whose ad set spent $51)."
-  ],
-  "under_500_or_200": [
-   "kenya-tvet-scoping-survey ($74 Insights; also report $60 of $74, no impressions recorded so CPM untestable, and $0.05 per qualified is not explainable). The only Kenya study with an inside/outside radius-area design (81 pins of 2–9 km)",
-   "girl-effect-pilot ($73)",
-   "girl-effect-pilot-2 ($37)"
-  ],
-  "under_7_ad_days": [
-   "kenya-tvet-scoping-pilot (5 days, $11)",
-   "llm-bias-kenya-pilot (4 days, $41; the Swahili groups spent $41 and qualified nobody)"
-  ],
-  "no_ad_spend": [
-   "kenya-tvet (2026): 6 groups (men/women x control/t1/t2 clusters) over 263 radius areas of 5 km (control/t1/t2 clusters), recruitment conf 1–15 Sep 2026, budget $5,000, but no spend in Insights, no report and 7 people. Either never launched or its campaign is not recorded; worth asking"
+  "excluded_cities": [
+   [
+    "Eldoret",
+    0.52036,
+    35.26993,
+    16.1
+   ],
+   [
+    "Garissa",
+    -0.45275,
+    39.64601,
+    16.1
+   ],
+   [
+    "Kakamega",
+    0.28422,
+    34.75229,
+    16.1
+   ],
+   [
+    "Kisumu",
+    -0.10221,
+    34.76171,
+    16.1
+   ],
+   [
+    "Kitale",
+    1.01572,
+    35.00622,
+    16.1
+   ],
+   [
+    "Malindi",
+    -3.21799,
+    40.11692,
+    16.1
+   ],
+   [
+    "Mombasa",
+    -4.05466,
+    39.66359,
+    16.1
+   ],
+   [
+    "Nairobi",
+    -1.28333,
+    36.81667,
+    16.1
+   ],
+   [
+    "Nakuru",
+    -0.30719,
+    36.07225,
+    16.1
+   ],
+   [
+    "Thika",
+    -1.03326,
+    37.06933,
+    16.1
+   ],
+   [
+    "Nairobi",
+    -1.28333,
+    36.81667,
+    24.1
+   ]
   ]
  },
- "strata_note": "Stratum ids are the study's own labels; 'location:location' is the whole country. The persona labels in the excluded study are a brand's segmentation and must not be published."
+ "excluded_for_review": {
+  "no_ad_spend": [
+   "kenya-tvet (2026): 6 groups over 263 radius areas of 5 km (control/t1/t2 clusters), recruitment conf 1–15 Sep 2026, budget $5,000; no Insights spend, no report, 7 people. Never launched, or its campaign is not recorded"
+  ],
+  "people_not_attributed": [
+   "girl-effect: 1,702 people whose first record is the last question (gnormi_phone), with no ad-set labels at that moment; ~1,240 arrived 10–16 Jun 2026 on days with $0–11 of spend. 233 of them get labels only after finishing (the report counts those: 3,636 qualified against 3,416 here). All left out",
+   "kenya-tvet-scoping-survey: 301 people whose first message predates its ads (they are the 2024-09 run's people, counted there)",
+   "girl-effect-pilot-2: 736 people carried over from girl-effect-pilot (counted in 2025-12)"
+  ],
+  "quota_rule_quirk": [
+   "llm-bias-kenya-pilot: the final rule requires language = English or Swahili, but the answer was stored as 'Kiswahili', so only English-language finishers qualify (133 of 260 who reached the end). Kept as written"
+  ]
+ }
 }
