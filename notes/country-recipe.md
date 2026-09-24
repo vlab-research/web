@@ -58,43 +58,53 @@ cached copy was a day stale.
 - **Advertising cost:** the report's `lifetime_spent` ÷ qualified respondents, in USD. It
   excludes incentives, the platform and our fee.
 
-## Two layers per page (2026-09-24, after v5)
+## The unit is the place, not the study (2026-09-24)
 
-Nandan: *"it seems like we're only picking one study per country? Kenya has many studies,
-certainly many much cheaper … it's OK to pick one, but we need to be clever about which one.
-It's also ok to show the results from many studies."*
+Nandan: *"the goal should be more focused on what does it cost to recruit people in this country
+in this place … it really doesn't matter whether it came from one study or many studies or a
+short study or a pilot or a full study … the data is still interesting. The only thing that
+changes as the study continues is sometimes the first people are cheap and easy to get. That's
+natural."*
 
-**Layer 1: every study, one line each.** Every recruitment in the country that passes the
-**study-level rules** below. For each one: cost per qualified respondent, qualified count,
-year, and **what drove the cost, in plain words**: who qualified (e.g. "any adult", "parents of
-girls aged 9–17", "18–30-year-olds who finished a 20-minute survey"), where the ads ran
-(whole country, named regions, radius areas), and anything else that moved it. Draw it as a
-dot strip, one dot per study on one cost axis, with a table behind it. This layer carries the
-range and the reasons, and **does not need per-group costs**. A study whose group costs are
-meaningless can still have a clean total.
+This replaces the one-showcase-study design, and the every-study strip (which lasted an hour).
+**Study boundaries are for cleaning only**: currency, duplicate people, shared campaigns, and
+knowing the qualifying rule. After cleaning, **every stratum of every recruitment is evidence
+about a place**, and places pool across recruitments, years, pilots and full runs.
 
-**Layer 2: one showcase comparison, chosen on purpose, with the reason on the page.** Choose
-it for what a reader planning a study can learn from it, not for being the only clean one.
-Prefer:
-- the broadest eligibility, closest to a general sample;
-- more qualified respondents and more ad days;
-- targeting that can be stated in a sentence;
-- a comparison that matters (places, inside/outside radius areas, age, gender);
-- recent.
+- **A place is a targeting geometry**, keyed so that different shapes stay distinct: *Lagos
+  State (whole)*, *Abuja: 43 radius areas of 4 km*, *Kenya outside 10 excluded cities*. Pool only
+  identical or near-identical geometries. A whole state and a radius area inside it are two
+  places.
+- **Two numbers per place:**
+  1. **Advertising cost per person who started the survey.** This is the headline: the cost of
+     reaching and engaging someone there, and it barely depends on who the recruitment was
+     looking for. People are assigned to a place by the ad that brought them (ad-set metadata
+     written at their first message), not by their answers.
+  2. **Advertising cost per qualified respondent**, shown beside it with *who qualified* in
+     plain words, because it depends on eligibility as much as on place.
+- **Pooling:** sum the spend and the people, never average ratios. Record the date range and the
+  number of recruitments behind each place. Show the number of people, so a thin place reads
+  as thin.
+- **Time:** early people are often cheaper. That is natural and is not corrected. State the
+  date range.
+- **Page shape:** the map of every place with its cost; a table behind it; a gender/age table
+  pooled the same way where the strata allow; the two "how it works" modules. Per-recruitment
+  detail lives in the data file and the For review note, not on the page.
+- **Thresholds per place, not per study:** show any place with at least about 50 people who
+  started, and flag places under 200. There are no minimum ad days and no study-level spend
+  floor.
 
-Say on the page why it was chosen, e.g. *"We show this study because it sought any adult, so
-its cost is closest to what a general-population survey would pay."* If no study supports a
-clean comparison, layer 1 alone is a page.
+**Rules that still apply to every recruitment that feeds a place:**
+- USD, or converted at the spend date;
+- ad spend that can be attributed to the stratum (Insights per ad set, or a reconciled report);
+- people recruited by ads, so re-contacts that cost no ads are out (a fresh-sample endline is in);
+- siblings de-duplicated, with each person counted once;
+- the pin or region is where it claims to be (rule 7's check; the Kirfi pin is out);
+- the qualifying rule is known.
 
-**Study-level rules (layer 1):** 1 (USD); **no minimum number of ad days** (Nandan: *"maybe it doesnt need at least 7 days necessarily. Still interesting data."*), but every row states its days with spend; at least **$250**
-and **100 qualified**; 5 (a recruitment wave); 6 (siblings combined); plus: **the qualifying
-rule is known and can be said in plain words**, and **the total reconciles**, meaning Insights
-spend is the numerator and qualified people are counted under the study's final quota rule.
-**Group-level rules (layer 2):** all eight rules below.
+## The eight rules (the original study-level screen; superseded by the list above, and kept for its reasoning)
 
-## The eight rules (layer 2, the showcase comparison)
-
-A group comparison reaches a page only if all eight pass:
+A study passed only if all eight held:
 
 1. USD ad account.
 2. The report's spend reconciles with Insights spend (within about 5%).
