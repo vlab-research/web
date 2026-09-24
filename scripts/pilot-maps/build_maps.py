@@ -300,7 +300,7 @@ def cost_rows(body, x, y, rows, width, max_cost=None, bar_h=12, row_h=34, label_
         L = max(2.0, bw * c / mc)
         body.append(f'<rect class="{cls}" x="{x + label_w:.1f}" y="{yy:.1f}" width="{L:.1f}" height="{bar_h}"/>')
         body.append(text(x + label_w + L + 6, yy + 10.5, money(c), "gm-val"))
-        body.append(text(x + label_w, yy + bar_h + 12, f"{n:,} respondents · {money(sp)} ad spend", "gm-tiny"))
+        body.append(text(x + label_w, yy + bar_h + 12, f"{n:,} qualified · {money(sp)} ad spend", "gm-tiny"))
     return y + len(rows) * row_h
 
 
@@ -404,20 +404,20 @@ def bolivia():
 
     # cost rows, which double as the legend
     rows = []
-    for loc, cls, sub in (("Urban", "gm-bar", "13 circles, 4–17 km"),
-                          ("Rural", "gm-bar2", "rest of Bolivia")):
+    for loc, lab, cls, sub in (("Urban", "Inside the circles", "gm-bar", "13 circles, 4–17 km radius"),
+                          ("Rural", "Beyond the circles", "gm-bar2", "the rest of Bolivia")):
         sp = sum(v[0] for v in BO_FRESH[loc].values())
         n = sum(v[1] for v in BO_FRESH[loc].values())
-        rows.append((loc, sub, sp / n, n, sp, cls))
+        rows.append((lab, sub, sp / n, n, sp, cls))
     y0 = 600
-    body.append(text(0, y0 - 14, "Ad cost per respondent · provisional — still fielding, as of 24 Sep 2026", "gm-eye"))
+    body.append(text(0, y0 - 14, "Ad cost per qualified respondent · provisional, still fielding, as of 24 Sep 2026", "gm-eye"))
     yb = cost_rows(body, 0, y0, rows, 760, label_w=170, row_h=36)
-    body.append(text(0, yb + 12, "Cost is recorded per stratum, not per city: all 13 circles share the urban figure. "
+    body.append(text(0, yb + 12, "Cost is recorded per stratum, not per city: all 13 circles share one figure. "
                                  "Both study arms and both genders pooled.", "gm-note"))
     H = yb + 22
     s = svg(W, H, "Bolivia: where the ads were targeted, and the ad cost per respondent",
-            "Thirteen urban circles of 4 to 17 km radius, drawn to scale, in all nine departments; the rest of "
-            f"Bolivia was targeted as rural. Urban {money(rows[0][2])} and rural {money(rows[1][2])} "
+            "Thirteen circles of 4 to 17 km radius around city centres, drawn to scale, in all nine departments, and the rest of "
+            f"Bolivia beyond them. Inside the circles {money(rows[0][2])}, beyond them {money(rows[1][2])} "
             "per respondent in advertising, provisional, as of 24 September 2026.", body, "bo")
     write("bolivia.svg", s)
 
@@ -523,7 +523,7 @@ def nigeria_2023():
 
     # ranked list on the right: the table behind the map, and the legend
     x0, y0 = 500, 40
-    body.append(text(x0, 12, "Ad cost per respondent", "gm-eye"))
+    body.append(text(x0, 12, "Ad cost per qualified respondent", "gm-eye"))
     bw = 760 - (x0 + 70) - 62
     mx = max(r["cost"] for r in rows)
     for i, r in enumerate(rows):
@@ -610,7 +610,7 @@ def nigeria_2024():
             respondents=n, respondents_short_b_report=pb[st][1], cost=round(spend / n, 2))
 
     W = 760
-    body = [text(0, 12, "Nigeria, October 2024 · the “states” were clusters of small circles", "gm-eye")]
+    body = [text(0, 12, "Nigeria, October 2024 · 130 circles in three states", "gm-eye")]
     # ---- panel 1: FCT + Nasarawa
     fit = unary_union([states["Federal Capital Territory"], states["Nassarawa"]])
     p1 = (0, 26, 760, 370)
@@ -695,7 +695,7 @@ def nigeria_2024():
     body.append(f'<rect class="gm-cell" x="{452}" y="{y - 5}" width="4" height="4"/>')
     body.append(text(462, y + 1, "town, for orientation", "gm-note"))
     y += 34
-    body.append(text(0, y - 10, "Ad cost per respondent, both runs pooled", "gm-eye"))
+    body.append(text(0, y - 10, "Ad cost per qualified respondent, both runs pooled", "gm-eye"))
     rows = []
     for st, lab in (("Abuja", "Abuja (FCT)"), ("Nasarawa", "Nasarawa"), ("Adamawa", "Adamawa")):
         fc = facts[st]
@@ -785,7 +785,7 @@ def indonesia():
                                              cost=round(g["spend"] / g["n"], 2))
 
     W = 760
-    body = [text(0, 12, "Indonesia, 2025 · urban circles and the rural remainder", "gm-eye")]
+    body = [text(0, 12, "Indonesia, 2025 · 120 circles, and each province beyond them", "gm-eye")]
     java = unary_union([provs["West Java"], provs["Central Java"]])
     # Karimunjawa and other small islands would stretch the frame; fit to Java's main body
     fitj = max(java.geoms, key=lambda g: g.area) if hasattr(java, "geoms") else java
@@ -857,35 +857,35 @@ def indonesia():
 
     # cost table
     x0, y0 = 352, pk[1] + 14
-    body.append(text(x0, y0 - 2, "Ad cost per respondent", "gm-eye"))
+    body.append(text(x0, y0 - 2, "Ad cost per qualified respondent", "gm-eye"))
     mx = max(facts[p][k]["cost"] for p in facts for k in ("urban", "rural"))
     bw = 760 - (x0 + 120) - 60
     y = y0 + 18
     for prov in facts:
         body.append(text(x0, y + 10, prov, "gm-lab"))
         y += 18
-        for k, cls, lab in (("urban", "gm-bar", "Urban"), ("rural", "gm-bar2", "Rural")):
+        for k, cls, lab in (("urban", "gm-bar", "Inside circles"), ("rural", "gm-bar2", "Beyond circles")):
             fc = facts[prov][k]
             L = max(2.0, bw * fc["cost"] / mx)
             body.append(text(x0 + 10, y + 10, lab, "gm-lab2"))
             body.append(f'<rect class="{cls}" x="{x0 + 120}" y="{y}" width="{L:.1f}" height="12"/>')
             body.append(text(x0 + 120 + L + 6, y + 10.5, money(fc["cost"]), "gm-val"))
-            body.append(text(x0 + 120, y + 24, f'{fc["respondents"]:,} respondents · {money(fc["spend"])}', "gm-tiny"))
+            body.append(text(x0 + 120, y + 24, f'{fc["respondents"]:,} qualified · {money(fc["spend"])}', "gm-tiny"))
             y += 34
         y += 6
     yk = max(y, pk[1] + pk[3]) + 22
     body.append(f'<rect class="gm-bar" x="0" y="{yk - 9}" width="12" height="12"/>')
-    body.append(text(18, yk + 1, "urban: circles of 2–11 km", "gm-note"))
-    body.append(f'<rect class="gm-bar2" x="190" y="{yk - 9}" width="12" height="12"/>')
-    body.append(text(208, yk + 1, "rural: rest of the province", "gm-note"))
-    body.append(f'<rect class="gm-excl" x="390" y="{yk - 9}" width="12" height="12"/>')
-    body.append(text(408, yk + 1, "40 km around a city, excluded from both", "gm-note"))
+    body.append(text(18, yk + 1, "inside the circles (2–11 km radius)", "gm-note"))
+    body.append(f'<rect class="gm-bar2" x="250" y="{yk - 9}" width="12" height="12"/>')
+    body.append(text(268, yk + 1, "beyond the circles", "gm-note"))
+    body.append(f'<rect class="gm-excl" x="420" y="{yk - 9}" width="12" height="12"/>')
+    body.append(text(438, yk + 1, "40 km around a city, excluded from both", "gm-note"))
     body.append(text(0, yk + 22, "Report of 9 May 2025. Cost is recorded per stratum, not per circle; gender and age pooled. "
                                  "Exclusion centres placed from GeoNames.", "gm-note"))
     H = yk + 32
-    s = svg(W, H, "Indonesia: urban circles and rural remainder in three provinces, with ad cost per respondent",
-            "; ".join(f'{p}: {facts[p]["circles"]} urban circles, urban {money(facts[p]["urban"]["cost"])}, '
-                      f'rural {money(facts[p]["rural"]["cost"])} per respondent' for p in facts) + ".", body, "id")
+    s = svg(W, H, "Indonesia: 120 circles and the province beyond them, in three provinces, with ad cost per qualified respondent",
+            "; ".join(f'{p}: {facts[p]["circles"]} circles, inside {money(facts[p]["urban"]["cost"])}, '
+                      f'beyond {money(facts[p]["rural"]["cost"])} per qualified respondent' for p in facts) + ".", body, "id")
     write("indonesia.svg", s)
     SUMMARY["indonesia"] = dict(study=slug, report_created=T[slug]["adopt_report_created"],
                                 provinces=facts,
@@ -951,7 +951,7 @@ def nigeria_bauchi():
     body.append(scalebar(pb[0] + 10, pb[1] + pb[3] - 10, f, 50))
     body.append(f'<rect class="gm-panel" x="{pb[0]}" y="{pb[1]}" width="{pb[2]}" height="{pb[3]}"/>')
     x0, y0 = 424, 40
-    body.append(text(x0, 12, "Ad cost per respondent", "gm-eye"))
+    body.append(text(x0, 12, "Ad cost per qualified respondent", "gm-eye"))
     mx = max(r["cost"] for r in rows)
     bw = 760 - (x0 + 74) - 60
     for i, r in enumerate(rows):

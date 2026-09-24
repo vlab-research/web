@@ -1,20 +1,27 @@
 {
  "_meta": {
   "generated": "2026-09-24",
-  "status": "PILOT v2 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "status": "PILOT v3 - D-032. Not registered in CLAIMS.md, not on the site.",
   "rules": [
    "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
    "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
    "Ads ran at least 7 days",
    "At least $500 of advertising and at least 200 qualified respondents",
    "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
-   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once"
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
   ],
   "definitions": {
    "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
    "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
   },
-  "queries": "scripts/data/country-queries.sql"
+  "queries": "scripts/data/country-queries.sql",
+  "terms": {
+   "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
+   "circles": "ads shown only within a fixed distance of points the study chose, usually town or city centres; 'inside the circles' and 'beyond the circles' are the two sides of that line. Never labelled urban/rural: those have official definitions that vary, and the targeting rarely matches them",
+   "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions"
+  }
  },
  "country": "NG",
  "all_people_surveyed": {
@@ -25,10 +32,8 @@
   "note": "Anyone who answered in any Nigeria study on the current platform"
  },
  "cost_per_qualified_respondent": {
-  "recruitments": 6,
-  "min": 2.26,
-  "median": 6.49,
-  "max": 45.7
+  "recruitments": 3,
+  "note": "range across places, not recruitments: $0.52 (Lagos 2023) to $51.30 (Yola\u2013Jimeta circles 2024)"
  },
  "recruitments": [
   {
@@ -46,7 +51,7 @@
    "cost": 2.5
   },
   {
-   "label": "Abuja, Adamawa, Nasarawa: circles around towns",
+   "label": "Abuja, Keffi, Lafia, Yola\u2013Jimeta: 130 circles of 2\u20134 km",
    "fielded": "12\u201325 Oct 2024",
    "studies": [
     "short-a-hpv-nigeria",
@@ -60,19 +65,7 @@
    "cost": 9.93
   },
   {
-   "label": "Abuja, Adamawa, Nasarawa: mixed state and area targeting",
-   "fielded": "9\u201318 Apr 2025",
-   "studies": [
-    "campaign-2-nigeria-hpv-baseline"
-   ],
-   "ad_days": 10,
-   "spend": 4741.64,
-   "qualified": 2096,
-   "quotas": "Gender \u00d7 State \u00d7 area (A/B)",
-   "cost": 2.26
-  },
-  {
-   "label": "Abuja, Adamawa, Nasarawa",
+   "label": "Whole FCT, whole Nasarawa, one 53 km circle around Yola",
    "fielded": "27 May \u2013 18 Jun 2025",
    "studies": [
     "vital-hpv-vaccine-sign-up"
@@ -82,31 +75,6 @@
    "qualified": 257,
    "quotas": "State",
    "cost": 3.05
-  },
-  {
-   "label": "Bauchi State: six local government areas",
-   "fielded": "6\u201317 Apr 2026",
-   "studies": [
-    "bauchi-state-hpv-pilot"
-   ],
-   "ad_days": 12,
-   "spend": 3914.73,
-   "qualified": 329,
-   "quotas": "Age \u00d7 local government area",
-   "cost": 11.9
-  },
-  {
-   "label": "Bauchi State, whole state",
-   "fielded": "24 May \u2013 20 Jun 2026",
-   "studies": [
-    "bauchi-state-hpv-mnch-week"
-   ],
-   "ad_days": 28,
-   "spend": 33545.25,
-   "qualified": 734,
-   "quotas": "Age \u00d7 State",
-   "note": "3,773 people started the survey; 734 qualified",
-   "cost": 45.7
   }
  ],
  "by_state": {
@@ -158,6 +126,26 @@
     "qualified": 129,
     "cost": 42.92
    }
+  },
+  "2025_wider_areas": {
+   "FCT": {
+    "area": "whole territory",
+    "spend": 127.11,
+    "qualified": 145,
+    "cost": 0.88
+   },
+   "Nasarawa": {
+    "area": "whole state",
+    "spend": 242.89,
+    "qualified": 73,
+    "cost": 3.33
+   },
+   "Adamawa": {
+    "area": "one circle, 33 miles (53 km) radius, around Yola",
+    "spend": 412.95,
+    "qualified": 39,
+    "cost": 10.59
+   }
   }
  },
  "excluded_for_review": {
@@ -191,6 +179,13 @@
    "cohort-2-pilot*",
    "fly_test",
    "test"
+  ],
+  "targeting_not_as_stated": [
+   "bauchi-state-hpv-pilot: Kirfi 'place' pinned 67 km from Kirfi, near Bauchi city",
+   "campaign-2-nigeria-hpv-baseline: areas A/B mix whole states, single circles and exclusions"
+  ],
+  "not_explained": [
+   "bauchi-state-hpv-mnch-week: whole Bauchi State, one group, $45.70 per phone number (734 of 3,773 who started)"
   ]
  }
 }

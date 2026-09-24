@@ -1,20 +1,27 @@
 {
  "_meta": {
   "generated": "2026-09-24",
-  "status": "PILOT v2 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "status": "PILOT v3 - D-032. Not registered in CLAIMS.md, not on the site.",
   "rules": [
    "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
    "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
    "Ads ran at least 7 days",
    "At least $500 of advertising and at least 200 qualified respondents",
    "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
-   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once"
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
   ],
   "definitions": {
    "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
    "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
   },
-  "queries": "scripts/data/country-queries.sql"
+  "queries": "scripts/data/country-queries.sql",
+  "terms": {
+   "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
+   "circles": "ads shown only within a fixed distance of points the study chose, usually town or city centres; 'inside the circles' and 'beyond the circles' are the two sides of that line. Never labelled urban/rural: those have official definitions that vary, and the targeting rarely matches them",
+   "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions"
+  }
  },
  "country": "BO",
  "status": "STILL FIELDING - recruitment runs to about 2026-09-29. FAILS the $500 rule ($324 so far).",
@@ -35,37 +42,37 @@
    "arm_1": 3.0,
    "arm_2": 1.35
   },
-  "quotas": "Gender \u00d7 Location (urban = 13 circles of 4\u201317 km around city centres; rural = the rest of the country)"
+  "quotas": "Gender \u00d7 Location (inside = 13 circles of 4\u201317 km around city centres; beyond = the rest of the country)"
  },
  "by_group": {
-  "Urban men": {
+  "Men, inside the circles": {
    "spend": 20.58,
    "qualified": 213,
    "cost": 0.1
   },
-  "Urban women": {
+  "Women, inside the circles": {
    "spend": 55.49,
    "qualified": 153,
    "cost": 0.36
   },
-  "Rural men": {
+  "Men, beyond the circles": {
    "spend": 104.23,
    "qualified": 115,
    "cost": 0.91
   },
-  "Rural women": {
+  "Women, beyond the circles": {
    "spend": 135.13,
    "qualified": 81,
    "cost": 1.67
   }
  },
  "by_location": {
-  "Urban": {
+  "Inside the circles": {
    "spend": 76.07,
    "qualified": 366,
    "cost": 0.21
   },
-  "Rural": {
+  "Beyond the circles": {
    "spend": 239.36,
    "qualified": 196,
    "cost": 1.22

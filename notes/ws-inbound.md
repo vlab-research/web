@@ -234,6 +234,12 @@ there."*
 - **Targeting maps**: `scripts/pilot-maps/`. **The 2024 Nigeria "State:" strata are not states.** They are 130 circles of 2–4 km around Abuja, Keffi, Lafia and Yola–Jimeta. **The Bauchi "LGA" strata are points with a radius**, and the Kirfi pin sits near Bauchi city, 67 km from Kirfi.
 - **Indonesia added** (`country-id.json`): one study, the cleanest data of the three, with report spend equal to Insights to the cent. Rural West Java cost $0.23 per qualified respondent and urban West Java $1.68.
 
+**v3, 2026-09-24.** Nandan: *"not use terms like Urban and rural which have technical definitions that are varied and instead define our own terms"*, and *"if the targeting was kind of silly, then we shouldn't show it at all … only show the information that is very much interesting or reusable by others."*
+
+- **Vocabulary:** *whole state*, *circles*, *inside the circles* and *beyond the circles*, each defined on every page. Pages never say "urban" or "rural". Study stratum ids still say Urban/Rural; they are raw labels and are never published.
+- **Two judgement rules added** to the six mechanical ones: the targeting can be stated in a sentence and did what it said, and the result can be explained. Out under these: the Bauchi pilot (Kirfi pin), the April 2025 A/B areas, and the 2026 Bauchi week ($45.70 per phone number, unexplained).
+- **Nigeria is three recruitments**: six whole states in 2023; 130 circles in 2024; wider areas in 2025. The most reusable finding is that drawing the area wider cost less in the same places: Nasarawa, whole state, $3.33 against $42.92 inside 4 km circles. Those are two surveys a year apart, so the comparison shows direction, not a ratio.
+
 **Not in the pilot:** the estimator, the handbook, `/data/`, llms.txt, the older-platform
 currency work (Nigeria's older campaigns can be left out of cost and kept in counts).
 

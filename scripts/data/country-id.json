@@ -1,24 +1,31 @@
 {
  "_meta": {
   "generated": "2026-09-24",
-  "status": "PILOT v2 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "status": "PILOT v3 - D-032. Not registered in CLAIMS.md, not on the site.",
   "rules": [
    "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
    "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
    "Ads ran at least 7 days",
    "At least $500 of advertising and at least 200 qualified respondents",
    "Recruitment waves only: baseline or single-wave studies. Follow-up waves re-contact people and are excluded",
-   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once"
+   "Studies that fed one survey at the same time are combined: spend summed, respondents counted once",
+   "The targeting can be stated in a sentence, and it did what it said",
+   "The result can be explained"
   ],
   "definitions": {
    "qualified_respondent": "a person counted toward one of the study's quota groups: they are in the targeted group and completed the screening (the study's own quota rule, e.g. answered through to the phone-number question). Taken from the study's latest optimisation report (FACEBOOK_ADOPT current_participants).",
    "ad_cost": "Meta-reported advertising spend (per-group lifetime_spent, which reconciles with Insights) / qualified respondents. Excludes incentives, the survey platform and our fee."
+  },
+  "terms": {
+   "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
+   "circles": "ads shown only within a fixed distance of points the study chose, usually town or city centres; 'inside the circles' and 'beyond the circles' are the two sides of that line. Never labelled urban/rural: those have official definitions that vary, and the targeting rarely matches them",
+   "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions"
   }
  },
  "country": "ID",
  "study": {
   "slug": "sigap-media-first-evaluation",
-  "fielded": "26 Apr \u2013 9 May 2025",
+  "fielded": "26 Apr – 9 May 2025",
   "ad_days": 14,
   "started_survey": 14584,
   "qualified": 4308,
@@ -27,48 +34,48 @@
   "incentive_usd": 1.0,
   "channel": "Messenger",
   "quota_rule": "answered through to the phone-number question",
-  "quotas": "Location (3 provinces \u00d7 urban/rural) \u00d7 Gender \u00d7 Age (21\u201329, 30\u201344)",
+  "quotas": "Location (3 provinces × inside/beyond 120 circles) × Gender × Age (21–29, 30–44)",
   "target_max_sample": 5500
  },
  "by_location": {
-  "West Java Urban": {
+  "West Java, inside the circles": {
    "spend": 1318.76,
    "qualified": 784,
    "cost": 1.68
   },
-  "West Java Rural": {
+  "West Java, beyond the circles": {
    "spend": 300.38,
    "qualified": 1303,
    "cost": 0.23
   },
-  "Central Java Urban": {
+  "Central Java, inside the circles": {
    "spend": 760.06,
    "qualified": 956,
    "cost": 0.8
   },
-  "Central Java Rural": {
+  "Central Java, beyond the circles": {
    "spend": 872.89,
    "qualified": 933,
    "cost": 0.94
   },
-  "South Kalimantan Urban": {
+  "South Kalimantan, inside the circles": {
    "spend": 891.05,
    "qualified": 244,
    "cost": 3.65
   },
-  "South Kalimantan Rural": {
+  "South Kalimantan, beyond the circles": {
    "spend": 709.7,
    "qualified": 88,
    "cost": 8.06
   }
  },
  "by_age": {
-  "21\u201329": {
+  "21–29": {
    "spend": 1815.27,
    "qualified": 2752,
    "cost": 0.66
   },
-  "30\u201344": {
+  "30–44": {
    "spend": 3037.57,
    "qualified": 1556,
    "cost": 1.95
@@ -234,6 +241,7 @@
  ],
  "checks": [
   "per-group spend sums to $4,852.84, exactly Meta's reported spend",
-  "3 test entries before ads started (13\u201321 Apr); every other respondent arrived during the 14 ad days"
- ]
+  "3 test entries before ads started (13–21 Apr); every other respondent arrived during the 14 ad days"
+ ],
+ "strata_note": "Stratum ids are the study's own labels; 'Urban' there means inside the circles and 'Rural' beyond them. Do not publish those words."
 }
