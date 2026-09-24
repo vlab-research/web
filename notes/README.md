@@ -39,6 +39,7 @@ disagreed rather than averaging them.
 | `ws-privacy-reconciliation.md` | The privacy policy read clause by clause against the capability register — the gate D-024 set on two sections of the instrument page |
 | `ws-seo.md` | What one page can and cannot win in search, and where the budget goes instead |
 | `ws-inbound.md` | The content map for inbound; what the production database can answer, and the traps in it; the Nigeria + Bolivia pilot (D-032) |
+| `country-recipe.md` | **The method for a country page**, distilled from the D-032 pilot (2026-09-24): the data, the eight clean-data rules, the definitions, the vocabulary (radius areas, never urban/rural), the page structure and the maps. Read it before building any country page |
 
 ## Several are already superseded — check the date before trusting a recommendation
 
