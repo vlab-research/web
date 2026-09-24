@@ -4,7 +4,28 @@ The next step after the country-page pilot (D-032; `ws-inbound.md` §7, v1–v7;
 `country-recipe.md`). **Read this first to pick the work up.** Nothing here is on the site or
 pushed. `master` is ahead of `origin` by the local commits of 2026-09-23 and 2026-09-24.
 
-## Where things stand
+## Status, 2026-09-24 evening: step 1 done, pages generated (review v9)
+
+- **The cell table exists**: `scripts/data/cells.json` (1,081 cells, 23 countries, 96 recruitments
+  kept, 16 excluded, $338,760), with `recruitment-criteria.json`, `places.json` and `buckets.json`.
+  Contract: `notes/cells-schema.md`. Built per group by `scripts/pilot-maps/countries/<dir>/cells.py`
+  (`--fetch` re-pulls; slugs and question refs are read from the gitignored `private/<G>.map.json`).
+- **`merge_cells.py`** validates, runs the leak check (study names from the private maps; the topic
+  denylist is `private/denylist.txt`, gitignored because it names clients) and applies the bucket
+  rules. **`pages.py`** generates every page from the table into `out/review.html` (gitignored: its
+  For-review notes name studies). Run it with the geo venv; it needs the Natural Earth files that
+  `fetch_ne.py` downloads.
+- **Review v9** is the same Artifact URL below: one tab per country, **Who qualified** (the
+  cross-country person slice) and **Buckets** (every recruitment, its tags and bucket, for step 2).
+- **Decided in the build, for review:** the $100 floor marks a place "thin" rather than hiding it;
+  recruitments whose "qualified" is not comparable (a later wave, under 3% or over 97% qualifying)
+  count for place but not in the who slice; region maps shade single-region places only;
+  minutes over 120 are external-survey sync time and count as unknown.
+- **Known weak spots:** US-2023-08's "qualified" is completion of an outside survey and is not caught
+  by the rule; the Irish account's currency is unverified; LAC and KE-2026-07 were still fielding.
+  Each agent's verified/inferred report is summarised in the recruitment `notes`.
+
+## Where things stood before the table (v8)
 
 - **The review page**: https://claude.ai/artifact/BggyuQGoib8zPi8ZWdGDkq (private, v8). It has
   tabs for Nigeria, Bangladesh, Pakistan, Indonesia, Kenya, United States, Iraq, Egypt, Morocco,
