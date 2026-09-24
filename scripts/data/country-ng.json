@@ -1,7 +1,7 @@
 {
  "_meta": {
   "generated": "2026-09-24",
-  "status": "PILOT v3 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site.",
   "rules": [
    "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
    "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
@@ -19,7 +19,7 @@
   "queries": "scripts/data/country-queries.sql",
   "terms": {
    "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
-   "circles": "ads shown only within a fixed distance of points the study chose, usually town or city centres; 'inside the circles' and 'beyond the circles' are the two sides of that line. Never labelled urban/rural: those have official definitions that vary, and the targeting rarely matches them",
+   "radius_area": "a pin Meta lets an advertiser drop on the map, with a radius of 1-80 km (Marketing API custom_locations). 'Inside the radius areas' and 'outside them' are the two sides of that line. Never 'circles' (too plain, per Nandan) and never urban/rural (official definitions vary; the targeting rarely matches them)",
    "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions"
   }
  },
@@ -33,12 +33,12 @@
  },
  "cost_per_qualified_respondent": {
   "recruitments": 3,
-  "note": "range across places, not recruitments: $0.52 (Lagos 2023) to $51.30 (Yola\u2013Jimeta circles 2024)"
+  "note": "range across places, not recruitments: $0.52 (Lagos 2023) to $51.30 (Yola–Jimeta circles 2024)"
  },
  "recruitments": [
   {
    "label": "Six states, whole-state targeting",
-   "fielded": "12 Aug \u2013 12 Sep 2023",
+   "fielded": "12 Aug – 12 Sep 2023",
    "studies": [
     "nigeria-hpv-config-8-1",
     "nigeria-final-hpv-august-23"
@@ -46,13 +46,13 @@
    "ad_days": 23,
    "spend": 2955.42,
    "qualified": 1180,
-   "quotas": "Gender \u00d7 State (6 states)",
+   "quotas": "Gender × State (6 states)",
    "note": "Two consecutive ad runs for one survey",
    "cost": 2.5
   },
   {
-   "label": "Abuja, Keffi, Lafia, Yola\u2013Jimeta: 130 circles of 2\u20134 km",
-   "fielded": "12\u201325 Oct 2024",
+   "label": "Abuja, Keffi, Lafia, Yola–Jimeta: 130 circles of 2–4 km",
+   "fielded": "12–25 Oct 2024",
    "studies": [
     "short-a-hpv-nigeria",
     "short-b-hpv-nigeria"
@@ -60,13 +60,13 @@
    "ad_days": 13,
    "spend": 10019.25,
    "qualified": 1009,
-   "quotas": "Gender \u00d7 State",
+   "quotas": "Gender × State",
    "note": "Two concurrent ad runs for one survey; respondents counted once",
    "cost": 9.93
   },
   {
-   "label": "Whole FCT, whole Nasarawa, one 53 km circle around Yola",
-   "fielded": "27 May \u2013 18 Jun 2025",
+   "label": "Whole FCT, whole Nasarawa, one 53 km radius area around Yola",
+   "fielded": "27 May – 18 Jun 2025",
    "studies": [
     "vital-hpv-vaccine-sign-up"
    ],

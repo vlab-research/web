@@ -404,20 +404,20 @@ def bolivia():
 
     # cost rows, which double as the legend
     rows = []
-    for loc, lab, cls, sub in (("Urban", "Inside the circles", "gm-bar", "13 circles, 4–17 km radius"),
-                          ("Rural", "Beyond the circles", "gm-bar2", "the rest of Bolivia")):
+    for loc, lab, cls, sub in (("Urban", "Inside the radius areas", "gm-bar", "13 areas, 4–17 km radius"),
+                          ("Rural", "Outside them", "gm-bar2", "the rest of Bolivia")):
         sp = sum(v[0] for v in BO_FRESH[loc].values())
         n = sum(v[1] for v in BO_FRESH[loc].values())
         rows.append((lab, sub, sp / n, n, sp, cls))
     y0 = 600
     body.append(text(0, y0 - 14, "Ad cost per qualified respondent · provisional, still fielding, as of 24 Sep 2026", "gm-eye"))
     yb = cost_rows(body, 0, y0, rows, 760, label_w=170, row_h=36)
-    body.append(text(0, yb + 12, "Cost is recorded per stratum, not per city: all 13 circles share one figure. "
+    body.append(text(0, yb + 12, "Cost is recorded per stratum, not per city: all 13 radius areas share one figure. "
                                  "Both study arms and both genders pooled.", "gm-note"))
     H = yb + 22
     s = svg(W, H, "Bolivia: where the ads were targeted, and the ad cost per respondent",
-            "Thirteen circles of 4 to 17 km radius around city centres, drawn to scale, in all nine departments, and the rest of "
-            f"Bolivia beyond them. Inside the circles {money(rows[0][2])}, beyond them {money(rows[1][2])} "
+            "Thirteen radius areas of 4 to 17 km around city centres, drawn to scale, in all nine departments, and the rest of "
+            f"Bolivia beyond them. Inside the radius areas {money(rows[0][2])}, outside them {money(rows[1][2])} "
             "per respondent in advertising, provisional, as of 24 September 2026.", body, "bo")
     write("bolivia.svg", s)
 
@@ -610,7 +610,7 @@ def nigeria_2024():
             respondents=n, respondents_short_b_report=pb[st][1], cost=round(spend / n, 2))
 
     W = 760
-    body = [text(0, 12, "Nigeria, October 2024 · 130 circles in three states", "gm-eye")]
+    body = [text(0, 12, "Nigeria, October 2024 · 130 radius areas in three states", "gm-eye")]
     # ---- panel 1: FCT + Nasarawa
     fit = unary_union([states["Federal Capital Territory"], states["Nassarawa"]])
     p1 = (0, 26, 760, 370)
@@ -689,9 +689,9 @@ def nigeria_2024():
     # ---- key and cost rows
     y = 426 + 330 + 26
     body.append(f'<rect class="gm-bar" x="0" y="{y - 9}" width="12" height="12"/>')
-    body.append(text(18, y + 1, "circles of ad run A", "gm-note"))
+    body.append(text(18, y + 1, "radius areas of ad run A", "gm-note"))
     body.append(f'<circle class="gm-open" cx="{150 + 6}" cy="{y - 3}" r="6"/>')
-    body.append(text(168, y + 1, "circles of ad run B (same survey, same days)", "gm-note"))
+    body.append(text(168, y + 1, "radius areas of ad run B (same survey, same days)", "gm-note"))
     body.append(f'<rect class="gm-cell" x="{452}" y="{y - 5}" width="4" height="4"/>')
     body.append(text(462, y + 1, "town, for orientation", "gm-note"))
     y += 34
@@ -700,15 +700,15 @@ def nigeria_2024():
     for st, lab in (("Abuja", "Abuja (FCT)"), ("Nasarawa", "Nasarawa"), ("Adamawa", "Adamawa")):
         fc = facts[st]
         r = fc["radius_km"][0]
-        sub = f'{fc["circles_short_a"] + fc["circles_short_b"]} circles of {r:.1f} km · {fc["share_of_state_pct"]:.1f}% of the state'
+        sub = f'{fc["circles_short_a"] + fc["circles_short_b"]} areas of {r:.1f} km radius · {fc["share_of_state_pct"]:.1f}% of the state'
         rows.append((lab, sub, fc["cost"], fc["respondents"], fc["spend"], "gm-bar"))
     yb = cost_rows(body, 0, y, rows, 760, label_w=300, row_h=38)
     body.append(text(0, yb + 10, "12–25 Oct 2024. Radii 4.02 km and 2.01 km (2.5 and 1.25 miles). Cost is recorded per state, "
-                                 "not per circle. Both genders pooled.", "gm-note"))
+                                 "not per radius area. Both genders pooled.", "gm-note"))
     H = yb + 20
-    s = svg(W, H, "Nigeria, October 2024: the Abuja, Nasarawa and Adamawa targets were clusters of small circles",
-            "Strata labelled by state were targeted as small circles: " +
-            "; ".join(f'{st}, {facts[st]["circles_short_a"] + facts[st]["circles_short_b"]} circles covering '
+    s = svg(W, H, "Nigeria, October 2024: the Abuja, Nasarawa and Adamawa targets were clusters of small radius areas",
+            "Strata labelled by state were targeted as small radius areas: " +
+            "; ".join(f'{st}, {facts[st]["circles_short_a"] + facts[st]["circles_short_b"]} radius areas covering '
                       f'{facts[st]["share_of_state_pct"]:.1f}% of the state, {money(facts[st]["cost"])} per respondent'
                       for st in facts) + ".", body, "ng24")
     write("nigeria-2024-circles.svg", s)
@@ -785,7 +785,7 @@ def indonesia():
                                              cost=round(g["spend"] / g["n"], 2))
 
     W = 760
-    body = [text(0, 12, "Indonesia, 2025 · 120 circles, and each province beyond them", "gm-eye")]
+    body = [text(0, 12, "Indonesia, 2025 · 120 radius areas, and each province outside them", "gm-eye")]
     java = unary_union([provs["West Java"], provs["Central Java"]])
     # Karimunjawa and other small islands would stretch the frame; fit to Java's main body
     fitj = max(java.geoms, key=lambda g: g.area) if hasattr(java, "geoms") else java
@@ -864,7 +864,7 @@ def indonesia():
     for prov in facts:
         body.append(text(x0, y + 10, prov, "gm-lab"))
         y += 18
-        for k, cls, lab in (("urban", "gm-bar", "Inside circles"), ("rural", "gm-bar2", "Beyond circles")):
+        for k, cls, lab in (("urban", "gm-bar", "Inside areas"), ("rural", "gm-bar2", "Outside them")):
             fc = facts[prov][k]
             L = max(2.0, bw * fc["cost"] / mx)
             body.append(text(x0 + 10, y + 10, lab, "gm-lab2"))
@@ -875,17 +875,17 @@ def indonesia():
         y += 6
     yk = max(y, pk[1] + pk[3]) + 22
     body.append(f'<rect class="gm-bar" x="0" y="{yk - 9}" width="12" height="12"/>')
-    body.append(text(18, yk + 1, "inside the circles (2–11 km radius)", "gm-note"))
+    body.append(text(18, yk + 1, "inside the radius areas (2–11 km)", "gm-note"))
     body.append(f'<rect class="gm-bar2" x="250" y="{yk - 9}" width="12" height="12"/>')
-    body.append(text(268, yk + 1, "beyond the circles", "gm-note"))
+    body.append(text(268, yk + 1, "outside them", "gm-note"))
     body.append(f'<rect class="gm-excl" x="420" y="{yk - 9}" width="12" height="12"/>')
     body.append(text(438, yk + 1, "40 km around a city, excluded from both", "gm-note"))
-    body.append(text(0, yk + 22, "Report of 9 May 2025. Cost is recorded per stratum, not per circle; gender and age pooled. "
+    body.append(text(0, yk + 22, "Report of 9 May 2025. Cost is recorded per stratum, not per radius area; gender and age pooled. "
                                  "Exclusion centres placed from GeoNames.", "gm-note"))
     H = yk + 32
-    s = svg(W, H, "Indonesia: 120 circles and the province beyond them, in three provinces, with ad cost per qualified respondent",
-            "; ".join(f'{p}: {facts[p]["circles"]} circles, inside {money(facts[p]["urban"]["cost"])}, '
-                      f'beyond {money(facts[p]["rural"]["cost"])} per qualified respondent' for p in facts) + ".", body, "id")
+    s = svg(W, H, "Indonesia: 120 radius areas and the province outside them, in three provinces, with ad cost per qualified respondent",
+            "; ".join(f'{p}: {facts[p]["circles"]} radius areas, inside {money(facts[p]["urban"]["cost"])}, '
+                      f'outside {money(facts[p]["rural"]["cost"])} per qualified respondent' for p in facts) + ".", body, "id")
     write("indonesia.svg", s)
     SUMMARY["indonesia"] = dict(study=slug, report_created=T[slug]["adopt_report_created"],
                                 provinces=facts,

@@ -1,7 +1,7 @@
 {
  "_meta": {
   "generated": "2026-09-24",
-  "status": "PILOT v3 - D-032. Not registered in CLAIMS.md, not on the site.",
+  "status": "PILOT v4 - D-032. Not registered in CLAIMS.md, not on the site.",
   "rules": [
    "Ad account spends in US dollars (tested by CPM: naira accounts show CPMs of 500+)",
    "The study's per-group report reconciles with Meta's reported spend, so group costs add up to the total",
@@ -19,7 +19,7 @@
   "queries": "scripts/data/country-queries.sql",
   "terms": {
    "whole_state": "ads shown to people Meta places anywhere inside the state's official boundary",
-   "circles": "ads shown only within a fixed distance of points the study chose, usually town or city centres; 'inside the circles' and 'beyond the circles' are the two sides of that line. Never labelled urban/rural: those have official definitions that vary, and the targeting rarely matches them",
+   "radius_area": "a pin Meta lets an advertiser drop on the map, with a radius of 1-80 km (Marketing API custom_locations). 'Inside the radius areas' and 'outside them' are the two sides of that line. Never 'circles' (too plain, per Nandan) and never urban/rural (official definitions vary; the targeting rarely matches them)",
    "qualified_respondent": "someone in one of the study's quota groups who completed the screening questions"
   }
  },
@@ -30,8 +30,8 @@
    "lac-healthy-diets-bolivia",
    "lac-healthy-diets-bolivia-channel"
   ],
-  "design": "one survey, two ad runs (5\u20139 Sep, then 9\u201324 Sep with Messenger and WhatsApp campaigns); 310 people in both, counted once",
-  "fielded": "5\u201324 Sep 2026",
+  "design": "one survey, two ad runs (5–9 Sep, then 9–24 Sep with Messenger and WhatsApp campaigns); 310 people in both, counted once",
+  "fielded": "5–24 Sep 2026",
   "ad_days": 20,
   "started_survey": 774,
   "qualified": 562,
@@ -42,25 +42,25 @@
    "arm_1": 3.0,
    "arm_2": 1.35
   },
-  "quotas": "Gender \u00d7 Location (inside = 13 circles of 4\u201317 km around city centres; beyond = the rest of the country)"
+  "quotas": "Gender × Location (inside = 13 radius areas of 4–17 km around city centres; beyond = the rest of the country)"
  },
  "by_group": {
-  "Men, inside the circles": {
+  "Men, inside the radius areas": {
    "spend": 20.58,
    "qualified": 213,
    "cost": 0.1
   },
-  "Women, inside the circles": {
+  "Women, inside the radius areas": {
    "spend": 55.49,
    "qualified": 153,
    "cost": 0.36
   },
-  "Men, beyond the circles": {
+  "Men, outside them": {
    "spend": 104.23,
    "qualified": 115,
    "cost": 0.91
   },
-  "Women, beyond the circles": {
+  "Women, outside them": {
    "spend": 135.13,
    "qualified": 81,
    "cost": 1.67

@@ -240,6 +240,12 @@ there."*
 - **Two judgement rules added** to the six mechanical ones: the targeting can be stated in a sentence and did what it said, and the result can be explained. Out under these: the Bauchi pilot (Kirfi pin), the April 2025 A/B areas, and the 2026 Bauchi week ($45.70 per phone number, unexplained).
 - **Nigeria is three recruitments**: six whole states in 2023; 130 circles in 2024; wider areas in 2025. The most reusable finding is that drawing the area wider cost less in the same places: Nasarawa, whole state, $3.33 against $42.92 inside 4 km circles. Those are two surveys a year apart, so the comparison shows direction, not a ratio.
 
+**v4, 2026-09-24.** Nandan: *"I don't love the term circles"*, and *"each of these pages should stand alone, so we need to be didactic and have some basic modules where we explain the way things work up top."*
+
+- **"Radius area"** replaces "circle", following Meta's own wording (a pin plus a radius). The two sides are *inside the radius areas* and *outside them*.
+- **Two "how it works" modules sit at the top of every country page**, after the answer and before the findings. One is **location targeting on Meta**: the options Meta offers (country, region, city with a 17–80 km radius, postal codes, a pin with a 1–80 km radius); that there are no hand-drawn boundaries and no urban/rural setting; and how Meta places a person (profile "home", checked against IP address and friends; "recent", from mobile device data). The source is the Marketing API basic-targeting reference, read 2026-09-24. The other is **what the numbers count**: quotas, qualified respondents, and advertising cost.
+- **The review page's source is `scripts/pilot-maps/review-page.tpl.html`.** Edit the template, never the assembled page. A v2 fix made to the assembled page was lost in v3.
+
 **Not in the pilot:** the estimator, the handbook, `/data/`, llms.txt, the older-platform
 currency work (Nigeria's older campaigns can be left out of cost and kept in counts).
 

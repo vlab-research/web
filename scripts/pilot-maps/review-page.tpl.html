@@ -1,0 +1,313 @@
+<title>Country Pages Pilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Zilla+Slab:wght@300;500&display=swap">
+<style>
+:root{
+  --paper:#F1F4F5; --surface:#FFFFFF; --sunk:#E5EBED;
+  --ink:#1F272E; --ink-2:#4A555E; --ink-3:#6B777F;
+  --rule:#CFD9DD; --rule-2:#AEBCC2;
+  --brass:#7A5C1E; --data:#1D5F6E; --data-2:#9DB6BC;
+  --note-bg:#FBF6EA; --note-rule:#D9C79B;
+  --display:"Zilla Slab", Georgia, serif;
+  --ui:"Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+  --prose:"Source Serif 4", Georgia, serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#13181C; --surface:#1C2227; --sunk:#262E34;
+    --ink:#E6EBEE; --ink-2:#B2BEC6; --ink-3:#8C99A2;
+    --rule:#2A343B; --rule-2:#414F58;
+    --brass:#C9A250; --data:#4E9DB0; --data-2:#4A6871;
+    --note-bg:#221F17; --note-rule:#5A4B27;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#13181C; --surface:#1C2227; --sunk:#262E34;
+  --ink:#E6EBEE; --ink-2:#B2BEC6; --ink-3:#8C99A2;
+  --rule:#2A343B; --rule-2:#414F58;
+  --brass:#C9A250; --data:#4E9DB0; --data-2:#4A6871;
+  --note-bg:#221F17; --note-rule:#5A4B27;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--prose);padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:820px;margin:0 auto}
+.bar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;padding-block:18px;border-bottom:1px solid var(--rule);font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.tabs{display:flex;flex-wrap:wrap;gap:4px}
+.tabs button{font:600 14px/1 var(--ui);letter-spacing:0;text-transform:none;color:var(--ink-2);background:none;border:1px solid var(--rule);padding:9px 14px;border-radius:2px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--data);outline-offset:2px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:48px 0 14px}
+h1{font:300 clamp(30px,5vw,42px)/1.1 var(--display);margin:0 0 20px;text-wrap:balance}
+h2{font:500 24px/1.2 var(--display);margin:56px 0 12px;text-wrap:balance}
+p{margin:0 0 14px;max-width:65ch}
+.lede{font-size:19px;line-height:1.55}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:28px 0 8px}
+.facts div{background:var(--surface);padding:16px}
+.facts b{display:block;font:500 24px/1.1 var(--mono);font-variant-numeric:tabular-nums}
+.facts span{display:block;font:400 13.5px/1.35 var(--ui);color:var(--ink-2);margin-top:6px}
+figure{margin:24px 0 8px}
+figure svg{display:block;width:100%;height:auto}
+.cap{font:400 13px/1.45 var(--ui);color:var(--ink-3);margin-top:8px;max-width:65ch}
+.tbl{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;font:400 14.5px/1.35 var(--ui);font-variant-numeric:tabular-nums}
+th{font:500 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--rule-2);white-space:nowrap}
+td{padding:8px 10px 8px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+td .id{display:block;font:400 11px/1.3 var(--mono);color:var(--ink-3)}
+dl{margin:0;font:400 15px/1.5 var(--ui)}
+dt{font-weight:600;margin-top:12px}
+dd{margin:2px 0 0;color:var(--ink-2)}
+.note{background:var(--note-bg);border:1px solid var(--note-rule);padding:16px 18px;margin:48px 0 0;font:400 14.5px/1.5 var(--ui)}
+.note h3{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:0 0 10px}
+.note ul,.note ol{margin:0;padding-left:18px}
+.note li{margin:4px 0}
+.note code{font-size:12.5px}
+.how{border:1px solid var(--rule-2);background:var(--surface);padding:20px 22px;margin:32px 0 0}
+.how + .how{margin-top:12px}
+.how .k{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--data);margin:0 0 8px}
+.how h2{margin:0 0 10px;font-size:21px}
+.how p{font:400 15.5px/1.55 var(--ui);color:var(--ink-2)}
+.how p:last-child{margin-bottom:0}
+.how b{color:var(--ink)}
+.cta{margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);font:400 16px/1.5 var(--ui)}
+.cta b{font-family:var(--mono);font-weight:500;user-select:all}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <span>Pilot v4 · not on the site · data as of 24 Sep 2026</span>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="t-nigeria" aria-controls="nigeria" aria-selected="true">Nigeria</button>
+      <button role="tab" id="t-indonesia" aria-controls="indonesia" aria-selected="false">Indonesia</button>
+      <button role="tab" id="t-bolivia" aria-controls="bolivia" aria-selected="false">Bolivia</button>
+      <button role="tab" id="t-rules" aria-controls="rules" aria-selected="false">Rules</button>
+    </div>
+  </div>
+
+  <!-- ============================ NIGERIA ============================ -->
+  <section id="nigeria" role="tabpanel" aria-labelledby="t-nigeria">
+    <div class="eyebrow">Nigeria · Recruitment cost</div>
+    <h1>What does it cost to recruit survey respondents in Nigeria?</h1>
+    <p class="lede">In three Virtual Lab recruitments in Nigeria between 2023 and 2025, the advertising cost per qualified respondent ranged from <b>$0.52 to $51.30</b>, depending on where the ads ran and how tightly they were drawn.</p>
+    <p>Whole states in the south were cheapest. Small radius areas around towns in the north-east were the most expensive. The same state could cost ten times more when the ads were confined to a few towns within it.</p>
+
+    <div class="facts">
+      <div><b>55,798</b><span>people surveyed in Nigeria, Aug 2023 – Sep 2026</span></div>
+      <div><b>$0.52</b><span>Lagos, whole state, 2023</span></div>
+      <div><b>$3.33</b><span>Nasarawa, whole state, 2025</span></div>
+      <div><b>$42.92</b><span>Nasarawa, 64 radius areas of 4 km, 2024</span></div>
+    </div>
+
+    <div class="how">
+      <div class="k">How it works · location targeting on Meta</div>
+      <h2>Why the maps show radius areas</h2>
+      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 17 to 80 km around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
+      <p>To reach people in particular towns, a study drops a pin on each and sets a radius. We call each of those a <b>radius area</b>. To reach everyone else, it targets the whole state or country and excludes the same radius areas. Throughout this page, <b>inside the radius areas</b> and <b>outside them</b> mean exactly that, not any official definition of urban or rural.</p>
+      <p>Meta decides who is in an area from where people say they live on their profile, which it checks against their IP address and their friends' locations, and from where their phone has recently been. The edges are therefore approximate.</p>
+    </div>
+    <div class="how">
+      <div class="k">How it works · what the numbers count</div>
+      <h2>Cost per qualified respondent</h2>
+      <p>Every study sets <b>quotas</b>: how many people it needs from each group, such as women aged 30–44 in one province. A <b>qualified respondent</b> is someone who fell into one of those groups and completed the screening questions. People who started the survey but did not qualify are not counted, but the advertising that reached them is. So a study looking for a narrow group pays more per qualified respondent.</p>
+      <p><b>Advertising cost</b> is what Meta reported spending on the study's ads, in US dollars, divided by qualified respondents. It excludes the incentive paid to respondents, the survey platform and our fee.</p>
+    </div>
+
+    <h2>Lagos cost 52 cents; Anambra cost $14</h2>
+    <p>In August and September 2023, one survey was advertised to men and women in six whole states for 23 days. The cost per qualified respondent ran from $0.52 in Lagos to $14.12 in Anambra, a 27-fold difference within a single study.</p>
+    <figure>{{NG2023}}</figure>
+
+    <h2>130 radius areas in three states</h2>
+    <p>In October 2024, a study with quotas by state did not advertise to the states. It advertised inside 130 radius areas of 2 to 4 km, around Abuja, Keffi, Lafia and Yola–Jimeta. Together they cover a fifth of the Federal Capital Territory, a tenth of Nasarawa and half of one percent of Adamawa. A qualified respondent inside the Abuja radius areas cost $1.22; one inside the Yola–Jimeta radius areas cost $51.30.</p>
+    <figure>{{NG2024}}</figure>
+
+    <h2>Drawing the area wider cost less</h2>
+    <p>In May and June 2025, a different survey advertised in the same three places with far wider areas. It used the whole Federal Capital Territory, the whole of Nasarawa, and one radius area of 53 km around Yola. Each place cost less than inside the 2024 radius areas:</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Place</th><th>Oct 2024: radius areas</th><th class=n>Per qualified</th><th>May–Jun 2025: wider area</th><th class=n>Per qualified</th></tr></thead>
+      <tbody>
+        <tr><td>Federal Capital Territory</td><td>43 areas, 4 km radius</td><td class=n>$1.22</td><td>Whole territory</td><td class=n>$0.88</td></tr>
+        <tr><td>Nasarawa</td><td>64 areas, 4 km radius</td><td class=n>$42.92</td><td>Whole state</td><td class=n>$3.33</td></tr>
+        <tr><td>Adamawa</td><td>23 areas, 2 km radius</td><td class=n>$51.30</td><td>One area, 53 km radius, around Yola</td><td class=n>$10.59</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cap">These are two different surveys, a year apart, so the comparison shows direction, not an exact ratio. 2025 figures: $127 for 145 qualified in the capital territory, $243 for 73 in Nasarawa, $413 for 39 in Adamawa.</p>
+
+    <h2>Every recruitment in the figures</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Fielded</th><th>Where</th><th class=n>Qualified</th><th class=n>Ad spend</th><th class=n>Per qualified</th><th class=n>Ad days</th></tr></thead>
+      <tbody>{{NGROWS}}</tbody>
+    </table></div>
+
+        <p class="cap">Only recruitments that meet every rule on the Rules tab are included: three recruitments made up of five of the 49 Nigeria studies.</p>
+    <p class="cta">Planning a study in Nigeria? Write to <b>info@vlab.digital</b>.</p>
+
+    <div class="note">
+      <h3>For review</h3>
+      <ul>
+        <li><b>Removed since v2:</b> the Bauchi pilot, whose Kirfi target was pinned 67 km from Kirfi; the 2026 Bauchi week, $45.70 per phone number and not explained; and the April 2025 study, whose targeting mixes areas too much to state in a sentence.</li>
+        <li><b>Town names on the maps are for orientation.</b> They are the nearest towns in Natural Earth or GeoNames.</li>
+        <li><b>Targeting before the config date is unverified.</b> The stored targeting was saved a few days after fielding began: 24 Aug against 12 Aug in 2023, and 15 Oct against 12 Oct in 2024.</li>
+        <li>Study IDs appear in grey for review only.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ INDONESIA ============================ -->
+  <section id="indonesia" role="tabpanel" aria-labelledby="t-indonesia" hidden>
+    <div class="eyebrow">Indonesia · Recruitment cost</div>
+    <h1>What does it cost to recruit survey respondents in Indonesia?</h1>
+    <p class="lede">One Virtual Lab study, in April and May 2025, recruited <b>4,308 qualified respondents</b> in three provinces for <b>$4,853</b> in advertising, or <b>$1.13 each</b>. By area, the cost ranged from <b>$0.23</b> to <b>$8.06</b>.</p>
+
+    <div class="facts">
+      <div><b>4,308</b><span>qualified respondents, 26 Apr – 9 May 2025</span></div>
+      <div><b>$1.13</b><span>advertising cost per qualified respondent</span></div>
+      <div><b>14 days</b><span>of advertising</span></div>
+      <div><b>14,584</b><span>people who started the survey</span></div>
+    </div>
+
+    <div class="how">
+      <div class="k">How it works · location targeting on Meta</div>
+      <h2>Why the maps show radius areas</h2>
+      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 17 to 80 km around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
+      <p>To reach people in particular towns, a study drops a pin on each and sets a radius. We call each of those a <b>radius area</b>. To reach everyone else, it targets the whole state or country and excludes the same radius areas. Throughout this page, <b>inside the radius areas</b> and <b>outside them</b> mean exactly that, not any official definition of urban or rural.</p>
+      <p>Meta decides who is in an area from where people say they live on their profile, which it checks against their IP address and their friends' locations, and from where their phone has recently been. The edges are therefore approximate.</p>
+    </div>
+    <div class="how">
+      <div class="k">How it works · what the numbers count</div>
+      <h2>Cost per qualified respondent</h2>
+      <p>Every study sets <b>quotas</b>: how many people it needs from each group, such as women aged 30–44 in one province. A <b>qualified respondent</b> is someone who fell into one of those groups and completed the screening questions. People who started the survey but did not qualify are not counted, but the advertising that reached them is. So a study looking for a narrow group pays more per qualified respondent.</p>
+      <p><b>Advertising cost</b> is what Meta reported spending on the study's ads, in US dollars, divided by qualified respondents. It excludes the incentive paid to respondents, the survey platform and our fee.</p>
+    </div>
+
+    <h2>Java cost under $2; South Kalimantan cost up to $8</h2>
+    <p>The study set 120 radius areas of 2 to 11 km around towns and cities, and advertised separately inside them and outside them in each province. In West Java, a qualified respondent outside the radius areas cost $0.23 and one inside them $1.68. In Central Java the two were close, at $0.94 and $0.80. South Kalimantan cost the most on both sides: $3.65 inside and $8.06 outside.</p>
+    <figure>{{ID}}</figure>
+
+    <h2>Older respondents cost three times as much</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Group</th><th class=n>Qualified</th><th class=n>Ad spend</th><th class=n>Per qualified</th></tr></thead>
+      <tbody>
+        <tr><td>Age 21–29</td><td class=n>2,752</td><td class=n>$1,815</td><td class=n>$0.66</td></tr>
+        <tr><td>Age 30–44</td><td class=n>1,556</td><td class=n>$3,038</td><td class=n>$1.95</td></tr>
+        <tr><td>Women</td><td class=n>2,107</td><td class=n>$2,444</td><td class=n>$1.16</td></tr>
+        <tr><td>Men</td><td class=n>2,201</td><td class=n>$2,409</td><td class=n>$1.09</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cap">Men and women cost about the same. Every group is pooled over the other two dimensions (location and age, or location and gender).</p>
+
+    <h2>How the study was set up</h2>
+    <dl>
+      <dt>Quotas</dt><dd>Province (West Java, Central Java, South Kalimantan) × inside/outside the radius areas × gender × age (21–29, 30–44): 24 groups.</dd>
+      <dt>Channel</dt><dd>Facebook and Instagram ads leading to a survey in Messenger. Incentive: $1 per respondent, not included in the advertising cost.</dd>
+      <dt>Qualified</dt><dd>In a quota group, and answered through to the phone-number question. 4,308 of the 14,584 who started did.</dd>
+    </dl>
+
+    <p class="cta">Planning a study in Indonesia? Write to <b>info@vlab.digital</b>.</p>
+
+    <div class="note">
+      <h3>For review</h3>
+      <ul>
+        <li><b>The cleanest data of the three countries.</b> Per-group spend adds up exactly to Meta's total ($4,852.84). Three test entries came before the ads started; every other respondent arrived during the 14 ad days.</li>
+        <li><b>Some places were in neither group.</b> Both sides excluded 40 km zones around Sukabumi and Banjar (West Java) and Brebes (Central Java), about a quarter of West Java. The map shows them hatched.</li>
+        <li>One study, so the page says what happened, not what Indonesia costs in general.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ BOLIVIA ============================ -->
+  <section id="bolivia" role="tabpanel" aria-labelledby="t-bolivia" hidden>
+    <div class="eyebrow">Bolivia · Recruitment cost · Provisional</div>
+    <h1>What does it cost to recruit survey respondents in Bolivia?</h1>
+    <p class="lede">One Virtual Lab study, fielding since September 2026, has so far recruited <b>562 qualified respondents</b> for <b>$324</b> in advertising: about <b>$0.58 each</b>. Inside 13 radius areas around city centres, a qualified respondent cost <b>$0.21</b>; outside them, <b>$1.22</b>.</p>
+
+    <div class="facts">
+      <div><b>562</b><span>qualified respondents, 5–24 Sep 2026</span></div>
+      <div><b>$0.21</b><span>per qualified respondent inside the 13 radius areas</span></div>
+      <div><b>$1.22</b><span>per qualified respondent outside them</span></div>
+      <div><b>0.33%</b><span>of Bolivia's area inside the radius areas</span></div>
+    </div>
+
+    <div class="how">
+      <div class="k">How it works · location targeting on Meta</div>
+      <h2>Why the maps show radius areas</h2>
+      <p>Meta, which runs the Facebook and Instagram ads that recruit these respondents, gives an advertiser a short list of ways to say where an ad should run: a whole country, a state or province, a city from Meta's own list (with a radius of 17 to 80 km around it), postal codes where they exist, or a pin dropped anywhere on the map with a radius of <b>1 to 80 km</b>. It does not accept a boundary drawn by hand, and it has no setting for "urban" or "rural".</p>
+      <p>To reach people in particular towns, a study drops a pin on each and sets a radius. We call each of those a <b>radius area</b>. To reach everyone else, it targets the whole state or country and excludes the same radius areas. Throughout this page, <b>inside the radius areas</b> and <b>outside them</b> mean exactly that, not any official definition of urban or rural.</p>
+      <p>Meta decides who is in an area from where people say they live on their profile, which it checks against their IP address and their friends' locations, and from where their phone has recently been. The edges are therefore approximate.</p>
+    </div>
+    <div class="how">
+      <div class="k">How it works · what the numbers count</div>
+      <h2>Cost per qualified respondent</h2>
+      <p>Every study sets <b>quotas</b>: how many people it needs from each group, such as women aged 30–44 in one province. A <b>qualified respondent</b> is someone who fell into one of those groups and completed the screening questions. People who started the survey but did not qualify are not counted, but the advertising that reached them is. So a study looking for a narrow group pays more per qualified respondent.</p>
+      <p><b>Advertising cost</b> is what Meta reported spending on the study's ads, in US dollars, divided by qualified respondents. It excludes the incentive paid to respondents, the survey platform and our fee.</p>
+    </div>
+
+    <h2>Inside the radius areas cost a sixth as much</h2>
+    <p>The study set 13 radius areas of 4 to 17 km around city centres, at least one in every department, and advertised separately inside them and outside them. A woman outside the radius areas cost $1.67 in advertising, about 17 times a man inside them at $0.10.</p>
+    <figure>{{BO}}</figure>
+    <div class="tbl"><table>
+      <thead><tr><th>Group</th><th class=n>Qualified</th><th class=n>Ad spend</th><th class=n>Per qualified</th></tr></thead>
+      <tbody>
+        <tr><td>Men, inside the radius areas</td><td class=n>213</td><td class=n>$21</td><td class=n>$0.10</td></tr>
+        <tr><td>Women, inside the radius areas</td><td class=n>153</td><td class=n>$55</td><td class=n>$0.36</td></tr>
+        <tr><td>Men, outside them</td><td class=n>115</td><td class=n>$104</td><td class=n>$0.91</td></tr>
+        <tr><td>Women, outside them</td><td class=n>81</td><td class=n>$135</td><td class=n>$1.67</td></tr>
+      </tbody>
+    </table></div>
+
+    <p class="cta">Planning a study in Bolivia? Write to <b>info@vlab.digital</b>.</p>
+
+    <div class="note">
+      <h3>For review</h3>
+      <ul>
+        <li><b>This fails the $500 rule</b> ($324 so far) and is still fielding until about 29 Sep. Hold it until it closes and re-pull, or publish it marked provisional.</li>
+        <li>Two ad runs (5–9 Sep; 9–24 Sep, with Messenger and WhatsApp campaigns) fed one survey. The 310 people who were in both are counted once.</li>
+        <li>The group reports account for $315 of the $324 Meta reported, so the group costs are slightly low.</li>
+        <li>Cobija's radius area crosses the river into Brazil.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ RULES ============================ -->
+  <section id="rules" role="tabpanel" aria-labelledby="t-rules" hidden>
+    <div class="eyebrow">For review · Not a page</div>
+    <h1>What counts as clean data</h1>
+    <p class="lede">A recruitment reaches a page only if it passes all eight rules. The first six are mechanical and are fields in the country data files; the last two are judgement, recorded with the reason.</p>
+    <ol style="font:400 16px/1.55 var(--ui);max-width:65ch">
+      <li><b>US-dollar ad account.</b> One Nigerian account records spend in naira; its CPMs of 500 or more give it away.</li>
+      <li><b>The per-group report reconciles</b> with Meta's reported spend, so group costs add up to the total.</li>
+      <li><b>At least 7 days of ads.</b></li>
+      <li><b>At least $500 of ads and 200 qualified respondents.</b></li>
+      <li><b>Recruitment waves only.</b> Follow-up waves re-contact people rather than recruit them.</li>
+      <li><b>One survey counts once.</b> Studies that fed the same survey at the same time are combined: spend summed, each person counted once.</li>
+      <li><b>The targeting can be stated in a sentence, and it did what it said.</b> A pin in the wrong place, or areas mixed beyond easy description, is out.</li>
+      <li><b>The result can be explained.</b> A figure we can't account for isn't useful to anyone planning a study.</li>
+    </ol>
+    <h2>No "urban" or "rural"</h2>
+    <p>Those words have official definitions that differ by country and by agency, and a study's own targeting rarely matches any of them. Pages use terms that describe the targeting itself (whole state, radius areas, inside and outside them) and define them on the page.</p>
+    <h2>Nigeria: why 44 of 49 studies are out</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Reason</th><th>Studies</th></tr></thead>
+      <tbody>
+        <tr><td>Under 7 days of ads</td><td>2-short-b (2 days) · bauchi-creative-test (5) · group-a / group-b baseline (6) · nigeria-hpv-test-2024 (4) · nigeria-mr-campaign (4) · mentality-pilot (2)</td></tr>
+        <tr><td>Follow-up wave</td><td>every *-midline-* study · vaxsocial-campaign-2-endline</td></tr>
+        <tr><td>Under $500 or 200 qualified</td><td>ecd-diagnostic ($365) · llm-bias pilot ($143) · dkt-study ($276) · nigeria-study (170 qualified) · northern-women addition (132)</td></tr>
+        <tr><td>Report doesn't reconcile</td><td>owis-nigeria-study (the report covers $656 of $5,021)</td></tr>
+        <tr><td>Can't tell what happened</td><td>hpv-nigeria-pilot and hpv-nigeria-long-b: they share respondents with sibling studies that have no spend</td></tr>
+        <tr><td>Targeting not as stated</td><td>bauchi-state-hpv-pilot: the Kirfi target is pinned 67 km from Kirfi, beside Bauchi city · campaign-2-nigeria-hpv-baseline: areas A and B mix whole states, single radius areas and exclusions</td></tr>
+        <tr><td>Not explained</td><td>bauchi-state-hpv-mnch-week: whole Bauchi State, one group, $45.70 per phone number; 734 of 3,773 who started gave one</td></tr>
+        <tr><td>Naira account</td><td>cohort-2-pilot 1–5 · fly_test · test</td></tr>
+        <tr><td>No ad spend</td><td>vl-pulse smoke tests · the hpv-nigeria umbrella arms · other re-contact studies</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+</div>
+
+<script>
+const tabs=["nigeria","indonesia","bolivia","rules"];
+function show(id){tabs.forEach(p=>{document.getElementById("t-"+p).setAttribute("aria-selected",p===id);document.getElementById(p).hidden=p!==id})}
+tabs.forEach(p=>document.getElementById("t-"+p).addEventListener("click",()=>{show(p);try{history.replaceState(null,"","#"+p)}catch(e){}}));
+const h=location.hash.slice(1); if(tabs.includes(h)) show(h);
+</script>
