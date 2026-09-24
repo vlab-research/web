@@ -300,6 +300,14 @@ regex over comment blocks and it swallowed the **held reallocations figure** —
 a comment. **The whole rebuild is uncommitted**, so git could not recover it; it was rewritten
 from the session. Commit before running a sweeping edit over this file.
 
+### Inbound data — where it stands, 2026-09-24: read `notes/ws-bucketing.md` first
+
+**The country-page pilot ran from v1 to v7 in one session, and the next step is written up as a plan
+in `notes/ws-bucketing.md`**: one table of cells across every country, sliced by place and by type
+of person. The method is `notes/country-recipe.md`, and the review page is a private Artifact
+linked from the plan. **Do not push the country data as it stands.** `scripts/data/country-*.json`
+and `scripts/pilot-maps/` carry study slugs that name clients, and this repository is public.
+
 ### Inbound content — the next job, 2026-09-23 (D-032)
 
 **The site is to grow data pages that answer the questions researchers actually search for**,

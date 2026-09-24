@@ -1,0 +1,154 @@
+# Inbound data: from country pages to buckets (plan, 2026-09-24)
+
+The next step after the country-page pilot (D-032; `ws-inbound.md` §7, v1–v7;
+`country-recipe.md`). **Read this first to pick the work up.** Nothing here is on the site or
+pushed. `master` is ahead of `origin` by the local commits of 2026-09-23 and 2026-09-24.
+
+## Where things stand
+
+- **The review page**: https://claude.ai/artifact/BggyuQGoib8zPi8ZWdGDkq (private, v8). It has
+  tabs for Nigeria, Bangladesh, Pakistan, Indonesia, Kenya, United States, Iraq, Egypt, Morocco,
+  Bolivia and Rules.
+  - It is assembled by `scripts/pilot-maps/assemble.py` from
+    `scripts/pilot-maps/review-page.tpl.html` plus each country's `section*.html` and SVGs.
+  - **Edit the template or the sections, never the assembled page.**
+  - `assemble.py` still points at the session scratchpad (`SP`); re-point it to run from the
+    repo.
+- **The data**: `scripts/data/country-*.json`, one per country; each carries rules, definitions,
+  terms and `excluded_for_review`. The per-country agent code, SQL, SVGs and sections are in
+  `scripts/pilot-maps/countries/<CC>/`. The map helpers are in
+  `scripts/pilot-maps/build_maps.py`; `fetch_ne.py` downloads Natural Earth and GeoNames, which
+  are gitignored.
+- **Nigeria and Kenya are rebuilt as place pages** (pooled across recruitments). The other
+  seven still follow the earlier one-study design and wait for the bucketing below.
+- **The spend-intensity analysis is done**: `ws-spend-intensity.md`. Doubling a stratum's daily
+  spend raises cost per starter by about 32% (22–43%); +46% in radius areas.
+- **Raw pulls, the Natural Earth downloads and the analysis panels** lived in the session
+  scratchpad and are gone after the session. Every script re-pulls read-only (`--fetch`, or
+  `pull.sh`).
+
+## What Nandan decided along the way (in order; the later ones win)
+
+1. **Clean data we understand exactly**, and only interesting or reusable results. Odd
+   targeting stays off the page.
+2. **No "urban"/"rural", no "circles".** Use *whole state*, *radius area*, *inside the radius
+   areas* and *outside them*, defined on every page.
+3. **Each page stands alone**, with "how it works" modules at the top: location targeting on
+   Meta; what the numbers count.
+4. **Voice: our recruiting record, never a client's study.** The unit of speech is a
+   "recruitment", and it may stay ambiguous whether there was one or several. No topics or
+   programme names. Ambiguity is allowed, falsehood never.
+5. **The unit is the place, not the study.** Pilots, short runs and full studies all count.
+   Study boundaries are for cleaning only.
+6. **Headline: ad cost per person who started**, which measures the place. Beside it, cost per
+   qualified respondent, with who qualified written out.
+7. **Now: bucket everything along separate dimensions** (below).
+
+## The plan: one table, sliced by dimension
+
+Nandan, 2026-09-24: *"what we next need to do is match them up to figure out which studies are
+similar and which are not, and how do we sort of create a bucketing … the bucketing is what
+matters … We don't necessarily need the full cross-sectional analysis … but it's not bad to
+slice the data by these dimensions individually."*
+
+### 1. One table of cells: `scripts/data/cells.json`
+
+**One row per ad set (stratum) per recruitment round, across every country.** Fields:
+- **Ids:** a neutral `recruitment_id` (R-001…), `cell_id`, country. Study slugs go only in a
+  gitignored or scratch mapping, **never in the public repo**. Slugs name clients (hard rule 4).
+- **Place:** geometry type (country / region / city+radius / radius-area set /
+  country-minus-X), a canonical place key (e.g. `NG:region:Lagos`,
+  `NG:radius:Abuja-4km-24`), and whether it is inside or outside.
+- **Targeting:** Meta gender, and age band.
+- **Criteria:** a link to the recruitment's criteria record (§2).
+- **Measures:** dates, days with spend > 0, spend (USD), people who started (by ad metadata at
+  first message), qualified (under the final quota rule), median daily spend.
+- **Flags:** thin, dominated by one round, pin checked, attribution method.
+
+### 2. Criteria registry: `scripts/data/recruitment-criteria.json`
+
+**One record per recruitment, as structured fields, not prose:**
+- the Meta age range and gender;
+- screening conditions as tags: `caregiver_child_age:9-14`, `has_whatsapp`,
+  `language:hausa`, `adult_18plus`, `lives_in_country`, …;
+- the qualifying point (question n of N);
+- median minutes to qualify;
+- language(s);
+- channel (Messenger / WhatsApp / web);
+- incentive, if known.
+
+The sources are the survey form (Fly), the strata `question_targeting` (the quota rule and its
+history), and the Meta targeting. Much of this was already dug up per country: see each
+`country-*.json` and the For review notes.
+
+### 3. Buckets, derived from the registry and reviewed by Nandan before use
+
+- **Place:** two slices, *whole regions* (a filled map) and *radius areas* (drawn areas), plus
+  whole country. This already exists for Nigeria and Kenya.
+- **Type of person:** two parts, because they act at different steps.
+  - **Who the ads were shown to** (gender, age band). This moves cost per starter.
+  - **Who qualified** (the screening tags plus survey length). This moves the **share of
+    starters who qualify**.
+  - Expected buckets, to be confirmed from the data: *any adult*, *young adults*,
+    *caregivers of children in an age band* (a large group across NG, BD and PK), *women only*,
+    *specific subgroups*.
+- **Speed / daily spend:** record it per cell, **leave it off the pages for now**, and never
+  print it beside a place's cost (see the trap in `ws-spend-intensity.md`).
+
+**The payoff:** cost per qualified ≈ cost per starter (from the place slice) ÷ share who
+qualify (from the person slice). A reader can combine the two slices to estimate their own
+study. Present it as a rule of thumb, not a claim.
+
+### 4. How to present a slice
+
+- Each figure carries its **range across rounds** and its **number of rounds**. Nigeria and
+  Kenya showed that pooling reorders places by how hard each round pushed: Lagos was cheapest in
+  the 2023 same-round comparison and is mid-pack pooled.
+- **Same-round comparisons stay the fair way to compare places**, shown as their own figure.
+- A **spend floor per place**, about $100, so a few days of $14 spend cannot set a headline.
+  Proposed, not yet agreed.
+- Person-type slices can pool **across countries**, which opens a second family of pages:
+  *"What does it cost to recruit caregivers of adolescent girls / young adults?"*
+
+## Next steps
+
+1. **Build the registry and the cell table across all countries.** Probably one agent per
+   country group, working from `country-recipe.md` and this file, followed by a merge step that
+   checks ids and deduplicates people across countries and platforms.
+2. **Propose the person buckets** from the registry, as a short review artifact for Nandan.
+3. **After review**, regenerate the country pages from the cell table (place slice +
+   person slice + ranges), and draft one cross-country person-type page.
+4. **Then** step 2 of the original plan: `CLAIMS.md` Definition rows for whatever ships,
+   the slug scrub, the build into Eleventy, unlinked, and review before any push.
+
+## Open questions for Nandan
+
+1. **Places:** show each as a range across rounds, plus same-round comparisons? Is the
+   $100 spend floor right?
+2. **Spend intensity:** add a third "how it works" module, *spending faster in the same place
+   costs more per person*? It needs a `CLAIMS.md` Definition row.
+3. **Bangladesh endline:** it recruited a fresh sample with ads ($0.24, whole divisions). The
+   place design now includes fresh-sample endlines (Nigeria's do). Confirm.
+4. **Pakistan:** the place gap is unexplained, and 1 km vs 5 km radii are confounded with place.
+   **Morocco:** 13% qualify, with 48% stopping at or before consent. Enough?
+5. **US:** the state groups track 2023 recreational-cannabis states. OK to keep the topic off the
+   page?
+6. **Still fielding:** Kenya closes 25 Sep, Bolivia about 29 Sep. Re-pull after.
+7. **Facts to confirm:**
+   - Did `kenya-tvet` (Sep 2026, $5k budget, no recorded spend) run?
+   - What incentive did Iraq's respondents get (config $1; the text promises dinars)?
+   - The 2024–25 Kenya runs cost $0.02–0.07 per start with no impressions recorded. Real?
+
+## Traps learned this session (also in `country-recipe.md`)
+
+- Currency: naira accounts, detected by CPM.
+- Shared campaigns and umbrella studies.
+- Ad days counted from rows rather than days with spend > 0.
+- Stale adopt reports: fetch one at a time, `ORDER BY created DESC LIMIT 1`.
+- Quota rules that change mid-study: recount under the final rule (Egypt went from 966 to 3,696).
+- `current_price_per_participant` is Meta's marginal estimate, not an average.
+- Stratum labels that do not match the targeting ("State:X" meaning radius areas).
+- Mis-placed pins (Kirfi, the Abuja/Kuje pin), and Mecca targeted as "Jeddah".
+- The ad arm confounded with the side of a radius line (Nigeria, April 2025).
+- A gender label that comes from the ad set, not from an answer.
+- Personal data in raw pulls (phone numbers): keep only ad labels.

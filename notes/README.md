@@ -40,6 +40,8 @@ disagreed rather than averaging them.
 | `ws-seo.md` | What one page can and cannot win in search, and where the budget goes instead |
 | `ws-inbound.md` | The content map for inbound; what the production database can answer, and the traps in it; the Nigeria + Bolivia pilot (D-032) |
 | `country-recipe.md` | **The method for a country page**, distilled from the D-032 pilot (2026-09-24): the data, the eight clean-data rules, the definitions, the vocabulary (radius areas, never urban/rural), the page structure and the maps. Read it before building any country page |
+| `ws-bucketing.md` | **The plan after the pilot** (2026-09-24): where everything stands, what Nandan decided, one table of cells sliced by place and by type of person, next steps and open questions. **Start here** |
+| `ws-spend-intensity.md` | Daily spend against cost per starter: about +32% per doubling, and the trap of printing spend beside cost |
 
 ## Several are already superseded — check the date before trusting a recommendation
 
