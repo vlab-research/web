@@ -334,11 +334,13 @@ opposite of that intent. It carries no `noindex`, so anyone holding the URL stil
 page; it is simply not advertised. Both already set `eleventyExcludeFromCollections`, so the
 collection does the right thing on its own. **If the policy is ever linked, revisit it.**
 
-### 5.5 Search Console — clean under D-009, **needs a DNS record from Nandan**
+### 5.5 Search Console — **VERIFIED 2026-09-26**
 
-**2026-09-23: D-009 closed (self-hosted Umami, `vlab-research/analytics`). Search Console is
-still not set up** — it is waiting on the verification string; the steps are in `AGENTS.md`
-under "Waiting on Nandan".
+**2026-09-26: a Domain property for `vlab.digital` is verified in Search Console**, under
+Nandan's Google login. The proof is a TXT record on the apex in Netlify DNS
+(`google-site-verification=kw1q…`, record id `6ab82d562e3eb1f37b23931c`), beside the SPF
+record. **Do not delete it: Google re-checks, and removing it un-verifies the property.**
+The six-month clock in §8 starts from this date.
 
 **Verify by DNS TXT, not by meta tag or script.** Search Console is server-side: no
 client-side code, no cookie, no consent question, so it does not touch D-009 or sit beside
