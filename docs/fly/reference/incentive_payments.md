@@ -125,9 +125,9 @@ Notes:
    a transfer belongs to — it is how spend is attributed and billed afterwards. Use
    the form `<studytag>_<phone>_<payment-id>`, where the study tag is unique to the
    study, never reused by a later one, and not a prefix of another study's tag (a
-   study running in several countries can use one tag per country, such as `lacar`,
-   `lacbo`, `lachn`). Mark test sends by putting `test` in the reference (for
-   example `lachn_clarotest_…`), so they can be told apart from real payments.
+   study running in several countries can use one tag per country, such as `abcke`,
+   `abcug`, `abctz`). Mark test sends by putting `test` in the reference (for
+   example `abcke_test_…`), so they can be told apart from real payments.
 
 You will have the following hidden fields that can be used for logic and error messages:
 
