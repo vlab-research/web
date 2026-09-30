@@ -56,6 +56,7 @@ Notes:
 3. the `key` is the name you give the desired Reloadly credentials in the Fly dashboard.
 4. `CUSTOM_IDENTIFIER` is a unique string that ensures that no payment is repeated. For example, if you only want to provide a payment to each phone once, you can make this a combination of the shortcode and the phone number.
 5. Phone number answers may contain trailing text (e.g. `+254712345678 use this`). Use the `|e164` transform to normalize phone numbers to E.164 format before they reach the payment provider. This is especially important for `custom_identifier` — without normalization, two submissions of the same number with different trailing text produce different identifiers, breaking duplicate payment detection. See [Interpolation Transforms](/docs/fly/reference/hidden/#interpolation-transforms) for details.
+6. **Start `custom_identifier` with a study tag.** When several studies share one Reloadly account, the `custom_identifier` is the only record of which study a payment belongs to, and it is how spend is attributed and billed afterwards. Use the form `<studytag>_<phone>_<payment-id>`, with a study tag that is unique to the study and not a prefix of another study's tag, and put `test` in the identifier of any test send.
 
 You will have the following hidden fields that can be used for logic and error messages:
 
@@ -119,6 +120,14 @@ Notes:
    submissions of the same number with different trailing text produce different
    references, which defeats the duplicate protection described above. See
    [Interpolation Transforms](/docs/fly/reference/hidden/#interpolation-transforms).
+8. **Start `distributor_ref` with a study tag.** Several studies often share one
+   DingConnect account, and the `distributor_ref` is the only record of which study
+   a transfer belongs to — it is how spend is attributed and billed afterwards. Use
+   the form `<studytag>_<phone>_<payment-id>`, where the study tag is unique to the
+   study, never reused by a later one, and not a prefix of another study's tag (a
+   study running in several countries can use one tag per country, such as `lacar`,
+   `lacbo`, `lachn`). Mark test sends by putting `test` in the reference (for
+   example `lachn_clarotest_…`), so they can be told apart from real payments.
 
 You will have the following hidden fields that can be used for logic and error messages:
 
