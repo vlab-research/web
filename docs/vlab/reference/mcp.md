@@ -58,10 +58,25 @@ claude mcp add --transport http vlab https://vlab-study-conf-api.toixo.vlab.digi
   --header "Authorization: Bearer $VLAB_API_KEY"
 ```
 
+Codex, in `~/.codex/config.toml`, with `VLAB_API_KEY` exported in the shell that
+starts Codex:
+
+```toml
+[mcp_servers.vlab]
+url = "https://vlab-study-conf-api.toixo.vlab.digital/mcp"
+bearer_token_env_var = "VLAB_API_KEY"
+```
+
+To author and monitor the survey as well, connect the
+[Fly MCP server](/docs/fly/reference/api/mcp/) alongside this one; it takes its
+own key, from the Fly dashboard. [Connecting an agent](/docs/agents/) walks
+through both together, including Open Code.
+
 ## Getting a key
 
-From the Virtual Lab dashboard, open **Connected Accounts**, click **Add
-Connected Account**, and choose **API Key** as the account type. The token is
+There is no separate "MCP" setting in the dashboard: the API key is the whole of
+the setup. From the Virtual Lab dashboard, open **Connected Accounts**, click
+**Add Connected Account**, and choose **API Key** as the account type. The token is
 shown once — copy it somewhere safe before closing the dialog. The same page
 lists and revokes keys you have already created.
 

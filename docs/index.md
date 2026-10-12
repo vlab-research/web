@@ -9,6 +9,9 @@ This is the documentation for using the tools created by Virtual Lab:
 
 These two tools are often used together, but can also be used separately.
 
+Both can be driven by an AI agent such as Claude Code, Codex or Open Code — see
+[Connecting an Agent](/docs/agents/).
+
 Fly surveys run on **Facebook Messenger and WhatsApp**. If you are setting up a
 WhatsApp study, the two pages to read first are
 [Channels](/docs/fly/reference/channels/) — what differs between the
